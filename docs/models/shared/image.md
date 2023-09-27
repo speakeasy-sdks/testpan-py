@@ -1,0 +1,12 @@
+# Image
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `dockerfile_scan_severity`                                                        | [Optional[DockerfileScanSeverity]](../../models/shared/dockerfilescanseverity.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `hash`                                                                            | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `repository`                                                                      | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `tag`                                                                             | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `vulnerability_severity_level`                                                    | [Optional[VulnerabilitySeverity]](../../models/shared/vulnerabilityseverity.md)   | :heavy_minus_sign:                                                                | N/A                                                                               |

@@ -1,0 +1,12 @@
+# PermissionRoleResponse
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `cluster_name`                                                                  | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `id`                                                                            | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `owner_name`                                                                    | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `resources`                                                                     | list[[PermissionRoleResources](../../models/shared/permissionroleresources.md)] | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `role_name`                                                                     | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |

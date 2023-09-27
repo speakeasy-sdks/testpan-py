@@ -1,0 +1,10 @@
+# RiskAssessmentScanFailure
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `message`                                                                                           | *Optional[str]*                                                                                     | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `source`                                                                                            | [Optional[RiskAssessmentScanFailureSource]](../../models/shared/riskassessmentscanfailuresource.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `type`                                                                                              | [Optional[RiskAssessmentScanFailureType]](../../models/shared/riskassessmentscanfailuretype.md)     | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

@@ -1,0 +1,17 @@
+# AppRule
+
+A rule that states what Apps are allowed to run on what environments.
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `app`                                                                            | [Optional[WorkloadRuleType]](../../models/shared/workloadruletype.md)            | :heavy_minus_sign:                                                               | identify the workload type. Only one of the below should be not null, and  used. |
+| `group_name`                                                                     | *Optional[str]*                                                                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `id`                                                                             | *Optional[str]*                                                                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `name`                                                                           | *str*                                                                            | :heavy_check_mark:                                                               | N/A                                                                              |
+| `rule_origin`                                                                    | [Optional[AppRuleOrigin]](../../models/shared/appruleorigin.md)                  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `rule_type_properties`                                                           | [AppRuleType](../../models/shared/appruletype.md)                                | :heavy_check_mark:                                                               | identify the app rule type. Only one of the below should be not null, and  used. |
+| `scope`                                                                          | [Optional[WorkloadRuleScopeType]](../../models/shared/workloadrulescopetype.md)  | :heavy_minus_sign:                                                               | identify the scope type. Only one of the below should be not null, and  used.    |
+| `status`                                                                         | [AppRuleStatus](../../models/shared/apprulestatus.md)                            | :heavy_check_mark:                                                               | N/A                                                                              |

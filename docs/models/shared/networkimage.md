@@ -1,0 +1,11 @@
+# NetworkImage
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `jfrog_properties`                                                              | list[[Property](../../models/shared/property.md)]                               | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `repository`                                                                    | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `tag`                                                                           | *Optional[str]*                                                                 | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `vulnerability_severity_level`                                                  | [Optional[VulnerabilitySeverity]](../../models/shared/vulnerabilityseverity.md) | :heavy_minus_sign:                                                              | N/A                                                                             |

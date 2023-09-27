@@ -1,0 +1,9 @@
+# APIServiceComplianceSimple
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `compliant`                                                                                         | *bool*                                                                                              | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `profilescompliance`                                                                                | list[[APIServiceProfileComplianceSimple](../../models/shared/apiserviceprofilecompliancesimple.md)] | :heavy_check_mark:                                                                                  | N/A                                                                                                 |

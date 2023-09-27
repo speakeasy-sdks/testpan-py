@@ -1,0 +1,9 @@
+# CDPipelineSecurityFinding
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `type`                                                                                            | [Optional[CDPipelineFindingType]](../../models/shared/cdpipelinefindingtype.md)                   | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `value`                                                                                           | [Optional[CDPipelineSecurityFindingValue]](../../models/shared/cdpipelinesecurityfindingvalue.md) | :heavy_minus_sign:                                                                                | N/A                                                                                               |

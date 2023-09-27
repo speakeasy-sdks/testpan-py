@@ -1,0 +1,13 @@
+# Owner
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `id`                                                                              | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `namespace`                                                                       | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `owner`                                                                           | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `owner_type`                                                                      | [Optional[PermissionOwnerType]](../../models/shared/permissionownertype.md)       | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `permission_info`                                                                 | list[[PermissionInfo](../../models/shared/permissioninfo.md)]                     | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `system_default_owner_type`                                                       | [Optional[SystemDefaultOwnerType]](../../models/shared/systemdefaultownertype.md) | :heavy_minus_sign:                                                                | N/A                                                                               |

@@ -1,0 +1,9 @@
+# PutSettingsIntegrationsEventForwardingEventForwardingIDRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `splunk_events_forwarding_details_input`                                                               | [shared.SplunkEventsForwardingDetailsInput](../../models/shared/splunkeventsforwardingdetailsinput.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `event_forwarding_id`                                                                                  | *str*                                                                                                  | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

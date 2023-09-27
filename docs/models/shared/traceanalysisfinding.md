@@ -1,0 +1,12 @@
+# TraceAnalysisFinding
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `additional_info`                                                                   | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `description`                                                                       | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `name`                                                                              | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `risk`                                                                              | [Optional[APISecurityRiskSeverity]](../../models/shared/apisecurityriskseverity.md) | :heavy_minus_sign:                                                                  | An `enum`eration.                                                                   |
+| `spec_location`                                                                     | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |

@@ -1,0 +1,11 @@
+# CiPolicyInput
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `description`                                                                     | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `dockerfile_scan_ci_policy`                                                       | [Optional[DockerfileScanCiPolicy]](../../models/shared/dockerfilescancipolicy.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `name`                                                                            | *str*                                                                             | :heavy_check_mark:                                                                | N/A                                                                               |
+| `vulnerability_ci_policy`                                                         | [Optional[VulnerabilityCiPolicy]](../../models/shared/vulnerabilitycipolicy.md)   | :heavy_minus_sign:                                                                | N/A                                                                               |

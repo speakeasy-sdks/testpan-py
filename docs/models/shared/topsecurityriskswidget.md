@@ -1,0 +1,10 @@
+# TopSecurityRisksWidget
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `top_risky_apis_widget`                                                                                 | [Optional[TopRiskyApisWidget]](../../models/shared/topriskyapiswidget.md)                               | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `top_risky_serverless_functions_widget`                                                                 | [Optional[TopRiskyServerlessFunctionsWidget]](../../models/shared/topriskyserverlessfunctionswidget.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `top_risky_workloads_widget`                                                                            | [Optional[TopRiskyWorkloadsWidget]](../../models/shared/topriskyworkloadswidget.md)                     | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |

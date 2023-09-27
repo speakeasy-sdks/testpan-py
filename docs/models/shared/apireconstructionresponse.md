@@ -1,0 +1,9 @@
+# APIReconstructionResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `response`                                                                                              | [Optional[APIReconstructionResponseResponse]](../../models/shared/apireconstructionresponseresponse.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `type`                                                                                                  | [Optional[APIReconstructionType]](../../models/shared/apireconstructiontype.md)                         | :heavy_minus_sign:                                                                                      | Status of an ongoing API reconstruction.                                                                |

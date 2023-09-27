@@ -1,0 +1,10 @@
+# ServerlessFunctionReason
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `level`                                                                                       | [Optional[ServerlessFunctionRiskLevel]](../../models/shared/serverlessfunctionrisklevel.md)   | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `text`                                                                                        | *Optional[str]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `type`                                                                                        | [Optional[ServerlessFunctionReasonType]](../../models/shared/serverlessfunctionreasontype.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |

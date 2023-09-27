@@ -1,0 +1,11 @@
+# APIRiskInfo
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `service_id`                                                                      | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `service_name`                                                                    | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `service_risk`                                                                    | [Optional[APIRiskInfoServiceRisk]](../../models/shared/apiriskinfoservicerisk.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `service_type`                                                                    | [Optional[APIServiceType]](../../models/shared/apiservicetype.md)                 | :heavy_minus_sign:                                                                | An `enum`eration.                                                                 |

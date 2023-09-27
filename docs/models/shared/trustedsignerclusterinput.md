@@ -1,0 +1,10 @@
+# TrustedSignerClusterInput
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `id`                                                                                              | *Optional[str]*                                                                                   | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `status`                                                                                          | [Optional[TrustedSignerClusterStatus]](../../models/shared/trustedsignerclusterstatus.md)         | :heavy_minus_sign:                                                                                | N/A                                                                                               |
+| `validation`                                                                                      | [Optional[TrustedSignerClusterValidation]](../../models/shared/trustedsignerclustervalidation.md) | :heavy_minus_sign:                                                                                | N/A                                                                                               |

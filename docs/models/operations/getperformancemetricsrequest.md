@@ -1,0 +1,14 @@
+# GetPerformanceMetricsRequest
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `end_time`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | End date of the query                                                |
+| `protocol`                                                           | *str*                                                                | :heavy_check_mark:                                                   | protocol                                                             |
+| `source_namespace`                                                   | *str*                                                                | :heavy_check_mark:                                                   | namespace id                                                         |
+| `source_pod_template`                                                | *str*                                                                | :heavy_check_mark:                                                   | pod template id                                                      |
+| `start_time`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | Start date of the query                                              |
+| `target_namespace`                                                   | *str*                                                                | :heavy_check_mark:                                                   | namespace id                                                         |
+| `target_pod_template`                                                | *str*                                                                | :heavy_check_mark:                                                   | pod template id                                                      |

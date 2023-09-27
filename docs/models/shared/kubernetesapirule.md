@@ -1,0 +1,9 @@
+# KubernetesAPIRule
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `kubernetes_api_rule_type`                                                                              | [KubernetesAPIRuleKubernetesAPIRuleType](../../models/shared/kubernetesapirulekubernetesapiruletype.md) | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `rule_origin`                                                                                           | [Optional[KubernetesAPIRuleOrigin]](../../models/shared/kubernetesapiruleorigin.md)                     | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |

@@ -1,0 +1,9 @@
+# PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `api_reconstruction_request`                                                                 | [Optional[shared.APIReconstructionRequest]](../../models/shared/apireconstructionrequest.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `catalog_id`                                                                                 | *str*                                                                                        | :heavy_check_mark:                                                                           | N/A                                                                                          |

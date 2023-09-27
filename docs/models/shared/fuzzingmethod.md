@@ -1,0 +1,12 @@
+# FuzzingMethod
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `findings`                                                                          | [Optional[FuzzingScoreFindings]](../../models/shared/fuzzingscorefindings.md)       | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `method`                                                                            | [Optional[HTTPMethod]](../../models/shared/httpmethod.md)                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `path`                                                                              | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `request_count`                                                                     | *Optional[int]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `severity`                                                                          | [Optional[APISecurityRiskSeverity]](../../models/shared/apisecurityriskseverity.md) | :heavy_minus_sign:                                                                  | An `enum`eration.                                                                   |

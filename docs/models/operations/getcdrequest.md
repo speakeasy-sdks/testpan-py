@@ -1,0 +1,14 @@
+# GetCdRequest
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `end_time`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | End date of the query                                                |
+| `max_results`                                                        | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | The number of entries to return (pagination)                         |
+| `offset`                                                             | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | Return entries from this offset (pagination)                         |
+| `resource_name`                                                      | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | Resource name                                                        |
+| `sort_dir`                                                           | [Optional[GetCdSortDir]](../../models/operations/getcdsortdir.md)    | :heavy_minus_sign:                                                   | sorting direction                                                    |
+| `sort_key`                                                           | [Optional[GetCdSortKey]](../../models/operations/getcdsortkey.md)    | :heavy_minus_sign:                                                   | sort key                                                             |
+| `start_time`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | Start date of the query                                              |

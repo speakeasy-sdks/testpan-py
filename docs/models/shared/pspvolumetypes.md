@@ -1,0 +1,35 @@
+# PSPVolumeTypes
+
+
+## Values
+
+| Name                      | Value                     |
+| ------------------------- | ------------------------- |
+| `AWS_ELASTIC_BLOCK_STORE` | awsElasticBlockStore      |
+| `AZURE_DISK`              | azureDisk                 |
+| `AZURE_FILE`              | azureFile                 |
+| `CEPHFS`                  | cephfs                    |
+| `CINDER`                  | cinder                    |
+| `CONFIG_MAP`              | configMap                 |
+| `CSI`                     | csi                       |
+| `DOWNWARD_API`            | downwardAPI               |
+| `EMPTY_DIR`               | emptyDir                  |
+| `FC`                      | fc                        |
+| `FLEX_VOLUME`             | flexVolume                |
+| `FLOCKER`                 | flocker                   |
+| `GCE_PERSISTENT_DISK`     | gcePersistentDisk         |
+| `GLUSTERFS`               | glusterfs                 |
+| `HOST_PATH`               | hostPath                  |
+| `ISCSI`                   | iscsi                     |
+| `LOCAL`                   | local                     |
+| `NFS`                     | nfs                       |
+| `PERSISTENT_VOLUME_CLAIM` | persistentVolumeClaim     |
+| `PROJECTED`               | projected                 |
+| `PORTWORX_VOLUME`         | portworxVolume            |
+| `QUOBYTE`                 | quobyte                   |
+| `RBD`                     | rbd                       |
+| `SCALE_IO`                | scaleIO                   |
+| `SECRET`                  | secret                    |
+| `STORAGEOS`               | storageos                 |
+| `VSPHERE_VOLUME`          | vsphereVolume             |
+| `ALL`                     | all                       |

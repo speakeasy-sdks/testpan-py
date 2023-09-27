@@ -1,0 +1,12 @@
+# SpecScoreFindings
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `critical`                                                                      | [Optional[SpecScoreFindingsList]](../../models/shared/specscorefindingslist.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `high`                                                                          | [Optional[SpecScoreFindingsList]](../../models/shared/specscorefindingslist.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `low`                                                                           | [Optional[SpecScoreFindingsList]](../../models/shared/specscorefindingslist.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `medium`                                                                        | [Optional[SpecScoreFindingsList]](../../models/shared/specscorefindingslist.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `unclassified`                                                                  | [Optional[SpecScoreFindingsList]](../../models/shared/specscorefindingslist.md) | :heavy_minus_sign:                                                              | N/A                                                                             |

@@ -1,0 +1,12 @@
+# GetEnvironmentsRequest
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `download_as_xlsx`                                                                    | *Optional[bool]*                                                                      | :heavy_minus_sign:                                                                    | When true, the API will return an xlsx file, and pagination will be ignored           |
+| `include_system_envs`                                                                 | *Optional[bool]*                                                                      | :heavy_minus_sign:                                                                    | include systems environments                                                          |
+| `name`                                                                                | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | Filter environments by name                                                           |
+| `sort_dir`                                                                            | [Optional[GetEnvironmentsSortDir]](../../models/operations/getenvironmentssortdir.md) | :heavy_minus_sign:                                                                    | sorting direction                                                                     |
+| `sort_key`                                                                            | [Optional[GetEnvironmentsSortKey]](../../models/operations/getenvironmentssortkey.md) | :heavy_minus_sign:                                                                    | Environment sort key                                                                  |

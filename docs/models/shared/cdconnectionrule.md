@@ -1,0 +1,16 @@
+# CdConnectionRule
+
+A rule that states what apps are allowed to communicate with each other.
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `action`                                                                          | [Optional[ConnectionRuleAction]](../../models/shared/connectionruleaction.md)     | :heavy_minus_sign:                                                                | ENCRYPT is not allowed in default rule                                            |
+| `destination`                                                                     | [Optional[ConnectionRulePart]](../../models/shared/connectionrulepart.md)         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `group_name`                                                                      | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `id`                                                                              | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `name`                                                                            | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `source`                                                                          | [Optional[ConnectionRulePart]](../../models/shared/connectionrulepart.md)         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `status`                                                                          | [Optional[CdConnectionRuleStatus]](../../models/shared/cdconnectionrulestatus.md) | :heavy_minus_sign:                                                                | N/A                                                                               |

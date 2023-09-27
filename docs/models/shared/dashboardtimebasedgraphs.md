@@ -1,0 +1,11 @@
+# DashboardTimeBasedGraphs
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `last_day`                                                                          | [Optional[DashboardTimeBasedGraph]](../../models/shared/dashboardtimebasedgraph.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `last_hour`                                                                         | [Optional[DashboardTimeBasedGraph]](../../models/shared/dashboardtimebasedgraph.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `last_month`                                                                        | [Optional[DashboardTimeBasedGraph]](../../models/shared/dashboardtimebasedgraph.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `last_week`                                                                         | [Optional[DashboardTimeBasedGraph]](../../models/shared/dashboardtimebasedgraph.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |

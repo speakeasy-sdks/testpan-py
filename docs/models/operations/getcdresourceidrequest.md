@@ -1,0 +1,10 @@
+# GetCdResourceIDRequest
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `resource_id`                                                                         | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `sort_dir`                                                                            | [Optional[GetCdResourceIDSortDir]](../../models/operations/getcdresourceidsortdir.md) | :heavy_minus_sign:                                                                    | sorting direction                                                                     |
+| `sort_key`                                                                            | [Optional[GetCdResourceIDSortKey]](../../models/operations/getcdresourceidsortkey.md) | :heavy_minus_sign:                                                                    | sort key                                                                              |

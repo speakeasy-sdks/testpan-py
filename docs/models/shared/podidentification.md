@@ -1,0 +1,12 @@
+# PodIdentification
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `cd_section`                                                                      | [Optional[CdSection]](../../models/shared/cdsection.md)                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `ci_section`                                                                      | [Optional[CiSection]](../../models/shared/cisection.md)                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `diff_section`                                                                    | [Optional[DiffSection]](../../models/shared/diffsection.md)                       | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `injected_sidecar_section`                                                        | [Optional[InjectedSidecarSection]](../../models/shared/injectedsidecarsection.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `registry_section`                                                                | [Optional[RegistrySection]](../../models/shared/registrysection.md)               | :heavy_minus_sign:                                                                | N/A                                                                               |

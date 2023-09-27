@@ -1,0 +1,10 @@
+# EnvironmentRecommendationPeriod
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `environment_recommendations`                                                         | list[[EnvironmentRecommendation](../../models/shared/environmentrecommendation.md)]   | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `time_period`                                                                         | [Optional[RecommendationTimePeriod]](../../models/shared/recommendationtimeperiod.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `total_workloads`                                                                     | *Optional[int]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |

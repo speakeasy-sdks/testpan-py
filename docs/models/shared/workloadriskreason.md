@@ -1,0 +1,11 @@
+# WorkloadRiskReason
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `is_ignored`                                                                      | *Optional[bool]*                                                                  | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `level`                                                                           | [Optional[WorkloadRiskLevel]](../../models/shared/workloadrisklevel.md)           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `text`                                                                            | *Optional[str]*                                                                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `type`                                                                            | [Optional[WorkloadRiskReasonType]](../../models/shared/workloadriskreasontype.md) | :heavy_minus_sign:                                                                | N/A                                                                               |

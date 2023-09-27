@@ -1,0 +1,16 @@
+# Cvss
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `attack_complexity`                                                 | [Optional[CvssRiskLevel]](../../models/shared/cvssrisklevel.md)     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `attack_vector`                                                     | [Optional[AttackVector]](../../models/shared/attackvector.md)       | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `availability_impact`                                               | [Optional[CvssRiskLevel]](../../models/shared/cvssrisklevel.md)     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `confidentiality_impact`                                            | [Optional[CvssRiskLevel]](../../models/shared/cvssrisklevel.md)     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `integrity_impact`                                                  | [Optional[CvssRiskLevel]](../../models/shared/cvssrisklevel.md)     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `privileges_required`                                               | [Optional[CvssRiskLevel]](../../models/shared/cvssrisklevel.md)     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `scope`                                                             | [Optional[Scope]](../../models/shared/scope.md)                     | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `score`                                                             | *Optional[float]*                                                   | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `user_interaction`                                                  | [Optional[UserInteraction]](../../models/shared/userinteraction.md) | :heavy_minus_sign:                                                  | N/A                                                                 |

@@ -1,0 +1,14 @@
+# SpecScoreElementFinding
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `additional_info`                                             | list[[AdditionalInfo](../../models/shared/additionalinfo.md)] | :heavy_minus_sign:                                            | N/A                                                           |
+| `description`                                                 | *Optional[str]*                                               | :heavy_minus_sign:                                            | N/A                                                           |
+| `mitigation`                                                  | *Optional[str]*                                               | :heavy_minus_sign:                                            | N/A                                                           |
+| `name`                                                        | *Optional[str]*                                               | :heavy_minus_sign:                                            | N/A                                                           |
+| `occurrences`                                                 | *Optional[int]*                                               | :heavy_minus_sign:                                            | N/A                                                           |
+| `source`                                                      | *Optional[str]*                                               | :heavy_minus_sign:                                            | N/A                                                           |
+| `spec_path`                                                   | *Optional[str]*                                               | :heavy_minus_sign:                                            | N/A                                                           |

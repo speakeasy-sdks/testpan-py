@@ -1,0 +1,12 @@
+# GetLeanKubernetesClustersResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `api_response`                                                                        | [Optional[shared.APIResponse]](../../models/shared/apiresponse.md)                    | :heavy_minus_sign:                                                                    | unknown error                                                                         |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | HTTP response content type for this operation                                         |
+| `lean_kubernetes_clusters`                                                            | list[[shared.LeanKubernetesCluster](../../models/shared/leankubernetescluster.md)]    | :heavy_minus_sign:                                                                    | Success                                                                               |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | HTTP response status code for this operation                                          |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | Raw HTTP response; suitable for custom response parsing                               |

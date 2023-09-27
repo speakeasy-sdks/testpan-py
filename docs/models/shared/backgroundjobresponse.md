@@ -1,0 +1,12 @@
+# BackgroundJobResponse
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `expiry`                                                                  | *Optional[float]*                                                         | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `path`                                                                    | *Optional[str]*                                                           | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `progress`                                                                | *Optional[str]*                                                           | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `request_id`                                                              | *Optional[str]*                                                           | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `state`                                                                   | [Optional[BackgroundJobState]](../../models/shared/backgroundjobstate.md) | :heavy_minus_sign:                                                        | N/A                                                                       |

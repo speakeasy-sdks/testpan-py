@@ -1,0 +1,10 @@
+# DirectPodIPConnectionRule
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `action`                                                                                  | [DirectPodIPConnectionRuleAction](../../models/shared/directpodipconnectionruleaction.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `is_disabled`                                                                             | *Optional[bool]*                                                                          | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `name`                                                                                    | *Optional[str]*                                                                           | :heavy_minus_sign:                                                                        | N/A                                                                                       |

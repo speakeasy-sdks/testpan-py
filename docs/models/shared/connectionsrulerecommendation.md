@@ -1,0 +1,10 @@
+# ConnectionsRuleRecommendation
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `connection_rule`                                                                             | [Optional[RecommendationConnectionRule]](../../models/shared/recommendationconnectionrule.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `id`                                                                                          | *Optional[str]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `number_of_affected_connections`                                                              | *Optional[int]*                                                                               | :heavy_minus_sign:                                                                            | N/A                                                                                           |

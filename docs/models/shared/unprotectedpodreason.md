@@ -1,0 +1,10 @@
+# UnprotectedPodReason
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `name`                                                                                | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `type`                                                                                | [Optional[UnprotectedPodReasonType]](../../models/shared/unprotectedpodreasontype.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `value`                                                                               | *Optional[str]*                                                                       | :heavy_minus_sign:                                                                    | N/A                                                                                   |

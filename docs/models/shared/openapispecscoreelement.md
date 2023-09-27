@@ -1,0 +1,12 @@
+# OpenAPISpecScoreElement
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `findings`                                                                          | [Optional[SpecScoreFindings]](../../models/shared/specscorefindings.md)             | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `name`                                                                              | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | Name of the Object                                                                  |
+| `severity`                                                                          | [Optional[APISecurityRiskSeverity]](../../models/shared/apisecurityriskseverity.md) | :heavy_minus_sign:                                                                  | An `enum`eration.                                                                   |
+| `spec_path`                                                                         | *Optional[str]*                                                                     | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `vulnerabilities_summary`                                                           | [Optional[VulnerabilitiesSummary]](../../models/shared/vulnerabilitiessummary.md)   | :heavy_minus_sign:                                                                  | Vulnerabilities summary by severity                                                 |

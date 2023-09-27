@@ -1,0 +1,11 @@
+# K8sCISBenchmarkUpdateNodes
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `cluster_id`                                                                              | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `index`                                                                                   | *str*                                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `nodes`                                                                                   | list[[K8sCISBenchmarkUpdateNode](../../models/shared/k8scisbenchmarkupdatenode.md)]       | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `status`                                                                                  | [K8sCISBenchmarkUpdateNodeStatus](../../models/shared/k8scisbenchmarkupdatenodestatus.md) | :heavy_check_mark:                                                                        | N/A                                                                                       |

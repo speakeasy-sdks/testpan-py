@@ -1,0 +1,13 @@
+# GetAppsRequest
+
+
+## Fields
+
+| Field                                                                       | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `download_as_xlsx`                                                          | *Optional[bool]*                                                            | :heavy_minus_sign:                                                          | When true, the API will return an xlsx file, and pagination will be ignored |
+| `name`                                                                      | *Optional[str]*                                                             | :heavy_minus_sign:                                                          | Filter Apps by name                                                         |
+| `no_pagination`                                                             | *Optional[bool]*                                                            | :heavy_minus_sign:                                                          | When true, the pagination params will be ignored                            |
+| `sort_dir`                                                                  | [Optional[GetAppsSortDir]](../../models/operations/getappssortdir.md)       | :heavy_minus_sign:                                                          | sorting direction                                                           |
+| `sort_key`                                                                  | [Optional[GetAppsSortKey]](../../models/operations/getappssortkey.md)       | :heavy_minus_sign:                                                          | App sort key                                                                |
+| `type`                                                                      | list[*str*]                                                                 | :heavy_minus_sign:                                                          | Filter Apps by type                                                         |

@@ -1,0 +1,12 @@
+# FuzzingScoreFindings
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `critical`                                                                            | [Optional[FuzzingScoreFindingsList]](../../models/shared/fuzzingscorefindingslist.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `high`                                                                                | [Optional[FuzzingScoreFindingsList]](../../models/shared/fuzzingscorefindingslist.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `low`                                                                                 | [Optional[FuzzingScoreFindingsList]](../../models/shared/fuzzingscorefindingslist.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `medium`                                                                              | [Optional[FuzzingScoreFindingsList]](../../models/shared/fuzzingscorefindingslist.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `unclassified`                                                                        | [Optional[FuzzingScoreFindingsList]](../../models/shared/fuzzingscorefindingslist.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

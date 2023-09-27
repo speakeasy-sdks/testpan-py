@@ -1,0 +1,19 @@
+# EventsForwardingDetailsTypeEnum
+
+
+## Values
+
+| Name                                                 | Value                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `SPLUNK_EVENTS_FORWARDING_DETAILS`                   | SplunkEventsForwardingDetails                        |
+| `OPS_GENIE_EVENTS_FORWARDING_DETAILS`                | OpsGenieEventsForwardingDetails                      |
+| `SLACK_EVENTS_FORWARDING_DETAILS`                    | SlackEventsForwardingDetails                         |
+| `SLACK_VULNERABILITY_EVENTS_FORWARDING_DETAILS`      | SlackVulnerabilityEventsForwardingDetails            |
+| `SUMO_LOGIC_EVENTS_FORWARDING_DETAILS`               | SumoLogicEventsForwardingDetails                     |
+| `SUMO_LOGIC_VULNERABILITY_EVENTS_FORWARDING_DETAILS` | SumoLogicVulnerabilityEventsForwardingDetails        |
+| `WEBEX_EVENTS_FORWARDING_DETAILS`                    | WebexEventsForwardingDetails                         |
+| `WEBEX_VULNERABILITY_EVENTS_FORWARDING_DETAILS`      | WebexVulnerabilityEventsForwardingDetails            |
+| `SECURE_X_EVENTS_FORWARDING_DETAILS`                 | SecureXEventsForwardingDetails                       |
+| `SECURE_X_VULNERABILITY_EVENTS_FORWARDING_DETAILS`   | SecureXVulnerabilityEventsForwardingDetails          |
+| `TEAMS_EVENTS_FORWARDING_DETAILS`                    | TeamsEventsForwardingDetails                         |
+| `TEAMS_VULNERABILITY_EVENTS_FORWARDING_DETAILS`      | TeamsVulnerabilityEventsForwardingDetails            |

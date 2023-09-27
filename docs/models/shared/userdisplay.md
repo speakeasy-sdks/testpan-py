@@ -1,0 +1,16 @@
+# UserDisplay
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `account_id`                                                         | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The Secure Application account ID to which the user belongs          |
+| `description`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `email`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The email of the user.                                               |
+| `full_name`                                                          | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | ID of the user as created by Secure Application management.          |
+| `last_login`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `normalized_role`                                                    | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The role of the user                                                 |
+| `role`                                                               | [Optional[Role]](../../models/shared/role.md)                        | :heavy_minus_sign:                                                   | The role of the user                                                 |
+| `status`                                                             | [UserDisplayStatus](../../models/shared/userdisplaystatus.md)        | :heavy_check_mark:                                                   | N/A                                                                  |
