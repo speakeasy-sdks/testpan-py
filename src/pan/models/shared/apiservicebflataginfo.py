@@ -14,6 +14,6 @@ from typing import Optional
 class APIServiceBflaTagInfo:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     paths: list[shared_apiservicebflapathinfo.APIServiceBflaPathInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paths') }})
-    is_legitimate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isLegitimate'), 'exclude': lambda f: f is None }})
+    is_legitimate: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isLegitimate'), 'exclude': lambda f: f is None }})
     
 

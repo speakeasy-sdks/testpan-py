@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                        | Type                                         | Required                                     | Description                                  |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| `token`                                      | [shared.Token](../../models/shared/token.md) | :heavy_check_mark:                           | N/A                                          |
-| `token_id`                                   | *str*                                        | :heavy_check_mark:                           | N/A                                          |
+| Field                                                      | Type                                                       | Required                                                   | Description                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| `token`                                                    | [Optional[shared.Token]](undefined/models/shared/token.md) | :heavy_check_mark:                                         | N/A                                                        |
+| `token_id`                                                 | *Optional[str]*                                            | :heavy_check_mark:                                         | N/A                                                        |

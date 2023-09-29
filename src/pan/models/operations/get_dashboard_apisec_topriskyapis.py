@@ -16,9 +16,9 @@ class GetDashboardApisecTopRiskyApisAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecTopRiskyApisRequest:
-    api_sec_source: GetDashboardApisecTopRiskyApisAPISecSource = dataclasses.field(metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetDashboardApisecTopRiskyApisAPISecSource = dataclasses.field(default=GetDashboardApisecTopRiskyApisAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     
 

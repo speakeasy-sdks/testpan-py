@@ -11,7 +11,7 @@ from typing import Optional
 class GetImagesImagesHashRequest:
     image_hash: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'imageHash', 'style': 'form', 'explode': True }})
     r"""image hash to search for ( as prefix and suffix )"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     
 

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `cluster_id`       | *str*              | :heavy_check_mark: | N/A                |
+| `cluster_id`       | *Optional[str]*    | :heavy_check_mark: | N/A                |

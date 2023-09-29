@@ -3,18 +3,14 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
-from enum import Enum
 from pan import utils
-from typing import Optional
-
-class ChallengeRequestChallengeName(str, Enum):
-    GOOGLE_LOGIN = 'GOOGLE_LOGIN'
+from typing import Final, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 
 @dataclasses.dataclass
 class ChallengeRequest:
-    challenge_name: Optional[ChallengeRequestChallengeName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ChallengeName'), 'exclude': lambda f: f is None }})
+    CHALLENGE_NAME: Final[Optional[str]] = dataclasses.field(default='GOOGLE_LOGIN', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ChallengeName'), 'exclude': lambda f: f is None }})
     
 

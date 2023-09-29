@@ -16,6 +16,6 @@ class APIServiceBflaPathInfo:
     method: shared_httpmethod.HTTPMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     path: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('path') }})
     clients: Optional[list[shared_apiservicebflaclientinfo.APIServiceBflaClientInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clients'), 'exclude': lambda f: f is None }})
-    is_legitimate: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isLegitimate'), 'exclude': lambda f: f is None }})
+    is_legitimate: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isLegitimate'), 'exclude': lambda f: f is None }})
     
 

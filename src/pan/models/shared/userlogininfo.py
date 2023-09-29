@@ -42,7 +42,7 @@ class UserLoginInfo:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""ID of the user as created by Secure Application management."""
     last_login: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastLogin'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    permissions_mode: Optional[shared_permissionsmode.PermissionsMode] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionsMode'), 'exclude': lambda f: f is None }})
+    permissions_mode: Optional[shared_permissionsmode.PermissionsMode] = dataclasses.field(default=PermissionsMode.NORMAL, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionsMode'), 'exclude': lambda f: f is None }})
     role: Optional[shared_role.Role] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
     r"""The role of the user"""
     should_display_eula: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shouldDisplayEula'), 'exclude': lambda f: f is None }})

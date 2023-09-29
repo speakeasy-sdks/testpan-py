@@ -30,7 +30,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteNetworkMapQueueRequestIDRequest(
-    request_id='7d2a9c87-ae50-4c16-a61a-1d9136a7e8d5',
+    request_id='d744d9fc-99bf-4fa7-bd43-977bd77decee',
 )
 
 res = s.runtime_map.delete_network_map_queue_request_id_(req)
@@ -70,31 +70,31 @@ s = pan.Pan(
 )
 
 req = operations.GetNetworkMapRequest(
-    api_risk=operations.GetNetworkMapAPIRisk.MEDIUM,
+    api_risk=operations.GetNetworkMapAPIRisk.NEUTRAL,
     apps=[
-        'qui',
+        'unto',
     ],
-    end_time=dateutil.parser.isoparse('2022-10-09T14:23:43.307Z'),
+    end_time=dateutil.parser.isoparse('2022-07-01T23:29:00.212Z'),
     environments=[
-        'tenetur',
+        'Gasoline',
     ],
     exclude_apps=[
-        'velit',
+        'West',
     ],
     group_apps_on_the_same_environment=False,
     ignore_external_connection=False,
     is_background_job=False,
     labels=[
-        'asperiores',
+        'thoughtfully',
     ],
     namespaces=[
-        '658752db-764c-459f-8a56-cebcada29ca7',
+        '770727e0-bc8a-4727-a6cf-78080c58f4e0',
     ],
     show_only_apps_with_connections=False,
     show_only_apps_with_violations=False,
     show_only_connections_between_environments=False,
     show_only_connections_with_violations=False,
-    start_time=dateutil.parser.isoparse('2022-11-12T06:02:50.943Z'),
+    start_time=dateutil.parser.isoparse('2021-06-22T19:37:42.851Z'),
 )
 
 res = s.runtime_map.get_network_map(req)
@@ -133,7 +133,7 @@ s = pan.Pan(
 )
 
 req = operations.GetNetworkMapQueueRequestIDRequest(
-    request_id='81c95671-663c-4530-b566-5163a3638512',
+    request_id='3d22620c-025b-41f7-b070-9e069dc87bfd',
 )
 
 res = s.runtime_map.get_network_map_queue_request_id_(req)
@@ -172,7 +172,7 @@ s = pan.Pan(
 )
 
 req = operations.GetNetworkMapResultsRequestIDRequest(
-    request_id='ab2521b9-f2e0-4724-a7b8-a40bc05fab0d',
+    request_id='78c61cf8-31c2-407a-a949-4700ad100770',
 )
 
 res = s.runtime_map.get_network_map_results_request_id_(req)

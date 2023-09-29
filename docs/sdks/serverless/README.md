@@ -42,7 +42,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteCloudAccountsCloudAccountIDRequest(
-    cloud_account_id='650edf22-a94d-420e-890e-a41d1f465e85',
+    cloud_account_id='a4061d9a-ae48-48cc-a173-2eca65acca85',
 )
 
 res = s.serverless.delete_cloud_accounts_cloud_account_id_(req)
@@ -81,12 +81,12 @@ s = pan.Pan(
 )
 
 req = operations.GetCloudAccountsRequest(
-    cloud_account_name='ab',
-    max_results=3246,
+    cloud_account_name='quam Legacy',
+    max_results=1307.16,
     no_pagination=False,
-    offset=3916.67,
-    region='repellat',
-    sort_dir=operations.GetCloudAccountsSortDir.DESC,
+    offset=8371.14,
+    region='Wagon Arlington',
+    sort_dir=operations.GetCloudAccountsSortDir.ASC,
     sort_key=operations.GetCloudAccountsSortKey.NAME,
 )
 
@@ -246,7 +246,7 @@ s = pan.Pan(
 )
 
 req = operations.GetCloudAccountsCloudAccountIDDeleteDependenciesRequest(
-    cloud_account_id='73fdf54f-dd5e-4a95-8339-8dafb42a8d63',
+    cloud_account_id='64304886-9365-422a-8282-644a12d7387e',
 )
 
 res = s.serverless.get_cloud_accounts_cloud_account_id_delete_dependencies(req)
@@ -285,7 +285,7 @@ s = pan.Pan(
 )
 
 req = operations.GetCloudAccountsCloudAccountIDDownloadBundleRequest(
-    cloud_account_id='388e4d80-39ea-45f9-b18a-244fd619039d',
+    cloud_account_id='78a9218a-bbdc-48dd-8c99-acaaac2d314e',
 )
 
 res = s.serverless.get_cloud_accounts_cloud_account_id_download_bundle(req)
@@ -324,30 +324,30 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsRequest(
-    cloud_account_name='dolorum',
+    cloud_account_name='coordinated',
     cloud_accounts_ids_filter=[
-        'cd38ed0d-c671-4dc7-b1e3-af15920c90d1',
+        '13824322-22f0-4b89-ac2b-1bfba58c422a',
     ],
     download_as_xlsx=False,
     func_name=[
-        'cum',
+        'synthesizing',
     ],
-    max_results=2975.19,
-    offset=6156.98,
+    max_results=9594.89,
+    offset=7413.73,
     policy_risk=[
-        operations.GetServerlessFunctionsPolicyRisk.LOW,
+        operations.GetServerlessFunctionsPolicyRisk.MEDIUM,
     ],
-    region='dicta',
+    region='transmit',
     result=[
-        operations.GetServerlessFunctionsResult.BLOCK,
+        operations.GetServerlessFunctionsResult.DETECT,
     ],
     risk=[
-        operations.GetServerlessFunctionsRisk.LOW,
+        operations.GetServerlessFunctionsRisk.HIGH,
     ],
     secrets_risk=[
         operations.GetServerlessFunctionsSecretsRisk.RISK_IDENTIFIED,
     ],
-    sort_dir=operations.GetServerlessFunctionsSortDir.DESC,
+    sort_dir=operations.GetServerlessFunctionsSortDir.ASC,
 )
 
 res = s.serverless.get_serverless_functions(req)
@@ -386,11 +386,11 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsArnsRequest(
-    cloud_account_name='totam',
+    cloud_account_name='Northwest',
     func_arn=[
-        'provident',
+        'South',
     ],
-    region='maxime',
+    region='Kia righteously Bronze',
 )
 
 res = s.serverless.get_serverless_functions_arns(req)
@@ -429,11 +429,11 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsNamesRequest(
-    cloud_account_name='totam',
+    cloud_account_name='withdrawal Human',
     func_name=[
-        'id',
+        'whiteboard',
     ],
-    region='neque',
+    region='Avon gosh',
 )
 
 res = s.serverless.get_serverless_functions_names(req)
@@ -472,7 +472,7 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsFunctionIDRequest(
-    function_id='2639da5b-7b69-402b-881a-94f643664a8f',
+    function_id='c94885c8-e582-488b-bf74-bf3ac1e10be4',
 )
 
 res = s.serverless.get_serverless_functions_function_id_(req)
@@ -511,7 +511,7 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsFunctionIDSecretsRequest(
-    function_id='0af8c691-d732-4d9f-baf9-476a2ae8dcc5',
+    function_id='1200d55a-1387-4753-ab90-33c09b02720e',
 )
 
 res = s.serverless.get_serverless_functions_function_id_secrets(req)
@@ -550,9 +550,9 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsFunctionIDVulnerabilitiesRequest(
-    function_id='0c8a3512-c737-4848-9307-50a00e966ec7',
-    max_results=2124.05,
-    offset=4311.08,
+    function_id='2ad182ca-55b9-436d-935a-2584c6608fc0',
+    max_results=8248.92,
+    offset=7517.01,
 )
 
 res = s.serverless.get_serverless_functions_function_id_vulnerabilities(req)
@@ -591,12 +591,12 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessZipFilesRequest(
-    max_results=8215.79,
-    offset=2959.12,
+    max_results=5376.87,
+    offset=8734.72,
     sort_dir=operations.GetServerlessZipFilesSortDir.ASC,
     sort_key=operations.GetServerlessZipFilesSortKey.TIME,
-    zip_name_filter='omnis',
-    zip_sha256_filter='quaerat',
+    zip_name_filter='Gasoline',
+    zip_sha256_filter='calm executive implement',
 )
 
 res = s.serverless.get_serverless_zip_files(req)
@@ -635,7 +635,7 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessZipFilesZipIDRequest(
-    zip_id='398c783c-9239-48ed-bd3a-b7ca3c5ca864',
+    zip_id='47af1679-7e54-41ca-b6c1-2fafc1426c1d',
 )
 
 res = s.serverless.get_serverless_zip_files_zip_id_(req)
@@ -674,7 +674,7 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessZipFilesZipIDPackagesRequest(
-    zip_id='9a70cfd5-d698-49b7-a064-51077d19ea83',
+    zip_id='8930b13e-93d3-4a51-9609-c730ba7092f4',
 )
 
 res = s.serverless.get_serverless_zip_files_zip_id_packages(req)
@@ -713,10 +713,10 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessZipFilesZipIDVulnerabilitiesRequest(
-    max_results=8178.07,
-    offset=2619.53,
-    sort_dir=operations.GetServerlessZipFilesZipIDVulnerabilitiesSortDir.DESC,
-    zip_id='2ed14b8a-2c19-4545-85e9-55dcc185ea49',
+    max_results=4757.97,
+    offset=8704.31,
+    sort_dir=operations.GetServerlessZipFilesZipIDVulnerabilitiesSortDir.ASC,
+    zip_id='40878f68-2a69-434d-bf1a-10ecad858b07',
 )
 
 res = s.serverless.get_serverless_zip_files_zip_id_vulnerabilities(req)
@@ -756,7 +756,7 @@ s = pan.Pan(
 
 req = shared.ServerlessScanConfig(
     cloud_accounts=[
-        '01c7c43a-d2da-4a78-8aba-3d230edf7381',
+        '458b5913-dc88-4dbf-ab7f-5674c6953077',
     ],
 )
 
@@ -799,36 +799,36 @@ req = operations.PutCloudAccountsCloudAccountIDRequest(
     cloud_account_input=shared.CloudAccountInput(
         cloud_provider=shared.CloudProviderType.AWS,
         install_vulnerability_scanner=False,
-        name='Albert Bruen',
+        name='Bicycle',
         periodic_job_expression=shared.ServerlessPeriodicJobExpression(
             periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_DAYS_PERIODIC_JOB_EXPRESSION,
         ),
         regions=[
-            'consequuntur',
+            'Division',
         ],
         security_threats=shared.CloudAccountSecurityThreats(
             data_access_risk=shared.ServerlessDataAccessRisk.MEDIUM,
-            data_access_risk_count=858317,
+            data_access_risk_count=719927,
             is_unused_function=False,
-            policy_risk=shared.ServerlessPolicyRisk.MEDIUM,
-            policy_risk_count=908916,
-            publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.MEDIUM,
-            publicly_accessible_risk_count=313305,
+            policy_risk=shared.ServerlessPolicyRisk.NO_RISK,
+            policy_risk_count=327969,
+            publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.NO_RISK,
+            publicly_accessible_risk_count=212197,
             secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-            secrets_risk_count=331703,
-            unused_function_count=28088,
+            secrets_risk_count=276225,
+            unused_function_count=505048,
         ),
         validate_function=shared.CloudAccountValidateFunction.SIGNATURE_VALIDATION,
         vulnerabilities_summary=shared.VulnerabilitiesSummary(
-            critical=426152,
-            high=136036,
-            low=85002,
-            medium=781003,
-            total=322054,
-            unknown=533096,
+            critical=866582,
+            high=785242,
+            low=794613,
+            medium=453950,
+            total=407496,
+            unknown=594287,
         ),
     ),
-    cloud_account_id='f4d73965-64c2-40a0-b11a-961d24a7dbb8',
+    cloud_account_id='7a579ecd-c3c3-4cb0-b74b-a26ecaa06648',
 )
 
 res = s.serverless.put_cloud_accounts_cloud_account_id_(req)

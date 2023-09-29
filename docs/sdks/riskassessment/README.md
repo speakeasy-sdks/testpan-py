@@ -42,7 +42,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
-    ignored_risk_id='1bc74b86-cecc-474f-b7b4-848bd6a6f044',
+    ignored_risk_id='591339a8-adc9-48b1-82f6-1d3cce316b8d',
 )
 
 res = s.risk_assessment.delete_risk_assessment_ignored_risks_ignored_risk_id_(req)
@@ -81,7 +81,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteRiskAssessmentKubernetesClusterIDCancelRequest(
-    kubernetes_cluster_id='1d2c3b80-8094-4373-a060-459bebbad02f',
+    kubernetes_cluster_id='0086ba38-7819-4a93-be05-2abfdf0aef92',
 )
 
 res = s.risk_assessment.delete_risk_assessment_kubernetes_cluster_id_cancel(req)
@@ -181,12 +181,12 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentPermissionsRequest(
     clusters_ids=[
-        '2586bcf1-5255-48da-a95b-e6cd02756c35',
+        'a89898f1-37f8-4c09-8113-2e54dc492339',
     ],
     include_system_owners=False,
     permission_risk=operations.GetRiskAssessmentPermissionsPermissionRisk.MEDIUM,
     sort_dir=operations.GetRiskAssessmentPermissionsSortDir.DESC,
-    sort_key=operations.GetRiskAssessmentPermissionsSortKey.PERMISSION_RISK,
+    sort_key='Account but',
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions(req)
@@ -225,15 +225,15 @@ s = pan.Pan(
 )
 
 req = operations.GetRiskAssessmentPermissionsClusterIDRequest(
-    cluster_id='a432b47e-1763-4c52-88c2-3e9802d82f0d',
+    cluster_id='af306627-d7b5-4fd9-a554-cf5effac095b',
     include_system_owners=False,
-    max_results=3011.88,
-    namespace_name='quis',
+    max_results=8466.56,
+    namespace_name='Moldovan',
     no_pagination=False,
-    offset=9204.88,
-    owner='soluta',
+    offset=3482.6,
+    owner='Tennessine Cisgender',
     owner_type=operations.GetRiskAssessmentPermissionsClusterIDOwnerType.SERVICEACCOUNT,
-    permission_risk=operations.GetRiskAssessmentPermissionsClusterIDPermissionRisk.HIGH,
+    permission_risk=operations.GetRiskAssessmentPermissionsClusterIDPermissionRisk.NO_RISK,
     sort_dir=operations.GetRiskAssessmentPermissionsClusterIDSortDir.DESC,
     sort_key=operations.GetRiskAssessmentPermissionsClusterIDSortKey.OWNER_TYPE,
 )
@@ -274,11 +274,11 @@ s = pan.Pan(
 )
 
 req = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRequest(
-    cluster_id='674ee5cf-c18e-4dc7-b787-e32e04b3d3ed',
+    cluster_id='e6c26498-20da-481b-bc16-7b830d3456dd',
     is_approved=False,
-    owner_id='0c5670ef-42bd-43c9-b1cc-503f6c39bcd0',
-    sort_dir=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.DESC,
-    sort_key=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey.RISK,
+    owner_id='79a8a441-40ea-4cdf-8584-73da2c62b846',
+    sort_dir=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.ASC,
+    sort_key='criminal green',
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_(req)
@@ -317,9 +317,9 @@ s = pan.Pan(
 )
 
 req = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDRequest(
-    cluster_id='6290f957-f385-4189-ad7e-f807aae03f33',
-    owner_id='ca79fb9d-e403-42ba-a6fd-368ba9216bcb',
-    role_id='415835c7-3641-4723-933e-dc046bc5163b',
+    cluster_id='419337aa-84cc-4a55-afba-5a213e1dbdfd',
+    owner_id='4e00792b-c0ad-4551-9794-d6bafdbc8352',
+    role_id='ad0304b4-bb83-44d6-bf7f-174c17202a1e',
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_role_id_(req)
@@ -359,7 +359,7 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentPollRequest(
     risk_assessment_poll_key=[
-        'bca49227-c42c-422c-9535-0495c5dbb3c5',
+        '813cbccb-b94b-4a50-afbd-d7c394a6030d',
     ],
 )
 
@@ -399,11 +399,11 @@ s = pan.Pan(
 )
 
 req = operations.GetRiskAssessmentImageIDVulnerabilitiesRequest(
-    image_id='7c1e4981-e8aa-4257-9dc1-912ebde64bfc',
-    max_results=7713.03,
-    offset=3303.58,
+    image_id='6cbcdb90-f642-47ed-b640-ae8227deac5c',
+    max_results=8240.13,
+    offset=7702.86,
     sort_dir=operations.GetRiskAssessmentImageIDVulnerabilitiesSortDir.ASC,
-    sort_key=operations.GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY,
+    sort_key='Montana Loan',
 )
 
 res = s.risk_assessment.get_risk_assessment_image_id_vulnerabilities(req)
@@ -443,12 +443,12 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentKubernetesClusterIDPodsRequest(
     download_as_xlsx=False,
-    kubernetes_cluster_id='69d4015d-fa79-4620-abef-2b0a3e42c1aa',
-    max_results=173.42,
-    namespaces_names_filter='illo',
-    offset=172.89,
+    kubernetes_cluster_id='764514eb-01d8-4d87-972e-7065c0075222',
+    max_results=2696.33,
+    namespaces_names_filter='copying scent',
+    offset=3728.39,
     sort_dir=operations.GetRiskAssessmentKubernetesClusterIDPodsSortDir.DESC,
-    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsSortKey.RISK,
+    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsSortKey.NAME,
 )
 
 res = s.risk_assessment.get_risk_assessment_kubernetes_cluster_id_pods(req)
@@ -519,11 +519,11 @@ s = pan.Pan(
 req = operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest(
     uuid_list=shared.UUIDList(
         uuid_list=[
-            'aac2e913-5586-4d18-b9f9-7a4bfad2bf7d',
+            'fda4268f-7c78-46d3-87e2-782993d8ba4d',
         ],
     ),
-    action_type=operations.PostRiskAssessmentPermissionsOwnerIDApproveActionType.ADD,
-    owner_id='7ca84ad9-9b41-4d61-a435-31870cf68b03',
+    action_type=operations.PostRiskAssessmentPermissionsOwnerIDApproveActionType.REMOVE,
+    owner_id='c3b8ad34-72d2-4f81-a59b-f81c3cc9c10e',
 )
 
 res = s.risk_assessment.post_risk_assessment_permissions_owner_id_approve(req)
@@ -562,7 +562,7 @@ s = pan.Pan(
 )
 
 req = operations.PostRiskAssessmentKubernetesClusterIDScanRequest(
-    kubernetes_cluster_id='ad421bd4-3d1f-40cb-8a00-03eb22d9b3a7',
+    kubernetes_cluster_id='967e4e2b-c728-4357-980a-727b8f594aad',
 )
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_scan(req)
@@ -602,17 +602,17 @@ s = pan.Pan(
 
 req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
     risk_assessment_cluster_scan_config=shared.RiskAssessmentClusterScanConfig(
-        max_parallelism=47008,
-        minimum_severity=shared.VulnerabilitySeverity.CRITICAL,
+        max_parallelism=752536,
+        minimum_severity=shared.VulnerabilitySeverity.LOW,
         namespaces=[
-            'excepturi',
+            'synthesizing',
         ],
         periodic_job_expression=shared.PeriodicJobExpression(
-            periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.SINGLE_PERIODIC_JOB_EXPRESSION,
+            periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.NON_PERIODIC_JOB_EXPRESSION,
         ),
         run_dockerfile_scan=False,
     ),
-    kubernetes_cluster_id='faa741c5-7d1f-4edc-a050-d38dc3ce1854',
+    kubernetes_cluster_id='a0c9884d-ef8c-417b-9484-5665df2f730e',
 )
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_settings(req)
@@ -652,18 +652,18 @@ s = pan.Pan(
 
 req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
     ci_policy_input=shared.CiPolicyInput(
-        description='iusto',
+        description='Face to face directional superstructure',
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='Santiago Treutel',
+        name='haptic Manager',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.MEDIUM,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
         ),
     ),
-    ignored_risk_id='6a8be344-4eac-48b3-a287-5c6c1fe606d0',
+    ignored_risk_id='2b6ef16d-35fd-4f85-a9c3-11ad619343e9',
 )
 
 res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)

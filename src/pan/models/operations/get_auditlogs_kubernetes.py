@@ -41,13 +41,13 @@ class GetAuditLogsKubernetesRequest:
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     kubernetes_audit_action: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'kubernetesAuditAction', 'style': 'form', 'explode': False }})
     r"""Kubernetes audit action"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     namespace_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespaceName', 'style': 'form', 'explode': True }})
     r"""the namespace name to filter by"""
     no_pagination: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'noPagination', 'style': 'form', 'explode': True }})
     r"""When true, the pagination params will be ignored"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     resource_kind: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'resourceKind', 'style': 'form', 'explode': True }})
     r"""Resource kind"""
@@ -55,9 +55,9 @@ class GetAuditLogsKubernetesRequest:
     r"""Resource name"""
     result: Optional[list[GetAuditLogsKubernetesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""event result filter"""
-    sort_dir: Optional[GetAuditLogsKubernetesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAuditLogsKubernetesSortDir] = dataclasses.field(default=GetAuditLogsKubernetesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAuditLogsKubernetesSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAuditLogsKubernetesSortKey] = dataclasses.field(default=GetAuditLogsKubernetesSortKey.LAST_SEEN, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user', 'style': 'form', 'explode': True }})
     r"""User name"""

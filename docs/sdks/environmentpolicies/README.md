@@ -30,7 +30,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppsPolicyRequest(
-    policy_filter='accusamus',
+    policy_filter='Secured Hybrid',
 )
 
 res = s.environment_policies.get_apps_policy(req)
@@ -99,7 +99,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppsPolicySearchOptionsRequest(
-    name_filter='iusto',
+    name_filter='Ball Clothing Classical',
 )
 
 res = s.environment_policies.get_apps_policy_search_options(req)
@@ -138,27 +138,27 @@ s = pan.Pan(
 )
 
 req = shared.AppPolicy(
-    default_rule=shared.DefaultRule.BLOCK_ALL,
+    default_rule=shared.DefaultRule.DETECT_ALL,
     unidentified_pods_rule=shared.UnidentifiedPodsRule(
-        action=shared.UnidentifiedPodsRuleAction.DETECT,
-        name='Melody Schaefer',
+        action=shared.UnidentifiedPodsRuleAction.BLOCK,
+        name='Bolivia Peso Gasoline',
     ),
     user_rules=[
         shared.AppRule(
             app=shared.WorkloadRuleType(
-                workload_rule_type=shared.WorkloadRuleTypeWorkloadRuleType.APP_LABEL_WORKLOAD_RULE_TYPE,
+                workload_rule_type=shared.WorkloadRuleTypeWorkloadRuleType.APP_NAME_WORKLOAD_RULE_TYPE,
             ),
-            group_name='officiis',
-            id='320a319f-4bad-4f94-bc9a-867bc4242666',
-            name='Olga Blanda',
+            group_name='Elegant mole Bronze',
+            id='c913f708-35e4-4a31-9380-1bc9778ebe02',
+            name='Delaware cultivate',
             rule_origin=shared.AppRuleOrigin.SYSTEM,
             rule_type_properties=shared.AppRuleType(
                 rule_type=shared.AppRuleTypeRuleType.VIOLATION_RULE_TYPE,
             ),
             scope=shared.WorkloadRuleScopeType(
-                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.CLUSTER_NAME_RULE_TYPE,
+                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ANY_RULE_TYPE,
             ),
-            status=shared.AppRuleStatus.DISABLED,
+            status=shared.AppRuleStatus.DELETED,
         ),
     ],
 )

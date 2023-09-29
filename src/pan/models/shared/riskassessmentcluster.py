@@ -22,7 +22,7 @@ class RiskAssessmentCluster:
     cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterName'), 'exclude': lambda f: f is None }})
     dockerfile_scan_results_summary: Optional[shared_dockerfilescanresultssummary.DockerfileScanResultsSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dockerfileScanResultsSummary'), 'exclude': lambda f: f is None }})
     r"""dockerfile scan results summary by severity"""
-    has_failed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hasFailed'), 'exclude': lambda f: f is None }})
+    has_failed: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hasFailed'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     scan_config: Optional[shared_riskassessmentclusterscanconfig.RiskAssessmentClusterScanConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scanConfig'), 'exclude': lambda f: f is None }})
     r"""Single cluster risk assessment scan config"""

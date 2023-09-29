@@ -91,7 +91,7 @@ s = pan.Pan(
 
 req = shared.TruncationStatus(
     is_truncation_enabled=False,
-    truncate_time_in_days=972114,
+    truncate_time_in_days=271429,
 )
 
 res = s.truncation.post_truncation_images(req)
@@ -131,7 +131,7 @@ s = pan.Pan(
 
 req = shared.TruncationStatus(
     is_truncation_enabled=False,
-    truncate_time_in_days=468177,
+    truncate_time_in_days=519889,
 )
 
 res = s.truncation.post_truncation_workloads(req)

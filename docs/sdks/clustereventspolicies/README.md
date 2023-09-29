@@ -188,7 +188,7 @@ req = shared.KubernetesAPIPolicy(
     user_rules=[
         shared.KubernetesAPIRule(
             kubernetes_api_rule_type=shared.KubernetesAPIRuleKubernetesAPIRuleType.KUBERNETES_API_RECOMMENDED_RULE,
-            rule_origin=shared.KubernetesAPIRuleOrigin.SYSTEM,
+            rule_origin=shared.KubernetesAPIRuleOrigin.AUTOMATED_POLICY,
         ),
     ],
 )

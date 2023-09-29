@@ -35,51 +35,51 @@ s = pan.Pan(
 
 req = operations.GetAppTelemetriesRequest(
     app_name=[
-        'unde',
+        'Crew',
     ],
     app_type=[
-        'impedit',
+        'splendid',
     ],
     download_as_xlsx=False,
-    end_time=dateutil.parser.isoparse('2022-10-29T03:20:48.266Z'),
+    end_time=dateutil.parser.isoparse('2021-09-05T15:33:12.217Z'),
     environment_name=[
-        'commodi',
+        'Syrian',
     ],
     executable=[
-        'neque',
+        'strategy',
     ],
     hide_internals=False,
     highest_dockerfile_scan_result=[
-        'enim',
+        'Concrete',
     ],
     host=[
-        'eaque',
+        'Rupee',
     ],
     images_id=[
-        'a4671437-89ce-40e9-9159-4d93a74c0252',
+        '356669e3-0a7d-4fca-9c8c-97d1dbbd6441',
     ],
     is_identified=False,
-    max_results=9545.42,
-    namespaces_filter='saepe',
-    offset=2245.48,
-    protection_status=operations.GetAppTelemetriesProtectionStatus.DISABLED,
+    max_results=3704.75,
+    namespaces_filter='North South',
+    offset=9999.51,
+    protection_status=operations.GetAppTelemetriesProtectionStatus.FULL,
     result=[
-        operations.GetAppTelemetriesResult.ALLOW,
+        operations.GetAppTelemetriesResult.BLOCK,
     ],
     show_only_entries_with_app_name=False,
     show_only_violations=False,
     show_system_pods=False,
-    sort_dir=operations.GetAppTelemetriesSortDir.DESC,
-    sort_key=operations.GetAppTelemetriesSortKey.EXECUTABLE,
-    start_time=dateutil.parser.isoparse('2020-11-24T00:05:53.510Z'),
+    sort_dir=operations.GetAppTelemetriesSortDir.ASC,
+    sort_key=operations.GetAppTelemetriesSortKey.ENVIRONMENT_NAME,
+    start_time=dateutil.parser.isoparse('2023-08-01T01:58:56.429Z'),
     status=[
-        'atque',
+        'and',
     ],
     vulnerability_levels_filter=[
-        'tempore',
+        'Benin Checking',
     ],
     workload_risks=[
-        operations.GetAppTelemetriesWorkloadRisks.MEDIUM,
+        operations.GetAppTelemetriesWorkloadRisks.HIGH,
     ],
 )
 
@@ -119,7 +119,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppTelemetriesAppTelemetryIDRequest(
-    app_telemetry_id='78ebb6e1-d2cf-4502-bafb-2cbc4635d5e6',
+    app_telemetry_id='6ebde0ec-647c-4eab-b779-88cc0a536506',
 )
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_(req)
@@ -158,7 +158,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoRequest(
-    app_telemetry_id='5da028c3-e951-4a1e-b0fd-a966489d7b78',
+    app_telemetry_id='6f98b895-9ca6-43b1-9526-7f6ebacd6bab',
 )
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_api_risk_info(req)
@@ -197,7 +197,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppTelemetriesAppTelemetryIDImagePackagesRequest(
-    app_telemetry_id='673e13a1-2a6b-4992-8945-94487f5c8438',
+    app_telemetry_id='4668441f-326c-4b1d-9b80-38c3aa5ff203',
 )
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_image_packages(req)
@@ -236,7 +236,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppTelemetriesAppTelemetryIDInjectionInfoRequest(
-    app_telemetry_id='36b86b3c-df64-415b-8449-f9df13f4eedb',
+    app_telemetry_id='e9382bba-032c-4379-a173-a7671d6d9a49',
 )
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_injection_info(req)
@@ -277,48 +277,48 @@ s = pan.Pan(
 
 req = operations.GetConnectionTelemetriesRequest(
     download_as_xlsx=False,
-    end_time=dateutil.parser.isoparse('2021-08-26T23:34:52.732Z'),
+    end_time=dateutil.parser.isoparse('2023-12-02T06:47:12.551Z'),
     logical_operator=operations.GetConnectionTelemetriesLogicalOperator.OR,
-    max_results=7347.74,
-    offset=9709.57,
+    max_results=1093.57,
+    offset=9127.11,
     result=[
-        operations.GetConnectionTelemetriesResult.BLOCK,
+        operations.GetConnectionTelemetriesResult.DETECT,
     ],
     show_only_violations=False,
     sort_dir=operations.GetConnectionTelemetriesSortDir.ASC,
-    sort_key=operations.GetConnectionTelemetriesSortKey.TARGET_APP_NAME,
+    sort_key=operations.GetConnectionTelemetriesSortKey.TARGET_APP_TYPE,
     source_app_name=[
-        'molestias',
+        'Hybrid',
     ],
     source_environment_name=[
-        'quia',
+        'wireless',
     ],
     source_executable=[
-        'ipsam',
+        'Walks',
     ],
     source_host_name=[
-        'rem',
+        'circuit',
     ],
-    source_namespaces_filter='molestias',
+    source_namespaces_filter='rich Coves',
     source_risk=[
-        operations.GetConnectionTelemetriesSourceRisk.HIGH,
+        operations.GetConnectionTelemetriesSourceRisk.LOW,
     ],
-    start_time=dateutil.parser.isoparse('2021-02-06T05:09:51.787Z'),
+    start_time=dateutil.parser.isoparse('2022-12-19T09:46:13.488Z'),
     target_app_name=[
-        'in',
+        'debunk',
     ],
     target_environment_name=[
-        'aliquid',
+        'lysine',
     ],
     target_executable=[
-        'amet',
+        'athwart',
     ],
     target_host_name=[
-        'fugiat',
+        'female',
     ],
-    target_namespaces_filter='corporis',
+    target_namespaces_filter='zero',
     target_risk=[
-        operations.GetConnectionTelemetriesTargetRisk.LOW,
+        operations.GetConnectionTelemetriesTargetRisk.HIGH,
     ],
 )
 
@@ -359,9 +359,9 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionTelemetriesConnectionTelemetryIDRequest(
-    connection_telemetry_id='72795b78-5148-4d6d-949e-5635b33bc0f9',
-    end_time=dateutil.parser.isoparse('2022-12-21T18:54:05.127Z'),
-    start_time=dateutil.parser.isoparse('2022-02-14T21:38:08.583Z'),
+    connection_telemetry_id='726acf07-d01e-4a6d-9948-64b67b807f65',
+    end_time=dateutil.parser.isoparse('2021-06-17T09:20:57.797Z'),
+    start_time=dateutil.parser.isoparse('2023-04-26T13:53:39.546Z'),
 )
 
 res = s.telemetries.get_connection_telemetries_connection_telemetry_id_(req)

@@ -32,17 +32,17 @@ s = pan.Pan(
 
 req = operations.GetAuditLogsRequest(
     actions=[
-        'quibusdam',
+        'male',
     ],
     download_as_xlsx=False,
-    end_time=dateutil.parser.isoparse('2022-08-14T06:59:07.022Z'),
-    max_results=8664.59,
-    object_type='sit',
-    offset=6947.28,
+    end_time=dateutil.parser.isoparse('2022-01-24T02:40:28.078Z'),
+    max_results=5619.36,
+    object_type='GB grey Folding',
+    offset=2262.25,
     sort_dir=operations.GetAuditLogsSortDir.DESC,
     sort_key=operations.GetAuditLogsSortKey.TIME,
-    start_time=dateutil.parser.isoparse('2021-01-31T13:17:13.329Z'),
-    user='sed',
+    start_time=dateutil.parser.isoparse('2022-05-15T07:17:17.108Z'),
+    user='Lennie.Torphy0',
 )
 
 res = s.audit_logs.get_audit_logs(req)
@@ -112,25 +112,25 @@ s = pan.Pan(
 )
 
 req = operations.GetAuditLogsKubernetesRequest(
-    cluster_name='possimus',
+    cluster_name='Coupe Southeast Southeast',
     download_as_xlsx=False,
-    end_time=dateutil.parser.isoparse('2020-03-28T10:33:13.519Z'),
+    end_time=dateutil.parser.isoparse('2022-08-15T09:50:37.531Z'),
     kubernetes_audit_action=[
-        'architecto',
+        'online',
     ],
-    max_results=2406.96,
-    namespace_name='pariatur',
+    max_results=3231.79,
+    namespace_name='Cadillac',
     no_pagination=False,
-    offset=6884.63,
-    resource_kind='dolore',
-    resource_name='voluptatibus',
+    offset=5266.56,
+    resource_kind='Island SSL',
+    resource_name='South vaguely',
     result=[
-        operations.GetAuditLogsKubernetesResult.DETECT,
+        operations.GetAuditLogsKubernetesResult.BLOCK,
     ],
-    sort_dir=operations.GetAuditLogsKubernetesSortDir.ASC,
-    sort_key=operations.GetAuditLogsKubernetesSortKey.USER,
-    start_time=dateutil.parser.isoparse('2021-08-24T10:03:12.351Z'),
-    user='velit',
+    sort_dir=operations.GetAuditLogsKubernetesSortDir.DESC,
+    sort_key=operations.GetAuditLogsKubernetesSortKey.ACTION,
+    start_time=dateutil.parser.isoparse('2022-02-10T19:51:08.510Z'),
+    user='Rebekah66',
 )
 
 res = s.audit_logs.get_audit_logs_kubernetes(req)

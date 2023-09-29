@@ -54,39 +54,39 @@ s = pan.Pan(
 )
 
 req = shared.ServerlessPolicy(
-    default_rule=shared.ServerlessDefaultRule.BLOCK_ALL,
+    default_rule=shared.ServerlessDefaultRule.DETECT_ALL,
     unidentified_serverless_rule=shared.UnidentifiedServerlessRule(
         action=shared.UnidentifiedServerlessRuleAction.DETECT,
-        name='Jane Shanahan',
+        name='infrastructures solutions',
     ),
     user_rules=[
         shared.ServerlessRule(
             action=shared.ServerlessRuleAction.DETECT,
-            group_name='eligendi',
-            id='f7812cb5-12c8-4782-80bf-548f88f8f1bf',
-            name='Hannah Schmidt',
+            group_name='Dodge',
+            id='6eaf47ac-061b-4704-854c-19159eac10ed',
+            name='Convertible Shilling',
             rule=shared.ServerlessRuleType(
                 serverless_function_validation=shared.ServerlessFunctionValidation(
-                    data_access_risk=shared.ServerlessDataAccessRisk.NO_RISK,
-                    function_permission_risk=shared.ServerlessPolicyRisk.CRITICAL,
+                    data_access_risk=shared.ServerlessDataAccessRisk.LOW,
+                    function_permission_risk=shared.ServerlessPolicyRisk.HIGH,
                     is_unused_function=False,
-                    publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.NO_RISK,
-                    risk=shared.ServerlessFunctionRiskLevel.NO_RISK,
+                    publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.LOW,
+                    risk=shared.ServerlessFunctionRiskLevel.LOW,
                     secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-                    vulnerability=shared.VulnerabilitySeverity.CRITICAL,
+                    vulnerability=shared.VulnerabilitySeverity.LOW,
                 ),
                 serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
             ),
             rule_origin=shared.ServerlessRuleOrigin.SYSTEM,
             scope=[
                 shared.ServerlessRuleScope(
-                    cloud_account='quas',
+                    cloud_account='Latin West',
                     regions=[
-                        'sequi',
+                        'Configuration',
                     ],
                 ),
             ],
-            status=shared.ServerlessRuleStatus.ENABLED,
+            status=shared.ServerlessRuleStatus.DISABLED,
         ),
     ],
 )

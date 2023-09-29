@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import clusterpermission as shared_clusterpermission
 from enum import Enum
-from typing import Optional
+from typing import Final, Optional
 
 class GetRiskAssessmentPermissionsPermissionRisk(str, Enum):
     r"""the risk to filter by"""
@@ -19,23 +19,19 @@ class GetRiskAssessmentPermissionsSortDir(str, Enum):
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentPermissionsSortKey(str, Enum):
-    r"""sort key"""
-    PERMISSION_RISK = 'permissionRisk'
-
 
 
 @dataclasses.dataclass
 class GetRiskAssessmentPermissionsRequest:
     clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
-    include_system_owners: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
+    include_system_owners: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
     r"""include systems default owners"""
     permission_risk: Optional[GetRiskAssessmentPermissionsPermissionRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'permissionRisk', 'style': 'form', 'explode': True }})
     r"""the risk to filter by"""
-    sort_dir: Optional[GetRiskAssessmentPermissionsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentPermissionsSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRiskAssessmentPermissionsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='permissionRisk', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

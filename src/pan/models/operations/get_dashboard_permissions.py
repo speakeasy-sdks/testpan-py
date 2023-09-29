@@ -12,7 +12,7 @@ from typing import Optional
 class GetDashboardPermissionsRequest:
     clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
-    include_system_owners: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
+    include_system_owners: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
     r"""include systems default owners"""
     
 

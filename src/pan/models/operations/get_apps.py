@@ -27,7 +27,7 @@ class GetAppsRequest:
     r"""Filter Apps by name"""
     no_pagination: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'noPagination', 'style': 'form', 'explode': True }})
     r"""When true, the pagination params will be ignored"""
-    sort_dir: Optional[GetAppsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAppsSortDir] = dataclasses.field(default=GetAppsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     sort_key: Optional[GetAppsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""App sort key"""

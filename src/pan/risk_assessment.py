@@ -20,7 +20,7 @@ class RiskAssessment:
         url = utils.generate_url(operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDRequest, base_url, '/riskAssessment/ignoredRisks/{ignoredRiskId}', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -44,7 +44,7 @@ class RiskAssessment:
         url = utils.generate_url(operations.DeleteRiskAssessmentKubernetesClusterIDCancelRequest, base_url, '/riskAssessment/{kubernetesClusterId}/cancel', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -68,7 +68,7 @@ class RiskAssessment:
         url = base_url + '/riskAssessment'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -96,7 +96,7 @@ class RiskAssessment:
         url = base_url + '/riskAssessment/ignoredRisks'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -125,7 +125,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentPermissionsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -154,7 +154,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentPermissionsClusterIDRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -183,7 +183,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -211,7 +211,7 @@ class RiskAssessment:
         url = utils.generate_url(operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDRequest, base_url, '/riskAssessment/permissions/{clusterId}/{ownerId}/{roleId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -240,7 +240,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentPollRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -269,7 +269,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentImageIDVulnerabilitiesRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -298,7 +298,7 @@ class RiskAssessment:
         headers = {}
         query_params = utils.get_query_params(operations.GetRiskAssessmentKubernetesClusterIDPodsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -326,7 +326,7 @@ class RiskAssessment:
         url = base_url + '/riskAssessment/ignoredRisks'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -353,14 +353,14 @@ class RiskAssessment:
         
         url = utils.generate_url(operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest, base_url, '/riskAssessment/permissions/{ownerId}/approve', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest, request)
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -384,7 +384,7 @@ class RiskAssessment:
         url = utils.generate_url(operations.PostRiskAssessmentKubernetesClusterIDScanRequest, base_url, '/riskAssessment/{kubernetesClusterId}/scan', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -410,13 +410,13 @@ class RiskAssessment:
         
         url = utils.generate_url(operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest, base_url, '/riskAssessment/{kubernetesClusterId}/settings', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "risk_assessment_cluster_scan_config", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "risk_assessment_cluster_scan_config", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -442,13 +442,13 @@ class RiskAssessment:
         
         url = utils.generate_url(operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest, base_url, '/riskAssessment/ignoredRisks/{ignoredRiskId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ci_policy_input", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "ci_policy_input", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

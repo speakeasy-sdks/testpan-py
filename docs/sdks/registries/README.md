@@ -32,7 +32,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteRegistriesRegistryIDRequest(
-    registry_id='b7021a52-046b-464e-99fb-0e67e094fdfe',
+    registry_id='e5f28387-13f7-45c6-911a-2f9bf926c17f',
 )
 
 res = s.registries.delete_registries_registry_id_(req)
@@ -71,8 +71,8 @@ s = pan.Pan(
 )
 
 req = operations.GetRegistriesRequest(
-    sort_dir=operations.GetRegistriesSortDir.DESC,
-    sort_key=operations.GetRegistriesSortKey.URL,
+    sort_dir=operations.GetRegistriesSortDir.ASC,
+    sort_key='Southwest OCR',
 )
 
 res = s.registries.get_registries(req)
@@ -112,13 +112,13 @@ s = pan.Pan(
 
 req = shared.RegistryInput(
     cluster_ids=[
-        '5540ef53-a34a-41b8-be99-731adc05d85a',
+        '95b632a5-fe89-4e35-884b-fdb5be5f9972',
     ],
     credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.JFROG_REGISTRY_CREDENTIALS,
+        registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
     ),
-    type=shared.RegistryType.AWS,
-    url='illum',
+    type=shared.RegistryType.AZURE,
+    url='http://svelte-curio.org',
 )
 
 res = s.registries.post_registries(req)
@@ -158,13 +158,13 @@ s = pan.Pan(
 
 req = shared.RegistryInput(
     cluster_ids=[
-        'fb70fb38-7429-40d3-b656-1eca16ef8945',
+        '146c9745-4e65-4c13-96b3-e4e8e106ebca',
     ],
     credentials=shared.RegistryCredentials(
         registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
     ),
-    type=shared.RegistryType.JFROG,
-    url='facere',
+    type=shared.RegistryType.OTHER,
+    url='http://handy-energy.net',
 )
 
 res = s.registries.post_registries_test_connection(req)
@@ -205,15 +205,15 @@ s = pan.Pan(
 req = operations.PostRegistriesTestConnectionRegistryIDRequest(
     registry_input=shared.RegistryInput(
         cluster_ids=[
-            '76eeeb51-8c4d-4a1f-ad35-512f06d4e5b7',
+            '309c9980-a8e5-4df0-8f7a-f1c1e7dae13c',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
         ),
-        type=shared.RegistryType.OTHER,
-        url='alias',
+        type=shared.RegistryType.AWS,
+        url='http://blond-horror.org',
     ),
-    registry_id='f548568a-0424-4e00-a1d6-eb9434645d03',
+    registry_id='99bd4248-5508-4257-836a-3d0e30be4155',
 )
 
 res = s.registries.post_registries_test_connection_registry_id_(req)
@@ -254,15 +254,15 @@ s = pan.Pan(
 req = operations.PutRegistriesRegistryIDRequest(
     registry_input=shared.RegistryInput(
         cluster_ids=[
-            '084fbba5-ccef-4f5c-b01f-e51e528a45ac',
+            'bb846b91-90fe-4927-838c-5cc07f3bb118',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
         ),
         type=shared.RegistryType.AWS,
-        url='distinctio',
+        url='https://mixed-affiliate.info',
     ),
-    registry_id='85f8bc2c-aba8-4da4-927d-d597ff4711aa',
+    registry_id='a8f4138b-1ba6-41a9-bb5f-375f1e0e9ee0',
 )
 
 res = s.registries.put_registries_registry_id_(req)

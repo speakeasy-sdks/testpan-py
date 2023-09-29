@@ -25,7 +25,7 @@ class GetCloudAccountsCloudAccountIDDownloadBundleResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    get_cloud_accounts_cloud_account_id_download_bundle_200_application_json_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    get_cloud_accounts_cloud_account_id_download_bundle_200_application_json_binary_string: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

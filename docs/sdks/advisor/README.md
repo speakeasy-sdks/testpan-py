@@ -183,7 +183,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAdvisorQueueAdvisorTypeRequest(
-    advisor_type=operations.GetAdvisorQueueAdvisorTypeAdvisorType.CONNECTION_RULES,
+    advisor_type=operations.GetAdvisorQueueAdvisorTypeAdvisorType.DEPLOYMENT_RULES,
 )
 
 res = s.advisor.get_advisor_queue_advisor_type_(req)
@@ -222,7 +222,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAdvisorRunRequest(
-    policy_advisor_type=operations.PostAdvisorRunPolicyAdvisorType.POD_SECURITY_STANDARD,
+    policy_advisor_type=operations.PostAdvisorRunPolicyAdvisorType.API_RULES,
 )
 
 res = s.advisor.post_advisor_run(req)

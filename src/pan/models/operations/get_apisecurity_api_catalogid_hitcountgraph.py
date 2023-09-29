@@ -28,7 +28,7 @@ class GetAPISecurityAPICatalogIDHitCountGraphRequest:
     r"""spec path"""
     spec_path_method: GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod = dataclasses.field(metadata={'query_param': { 'field_name': 'specPathMethod', 'style': 'form', 'explode': True }})
     r"""spec path method"""
-    hours_interval: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hoursInterval', 'style': 'form', 'explode': True }})
+    hours_interval: Optional[int] = dataclasses.field(default=24, metadata={'query_param': { 'field_name': 'hoursInterval', 'style': 'form', 'explode': True }})
     r"""hours interval"""
     
 

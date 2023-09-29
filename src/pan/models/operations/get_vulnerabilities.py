@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclasses.dataclass
 class GetVulnerabilitiesRequest:
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     vul_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vulName', 'style': 'form', 'explode': True }})
     r"""vulnerabilities to search for ( as prefix and suffix )"""

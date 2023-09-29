@@ -24,10 +24,10 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityAPICatalogIDHitCountGraphRequest(
-    catalog_id='ca4d456e-f103-41e6-899f-0c2001e22cd5',
-    hours_interval=351035,
-    spec_path='quod',
-    spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.TRACE,
+    catalog_id='6b535753-b47a-42be-a003-f45375c0bae8',
+    hours_interval=654607,
+    spec_path='network',
+    spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.POST,
 )
 
 res = s.performance.get_api_security_api_catalog_id_hit_count_graph(req)
@@ -67,13 +67,13 @@ s = pan.Pan(
 )
 
 req = operations.GetPerformanceMetricsRequest(
-    end_time=dateutil.parser.isoparse('2022-08-20T18:13:06.023Z'),
-    protocol='molestias',
-    source_namespace='4a184d76-d971-4fc8-a0c6-5b037bb8e0cc',
-    source_pod_template='885187e4-de04-4af2-8c5d-ddb46aa1cfd6',
-    start_time=dateutil.parser.isoparse('2021-05-14T04:58:39.138Z'),
-    target_namespace='28da0131-9112-4964-a645-c1d81f29042f',
-    target_pod_template='569b7aff-0ea2-4216-8be0-71bc163e279a',
+    end_time=dateutil.parser.isoparse('2023-06-20T17:24:08.589Z'),
+    protocol='Account',
+    source_namespace='b8ead185-971d-4112-a105-9b89d3b7dcd1',
+    source_pod_template='b894b8a5-ad8e-4111-86dd-d9453d845e92',
+    start_time=dateutil.parser.isoparse('2023-11-21T23:20:37.062Z'),
+    target_namespace='a04569a7-7dda-4601-a8cf-6d7999aa93b9',
+    target_pod_template='be30176b-a06c-4558-9ceb-c600c70dc9c6',
 )
 
 res = s.performance.get_performance_metrics(req)

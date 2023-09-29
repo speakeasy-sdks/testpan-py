@@ -11,9 +11,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class K8sCISBenchmarkAccountSummary:
-    compliance: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliance'), 'exclude': lambda f: f is None }})
-    number_of_clusters: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfClusters'), 'exclude': lambda f: f is None }})
-    number_of_clusters_with_action_items: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfClustersWithActionItems'), 'exclude': lambda f: f is None }})
-    number_of_scanned_clusters: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfScannedClusters'), 'exclude': lambda f: f is None }})
+    compliance: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliance'), 'exclude': lambda f: f is None }})
+    number_of_clusters: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfClusters'), 'exclude': lambda f: f is None }})
+    number_of_clusters_with_action_items: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfClustersWithActionItems'), 'exclude': lambda f: f is None }})
+    number_of_scanned_clusters: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfScannedClusters'), 'exclude': lambda f: f is None }})
     
 

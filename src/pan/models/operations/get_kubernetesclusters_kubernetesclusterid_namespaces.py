@@ -24,11 +24,11 @@ class GetKubernetesClustersKubernetesClusterIDNamespacesSortKey(str, Enum):
 class GetKubernetesClustersKubernetesClusterIDNamespacesRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    include_scannable: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeScannable', 'style': 'form', 'explode': True }})
+    include_scannable: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeScannable', 'style': 'form', 'explode': True }})
     r"""If true - return all scannable namespaces"""
-    sort_dir: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortDir] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortKey] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

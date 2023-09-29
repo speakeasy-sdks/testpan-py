@@ -19,7 +19,7 @@ class Bfla:
         url = utils.generate_url(operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/detection', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -46,7 +46,7 @@ class Bfla:
         url = utils.generate_url(operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/learning', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -73,7 +73,7 @@ class Bfla:
         url = utils.generate_url(operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -100,13 +100,13 @@ class Bfla:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/detection', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -132,13 +132,13 @@ class Bfla:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/learning', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -165,7 +165,7 @@ class Bfla:
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/reset', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -191,13 +191,13 @@ class Bfla:
         
         url = utils.generate_url(operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_service_bfla_info", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_service_bfla_info", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

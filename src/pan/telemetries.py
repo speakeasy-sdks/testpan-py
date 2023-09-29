@@ -21,7 +21,7 @@ class Telemetries:
         headers = {}
         query_params = utils.get_query_params(operations.GetAppTelemetriesRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -49,7 +49,7 @@ class Telemetries:
         url = utils.generate_url(operations.GetAppTelemetriesAppTelemetryIDRequest, base_url, '/appTelemetries/{appTelemetryId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -77,7 +77,7 @@ class Telemetries:
         url = utils.generate_url(operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoRequest, base_url, '/appTelemetries/{appTelemetryId}/apiRiskInfo', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -105,7 +105,7 @@ class Telemetries:
         url = utils.generate_url(operations.GetAppTelemetriesAppTelemetryIDImagePackagesRequest, base_url, '/appTelemetries/{appTelemetryId}/imagePackages', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -133,7 +133,7 @@ class Telemetries:
         url = utils.generate_url(operations.GetAppTelemetriesAppTelemetryIDInjectionInfoRequest, base_url, '/appTelemetries/{appTelemetryId}/injectionInfo', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -162,7 +162,7 @@ class Telemetries:
         headers = {}
         query_params = utils.get_query_params(operations.GetConnectionTelemetriesRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -191,7 +191,7 @@ class Telemetries:
         headers = {}
         query_params = utils.get_query_params(operations.GetConnectionTelemetriesConnectionTelemetryIDRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

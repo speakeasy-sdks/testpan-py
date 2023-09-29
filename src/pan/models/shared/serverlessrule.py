@@ -25,7 +25,7 @@ class ServerlessRule:
     status: shared_serverlessrulestatus.ServerlessRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_serverlessruleorigin.ServerlessRuleOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[shared_serverlessruleorigin.ServerlessRuleOrigin] = dataclasses.field(default=ServerlessRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
     scope: Optional[list[shared_serverlessrulescope.ServerlessRuleScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
     
 

@@ -32,11 +32,11 @@ s = pan.Pan(
 
 req = operations.GetK8sCISBenchmarkRequest(
     cluster_ids=[
-        'blanditiis',
+        'magnitude',
     ],
-    max_results=5112.03,
+    max_results=5852.41,
     no_pagination=False,
-    offset=9152.67,
+    offset=1447.41,
 )
 
 res = s.k8s_cis_benchmark.get_k8s_cis_benchmark(req)
@@ -105,7 +105,7 @@ s = pan.Pan(
 )
 
 req = operations.GetK8sCISBenchmarkClusterIDRequest(
-    cluster_id='c66183bf-e965-49eb-80ec-16faf75b0b53',
+    cluster_id='22b6e2e3-3165-4cce-b4e8-bc9db9f52c45',
 )
 
 res = s.k8s_cis_benchmark.get_k8s_cis_benchmark_cluster_id_(req)
@@ -144,7 +144,7 @@ s = pan.Pan(
 )
 
 req = operations.PostK8sCISBenchmarkClusterIDRequest(
-    cluster_id='2a4da37c-baaf-4445-ac48-42c9b2ad32da',
+    cluster_id='35b87c47-9c94-446b-bd9d-9edabb3c15c6',
 )
 
 res = s.k8s_cis_benchmark.post_k8s_cis_benchmark_cluster_id_(req)
@@ -184,16 +184,16 @@ s = pan.Pan(
 
 req = operations.PutK8sCISBenchmarkClusterIDRequest(
     k8s_cis_benchmark_update_nodes=shared.K8sCISBenchmarkUpdateNodes(
-        cluster_id='fe81a88f-4444-4573-becd-47353f63c820',
-        index='natus',
+        cluster_id='49b403e0-ddc8-4f07-8f6d-7b4806fe4a7b',
+        index='exactly tan Bespoke',
         nodes=[
             shared.K8sCISBenchmarkUpdateNode(
-                id='379aa69c-d5fb-4cf7-9da1-8a7822bf9589',
+                id='e905f14c-9f8f-455f-8602-b586f168c3d5',
             ),
         ],
         status=shared.K8sCISBenchmarkUpdateNodeStatus.FAIL,
     ),
-    cluster_id='e6861adb-55f9-4e5d-b51c-9fe8f7502bfd',
+    cluster_id='0e1fb82e-2384-4feb-b1f7-119a392759c9',
 )
 
 res = s.k8s_cis_benchmark.put_k8s_cis_benchmark_cluster_id_(req)

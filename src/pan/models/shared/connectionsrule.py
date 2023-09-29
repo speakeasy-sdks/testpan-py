@@ -31,7 +31,7 @@ class ConnectionsRule:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_rule_active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isRuleActive'), 'exclude': lambda f: f is None }})
     layer7_settings: Optional[shared_layer7settingspart.Layer7SettingsPart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('layer7Settings'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_connectionruleorigin.ConnectionRuleOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[shared_connectionruleorigin.ConnectionRuleOrigin] = dataclasses.field(default=ConnectionRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
     rule_type: Optional[shared_networkconnectionruletype.NetworkConnectionRuleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleType'), 'exclude': lambda f: f is None }})
     source: Optional[shared_connectionrulepart.ConnectionRulePart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
     status: Optional[ConnectionsRuleStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})

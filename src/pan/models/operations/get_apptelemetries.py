@@ -63,7 +63,7 @@ class GetAppTelemetriesRequest:
     environment_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'environmentName', 'style': 'form', 'explode': False }})
     r"""Empty string means no filtering. \\"UNDEFINED\\" means telemetries with no App type"""
     executable: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'executable', 'style': 'form', 'explode': False }})
-    hide_internals: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hideInternals', 'style': 'form', 'explode': True }})
+    hide_internals: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'hideInternals', 'style': 'form', 'explode': True }})
     r"""When true, the API will filter out \\"OS Internal\\" and \\"User OS Internal\\" App types"""
     highest_dockerfile_scan_result: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'highestDockerfileScanResult', 'style': 'form', 'explode': False }})
     r"""Highest DockerfileScan Result"""
@@ -73,23 +73,23 @@ class GetAppTelemetriesRequest:
     r"""Array of images id"""
     is_identified: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isIdentified', 'style': 'form', 'explode': True }})
     r"""app is identified filter"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     namespaces_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespacesFilter', 'style': 'form', 'explode': True }})
     r"""namespace filter. a base 64 representation of a list of NamespacesFilter definition object"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    protection_status: Optional[GetAppTelemetriesProtectionStatus] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'protectionStatus', 'style': 'form', 'explode': True }})
+    protection_status: Optional[GetAppTelemetriesProtectionStatus] = dataclasses.field(default=GetAppTelemetriesProtectionStatus.ALL, metadata={'query_param': { 'field_name': 'protectionStatus', 'style': 'form', 'explode': True }})
     r"""When true, the API will return only protected pods"""
     result: Optional[list[GetAppTelemetriesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""app result filter"""
-    show_only_entries_with_app_name: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyEntriesWithAppName', 'style': 'form', 'explode': True }})
+    show_only_entries_with_app_name: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyEntriesWithAppName', 'style': 'form', 'explode': True }})
     r"""When true, the telemetries API will only return entries with the App name"""
     show_only_violations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return entries that violate the active policy"""
-    show_system_pods: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showSystemPods', 'style': 'form', 'explode': True }})
+    show_system_pods: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showSystemPods', 'style': 'form', 'explode': True }})
     r"""When true, the telemetries API will also return workloads that are part of the Kubernetes system"""
-    sort_dir: Optional[GetAppTelemetriesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAppTelemetriesSortDir] = dataclasses.field(default=GetAppTelemetriesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     status: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': False }})
     r"""App status"""

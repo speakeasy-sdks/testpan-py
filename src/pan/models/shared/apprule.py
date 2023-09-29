@@ -25,7 +25,7 @@ class AppRule:
     r"""identify the workload type. Only one of the below should be not null, and  used."""
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_appruleorigin.AppRuleOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[shared_appruleorigin.AppRuleOrigin] = dataclasses.field(default=AppRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
     scope: Optional[shared_workloadrulescopetype.WorkloadRuleScopeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
     r"""identify the scope type. Only one of the below should be not null, and  used."""
     

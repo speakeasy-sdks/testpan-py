@@ -16,9 +16,9 @@ class GetDashboardApisecRiskFindingsTrendAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecRiskFindingsTrendRequest:
-    api_sec_source: GetDashboardApisecRiskFindingsTrendAPISecSource = dataclasses.field(metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetDashboardApisecRiskFindingsTrendAPISecSource = dataclasses.field(default=GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
-    num_of_days: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'numOfDays', 'style': 'form', 'explode': True }})
+    num_of_days: Optional[int] = dataclasses.field(default=30, metadata={'query_param': { 'field_name': 'numOfDays', 'style': 'form', 'explode': True }})
     r"""the desired number of days in graph"""
     
 

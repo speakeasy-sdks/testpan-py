@@ -17,13 +17,13 @@ class GetImagesImageIDDockerfileScanResultsSortDir(str, Enum):
 @dataclasses.dataclass
 class GetImagesImageIDDockerfileScanResultsRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
-    is_ignored: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isIgnored', 'style': 'form', 'explode': True }})
+    is_ignored: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'isIgnored', 'style': 'form', 'explode': True }})
     r"""Return ignored / not ignored entries"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetImagesImageIDDockerfileScanResultsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesImageIDDockerfileScanResultsSortDir] = dataclasses.field(default=GetImagesImageIDDockerfileScanResultsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 

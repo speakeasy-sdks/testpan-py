@@ -12,7 +12,7 @@ from typing import Optional
 class GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    send_telemetries_interval_sec: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sendTelemetriesIntervalSec', 'style': 'form', 'explode': True }})
+    send_telemetries_interval_sec: Optional[int] = dataclasses.field(default=30, metadata={'query_param': { 'field_name': 'sendTelemetriesIntervalSec', 'style': 'form', 'explode': True }})
     r"""The time interval for sending telemetries"""
     
 
@@ -27,7 +27,7 @@ class GetKubernetesClustersKubernetesClusterIDDownloadBundleResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    get_kubernetes_clusters_kubernetes_cluster_id_download_bundle_200_application_json_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    get_kubernetes_clusters_kubernetes_cluster_id_download_bundle_200_application_json_binary_string: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

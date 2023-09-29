@@ -34,7 +34,7 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionsPolicyRequest(
-    policy_filter='quibusdam',
+    policy_filter='Serbia',
 )
 
 res = s.connection_policies.get_connections_policy(req)
@@ -133,7 +133,7 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionsPolicyKafkaKubernetesClusterIDBrokersRequest(
-    kubernetes_cluster_id='905a972e-0567-4282-a7b2-d309470bf7a4',
+    kubernetes_cluster_id='adf9ba62-2ac1-4d6f-9118-9c1b46212731',
 )
 
 res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_brokers(req)
@@ -172,7 +172,7 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionsPolicyKafkaKubernetesClusterIDTopicsRequest(
-    kubernetes_cluster_id='fa87cf53-5a6f-4ae5-8ebf-60c321f023b7',
+    kubernetes_cluster_id='fa0332c3-3e86-408a-93f6-0cc1de785419',
 )
 
 res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_topics(req)
@@ -211,7 +211,7 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionsPolicySearchOptionsRequest(
-    name_filter='nostrum',
+    name_filter='Soft',
 )
 
 res = s.connection_policies.get_connections_policy_search_options(req)
@@ -281,33 +281,33 @@ s = pan.Pan(
 
 req = shared.ConnectionsPolicy(
     default_rule=shared.DefaultConnectionRule(
-        action=shared.ConnectionRuleAction.ENCRYPT_DIRECT,
-        type=shared.DefaultConnectionRuleType.ALLOW_ALL,
+        action=shared.ConnectionRuleAction.BLOCK,
+        type=shared.DefaultConnectionRuleType.DENY_ALL,
     ),
     direct_pod_rule=shared.DirectPodIPConnectionRule(
-        action=shared.DirectPodIPConnectionRuleAction.DETECT,
+        action=shared.DirectPodIPConnectionRuleAction.BLOCK,
         is_disabled=False,
-        name='Stella Witting MD',
+        name='violet yet honestly',
     ),
     user_rules=[
         shared.ConnectionsRule(
             action=shared.ConnectionRuleAction.DETECT,
             destination=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.EXPANSION_LABELS_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.API_SERVICE_CONNECTION_RULE_PART,
             ),
-            group_name='minus',
-            id='8df79f0a-396d-490c-b64b-7c15dfbace18',
+            group_name='International',
+            id='7d416085-4f9b-4bdb-b9bd-42eaba046b7a',
             is_rule_active=False,
             layer7_settings=shared.Layer7SettingsPart(
-                layer7_protocol=shared.Layer7SettingsPartLayer7Protocol.KAFKA_LAYER_PART,
+                layer7_protocol=shared.Layer7SettingsPartLayer7Protocol.HTTP_LAYER7_PART,
             ),
-            name='Samuel Russel',
-            rule_origin=shared.ConnectionRuleOrigin.SYSTEM,
-            rule_type=shared.NetworkConnectionRuleType.USER_RULE,
+            name='repellat asymmetric',
+            rule_origin=shared.ConnectionRuleOrigin.USER,
+            rule_type=shared.NetworkConnectionRuleType.DIRECT_POD_RULE,
             source=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.EXPANSION_NAME_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.IP_RANGE_CONNECTION_RULE_PART,
             ),
-            status=shared.ConnectionsRuleStatus.DISABLED,
+            status=shared.ConnectionsRuleStatus.ENABLED,
         ),
     ],
 )

@@ -5,24 +5,20 @@ import dataclasses
 import requests as requests_http
 from ..shared import registry as shared_registry
 from enum import Enum
-from typing import Optional
+from typing import Final, Optional
 
 class GetRegistriesSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRegistriesSortKey(str, Enum):
-    r"""sort key"""
-    URL = 'url'
-
 
 
 @dataclasses.dataclass
 class GetRegistriesRequest:
-    sort_dir: Optional[GetRegistriesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRegistriesSortDir] = dataclasses.field(default=GetRegistriesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRegistriesSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='url', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

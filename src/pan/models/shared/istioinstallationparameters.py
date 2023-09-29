@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class IstioInstallationParameters:
     r"""istio related information"""
-    is_istio_already_installed: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIstioAlreadyInstalled'), 'exclude': lambda f: f is None }})
+    is_istio_already_installed: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIstioAlreadyInstalled'), 'exclude': lambda f: f is None }})
     r"""indicates whether Istio is already installed on this cluster (which means Secure Application should not install it)"""
     istio_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioVersion'), 'exclude': lambda f: f is None }})
     r"""when istio already installed, choose the version from supported istio versions list: /istio/supportedVersions"""

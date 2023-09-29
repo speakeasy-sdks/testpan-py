@@ -10,7 +10,7 @@ from typing import Optional
 
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCountRequest:
-    include_service_with_no_spec: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeServiceWithNoSpec', 'style': 'form', 'explode': True }})
+    include_service_with_no_spec: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'includeServiceWithNoSpec', 'style': 'form', 'explode': True }})
     r"""When false, only services with specs wikk be returned"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""the Api Catalog name filter"""
