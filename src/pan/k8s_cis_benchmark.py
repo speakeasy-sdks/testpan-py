@@ -21,7 +21,7 @@ class K8sCisBenchmark:
         headers = {}
         query_params = utils.get_query_params(operations.GetK8sCISBenchmarkRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -49,7 +49,7 @@ class K8sCisBenchmark:
         url = base_url + '/k8sCISBenchmark/summary'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -77,7 +77,7 @@ class K8sCisBenchmark:
         url = utils.generate_url(operations.GetK8sCISBenchmarkClusterIDRequest, base_url, '/k8sCISBenchmark/{clusterId}', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -101,7 +101,7 @@ class K8sCisBenchmark:
         url = utils.generate_url(operations.PostK8sCISBenchmarkClusterIDRequest, base_url, '/k8sCISBenchmark/{clusterId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -128,13 +128,13 @@ class K8sCisBenchmark:
         
         url = utils.generate_url(operations.PutK8sCISBenchmarkClusterIDRequest, base_url, '/k8sCISBenchmark/{clusterId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "k8s_cis_benchmark_update_nodes", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "k8s_cis_benchmark_update_nodes", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

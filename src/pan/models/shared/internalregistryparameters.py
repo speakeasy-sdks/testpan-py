@@ -14,7 +14,7 @@ class InternalRegistryParameters:
     r"""internal registry information"""
     internal_registry: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalRegistry'), 'exclude': lambda f: f is None }})
     r"""when internal registry enabled, specify the registry URL"""
-    internal_registry_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalRegistryEnabled'), 'exclude': lambda f: f is None }})
+    internal_registry_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalRegistryEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether internal registry is enabled"""
     
 

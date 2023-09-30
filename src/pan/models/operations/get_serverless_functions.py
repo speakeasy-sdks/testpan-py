@@ -44,9 +44,9 @@ class GetServerlessFunctionsRequest:
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     func_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'funcName', 'style': 'form', 'explode': False }})
     r"""Defined function name"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     policy_risk: Optional[list[GetServerlessFunctionsPolicyRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'policyRisk', 'style': 'form', 'explode': False }})
     r"""The risk of the serverless functioriskFindingsn policy"""
@@ -58,7 +58,7 @@ class GetServerlessFunctionsRequest:
     r"""The risk of the serverless function"""
     secrets_risk: Optional[list[GetServerlessFunctionsSecretsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'secretsRisk', 'style': 'form', 'explode': False }})
     r"""The risk of the serverless function secrets"""
-    sort_dir: Optional[GetServerlessFunctionsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetServerlessFunctionsSortDir] = dataclasses.field(default=GetServerlessFunctionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 

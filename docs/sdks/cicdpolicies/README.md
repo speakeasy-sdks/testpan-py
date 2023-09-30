@@ -34,7 +34,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteCdPolicyPolicyIDRequest(
-    policy_id='45626d43-6813-4f16-99f5-fce6c556146c',
+    policy_id='113917a9-a33e-48f7-8502-0a3844f10696',
 )
 
 res = s.ci_cd_policies.delete_cd_policy_policy_id_(req)
@@ -73,7 +73,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteCiPolicyPolicyIDRequest(
-    policy_id='3e250fb0-08c4-42e1-81aa-c366c8dd6b14',
+    policy_id='04ff3f56-c960-40ce-85e7-ad7f8b628cd7',
 )
 
 res = s.ci_cd_policies.delete_ci_policy_policy_id_(req)
@@ -173,24 +173,24 @@ s = pan.Pan(
 
 req = shared.CdPolicyInput(
     api_security_cd_policy=shared.APISecurityCdPolicyElement(
-        api_security_profile='42907474-778a-47bd-866d-28c10ab3cdca',
+        api_security_profile='e20e4f6e-3e04-4f9f-8904-433d8246a999',
         enforcement_option=shared.EnforcementOption.FAIL,
     ),
     deployers=[
-        '251904e5-23c7-4e0b-8717-8e4796f2a70c',
+        'aede075c-3164-444b-a1e6-c4ecee9d9042',
     ],
-    description='eum',
-    name='Dwayne Cronin',
+    description='User-friendly composite Graphic Interface',
+    name='Concrete',
     permission_cd_policy=shared.CdPolicyElement(
         enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
+        permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
     ),
     secret_cd_policy=shared.SecretsCdPolicyElement(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.RISK_IDENTIFIED,
+        permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
     ),
     security_context_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.FAIL,
+        enforcement_option=shared.EnforcementOption.IGNORE,
         permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
     ),
 )
@@ -231,15 +231,15 @@ s = pan.Pan(
 )
 
 req = shared.CiPolicyInput(
-    description='nisi',
+    description='Adaptive scalable portal',
     dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
+        permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
     ),
-    name='Norma Christiansen',
+    name='local Tom',
     vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-        enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
+        enforcement_option=shared.EnforcementOption.FAIL,
+        permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
     ),
 )
 
@@ -281,28 +281,28 @@ s = pan.Pan(
 req = operations.PutCdPolicyPolicyIDRequest(
     cd_policy_input=shared.CdPolicyInput(
         api_security_cd_policy=shared.APISecurityCdPolicyElement(
-            api_security_profile='7ee17cbe-61e6-4b7b-95bc-0ab3c20c4f37',
-            enforcement_option=shared.EnforcementOption.IGNORE,
+            api_security_profile='75218fad-dbdc-48d5-b27f-e1d8ecd9e791',
+            enforcement_option=shared.EnforcementOption.FAIL,
         ),
         deployers=[
-            '9fd871f9-9dd2-4efd-921a-a6f1e674bdb0',
+            '45666e4d-fb74-4ef6-9a81-a0d950f62fec',
         ],
-        description='aliquam',
-        name='Samuel Hermiston',
+        description='Enterprise-wide 4th generation process improvement',
+        name='Berkshire quantifying',
         permission_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
         ),
         secret_cd_policy=shared.SecretsCdPolicyElement(
             enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
+            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.RISK_IDENTIFIED,
         ),
         security_context_cd_policy=shared.CdPolicyElement(
             enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
+            permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
         ),
     ),
-    policy_id='8ea19f1d-1705-4133-9d08-086a1840394c',
+    policy_id='0d219b4a-2fde-47a8-9370-33a3f0a96f23',
 )
 
 res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
@@ -342,18 +342,18 @@ s = pan.Pan(
 
 req = operations.PutCiPolicyPolicyIDRequest(
     ci_policy_input=shared.CiPolicyInput(
-        description='explicabo',
+        description='Public-key 24 hour pricing structure',
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
             enforcement_option=shared.EnforcementOption.FAIL,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='Jean Wunsch',
+        name='primary transform drive',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
             enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.CRITICAL,
         ),
     ),
-    policy_id='f0642dac-7af5-415c-8413-aa63aae8d678',
+    policy_id='e24f5dcf-d347-4fd8-8ec5-8c84ce879afb',
 )
 
 res = s.ci_cd_policies.put_ci_policy_policy_id_(req)

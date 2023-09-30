@@ -44,9 +44,9 @@ class GetAgentsRequest:
     r"""The name of the host"""
     risk: Optional[list[GetAgentsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risk', 'style': 'form', 'explode': False }})
     r"""The risk of the environment for attack"""
-    sort_dir: Optional[GetAgentsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAgentsSortDir] = dataclasses.field(default=GetAgentsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAgentsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAgentsSortKey] = dataclasses.field(default=GetAgentsSortKey.HOST_NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     status: Optional[list[GetAgentsStatus]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': False }})
     r"""Agent status"""

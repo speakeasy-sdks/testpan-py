@@ -7,7 +7,7 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
 ```bash
 pip install git+https://github.com/speakeasy-sdks/testpan-py.git
@@ -16,8 +16,6 @@ pip install git+https://github.com/speakeasy-sdks/testpan-py.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import pan
 from pan.models import operations, shared
@@ -30,7 +28,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
-    policy_id='a05dfc2d-df7c-4c78-8a1b-a928fc816742',
+    policy_id='04ae1a0e-dcb7-4d2b-b7a6-f7ca105f8c92',
 )
 
 res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
@@ -41,10 +39,10 @@ if res.status_code == 200:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [api_security_policies](docs/sdks/apisecuritypolicies/README.md)
+### [api_security_policies](docs/sdks/apisecuritypolicies/README.md)
 
 * [delete_api_security_policy_policy_id_](docs/sdks/apisecuritypolicies/README.md#delete_api_security_policy_policy_id_) - Delete api security policy
 * [get_api_security_policy](docs/sdks/apisecuritypolicies/README.md#get_api_security_policy) - Get a list of API security policies
@@ -52,7 +50,7 @@ if res.status_code == 200:
 * [post_api_security_policy](docs/sdks/apisecuritypolicies/README.md#post_api_security_policy) - Add new API security policy
 * [put_api_security_policy_policy_id_](docs/sdks/apisecuritypolicies/README.md#put_api_security_policy_policy_id_) - Edit Api security policy.
 
-## [cd](docs/sdks/cd/README.md)
+### [cd](docs/sdks/cd/README.md)
 
 * [delete_cd_rule_id_connections_rule](docs/sdks/cd/README.md#delete_cd_rule_id_connections_rule) - delete a cd connection rule.
 * [delete_cd_rule_id_serverless_rule](docs/sdks/cd/README.md#delete_cd_rule_id_serverless_rule) - delete a cd serverless rule.
@@ -65,7 +63,7 @@ if res.status_code == 200:
 * [put_cd_rule_id_connections_rule](docs/sdks/cd/README.md#put_cd_rule_id_connections_rule) - update a cd connection rule.
 * [put_cd_rule_id_serverless_rule](docs/sdks/cd/README.md#put_cd_rule_id_serverless_rule) - update a cd serverless rule.
 
-## [ci_cd_policies](docs/sdks/cicdpolicies/README.md)
+### [ci_cd_policies](docs/sdks/cicdpolicies/README.md)
 
 * [delete_cd_policy_policy_id_](docs/sdks/cicdpolicies/README.md#delete_cd_policy_policy_id_) - Delete CD policy
 * [delete_ci_policy_policy_id_](docs/sdks/cicdpolicies/README.md#delete_ci_policy_policy_id_) - Delete CI policy
@@ -76,7 +74,7 @@ if res.status_code == 200:
 * [put_cd_policy_policy_id_](docs/sdks/cicdpolicies/README.md#put_cd_policy_policy_id_) - Edit CD policy. At least one CdPolicyElement should be present
 * [put_ci_policy_policy_id_](docs/sdks/cicdpolicies/README.md#put_ci_policy_policy_id_) - Edit CI policy
 
-## [advisor](docs/sdks/advisor/README.md)
+### [advisor](docs/sdks/advisor/README.md)
 
 * [get_advisor_cluster_event_rules](docs/sdks/advisor/README.md#get_advisor_cluster_event_rules) - Returns a list of suggested cluster event rules
 * [get_advisor_connection_rules](docs/sdks/advisor/README.md#get_advisor_connection_rules) - Returns a list of suggested connection rules
@@ -86,17 +84,17 @@ if res.status_code == 200:
 * [get_advisor_queue_advisor_type_](docs/sdks/advisor/README.md#get_advisor_queue_advisor_type_) - Get status for policy advisor background job
 * [post_advisor_run](docs/sdks/advisor/README.md#post_advisor_run) - Runs the policy advisor
 
-## [agent_management](docs/sdks/agentmanagement/README.md)
+### [agent_management](docs/sdks/agentmanagement/README.md)
 
 * [get_agents](docs/sdks/agentmanagement/README.md#get_agents) - List all installed agents
 * [post_agents_agent_id_update](docs/sdks/agentmanagement/README.md#post_agents_agent_id_update) - Update the agent with the given id to the latest agent version
 * [post_agents_agent_id_update_state](docs/sdks/agentmanagement/README.md#post_agents_agent_id_update_state) - Update the status of an agent with the given id
 
-## [api](docs/sdks/api/README.md)
+### [api](docs/sdks/api/README.md)
 
 * [get_api](docs/sdks/api/README.md#get_api) - Get Secure Application API as a Swagger file
 
-## [api_security](docs/sdks/apisecurity/README.md)
+### [api_security](docs/sdks/apisecurity/README.md)
 
 * [delete_api_security_api_catalog_id_](docs/sdks/apisecurity/README.md#delete_api_security_api_catalog_id_) - Delete an API
 * [delete_api_security_internal_catalog_catalog_id_bfla_detection](docs/sdks/apisecurity/README.md#delete_api_security_internal_catalog_catalog_id_bfla_detection) - stop bfla detection phase
@@ -154,7 +152,7 @@ if res.status_code == 200:
 * [put_api_security_open_api_specs_catalog_id_](docs/sdks/apisecurity/README.md#put_api_security_open_api_specs_catalog_id_) - Add or edit a spec about a specific API for the account
 * [put_gateways_gateway_id_](docs/sdks/apisecurity/README.md#put_gateways_gateway_id_) - Edit gateway
 
-## [apps](docs/sdks/apps/README.md)
+### [apps](docs/sdks/apps/README.md)
 
 * [get_apps](docs/sdks/apps/README.md#get_apps) - Returns a list of defined Apps
 * [get_apps_app_id_](docs/sdks/apps/README.md#get_apps_app_id_) - Returns an App by its ID
@@ -162,14 +160,14 @@ if res.status_code == 200:
 * [post_apps_delete](docs/sdks/apps/README.md#post_apps_delete) - Delete several Apps
 * [put_apps_app_id_](docs/sdks/apps/README.md#put_apps_app_id_) - Edit the existing App
 
-## [audit_logs](docs/sdks/auditlogs/README.md)
+### [audit_logs](docs/sdks/auditlogs/README.md)
 
 * [get_audit_logs](docs/sdks/auditlogs/README.md#get_audit_logs) - Get audit logs
 * [get_audit_logs_actions](docs/sdks/auditlogs/README.md#get_audit_logs_actions) - Get all the audit logs actions
 * [get_audit_logs_kubernetes](docs/sdks/auditlogs/README.md#get_audit_logs_kubernetes) - Get audit logs
 * [get_audit_logs_kubernetes_actions](docs/sdks/auditlogs/README.md#get_audit_logs_kubernetes_actions) - Get all the kubernetes audit logs actions
 
-## [aws](docs/sdks/aws/README.md)
+### [aws](docs/sdks/aws/README.md)
 
 * [get_aws_accounts](docs/sdks/aws/README.md#get_aws_accounts) - Get a list of AWS accounts
 * [get_aws_roles](docs/sdks/aws/README.md#get_aws_roles) - Lists AWS role ARNs for the account
@@ -180,7 +178,7 @@ if res.status_code == 200:
 * [post_aws_roles](docs/sdks/aws/README.md#post_aws_roles) - Add AWS role to the account
 * [put_aws_roles_role_id_](docs/sdks/aws/README.md#put_aws_roles_role_id_) - Change AWS role name
 
-## [bfla](docs/sdks/bfla/README.md)
+### [bfla](docs/sdks/bfla/README.md)
 
 * [delete_api_security_internal_catalog_catalog_id_bfla_detection](docs/sdks/bfla/README.md#delete_api_security_internal_catalog_catalog_id_bfla_detection) - stop bfla detection phase
 * [delete_api_security_internal_catalog_catalog_id_bfla_learning](docs/sdks/bfla/README.md#delete_api_security_internal_catalog_catalog_id_bfla_learning) - stop bfla learning phase
@@ -190,11 +188,11 @@ if res.status_code == 200:
 * [post_api_security_internal_catalog_catalog_id_bfla_reset](docs/sdks/bfla/README.md#post_api_security_internal_catalog_catalog_id_bfla_reset) - Reset bfla model
 * [put_api_security_internal_catalog_catalog_id_bfla](docs/sdks/bfla/README.md#put_api_security_internal_catalog_catalog_id_bfla) - update BFLA info for this catalogId
 
-## [cli](docs/sdks/cli/README.md)
+### [cli](docs/sdks/cli/README.md)
 
 * [get_tools_cli_securecn_deployment_cli](docs/sdks/cli/README.md#get_tools_cli_securecn_deployment_cli) - Get the Secure Application deployment cli
 
-## [cluster_events_policies](docs/sdks/clustereventspolicies/README.md)
+### [cluster_events_policies](docs/sdks/clustereventspolicies/README.md)
 
 * [get_kubernetes_api_policy](docs/sdks/clustereventspolicies/README.md#get_kubernetes_api_policy) - Get current Kubernetes API policy
 * [get_kubernetes_api_policy_history](docs/sdks/clustereventspolicies/README.md#get_kubernetes_api_policy_history) - Get the history of the Kubernetes API policies
@@ -203,7 +201,7 @@ if res.status_code == 200:
 * [get_kubernetes_api_policy_recommended_rules](docs/sdks/clustereventspolicies/README.md#get_kubernetes_api_policy_recommended_rules) - Get the recommended Kubernetes API rules
 * [put_kubernetes_api_policy](docs/sdks/clustereventspolicies/README.md#put_kubernetes_api_policy) - set the current Kubernetes API policy
 
-## [connection_policies](docs/sdks/connectionpolicies/README.md)
+### [connection_policies](docs/sdks/connectionpolicies/README.md)
 
 * [get_connections_policy](docs/sdks/connectionpolicies/README.md#get_connections_policy) - Get current connection policy
 * [get_connections_policy_history](docs/sdks/connectionpolicies/README.md#get_connections_policy_history) - Get the history of the connection policies
@@ -214,7 +212,7 @@ if res.status_code == 200:
 * [get_serverless_policy_history](docs/sdks/connectionpolicies/README.md#get_serverless_policy_history) - Get the history of the serverless policies
 * [put_connections_policy](docs/sdks/connectionpolicies/README.md#put_connections_policy) - Set the current connection policy
 
-## [dashboard](docs/sdks/dashboard/README.md)
+### [dashboard](docs/sdks/dashboard/README.md)
 
 * [get_dashboard_apisec_risk_findings](docs/sdks/dashboard/README.md#get_dashboard_apisec_risk_findings) - Get API sec risk findings widget
 * [get_dashboard_apisec_risk_findings_trend](docs/sdks/dashboard/README.md#get_dashboard_apisec_risk_findings_trend) - Get API sec risk findings trend graph widget for the last 30 days
@@ -238,7 +236,7 @@ if res.status_code == 200:
 * [get_licensing_dashboard](docs/sdks/dashboard/README.md#get_licensing_dashboard) - Get licensing dashboard data
 * [post_dashboard_report_generate](docs/sdks/dashboard/README.md#post_dashboard_report_generate) - Generate Secure Application security report
 
-## [deployers](docs/sdks/deployers/README.md)
+### [deployers](docs/sdks/deployers/README.md)
 
 * [delete_deployers_deployer_id_](docs/sdks/deployers/README.md#delete_deployers_deployer_id_) - Delete an deployer
 * [get_deployers](docs/sdks/deployers/README.md#get_deployers) - List all the deployers on the system
@@ -247,14 +245,14 @@ if res.status_code == 200:
 * [post_deployers](docs/sdks/deployers/README.md#post_deployers) - Create a new deployer
 * [put_deployers_deployer_id_](docs/sdks/deployers/README.md#put_deployers_deployer_id_) - Edit deployer definition
 
-## [environment_policies](docs/sdks/environmentpolicies/README.md)
+### [environment_policies](docs/sdks/environmentpolicies/README.md)
 
 * [get_apps_policy](docs/sdks/environmentpolicies/README.md#get_apps_policy) - Get the current Apps policy
 * [get_apps_policy_history](docs/sdks/environmentpolicies/README.md#get_apps_policy_history) - Get the history of Apps policies
 * [get_apps_policy_search_options](docs/sdks/environmentpolicies/README.md#get_apps_policy_search_options) - Get the current Apps policy filter option
 * [put_apps_policy](docs/sdks/environmentpolicies/README.md#put_apps_policy) - Set the current Apps policy
 
-## [envs](docs/sdks/envs/README.md)
+### [envs](docs/sdks/envs/README.md)
 
 * [delete_environments_env_id_](docs/sdks/envs/README.md#delete_environments_env_id_)
 * [get_environments](docs/sdks/envs/README.md#get_environments) - List all defined Secure Application environments
@@ -265,7 +263,7 @@ if res.status_code == 200:
 * [post_environments_delete](docs/sdks/envs/README.md#post_environments_delete) - Delete multiple Secure Application environments
 * [put_environments_env_id_](docs/sdks/envs/README.md#put_environments_env_id_) - Edit an existing Secure Application environment
 
-## [expansions](docs/sdks/expansions/README.md)
+### [expansions](docs/sdks/expansions/README.md)
 
 * [delete_expansions_expansion_id_](docs/sdks/expansions/README.md#delete_expansions_expansion_id_) - Delete an expansion
 * [get_expansions](docs/sdks/expansions/README.md#get_expansions) - List all the expansions on the system
@@ -273,7 +271,7 @@ if res.status_code == 200:
 * [post_expansions](docs/sdks/expansions/README.md#post_expansions) - Create a new expansion
 * [put_expansions_expansion_id_](docs/sdks/expansions/README.md#put_expansions_expansion_id_) - Edit expansion definition
 
-## [gateways](docs/sdks/gateways/README.md)
+### [gateways](docs/sdks/gateways/README.md)
 
 * [delete_gateways_gateway_id_](docs/sdks/gateways/README.md#delete_gateways_gateway_id_) - Delete gateway
 * [get_gateways](docs/sdks/gateways/README.md#get_gateways) - Get gateways
@@ -282,7 +280,7 @@ if res.status_code == 200:
 * [post_gateways](docs/sdks/gateways/README.md#post_gateways) - Add new gateway
 * [put_gateways_gateway_id_](docs/sdks/gateways/README.md#put_gateways_gateway_id_) - Edit gateway
 
-## [images_and_vulnerabilities](docs/sdks/imagesandvulnerabilities/README.md)
+### [images_and_vulnerabilities](docs/sdks/imagesandvulnerabilities/README.md)
 
 * [delete_images_id_](docs/sdks/imagesandvulnerabilities/README.md#delete_images_id_) - Delete an image hash
 * [get_account_vulnerabilities_xlsx](docs/sdks/imagesandvulnerabilities/README.md#get_account_vulnerabilities_xlsx) - Returns a xlsx file of images alongside to their vulnerabilities.
@@ -300,7 +298,7 @@ if res.status_code == 200:
 * [post_images_image_id_dockerfile_scan_results_ignore](docs/sdks/imagesandvulnerabilities/README.md#post_images_image_id_dockerfile_scan_results_ignore) - Add / remove a list of  UUIDs of dockerfileScanResults from ignored list
 * [post_images_image_id_vulnerabilities_ignore](docs/sdks/imagesandvulnerabilities/README.md#post_images_image_id_vulnerabilities_ignore) - Add / remove a list of  UUIDs of vulnerabilities from ignored list
 
-## [k8s_cis_benchmark](docs/sdks/k8scisbenchmark/README.md)
+### [k8s_cis_benchmark](docs/sdks/k8scisbenchmark/README.md)
 
 * [get_k8s_cis_benchmark](docs/sdks/k8scisbenchmark/README.md#get_k8s_cis_benchmark) - Get k8s cis benchmark for clusters
 * [get_k8s_cis_benchmark_summary](docs/sdks/k8scisbenchmark/README.md#get_k8s_cis_benchmark_summary) - Get k8s cis benchmark summary of account
@@ -308,7 +306,7 @@ if res.status_code == 200:
 * [post_k8s_cis_benchmark_cluster_id_](docs/sdks/k8scisbenchmark/README.md#post_k8s_cis_benchmark_cluster_id_) - initiate k8s cis benchmark scan for a specific cluster
 * [put_k8s_cis_benchmark_cluster_id_](docs/sdks/k8scisbenchmark/README.md#put_k8s_cis_benchmark_cluster_id_) - edit k8s cis benchmark for a specific cluster with test statuses
 
-## [kubernetes](docs/sdks/kubernetes/README.md)
+### [kubernetes](docs/sdks/kubernetes/README.md)
 
 * [delete_kubernetes_clusters_kubernetes_cluster_id_](docs/sdks/kubernetes/README.md#delete_kubernetes_clusters_kubernetes_cluster_id_) - Delete a Kubernetes cluster
 * [delete_pod_definitions_pod_id_](docs/sdks/kubernetes/README.md#delete_pod_definitions_pod_id_) - Delete a pod definition
@@ -330,7 +328,7 @@ if res.status_code == 200:
 * [put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm](docs/sdks/kubernetes/README.md#put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm) - Update the Kubernetes cluster which managed by HELM
 * [put_pod_definitions_pod_id_](docs/sdks/kubernetes/README.md#put_pod_definitions_pod_id_) - Change pod definition
 
-## [mitre](docs/sdks/mitre/README.md)
+### [mitre](docs/sdks/mitre/README.md)
 
 * [get_mitre_dashboard](docs/sdks/mitre/README.md#get_mitre_dashboard) - Get data for MITRE dashboard for all clusters
 * [get_mitre_report_download](docs/sdks/mitre/README.md#get_mitre_report_download) - Download Mitre security report
@@ -339,12 +337,12 @@ if res.status_code == 200:
 * [post_mitre_report_generate](docs/sdks/mitre/README.md#post_mitre_report_generate) - Generate Mitre report
 * [post_mitre_technique_fix](docs/sdks/mitre/README.md#post_mitre_technique_fix) - Post fix for MITRE technique of the given mitreTechniqueType
 
-## [performance](docs/sdks/performance/README.md)
+### [performance](docs/sdks/performance/README.md)
 
 * [get_api_security_api_catalog_id_hit_count_graph](docs/sdks/performance/README.md#get_api_security_api_catalog_id_hit_count_graph) - Get hit count for specific spec path
 * [get_performance_metrics](docs/sdks/performance/README.md#get_performance_metrics) - Get performance metrics for a connection between workloads
 
-## [psp_profiles](docs/sdks/pspprofiles/README.md)
+### [psp_profiles](docs/sdks/pspprofiles/README.md)
 
 * [delete_pod_security_policy_profiles_profile_id_](docs/sdks/pspprofiles/README.md#delete_pod_security_policy_profiles_profile_id_) - Delete a pod security policy standards
 * [delete_seccomp_profiles_profile_id_](docs/sdks/pspprofiles/README.md#delete_seccomp_profiles_profile_id_) - Delete a seccomp profile
@@ -356,7 +354,7 @@ if res.status_code == 200:
 * [put_pod_security_policy_profiles_profile_id_](docs/sdks/pspprofiles/README.md#put_pod_security_policy_profiles_profile_id_) - Change pod security standards profile
 * [put_seccomp_profiles_profile_id_](docs/sdks/pspprofiles/README.md#put_seccomp_profiles_profile_id_) - Change seccomp profile
 
-## [registries](docs/sdks/registries/README.md)
+### [registries](docs/sdks/registries/README.md)
 
 * [delete_registries_registry_id_](docs/sdks/registries/README.md#delete_registries_registry_id_) - Delete a registry
 * [get_registries](docs/sdks/registries/README.md#get_registries) - Get a list of defined registries
@@ -365,7 +363,7 @@ if res.status_code == 200:
 * [post_registries_test_connection_registry_id_](docs/sdks/registries/README.md#post_registries_test_connection_registry_id_) - test registry connection
 * [put_registries_registry_id_](docs/sdks/registries/README.md#put_registries_registry_id_) - edit existing registry
 
-## [risk_assessment](docs/sdks/riskassessment/README.md)
+### [risk_assessment](docs/sdks/riskassessment/README.md)
 
 * [delete_risk_assessment_ignored_risks_ignored_risk_id_](docs/sdks/riskassessment/README.md#delete_risk_assessment_ignored_risks_ignored_risk_id_) - Delete ignored risk
 * [delete_risk_assessment_kubernetes_cluster_id_cancel](docs/sdks/riskassessment/README.md#delete_risk_assessment_kubernetes_cluster_id_cancel) - Cancel the runtime scan on the given cluster with the given id
@@ -384,14 +382,14 @@ if res.status_code == 200:
 * [post_risk_assessment_kubernetes_cluster_id_settings](docs/sdks/riskassessment/README.md#post_risk_assessment_kubernetes_cluster_id_settings) - Save the runtime scan configuration on the given cluster
 * [put_risk_assessment_ignored_risks_ignored_risk_id_](docs/sdks/riskassessment/README.md#put_risk_assessment_ignored_risks_ignored_risk_id_) - Edit ignore risk
 
-## [runtime_map](docs/sdks/runtimemap/README.md)
+### [runtime_map](docs/sdks/runtimemap/README.md)
 
 * [delete_network_map_queue_request_id_](docs/sdks/runtimemap/README.md#delete_network_map_queue_request_id_) - Cancel the network map background job
 * [get_network_map](docs/sdks/runtimemap/README.md#get_network_map) - Get data for network map
 * [get_network_map_queue_request_id_](docs/sdks/runtimemap/README.md#get_network_map_queue_request_id_) - Get status for network map background job
 * [get_network_map_results_request_id_](docs/sdks/runtimemap/README.md#get_network_map_results_request_id_) - Get result for network map background job
 
-## [serverless](docs/sdks/serverless/README.md)
+### [serverless](docs/sdks/serverless/README.md)
 
 * [delete_cloud_accounts_cloud_account_id_](docs/sdks/serverless/README.md#delete_cloud_accounts_cloud_account_id_) - Delete a cloud account
 * [get_cloud_accounts](docs/sdks/serverless/README.md#get_cloud_accounts) - List all the cloud accounts on the system
@@ -414,12 +412,12 @@ if res.status_code == 200:
 * [post_cloud_accounts_scan](docs/sdks/serverless/README.md#post_cloud_accounts_scan) - invoke cloud account scan
 * [put_cloud_accounts_cloud_account_id_](docs/sdks/serverless/README.md#put_cloud_accounts_cloud_account_id_) - Edit cloud account definition
 
-## [serverless_policies](docs/sdks/serverlesspolicies/README.md)
+### [serverless_policies](docs/sdks/serverlesspolicies/README.md)
 
 * [get_serverless_policy](docs/sdks/serverlesspolicies/README.md#get_serverless_policy) - Get current serverless policy
 * [put_serverless_policy](docs/sdks/serverlesspolicies/README.md#put_serverless_policy) - Set the current serverless policy
 
-## [settings](docs/sdks/settings/README.md)
+### [settings](docs/sdks/settings/README.md)
 
 * [delete_settings_integrations_ca_id_](docs/sdks/settings/README.md#delete_settings_integrations_ca_id_) - Delete the CA integration details
 * [delete_settings_integrations_event_forwarding_event_forwarding_id_](docs/sdks/settings/README.md#delete_settings_integrations_event_forwarding_event_forwarding_id_) - Delete the event forwarding integration details with the given id
@@ -441,7 +439,7 @@ if res.status_code == 200:
 * [put_settings_integrations_ca_id_](docs/sdks/settings/README.md#put_settings_integrations_ca_id_) - Edit the CA integration details
 * [put_settings_integrations_event_forwarding_event_forwarding_id_](docs/sdks/settings/README.md#put_settings_integrations_event_forwarding_event_forwarding_id_) - Edit the event forwarding integration details
 
-## [telemetries](docs/sdks/telemetries/README.md)
+### [telemetries](docs/sdks/telemetries/README.md)
 
 * [get_app_telemetries](docs/sdks/telemetries/README.md#get_app_telemetries) - Get App telemetries
 * [get_app_telemetries_app_telemetry_id_](docs/sdks/telemetries/README.md#get_app_telemetries_app_telemetry_id_) - Get App telemetry by ID
@@ -451,7 +449,7 @@ if res.status_code == 200:
 * [get_connection_telemetries](docs/sdks/telemetries/README.md#get_connection_telemetries) - Get connection telemetries
 * [get_connection_telemetries_connection_telemetry_id_](docs/sdks/telemetries/README.md#get_connection_telemetries_connection_telemetry_id_) - get details for a single connection telemetry
 
-## [tokens](docs/sdks/tokens/README.md)
+### [tokens](docs/sdks/tokens/README.md)
 
 * [delete_tokens_token_id_](docs/sdks/tokens/README.md#delete_tokens_token_id_) - Delete token
 * [get_tokens](docs/sdks/tokens/README.md#get_tokens) - Get tokens
@@ -460,14 +458,14 @@ if res.status_code == 200:
 * [post_tokens](docs/sdks/tokens/README.md#post_tokens) - Add new token
 * [put_tokens_token_id_](docs/sdks/tokens/README.md#put_tokens_token_id_) - Edit token
 
-## [truncation](docs/sdks/truncation/README.md)
+### [truncation](docs/sdks/truncation/README.md)
 
 * [get_truncation_images](docs/sdks/truncation/README.md#get_truncation_images) - Get workloads truncation time for account
 * [get_truncation_workloads](docs/sdks/truncation/README.md#get_truncation_workloads) - Get workloads truncation time for account
 * [post_truncation_images](docs/sdks/truncation/README.md#post_truncation_images) - Update workloads truncation status for account
 * [post_truncation_workloads](docs/sdks/truncation/README.md#post_truncation_workloads) - Update workloads truncation status for account
 
-## [trusted_signers](docs/sdks/trustedsigners/README.md)
+### [trusted_signers](docs/sdks/trustedsigners/README.md)
 
 * [delete_trusted_signers_trusted_signer_id_](docs/sdks/trustedsigners/README.md#delete_trusted_signers_trusted_signer_id_) - Delete a trusted signer
 * [get_trusted_signers](docs/sdks/trustedsigners/README.md#get_trusted_signers) - Get a list of defined trusted signers
@@ -475,7 +473,7 @@ if res.status_code == 200:
 * [post_trusted_signers](docs/sdks/trustedsigners/README.md#post_trusted_signers) - Add new trusted signer
 * [put_trusted_signers_trusted_signer_id_](docs/sdks/trustedsigners/README.md#put_trusted_signers_trusted_signer_id_) - edit existing trusted signer
 
-## [users](docs/sdks/users/README.md)
+### [users](docs/sdks/users/README.md)
 
 * [delete_users_user_id_](docs/sdks/users/README.md#delete_users_user_id_) - Delete a user
 * [get_operator_credentials](docs/sdks/users/README.md#get_operator_credentials) - get the credentials of the Secure Application Operator service user
@@ -492,14 +490,12 @@ if res.status_code == 200:
 * [post_users_trial](docs/sdks/users/README.md#post_users_trial) - Create a trail user
 * [put_users_user_id_](docs/sdks/users/README.md#put_users_user_id_) - Change user details
 
-## [vulnerabilities](docs/sdks/vulnerabilities/README.md)
+### [vulnerabilities](docs/sdks/vulnerabilities/README.md)
 
 * [get_vulnerabilities](docs/sdks/vulnerabilities/README.md#get_vulnerabilities) - search for vulnerability names in the account
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
@@ -511,8 +507,6 @@ returned response object will have a `Next` method that can be called to pull do
 return value of `Next` is `None`, then there are no more pages to be fetched.
 
 Here's an example of one such pagination call:
-
-
 <!-- End Pagination -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

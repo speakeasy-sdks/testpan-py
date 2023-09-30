@@ -23,17 +23,17 @@ class GetDeployersSortKey(str, Enum):
 class GetDeployersRequest:
     sort_key: GetDeployersSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""Filter deployers by name"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     rule_creation: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ruleCreation', 'style': 'form', 'explode': True }})
     r"""Filter deployers by rule creation"""
     security_check: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'securityCheck', 'style': 'form', 'explode': True }})
     r"""Filter deployers by security checks"""
-    sort_dir: Optional[GetDeployersSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetDeployersSortDir] = dataclasses.field(default=GetDeployersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 

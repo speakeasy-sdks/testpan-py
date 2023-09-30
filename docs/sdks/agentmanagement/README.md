@@ -31,18 +31,18 @@ s = pan.Pan(
 req = operations.GetAgentsRequest(
     download_as_xlsx=False,
     environment_name=[
-        'possimus',
+        'Account',
     ],
     host_name=[
-        'facilis',
+        'Shoes',
     ],
     risk=[
-        operations.GetAgentsRisk.LOW,
+        operations.GetAgentsRisk.UNDEFINED,
     ],
     sort_dir=operations.GetAgentsSortDir.ASC,
-    sort_key=operations.GetAgentsSortKey.RISK,
+    sort_key=operations.GetAgentsSortKey.LAST_ACTIVE,
     status=[
-        operations.GetAgentsStatus.INACTIVE,
+        operations.GetAgentsStatus.ACTIVE,
     ],
 )
 
@@ -82,7 +82,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAgentsAgentIDUpdateRequest(
-    agent_id='fd5e60b3-75ed-44f6-bbee-41f33317fe35',
+    agent_id='0a0835d7-8d36-4444-8529-411e73a9b7a8',
 )
 
 res = s.agent_management.post_agents_agent_id_update(req)
@@ -124,7 +124,7 @@ req = operations.PostAgentsAgentIDUpdateStateRequest(
     agent_status_update=shared.AgentStatusUpdate(
         active=False,
     ),
-    agent_id='b60eb1ea-4265-455b-a3c2-8744ed53b88f',
+    agent_id='34a187e9-3552-49e2-8694-f733a8b3f850',
 )
 
 res = s.agent_management.post_agents_agent_id_update_state(req)

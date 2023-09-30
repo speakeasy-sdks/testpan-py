@@ -18,6 +18,6 @@ class RiskAssessmentClusterScanConfig:
     minimum_severity: shared_vulnerabilityseverity.VulnerabilitySeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('minimumSeverity') }})
     namespaces: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaces'), 'exclude': lambda f: f is None }})
     periodic_job_expression: Optional[shared_periodicjobexpression.PeriodicJobExpression] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('periodicJobExpression'), 'exclude': lambda f: f is None }})
-    run_dockerfile_scan: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runDockerfileScan'), 'exclude': lambda f: f is None }})
+    run_dockerfile_scan: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runDockerfileScan'), 'exclude': lambda f: f is None }})
     
 

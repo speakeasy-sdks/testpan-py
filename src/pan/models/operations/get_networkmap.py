@@ -34,23 +34,23 @@ class GetNetworkMapRequest:
     r"""Array of environments names"""
     exclude_apps: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeApps', 'style': 'form', 'explode': False }})
     r"""Array of App/pod names to exclude"""
-    group_apps_on_the_same_environment: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'groupAppsOnTheSameEnvironment', 'style': 'form', 'explode': True }})
+    group_apps_on_the_same_environment: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'groupAppsOnTheSameEnvironment', 'style': 'form', 'explode': True }})
     r"""When true, the API will aggregate Apps that are on the same environment"""
-    ignore_external_connection: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ignoreExternalConnection', 'style': 'form', 'explode': True }})
+    ignore_external_connection: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'ignoreExternalConnection', 'style': 'form', 'explode': True }})
     r"""When true, the API will ignore connections coming from external IP addresses"""
-    is_background_job: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isBackgroundJob', 'style': 'form', 'explode': True }})
+    is_background_job: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'isBackgroundJob', 'style': 'form', 'explode': True }})
     r"""should run as background job or not"""
     labels: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'labels', 'style': 'form', 'explode': False }})
     r"""Array of labels. Each label is a string with format key:value"""
     namespaces: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespaces', 'style': 'form', 'explode': False }})
     r"""Array of namespaces ids"""
-    show_only_apps_with_connections: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyAppsWithConnections', 'style': 'form', 'explode': True }})
+    show_only_apps_with_connections: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyAppsWithConnections', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return Apps with connections"""
-    show_only_apps_with_violations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyAppsWithViolations', 'style': 'form', 'explode': True }})
+    show_only_apps_with_violations: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyAppsWithViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return Apps that violated the active policy"""
-    show_only_connections_between_environments: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyConnectionsBetweenEnvironments', 'style': 'form', 'explode': True }})
+    show_only_connections_between_environments: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyConnectionsBetweenEnvironments', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return connections between environments"""
-    show_only_connections_with_violations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyConnectionsWithViolations', 'style': 'form', 'explode': True }})
+    show_only_connections_with_violations: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyConnectionsWithViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return connections that violate the active policy"""
     
 

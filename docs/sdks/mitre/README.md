@@ -29,7 +29,7 @@ s = pan.Pan(
 
 req = operations.GetMitreDashboardRequest(
     clusters_ids=[
-        'a5c71641-934b-490f-ae09-d19d2fc2f9e2',
+        'a91a8587-5ae9-468d-bcc5-575f0642f99f',
     ],
 )
 
@@ -130,9 +130,9 @@ s = pan.Pan(
 
 req = operations.GetMitreTechniqueRequest(
     clusters_ids=[
-        'e105944b-935d-4237-a72f-90849d6aed4a',
+        '15c243dc-adda-4d62-b64a-acf9b6fc450a',
     ],
-    mitre_technique_type=operations.GetMitreTechniqueMitreTechniqueType.CLUSTER_INTERNAL_NETWORKING,
+    mitre_technique_type=operations.GetMitreTechniqueMitreTechniqueType.DEPLOY_CONTAINER,
 )
 
 res = s.mitre.get_mitre_technique(req)
@@ -204,14 +204,14 @@ req = operations.PostMitreTechniqueFixRequest(
     mitre_technique_fix_info=shared.MitreTechniqueFixInfo(
         affected_elements=[
             shared.MitreTechniqueAffectedElement(
-                mitre_technique_affected_element_type=shared.MitreTechniqueAffectedElementMitreTechniqueAffectedElementType.MITRE_TECHNIQUE_AFFECTED_CLUSTER,
+                mitre_technique_affected_element_type=shared.MitreTechniqueAffectedElementMitreTechniqueAffectedElementType.MITRE_TECHNIQUE_AFFECTED_WORKLOAD,
             ),
         ],
     ),
     clusters_ids=[
-        'b7537cd9-222c-49ff-9749-1aabfa2e761f',
+        '84b4b2c6-3c2f-47d9-8968-3947da0e326b',
     ],
-    mitre_technique_type=operations.PostMitreTechniqueFixMitreTechniqueType.COMPROMISED_IMAGES,
+    mitre_technique_type=operations.PostMitreTechniqueFixMitreTechniqueType.ACCESS_CLUSTER_RESOURCES,
 )
 
 res = s.mitre.post_mitre_technique_fix(req)

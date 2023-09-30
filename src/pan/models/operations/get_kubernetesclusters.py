@@ -27,13 +27,13 @@ class GetKubernetesClustersRequest:
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     kubernetes_version: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'kubernetesVersion', 'style': 'form', 'explode': True }})
     r"""Filter the clusters by k8s version"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     only_spec_reconstruction_enabled_filter: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'onlySpecReconstructionEnabledFilter', 'style': 'form', 'explode': True }})
     r"""retrive only clusters that configured as spec reconstruction enabled."""
-    sort_dir: Optional[GetKubernetesClustersSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetKubernetesClustersSortDir] = dataclasses.field(default=GetKubernetesClustersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     sort_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""

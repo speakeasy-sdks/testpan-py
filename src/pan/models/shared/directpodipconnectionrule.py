@@ -13,7 +13,7 @@ from typing import Optional
 @dataclasses.dataclass
 class DirectPodIPConnectionRule:
     action: shared_directpodipconnectionruleaction.DirectPodIPConnectionRuleAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action') }})
-    is_disabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isDisabled'), 'exclude': lambda f: f is None }})
+    is_disabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isDisabled'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     
 

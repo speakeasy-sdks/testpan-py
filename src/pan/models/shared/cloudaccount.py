@@ -26,7 +26,7 @@ class CloudAccountInput:
     r"""represent cloud account object"""
     periodic_job_expression: shared_serverlessperiodicjobexpression.ServerlessPeriodicJobExpression = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('periodicJobExpression') }})
     cloud_provider: Optional[shared_cloudprovidertype.CloudProviderType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudProvider'), 'exclude': lambda f: f is None }})
-    install_vulnerability_scanner: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installVulnerabilityScanner'), 'exclude': lambda f: f is None }})
+    install_vulnerability_scanner: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installVulnerabilityScanner'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     regions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('regions'), 'exclude': lambda f: f is None }})
     security_threats: Optional[shared_cloudaccountsecuritythreats.CloudAccountSecurityThreats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityThreats'), 'exclude': lambda f: f is None }})
@@ -53,7 +53,7 @@ class CloudAccount:
     cloud_provider: Optional[shared_cloudprovidertype.CloudProviderType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudProvider'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     installation_status: Optional[CloudAccountInstallationStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installationStatus'), 'exclude': lambda f: f is None }})
-    install_vulnerability_scanner: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installVulnerabilityScanner'), 'exclude': lambda f: f is None }})
+    install_vulnerability_scanner: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installVulnerabilityScanner'), 'exclude': lambda f: f is None }})
     last_scanned: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastScanned'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     regions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('regions'), 'exclude': lambda f: f is None }})

@@ -28,7 +28,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteGatewaysGatewayIDRequest(
-    gateway_id='f443b425-7b99-42c8-9bda-6a61efa21982',
+    gateway_id='0059ee9e-2eb4-40ca-97cc-9e2e4879b4b7',
 )
 
 res = s.gateways.delete_gateways_gateway_id_(req)
@@ -67,11 +67,11 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysRequest(
-    max_results=3560.07,
-    name='Miss Santos Stroman',
+    max_results=5622.15,
+    name='Bicycle programming',
     no_pagination=False,
-    offset=9085.87,
-    sort_dir=operations.GetGatewaysSortDir.DESC,
+    offset=2121.34,
+    sort_dir=operations.GetGatewaysSortDir.ASC,
 )
 
 res = s.gateways.get_gateways(req)
@@ -149,7 +149,7 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysGatewayIDDownloadBundleRequest(
-    gateway_id='47f7d3ef-0496-440d-aa18-31c87adf596f',
+    gateway_id='d7df551a-98f0-4f5b-9bdc-d69676cf90f0',
 )
 
 res = s.gateways.get_gateways_gateway_id_download_bundle(req)
@@ -188,11 +188,11 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='repellendus',
-    description='delectus',
-    id='1ad837ae-80c1-4c19-895b-a998678fa3f6',
-    name='Milton Morar MD',
-    type=shared.GatewayType.F5_BIG_IP,
+    cluster_name='budgetary',
+    description='Organized non-volatile migration',
+    id='569c810a-5247-4536-a053-f148b119db42',
+    name='Savings distinctio blue',
+    type=shared.GatewayType.KONG_INTERNAL,
 )
 
 res = s.gateways.post_gateways(req)
@@ -232,13 +232,13 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='dolor',
-        description='voluptatum',
-        id='8ce03614-448c-4797-ba0e-f2f536028efe',
-        name='Edmond McDermott',
-        type=shared.GatewayType.APIGEE_X,
+        cluster_name='Executive Minivan sky',
+        description='Upgradable bandwidth-monitored contingency',
+        id='69f02ce6-c757-479c-9c8e-935111463ea3',
+        name='Directives pink Central',
+        type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='52ed7e25-3f4c-4157-9eaa-7170f445accf',
+    gateway_id='95ead58c-f0fb-4b52-ac2b-9a404d8ad2eb',
 )
 
 res = s.gateways.put_gateways_gateway_id_(req)

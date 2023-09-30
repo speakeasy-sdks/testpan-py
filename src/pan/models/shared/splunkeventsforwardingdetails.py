@@ -17,9 +17,9 @@ class SplunkEventsForwardingDetailsInput:
     events_to_forward: list[shared_eventstoforward.EventsToForward] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsToForward') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
-    is_cloud: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isCloud'), 'exclude': lambda f: f is None }})
+    is_cloud: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isCloud'), 'exclude': lambda f: f is None }})
     port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('port'), 'exclude': lambda f: f is None }})
-    source_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceName'), 'exclude': lambda f: f is None }})
+    source_name: Optional[str] = dataclasses.field(default='Secure Application management', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceName'), 'exclude': lambda f: f is None }})
     url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url'), 'exclude': lambda f: f is None }})
     
 

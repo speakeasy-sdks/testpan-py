@@ -40,7 +40,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteUsersUserIDRequest(
-    user_id='ecb83d23-78ae-43bf-823d-9450a986a495',
+    user_id='2d4aef6d-76db-4c57-a2a3-fe8efd3db6e2',
 )
 
 res = s.users.delete_users_user_id_(req)
@@ -109,11 +109,11 @@ s = pan.Pan(
 )
 
 req = operations.GetUsersRequest(
-    email='Mariela.Schmeler@hotmail.com',
+    email='Martine_Welch@hotmail.com',
     roles=[
-        operations.GetUsersRoles.PORTSHIFT_ADMIN,
+        operations.GetUsersRoles.ACCOUNT_ADMIN,
     ],
-    username='Urban_Bechtelar',
+    username='Domenick_Schulist87',
 )
 
 res = s.users.get_users(req)
@@ -152,7 +152,7 @@ s = pan.Pan(
 )
 
 req = operations.GetUsersUserIDAccessTokensRequest(
-    user_id='28ecc864-9238-46f6-ac96-9c4cc6b78890',
+    user_id='d48eca12-2332-4def-a816-08c21f5e1906',
 )
 
 res = s.users.get_users_user_id_access_tokens(req)
@@ -191,7 +191,7 @@ s = pan.Pan(
 )
 
 req = operations.GetUsersUserIDDeleteDependenciesRequest(
-    user_id='a3fd3c81-da10-4f8c-a3df-931da3edb51f',
+    user_id='8a75ffe4-62b3-4153-829f-86055d39570f',
 )
 
 res = s.users.get_users_user_id_delete_dependencies(req)
@@ -260,8 +260,8 @@ s = pan.Pan(
 )
 
 req = shared.ChangePasswordInfo(
-    new_password='est',
-    old_password='facere',
+    new_password='Clifton Tuna invoice',
+    old_password='Loan',
 )
 
 res = s.users.post_change_password(req)
@@ -300,8 +300,8 @@ s = pan.Pan(
 )
 
 req = operations.PostLoginRequest(
-    google_id_token='iste',
-    token='numquam',
+    google_id_token='Paradigm Touring enthusiastically',
+    token='gray',
 )
 
 res = s.users.post_login(req)
@@ -401,10 +401,10 @@ s = pan.Pan(
 )
 
 req = shared.UserInput(
-    description='similique',
-    email='Perry23@hotmail.com',
-    full_name='ullam',
-    id='137726d1-5321-4b83-aa56-d69180ff60eb',
+    description='Cross-group reciprocal toolset',
+    email='Erin_Wintheiser@hotmail.com',
+    full_name='Mrs. Todd Halvorson',
+    id='d86a2273-6c5e-406f-80e1-8a3ed58c3e0d',
     role=shared.Role.PORTSHIFT_AUDITOR,
     status=shared.UserStatus.DISABLED,
 )
@@ -476,15 +476,15 @@ s = pan.Pan(
 
 req = operations.PostUsersTrialRequest(
     trial_user=shared.TrialUser(
-        company='Jones - Hegmann',
-        email='Stewart_Kemmer@yahoo.com',
-        first_name='Demetrius',
-        how_did_you_hear_about_us=shared.TrialUserHowDidYouHearAboutUs.SEARCH_ENGINE,
-        job_title='Central Response Engineer',
-        last_name='Stanton',
+        company='Rohan and Sons',
+        email='Tremaine.Bashirian@gmail.com',
+        first_name='Sim',
+        how_did_you_hear_about_us=shared.TrialUserHowDidYouHearAboutUs.ADVERTISING,
+        job_title='Human Program Liaison',
+        last_name='Kovacek',
         privacy_policy_and_terms_and_conditions_agreement=False,
     ),
-    g_recaptcha_response='adipisci',
+    g_recaptcha_response='Automated',
 )
 
 res = s.users.post_users_trial(req)
@@ -524,13 +524,13 @@ s = pan.Pan(
 
 req = operations.PutUsersUserIDRequest(
     edit_user_input=shared.EditUserInput(
-        description='totam',
-        full_name='explicabo',
-        id='dbec75c6-8c60-4659-868c-e304d8849bf8',
-        role=shared.Role.CISCO_SUBSCRIBER,
-        status=shared.EditUserStatus.ENABLED,
+        description='Assimilated zero defect moratorium',
+        full_name='Ms. Kathy Stanton',
+        id='79a1c67b-61ff-41da-8536-101e994c1527',
+        role=shared.Role.ACCOUNT_ADMIN,
+        status=shared.EditUserStatus.DISABLED,
     ),
-    user_id='4c337f96-bb0c-469e-b72d-b1344ba9f78a',
+    user_id='04672250-5e17-4edb-8b8f-fdfce4dbd0b1',
 )
 
 res = s.users.put_users_user_id_(req)

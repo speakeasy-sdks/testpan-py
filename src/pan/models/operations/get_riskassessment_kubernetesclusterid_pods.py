@@ -23,17 +23,17 @@ class GetRiskAssessmentKubernetesClusterIDPodsSortKey(str, Enum):
 class GetRiskAssessmentKubernetesClusterIDPodsRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    sort_key: GetRiskAssessmentKubernetesClusterIDPodsSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetRiskAssessmentKubernetesClusterIDPodsSortKey = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""risk assessment pod sort key."""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     namespaces_names_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespacesNamesFilter', 'style': 'form', 'explode': True }})
     r"""namespace names filter. a base 64 representation of a list of namespace names definition object"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetRiskAssessmentKubernetesClusterIDPodsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentKubernetesClusterIDPodsSortDir] = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 

@@ -64,17 +64,17 @@ class GetConnectionTelemetriesRequest:
     r"""Start date of the query"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    logical_operator: Optional[GetConnectionTelemetriesLogicalOperator] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'logicalOperator', 'style': 'form', 'explode': True }})
+    logical_operator: Optional[GetConnectionTelemetriesLogicalOperator] = dataclasses.field(default=GetConnectionTelemetriesLogicalOperator.AND, metadata={'query_param': { 'field_name': 'logicalOperator', 'style': 'form', 'explode': True }})
     r"""Logical operator between the source group and the target group filters"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     result: Optional[list[GetConnectionTelemetriesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""connection result filter"""
     show_only_violations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return entries that violate the active policy"""
-    sort_dir: Optional[GetConnectionTelemetriesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetConnectionTelemetriesSortDir] = dataclasses.field(default=GetConnectionTelemetriesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     source_app_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceAppName', 'style': 'form', 'explode': False }})
     source_environment_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceEnvironmentName', 'style': 'form', 'explode': False }})

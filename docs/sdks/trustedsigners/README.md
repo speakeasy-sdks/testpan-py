@@ -31,7 +31,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteTrustedSignersTrustedSignerIDRequest(
-    trusted_signer_id='b99a550a-656e-4d33-bbb0-ce8aa65432a9',
+    trusted_signer_id='72a0c357-f09f-4b54-84ce-1c9dc40be52b',
 )
 
 res = s.trusted_signers.delete_trusted_signers_trusted_signer_id_(req)
@@ -70,8 +70,8 @@ s = pan.Pan(
 )
 
 req = operations.GetTrustedSignersRequest(
-    sort_dir=operations.GetTrustedSignersSortDir.DESC,
-    sort_key=operations.GetTrustedSignersSortKey.NAME,
+    sort_dir=operations.GetTrustedSignersSortDir.ASC,
+    sort_key='Electric sailboat composite',
 )
 
 res = s.trusted_signers.get_trusted_signers(req)
@@ -110,7 +110,7 @@ s = pan.Pan(
 )
 
 req = operations.GetTrustedSignersTrustedSignerIDRequest(
-    trusted_signer_id='6eb7e14c-a564-4089-9500-97019a48f88e',
+    trusted_signer_id='3d8f6f9a-2b35-44bb-82c6-f820a67d0e04',
 )
 
 res = s.trusted_signers.get_trusted_signers_trusted_signer_id_(req)
@@ -151,23 +151,23 @@ s = pan.Pan(
 req = shared.TrustedSignerInput(
     keys=[
         shared.TrustedSignerKey(
-            key='impedit',
-            name='Ron Ratke',
+            key='<key>',
+            name='Northeast Iowa',
         ),
     ],
-    name='Mr. Elaine Turcotte Jr.',
+    name='killer United Agender',
     trusted_signer_cloud_accounts=[
         shared.TrustedSignerCloudAccountInput(
-            id='5d389081-62c6-4beb-a8a0-f657b7d03a14',
+            id='339127fc-1c35-45d9-9677-cf34f19a2406',
             status=shared.TrustedSignerClusterStatus.WARNING,
-            validation=shared.TrustedSignerClusterValidation.SIGNATURE,
+            validation=shared.TrustedSignerClusterValidation.HASH,
         ),
     ],
     trusted_signer_clusters=[
         shared.TrustedSignerClusterInput(
-            id='f8de30f0-69d8-4106-98d9-7e152297510d',
+            id='22272998-72b1-4626-b1e4-e3bd500d0622',
             status=shared.TrustedSignerClusterStatus.WARNING,
-            validation=shared.TrustedSignerClusterValidation.HASH,
+            validation=shared.TrustedSignerClusterValidation.NONE,
         ),
     ],
 )
@@ -211,27 +211,27 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
     trusted_signer_input=shared.TrustedSignerInput(
         keys=[
             shared.TrustedSignerKey(
-                key='voluptatem',
-                name='Gloria Christiansen',
+                key='<key>',
+                name='Chrysler Centers',
             ),
         ],
-        name='Della Ruecker DDS',
+        name='so static never',
         trusted_signer_cloud_accounts=[
             shared.TrustedSignerCloudAccountInput(
-                id='2a702bb9-7ee1-402d-a2de-35f8e01bf33e',
+                id='2390f3eb-b00b-4b0b-a50b-1429abb4df87',
                 status=shared.TrustedSignerClusterStatus.WARNING,
-                validation=shared.TrustedSignerClusterValidation.HASH,
+                validation=shared.TrustedSignerClusterValidation.NONE,
             ),
         ],
         trusted_signer_clusters=[
             shared.TrustedSignerClusterInput(
-                id='b45402ac-1704-4bf1-8c9f-c61aae5eb5f0',
-                status=shared.TrustedSignerClusterStatus.WARNING,
+                id='af5cddc0-6513-44a6-9fd6-1a9bf59409fe',
+                status=shared.TrustedSignerClusterStatus.VALID,
                 validation=shared.TrustedSignerClusterValidation.SIGNATURE,
             ),
         ],
     ),
-    trusted_signer_id='92b5744d-08a2-4267-aaee-79e3c71ad31b',
+    trusted_signer_id='c650d3f6-4267-4f45-b31f-42c8f00b005e',
 )
 
 res = s.trusted_signers.put_trusted_signers_trusted_signer_id_(req)

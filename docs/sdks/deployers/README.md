@@ -32,7 +32,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteDeployersDeployerIDRequest(
-    deployer_id='f334cddf-857a-49e6-9876-c6ab21d29dfc',
+    deployer_id='3dadebf3-f849-4db8-9b45-692d5d0f8f1e',
 )
 
 res = s.deployers.delete_deployers_deployer_id_(req)
@@ -71,13 +71,13 @@ s = pan.Pan(
 )
 
 req = operations.GetDeployersRequest(
-    max_results=6018.03,
-    name='Mable Hodkiewicz',
-    offset=7874.52,
+    max_results=757.15,
+    name='neural Card',
+    offset=4706.54,
     rule_creation=False,
     security_check=False,
-    sort_dir=operations.GetDeployersSortDir.DESC,
-    sort_key=operations.GetDeployersSortKey.DEPLOYER,
+    sort_dir=operations.GetDeployersSortDir.ASC,
+    sort_key=operations.GetDeployersSortKey.TYPE,
 )
 
 res = s.deployers.get_deployers(req)
@@ -116,8 +116,8 @@ s = pan.Pan(
 )
 
 req = operations.GetDeployersServiceAccountsRequest(
-    kubernetes_cluster_id='99390066-a6d2-4d00-8355-338cec086fa2',
-    namespace_name='veritatis',
+    kubernetes_cluster_id='2cec5765-5bfd-4372-88d6-c69c1df0fe41',
+    namespace_name='synthesizing',
 )
 
 res = s.deployers.get_deployers_service_accounts(req)
@@ -156,7 +156,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDeployersDeployerIDDeleteDependenciesRequest(
-    deployer_id='e9152cb3-1191-467b-8e3c-8db03408d6d3',
+    deployer_id='e9516b93-3d3f-40df-8a57-7f05ddcfb304',
 )
 
 res = s.deployers.get_deployers_deployer_id_delete_dependencies(req)
@@ -195,9 +195,9 @@ s = pan.Pan(
 )
 
 req = shared.DeployerInput(
-    deployer='voluptas',
-    deployer_id='4ffd4559-06d1-4263-948e-935c2c9e81f3',
-    deployer_type=shared.DeployerDeployerType.OPERATOR_DEPLOYER,
+    deployer='pixel',
+    deployer_id='c2d6bf94-8feb-495d-aafb-538f00cdbb74',
+    deployer_type=shared.DeployerDeployerType.SECURE_CN_DEPLOYER,
 )
 
 res = s.deployers.post_deployers(req)
@@ -237,11 +237,11 @@ s = pan.Pan(
 
 req = operations.PutDeployersDeployerIDRequest(
     deployer_input=shared.DeployerInput(
-        deployer='soluta',
-        deployer_id='e3e43202-d721-4657-a506-641870d9d21f',
+        deployer='towards Vanuatu Zirconium',
+        deployer_id='7ae2aefa-5ee4-4175-ba71-bdf48687529a',
         deployer_type=shared.DeployerDeployerType.SECURE_CN_DEPLOYER,
     ),
-    deployer_id='ad030c4e-cc11-4a08-b642-9068b8502a55',
+    deployer_id='a122201f-98e6-4927-bec6-fe116f385701',
 )
 
 res = s.deployers.put_deployers_deployer_id_(req)

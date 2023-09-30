@@ -20,7 +20,7 @@ class ImagesAndVulnerabilities:
         url = utils.generate_url(operations.DeleteImagesIDRequest, base_url, '/images/{id}', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -45,7 +45,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetAccountVulnerabilitiesXlsxRequest, request)
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -70,7 +70,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -99,7 +99,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesImagesHashRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -128,7 +128,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesVulnerabilitiesByImageNameAndHashRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -156,7 +156,7 @@ class ImagesAndVulnerabilities:
         url = utils.generate_url(operations.GetImagesIDRequest, base_url, '/images/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -185,7 +185,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesImageIDDockerfileScanResultsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -214,7 +214,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesImageIDImageLayersRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -242,7 +242,7 @@ class ImagesAndVulnerabilities:
         url = utils.generate_url(operations.GetImagesImageIDPackagesRequest, base_url, '/images/{imageId}/packages', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -270,7 +270,7 @@ class ImagesAndVulnerabilities:
         url = utils.generate_url(operations.GetImagesImageIDSbomPathRequest, base_url, '/images/{imageId}/sbomPath', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -299,7 +299,7 @@ class ImagesAndVulnerabilities:
         headers = {}
         query_params = utils.get_query_params(operations.GetImagesImageIDVulnerabilitiesRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -326,13 +326,13 @@ class ImagesAndVulnerabilities:
         
         url = base_url + '/images'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -359,14 +359,14 @@ class ImagesAndVulnerabilities:
         
         url = base_url + '/images/approve'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostImagesApproveRequest, request)
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -389,14 +389,14 @@ class ImagesAndVulnerabilities:
         
         url = utils.generate_url(operations.PostImagesImageIDDockerfileScanResultsIgnoreRequest, base_url, '/images/{imageId}/dockerfileScanResults/ignore', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostImagesImageIDDockerfileScanResultsIgnoreRequest, request)
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -419,14 +419,14 @@ class ImagesAndVulnerabilities:
         
         url = utils.generate_url(operations.PostImagesImageIDVulnerabilitiesIgnoreRequest, base_url, '/images/{imageId}/vulnerabilities/ignore', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uuid_list", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.PostImagesImageIDVulnerabilitiesIgnoreRequest, request)
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

@@ -18,6 +18,6 @@ class KubernetesAPIRuleKubernetesAPIRuleType(str, Enum):
 @dataclasses.dataclass
 class KubernetesAPIRule:
     kubernetes_api_rule_type: KubernetesAPIRuleKubernetesAPIRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesApiRuleType') }})
-    rule_origin: Optional[shared_kubernetesapiruleorigin.KubernetesAPIRuleOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[shared_kubernetesapiruleorigin.KubernetesAPIRuleOrigin] = dataclasses.field(default=shared_kubernetesapiruleorigin.KubernetesAPIRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
     
 

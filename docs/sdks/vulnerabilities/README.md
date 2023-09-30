@@ -23,8 +23,8 @@ s = pan.Pan(
 )
 
 req = operations.GetVulnerabilitiesRequest(
-    max_results=3405.4,
-    vul_name='impedit',
+    max_results=6542.3,
+    vul_name='Vivienne repudiandae Venezuela',
 )
 
 res = s.vulnerabilities.get_vulnerabilities(req)

@@ -32,12 +32,12 @@ s = pan.Pan(
 
 req = operations.GetAppsRequest(
     download_as_xlsx=False,
-    name='Roger O'Connell',
+    name='West',
     no_pagination=False,
-    sort_dir=operations.GetAppsSortDir.ASC,
-    sort_key=operations.GetAppsSortKey.NAME,
+    sort_dir=operations.GetAppsSortDir.DESC,
+    sort_key=operations.GetAppsSortKey.TYPE,
     type=[
-        'facere',
+        'deliverables',
     ],
 )
 
@@ -77,7 +77,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAppsAppIDRequest(
-    app_id='ec001ac8-02e2-4ec0-9ff8-f0f816ff3477',
+    app_id='b5ec2f78-8d75-415b-825b-1520f3bb2d0d',
 )
 
 res = s.apps.get_apps_app_id_(req)
@@ -117,16 +117,16 @@ s = pan.Pan(
 
 req = shared.App(
     args=[
-        'eligendi',
+        'Pennsylvania',
     ],
     cwd='/usr/local/bin/corp',
     executable='java',
     executable_path='/usr/bin',
-    id='13e902c1-4125-4b09-a0a6-68151a472af9',
+    id='a23be434-0962-431a-a464-6df448ea2451',
     labels=[
         shared.Label(
-            key='sed',
-            value='nesciunt',
+            key='<key>',
+            value='considering',
         ),
     ],
     name='AccountingApp',
@@ -171,7 +171,7 @@ s = pan.Pan(
 )
 
 req = [
-    'c5949f83-f350-4cf8-b6ff-b901c6ecbb4e',
+    '928e88cb-3f2c-4e95-af8f-afbfe2029fce',
 ]
 
 res = s.apps.post_apps_delete(req)
@@ -212,23 +212,23 @@ s = pan.Pan(
 req = operations.PutAppsAppIDRequest(
     app=shared.App(
         args=[
-            'fugit',
+            'invoice',
         ],
         cwd='/usr/local/bin/corp',
         executable='java',
         executable_path='/usr/bin',
-        id='43cf789f-fafe-4da5-be5a-e6e0ac184c2b',
+        id='a0b1a3d7-8ca7-4d0e-a8bc-a8a0d7f81190',
         labels=[
             shared.Label(
-                key='natus',
-                value='minus',
+                key='<key>',
+                value='infrastructures Tuna',
             ),
         ],
         name='AccountingApp',
         process_name='accounting_app',
         type='frontend',
     ),
-    app_id='247c8837-3a40-4e19-82f3-2e55055756f5',
+    app_id='17593302-d163-413d-8049-f888f283529e',
 )
 
 res = s.apps.put_apps_app_id_(req)

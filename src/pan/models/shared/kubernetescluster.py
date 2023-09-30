@@ -34,74 +34,74 @@ class KubernetesClusterOrchestrationType(str, Enum):
 class KubernetesCluster:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     account_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountName'), 'exclude': lambda f: f is None }})
-    agent_fail_close: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agentFailClose'), 'exclude': lambda f: f is None }})
+    agent_fail_close: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agentFailClose'), 'exclude': lambda f: f is None }})
     r"""indicates fail close behavior on Secure Application agent failure"""
-    api_intelligence_dast: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiIntelligenceDAST'), 'exclude': lambda f: f is None }})
+    api_intelligence_dast: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiIntelligenceDAST'), 'exclude': lambda f: f is None }})
     r"""indicates whether apiIntelligenceDAST is enabled"""
-    auto_label_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoLabelEnabled'), 'exclude': lambda f: f is None }})
+    auto_label_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoLabelEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether auto label is enabled"""
-    automated_policy_requires_deployer: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('automatedPolicyRequiresDeployer'), 'exclude': lambda f: f is None }})
+    automated_policy_requires_deployer: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('automatedPolicyRequiresDeployer'), 'exclude': lambda f: f is None }})
     r"""indicates whether deployer is required for the automated policy"""
-    auto_upgrade_controller_version: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoUpgradeControllerVersion'), 'exclude': lambda f: f is None }})
+    auto_upgrade_controller_version: Optional[bool] = dataclasses.field(default=True, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoUpgradeControllerVersion'), 'exclude': lambda f: f is None }})
     r"""indicates whether upgrade the controller automatically"""
-    ci_image_signature_validation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageSignatureValidation'), 'exclude': lambda f: f is None }})
+    ci_image_signature_validation: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageSignatureValidation'), 'exclude': lambda f: f is None }})
     r"""Enable pod template images signature validation"""
-    ci_image_validation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageValidation'), 'exclude': lambda f: f is None }})
+    ci_image_validation: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageValidation'), 'exclude': lambda f: f is None }})
     r"""Enable pod template images validation"""
-    cluster_pod_definition_source: Optional[shared_clusterpoddefinitionsource.ClusterPodDefinitionSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterPodDefinitionSource'), 'exclude': lambda f: f is None }})
+    cluster_pod_definition_source: Optional[shared_clusterpoddefinitionsource.ClusterPodDefinitionSource] = dataclasses.field(default=shared_clusterpoddefinitionsource.ClusterPodDefinitionSource.KUBERNETES, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterPodDefinitionSource'), 'exclude': lambda f: f is None }})
     r"""The source type of the pod definitions of the cluster"""
     controller_data_response: Optional[shared_controllerdataresponse.ControllerDataResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('controllerDataResponse'), 'exclude': lambda f: f is None }})
     controller_status: Optional[shared_controllerstatus.ControllerStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('controllerStatus'), 'exclude': lambda f: f is None }})
     r"""The current controller state."""
-    enable_connections_control: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableConnectionsControl'), 'exclude': lambda f: f is None }})
+    enable_connections_control: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableConnectionsControl'), 'exclude': lambda f: f is None }})
     r"""indicates whether Secure Application allows connections actions and detections"""
     helm_commands_installation: Optional[shared_helmcommandsinstallation.HelmCommandsInstallation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('helmCommandsInstallation'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Id of the cluster."""
-    installation_source: Optional[shared_installationsource.InstallationSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installationSource'), 'exclude': lambda f: f is None }})
-    install_envoy_tracing_support: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installEnvoyTracingSupport'), 'exclude': lambda f: f is None }})
+    installation_source: Optional[shared_installationsource.InstallationSource] = dataclasses.field(default=shared_installationsource.InstallationSource.SCRIPT, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installationSource'), 'exclude': lambda f: f is None }})
+    install_envoy_tracing_support: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installEnvoyTracingSupport'), 'exclude': lambda f: f is None }})
     r"""indicates whether envoy/istio will be used as a trace source"""
-    install_tracing_support: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installTracingSupport'), 'exclude': lambda f: f is None }})
+    install_tracing_support: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installTracingSupport'), 'exclude': lambda f: f is None }})
     r"""indicates whether to install tracing support, enable for apiSecurity accounts"""
     internal_registry_parameters: Optional[shared_internalregistryparameters.InternalRegistryParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalRegistryParameters'), 'exclude': lambda f: f is None }})
     r"""internal registry information"""
-    is_hold_application_until_proxy_starts: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isHoldApplicationUntilProxyStarts'), 'exclude': lambda f: f is None }})
+    is_hold_application_until_proxy_starts: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isHoldApplicationUntilProxyStarts'), 'exclude': lambda f: f is None }})
     r"""indicates whether the controller should hold the application until the proxy starts"""
-    is_istio_ingress_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIstioIngressEnabled'), 'exclude': lambda f: f is None }})
+    is_istio_ingress_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIstioIngressEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether Istio ingress is enabled"""
-    is_multi_cluster: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isMultiCluster'), 'exclude': lambda f: f is None }})
+    is_multi_cluster: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isMultiCluster'), 'exclude': lambda f: f is None }})
     r"""indicates whether this cluster should support multi-cluster communication"""
-    is_persistent: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isPersistent'), 'exclude': lambda f: f is None }})
+    is_persistent: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isPersistent'), 'exclude': lambda f: f is None }})
     r"""indicates whether the agent should run in persistent mode"""
     istio_ingress_annotations: Optional[list[shared_kubernetesannotation.KubernetesAnnotation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioIngressAnnotations'), 'exclude': lambda f: f is None }})
     r"""annotations for load balancers"""
     istio_installation_parameters: Optional[shared_istioinstallationparameters.IstioInstallationParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioInstallationParameters'), 'exclude': lambda f: f is None }})
     r"""istio related information"""
-    k8s_events_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('k8sEventsEnabled'), 'exclude': lambda f: f is None }})
+    k8s_events_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('k8sEventsEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether kubernetes events sending is enabled"""
-    kubernetes_security: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesSecurity'), 'exclude': lambda f: f is None }})
+    kubernetes_security: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesSecurity'), 'exclude': lambda f: f is None }})
     r"""indicates whether kubernetes security is enabled"""
     minimal_number_of_controller_replicas: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('minimalNumberOfControllerReplicas'), 'exclude': lambda f: f is None }})
-    orchestration_type: Optional[KubernetesClusterOrchestrationType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orchestrationType'), 'exclude': lambda f: f is None }})
-    preserve_original_source_ip: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('preserveOriginalSourceIp'), 'exclude': lambda f: f is None }})
+    orchestration_type: Optional[KubernetesClusterOrchestrationType] = dataclasses.field(default=KubernetesClusterOrchestrationType.GKE, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orchestrationType'), 'exclude': lambda f: f is None }})
+    preserve_original_source_ip: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('preserveOriginalSourceIp'), 'exclude': lambda f: f is None }})
     r"""indicates whether the agent should preserve the original source ip"""
     proxy_configuration: Optional[shared_proxyconfiguration.ProxyConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('proxyConfiguration'), 'exclude': lambda f: f is None }})
-    restrict_registires: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('restrictRegistires'), 'exclude': lambda f: f is None }})
+    restrict_registires: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('restrictRegistires'), 'exclude': lambda f: f is None }})
     r"""indicates whether the agent validate the images origin"""
     scan_configuration: Optional[shared_scanconfiguration.ScanConfiguration] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scanConfiguration'), 'exclude': lambda f: f is None }})
     r"""scan configuration information"""
-    service_discovery_isolation_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serviceDiscoveryIsolationEnabled'), 'exclude': lambda f: f is None }})
+    service_discovery_isolation_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serviceDiscoveryIsolationEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether the service discovery isolation is enabled"""
     sidecars_resources: Optional[shared_sidecarsresource.SidecarsResource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sidecarsResources'), 'exclude': lambda f: f is None }})
-    ssh_monitor_disabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sshMonitorDisabled'), 'exclude': lambda f: f is None }})
+    ssh_monitor_disabled: Optional[bool] = dataclasses.field(default=True, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sshMonitorDisabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether SSH monitoring is disabled"""
-    support_external_trace_source: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportExternalTraceSource'), 'exclude': lambda f: f is None }})
+    support_external_trace_source: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supportExternalTraceSource'), 'exclude': lambda f: f is None }})
     r"""indicates whether external trace sources are supported"""
-    tls_inspection_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tlsInspectionEnabled'), 'exclude': lambda f: f is None }})
+    tls_inspection_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tlsInspectionEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether TLS inspection is enabled"""
-    token_injection_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenInjectionEnabled'), 'exclude': lambda f: f is None }})
+    token_injection_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenInjectionEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether token injection is enabled"""
-    use_external_ca: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('useExternalCA'), 'exclude': lambda f: f is None }})
+    use_external_ca: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('useExternalCA'), 'exclude': lambda f: f is None }})
     r"""indicates whether kubernetes should use external CA"""
     
 

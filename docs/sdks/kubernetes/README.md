@@ -45,7 +45,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteKubernetesClustersKubernetesClusterIDRequest(
-    kubernetes_cluster_id='c3450841-f176-4445-a379-f3fb27e21f86',
+    kubernetes_cluster_id='a8fff1fd-16f4-41cf-ba2f-6b7d60168e00',
 )
 
 res = s.kubernetes.delete_kubernetes_clusters_kubernetes_cluster_id_(req)
@@ -84,7 +84,7 @@ s = pan.Pan(
 )
 
 req = operations.DeletePodDefinitionsPodIDRequest(
-    pod_id='2657b36f-c6b9-4f58-bce5-25c67641a831',
+    pod_id='1d7b59d4-9a1e-473b-8e2e-c8a463501aa8',
 )
 
 res = s.kubernetes.delete_pod_definitions_pod_id_(req)
@@ -123,7 +123,7 @@ s = pan.Pan(
 )
 
 req = operations.GetGetControllerDataClusterIDRequest(
-    cluster_id='2e5047b4-c21c-4cb4-a3ab-cdc91faabdd8',
+    cluster_id='6d4f5b01-1e67-437c-a42b-e9becce491b4',
 )
 
 res = s.kubernetes.get_get_controller_data_cluster_id_(req)
@@ -192,16 +192,16 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersRequest(
-    cluster_name='praesentium',
-    controller_status='officiis',
-    controller_version='esse',
+    cluster_name='handle',
+    controller_status='Metical withdrawal unless',
+    controller_version='Northeast Northeast',
     download_as_xlsx=False,
-    kubernetes_version='vitae',
-    max_results=9651.17,
-    offset=3864.01,
+    kubernetes_version='SMTP PCI soulful',
+    max_results=5309.6,
+    offset=6721.13,
     only_spec_reconstruction_enabled_filter=False,
-    sort_dir=operations.GetKubernetesClustersSortDir.DESC,
-    sort_key='labore',
+    sort_dir=operations.GetKubernetesClustersSortDir.ASC,
+    sort_key='background mmm',
 )
 
 res = s.kubernetes.get_kubernetes_clusters(req)
@@ -240,7 +240,7 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersKubernetesClusterIDRequest(
-    kubernetes_cluster_id='8252d777-1e7f-4d07-8009-ef8d29de1dd7',
+    kubernetes_cluster_id='6ad413ce-670c-4973-bf8a-5a66b7855734',
 )
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_(req)
@@ -279,7 +279,7 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersKubernetesClusterIDDeleteDependenciesRequest(
-    kubernetes_cluster_id='097b5da0-8c57-4fa6-878a-216e19bafeca',
+    kubernetes_cluster_id='b06f6c06-c4ec-44f8-ba3a-a7d63215e690',
 )
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_delete_dependencies(req)
@@ -318,8 +318,8 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest(
-    kubernetes_cluster_id='61914981-40b6-44ff-8ae1-70ef03b5f37e',
-    send_telemetries_interval_sec=253855,
+    kubernetes_cluster_id='204aba8f-ddfd-4080-9f3c-89482d02fb76',
+    send_telemetries_interval_sec=908942,
 )
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_download_bundle(req)
@@ -358,7 +358,7 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersKubernetesClusterIDGetHelmCommandsRequest(
-    kubernetes_cluster_id='aa868555-9667-432a-a5dc-b6682cb70f8c',
+    kubernetes_cluster_id='f7710c3a-4d45-43f9-898d-e19416c2b527',
 )
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_get_helm_commands(req)
@@ -398,9 +398,9 @@ s = pan.Pan(
 
 req = operations.GetKubernetesClustersKubernetesClusterIDNamespacesRequest(
     include_scannable=False,
-    kubernetes_cluster_id='fd5fb6e9-1b9a-49f7-8846-e2c3309db053',
-    sort_dir=operations.GetKubernetesClustersKubernetesClusterIDNamespacesSortDir.ASC,
-    sort_key=operations.GetKubernetesClustersKubernetesClusterIDNamespacesSortKey.STATUS,
+    kubernetes_cluster_id='b18474d1-b95c-48d9-af1c-951ce15b0be6',
+    sort_dir=operations.GetKubernetesClustersKubernetesClusterIDNamespacesSortDir.DESC,
+    sort_key=operations.GetKubernetesClustersKubernetesClusterIDNamespacesSortKey.NAME,
 )
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_namespaces(req)
@@ -439,7 +439,7 @@ s = pan.Pan(
 )
 
 req = operations.GetKubernetesClustersKubernetesClusterIDServicesRequest(
-    kubernetes_cluster_id='9e75ca00-6f53-492c-91a2-5a8bf92f9742',
+    kubernetes_cluster_id='1b08f941-6d25-44a9-8a5a-94e46b69d5cc',
     show_istio_only=False,
 )
 
@@ -479,7 +479,7 @@ s = pan.Pan(
 )
 
 req = operations.GetLeanKubernetesClustersRequest(
-    cluster_name='molestias',
+    cluster_name='sensor Granite',
 )
 
 res = s.kubernetes.get_lean_kubernetes_clusters(req)
@@ -518,14 +518,14 @@ s = pan.Pan(
 )
 
 req = operations.GetNamespacesRequest(
-    cluster_name='fuga',
+    cluster_name='Thorium',
     download_as_xlsx=False,
-    max_results=8697.18,
-    namespace_name='unde',
-    offset=6734,
-    protection_status=operations.GetNamespacesProtectionStatus.CONNECTION_ONLY,
+    max_results=6640.03,
+    namespace_name='mindshare',
+    offset=617.97,
+    protection_status=operations.GetNamespacesProtectionStatus.DISABLED,
     sort_dir=operations.GetNamespacesSortDir.DESC,
-    sort_key=operations.GetNamespacesSortKey.RUNNING_PODS,
+    sort_key=operations.GetNamespacesSortKey.PROTECTION_STATUS,
 )
 
 res = s.kubernetes.get_namespaces(req)
@@ -564,15 +564,15 @@ s = pan.Pan(
 )
 
 req = operations.GetPodDefinitionsRequest(
-    cluster_name='soluta',
+    cluster_name='Illinois Savings',
     deployment_type=[
-        'earum',
+        'disclaimer',
     ],
     download_as_xlsx=False,
-    name='Mr. Roy Conn',
+    name='Multigender M2F',
     no_pagination=False,
     template_source=[
-        'ad',
+        'Boulder',
     ],
 )
 
@@ -612,7 +612,7 @@ s = pan.Pan(
 )
 
 req = shared.KubernetesCluster(
-    account_name='velit',
+    account_name='withdrawal',
     agent_fail_close=False,
     api_intelligence_dast=False,
     auto_label_enabled=False,
@@ -622,22 +622,22 @@ req = shared.KubernetesCluster(
     ci_image_validation=False,
     cluster_pod_definition_source=shared.ClusterPodDefinitionSource.KUBERNETES,
     controller_data_response=shared.ControllerDataResponse(
-        agent_id='9d98387f-7a79-4cd7-acd2-484da21729f2',
-        shared_key='similique',
+        agent_id='81eb935a-67c1-4676-82ab-92109ab1c541',
+        shared_key='Movies',
     ),
-    controller_status=shared.ControllerStatus.WAITING_FOR_USER_UPDATE,
+    controller_status=shared.ControllerStatus.UNKNOWN,
     enable_connections_control=False,
     helm_commands_installation=shared.HelmCommandsInstallation(
-        istio_helm_command='numquam',
-        panoptica_helm_command='inventore',
-        vault_helm_command='necessitatibus',
+        istio_helm_command='wherever Bedfordshire',
+        panoptica_helm_command='Personal generation Small',
+        vault_helm_command='Generic than',
     ),
-    id='f5725f11-69ac-41e4-9d8a-23c23e34f2df',
+    id='6e76a9b0-598f-49f4-b42b-b8cf86555cd8',
     install_envoy_tracing_support=False,
     install_tracing_support=False,
     installation_source=shared.InstallationSource.HELM,
     internal_registry_parameters=shared.InternalRegistryParameters(
-        internal_registry='quaerat',
+        internal_registry='Pines Trial',
         internal_registry_enabled=False,
     ),
     is_hold_application_until_proxy_starts=False,
@@ -646,41 +646,41 @@ req = shared.KubernetesCluster(
     is_persistent=False,
     istio_ingress_annotations=[
         shared.KubernetesAnnotation(
-            key='officia',
-            value='sunt',
+            key='<key>',
+            value='upright maximize verbally',
         ),
     ],
     istio_installation_parameters=shared.IstioInstallationParameters(
         is_istio_already_installed=False,
-        istio_version='perspiciatis',
+        istio_version='ladybug',
     ),
     k8s_events_enabled=False,
     kubernetes_security=False,
-    minimal_number_of_controller_replicas=461758,
-    name='Elmer Stokes',
-    orchestration_type=shared.KubernetesClusterOrchestrationType.GKE,
+    minimal_number_of_controller_replicas=225610,
+    name='female Branding Architect',
+    orchestration_type=shared.KubernetesClusterOrchestrationType.RANCHER,
     preserve_original_source_ip=False,
     proxy_configuration=shared.ProxyConfiguration(
         enable_proxy=False,
-        https_proxy='aspernatur',
+        https_proxy='Customer befriend',
     ),
     restrict_registires=False,
     scan_configuration=shared.ScanConfiguration(
-        number_of_scanners=91136,
+        number_of_scanners=127892,
         scan_types=[
             shared.ScanType.VULNERABILITIES,
         ],
     ),
     service_discovery_isolation_enabled=False,
     sidecars_resources=shared.SidecarsResource(
-        proxy_init_limits_cpu='et',
-        proxy_init_limits_memory='delectus',
-        proxy_init_requests_cpu='saepe',
-        proxy_init_requests_memory='sunt',
-        proxy_limits_cpu='in',
-        proxy_limits_memory='architecto',
-        proxy_request_cpu='sed',
-        proxy_request_memory='voluptatem',
+        proxy_init_limits_cpu='meter deposit South',
+        proxy_init_limits_memory='compress Lake',
+        proxy_init_requests_cpu='as Tactics mobile',
+        proxy_init_requests_memory='blue Manager Program',
+        proxy_limits_cpu='achievement Optimization',
+        proxy_limits_memory='Zirconium',
+        proxy_request_cpu='fuchsia Texas Ergonomic',
+        proxy_request_memory='Longview',
     ),
     ssh_monitor_disabled=False,
     support_external_trace_source=False,
@@ -725,37 +725,37 @@ s = pan.Pan(
 )
 
 req = shared.PodDefinitionInput(
-    cluster_id='99853e9f-543d-4854-839e-e224460443bc',
+    cluster_id='caf647ad-b35e-4462-baa4-a61d2b4e2410',
     containers=[
         shared.Container(
             image=shared.Image(
-                dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
-                hash='minima',
-                repository='magnam',
-                tag='vitae',
-                vulnerability_severity_level=shared.VulnerabilitySeverity.MEDIUM,
+                dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
+                hash='Folk',
+                repository='Smart Trigender',
+                tag='Analyst',
+                vulnerability_severity_level=shared.VulnerabilitySeverity.HIGH,
             ),
         ),
     ],
     init_containers=[
         shared.Container(
             image=shared.Image(
-                dockerfile_scan_severity=shared.DockerfileScanSeverity.WARN,
-                hash='quisquam',
-                repository='sunt',
-                tag='asperiores',
+                dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
+                hash='yellow Solutions geez',
+                repository='resound mobile applications',
+                tag='meh',
                 vulnerability_severity_level=shared.VulnerabilitySeverity.LOW,
             ),
         ),
     ],
-    kind=shared.PodTemplateKind.CRON_JOB,
+    kind=shared.PodTemplateKind.REPLICA_SET,
     labels=[
         shared.Label(
-            key='accusamus',
-            value='totam',
+            key='<key>',
+            value='unless',
         ),
     ],
-    name='Cristina Nader',
+    name='payment Michigan',
     pod_definition_source=shared.PodDefinitionSource.KUBERNETES,
 )
 
@@ -796,7 +796,7 @@ s = pan.Pan(
 
 req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
     kubernetes_cluster=shared.KubernetesCluster(
-        account_name='odit',
+        account_name='savior normalization absentmindedly',
         agent_fail_close=False,
         api_intelligence_dast=False,
         auto_label_enabled=False,
@@ -806,22 +806,22 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         ci_image_validation=False,
         cluster_pod_definition_source=shared.ClusterPodDefinitionSource.CD,
         controller_data_response=shared.ControllerDataResponse(
-            agent_id='abd617c3-b0d5-41a4-8bf0-1bad8706d460',
-            shared_key='laudantium',
+            agent_id='d957958a-0796-4a5f-ad9d-7f9c73b14840',
+            shared_key='Fantastic Berkshire',
         ),
-        controller_status=shared.ControllerStatus.ACTIVE,
+        controller_status=shared.ControllerStatus.PENDING_INSTALL,
         enable_connections_control=False,
         helm_commands_installation=shared.HelmCommandsInstallation(
-            istio_helm_command='libero',
-            panoptica_helm_command='maiores',
-            vault_helm_command='nam',
+            istio_helm_command='orange Central invoice',
+            panoptica_helm_command='pascal to squeegee',
+            vault_helm_command='parsing blissfully pine',
         ),
-        id='dc41ff5d-4e2a-4e4f-b5cb-35d17638f1ed',
+        id='f781f7b5-14b5-45e8-9b88-a92334e6deac',
         install_envoy_tracing_support=False,
         install_tracing_support=False,
         installation_source=shared.InstallationSource.HELM,
         internal_registry_parameters=shared.InternalRegistryParameters(
-            internal_registry='ducimus',
+            internal_registry='North Highlands',
             internal_registry_enabled=False,
         ),
         is_hold_application_until_proxy_starts=False,
@@ -830,41 +830,41 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         is_persistent=False,
         istio_ingress_annotations=[
             shared.KubernetesAnnotation(
-                key='atque',
-                value='consectetur',
+                key='<key>',
+                value='ADP Seamless',
             ),
         ],
         istio_installation_parameters=shared.IstioInstallationParameters(
             is_istio_already_installed=False,
-            istio_version='nemo',
+            istio_version='Southeast',
         ),
         k8s_events_enabled=False,
         kubernetes_security=False,
-        minimal_number_of_controller_replicas=592760,
-        name='Kim Rutherford',
-        orchestration_type=shared.KubernetesClusterOrchestrationType.EKS,
+        minimal_number_of_controller_replicas=890421,
+        name='delectus Rap Awesome',
+        orchestration_type=shared.KubernetesClusterOrchestrationType.IKS,
         preserve_original_source_ip=False,
         proxy_configuration=shared.ProxyConfiguration(
             enable_proxy=False,
-            https_proxy='praesentium',
+            https_proxy='Directives spar Handcrafted',
         ),
         restrict_registires=False,
         scan_configuration=shared.ScanConfiguration(
-            number_of_scanners=427859,
+            number_of_scanners=663885,
             scan_types=[
                 shared.ScanType.VULNERABILITIES,
             ],
         ),
         service_discovery_isolation_enabled=False,
         sidecars_resources=shared.SidecarsResource(
-            proxy_init_limits_cpu='delectus',
-            proxy_init_limits_memory='quas',
-            proxy_init_requests_cpu='impedit',
-            proxy_init_requests_memory='illum',
-            proxy_limits_cpu='ullam',
-            proxy_limits_memory='praesentium',
-            proxy_request_cpu='perferendis',
-            proxy_request_memory='soluta',
+            proxy_init_limits_cpu='tan comic tan',
+            proxy_init_limits_memory='Rubber',
+            proxy_init_requests_cpu='Sleek drain sensor',
+            proxy_init_requests_memory='indexing Hackensack',
+            proxy_limits_cpu='superstructure',
+            proxy_limits_memory='generating',
+            proxy_request_cpu='micronutrient',
+            proxy_request_memory='pro Cambridgeshire',
         ),
         ssh_monitor_disabled=False,
         support_external_trace_source=False,
@@ -872,7 +872,7 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         token_injection_enabled=False,
         use_external_ca=False,
     ),
-    kubernetes_cluster_id='a73810e4-fe44-4472-97cd-3b1dd3bbce24',
+    kubernetes_cluster_id='96a74b13-6974-4b67-a067-bd753e149f7b',
 )
 
 res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_(req)
@@ -912,9 +912,9 @@ s = pan.Pan(
 
 req = operations.PutKubernetesClustersKubernetesClusterIDManagedByHelmRequest(
     edit_kubernetes_cluster_managed_by_helm=shared.EditKubernetesClusterManagedByHelm(
-        name='Opal Klocko',
+        name='transmitter innocently',
     ),
-    kubernetes_cluster_id='4eff5012-6d71-4cff-bd0e-b74b8421953b',
+    kubernetes_cluster_id='ff47cf23-f7b6-483e-bd0b-e8fe575edb2f',
 )
 
 res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm(req)
@@ -954,40 +954,40 @@ s = pan.Pan(
 
 req = operations.PutPodDefinitionsPodIDRequest(
     pod_definition_input=shared.PodDefinitionInput(
-        cluster_id='44bd3c43-159d-433e-9953-c001139863aa',
+        cluster_id='8813d860-716a-4bd1-be6a-f36d0732a688',
         containers=[
             shared.Container(
                 image=shared.Image(
-                    dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
-                    hash='et',
-                    repository='eveniet',
-                    tag='aliquid',
-                    vulnerability_severity_level=shared.VulnerabilitySeverity.HIGH,
+                    dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
+                    hash='female West',
+                    repository='Cyclocross female jubilant',
+                    tag='Rubber Tamiami',
+                    vulnerability_severity_level=shared.VulnerabilitySeverity.LOW,
                 ),
             ),
         ],
         init_containers=[
             shared.Container(
                 image=shared.Image(
-                    dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
-                    hash='ab',
-                    repository='maxime',
-                    tag='porro',
-                    vulnerability_severity_level=shared.VulnerabilitySeverity.UNKNOWN,
+                    dockerfile_scan_severity=shared.DockerfileScanSeverity.WARN,
+                    hash='Southeast custody',
+                    repository='Music Unbranded Visionary',
+                    tag='Squares towards',
+                    vulnerability_severity_level=shared.VulnerabilitySeverity.LOW,
                 ),
             ),
         ],
-        kind=shared.PodTemplateKind.OTHER,
+        kind=shared.PodTemplateKind.STATEFUL_SET,
         labels=[
             shared.Label(
-                key='dicta',
-                value='hic',
+                key='<key>',
+                value='actualize Dollar',
             ),
         ],
-        name='Miss Geoffrey Herman',
-        pod_definition_source=shared.PodDefinitionSource.MANUAL,
+        name='opt virtual copying',
+        pod_definition_source=shared.PodDefinitionSource.HELM,
     ),
-    pod_id='41ffbe9c-bd79-45ee-a5e0-76cc7abf616e',
+    pod_id='d7ad7bdf-9c15-4917-b40e-79415cfed383',
 )
 
 res = s.kubernetes.put_pod_definitions_pod_id_(req)

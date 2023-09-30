@@ -13,7 +13,7 @@ class GetDashboardReportDownloadResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_dashboard_report_download_200_application_json_binary_string: Optional[bytes] = dataclasses.field(default=None)
+    get_dashboard_report_download_200_application_json_binary_string: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""The Secure Application security report"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

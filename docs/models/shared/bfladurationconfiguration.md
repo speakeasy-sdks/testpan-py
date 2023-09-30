@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `duration`         | *str*              | :heavy_check_mark: | N/A                |
+| `duration`         | *Optional[str]*    | :heavy_check_mark: | N/A                |

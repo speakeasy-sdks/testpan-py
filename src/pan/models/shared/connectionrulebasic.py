@@ -20,7 +20,7 @@ class ConnectionRuleBasic:
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_rule_active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isRuleActive'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_connectionruleorigin.ConnectionRuleOrigin] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[shared_connectionruleorigin.ConnectionRuleOrigin] = dataclasses.field(default=shared_connectionruleorigin.ConnectionRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
     rule_type: Optional[shared_networkconnectionruletype.NetworkConnectionRuleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleType'), 'exclude': lambda f: f is None }})
     
 

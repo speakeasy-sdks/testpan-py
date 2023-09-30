@@ -5,16 +5,12 @@ import dataclasses
 import requests as requests_http
 from ..shared import environment as shared_environment
 from enum import Enum
-from typing import Optional
+from typing import Final, Optional
 
 class GetEnvironmentsSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
-
-class GetEnvironmentsSortKey(str, Enum):
-    r"""Environment sort key"""
-    NAME = 'name'
 
 
 
@@ -22,13 +18,13 @@ class GetEnvironmentsSortKey(str, Enum):
 class GetEnvironmentsRequest:
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    include_system_envs: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeSystemEnvs', 'style': 'form', 'explode': True }})
+    include_system_envs: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'includeSystemEnvs', 'style': 'form', 'explode': True }})
     r"""include systems environments"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""Filter environments by name"""
-    sort_dir: Optional[GetEnvironmentsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetEnvironmentsSortDir] = dataclasses.field(default=GetEnvironmentsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetEnvironmentsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='name', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""Environment sort key"""
     
 

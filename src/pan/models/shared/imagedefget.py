@@ -23,7 +23,7 @@ class ImageDefGet:
     image_hash: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageHash'), 'exclude': lambda f: f is None }})
     r"""Valid hash for the image. * will authorize image name without validating hash"""
     image_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageName'), 'exclude': lambda f: f is None }})
-    image_source_type: Optional[shared_imagesourcetype.ImageSourceType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageSourceType'), 'exclude': lambda f: f is None }})
+    image_source_type: Optional[shared_imagesourcetype.ImageSourceType] = dataclasses.field(default=shared_imagesourcetype.ImageSourceType.DOCKER_PLUGIN_CI, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageSourceType'), 'exclude': lambda f: f is None }})
     image_tags: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageTags'), 'exclude': lambda f: f is None }})
     is_identified: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIdentified'), 'exclude': lambda f: f is None }})
     r"""Specify if the image is identified"""

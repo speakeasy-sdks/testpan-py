@@ -24,19 +24,19 @@ class GetAPISecurityExternalCatalogSortKey(str, Enum):
 class GetAPISecurityExternalCatalogRequest:
     api_policy_profiles: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiPolicyProfiles', 'style': 'form', 'explode': False }})
     r"""Names of the Api Policy Profiles"""
-    drill_down_score: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'drillDownScore', 'style': 'form', 'explode': True }})
+    drill_down_score: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'drillDownScore', 'style': 'form', 'explode': True }})
     r"""Return associated score"""
-    include_service_with_no_spec: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'includeServiceWithNoSpec', 'style': 'form', 'explode': True }})
+    include_service_with_no_spec: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'includeServiceWithNoSpec', 'style': 'form', 'explode': True }})
     r"""When false, only services with specs wikk be returned"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""the Api Catalog name filter"""
     no_pagination: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'noPagination', 'style': 'form', 'explode': True }})
     r"""When true, the pagination params will be ignored"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetAPISecurityExternalCatalogSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAPISecurityExternalCatalogSortDir] = dataclasses.field(default=GetAPISecurityExternalCatalogSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     sort_key: Optional[GetAPISecurityExternalCatalogSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""the Api Catalog sort key"""

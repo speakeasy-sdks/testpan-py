@@ -33,9 +33,9 @@ class GetAPISecurityRiskFindingsSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetAPISecurityRiskFindingsRequest:
-    api_sec_source: GetAPISecurityRiskFindingsAPISecSource = dataclasses.field(metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetAPISecurityRiskFindingsAPISecSource = dataclasses.field(default=GetAPISecurityRiskFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
-    sort_key: GetAPISecurityRiskFindingsSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetAPISecurityRiskFindingsSortKey = dataclasses.field(default=GetAPISecurityRiskFindingsSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""Risk finding sort key."""
     category: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
     r"""Category of the risk finding"""
@@ -43,15 +43,15 @@ class GetAPISecurityRiskFindingsRequest:
     r"""Show finding with detect elements only"""
     element: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'element', 'style': 'form', 'explode': True }})
     r"""Affected element of the risk finding"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""Name of the risk finding name"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     risks: Optional[list[GetAPISecurityRiskFindingsRisks]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risks', 'style': 'form', 'explode': False }})
     r"""The API risk filter"""
-    sort_dir: Optional[GetAPISecurityRiskFindingsSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAPISecurityRiskFindingsSortDir] = dataclasses.field(default=GetAPISecurityRiskFindingsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     source: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
     r"""Source of the risk finding"""

@@ -20,7 +20,7 @@ class APISecurity:
         url = utils.generate_url(operations.DeleteAPISecurityAPICatalogIDRequest, base_url, '/apiSecurity/api/{catalogId}', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -44,7 +44,7 @@ class APISecurity:
         url = utils.generate_url(operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/detection', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -71,7 +71,7 @@ class APISecurity:
         url = utils.generate_url(operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/learning', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -98,7 +98,7 @@ class APISecurity:
         url = utils.generate_url(operations.DeleteAPISecurityOpenAPISpecsCatalogIDRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -126,7 +126,7 @@ class APISecurity:
         url = utils.generate_url(operations.DeleteGatewaysGatewayIDRequest, base_url, '/gateways/{gatewayId}', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -151,7 +151,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityExternalCatalogRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -180,7 +180,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityExternalCatalogCountRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -209,7 +209,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityExternalCatalogCatalogIDRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -238,7 +238,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityInternalCatalogRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -267,7 +267,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityInternalCatalogCountRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -296,7 +296,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityInternalCatalogCatalogIDRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -324,7 +324,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -352,7 +352,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityInternalCatalogCatalogIDFuzzingStatusRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/fuzzingStatus', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -380,7 +380,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/fuzzingTests', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -409,7 +409,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -437,7 +437,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -465,7 +465,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/diffDetectionStatus', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -493,7 +493,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDGetOpenAPISpecScoreStatusRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/getOpenApiSpecScoreStatus', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -521,7 +521,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/openApiSpecSwagger.json', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -548,7 +548,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/reconstructedSpec/review', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -576,7 +576,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/reconstructedSpec/status', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -605,7 +605,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -633,7 +633,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityRiskFindingsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -661,7 +661,7 @@ class APISecurity:
         url = base_url + '/apiSecurity/riskFindings/categories'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -689,7 +689,7 @@ class APISecurity:
         url = base_url + '/apiSecurity/riskFindings/sources'
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -717,7 +717,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityRiskFindingsRiskFindingIDRequest, base_url, '/apiSecurity/riskFindings/{riskFindingId}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -745,7 +745,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityCatalogIDDeleteDependenciesRequest, base_url, '/apiSecurity/{catalogId}/deleteDependencies', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -780,7 +780,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetAPISecurityCatalogIDMethodsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -808,7 +808,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetAPISecurityCatalogIDTagsRequest, base_url, '/apiSecurity/{catalogId}/tags', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -837,7 +837,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetDashboardApisecRiskFindingsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -866,7 +866,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetDashboardApisecRiskFindingsTrendRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -895,7 +895,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetDashboardApisecSpecsAndOperationsDiffsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -924,7 +924,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetDashboardApisecTopRiskyApisRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -953,7 +953,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetDashboardApisecTopRiskyFindingsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -982,7 +982,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetGatewaysRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1011,7 +1011,7 @@ class APISecurity:
         headers = {}
         query_params = utils.get_query_params(operations.GetGatewaysClustersRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1041,7 +1041,7 @@ class APISecurity:
         url = utils.generate_url(operations.GetGatewaysGatewayIDDownloadBundleRequest, base_url, '/gateways/{gatewayId}/download_bundle', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1052,7 +1052,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.get_gateways_gateway_id_download_bundle_200_application_json_binary_string = http_res.content
+                res.get_gateways_gateway_id_download_bundle_200_application_json_binary_string = http_res
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -1073,13 +1073,13 @@ class APISecurity:
         
         url = base_url + '/apiSecurity/api'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1105,13 +1105,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/detection', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1137,13 +1137,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/learning', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "bfla_duration_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1170,7 +1170,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla/reset', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1197,7 +1197,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/resetTraceAnalysis', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1220,13 +1220,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/startFuzzing', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_fuzzing_test_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_fuzzing_test_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1253,13 +1253,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/startTraceAnalysis', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "trace_analysis_configuration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "trace_analysis_configuration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1283,7 +1283,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/stopFuzzing', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1307,7 +1307,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/stopTraceAnalysis', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1331,7 +1331,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/reconstructedSpec/abort', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1354,11 +1354,11 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/reconstructedSpec/learn', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_reconstruction_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_reconstruction_request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1381,13 +1381,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/reconstructedSpec/review/approve', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_reconstructed_spec_input", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_reconstructed_spec_input", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1410,13 +1410,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/startDiffsDetection', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "action_duration", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "action_duration", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1440,7 +1440,7 @@ class APISecurity:
         url = utils.generate_url(operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}/stopDiffsDetection', request)
         headers = {}
         headers['Accept'] = '*/*'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1463,13 +1463,13 @@ class APISecurity:
         
         url = base_url + '/gateways'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1496,13 +1496,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest, base_url, '/apiSecurity/internalCatalog/{catalogId}/bfla', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_service_bfla_info", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_service_bfla_info", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1528,13 +1528,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PutAPISecurityOpenAPISpecsCatalogIDRequest, base_url, '/apiSecurity/openApiSpecs/{catalogId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "request_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -1561,13 +1561,13 @@ class APISecurity:
         
         url = utils.generate_url(operations.PutGatewaysGatewayIDRequest, base_url, '/gateways/{gatewayId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "gateway", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "gateway", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

@@ -5,16 +5,12 @@ import dataclasses
 import requests as requests_http
 from ..shared import permissionresponse as shared_permissionresponse
 from enum import Enum
-from typing import Optional
+from typing import Final, Optional
 
 class GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
-
-class GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey(str, Enum):
-    r"""sort key"""
-    RISK = 'risk'
 
 
 
@@ -22,11 +18,11 @@ class GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey(str, Enum):
 class GetRiskAssessmentPermissionsClusterIDOwnerIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     owner_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownerId', 'style': 'simple', 'explode': False }})
-    is_approved: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'isApproved', 'style': 'form', 'explode': True }})
+    is_approved: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'isApproved', 'style': 'form', 'explode': True }})
     r"""Return approved / not approved entries"""
-    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='risk', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

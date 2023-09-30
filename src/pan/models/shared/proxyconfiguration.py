@@ -11,7 +11,7 @@ from typing import Optional
 
 @dataclasses.dataclass
 class ProxyConfiguration:
-    enable_proxy: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableProxy'), 'exclude': lambda f: f is None }})
+    enable_proxy: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enableProxy'), 'exclude': lambda f: f is None }})
     r"""Specifies if the proxy configuration should be used"""
     https_proxy: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('httpsProxy'), 'exclude': lambda f: f is None }})
     

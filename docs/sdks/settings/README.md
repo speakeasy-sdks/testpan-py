@@ -45,7 +45,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteSettingsIntegrationsCaIDRequest(
-    id='d0081090-f670-4667-bf3a-681c5768dce7',
+    id='2b23989d-8ad5-450f-8a76-f44a753018c5',
 )
 
 res = s.settings.delete_settings_integrations_ca_id_(req)
@@ -84,7 +84,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteSettingsIntegrationsEventForwardingEventForwardingIDRequest(
-    event_forwarding_id='42409a21-5e08-4601-889a-5f63e3af3dd9',
+    event_forwarding_id='a54e5100-941b-4501-ab74-aa7fd2e0ccc3',
 )
 
 res = s.settings.delete_settings_integrations_event_forwarding_event_forwarding_id_(req)
@@ -213,7 +213,7 @@ s = pan.Pan(
 )
 
 req = shared.SeccompProfileData(
-    data='{"foo":"o\\47rlqH8;","bar":"5w8`K^ZUt:","bike":"{4Jt=AdQY?","a":81497,"b":11033,"name":92332,"prop":21809}',
+    data='{cycle: 29272, settlement: null, collaboration: "grey yearly"}',
 )
 
 res = s.settings.post_seccomp_profiles_validate_data(req)
@@ -282,10 +282,10 @@ s = pan.Pan(
 )
 
 req = shared.CaIntegrationRequestInput(
-    certificate='error',
-    issuer_name='numquam',
-    issuer_namespace='praesentium',
-    name='Ms. Kim Buckridge III',
+    certificate='prickly',
+    issuer_name='Loan whereas green',
+    issuer_namespace='Loan wield cyan',
+    name='Northwest Wagon Soft',
 )
 
 res = s.settings.post_settings_integrations_ca(req)
@@ -324,12 +324,12 @@ s = pan.Pan(
 )
 
 req = shared.EventsForwardingDetailsInput(
-    events_forwarding_details_type=shared.EventsForwardingDetailsTypeEnum.SECURE_X_EVENTS_FORWARDING_DETAILS,
+    events_forwarding_details_type=shared.EventsForwardingDetailsTypeEnum.TEAMS_VULNERABILITY_EVENTS_FORWARDING_DETAILS,
     events_to_forward=[
-        shared.EventsToForward.SECURITY_FINDINGS,
+        shared.EventsToForward.ATTACK_PATH,
     ],
-    name='Erica Gleichner V',
-    url='http://regal-surplus.info',
+    name='Soft dull alliance',
+    url='https://truthful-campaigning.name',
 )
 
 res = s.settings.post_settings_integrations_event_forwarding(req)
@@ -368,7 +368,7 @@ s = pan.Pan(
 )
 
 req = shared.TestOpsgenieConnectionRequest(
-    token='velit',
+    token='pish invoice',
 )
 
 res = s.settings.post_settings_integrations_opsgenie_test_integration(req)
@@ -407,7 +407,7 @@ s = pan.Pan(
 )
 
 req = shared.TestSecureXIntegrationRequest(
-    url='incidunt',
+    url='https://angelic-mortgage.name',
 )
 
 res = s.settings.post_settings_integrations_securex_test_integration(req)
@@ -446,7 +446,7 @@ s = pan.Pan(
 )
 
 req = shared.TestSlackIntegrationRequest(
-    url='a',
+    url='https://every-vibration.name',
 )
 
 res = s.settings.post_settings_integrations_slack_test_integration(req)
@@ -486,9 +486,9 @@ s = pan.Pan(
 
 req = shared.TestSplunkConnectionRequest(
     is_cloud=False,
-    port=7370,
-    token='consequuntur',
-    url='numquam',
+    port=353653,
+    token='orange XSS meter',
+    url='http://legal-pea.com',
 )
 
 res = s.settings.post_settings_integrations_splunk_test_integration(req)
@@ -527,7 +527,7 @@ s = pan.Pan(
 )
 
 req = shared.TestSumoLogicIntegrationRequest(
-    url='numquam',
+    url='http://sudden-concern.name',
 )
 
 res = s.settings.post_settings_integrations_sumo_logic_test_integration(req)
@@ -566,7 +566,7 @@ s = pan.Pan(
 )
 
 req = shared.TestTeamsIntegrationRequest(
-    url='excepturi',
+    url='http://faraway-rayon.info',
 )
 
 res = s.settings.post_settings_integrations_teams_test_integration(req)
@@ -605,7 +605,7 @@ s = pan.Pan(
 )
 
 req = shared.TestWebexIntegrationRequest(
-    url='pariatur',
+    url='http://charming-gadget.info',
 )
 
 res = s.settings.post_settings_integrations_webex_test_integration(req)
@@ -685,12 +685,12 @@ s = pan.Pan(
 
 req = operations.PutSettingsIntegrationsCaIDRequest(
     ca_integration_request_input=shared.CaIntegrationRequestInput(
-        certificate='voluptatum',
-        issuer_name='vel',
-        issuer_namespace='delectus',
-        name='Mamie Pouros DVM',
+        certificate='Berkshire',
+        issuer_name='Bicycle',
+        issuer_namespace='Central UDP recontextualize',
+        name='Peru Market',
     ),
-    id='e5d911cb-fe74-49ca-b45a-27f69e2c9e6d',
+    id='d2fdcaea-e550-46a1-9b8c-391af00a780a',
 )
 
 res = s.settings.put_settings_integrations_ca_id_(req)
@@ -730,18 +730,18 @@ s = pan.Pan(
 
 req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
     splunk_events_forwarding_details_input=shared.SplunkEventsForwardingDetailsInput(
-        events_forwarding_details_type=shared.EventsForwardingDetailsTypeEnum.SPLUNK_EVENTS_FORWARDING_DETAILS,
+        events_forwarding_details_type=shared.EventsForwardingDetailsTypeEnum.WEBEX_EVENTS_FORWARDING_DETAILS,
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,
         ],
         is_cloud=False,
-        name='Arturo Smith',
-        port=664858,
-        source_name='repellendus',
-        token='tempora',
-        url='https://impure-researcher.com',
+        name='Genderqueer deploy',
+        port=212010,
+        source_name='proposal Yemen Audi',
+        token='RSS',
+        url='https://crafty-spec.net',
     ),
-    event_forwarding_id='3108d9c3-3747-4308-ab94-f2ab1fd5671e',
+    event_forwarding_id='1b408bce-49d2-438c-ae86-ac5f2202c79c',
 )
 
 res = s.settings.put_settings_integrations_event_forwarding_event_forwarding_id_(req)

@@ -21,13 +21,13 @@ class GetServerlessZipFilesSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetServerlessZipFilesRequest:
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetServerlessZipFilesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetServerlessZipFilesSortDir] = dataclasses.field(default=GetServerlessZipFilesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetServerlessZipFilesSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetServerlessZipFilesSortKey] = dataclasses.field(default=GetServerlessZipFilesSortKey.VULNERABILITIES, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     zip_name_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'zipNameFilter', 'style': 'form', 'explode': True }})
     zip_sha256_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'zipSha256Filter', 'style': 'form', 'explode': True }})

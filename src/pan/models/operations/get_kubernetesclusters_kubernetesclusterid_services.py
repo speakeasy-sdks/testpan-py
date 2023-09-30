@@ -13,7 +13,7 @@ from typing import Optional
 class GetKubernetesClustersKubernetesClusterIDServicesRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    show_istio_only: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showIstioOnly', 'style': 'form', 'explode': True }})
+    show_istio_only: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showIstioOnly', 'style': 'form', 'explode': True }})
     r"""if true, return only services deployed on namespace with label istio-injection=enabled"""
     
 

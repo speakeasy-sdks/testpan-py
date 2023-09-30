@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `compliant`        | *bool*             | :heavy_check_mark: | N/A                |
+| `compliant`        | *Optional[bool]*   | :heavy_check_mark: | N/A                |

@@ -126,7 +126,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionsRequest(
-    aws_account_id='earum',
+    aws_account_id='owlishly evolve West',
 )
 
 res = s.aws.get_aws_aws_account_id_regions(req)
@@ -165,8 +165,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDSubnetsRequest(
-    aws_account_id='praesentium',
-    region_id='error',
+    aws_account_id='Associate',
+    region_id='Einsteinium',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_subnets(req)
@@ -206,8 +206,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDVpcsRequest(
-    aws_account_id='non',
-    region_id='quasi',
+    aws_account_id='iterate Facilitator Soft',
+    region_id='Cab',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_vpcs(req)
@@ -246,9 +246,9 @@ s = pan.Pan(
 )
 
 req = shared.AWSRolePost(
-    arn='mollitia',
-    description='accusamus',
-    name='Rodolfo Baumbach',
+    arn='Communications female',
+    description='Stand-alone encompassing knowledge base',
+    name='Crossroad black',
 )
 
 res = s.aws.post_aws_roles(req)
@@ -288,10 +288,10 @@ s = pan.Pan(
 
 req = operations.PutAwsRolesRoleIDRequest(
     aws_role_details=shared.AWSRoleDetails(
-        description='eaque',
-        name='Gilbert Marks',
+        description='Optional asymmetric superstructure',
+        name='next Baby Neon',
     ),
-    role_id='d3b2ecfc-c8f8-4950-90f5-dd3d6fa1804e',
+    role_id='e05da7a6-1a59-47d1-8375-7fdde668b4a1',
 )
 
 res = s.aws.put_aws_roles_role_id_(req)

@@ -13,7 +13,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
-    policy_id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
+    policy_id='04ae1a0e-dcb7-4d2b-b7a6-f7ca105f8c92',
 )
 
 res = s.api_security_policies.delete_api_security_policy_policy_id_(req)

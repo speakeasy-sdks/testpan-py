@@ -31,7 +31,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteExpansionsExpansionIDRequest(
-    expansion_id='42b78f15-6263-498a-8dc7-66324ccb06c8',
+    expansion_id='f85d88d8-8509-415c-acc6-dcdc8448694e',
 )
 
 res = s.expansions.delete_expansions_expansion_id_(req)
@@ -70,17 +70,17 @@ s = pan.Pan(
 )
 
 req = operations.GetExpansionsRequest(
-    cluster_name='optio',
-    controller_status='est',
-    controller_version='inventore',
+    cluster_name='Agent interface',
+    controller_status='Funk Flerovium Road',
+    controller_version='Quality',
     download_as_xlsx=False,
-    max_results=1648.05,
-    name='Mark D'Amore',
-    namespace_name='perspiciatis',
+    max_results=2748.69,
+    name='male payment Kentucky',
+    namespace_name='Toyota',
     no_pagination=False,
-    offset=1664.01,
-    sort_dir=operations.GetExpansionsSortDir.ASC,
-    sort_key=operations.GetExpansionsSortKey.NAME,
+    offset=4144.14,
+    sort_dir=operations.GetExpansionsSortDir.DESC,
+    sort_key='virtual',
 )
 
 res = s.expansions.get_expansions(req)
@@ -119,7 +119,7 @@ s = pan.Pan(
 )
 
 req = operations.GetExpansionsExpansionIDInstallExpansionTarGzRequest(
-    expansion_id='0b8d5722-dd89-45b8-bcf2-4db959693352',
+    expansion_id='f93ee138-484b-4ae8-9598-dc7e98557c98',
 )
 
 res = s.expansions.get_expansions_expansion_id_install_expansion_tar_gz(req)
@@ -159,20 +159,20 @@ s = pan.Pan(
 )
 
 req = shared.ExpansionInput(
-    cluster_id='f7453399-4d78-4de3-b6e9-389f5abb7f66',
-    controller_last_active=dateutil.parser.isoparse('2022-08-24T06:52:21.437Z'),
+    cluster_id='ef536384-aae2-4f5a-87a4-cef022a42548',
+    controller_last_active=dateutil.parser.isoparse('2023-08-24T22:57:12.780Z'),
     labels=[
         shared.Label(
-            key='ullam',
-            value='doloremque',
+            key='<key>',
+            value='bolívar North Frozen',
         ),
     ],
-    name='Clarence Lang',
-    namespace_id='2ac483af-d231-45bb-a650-164e06f5bf6a',
+    name='postmark',
+    namespace_id='cab88259-ba11-4df1-9d86-c530fc31b7b3',
     should_send_metrics=False,
     workload_addresses=[
         shared.WorkloadAddress(
-            address='351 Schaefer Loop',
+            address='23391 Padberg Keys',
             network_protocol=shared.NetworkProtocol.HTTP,
         ),
     ],
@@ -217,19 +217,19 @@ req = operations.PutExpansionsExpansionIDRequest(
     expansion_put=shared.ExpansionPut(
         labels=[
             shared.Label(
-                key='assumenda',
-                value='repudiandae',
+                key='<key>',
+                value='solemnly Money logistical',
             ),
         ],
-        name='Mr. Dale Jenkins',
+        name='Kids Program',
         workload_addresses=[
             shared.WorkloadAddress(
-                address='2710 Vena Square',
-                network_protocol=shared.NetworkProtocol.HTTP,
+                address='628 Will Route',
+                network_protocol=shared.NetworkProtocol.TCP,
             ),
         ],
     ),
-    expansion_id='840774a6-8a9a-435d-886b-6f66fef020e9',
+    expansion_id='4baa7b3c-4b09-4bff-8d17-0310c446aa3a',
 )
 
 res = s.expansions.put_expansions_expansion_id_(req)

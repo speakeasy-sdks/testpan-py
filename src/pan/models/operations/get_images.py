@@ -22,7 +22,7 @@ class GetImagesSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetImagesRequest:
-    sort_key: GetImagesSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetImagesSortKey = dataclasses.field(default=GetImagesSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""image sort key. enum description in image sort key definition"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
@@ -32,11 +32,11 @@ class GetImagesRequest:
     r"""Filter images by name"""
     image_tag: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
     r"""Filter images by tags"""
-    max_results: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
+    max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
-    offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
+    offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetImagesSortDir] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesSortDir] = dataclasses.field(default=GetImagesSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     vulnerability_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vulnerabilityName', 'style': 'form', 'explode': True }})
     r"""Filter images by vulnerability name"""

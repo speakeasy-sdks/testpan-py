@@ -31,7 +31,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
-    policy_id='cb739205-9293-496f-aa75-96eb10faaa23',
+    policy_id='04ae1a0e-dcb7-4d2b-b7a6-f7ca105f8c92',
 )
 
 res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
@@ -100,7 +100,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityPolicyPolicyIDDeleteDependenciesRequest(
-    policy_id='52c59559-07af-4f1a-ba2f-a9467739251a',
+    policy_id='d3b9d79d-ed4f-4420-a583-071cdb02c3fd',
 )
 
 res = s.api_security_policies.get_api_security_policy_policy_id_delete_dependencies(req)
@@ -142,16 +142,16 @@ req = shared.APISecurityPolicyInput(
     category_conditions=shared.APISecurityPolicyCategoryConditions(
         conditions=[
             shared.APISecurityPolicyCategoryCondition(
-                category='animi',
-                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
+                category='before Borders',
+                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
             ),
         ],
     ),
-    description='odit',
+    description='Front-line fault-tolerant orchestration',
     global_condition=shared.APISecurityPolicyGlobalCondition(
-        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
+        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
     ),
-    name='Mandy Hills',
+    name='copying',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -194,18 +194,18 @@ req = operations.PutAPISecurityPolicyPolicyIDRequest(
         category_conditions=shared.APISecurityPolicyCategoryConditions(
             conditions=[
                 shared.APISecurityPolicyCategoryCondition(
-                    category='aut',
-                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.NO_RISK,
+                    category='Fantastic mole',
+                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
                 ),
             ],
         ),
-        description='error',
+        description='Up-sized well-modulated leverage',
         global_condition=shared.APISecurityPolicyGlobalCondition(
-            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
+            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.NO_RISK,
         ),
-        name='Ryan Witting',
+        name='Small Northwest',
     ),
-    policy_id='78f097b0-074f-4154-b1b5-e6e13b99d488',
+    policy_id='448558c2-807a-430f-90b4-3b138ce775c5',
 )
 
 res = s.api_security_policies.put_api_security_policy_policy_id_(req)

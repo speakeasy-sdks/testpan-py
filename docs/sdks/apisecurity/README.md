@@ -81,7 +81,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityAPICatalogIDRequest(
-    catalog_id='3a8d8f5c-0b2f-42fb-bb19-4a276b26916f',
+    catalog_id='842f34dd-ffa1-41b2-85e1-21c9635c9fcb',
 )
 
 res = s.api_security.delete_api_security_api_catalog_id_(req)
@@ -120,7 +120,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
-    catalog_id='e1f08f42-94e3-4698-b447-f603e8b445e8',
+    catalog_id='3d2f6c1c-29ba-4502-9cb8-4666b2e993b7',
 )
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -159,7 +159,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
-    catalog_id='0ca55efd-20e4-457e-9858-b6a89fbe3a5a',
+    catalog_id='3ba770da-4891-4357-a360-0c0e060f5b0f',
 )
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -198,7 +198,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityOpenAPISpecsCatalogIDRequest(
-    catalog_id='a8e4824d-0ab4-4075-888e-51862065e904',
+    catalog_id='95e2243c-a46e-4f56-870a-883817cd0574',
 )
 
 res = s.api_security.delete_api_security_open_api_specs_catalog_id_(req)
@@ -237,7 +237,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteGatewaysGatewayIDRequest(
-    gateway_id='f3b1194b-8abf-4603-a79f-9dfe0ab7da8a',
+    gateway_id='0059ee9e-2eb4-40ca-97cc-9e2e4879b4b7',
 )
 
 res = s.api_security.delete_gateways_gateway_id_(req)
@@ -278,17 +278,17 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityExternalCatalogRequest(
     api_policy_profiles=[
-        'veniam',
+        'Bronze',
     ],
     drill_down_score=False,
     include_service_with_no_spec=False,
-    max_results=291,
-    name='Phil Boyer',
+    max_results=4178.64,
+    name='Colton Tin programming',
     no_pagination=False,
-    offset=9911.42,
-    sort_dir=operations.GetAPISecurityExternalCatalogSortDir.DESC,
+    offset=9915.74,
+    sort_dir=operations.GetAPISecurityExternalCatalogSortDir.ASC,
     sort_key=operations.GetAPISecurityExternalCatalogSortKey.NAME,
-    updated_after=dateutil.parser.isoparse('2021-05-22T03:09:11.884Z'),
+    updated_after=dateutil.parser.isoparse('2023-06-28T23:23:21.281Z'),
 )
 
 res = s.api_security.get_api_security_external_catalog(req)
@@ -329,8 +329,8 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityExternalCatalogCountRequest(
     include_service_with_no_spec=False,
-    name='Georgia Farrell',
-    updated_after=dateutil.parser.isoparse('2021-10-02T23:52:38.012Z'),
+    name='revolutionary alienated Chair',
+    updated_after=dateutil.parser.isoparse('2021-01-16T05:22:36.516Z'),
 )
 
 res = s.api_security.get_api_security_external_catalog_count(req)
@@ -370,9 +370,9 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityExternalCatalogCatalogIDRequest(
     api_policy_profiles=[
-        'officiis',
+        'Sports',
     ],
-    catalog_id='ee9526f8-d986-4e88-9ead-4f0e1012563f',
+    catalog_id='833a138a-8e36-4df0-9dd8-6e879c685823',
     download_as_json=False,
 )
 
@@ -414,18 +414,18 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogRequest(
     api_policy_profiles=[
-        'molestias',
+        'systemic',
     ],
     drill_down_score=False,
     include_service_with_no_spec=False,
-    max_results=3000.29,
-    name='Carlos McClure',
-    namespaces_filter='in',
+    max_results=5658.49,
+    name='tranquilize pascal',
+    namespaces_filter='Cis capacitor',
     no_pagination=False,
-    offset=2380.43,
-    sort_dir=operations.GetAPISecurityInternalCatalogSortDir.DESC,
-    sort_key=operations.GetAPISecurityInternalCatalogSortKey.RISK,
-    updated_after=dateutil.parser.isoparse('2022-11-08T18:10:37.954Z'),
+    offset=1528.82,
+    sort_dir=operations.GetAPISecurityInternalCatalogSortDir.ASC,
+    sort_key=operations.GetAPISecurityInternalCatalogSortKey.NAME,
+    updated_after=dateutil.parser.isoparse('2021-11-28T12:36:29.977Z'),
 )
 
 res = s.api_security.get_api_security_internal_catalog(req)
@@ -466,9 +466,9 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogCountRequest(
     include_service_with_no_spec=False,
-    name='Leo Kiehn II',
-    namespaces_filter='quidem',
-    updated_after=dateutil.parser.isoparse('2022-04-05T02:21:38.050Z'),
+    name='Bugatti',
+    namespaces_filter='3rd Hassium',
+    updated_after=dateutil.parser.isoparse('2023-12-03T10:33:57.779Z'),
 )
 
 res = s.api_security.get_api_security_internal_catalog_count(req)
@@ -508,9 +508,9 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDRequest(
     api_policy_profiles=[
-        'vero',
+        'Future',
     ],
-    catalog_id='060807e2-b6e3-4ab8-845f-0597a60ff2a5',
+    catalog_id='b30b167e-21dd-44fc-9f71-8b9d3086136a',
     download_as_json=False,
 )
 
@@ -550,7 +550,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest(
-    catalog_id='4a31e947-64a3-4e86-9e79-56f9251a5a9d',
+    catalog_id='74e0c81f-ef10-4f23-b74f-8447d1953ccf',
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_bfla(req)
@@ -589,7 +589,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDFuzzingStatusRequest(
-    catalog_id='a660ff57-bfaa-4d4f-9efc-1b4512c10326',
+    catalog_id='b8ae405f-27d4-4986-b826-818df6837b3d',
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_fuzzing_status(req)
@@ -628,7 +628,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsRequest(
-    catalog_id='48dc2f61-5199-4ebf-90e9-fe6c632ca3ae',
+    catalog_id='03b031d5-bcbe-4041-865f-3cf281949555',
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_fuzzing_tests(req)
@@ -667,9 +667,9 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest(
-    catalog_id='d0117996-312f-4de0-8771-778ff61d0174',
-    max_results=4582.59,
-    offset=4037.93,
+    catalog_id='14f8fff8-1410-462d-9de3-1aa0e5094377',
+    max_results=970.24,
+    offset=4969.86,
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_trace_analysis(req)
@@ -708,7 +708,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDRequest(
-    catalog_id='360a15db-6a66-4065-9a1a-deaab5851d6c',
+    catalog_id='9766bdb5-2002-47a6-9ab1-0c9e7ba174e7',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_(req)
@@ -747,7 +747,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusRequest(
-    catalog_id='645b08b6-1891-4baa-8fe1-ade008e6f8c5',
+    catalog_id='89ba7d71-938d-4e0d-ae77-2227f0233a60',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_diff_detection_status(req)
@@ -786,7 +786,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDGetOpenAPISpecScoreStatusRequest(
-    catalog_id='f350d8cd-b5a3-4418-9430-10421813d520',
+    catalog_id='e844ac3e-b37a-4e44-810c-fb03dafad57b',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_get_open_api_spec_score_status(req)
@@ -825,7 +825,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONRequest(
-    catalog_id='8ece7e25-3b66-4845-9c6c-6e205e16deab',
+    catalog_id='c1e78882-5e52-4c34-a91e-a88ab3af7faf',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json(req)
@@ -864,7 +864,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewRequest(
-    catalog_id='3fec9578-a645-4842-b3a8-418d162309fb',
+    catalog_id='96eed0ac-9db4-4a1c-babc-e6affa5427c5',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_spec_review(req)
@@ -903,7 +903,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusRequest(
-    catalog_id='0929921a-efb9-4f58-84d8-6e68e4be0560',
+    catalog_id='0bfa0230-126d-4965-9d51-cb2d6c612293',
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_spec_status(req)
@@ -942,7 +942,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest(
-    catalog_id='13f59da7-57a5-49ec-bef6-6ef1caa3383c',
+    catalog_id='4022b3ba-9ecc-4767-9469-71ea890137cd',
     download_as_json=False,
 )
 
@@ -982,19 +982,19 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityRiskFindingsRequest(
-    api_sec_source=operations.GetAPISecurityRiskFindingsAPISecSource.INTERNAL,
-    category='soluta',
+    api_sec_source=operations.GetAPISecurityRiskFindingsAPISecSource.EXTERNAL,
+    category='becquerel',
     detected=False,
-    element='repudiandae',
-    max_results=7214.3,
-    name='Glenda Kling',
-    offset=2055.66,
+    element='green',
+    max_results=7763.82,
+    name='SMTP Southwest',
+    offset=5947.99,
     risks=[
-        operations.GetAPISecurityRiskFindingsRisks.CRITICAL,
+        operations.GetAPISecurityRiskFindingsRisks.HIGH,
     ],
-    sort_dir=operations.GetAPISecurityRiskFindingsSortDir.DESC,
+    sort_dir=operations.GetAPISecurityRiskFindingsSortDir.ASC,
     sort_key=operations.GetAPISecurityRiskFindingsSortKey.RISK,
-    source='iure',
+    source='alliance',
 )
 
 res = s.api_security.get_api_security_risk_findings(req)
@@ -1093,7 +1093,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityRiskFindingsRiskFindingIDRequest(
-    risk_finding_id='2f64d1db-1f2c-4431-8661-e96349e1cf9e',
+    risk_finding_id='a6f70519-fb6c-4b3a-af18-7a0de05d5783',
 )
 
 res = s.api_security.get_api_security_risk_findings_risk_finding_id_(req)
@@ -1132,7 +1132,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityCatalogIDDeleteDependenciesRequest(
-    catalog_id='06e3a437-000a-4e6b-abc9-b8f759eac55a',
+    catalog_id='a8274b04-711c-4a08-ae55-c1ca905077f8',
 )
 
 res = s.api_security.get_api_security_catalog_id_delete_dependencies(req)
@@ -1171,9 +1171,9 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityCatalogIDMethodsRequest(
-    catalog_id='9741d311-3529-465b-b8a7-202611435e13',
+    catalog_id='bc418193-54db-45b9-831c-a3b7fcd92288',
     tags=[
-        'unde',
+        'purple',
     ],
 )
 
@@ -1213,7 +1213,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityCatalogIDTagsRequest(
-    catalog_id='dbc2259b-1abd-4a8c-870e-1084cb0672d1',
+    catalog_id='3f2d279c-52dc-45ca-8a35-0c4c47a5deff',
 )
 
 res = s.api_security.get_api_security_catalog_id_tags(req)
@@ -1252,7 +1252,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_risk_findings(req)
@@ -1291,8 +1291,8 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.EXTERNAL,
-    num_of_days=545918,
+    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
+    num_of_days=738205,
 )
 
 res = s.api_security.get_dashboard_apisec_risk_findings_trend(req)
@@ -1331,7 +1331,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecSpecsAndOperationsDiffsRequest(
-    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsAPISecSource.INTERNAL,
+    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsAPISecSource.EXTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_specs_and_operations_diffs(req)
@@ -1371,7 +1371,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
-    max_results=8822.84,
+    max_results=9119.67,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_apis(req)
@@ -1410,8 +1410,8 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.EXTERNAL,
-    max_results=7332.89,
+    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
+    max_results=5232.51,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_findings(req)
@@ -1450,11 +1450,11 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysRequest(
-    max_results=5750.78,
-    name='Stacey Hintz',
+    max_results=5622.15,
+    name='Bicycle programming',
     no_pagination=False,
-    offset=3572.07,
-    sort_dir=operations.GetGatewaysSortDir.DESC,
+    offset=2121.34,
+    sort_dir=operations.GetGatewaysSortDir.ASC,
 )
 
 res = s.api_security.get_gateways(req)
@@ -1493,7 +1493,7 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysClustersRequest(
-    gateway_type=operations.GetGatewaysClustersGatewayType.F5_BIG_IP,
+    gateway_type=operations.GetGatewaysClustersGatewayType.TYK_INTERNAL,
 )
 
 res = s.api_security.get_gateways_clusters(req)
@@ -1532,7 +1532,7 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysGatewayIDDownloadBundleRequest(
-    gateway_id='bd02bae0-be2d-4782-a59e-3ea4b5197f92',
+    gateway_id='d7df551a-98f0-4f5b-9bdc-d69676cf90f0',
 )
 
 res = s.api_security.get_gateways_gateway_id_download_bundle(req)
@@ -1571,7 +1571,7 @@ s = pan.Pan(
 )
 
 req = shared.APISecurityAPI(
-    name='Carrie Douglas',
+    name='array Metal',
 )
 
 res = s.api_security.post_api_security_api(req)
@@ -1611,9 +1611,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='dignissimos',
+        duration='FTM',
     ),
-    catalog_id='ce52b895-c537-4c64-94ef-b0b34896c3ca',
+    catalog_id='464b0ff0-e6fe-414c-a291-62fc27770a3f',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -1653,9 +1653,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='nostrum',
+        duration='parse',
     ),
-    catalog_id='acfbe2fd-5707-4577-9291-77deac646ecb',
+    catalog_id='bc82f2c9-ea85-4a32-ab52-d888f26e15ab',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -1694,7 +1694,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
-    catalog_id='573409e3-eb1e-45a2-b12e-b07f116db995',
+    catalog_id='2682814f-440b-4991-ae68-e4a1209728f3',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
@@ -1733,7 +1733,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisRequest(
-    catalog_id='45fc95fa-8897-40e1-89db-b30fcb33ea05',
+    catalog_id='3e5cd1f7-bf20-45d2-aba9-73c37afbfaa8',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_reset_trace_analysis(req)
@@ -1778,7 +1778,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingRequest(
         ),
         depth=shared.TestInputDepthEnum.DEEP,
     ),
-    catalog_id='197cd44e-2f52-4d82-9351-3bb6f48b656b',
+    catalog_id='312eede1-be03-42b8-bb19-27700a035c99',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_start_fuzzing(req)
@@ -1818,10 +1818,10 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisRequest(
     trace_analysis_configuration=shared.TraceAnalysisConfiguration(
-        duration=794507,
+        duration=916267,
         time_unit=shared.TraceAnalysisConfigurationTimeUnit.DAYS,
     ),
-    catalog_id='b35ff2e4-b275-437a-8cd9-e7319c177d52',
+    catalog_id='815f76cb-d054-45bf-9982-26857956700d',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_start_trace_analysis(req)
@@ -1860,7 +1860,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingRequest(
-    catalog_id='5f77b114-eeb5-42ff-b85f-c37814d4c98e',
+    catalog_id='c198f457-4849-4dd7-8320-e57f81ab2f63',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_stop_fuzzing(req)
@@ -1899,7 +1899,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisRequest(
-    catalog_id='0c2bb89e-b75d-4ad6-b6c6-00503d8bb311',
+    catalog_id='a026be33-c18b-419f-9481-083f4a844dc4',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_stop_trace_analysis(req)
@@ -1938,7 +1938,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortRequest(
-    catalog_id='80f739ae-9e05-47eb-809e-2810331f3981',
+    catalog_id='c8574da1-a228-4204-81bd-8ea8316c46d5',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_abort(req)
@@ -1978,10 +1978,10 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest(
     api_reconstruction_request=shared.APIReconstructionRequest(
-        cluster_id='d4c700b6-07f3-4c93-873b-9da3f2ceda7e',
-        learning_duration='qui',
+        cluster_id='4fd7941d-9d44-44e5-b609-cdd9605335d7',
+        learning_duration='male Administrator',
     ),
-    catalog_id='3f225741-1faf-44b7-944e-472e802857a5',
+    catalog_id='1ecf6d42-4fd0-4f29-96f3-b4a797f266b2',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_learn(req)
@@ -2029,14 +2029,14 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewAppr
                         methods=[
                             shared.HTTPMethod.PUT,
                         ],
-                        path='sit',
+                        path='/home/user/dir',
                     ),
                 ],
-                suggested_path='modi',
+                suggested_path='DNS',
             ),
         ],
     ),
-    catalog_id='63a7d575-f140-40e7-a4ad-7334ec1b781b',
+    catalog_id='b3e10c33-f3cc-4f1f-a2c5-b724ecc18aab',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_review_approve(req)
@@ -2076,10 +2076,10 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest(
     action_duration=shared.ActionDuration(
-        duration=229276,
+        duration=672614,
         time_unit=shared.ActionDurationTimeUnit.HOURS,
     ),
-    catalog_id='a08088d1-00ef-4ada-a00e-f0422eb2164c',
+    catalog_id='84658317-7e1f-4e27-b84c-670056ef2d95',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_start_diffs_detection(req)
@@ -2118,7 +2118,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionRequest(
-    catalog_id='f9ab8366-c723-4ffd-a9e0-6bee4825c1fc',
+    catalog_id='733d2638-f8e8-462b-aa51-67f9d1bf9b92',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_stop_diffs_detection(req)
@@ -2157,11 +2157,11 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='quae',
-    description='officiis',
-    id='115c80bf-f918-4544-ac42-defcce8f1977',
-    name='Lydia Douglas',
-    type=shared.GatewayType.APIGEE_X,
+    cluster_name='budgetary',
+    description='Organized non-volatile migration',
+    id='569c810a-5247-4536-a053-f148b119db42',
+    name='Savings distinctio blue',
+    type=shared.GatewayType.KONG_INTERNAL,
 )
 
 res = s.api_security.post_gateways(req)
@@ -2202,41 +2202,41 @@ s = pan.Pan(
 
 req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
     api_service_bfla_info=shared.APIServiceBflaInfo(
-        end_time=dateutil.parser.isoparse('2022-08-16T23:55:48.181Z'),
-        status=shared.APIServiceBflaInfoStatus.NO_SPEC,
+        end_time=dateutil.parser.isoparse('2021-04-10T03:52:46.500Z'),
+        status=shared.APIServiceBflaInfoStatus.IN_PROGRESS_LEARNING,
         tags=[
             shared.APIServiceBflaTagInfo(
                 is_legitimate=False,
-                name='Ron Rau IV',
+                name='Rhodium Rubber yearly',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
                                 external=False,
-                                identifier='f05e3d48-fdaf-4313-a1f5-fd94259c0b36',
+                                identifier='3b3fcaad-d442-4012-ad14-59f8769c2011',
                                 is_legitimate=False,
-                                last_observed=dateutil.parser.isoparse('2022-07-05T01:41:17.302Z'),
-                                last_status_code=330440,
-                                name='Luke Mayer',
-                                namespace='tenetur',
+                                last_observed=dateutil.parser.isoparse('2021-02-25T06:09:36.065Z'),
+                                last_status_code=508539,
+                                name='Carolina',
+                                namespace='Account',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='adipisci',
-                                        name='Harvey Harber',
-                                        principle_type='ab',
+                                        ip='56.91.79.204',
+                                        name='Hyundai punctually',
+                                        principle_type='Granite Rustic',
                                     ),
                                 ],
                             ),
                         ],
                         is_legitimate=False,
-                        method=shared.HTTPMethod.GET,
-                        path='hic',
+                        method=shared.HTTPMethod.TRACE,
+                        path='/usr/local/bin',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='6c37a512-6243-4835-bbc0-5a23a45cefc5',
+    catalog_id='ac789245-d57c-4c22-8dbd-c1e1df3ce330',
 )
 
 res = s.api_security.put_api_security_internal_catalog_catalog_id_bfla(req)
@@ -2275,8 +2275,8 @@ s = pan.Pan(
 )
 
 req = operations.PutAPISecurityOpenAPISpecsCatalogIDRequest(
-    request_body='doloribus',
-    catalog_id='de10a0ce-2169-4e51-8019-c6dc5e347627',
+    request_body='rerum',
+    catalog_id='6c1e7d20-9d8c-4f8d-a690-7b8b2d3e446c',
 )
 
 res = s.api_security.put_api_security_open_api_specs_catalog_id_(req)
@@ -2316,13 +2316,13 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='natus',
-        description='provident',
-        id='bfbbe694-9fb2-4bb4-acae-6c3d5db3adeb',
-        name='Leon Schumm',
-        type=shared.GatewayType.TYK_INTERNAL,
+        cluster_name='Executive Minivan sky',
+        description='Upgradable bandwidth-monitored contingency',
+        id='69f02ce6-c757-479c-9c8e-935111463ea3',
+        name='Directives pink Central',
+        type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='4c506a8a-a94c-4026-84cf-5e9d9a4578ad',
+    gateway_id='95ead58c-f0fb-4b52-ac2b-9a404d8ad2eb',
 )
 
 res = s.api_security.put_gateways_gateway_id_(req)

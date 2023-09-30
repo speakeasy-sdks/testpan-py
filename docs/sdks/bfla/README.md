@@ -29,7 +29,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
-    catalog_id='54c82f16-8a36-43c8-873e-484380b1f6b8',
+    catalog_id='3d2f6c1c-29ba-4502-9cb8-4666b2e993b7',
 )
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -68,7 +68,7 @@ s = pan.Pan(
 )
 
 req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
-    catalog_id='ca275a60-a04c-4495-8c69-9171b51c1bdb',
+    catalog_id='3ba770da-4891-4357-a360-0c0e060f5b0f',
 )
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -107,7 +107,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest(
-    catalog_id='1cf4b888-ebdf-4c4c-8ca9-9bc7fc0b2dce',
+    catalog_id='74e0c81f-ef10-4f23-b74f-8447d1953ccf',
 )
 
 res = s.bfla.get_api_security_internal_catalog_catalog_id_bfla(req)
@@ -147,9 +147,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='veritatis',
+        duration='FTM',
     ),
-    catalog_id='0873e42b-006d-4678-878b-a8581a58208c',
+    catalog_id='464b0ff0-e6fe-414c-a291-62fc27770a3f',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -189,9 +189,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='enim',
+        duration='parse',
     ),
-    catalog_id='4fefa9c9-5f2e-4ac5-965d-307cfee81206',
+    catalog_id='bc82f2c9-ea85-4a32-ab52-d888f26e15ab',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -230,7 +230,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
-    catalog_id='e2813fa4-a41c-4480-93f2-132af03102d5',
+    catalog_id='2682814f-440b-4991-ae68-e4a1209728f3',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
@@ -271,41 +271,41 @@ s = pan.Pan(
 
 req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
     api_service_bfla_info=shared.APIServiceBflaInfo(
-        end_time=dateutil.parser.isoparse('2022-09-13T22:56:49.685Z'),
-        status=shared.APIServiceBflaInfoStatus.IN_PROGRESS_DETECTION,
+        end_time=dateutil.parser.isoparse('2021-04-10T03:52:46.500Z'),
+        status=shared.APIServiceBflaInfoStatus.IN_PROGRESS_LEARNING,
         tags=[
             shared.APIServiceBflaTagInfo(
                 is_legitimate=False,
-                name='Kara Rolfson',
+                name='Rhodium Rubber yearly',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
                                 external=False,
-                                identifier='18bf9621-a6a4-4f77-a87e-e3e4be752c65',
+                                identifier='3b3fcaad-d442-4012-ad14-59f8769c2011',
                                 is_legitimate=False,
-                                last_observed=dateutil.parser.isoparse('2022-07-25T18:23:48.906Z'),
-                                last_status_code=284885,
-                                name='Julie Lakin',
-                                namespace='expedita',
+                                last_observed=dateutil.parser.isoparse('2021-02-25T06:09:36.065Z'),
+                                last_status_code=508539,
+                                name='Carolina',
+                                namespace='Account',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='libero',
-                                        name='Joshua Schiller',
-                                        principle_type='sint',
+                                        ip='56.91.79.204',
+                                        name='Hyundai punctually',
+                                        principle_type='Granite Rustic',
                                     ),
                                 ],
                             ),
                         ],
                         is_legitimate=False,
-                        method=shared.HTTPMethod.HEAD,
-                        path='enim',
+                        method=shared.HTTPMethod.TRACE,
+                        path='/usr/local/bin',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='e0e8419d-8f84-4f14-8f3e-07edcc4aa5f3',
+    catalog_id='ac789245-d57c-4c22-8dbd-c1e1df3ce330',
 )
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)

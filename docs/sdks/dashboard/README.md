@@ -47,7 +47,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_risk_findings(req)
@@ -87,7 +87,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
     api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
-    num_of_days=753087,
+    num_of_days=738205,
 )
 
 res = s.dashboard.get_dashboard_apisec_risk_findings_trend(req)
@@ -165,8 +165,8 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.INTERNAL,
-    max_results=1050.94,
+    api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
+    max_results=9119.67,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_apis(req)
@@ -206,7 +206,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
-    max_results=9825.74,
+    max_results=5232.51,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_findings(req)
@@ -336,7 +336,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardOperationalBarRequest(
     clusters_ids=[
-        'eeb1c7cb-db6e-4ec7-8378-ba25317747dc',
+        '22554b3a-d14f-42dc-b8d0-c3530e8f8d65',
     ],
 )
 
@@ -377,7 +377,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardPermissionsRequest(
     clusters_ids=[
-        '915ad2ca-f5dd-4672-bdc0-f5ae2f3a6b70',
+        '5a331cfa-e207-49d9-a176-e260318ece7d',
     ],
     include_system_owners=False,
 )
@@ -509,7 +509,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardSecurityContextRequest(
     clusters_ids=[
-        '08787561-43f5-4a6c-98b5-5554080d40bc',
+        '238f2259-a31a-4eed-8f78-79faf6121c42',
     ],
 )
 
@@ -550,9 +550,9 @@ s = pan.Pan(
 
 req = operations.GetDashboardTopSecurityRisksRequest(
     clusters_ids=[
-        'acc6cbd6-b5f3-4ec9-8930-4f926bad2553',
+        'e552767e-0350-4925-b7e4-39731700805c',
     ],
-    size=529310,
+    size=313477,
 )
 
 res = s.dashboard.get_dashboard_top_security_risks(req)
@@ -592,7 +592,7 @@ s = pan.Pan(
 
 req = operations.GetDashboardVulnerabilitiesRequest(
     clusters_ids=[
-        '19b474b0-ed20-4e56-a48f-ff639a910abd',
+        'f32607b3-fc0f-4f77-9432-186ec778c011',
     ],
 )
 
@@ -632,7 +632,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardKubernetesClusterIDConnectionTelemetriesRequest(
-    kubernetes_cluster_id='cab62676-696e-41ec-8022-1b335d89acb3',
+    kubernetes_cluster_id='fcc6ab38-d1d9-486d-93c4-52d73dc4b7aa',
 )
 
 res = s.dashboard.get_dashboard_kubernetes_cluster_id_connection_telemetries(req)
@@ -671,7 +671,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsRequest(
-    kubernetes_cluster_id='ecfda8d0-c549-4ef0-b004-978a61fa1cf2',
+    kubernetes_cluster_id='6f0ce2c1-9ce6-424f-84d6-ad78557fec29',
 )
 
 res = s.dashboard.get_dashboard_kubernetes_cluster_id_kubernetes_audit_logs(req)
@@ -710,7 +710,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardKubernetesClusterIDPodTelemetriesRequest(
-    kubernetes_cluster_id='0688f77c-1ffc-471d-8a16-3f2a3c80a97f',
+    kubernetes_cluster_id='6c0046f1-672f-410e-9032-dde3c7f70879',
 )
 
 res = s.dashboard.get_dashboard_kubernetes_cluster_id_pod_telemetries(req)

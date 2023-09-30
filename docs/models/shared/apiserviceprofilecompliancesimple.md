@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `compliant`        | *bool*             | :heavy_check_mark: | N/A                |
-| `profile`          | *str*              | :heavy_check_mark: | N/A                |
+| `compliant`        | *Optional[bool]*   | :heavy_check_mark: | N/A                |
+| `profile`          | *Optional[str]*    | :heavy_check_mark: | N/A                |

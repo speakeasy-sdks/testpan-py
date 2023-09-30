@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `image_id`         | *str*              | :heavy_check_mark: | N/A                |
+| `image_id`         | *Optional[str]*    | :heavy_check_mark: | N/A                |
