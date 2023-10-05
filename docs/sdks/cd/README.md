@@ -162,7 +162,7 @@ s = pan.Pan(
 req = operations.GetCdResourceIDRequest(
     resource_id='dbdc0e78-4707-4528-b885-f251b95127b5',
     sort_dir=operations.GetCdResourceIDSortDir.ASC,
-    sort_key='apropos doom',
+    sort_key=operations.GetCdResourceIDSortKey.RISK,
 )
 
 res = s.cd.get_cd_resource_id_(req)

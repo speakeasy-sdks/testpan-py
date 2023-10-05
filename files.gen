@@ -881,6 +881,7 @@ docs/models/operations/getcdsortkey.md
 docs/models/operations/getcdrequest.md
 docs/models/operations/getcdresponse.md
 docs/models/operations/getcdresourceidsortdir.md
+docs/models/operations/getcdresourceidsortkey.md
 docs/models/operations/getcdresourceidrequest.md
 docs/models/operations/getcdresourceidresponse.md
 docs/models/operations/getcdruleidconnectionsrulerequest.md
@@ -1146,6 +1147,7 @@ docs/models/operations/putappspolicyresponse.md
 docs/models/operations/deleteenvironmentsenvidrequest.md
 docs/models/operations/deleteenvironmentsenvidresponse.md
 docs/models/operations/getenvironmentssortdir.md
+docs/models/operations/getenvironmentssortkey.md
 docs/models/operations/getenvironmentsrequest.md
 docs/models/operations/getenvironmentsresponse.md
 docs/models/operations/getenvironmentsenvidrequest.md
@@ -1160,6 +1162,7 @@ docs/models/operations/putenvironmentsenvidresponse.md
 docs/models/operations/deleteexpansionsexpansionidrequest.md
 docs/models/operations/deleteexpansionsexpansionidresponse.md
 docs/models/operations/getexpansionssortdir.md
+docs/models/operations/getexpansionssortkey.md
 docs/models/operations/getexpansionsrequest.md
 docs/models/operations/getexpansionsresponse.md
 docs/models/operations/getexpansionsexpansionidinstallexpansiontargzrequest.md
@@ -1287,6 +1290,7 @@ docs/models/operations/putseccompprofilesprofileidresponse.md
 docs/models/operations/deleteregistriesregistryidrequest.md
 docs/models/operations/deleteregistriesregistryidresponse.md
 docs/models/operations/getregistriessortdir.md
+docs/models/operations/getregistriessortkey.md
 docs/models/operations/getregistriesrequest.md
 docs/models/operations/getregistriesresponse.md
 docs/models/operations/postregistriesresponse.md
@@ -1303,6 +1307,7 @@ docs/models/operations/getriskassessmentresponse.md
 docs/models/operations/getriskassessmentignoredrisksresponse.md
 docs/models/operations/getriskassessmentpermissionspermissionrisk.md
 docs/models/operations/getriskassessmentpermissionssortdir.md
+docs/models/operations/getriskassessmentpermissionssortkey.md
 docs/models/operations/getriskassessmentpermissionsrequest.md
 docs/models/operations/getriskassessmentpermissionsresponse.md
 docs/models/operations/getriskassessmentpermissionsclusteridownertype.md
@@ -1312,6 +1317,7 @@ docs/models/operations/getriskassessmentpermissionsclusteridsortkey.md
 docs/models/operations/getriskassessmentpermissionsclusteridrequest.md
 docs/models/operations/getriskassessmentpermissionsclusteridresponse.md
 docs/models/operations/getriskassessmentpermissionsclusteridowneridsortdir.md
+docs/models/operations/getriskassessmentpermissionsclusteridowneridsortkey.md
 docs/models/operations/getriskassessmentpermissionsclusteridowneridrequest.md
 docs/models/operations/getriskassessmentpermissionsclusteridowneridresponse.md
 docs/models/operations/getriskassessmentpermissionsclusteridowneridroleidrequest.md
@@ -1319,6 +1325,7 @@ docs/models/operations/getriskassessmentpermissionsclusteridowneridroleidrespons
 docs/models/operations/getriskassessmentpollrequest.md
 docs/models/operations/getriskassessmentpollresponse.md
 docs/models/operations/getriskassessmentimageidvulnerabilitiessortdir.md
+docs/models/operations/getriskassessmentimageidvulnerabilitiessortkey.md
 docs/models/operations/getriskassessmentimageidvulnerabilitiesrequest.md
 docs/models/operations/getriskassessmentimageidvulnerabilitiesresponse.md
 docs/models/operations/getriskassessmentkubernetesclusteridpodssortdir.md
@@ -1442,6 +1449,7 @@ docs/models/operations/getconnectiontelemetriesconnectiontelemetryidresponse.md
 docs/models/operations/deletetokenstokenidrequest.md
 docs/models/operations/deletetokenstokenidresponse.md
 docs/models/operations/gettokenssortdir.md
+docs/models/operations/gettokenssortkey.md
 docs/models/operations/gettokensrequest.md
 docs/models/operations/gettokensresponse.md
 docs/models/operations/gettokensinforequest.md
@@ -1458,6 +1466,7 @@ docs/models/operations/posttruncationworkloadsresponse.md
 docs/models/operations/deletetrustedsignerstrustedsigneridrequest.md
 docs/models/operations/deletetrustedsignerstrustedsigneridresponse.md
 docs/models/operations/gettrustedsignerssortdir.md
+docs/models/operations/gettrustedsignerssortkey.md
 docs/models/operations/gettrustedsignersrequest.md
 docs/models/operations/gettrustedsignersresponse.md
 docs/models/operations/gettrustedsignerstrustedsigneridrequest.md
@@ -2040,6 +2049,7 @@ docs/models/shared/serverlesssecurity.md
 docs/models/shared/permissionsmode.md
 docs/models/shared/apisecurity.md
 docs/models/shared/accounttier.md
+docs/models/shared/challengerequestchallengename.md
 docs/models/shared/challengerequest.md
 docs/models/shared/userstatus.md
 docs/models/shared/user.md

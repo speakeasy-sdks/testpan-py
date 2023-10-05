@@ -5,12 +5,16 @@ import dataclasses
 import requests as requests_http
 from ..shared import trustedsigner as shared_trustedsigner
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetTrustedSignersSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
+
+class GetTrustedSignersSortKey(str, Enum):
+    r"""sort key"""
+    NAME = 'name'
 
 
 
@@ -18,7 +22,7 @@ class GetTrustedSignersSortDir(str, Enum):
 class GetTrustedSignersRequest:
     sort_dir: Optional[GetTrustedSignersSortDir] = dataclasses.field(default=GetTrustedSignersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='name', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetTrustedSignersSortKey] = dataclasses.field(default=GetTrustedSignersSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

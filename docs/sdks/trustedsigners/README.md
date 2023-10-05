@@ -71,7 +71,7 @@ s = pan.Pan(
 
 req = operations.GetTrustedSignersRequest(
     sort_dir=operations.GetTrustedSignersSortDir.ASC,
-    sort_key='Electric sailboat composite',
+    sort_key=operations.GetTrustedSignersSortKey.NAME,
 )
 
 res = s.trusted_signers.get_trusted_signers(req)

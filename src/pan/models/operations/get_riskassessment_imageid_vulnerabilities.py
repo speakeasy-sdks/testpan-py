@@ -5,12 +5,16 @@ import dataclasses
 import requests as requests_http
 from ..shared import riskassessmentvulnerability as shared_riskassessmentvulnerability
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetRiskAssessmentImageIDVulnerabilitiesSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
+
+class GetRiskAssessmentImageIDVulnerabilitiesSortKey(str, Enum):
+    r"""risk assessment image sort key."""
+    SEVERITY = 'SEVERITY'
 
 
 
@@ -18,7 +22,7 @@ class GetRiskAssessmentImageIDVulnerabilitiesSortDir(str, Enum):
 class GetRiskAssessmentImageIDVulnerabilitiesRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     r"""The id of the risk assessment image"""
-    SORT_KEY: Final[str] = dataclasses.field(default='SEVERITY', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetRiskAssessmentImageIDVulnerabilitiesSortKey = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""risk assessment image sort key."""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""

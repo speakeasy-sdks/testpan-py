@@ -80,7 +80,7 @@ req = operations.GetExpansionsRequest(
     no_pagination=False,
     offset=4144.14,
     sort_dir=operations.GetExpansionsSortDir.DESC,
-    sort_key='virtual',
+    sort_key=operations.GetExpansionsSortKey.NAME,
 )
 
 res = s.expansions.get_expansions(req)

@@ -186,7 +186,7 @@ req = operations.GetRiskAssessmentPermissionsRequest(
     include_system_owners=False,
     permission_risk=operations.GetRiskAssessmentPermissionsPermissionRisk.MEDIUM,
     sort_dir=operations.GetRiskAssessmentPermissionsSortDir.DESC,
-    sort_key='Account but',
+    sort_key=operations.GetRiskAssessmentPermissionsSortKey.PERMISSION_RISK,
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions(req)
@@ -278,7 +278,7 @@ req = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRequest(
     is_approved=False,
     owner_id='79a8a441-40ea-4cdf-8584-73da2c62b846',
     sort_dir=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.ASC,
-    sort_key='criminal green',
+    sort_key=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey.RISK,
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_(req)
@@ -403,7 +403,7 @@ req = operations.GetRiskAssessmentImageIDVulnerabilitiesRequest(
     max_results=8240.13,
     offset=7702.86,
     sort_dir=operations.GetRiskAssessmentImageIDVulnerabilitiesSortDir.ASC,
-    sort_key='Montana Loan',
+    sort_key=operations.GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY,
 )
 
 res = s.risk_assessment.get_risk_assessment_image_id_vulnerabilities(req)

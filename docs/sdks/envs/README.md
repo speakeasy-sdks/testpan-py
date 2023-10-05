@@ -75,7 +75,7 @@ req = operations.GetEnvironmentsRequest(
     include_system_envs=False,
     name='Pangender',
     sort_dir=operations.GetEnvironmentsSortDir.ASC,
-    sort_key='Waltham if',
+    sort_key=operations.GetEnvironmentsSortKey.NAME,
 )
 
 res = s.envs.get_environments(req)

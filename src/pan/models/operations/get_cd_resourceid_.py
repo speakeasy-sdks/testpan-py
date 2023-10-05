@@ -5,12 +5,16 @@ import dataclasses
 import requests as requests_http
 from ..shared import cdpipelineresourceresult as shared_cdpipelineresourceresult
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetCdResourceIDSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
+
+class GetCdResourceIDSortKey(str, Enum):
+    r"""sort key"""
+    RISK = 'risk'
 
 
 
@@ -19,7 +23,7 @@ class GetCdResourceIDRequest:
     resource_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'resourceId', 'style': 'simple', 'explode': False }})
     sort_dir: Optional[GetCdResourceIDSortDir] = dataclasses.field(default=GetCdResourceIDSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='risk', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetCdResourceIDSortKey] = dataclasses.field(default=GetCdResourceIDSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

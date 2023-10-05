@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import clusterpermission as shared_clusterpermission
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetRiskAssessmentPermissionsPermissionRisk(str, Enum):
     r"""the risk to filter by"""
@@ -19,6 +19,10 @@ class GetRiskAssessmentPermissionsSortDir(str, Enum):
     ASC = 'ASC'
     DESC = 'DESC'
 
+class GetRiskAssessmentPermissionsSortKey(str, Enum):
+    r"""sort key"""
+    PERMISSION_RISK = 'permissionRisk'
+
 
 
 @dataclasses.dataclass
@@ -31,7 +35,7 @@ class GetRiskAssessmentPermissionsRequest:
     r"""the risk to filter by"""
     sort_dir: Optional[GetRiskAssessmentPermissionsSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='permissionRisk', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetRiskAssessmentPermissionsSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsSortKey.PERMISSION_RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

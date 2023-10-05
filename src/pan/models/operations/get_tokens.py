@@ -5,12 +5,16 @@ import dataclasses
 import requests as requests_http
 from ..shared import token as shared_token
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetTokensSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
+
+class GetTokensSortKey(str, Enum):
+    r"""the token sort key"""
+    EXPIRATION_DATE = 'expirationDate'
 
 
 
@@ -24,7 +28,7 @@ class GetTokensRequest:
     r"""Return entries from this offset (pagination)"""
     sort_dir: Optional[GetTokensSortDir] = dataclasses.field(default=GetTokensSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    SORT_KEY: Final[Optional[str]] = dataclasses.field(default='expirationDate', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetTokensSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""the token sort key"""
     token_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tokenName', 'style': 'form', 'explode': True }})
     r"""Defined token name"""

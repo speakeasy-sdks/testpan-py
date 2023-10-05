@@ -71,8 +71,8 @@ req = operations.GetTokensRequest(
     no_pagination=False,
     offset=7366.65,
     sort_dir=operations.GetTokensSortDir.ASC,
-    sort_key='what',
-    token_name='policy Rustic',
+    sort_key=operations.GetTokensSortKey.EXPIRATION_DATE,
+    token_name='what',
 )
 
 res = s.tokens.get_tokens(req)

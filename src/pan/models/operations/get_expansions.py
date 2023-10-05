@@ -5,18 +5,22 @@ import dataclasses
 import requests as requests_http
 from ..shared import expansion as shared_expansion
 from enum import Enum
-from typing import Final, Optional
+from typing import Optional
 
 class GetExpansionsSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
+class GetExpansionsSortKey(str, Enum):
+    r"""sort key"""
+    NAME = 'name'
+
 
 
 @dataclasses.dataclass
 class GetExpansionsRequest:
-    SORT_KEY: Final[str] = dataclasses.field(default='name', metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetExpansionsSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clusterName', 'style': 'form', 'explode': True }})
     r"""Filter expansions by cluster name"""
