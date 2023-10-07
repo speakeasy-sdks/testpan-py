@@ -70,10 +70,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetRegistriesRequest(
-    sort_dir=operations.GetRegistriesSortDir.ASC,
-    sort_key=operations.GetRegistriesSortKey.URL,
-)
+req = operations.GetRegistriesRequest()
 
 res = s.registries.get_registries(req)
 

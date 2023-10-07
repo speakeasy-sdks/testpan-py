@@ -70,16 +70,6 @@ s = pan.Pan(
 )
 
 req = operations.GetExpansionsRequest(
-    cluster_name='Agent interface',
-    controller_status='Funk Flerovium Road',
-    controller_version='Quality',
-    download_as_xlsx=False,
-    max_results=2748.69,
-    name='male payment Kentucky',
-    namespace_name='Toyota',
-    no_pagination=False,
-    offset=4144.14,
-    sort_dir=operations.GetExpansionsSortDir.DESC,
     sort_key=operations.GetExpansionsSortKey.NAME,
 )
 
@@ -160,20 +150,17 @@ s = pan.Pan(
 
 req = shared.ExpansionInput(
     cluster_id='ef536384-aae2-4f5a-87a4-cef022a42548',
-    controller_last_active=dateutil.parser.isoparse('2023-08-24T22:57:12.780Z'),
     labels=[
         shared.Label(
             key='<key>',
-            value='bolívar North Frozen',
+            value='District Vista Senior',
         ),
     ],
-    name='postmark',
-    namespace_id='cab88259-ba11-4df1-9d86-c530fc31b7b3',
-    should_send_metrics=False,
+    name='Forward International quantify',
+    namespace_id='259ba11d-f19d-486c-930f-c31b7b32455e',
     workload_addresses=[
         shared.WorkloadAddress(
-            address='23391 Padberg Keys',
-            network_protocol=shared.NetworkProtocol.HTTP,
+            address='56493 Berge Gateway',
         ),
     ],
 )
@@ -225,11 +212,10 @@ req = operations.PutExpansionsExpansionIDRequest(
         workload_addresses=[
             shared.WorkloadAddress(
                 address='628 Will Route',
-                network_protocol=shared.NetworkProtocol.TCP,
             ),
         ],
     ),
-    expansion_id='4baa7b3c-4b09-4bff-8d17-0310c446aa3a',
+    expansion_id='64baa7b3-c4b0-49bf-b8d1-70310c446aa3',
 )
 
 res = s.expansions.put_expansions_expansion_id_(req)

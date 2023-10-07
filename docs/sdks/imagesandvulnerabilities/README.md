@@ -89,7 +89,6 @@ req = operations.GetAccountVulnerabilitiesXlsxRequest(
     image_tag=[
         'IB',
     ],
-    vulnerability_name='Administrator',
 )
 
 res = s.images_and_vulnerabilities.get_account_vulnerabilities_xlsx(req)
@@ -137,12 +136,7 @@ req = operations.GetImagesRequest(
     image_tag=[
         'Ytterbium',
     ],
-    download_as_xlsx=False,
-    max_results=9052.61,
-    offset=4508.91,
-    sort_dir=operations.GetImagesSortDir.DESC,
-    sort_key=operations.GetImagesSortKey.IMAGE_NAME,
-    vulnerability_name='grow',
+    sort_key=operations.GetImagesSortKey.RISK,
 )
 
 res = s.images_and_vulnerabilities.get_images(req)
@@ -180,10 +174,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetImagesImagesHashRequest(
-    image_hash='firewall Misty',
-    max_results=8276.26,
-)
+req = operations.GetImagesImagesHashRequest()
 
 res = s.images_and_vulnerabilities.get_images_images_hash(req)
 
@@ -223,12 +214,6 @@ s = pan.Pan(
 req = operations.GetImagesVulnerabilitiesByImageNameAndHashRequest(
     image_hash='Dale Iowa',
     image_name='boutique Health Martinique',
-    is_ignored=False,
-    layer_id='4f03eaaf-7b1e-44de-a52b-c93cd397f018',
-    max_results=5718.05,
-    offset=7191.45,
-    show_only_vulnerabilities_with_fix=False,
-    sort_dir=operations.GetImagesVulnerabilitiesByImageNameAndHashSortDir.DESC,
 )
 
 res = s.images_and_vulnerabilities.get_images_vulnerabilities_by_image_name_and_hash(req)
@@ -307,10 +292,6 @@ s = pan.Pan(
 
 req = operations.GetImagesImageIDDockerfileScanResultsRequest(
     image_id='da882664-c35f-4933-94c4-06103746e14d',
-    is_ignored=False,
-    max_results=4943.96,
-    offset=6053.79,
-    sort_dir=operations.GetImagesImageIDDockerfileScanResultsSortDir.DESC,
 )
 
 res = s.images_and_vulnerabilities.get_images_image_id_dockerfile_scan_results(req)
@@ -350,8 +331,6 @@ s = pan.Pan(
 
 req = operations.GetImagesImageIDImageLayersRequest(
     image_id='15439eb8-81bd-4ffd-8863-3eb436058a37',
-    is_ignored=False,
-    sort_dir=operations.GetImagesImageIDImageLayersSortDir.ASC,
 )
 
 res = s.images_and_vulnerabilities.get_images_image_id_image_layers(req)
@@ -469,12 +448,6 @@ s = pan.Pan(
 
 req = operations.GetImagesImageIDVulnerabilitiesRequest(
     image_id='d0043143-505e-42fc-aacc-aa87ecde910e',
-    is_ignored=False,
-    layer_id='7b364751-2259-4df9-ae67-4e88ed17b104',
-    max_results=7244.87,
-    offset=6826.65,
-    show_only_vulnerabilities_with_fix=False,
-    sort_dir=operations.GetImagesImageIDVulnerabilitiesSortDir.DESC,
 )
 
 res = s.images_and_vulnerabilities.get_images_image_id_vulnerabilities(req)
@@ -514,12 +487,9 @@ s = pan.Pan(
 )
 
 req = shared.ImageDefInput(
-    image_hash='Sedan silently',
-    image_name='Strontium',
     image_tags=[
-        'gosh',
+        'Configuration',
     ],
-    time_added=dateutil.parser.isoparse('2021-03-23T13:45:56.960Z'),
 )
 
 res = s.images_and_vulnerabilities.post_images(req)
@@ -654,7 +624,6 @@ req = operations.PostImagesImageIDVulnerabilitiesIgnoreRequest(
     ),
     action_type=operations.PostImagesImageIDVulnerabilitiesIgnoreActionType.REMOVE,
     image_id='95b06784-3712-40b3-827e-08cfaaddc5ee',
-    snooze_time=operations.PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime.MONTH,
 )
 
 res = s.images_and_vulnerabilities.post_images_image_id_vulnerabilities_ignore(req)

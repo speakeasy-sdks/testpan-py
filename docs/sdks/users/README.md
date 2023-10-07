@@ -109,11 +109,9 @@ s = pan.Pan(
 )
 
 req = operations.GetUsersRequest(
-    email='Martine_Welch@hotmail.com',
     roles=[
-        operations.GetUsersRoles.ACCOUNT_ADMIN,
+        operations.GetUsersRoles.SERVICE,
     ],
-    username='Domenick_Schulist87',
 )
 
 res = s.users.get_users(req)
@@ -259,10 +257,7 @@ s = pan.Pan(
     ),
 )
 
-req = shared.ChangePasswordInfo(
-    new_password='Clifton Tuna invoice',
-    old_password='Loan',
-)
+req = shared.ChangePasswordInfo()
 
 res = s.users.post_change_password(req)
 
@@ -299,10 +294,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.PostLoginRequest(
-    google_id_token='Paradigm Touring enthusiastically',
-    token='gray',
-)
+req = operations.PostLoginRequest()
 
 res = s.users.post_login(req)
 
@@ -401,11 +393,7 @@ s = pan.Pan(
 )
 
 req = shared.UserInput(
-    description='Cross-group reciprocal toolset',
-    email='Erin_Wintheiser@hotmail.com',
-    full_name='Mrs. Todd Halvorson',
-    id='d86a2273-6c5e-406f-80e1-8a3ed58c3e0d',
-    role=shared.Role.PORTSHIFT_AUDITOR,
+    full_name='Johnnie Windler',
     status=shared.UserStatus.DISABLED,
 )
 
@@ -476,15 +464,12 @@ s = pan.Pan(
 
 req = operations.PostUsersTrialRequest(
     trial_user=shared.TrialUser(
-        company='Rohan and Sons',
-        email='Tremaine.Bashirian@gmail.com',
-        first_name='Sim',
-        how_did_you_hear_about_us=shared.TrialUserHowDidYouHearAboutUs.ADVERTISING,
-        job_title='Human Program Liaison',
-        last_name='Kovacek',
+        email='Nelle93@gmail.com',
+        first_name='Alice',
+        last_name='Mitchell',
         privacy_policy_and_terms_and_conditions_agreement=False,
     ),
-    g_recaptcha_response='Automated',
+    g_recaptcha_response='oddly attentive',
 )
 
 res = s.users.post_users_trial(req)
@@ -524,13 +509,10 @@ s = pan.Pan(
 
 req = operations.PutUsersUserIDRequest(
     edit_user_input=shared.EditUserInput(
-        description='Assimilated zero defect moratorium',
-        full_name='Ms. Kathy Stanton',
-        id='79a1c67b-61ff-41da-8536-101e994c1527',
-        role=shared.Role.ACCOUNT_ADMIN,
+        full_name='Elisa O\'Reilly',
         status=shared.EditUserStatus.DISABLED,
     ),
-    user_id='04672250-5e17-4edb-8b8f-fdfce4dbd0b1',
+    user_id='18479a1c-67b6-41ff-9da0-536101e994c1',
 )
 
 res = s.users.put_users_user_id_(req)

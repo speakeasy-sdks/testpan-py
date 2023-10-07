@@ -57,36 +57,24 @@ req = shared.ServerlessPolicy(
     default_rule=shared.ServerlessDefaultRule.DETECT_ALL,
     unidentified_serverless_rule=shared.UnidentifiedServerlessRule(
         action=shared.UnidentifiedServerlessRuleAction.DETECT,
-        name='infrastructures solutions',
     ),
     user_rules=[
         shared.ServerlessRule(
-            action=shared.ServerlessRuleAction.DETECT,
-            group_name='Dodge',
-            id='6eaf47ac-061b-4704-854c-19159eac10ed',
-            name='Convertible Shilling',
+            action=shared.ServerlessRuleAction.ALLOW,
+            name='Northwest granular',
             rule=shared.ServerlessRuleType(
-                serverless_function_validation=shared.ServerlessFunctionValidation(
-                    data_access_risk=shared.ServerlessDataAccessRisk.LOW,
-                    function_permission_risk=shared.ServerlessPolicyRisk.HIGH,
-                    is_unused_function=False,
-                    publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.LOW,
-                    risk=shared.ServerlessFunctionRiskLevel.LOW,
-                    secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-                    vulnerability=shared.VulnerabilitySeverity.LOW,
-                ),
-                serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
+                serverless_function_validation=shared.ServerlessFunctionValidation(),
+                serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ANY_SERVERLESS_RULE_TYPE,
             ),
-            rule_origin=shared.ServerlessRuleOrigin.SYSTEM,
             scope=[
                 shared.ServerlessRuleScope(
-                    cloud_account='Latin West',
+                    cloud_account='Tuna brand Legacy',
                     regions=[
-                        'Configuration',
+                        'Iraq',
                     ],
                 ),
             ],
-            status=shared.ServerlessRuleStatus.DISABLED,
+            status=shared.ServerlessRuleStatus.ENABLED,
         ),
     ],
 )

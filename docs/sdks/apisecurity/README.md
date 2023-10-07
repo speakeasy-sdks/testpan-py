@@ -280,15 +280,6 @@ req = operations.GetAPISecurityExternalCatalogRequest(
     api_policy_profiles=[
         'Bronze',
     ],
-    drill_down_score=False,
-    include_service_with_no_spec=False,
-    max_results=4178.64,
-    name='Colton Tin programming',
-    no_pagination=False,
-    offset=9915.74,
-    sort_dir=operations.GetAPISecurityExternalCatalogSortDir.ASC,
-    sort_key=operations.GetAPISecurityExternalCatalogSortKey.NAME,
-    updated_after=dateutil.parser.isoparse('2023-06-28T23:23:21.281Z'),
 )
 
 res = s.api_security.get_api_security_external_catalog(req)
@@ -327,11 +318,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetAPISecurityExternalCatalogCountRequest(
-    include_service_with_no_spec=False,
-    name='revolutionary alienated Chair',
-    updated_after=dateutil.parser.isoparse('2021-01-16T05:22:36.516Z'),
-)
+req = operations.GetAPISecurityExternalCatalogCountRequest()
 
 res = s.api_security.get_api_security_external_catalog_count(req)
 
@@ -373,7 +360,6 @@ req = operations.GetAPISecurityExternalCatalogCatalogIDRequest(
         'Sports',
     ],
     catalog_id='833a138a-8e36-4df0-9dd8-6e879c685823',
-    download_as_json=False,
 )
 
 res = s.api_security.get_api_security_external_catalog_catalog_id_(req)
@@ -416,16 +402,6 @@ req = operations.GetAPISecurityInternalCatalogRequest(
     api_policy_profiles=[
         'systemic',
     ],
-    drill_down_score=False,
-    include_service_with_no_spec=False,
-    max_results=5658.49,
-    name='tranquilize pascal',
-    namespaces_filter='Cis capacitor',
-    no_pagination=False,
-    offset=1528.82,
-    sort_dir=operations.GetAPISecurityInternalCatalogSortDir.ASC,
-    sort_key=operations.GetAPISecurityInternalCatalogSortKey.NAME,
-    updated_after=dateutil.parser.isoparse('2021-11-28T12:36:29.977Z'),
 )
 
 res = s.api_security.get_api_security_internal_catalog(req)
@@ -464,12 +440,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetAPISecurityInternalCatalogCountRequest(
-    include_service_with_no_spec=False,
-    name='Bugatti',
-    namespaces_filter='3rd Hassium',
-    updated_after=dateutil.parser.isoparse('2023-12-03T10:33:57.779Z'),
-)
+req = operations.GetAPISecurityInternalCatalogCountRequest()
 
 res = s.api_security.get_api_security_internal_catalog_count(req)
 
@@ -511,7 +482,6 @@ req = operations.GetAPISecurityInternalCatalogCatalogIDRequest(
         'Future',
     ],
     catalog_id='b30b167e-21dd-44fc-9f71-8b9d3086136a',
-    download_as_json=False,
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_(req)
@@ -668,8 +638,6 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest(
     catalog_id='14f8fff8-1410-462d-9de3-1aa0e5094377',
-    max_results=970.24,
-    offset=4969.86,
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_trace_analysis(req)
@@ -943,7 +911,6 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest(
     catalog_id='4022b3ba-9ecc-4767-9469-71ea890137cd',
-    download_as_json=False,
 )
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_spec_json(req)
@@ -983,18 +950,10 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityRiskFindingsRequest(
     api_sec_source=operations.GetAPISecurityRiskFindingsAPISecSource.EXTERNAL,
-    category='becquerel',
-    detected=False,
-    element='green',
-    max_results=7763.82,
-    name='SMTP Southwest',
-    offset=5947.99,
     risks=[
-        operations.GetAPISecurityRiskFindingsRisks.HIGH,
+        operations.GetAPISecurityRiskFindingsRisks.LOW,
     ],
-    sort_dir=operations.GetAPISecurityRiskFindingsSortDir.ASC,
     sort_key=operations.GetAPISecurityRiskFindingsSortKey.RISK,
-    source='alliance',
 )
 
 res = s.api_security.get_api_security_risk_findings(req)
@@ -1292,7 +1251,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
     api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
-    num_of_days=738205,
 )
 
 res = s.api_security.get_dashboard_apisec_risk_findings_trend(req)
@@ -1371,7 +1329,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
-    max_results=9119.67,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_apis(req)
@@ -1411,7 +1368,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
-    max_results=5232.51,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_findings(req)
@@ -1449,13 +1405,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetGatewaysRequest(
-    max_results=5622.15,
-    name='Bicycle programming',
-    no_pagination=False,
-    offset=2121.34,
-    sort_dir=operations.GetGatewaysSortDir.ASC,
-)
+req = operations.GetGatewaysRequest()
 
 res = s.api_security.get_gateways(req)
 
@@ -1977,11 +1927,8 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest(
-    api_reconstruction_request=shared.APIReconstructionRequest(
-        cluster_id='4fd7941d-9d44-44e5-b609-cdd9605335d7',
-        learning_duration='male Administrator',
-    ),
-    catalog_id='1ecf6d42-4fd0-4f29-96f3-b4a797f266b2',
+    api_reconstruction_request=shared.APIReconstructionRequest(),
+    catalog_id='4fd7941d-9d44-44e5-b609-cdd9605335d7',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_learn(req)
@@ -2029,14 +1976,12 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewAppr
                         methods=[
                             shared.HTTPMethod.PUT,
                         ],
-                        path='/home/user/dir',
                     ),
                 ],
-                suggested_path='DNS',
             ),
         ],
     ),
-    catalog_id='b3e10c33-f3cc-4f1f-a2c5-b724ecc18aab',
+    catalog_id='3273b3e1-0c33-4f3c-8f1f-e2c5b724ecc1',
 )
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_review_approve(req)
@@ -2158,10 +2103,8 @@ s = pan.Pan(
 
 req = shared.Gateway(
     cluster_name='budgetary',
-    description='Organized non-volatile migration',
-    id='569c810a-5247-4536-a053-f148b119db42',
-    name='Savings distinctio blue',
-    type=shared.GatewayType.KONG_INTERNAL,
+    name='Tungsten technologies',
+    type=shared.GatewayType.TYK_INTERNAL,
 )
 
 res = s.api_security.post_gateways(req)
@@ -2202,41 +2145,32 @@ s = pan.Pan(
 
 req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
     api_service_bfla_info=shared.APIServiceBflaInfo(
-        end_time=dateutil.parser.isoparse('2021-04-10T03:52:46.500Z'),
-        status=shared.APIServiceBflaInfoStatus.IN_PROGRESS_LEARNING,
+        status=shared.APIServiceBflaInfoStatus.NO_SPEC,
         tags=[
             shared.APIServiceBflaTagInfo(
-                is_legitimate=False,
-                name='Rhodium Rubber yearly',
+                name='Identity yearly',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
-                                external=False,
-                                identifier='3b3fcaad-d442-4012-ad14-59f8769c2011',
-                                is_legitimate=False,
-                                last_observed=dateutil.parser.isoparse('2021-02-25T06:09:36.065Z'),
-                                last_status_code=508539,
-                                name='Carolina',
-                                namespace='Account',
+                                name='Manganese',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='56.91.79.204',
-                                        name='Hyundai punctually',
-                                        principle_type='Granite Rustic',
+                                        ip='244.203.175.173',
+                                        name='Crew green Northeast',
+                                        principle_type='Bentley Granite withdrawal',
                                     ),
                                 ],
                             ),
                         ],
-                        is_legitimate=False,
-                        method=shared.HTTPMethod.TRACE,
-                        path='/usr/local/bin',
+                        method=shared.HTTPMethod.CONNECT,
+                        path='/usr/libexec',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='ac789245-d57c-4c22-8dbd-c1e1df3ce330',
+    catalog_id='20110831-cf06-40a3-94c8-d6e973832cca',
 )
 
 res = s.api_security.put_api_security_internal_catalog_catalog_id_bfla(req)
@@ -2317,12 +2251,10 @@ s = pan.Pan(
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
         cluster_name='Executive Minivan sky',
-        description='Upgradable bandwidth-monitored contingency',
-        id='69f02ce6-c757-479c-9c8e-935111463ea3',
-        name='Directives pink Central',
+        name='Northeast Rupee Burundi',
         type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='95ead58c-f0fb-4b52-ac2b-9a404d8ad2eb',
+    gateway_id='e6c75779-c9c8-4e93-9111-463ea3da225a',
 )
 
 res = s.api_security.put_gateways_gateway_id_(req)

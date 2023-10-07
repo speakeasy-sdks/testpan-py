@@ -147,11 +147,10 @@ req = shared.APISecurityPolicyInput(
             ),
         ],
     ),
-    description='Front-line fault-tolerant orchestration',
     global_condition=shared.APISecurityPolicyGlobalCondition(
-        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
+        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
     ),
-    name='copying',
+    name='male Granite',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -199,13 +198,12 @@ req = operations.PutAPISecurityPolicyPolicyIDRequest(
                 ),
             ],
         ),
-        description='Up-sized well-modulated leverage',
         global_condition=shared.APISecurityPolicyGlobalCondition(
-            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.NO_RISK,
+            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
         ),
-        name='Small Northwest',
+        name='Rock Integration Brentwood',
     ),
-    policy_id='448558c2-807a-430f-90b4-3b138ce775c5',
+    policy_id='7448558c-2807-4a30-bd0b-43b138ce775c',
 )
 
 res = s.api_security_policies.put_api_security_policy_policy_id_(req)

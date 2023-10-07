@@ -34,15 +34,8 @@ req = operations.GetAuditLogsRequest(
     actions=[
         'male',
     ],
-    download_as_xlsx=False,
     end_time=dateutil.parser.isoparse('2022-01-24T02:40:28.078Z'),
-    max_results=5619.36,
-    object_type='GB grey Folding',
-    offset=2262.25,
-    sort_dir=operations.GetAuditLogsSortDir.DESC,
-    sort_key=operations.GetAuditLogsSortKey.TIME,
-    start_time=dateutil.parser.isoparse('2022-05-15T07:17:17.108Z'),
-    user='Lennie.Torphy0',
+    start_time=dateutil.parser.isoparse('2022-09-08T07:41:20.287Z'),
 )
 
 res = s.audit_logs.get_audit_logs(req)
@@ -112,25 +105,14 @@ s = pan.Pan(
 )
 
 req = operations.GetAuditLogsKubernetesRequest(
-    cluster_name='Coupe Southeast Southeast',
-    download_as_xlsx=False,
-    end_time=dateutil.parser.isoparse('2022-08-15T09:50:37.531Z'),
+    end_time=dateutil.parser.isoparse('2023-03-24T20:20:48.235Z'),
     kubernetes_audit_action=[
-        'online',
+        'Coupe',
     ],
-    max_results=3231.79,
-    namespace_name='Cadillac',
-    no_pagination=False,
-    offset=5266.56,
-    resource_kind='Island SSL',
-    resource_name='South vaguely',
     result=[
-        operations.GetAuditLogsKubernetesResult.BLOCK,
+        operations.GetAuditLogsKubernetesResult.ALLOW,
     ],
-    sort_dir=operations.GetAuditLogsKubernetesSortDir.DESC,
-    sort_key=operations.GetAuditLogsKubernetesSortKey.ACTION,
-    start_time=dateutil.parser.isoparse('2022-02-10T19:51:08.510Z'),
-    user='Rebekah66',
+    start_time=dateutil.parser.isoparse('2023-06-24T03:55:36.271Z'),
 )
 
 res = s.audit_logs.get_audit_logs_kubernetes(req)
