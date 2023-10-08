@@ -116,12 +116,7 @@ s = pan.Pan(
 
 req = operations.GetCdRequest(
     end_time=dateutil.parser.isoparse('2022-11-13T13:45:57.433Z'),
-    max_results=9762.43,
-    offset=9342.32,
-    resource_name='kale Northeast Bicycle',
-    sort_dir=operations.GetCdSortDir.DESC,
-    sort_key=operations.GetCdSortKey.TIME,
-    start_time=dateutil.parser.isoparse('2023-10-03T17:16:38.452Z'),
+    start_time=dateutil.parser.isoparse('2023-12-05T23:39:45.476Z'),
 )
 
 res = s.cd.get_cd(req)
@@ -161,8 +156,6 @@ s = pan.Pan(
 
 req = operations.GetCdResourceIDRequest(
     resource_id='dbdc0e78-4707-4528-b885-f251b95127b5',
-    sort_dir=operations.GetCdResourceIDSortDir.ASC,
-    sort_key=operations.GetCdResourceIDSortKey.RISK,
 )
 
 res = s.cd.get_cd_resource_id_(req)
@@ -279,17 +272,12 @@ s = pan.Pan(
 )
 
 req = shared.CdConnectionRule(
-    action=shared.ConnectionRuleAction.BLOCK,
     destination=shared.ConnectionRulePart(
+        connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.POD_NAME_CONNECTION_RULE_PART,
+    ),
+    source=shared.ConnectionRulePart(
         connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.APP_TYPE_CONNECTION_RULE_PART,
     ),
-    group_name='North',
-    id='b91e56e8-5c5e-4dba-b536-b99e2dee788b',
-    name='Account programming quos',
-    source=shared.ConnectionRulePart(
-        connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.EXPANSION_LABELS_CONNECTION_RULE_PART,
-    ),
-    status=shared.CdConnectionRuleStatus.DISABLED,
 )
 
 res = s.cd.post_cd_connections_rule(req)
@@ -329,30 +317,20 @@ s = pan.Pan(
 
 req = shared.CdServerlessRule(
     action=shared.ServerlessRuleAction.DETECT,
-    group_name='orchestration Account navigate',
-    id='81ea9f29-4b56-4171-9abd-233ecb84ab91',
-    name='Arizona South',
+    name='orchestration Account navigate',
     rule=shared.ServerlessRuleType(
-        serverless_function_validation=shared.ServerlessFunctionValidation(
-            data_access_risk=shared.ServerlessDataAccessRisk.LOW,
-            function_permission_risk=shared.ServerlessPolicyRisk.CRITICAL,
-            is_unused_function=False,
-            publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.NO_RISK,
-            risk=shared.ServerlessFunctionRiskLevel.LOW,
-            secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-            vulnerability=shared.VulnerabilitySeverity.HIGH,
-        ),
+        serverless_function_validation=shared.ServerlessFunctionValidation(),
         serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
     ),
     scope=[
         shared.ServerlessRuleScope(
-            cloud_account='Loan redundant',
+            cloud_account='that',
             regions=[
-                'orchid',
+                'tenetur',
             ],
         ),
     ],
-    status=shared.ServerlessRuleStatus.DELETED,
+    status=shared.ServerlessRuleStatus.ENABLED,
 )
 
 res = s.cd.post_cd_serverless_rule(req)
@@ -392,19 +370,14 @@ s = pan.Pan(
 
 req = operations.PutCdRuleIDConnectionsRuleRequest(
     cd_connection_rule=shared.CdConnectionRule(
-        action=shared.ConnectionRuleAction.DETECT,
         destination=shared.ConnectionRulePart(
+            connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.APP_NAME_CONNECTION_RULE_PART,
+        ),
+        source=shared.ConnectionRulePart(
             connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.EXPANSION_ANY_CONNECTION_RULE_PART,
         ),
-        group_name='Rubber',
-        id='1c83a5ad-c392-412e-ad67-13c48128c295',
-        name='Philippines male Philippine',
-        source=shared.ConnectionRulePart(
-            connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.ANY_CONNECTION_RULE_PART,
-        ),
-        status=shared.CdConnectionRuleStatus.ENABLED,
     ),
-    rule_id='352316c2-4f37-43ef-9bcd-45b8a926d9e0',
+    rule_id='3491c83a-5adc-4392-92ee-d6713c48128c',
 )
 
 res = s.cd.put_cd_rule_id_connections_rule(req)
@@ -445,32 +418,22 @@ s = pan.Pan(
 req = operations.PutCdRuleIDServerlessRuleRequest(
     cd_serverless_rule=shared.CdServerlessRule(
         action=shared.ServerlessRuleAction.DETECT,
-        group_name='dedicated Developer Sports',
-        id='5f913b95-4cc1-4f6c-ab37-9119c49c2a96',
-        name='Electric',
+        name='dedicated Developer Sports',
         rule=shared.ServerlessRuleType(
-            serverless_function_validation=shared.ServerlessFunctionValidation(
-                data_access_risk=shared.ServerlessDataAccessRisk.NO_RISK,
-                function_permission_risk=shared.ServerlessPolicyRisk.HIGH,
-                is_unused_function=False,
-                publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.MEDIUM,
-                risk=shared.ServerlessFunctionRiskLevel.LOW,
-                secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-                vulnerability=shared.VulnerabilitySeverity.LOW,
-            ),
-            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
+            serverless_function_validation=shared.ServerlessFunctionValidation(),
+            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
         ),
         scope=[
             shared.ServerlessRuleScope(
-                cloud_account='Rubber',
+                cloud_account='Cisgender tesla incentivize',
                 regions=[
-                    'utilisation',
+                    'ivory',
                 ],
             ),
         ],
         status=shared.ServerlessRuleStatus.ENABLED,
     ),
-    rule_id='688963e3-0212-4786-89a2-e3b6d79445cb',
+    rule_id='f6ceb379-119c-449c-aa96-4c43ac563e54',
 )
 
 res = s.cd.put_cd_rule_id_serverless_rule(req)

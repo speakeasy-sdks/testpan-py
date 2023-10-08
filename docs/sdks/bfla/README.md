@@ -271,41 +271,32 @@ s = pan.Pan(
 
 req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
     api_service_bfla_info=shared.APIServiceBflaInfo(
-        end_time=dateutil.parser.isoparse('2021-04-10T03:52:46.500Z'),
-        status=shared.APIServiceBflaInfoStatus.IN_PROGRESS_LEARNING,
+        status=shared.APIServiceBflaInfoStatus.NO_SPEC,
         tags=[
             shared.APIServiceBflaTagInfo(
-                is_legitimate=False,
-                name='Rhodium Rubber yearly',
+                name='Identity yearly',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
-                                external=False,
-                                identifier='3b3fcaad-d442-4012-ad14-59f8769c2011',
-                                is_legitimate=False,
-                                last_observed=dateutil.parser.isoparse('2021-02-25T06:09:36.065Z'),
-                                last_status_code=508539,
-                                name='Carolina',
-                                namespace='Account',
+                                name='Manganese',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='56.91.79.204',
-                                        name='Hyundai punctually',
-                                        principle_type='Granite Rustic',
+                                        ip='244.203.175.173',
+                                        name='Crew green Northeast',
+                                        principle_type='Bentley Granite withdrawal',
                                     ),
                                 ],
                             ),
                         ],
-                        is_legitimate=False,
-                        method=shared.HTTPMethod.TRACE,
-                        path='/usr/local/bin',
+                        method=shared.HTTPMethod.CONNECT,
+                        path='/usr/libexec',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='ac789245-d57c-4c22-8dbd-c1e1df3ce330',
+    catalog_id='20110831-cf06-40a3-94c8-d6e973832cca',
 )
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)

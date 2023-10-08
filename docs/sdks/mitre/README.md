@@ -203,15 +203,13 @@ s = pan.Pan(
 req = operations.PostMitreTechniqueFixRequest(
     mitre_technique_fix_info=shared.MitreTechniqueFixInfo(
         affected_elements=[
-            shared.MitreTechniqueAffectedElement(
-                mitre_technique_affected_element_type=shared.MitreTechniqueAffectedElementMitreTechniqueAffectedElementType.MITRE_TECHNIQUE_AFFECTED_WORKLOAD,
-            ),
+            shared.MitreTechniqueAffectedElement(),
         ],
     ),
     clusters_ids=[
-        '84b4b2c6-3c2f-47d9-8968-3947da0e326b',
+        '684b4b2c-63c2-4f7d-9896-83947da0e326',
     ],
-    mitre_technique_type=operations.PostMitreTechniqueFixMitreTechniqueType.ACCESS_CLUSTER_RESOURCES,
+    mitre_technique_type=operations.PostMitreTechniqueFixMitreTechniqueType.CLEAR_K8_S_EVENTS,
 )
 
 res = s.mitre.post_mitre_technique_fix(req)

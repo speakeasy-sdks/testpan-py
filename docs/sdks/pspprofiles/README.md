@@ -173,83 +173,50 @@ s = pan.Pan(
 )
 
 req = shared.PodSecurityPolicy(
-    allow_privilege_escalation=False,
     allowed_capabilities=[
         'bypass',
     ],
     allowed_host_paths=[
-        shared.AllowedHostPath(
-            path_prefix='turquoise',
-            read_only=False,
-        ),
+        shared.AllowedHostPath(),
     ],
     allowed_proc_mount_types=[
         shared.AllowedProcMountType.DEFAULT,
     ],
     allowed_unsafe_sysctls=[
-        'Product',
+        'turquoise',
     ],
-    default_allow_privilege_escalation=False,
-    description='Down-sized empowering frame',
     forbidden_sysctls=[
-        'incremental',
+        'moderator',
     ],
     fs_group=shared.RunAsGroupStrategyOptions(
         ranges=[
-            shared.IDRange(
-                max=247342,
-                min=407317,
-            ),
+            shared.IDRange(),
         ],
-        rule=shared.RunAsGroupStrategy.MAY_RUN_AS,
     ),
-    host_ipc=False,
-    host_network=False,
-    host_pid=False,
     host_ports=[
-        shared.HostPortRange(
-            max=80641,
-            min=34868,
-        ),
+        shared.HostPortRange(),
     ],
-    id='142085d7-d484-444d-9348-fb70a8e37e62',
-    is_securecn_default_profile=False,
-    name='Wooden repudiandae Paradigm',
-    privileged=False,
-    read_only_root_file_system=False,
+    name='Gloves',
     required_drop_capabilities=[
-        'clearly',
+        'explicit',
     ],
     run_as_group=shared.RunAsGroupStrategyOptions(
         ranges=[
-            shared.IDRange(
-                max=307575,
-                min=822060,
-            ),
+            shared.IDRange(),
         ],
-        rule=shared.RunAsGroupStrategy.MUST_RUN_AS,
     ),
     run_as_user=shared.RunAsUserStrategyOptions(
         ranges=[
-            shared.IDRange(
-                max=177881,
-                min=417586,
-            ),
+            shared.IDRange(),
         ],
-        rule=shared.RunAsUserStrategy.MUST_RUN_AS,
     ),
-    seccomp_profile='e80dd252-3540-4eb3-996a-05613aad0af4',
     supplemental_groups=shared.RunAsGroupStrategyOptions(
         ranges=[
-            shared.IDRange(
-                max=169335,
-                min=820289,
-            ),
+            shared.IDRange(),
         ],
-        rule=shared.RunAsGroupStrategy.RUN_AS_ANY,
     ),
     volumes=[
-        shared.PSPVolumeTypes.STORAGEOS,
+        shared.PSPVolumeTypes.HOST_PATH,
     ],
 )
 
@@ -291,83 +258,50 @@ s = pan.Pan(
 
 req = [
     shared.PodSecurityPolicy(
-        allow_privilege_escalation=False,
         allowed_capabilities=[
             'Copernicium',
         ],
         allowed_host_paths=[
-            shared.AllowedHostPath(
-                path_prefix='Northeast Directives',
-                read_only=False,
-            ),
+            shared.AllowedHostPath(),
         ],
         allowed_proc_mount_types=[
-            shared.AllowedProcMountType.DEFAULT,
+            shared.AllowedProcMountType.UNMASKED,
         ],
         allowed_unsafe_sysctls=[
-            'mint',
+            'Northeast',
         ],
-        default_allow_privilege_escalation=False,
-        description='Self-enabling national application',
         forbidden_sysctls=[
-            'THX',
+            'Directives',
         ],
         fs_group=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=581609,
-                    min=807880,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.RUN_AS_ANY,
         ),
-        host_ipc=False,
-        host_network=False,
-        host_pid=False,
         host_ports=[
-            shared.HostPortRange(
-                max=693689,
-                min=305839,
-            ),
+            shared.HostPortRange(),
         ],
-        id='ccbec10a-9bc5-4ecc-aa49-c56c0e0d8163',
-        is_securecn_default_profile=False,
-        name='Bicycle synthesize',
-        privileged=False,
-        read_only_root_file_system=False,
+        name='mint',
         required_drop_capabilities=[
-            'Cyclocross',
+            'Gasoline',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=978567,
-                    min=527502,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.MAY_RUN_AS,
         ),
         run_as_user=shared.RunAsUserStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=393434,
-                    min=336870,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsUserStrategy.MUST_RUN_AS,
         ),
-        seccomp_profile='33ebfbb0-cc93-4268-acf5-38bb5e43e0cc',
         supplemental_groups=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=259664,
-                    min=329554,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.MUST_RUN_AS,
         ),
         volumes=[
-            shared.PSPVolumeTypes.VSPHERE_VOLUME,
+            shared.PSPVolumeTypes.AZURE_DISK,
         ],
     ),
 ]
@@ -408,10 +342,8 @@ s = pan.Pan(
 )
 
 req = shared.SeccompProfileInput(
-    data='{steam: 44630, freedom: null, lathe: "maiores metrics"}',
-    name='bitterly North',
     pod_security_policies=[
-        'bandwidth',
+        'Cab',
     ],
 )
 
@@ -452,86 +384,53 @@ s = pan.Pan(
 
 req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
     pod_security_policy=shared.PodSecurityPolicy(
-        allow_privilege_escalation=False,
         allowed_capabilities=[
             'North',
         ],
         allowed_host_paths=[
-            shared.AllowedHostPath(
-                path_prefix='since DNS Central',
-                read_only=False,
-            ),
+            shared.AllowedHostPath(),
         ],
         allowed_proc_mount_types=[
-            shared.AllowedProcMountType.DEFAULT,
+            shared.AllowedProcMountType.UNMASKED,
         ],
         allowed_unsafe_sysctls=[
-            'Mercedes',
+            'since',
         ],
-        default_allow_privilege_escalation=False,
-        description='Customer-focused eco-centric encryption',
         forbidden_sysctls=[
-            'Checking',
+            'DNS',
         ],
         fs_group=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=885380,
-                    min=870395,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.RUN_AS_ANY,
         ),
-        host_ipc=False,
-        host_network=False,
-        host_pid=False,
         host_ports=[
-            shared.HostPortRange(
-                max=208639,
-                min=494299,
-            ),
+            shared.HostPortRange(),
         ],
-        id='9d9afbb9-b687-4b2c-be0a-637e73494546',
-        is_securecn_default_profile=False,
-        name='Silicon sensor',
-        privileged=False,
-        read_only_root_file_system=False,
+        name='Coupe THX',
         required_drop_capabilities=[
-            'ex',
+            'Dynamic',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=639188,
-                    min=375698,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.MUST_RUN_AS,
         ),
         run_as_user=shared.RunAsUserStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=34862,
-                    min=966964,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsUserStrategy.MUST_RUN_AS,
         ),
-        seccomp_profile='114f1e40-0857-4100-95d7-43f0167fa418',
         supplemental_groups=shared.RunAsGroupStrategyOptions(
             ranges=[
-                shared.IDRange(
-                    max=807200,
-                    min=91090,
-                ),
+                shared.IDRange(),
             ],
-            rule=shared.RunAsGroupStrategy.MUST_RUN_AS,
         ),
         volumes=[
-            shared.PSPVolumeTypes.SCALE_IO,
+            shared.PSPVolumeTypes.FLOCKER,
         ],
     ),
-    profile_id='30ce44b3-7a43-4d84-b255-0fa77d979933',
+    profile_id='04edb379-d9af-4bb9-b687-b2cfe0a637e7',
 )
 
 res = s.psp_profiles.put_pod_security_policy_profiles_profile_id_(req)
@@ -571,13 +470,11 @@ s = pan.Pan(
 
 req = operations.PutSeccompProfilesProfileIDRequest(
     seccomp_profile_input=shared.SeccompProfileInput(
-        data='{incandescence: 66214, hint: null, licorice: "Mobility lime"}',
-        name='BMX Cambridgeshire wherever',
         pod_security_policies=[
-            'plum',
+            'payment',
         ],
     ),
-    profile_id='36c76ef4-4408-4a69-9bd6-c47238638eac',
+    profile_id='689ccbcc-101f-4ed2-936c-76ef44408a69',
 )
 
 res = s.psp_profiles.put_seccomp_profiles_profile_id_(req)

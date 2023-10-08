@@ -34,9 +34,6 @@ req = operations.GetK8sCISBenchmarkRequest(
     cluster_ids=[
         'magnitude',
     ],
-    max_results=5852.41,
-    no_pagination=False,
-    offset=1447.41,
 )
 
 res = s.k8s_cis_benchmark.get_k8s_cis_benchmark(req)
@@ -187,13 +184,11 @@ req = operations.PutK8sCISBenchmarkClusterIDRequest(
         cluster_id='49b403e0-ddc8-4f07-8f6d-7b4806fe4a7b',
         index='exactly tan Bespoke',
         nodes=[
-            shared.K8sCISBenchmarkUpdateNode(
-                id='e905f14c-9f8f-455f-8602-b586f168c3d5',
-            ),
+            shared.K8sCISBenchmarkUpdateNode(),
         ],
-        status=shared.K8sCISBenchmarkUpdateNodeStatus.FAIL,
+        status=shared.K8sCISBenchmarkUpdateNodeStatus.PASS,
     ),
-    cluster_id='0e1fb82e-2384-4feb-b1f7-119a392759c9',
+    cluster_id='905f14c9-f8f5-45f4-a02b-586f168c3d50',
 )
 
 res = s.k8s_cis_benchmark.put_k8s_cis_benchmark_cluster_id_(req)

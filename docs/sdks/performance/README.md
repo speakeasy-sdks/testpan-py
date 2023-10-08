@@ -25,8 +25,7 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityAPICatalogIDHitCountGraphRequest(
     catalog_id='6b535753-b47a-42be-a003-f45375c0bae8',
-    hours_interval=654607,
-    spec_path='network',
+    spec_path='Tools maxime',
     spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.POST,
 )
 

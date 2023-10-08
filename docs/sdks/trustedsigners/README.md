@@ -69,10 +69,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetTrustedSignersRequest(
-    sort_dir=operations.GetTrustedSignersSortDir.ASC,
-    sort_key=operations.GetTrustedSignersSortKey.NAME,
-)
+req = operations.GetTrustedSignersRequest()
 
 res = s.trusted_signers.get_trusted_signers(req)
 
@@ -157,18 +154,10 @@ req = shared.TrustedSignerInput(
     ],
     name='killer United Agender',
     trusted_signer_cloud_accounts=[
-        shared.TrustedSignerCloudAccountInput(
-            id='339127fc-1c35-45d9-9677-cf34f19a2406',
-            status=shared.TrustedSignerClusterStatus.WARNING,
-            validation=shared.TrustedSignerClusterValidation.HASH,
-        ),
+        shared.TrustedSignerCloudAccountInput(),
     ],
     trusted_signer_clusters=[
-        shared.TrustedSignerClusterInput(
-            id='22272998-72b1-4626-b1e4-e3bd500d0622',
-            status=shared.TrustedSignerClusterStatus.WARNING,
-            validation=shared.TrustedSignerClusterValidation.NONE,
-        ),
+        shared.TrustedSignerClusterInput(),
     ],
 )
 
@@ -217,21 +206,13 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
         ],
         name='so static never',
         trusted_signer_cloud_accounts=[
-            shared.TrustedSignerCloudAccountInput(
-                id='2390f3eb-b00b-4b0b-a50b-1429abb4df87',
-                status=shared.TrustedSignerClusterStatus.WARNING,
-                validation=shared.TrustedSignerClusterValidation.NONE,
-            ),
+            shared.TrustedSignerCloudAccountInput(),
         ],
         trusted_signer_clusters=[
-            shared.TrustedSignerClusterInput(
-                id='af5cddc0-6513-44a6-9fd6-1a9bf59409fe',
-                status=shared.TrustedSignerClusterStatus.VALID,
-                validation=shared.TrustedSignerClusterValidation.SIGNATURE,
-            ),
+            shared.TrustedSignerClusterInput(),
         ],
     ),
-    trusted_signer_id='c650d3f6-4267-4f45-b31f-42c8f00b005e',
+    trusted_signer_id='2390f3eb-b00b-4b0b-a50b-1429abb4df87',
 )
 
 res = s.trusted_signers.put_trusted_signers_trusted_signer_id_(req)

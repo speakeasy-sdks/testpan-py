@@ -70,31 +70,23 @@ s = pan.Pan(
 )
 
 req = operations.GetNetworkMapRequest(
-    api_risk=operations.GetNetworkMapAPIRisk.NEUTRAL,
     apps=[
-        'unto',
+        'Analyst',
     ],
-    end_time=dateutil.parser.isoparse('2022-07-01T23:29:00.212Z'),
+    end_time=dateutil.parser.isoparse('2023-01-02T05:19:39.286Z'),
     environments=[
-        'Gasoline',
-    ],
-    exclude_apps=[
         'West',
     ],
-    group_apps_on_the_same_environment=False,
-    ignore_external_connection=False,
-    is_background_job=False,
-    labels=[
+    exclude_apps=[
         'thoughtfully',
     ],
-    namespaces=[
-        '770727e0-bc8a-4727-a6cf-78080c58f4e0',
+    labels=[
+        'JBOD',
     ],
-    show_only_apps_with_connections=False,
-    show_only_apps_with_violations=False,
-    show_only_connections_between_environments=False,
-    show_only_connections_with_violations=False,
-    start_time=dateutil.parser.isoparse('2021-06-22T19:37:42.851Z'),
+    namespaces=[
+        '0727e0bc-8a72-47a6-8f78-080c58f4e027',
+    ],
+    start_time=dateutil.parser.isoparse('2022-02-13T05:21:23.691Z'),
 )
 
 res = s.runtime_map.get_network_map(req)

@@ -40,7 +40,6 @@ req = operations.GetAppTelemetriesRequest(
     app_type=[
         'splendid',
     ],
-    download_as_xlsx=False,
     end_time=dateutil.parser.isoparse('2021-09-05T15:33:12.217Z'),
     environment_name=[
         'Syrian',
@@ -48,7 +47,6 @@ req = operations.GetAppTelemetriesRequest(
     executable=[
         'strategy',
     ],
-    hide_internals=False,
     highest_dockerfile_scan_result=[
         'Concrete',
     ],
@@ -58,28 +56,19 @@ req = operations.GetAppTelemetriesRequest(
     images_id=[
         '356669e3-0a7d-4fca-9c8c-97d1dbbd6441',
     ],
-    is_identified=False,
-    max_results=3704.75,
-    namespaces_filter='North South',
-    offset=9999.51,
-    protection_status=operations.GetAppTelemetriesProtectionStatus.FULL,
     result=[
-        operations.GetAppTelemetriesResult.BLOCK,
+        operations.GetAppTelemetriesResult.DETECT,
     ],
-    show_only_entries_with_app_name=False,
-    show_only_violations=False,
-    show_system_pods=False,
-    sort_dir=operations.GetAppTelemetriesSortDir.ASC,
-    sort_key=operations.GetAppTelemetriesSortKey.ENVIRONMENT_NAME,
-    start_time=dateutil.parser.isoparse('2023-08-01T01:58:56.429Z'),
+    sort_key=operations.GetAppTelemetriesSortKey.RISK,
+    start_time=dateutil.parser.isoparse('2021-01-15T02:52:59.625Z'),
     status=[
-        'and',
+        'Avon',
     ],
     vulnerability_levels_filter=[
-        'Benin Checking',
+        'audition female',
     ],
     workload_risks=[
-        operations.GetAppTelemetriesWorkloadRisks.HIGH,
+        operations.GetAppTelemetriesWorkloadRisks.MEDIUM,
     ],
 )
 
@@ -276,49 +265,41 @@ s = pan.Pan(
 )
 
 req = operations.GetConnectionTelemetriesRequest(
-    download_as_xlsx=False,
     end_time=dateutil.parser.isoparse('2023-12-02T06:47:12.551Z'),
-    logical_operator=operations.GetConnectionTelemetriesLogicalOperator.OR,
-    max_results=1093.57,
-    offset=9127.11,
     result=[
-        operations.GetConnectionTelemetriesResult.DETECT,
+        operations.GetConnectionTelemetriesResult.ALLOW,
     ],
-    show_only_violations=False,
-    sort_dir=operations.GetConnectionTelemetriesSortDir.ASC,
-    sort_key=operations.GetConnectionTelemetriesSortKey.TARGET_APP_TYPE,
+    sort_key=operations.GetConnectionTelemetriesSortKey.SOURCE_APP_TYPE,
     source_app_name=[
-        'Hybrid',
+        'because',
     ],
     source_environment_name=[
-        'wireless',
+        'Cotton',
     ],
     source_executable=[
-        'Walks',
+        'Hybrid',
     ],
     source_host_name=[
-        'circuit',
+        'wireless',
     ],
-    source_namespaces_filter='rich Coves',
     source_risk=[
-        operations.GetConnectionTelemetriesSourceRisk.LOW,
+        operations.GetConnectionTelemetriesSourceRisk.HIGH,
     ],
-    start_time=dateutil.parser.isoparse('2022-12-19T09:46:13.488Z'),
+    start_time=dateutil.parser.isoparse('2023-12-19T20:37:58.933Z'),
     target_app_name=[
-        'debunk',
+        'Moscovium',
     ],
     target_environment_name=[
-        'lysine',
+        'Regional',
     ],
     target_executable=[
-        'athwart',
+        'coddle',
     ],
     target_host_name=[
-        'female',
+        'Hampshire',
     ],
-    target_namespaces_filter='zero',
     target_risk=[
-        operations.GetConnectionTelemetriesTargetRisk.HIGH,
+        operations.GetConnectionTelemetriesTargetRisk.MEDIUM,
     ],
 )
 
