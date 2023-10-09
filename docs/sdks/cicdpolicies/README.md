@@ -179,10 +179,9 @@ req = shared.CdPolicyInput(
     deployers=[
         'aede075c-3164-444b-a1e6-c4ecee9d9042',
     ],
-    description='User-friendly composite Graphic Interface',
-    name='Concrete',
+    name='Shirt Wooden radian',
     permission_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.IGNORE,
+        enforcement_option=shared.EnforcementOption.FAIL,
         permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
     ),
     secret_cd_policy=shared.SecretsCdPolicyElement(
@@ -231,15 +230,14 @@ s = pan.Pan(
 )
 
 req = shared.CiPolicyInput(
-    description='Adaptive scalable portal',
     dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
+        permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
     ),
-    name='local Tom',
+    name='monetize navigate beatae',
     vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
+        permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
     ),
 )
 
@@ -287,11 +285,10 @@ req = operations.PutCdPolicyPolicyIDRequest(
         deployers=[
             '45666e4d-fb74-4ef6-9a81-a0d950f62fec',
         ],
-        description='Enterprise-wide 4th generation process improvement',
-        name='Berkshire quantifying',
+        name='Heights',
         permission_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
+            enforcement_option=shared.EnforcementOption.FAIL,
+            permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
         ),
         secret_cd_policy=shared.SecretsCdPolicyElement(
             enforcement_option=shared.EnforcementOption.IGNORE,
@@ -302,7 +299,7 @@ req = operations.PutCdPolicyPolicyIDRequest(
             permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
         ),
     ),
-    policy_id='0d219b4a-2fde-47a8-9370-33a3f0a96f23',
+    policy_id='8fba0d21-9b4a-42fd-a7a8-937033a3f0a9',
 )
 
 res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
@@ -342,18 +339,17 @@ s = pan.Pan(
 
 req = operations.PutCiPolicyPolicyIDRequest(
     ci_policy_input=shared.CiPolicyInput(
-        description='Public-key 24 hour pricing structure',
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
+            enforcement_option=shared.EnforcementOption.IGNORE,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='primary transform drive',
+        name='Avon Bicycle primary',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.CRITICAL,
+            enforcement_option=shared.EnforcementOption.FAIL,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
         ),
     ),
-    policy_id='e24f5dcf-d347-4fd8-8ec5-8c84ce879afb',
+    policy_id='5cdfe24f-5dcf-4d34-bfd8-0ec58c84ce87',
 )
 
 res = s.ci_cd_policies.put_ci_policy_policy_id_(req)

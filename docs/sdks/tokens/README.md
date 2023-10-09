@@ -66,14 +66,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetTokensRequest(
-    max_results=681.78,
-    no_pagination=False,
-    offset=7366.65,
-    sort_dir=operations.GetTokensSortDir.ASC,
-    sort_key=operations.GetTokensSortKey.EXPIRATION_DATE,
-    token_name='what',
-)
+req = operations.GetTokensRequest()
 
 res = s.tokens.get_tokens(req)
 
@@ -195,13 +188,8 @@ req = shared.Token(
     apis=[
         '06eb110c-ef48-45c9-b334-9ef284ebe70b',
     ],
-    attribute_name='offensive flexibility Gate',
-    attribute_type=shared.TokenAttributeType.REQUEST_HEADER,
-    expiration_date=dateutil.parser.isoparse('2022-12-06T03:02:47.254Z'),
-    http_path='Gasoline Bicycle',
-    id='15c6181f-23a7-44d2-945a-aec34929a503',
-    name='Cyclocross',
-    vault_secret_path='intermediate array',
+    name='offensive flexibility Gate',
+    vault_secret_path='Customer',
 )
 
 res = s.tokens.post_tokens(req)
@@ -245,15 +233,10 @@ req = operations.PutTokensTokenIDRequest(
         apis=[
             '92f997c4-3e7b-4827-80b5-81f98e4dc9a1',
         ],
-        attribute_name='ah card Mercedes',
-        attribute_type=shared.TokenAttributeType.REQUEST_HEADER,
-        expiration_date=dateutil.parser.isoparse('2023-05-19T15:11:35.927Z'),
-        http_path='Ball',
-        id='6d3d22b8-df11-4333-9e59-e4bbc71d1a3f',
-        name='deposit Checking Rap',
-        vault_secret_path='Chevrolet error',
+        name='ah card Mercedes',
+        vault_secret_path='purple',
     ),
-    token_id='650a257d-f5fe-417c-b321-bf84e462e505',
+    token_id='346d3d22-b8df-4113-b31e-59e4bbc71d1a',
 )
 
 res = s.tokens.put_tokens_token_id_(req)

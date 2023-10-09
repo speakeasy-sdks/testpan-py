@@ -33,9 +33,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetConnectionsPolicyRequest(
-    policy_filter='Serbia',
-)
+req = operations.GetConnectionsPolicyRequest()
 
 res = s.connection_policies.get_connections_policy(req)
 
@@ -210,9 +208,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetConnectionsPolicySearchOptionsRequest(
-    name_filter='Soft',
-)
+req = operations.GetConnectionsPolicySearchOptionsRequest()
 
 res = s.connection_policies.get_connections_policy_search_options(req)
 
@@ -280,34 +276,21 @@ s = pan.Pan(
 )
 
 req = shared.ConnectionsPolicy(
-    default_rule=shared.DefaultConnectionRule(
-        action=shared.ConnectionRuleAction.BLOCK,
-        type=shared.DefaultConnectionRuleType.DENY_ALL,
-    ),
+    default_rule=shared.DefaultConnectionRule(),
     direct_pod_rule=shared.DirectPodIPConnectionRule(
-        action=shared.DirectPodIPConnectionRuleAction.BLOCK,
-        is_disabled=False,
-        name='violet yet honestly',
+        action=shared.DirectPodIPConnectionRuleAction.DETECT,
     ),
     user_rules=[
         shared.ConnectionsRule(
-            action=shared.ConnectionRuleAction.DETECT,
+            action=shared.ConnectionRuleAction.ENCRYPT_DIRECT,
             destination=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.API_SERVICE_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.KAFKA_CONNECTION_RULE_PART,
             ),
-            group_name='International',
-            id='7d416085-4f9b-4bdb-b9bd-42eaba046b7a',
-            is_rule_active=False,
-            layer7_settings=shared.Layer7SettingsPart(
-                layer7_protocol=shared.Layer7SettingsPartLayer7Protocol.HTTP_LAYER7_PART,
-            ),
-            name='repellat asymmetric',
-            rule_origin=shared.ConnectionRuleOrigin.USER,
-            rule_type=shared.NetworkConnectionRuleType.DIRECT_POD_RULE,
+            layer7_settings=shared.Layer7SettingsPart(),
+            name='violet yet honestly',
             source=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.IP_RANGE_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.APP_NAME_CONNECTION_RULE_PART,
             ),
-            status=shared.ConnectionsRuleStatus.ENABLED,
         ),
     ],
 )

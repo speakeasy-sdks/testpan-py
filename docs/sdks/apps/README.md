@@ -31,13 +31,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAppsRequest(
-    download_as_xlsx=False,
-    name='West',
-    no_pagination=False,
-    sort_dir=operations.GetAppsSortDir.DESC,
-    sort_key=operations.GetAppsSortKey.TYPE,
     type=[
-        'deliverables',
+        'Bermuda',
     ],
 )
 
@@ -117,16 +112,17 @@ s = pan.Pan(
 
 req = shared.App(
     args=[
-        'Pennsylvania',
+        '-cp',
+        '-jar',
+        './*',
     ],
     cwd='/usr/local/bin/corp',
     executable='java',
     executable_path='/usr/bin',
-    id='a23be434-0962-431a-a464-6df448ea2451',
     labels=[
         shared.Label(
             key='<key>',
-            value='considering',
+            value='becquerel',
         ),
     ],
     name='AccountingApp',
@@ -212,23 +208,24 @@ s = pan.Pan(
 req = operations.PutAppsAppIDRequest(
     app=shared.App(
         args=[
-            'invoice',
+            '-cp',
+            '-jar',
+            './*',
         ],
         cwd='/usr/local/bin/corp',
         executable='java',
         executable_path='/usr/bin',
-        id='a0b1a3d7-8ca7-4d0e-a8bc-a8a0d7f81190',
         labels=[
             shared.Label(
                 key='<key>',
-                value='infrastructures Tuna',
+                value='Mercedes Fluorine',
             ),
         ],
         name='AccountingApp',
         process_name='accounting_app',
         type='frontend',
     ),
-    app_id='17593302-d163-413d-8049-f888f283529e',
+    app_id='a3d78ca7-d0e6-48bc-a8a0-d7f811909514',
 )
 
 res = s.apps.put_apps_app_id_(req)

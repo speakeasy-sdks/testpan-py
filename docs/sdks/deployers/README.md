@@ -71,13 +71,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDeployersRequest(
-    max_results=757.15,
-    name='neural Card',
-    offset=4706.54,
-    rule_creation=False,
-    security_check=False,
-    sort_dir=operations.GetDeployersSortDir.ASC,
-    sort_key=operations.GetDeployersSortKey.TYPE,
+    sort_key=operations.GetDeployersSortKey.DEPLOYER,
 )
 
 res = s.deployers.get_deployers(req)
@@ -117,7 +111,6 @@ s = pan.Pan(
 
 req = operations.GetDeployersServiceAccountsRequest(
     kubernetes_cluster_id='2cec5765-5bfd-4372-88d6-c69c1df0fe41',
-    namespace_name='synthesizing',
 )
 
 res = s.deployers.get_deployers_service_accounts(req)
@@ -195,8 +188,7 @@ s = pan.Pan(
 )
 
 req = shared.DeployerInput(
-    deployer='pixel',
-    deployer_id='c2d6bf94-8feb-495d-aafb-538f00cdbb74',
+    deployer_id='589c2d6b-f948-4feb-95d2-afb538f00cdb',
     deployer_type=shared.DeployerDeployerType.SECURE_CN_DEPLOYER,
 )
 
@@ -237,11 +229,10 @@ s = pan.Pan(
 
 req = operations.PutDeployersDeployerIDRequest(
     deployer_input=shared.DeployerInput(
-        deployer='towards Vanuatu Zirconium',
-        deployer_id='7ae2aefa-5ee4-4175-ba71-bdf48687529a',
-        deployer_type=shared.DeployerDeployerType.SECURE_CN_DEPLOYER,
+        deployer_id='bfd0fb57-ae2a-4efa-9ee4-175ba71bdf48',
+        deployer_type=shared.DeployerDeployerType.OPERATOR_DEPLOYER,
     ),
-    deployer_id='a122201f-98e6-4927-bec6-fe116f385701',
+    deployer_id='87529aca-1222-401f-98e6-927bec6fe116',
 )
 
 res = s.deployers.put_deployers_deployer_id_(req)

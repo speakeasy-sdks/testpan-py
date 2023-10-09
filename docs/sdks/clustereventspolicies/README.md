@@ -182,13 +182,10 @@ s = pan.Pan(
 )
 
 req = shared.KubernetesAPIPolicy(
-    default_rule=shared.DefaultKubernetesAPIRule(
-        action=shared.KubernetesAPIRuleAction.IGNORE,
-    ),
+    default_rule=shared.DefaultKubernetesAPIRule(),
     user_rules=[
         shared.KubernetesAPIRule(
             kubernetes_api_rule_type=shared.KubernetesAPIRuleKubernetesAPIRuleType.KUBERNETES_API_RECOMMENDED_RULE,
-            rule_origin=shared.KubernetesAPIRuleOrigin.AUTOMATED_POLICY,
         ),
     ],
 )

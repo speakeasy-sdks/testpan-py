@@ -29,9 +29,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetAppsPolicyRequest(
-    policy_filter='Secured Hybrid',
-)
+req = operations.GetAppsPolicyRequest()
 
 res = s.environment_policies.get_apps_policy(req)
 
@@ -98,9 +96,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetAppsPolicySearchOptionsRequest(
-    name_filter='Ball Clothing Classical',
-)
+req = operations.GetAppsPolicySearchOptionsRequest()
 
 res = s.environment_policies.get_apps_policy_search_options(req)
 
@@ -138,27 +134,22 @@ s = pan.Pan(
 )
 
 req = shared.AppPolicy(
-    default_rule=shared.DefaultRule.DETECT_ALL,
     unidentified_pods_rule=shared.UnidentifiedPodsRule(
         action=shared.UnidentifiedPodsRuleAction.BLOCK,
-        name='Bolivia Peso Gasoline',
     ),
     user_rules=[
         shared.AppRule(
             app=shared.WorkloadRuleType(
-                workload_rule_type=shared.WorkloadRuleTypeWorkloadRuleType.APP_NAME_WORKLOAD_RULE_TYPE,
+                workload_rule_type=shared.WorkloadRuleTypeWorkloadRuleType.POD_ANY_WORKLOAD_RULE_TYPE,
             ),
-            group_name='Elegant mole Bronze',
-            id='c913f708-35e4-4a31-9380-1bc9778ebe02',
-            name='Delaware cultivate',
-            rule_origin=shared.AppRuleOrigin.SYSTEM,
+            name='Bolivia Peso Gasoline',
             rule_type_properties=shared.AppRuleType(
-                rule_type=shared.AppRuleTypeRuleType.VIOLATION_RULE_TYPE,
+                rule_type=shared.AppRuleTypeRuleType.INJECTION_RULE_TYPE,
             ),
             scope=shared.WorkloadRuleScopeType(
-                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ANY_RULE_TYPE,
+                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ENVIRONMENT_NAME_RULE_TYPE,
             ),
-            status=shared.AppRuleStatus.DELETED,
+            status=shared.AppRuleStatus.ENABLED,
         ),
     ],
 )

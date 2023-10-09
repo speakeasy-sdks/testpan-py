@@ -66,13 +66,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetGatewaysRequest(
-    max_results=5622.15,
-    name='Bicycle programming',
-    no_pagination=False,
-    offset=2121.34,
-    sort_dir=operations.GetGatewaysSortDir.ASC,
-)
+req = operations.GetGatewaysRequest()
 
 res = s.gateways.get_gateways(req)
 
@@ -189,10 +183,8 @@ s = pan.Pan(
 
 req = shared.Gateway(
     cluster_name='budgetary',
-    description='Organized non-volatile migration',
-    id='569c810a-5247-4536-a053-f148b119db42',
-    name='Savings distinctio blue',
-    type=shared.GatewayType.KONG_INTERNAL,
+    name='Tungsten technologies',
+    type=shared.GatewayType.TYK_INTERNAL,
 )
 
 res = s.gateways.post_gateways(req)
@@ -233,12 +225,10 @@ s = pan.Pan(
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
         cluster_name='Executive Minivan sky',
-        description='Upgradable bandwidth-monitored contingency',
-        id='69f02ce6-c757-479c-9c8e-935111463ea3',
-        name='Directives pink Central',
+        name='Northeast Rupee Burundi',
         type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='95ead58c-f0fb-4b52-ac2b-9a404d8ad2eb',
+    gateway_id='e6c75779-c9c8-4e93-9111-463ea3da225a',
 )
 
 res = s.gateways.put_gateways_gateway_id_(req)

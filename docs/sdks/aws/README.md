@@ -247,8 +247,7 @@ s = pan.Pan(
 
 req = shared.AWSRolePost(
     arn='Communications female',
-    description='Stand-alone encompassing knowledge base',
-    name='Crossroad black',
+    name='interfaces deposit Pants',
 )
 
 res = s.aws.post_aws_roles(req)
@@ -288,10 +287,9 @@ s = pan.Pan(
 
 req = operations.PutAwsRolesRoleIDRequest(
     aws_role_details=shared.AWSRoleDetails(
-        description='Optional asymmetric superstructure',
-        name='next Baby Neon',
+        name='Southwest oof',
     ),
-    role_id='e05da7a6-1a59-47d1-8375-7fdde668b4a1',
+    role_id='92ab1e05-da7a-461a-997d-143757fdde66',
 )
 
 res = s.aws.put_aws_roles_role_id_(req)
