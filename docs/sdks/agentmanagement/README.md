@@ -29,7 +29,6 @@ s = pan.Pan(
 )
 
 req = operations.GetAgentsRequest(
-    download_as_xlsx=False,
     environment_name=[
         'Account',
     ],
@@ -39,8 +38,6 @@ req = operations.GetAgentsRequest(
     risk=[
         operations.GetAgentsRisk.UNDEFINED,
     ],
-    sort_dir=operations.GetAgentsSortDir.ASC,
-    sort_key=operations.GetAgentsSortKey.LAST_ACTIVE,
     status=[
         operations.GetAgentsStatus.ACTIVE,
     ],
@@ -121,9 +118,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAgentsAgentIDUpdateStateRequest(
-    agent_status_update=shared.AgentStatusUpdate(
-        active=False,
-    ),
+    agent_status_update=shared.AgentStatusUpdate(),
     agent_id='34a187e9-3552-49e2-8694-f733a8b3f850',
 )
 

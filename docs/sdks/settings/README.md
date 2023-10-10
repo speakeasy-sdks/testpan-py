@@ -212,9 +212,7 @@ s = pan.Pan(
     ),
 )
 
-req = shared.SeccompProfileData(
-    data='{cycle: 29272, settlement: null, collaboration: "grey yearly"}',
-)
+req = shared.SeccompProfileData()
 
 res = s.settings.post_seccomp_profiles_validate_data(req)
 
@@ -284,8 +282,7 @@ s = pan.Pan(
 req = shared.CaIntegrationRequestInput(
     certificate='prickly',
     issuer_name='Loan whereas green',
-    issuer_namespace='Loan wield cyan',
-    name='Northwest Wagon Soft',
+    name='Loan wield cyan',
 )
 
 res = s.settings.post_settings_integrations_ca(req)
@@ -329,7 +326,6 @@ req = shared.EventsForwardingDetailsInput(
         shared.EventsToForward.ATTACK_PATH,
     ],
     name='Soft dull alliance',
-    url='https://truthful-campaigning.name',
 )
 
 res = s.settings.post_settings_integrations_event_forwarding(req)
@@ -485,10 +481,8 @@ s = pan.Pan(
 )
 
 req = shared.TestSplunkConnectionRequest(
-    is_cloud=False,
-    port=353653,
-    token='orange XSS meter',
-    url='http://legal-pea.com',
+    token='male grow',
+    url='https://short-term-accordion.biz',
 )
 
 res = s.settings.post_settings_integrations_splunk_test_integration(req)
@@ -643,10 +637,7 @@ s = pan.Pan(
     ),
 )
 
-req = shared.AgentsUpdateSettingsInput(
-    is_manual_update=False,
-    is_update_now_enabled=False,
-)
+req = shared.AgentsUpdateSettingsInput()
 
 res = s.settings.put_settings_agents_update(req)
 
@@ -687,10 +678,9 @@ req = operations.PutSettingsIntegrationsCaIDRequest(
     ca_integration_request_input=shared.CaIntegrationRequestInput(
         certificate='Berkshire',
         issuer_name='Bicycle',
-        issuer_namespace='Central UDP recontextualize',
-        name='Peru Market',
+        name='Central UDP recontextualize',
     ),
-    id='d2fdcaea-e550-46a1-9b8c-391af00a780a',
+    id='80b658d2-fdca-4eae-9506-a19b8c391af0',
 )
 
 res = s.settings.put_settings_integrations_ca_id_(req)
@@ -734,14 +724,10 @@ req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,
         ],
-        is_cloud=False,
         name='Genderqueer deploy',
-        port=212010,
-        source_name='proposal Yemen Audi',
-        token='RSS',
-        url='https://crafty-spec.net',
+        token='whoever',
     ),
-    event_forwarding_id='1b408bce-49d2-438c-ae86-ac5f2202c79c',
+    event_forwarding_id='b0fd0479-c2dc-41b4-88bc-e49d238c6e86',
 )
 
 res = s.settings.put_settings_integrations_event_forwarding_event_forwarding_id_(req)

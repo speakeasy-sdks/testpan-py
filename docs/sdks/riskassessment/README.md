@@ -183,10 +183,6 @@ req = operations.GetRiskAssessmentPermissionsRequest(
     clusters_ids=[
         'a89898f1-37f8-4c09-8113-2e54dc492339',
     ],
-    include_system_owners=False,
-    permission_risk=operations.GetRiskAssessmentPermissionsPermissionRisk.MEDIUM,
-    sort_dir=operations.GetRiskAssessmentPermissionsSortDir.DESC,
-    sort_key=operations.GetRiskAssessmentPermissionsSortKey.PERMISSION_RISK,
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions(req)
@@ -226,16 +222,6 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentPermissionsClusterIDRequest(
     cluster_id='af306627-d7b5-4fd9-a554-cf5effac095b',
-    include_system_owners=False,
-    max_results=8466.56,
-    namespace_name='Moldovan',
-    no_pagination=False,
-    offset=3482.6,
-    owner='Tennessine Cisgender',
-    owner_type=operations.GetRiskAssessmentPermissionsClusterIDOwnerType.SERVICEACCOUNT,
-    permission_risk=operations.GetRiskAssessmentPermissionsClusterIDPermissionRisk.NO_RISK,
-    sort_dir=operations.GetRiskAssessmentPermissionsClusterIDSortDir.DESC,
-    sort_key=operations.GetRiskAssessmentPermissionsClusterIDSortKey.OWNER_TYPE,
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_(req)
@@ -275,10 +261,7 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRequest(
     cluster_id='e6c26498-20da-481b-bc16-7b830d3456dd',
-    is_approved=False,
     owner_id='79a8a441-40ea-4cdf-8584-73da2c62b846',
-    sort_dir=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.ASC,
-    sort_key=operations.GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey.RISK,
 )
 
 res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_(req)
@@ -400,9 +383,6 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentImageIDVulnerabilitiesRequest(
     image_id='6cbcdb90-f642-47ed-b640-ae8227deac5c',
-    max_results=8240.13,
-    offset=7702.86,
-    sort_dir=operations.GetRiskAssessmentImageIDVulnerabilitiesSortDir.ASC,
     sort_key=operations.GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY,
 )
 
@@ -442,12 +422,7 @@ s = pan.Pan(
 )
 
 req = operations.GetRiskAssessmentKubernetesClusterIDPodsRequest(
-    download_as_xlsx=False,
     kubernetes_cluster_id='764514eb-01d8-4d87-972e-7065c0075222',
-    max_results=2696.33,
-    namespaces_names_filter='copying scent',
-    offset=3728.39,
-    sort_dir=operations.GetRiskAssessmentKubernetesClusterIDPodsSortDir.DESC,
     sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsSortKey.NAME,
 )
 
@@ -610,7 +585,6 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
         periodic_job_expression=shared.PeriodicJobExpression(
             periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.NON_PERIODIC_JOB_EXPRESSION,
         ),
-        run_dockerfile_scan=False,
     ),
     kubernetes_cluster_id='a0c9884d-ef8c-417b-9484-5665df2f730e',
 )
@@ -652,18 +626,17 @@ s = pan.Pan(
 
 req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
     ci_policy_input=shared.CiPolicyInput(
-        description='Face to face directional superstructure',
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
+            enforcement_option=shared.EnforcementOption.FAIL,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='haptic Manager',
+        name='Bentley Intersex feed',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
+            enforcement_option=shared.EnforcementOption.FAIL,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.HIGH,
         ),
     ),
-    ignored_risk_id='2b6ef16d-35fd-4f85-a9c3-11ad619343e9',
+    ignored_risk_id='52b6ef16-d35f-4df8-929c-311ad619343e',
 )
 
 res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)

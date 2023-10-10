@@ -87,7 +87,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
     api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
-    num_of_days=738205,
 )
 
 res = s.dashboard.get_dashboard_apisec_risk_findings_trend(req)
@@ -166,7 +165,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
-    max_results=9119.67,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_apis(req)
@@ -206,7 +204,6 @@ s = pan.Pan(
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
     api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
-    max_results=5232.51,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_findings(req)
@@ -379,7 +376,6 @@ req = operations.GetDashboardPermissionsRequest(
     clusters_ids=[
         '5a331cfa-e207-49d9-a176-e260318ece7d',
     ],
-    include_system_owners=False,
 )
 
 res = s.dashboard.get_dashboard_permissions(req)
@@ -552,7 +548,6 @@ req = operations.GetDashboardTopSecurityRisksRequest(
     clusters_ids=[
         'e552767e-0350-4925-b7e4-39731700805c',
     ],
-    size=313477,
 )
 
 res = s.dashboard.get_dashboard_top_security_risks(req)

@@ -70,13 +70,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetEnvironmentsRequest(
-    download_as_xlsx=False,
-    include_system_envs=False,
-    name='Pangender',
-    sort_dir=operations.GetEnvironmentsSortDir.ASC,
-    sort_key=operations.GetEnvironmentsSortKey.NAME,
-)
+req = operations.GetEnvironmentsRequest()
 
 res = s.envs.get_environments(req)
 
@@ -195,37 +189,30 @@ s = pan.Pan(
 req = shared.EnvironmentInput(
     aws_environments=[
         shared.AwsEnvironmentInput(
-            id='3143be01-277d-4065-a891-6a0e622811bd',
             tags=[
                 shared.Tag(
                     key='<key>',
-                    value='blue',
+                    value='South',
                 ),
             ],
             vpc=shared.VPCDescriptionInput(
-                aws_account_id='sequestrate Square',
-                name='keyboarding Southwest',
-                region_id='sievert Nepalese',
-                vpc_id='Card Electronic',
+                aws_account_id='Seaborgium',
+                region_id='Northeast',
+                vpc_id='invoice Honduras',
             ),
         ),
     ],
-    description='Managed cohesive conglomeration',
-    id='8b0df411-a017-4fec-b7c0-652306ac0dd6',
-    is_system_env=False,
     kubernetes_environments=[
         shared.KubernetesEnvironmentInput(
-            id='2ded15fb-507e-428f-8658-431e3d4048f3',
-            kubernetes_cluster='1327f0e5-119e-46a7-bae1-a8564c416b7d',
-            kubernetes_cluster_name='female Hat',
+            kubernetes_cluster='5a8916a0-e622-4811-bd3c-8c7fc23dd96f',
             namespace_labels=[
                 shared.Label(
                     key='<key>',
-                    value='Bedfordshire Northeast',
+                    value='Southwest group',
                 ),
             ],
             namespaces=[
-                'Tracy',
+                'sievert',
             ],
         ),
     ],
@@ -272,37 +259,30 @@ req = [
     shared.EnvironmentInput(
         aws_environments=[
             shared.AwsEnvironmentInput(
-                id='925b166e-fc31-42c0-aebd-81198d741c5b',
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='epithelium Architect transsexual',
+                        value='Maine ampere',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='Touring',
-                    name='maroon Designer Rubber',
-                    region_id='Van',
-                    vpc_id='Ouguiya Practical Sausages',
+                    aws_account_id='support round',
+                    region_id='East',
+                    vpc_id='Coast Facilitator bypassing',
                 ),
             ),
         ],
-        description='Reactive multimedia open system',
-        id='a8d71159-31ea-4cc0-a751-fa912e0c2e77',
-        is_system_env=False,
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                id='81de4db5-179e-49e8-a850-eef1ac7cc5cf',
-                kubernetes_cluster='7cd38ac9-5b1f-4cd3-b4df-81a2f60b1759',
-                kubernetes_cluster_name='Avon male East',
+                kubernetes_cluster='198d741c-5bdf-45a6-87e9-5a1cd6d26b83',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='Missouri magenta',
+                        value='West Customer',
                     ),
                 ],
                 namespaces=[
-                    'preface',
+                    'except',
                 ],
             ),
         ],
@@ -381,43 +361,36 @@ req = operations.PutEnvironmentsEnvIDRequest(
     environment_input=shared.EnvironmentInput(
         aws_environments=[
             shared.AwsEnvironmentInput(
-                id='57cf89fe-5e65-409c-b415-d6003566df6f',
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='Avon',
+                        value='1080p into',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='actually communities Soul',
-                    name='fatally Customer Accounts',
-                    region_id='Cargo Mexico',
-                    vpc_id='Fiat executive',
+                    aws_account_id='tromp Upgradable',
+                    region_id='paradigms eligendi',
+                    vpc_id='Steel revolutionize Checking',
                 ),
             ),
         ],
-        description='Pre-emptive bifurcated access',
-        id='4790c5f1-efb6-450d-a980-1dae0e967d9d',
-        is_system_env=False,
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                id='0297331b-d38c-454f-9f13-9d5f8956b63c',
-                kubernetes_cluster='b013e34e-0fd3-4e76-a959-cf530e5cf52d',
-                kubernetes_cluster_name='Carolina Integration',
+                kubernetes_cluster='3566df6f-010d-4e05-b98d-e3a9acad0419',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='including Recumbent International',
+                        value='portals Lakes West',
                     ),
                 ],
                 namespaces=[
-                    'Loan',
+                    'zero',
                 ],
             ),
         ],
         name='Prod',
     ),
-    env_id='fd1e02d4-5afd-490e-8b66-39364458cb01',
+    env_id='efb650de-9801-4dae-8e96-7d9d0297331b',
 )
 
 res = s.envs.put_environments_env_id_(req)

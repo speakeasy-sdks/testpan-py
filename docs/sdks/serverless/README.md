@@ -81,13 +81,7 @@ s = pan.Pan(
 )
 
 req = operations.GetCloudAccountsRequest(
-    cloud_account_name='quam Legacy',
-    max_results=1307.16,
-    no_pagination=False,
-    offset=8371.14,
-    region='Wagon Arlington',
-    sort_dir=operations.GetCloudAccountsSortDir.ASC,
-    sort_key=operations.GetCloudAccountsSortKey.NAME,
+    sort_key=operations.GetCloudAccountsSortKey.LAST_SCANNED,
 )
 
 res = s.serverless.get_cloud_accounts(req)
@@ -324,30 +318,24 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsRequest(
-    cloud_account_name='coordinated',
     cloud_accounts_ids_filter=[
-        '13824322-22f0-4b89-ac2b-1bfba58c422a',
+        '2d213824-3222-42f0-b89a-c2b1bfba58c4',
     ],
-    download_as_xlsx=False,
     func_name=[
-        'synthesizing',
+        'Electronics',
     ],
-    max_results=9594.89,
-    offset=7413.73,
     policy_risk=[
-        operations.GetServerlessFunctionsPolicyRisk.MEDIUM,
+        operations.GetServerlessFunctionsPolicyRisk.HIGH,
     ],
-    region='transmit',
     result=[
         operations.GetServerlessFunctionsResult.DETECT,
     ],
     risk=[
-        operations.GetServerlessFunctionsRisk.HIGH,
+        operations.GetServerlessFunctionsRisk.CRITICAL,
     ],
     secrets_risk=[
         operations.GetServerlessFunctionsSecretsRisk.RISK_IDENTIFIED,
     ],
-    sort_dir=operations.GetServerlessFunctionsSortDir.ASC,
 )
 
 res = s.serverless.get_serverless_functions(req)
@@ -386,11 +374,9 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsArnsRequest(
-    cloud_account_name='Northwest',
     func_arn=[
-        'South',
+        'Northeast',
     ],
-    region='Kia righteously Bronze',
 )
 
 res = s.serverless.get_serverless_functions_arns(req)
@@ -429,11 +415,9 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessFunctionsNamesRequest(
-    cloud_account_name='withdrawal Human',
     func_name=[
-        'whiteboard',
+        'Hermaphrodite',
     ],
-    region='Avon gosh',
 )
 
 res = s.serverless.get_serverless_functions_names(req)
@@ -551,8 +535,6 @@ s = pan.Pan(
 
 req = operations.GetServerlessFunctionsFunctionIDVulnerabilitiesRequest(
     function_id='2ad182ca-55b9-436d-935a-2584c6608fc0',
-    max_results=8248.92,
-    offset=7517.01,
 )
 
 res = s.serverless.get_serverless_functions_function_id_vulnerabilities(req)
@@ -590,14 +572,7 @@ s = pan.Pan(
     ),
 )
 
-req = operations.GetServerlessZipFilesRequest(
-    max_results=5376.87,
-    offset=8734.72,
-    sort_dir=operations.GetServerlessZipFilesSortDir.ASC,
-    sort_key=operations.GetServerlessZipFilesSortKey.TIME,
-    zip_name_filter='Gasoline',
-    zip_sha256_filter='calm executive implement',
-)
+req = operations.GetServerlessZipFilesRequest()
 
 res = s.serverless.get_serverless_zip_files(req)
 
@@ -713,10 +688,7 @@ s = pan.Pan(
 )
 
 req = operations.GetServerlessZipFilesZipIDVulnerabilitiesRequest(
-    max_results=4757.97,
-    offset=8704.31,
-    sort_dir=operations.GetServerlessZipFilesZipIDVulnerabilitiesSortDir.ASC,
-    zip_id='40878f68-2a69-434d-bf1a-10ecad858b07',
+    zip_id='7d640878-f682-4a69-b4d3-f1a10ecad858',
 )
 
 res = s.serverless.get_serverless_zip_files_zip_id_vulnerabilities(req)
@@ -797,38 +769,16 @@ s = pan.Pan(
 
 req = operations.PutCloudAccountsCloudAccountIDRequest(
     cloud_account_input=shared.CloudAccountInput(
-        cloud_provider=shared.CloudProviderType.AWS,
-        install_vulnerability_scanner=False,
-        name='Bicycle',
         periodic_job_expression=shared.ServerlessPeriodicJobExpression(
-            periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_DAYS_PERIODIC_JOB_EXPRESSION,
+            periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),
         regions=[
-            'Division',
+            'Cheese',
         ],
-        security_threats=shared.CloudAccountSecurityThreats(
-            data_access_risk=shared.ServerlessDataAccessRisk.MEDIUM,
-            data_access_risk_count=719927,
-            is_unused_function=False,
-            policy_risk=shared.ServerlessPolicyRisk.NO_RISK,
-            policy_risk_count=327969,
-            publicly_accessible_risk=shared.ServerlessPubliclyAccessibleRisk.NO_RISK,
-            publicly_accessible_risk_count=212197,
-            secrets_risk=shared.ServerlessSecretsRisk.NO_KNOWN_RISK,
-            secrets_risk_count=276225,
-            unused_function_count=505048,
-        ),
-        validate_function=shared.CloudAccountValidateFunction.SIGNATURE_VALIDATION,
-        vulnerabilities_summary=shared.VulnerabilitiesSummary(
-            critical=866582,
-            high=785242,
-            low=794613,
-            medium=453950,
-            total=407496,
-            unknown=594287,
-        ),
+        security_threats=shared.CloudAccountSecurityThreats(),
+        vulnerabilities_summary=shared.VulnerabilitiesSummary(),
     ),
-    cloud_account_id='7a579ecd-c3c3-4cb0-b74b-a26ecaa06648',
+    cloud_account_id='18ca7fb1-5534-4488-9cc7-697a579ecdc3',
 )
 
 res = s.serverless.put_cloud_accounts_cloud_account_id_(req)
