@@ -39,6 +39,7 @@ res = s.registries.delete_registries_registry_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.registries.get_registries(req)
 
 if res.registries is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.registries.post_registries(req)
 
 if res.registry is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -168,6 +171,7 @@ res = s.registries.post_registries_test_connection(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -217,6 +221,7 @@ res = s.registries.post_registries_test_connection_registry_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -266,6 +271,7 @@ res = s.registries.put_registries_registry_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -40,6 +40,7 @@ res = s.apps.get_apps(req)
 
 if res.apps is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.apps.get_apps_app_id_(req)
 
 if res.app is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -134,6 +136,7 @@ res = s.apps.post_apps(req)
 
 if res.app is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -174,6 +177,7 @@ res = s.apps.post_apps_delete(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -232,6 +236,7 @@ res = s.apps.put_apps_app_id_(req)
 
 if res.app is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

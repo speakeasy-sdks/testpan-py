@@ -35,6 +35,7 @@ res = s.gateways.delete_gateways_gateway_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -72,6 +73,7 @@ res = s.gateways.get_gateways(req)
 
 if res.gateways is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -111,6 +113,7 @@ res = s.gateways.get_gateways_clusters(req)
 
 if res.gateway_cluster_infos is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -150,6 +153,7 @@ res = s.gateways.get_gateways_gateway_id_download_bundle(req)
 
 if res.get_gateways_gateway_id_download_bundle_200_application_json_binary_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -191,6 +195,7 @@ res = s.gateways.post_gateways(req)
 
 if res.gateway is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -235,6 +240,7 @@ res = s.gateways.put_gateways_gateway_id_(req)
 
 if res.gateway is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

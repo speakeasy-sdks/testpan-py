@@ -38,6 +38,7 @@ res = s.expansions.delete_expansions_expansion_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -77,6 +78,7 @@ res = s.expansions.get_expansions(req)
 
 if res.expansions is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -116,6 +118,7 @@ res = s.expansions.get_expansions_expansion_id_install_expansion_tar_gz(req)
 
 if res.get_expansions_expansion_id_install_expansion_tar_gz_200_application_json_binary_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -169,6 +172,7 @@ res = s.expansions.post_expansions(req)
 
 if res.expansion is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -222,6 +226,7 @@ res = s.expansions.put_expansions_expansion_id_(req)
 
 if res.expansion is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

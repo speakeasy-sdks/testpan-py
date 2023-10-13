@@ -36,6 +36,7 @@ res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
 if res.delete_api_security_internal_catalog_catalog_id_bfla_detection_204_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
 if res.delete_api_security_internal_catalog_catalog_id_bfla_learning_204_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -114,6 +116,7 @@ res = s.bfla.get_api_security_internal_catalog_catalog_id_bfla(req)
 
 if res.api_service_bfla_info is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
 if res.post_api_security_internal_catalog_catalog_id_bfla_detection_201_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
 if res.post_api_security_internal_catalog_catalog_id_bfla_learning_201_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -237,6 +242,7 @@ res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
 
 if res.post_api_security_internal_catalog_catalog_id_bfla_reset_201_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -303,6 +309,7 @@ res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)
 
 if res.put_api_security_internal_catalog_catalog_id_bfla_200_application_json_uuid_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

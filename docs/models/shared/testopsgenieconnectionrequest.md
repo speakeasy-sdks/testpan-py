@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `token`            | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `token`            | *str*              | :heavy_check_mark: | N/A                |

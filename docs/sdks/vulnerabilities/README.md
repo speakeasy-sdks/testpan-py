@@ -28,6 +28,7 @@ res = s.vulnerabilities.get_vulnerabilities(req)
 
 if res.get_vulnerabilities_200_application_json_strings is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

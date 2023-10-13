@@ -37,6 +37,7 @@ res = s.advisor.get_advisor_cluster_event_rules()
 
 if res.cluster_event_rule_recommendation_periods is not None:
     # handle response
+    pass
 ```
 
 
@@ -67,6 +68,7 @@ res = s.advisor.get_advisor_connection_rules()
 
 if res.connections_rule_recommendation_periods is not None:
     # handle response
+    pass
 ```
 
 
@@ -97,6 +99,7 @@ res = s.advisor.get_advisor_environment()
 
 if res.environment_recommendation_periods is not None:
     # handle response
+    pass
 ```
 
 
@@ -127,6 +130,7 @@ res = s.advisor.get_advisor_environment_rules()
 
 if res.environment_rules_recommendation_periods is not None:
     # handle response
+    pass
 ```
 
 
@@ -157,6 +161,7 @@ res = s.advisor.get_advisor_pod_security_policy()
 
 if res.pod_security_policy_recommendation_periods is not None:
     # handle response
+    pass
 ```
 
 
@@ -190,6 +195,7 @@ res = s.advisor.get_advisor_queue_advisor_type_(req)
 
 if res.policy_advisor_state is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -229,6 +235,7 @@ res = s.advisor.post_advisor_run(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `request_id`       | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `request_id`       | *str*              | :heavy_check_mark: | N/A                |

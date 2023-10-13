@@ -35,6 +35,7 @@ res = s.tokens.delete_tokens_token_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -72,6 +73,7 @@ res = s.tokens.get_tokens(req)
 
 if res.tokens is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.tokens.get_tokens_info(req)
 
 if res.api_token_infos is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -152,6 +155,7 @@ res = s.tokens.get_tokens_token_id_delete_dependencies(req)
 
 if res.token_delete_dependencies is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -196,6 +200,7 @@ res = s.tokens.post_tokens(req)
 
 if res.token is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -243,6 +248,7 @@ res = s.tokens.put_tokens_token_id_(req)
 
 if res.token is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

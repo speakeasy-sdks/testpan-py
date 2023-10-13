@@ -28,6 +28,7 @@ res = s.serverless_policies.get_serverless_policy()
 
 if res.serverless_policy is not None:
     # handle response
+    pass
 ```
 
 
@@ -83,6 +84,7 @@ res = s.serverless_policies.put_serverless_policy(req)
 
 if res.serverless_policy is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

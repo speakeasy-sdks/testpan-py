@@ -47,6 +47,7 @@ res = s.agent_management.get_agents(req)
 
 if res.agents is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -86,6 +87,7 @@ res = s.agent_management.post_agents_agent_id_update(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -126,6 +128,7 @@ res = s.agent_management.post_agents_agent_id_update_state(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

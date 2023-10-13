@@ -48,6 +48,7 @@ res = s.images_and_vulnerabilities.delete_images_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -95,6 +96,7 @@ res = s.images_and_vulnerabilities.get_account_vulnerabilities_xlsx(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -143,6 +145,7 @@ res = s.images_and_vulnerabilities.get_images(req)
 
 if res.image_def_gets is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -180,6 +183,7 @@ res = s.images_and_vulnerabilities.get_images_images_hash(req)
 
 if res.get_images_images_hash_200_application_json_strings is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -220,6 +224,7 @@ res = s.images_and_vulnerabilities.get_images_vulnerabilities_by_image_name_and_
 
 if res.vulnerabilities is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -259,6 +264,7 @@ res = s.images_and_vulnerabilities.get_images_id_(req)
 
 if res.image_def_get is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -298,6 +304,7 @@ res = s.images_and_vulnerabilities.get_images_image_id_dockerfile_scan_results(r
 
 if res.dockerfile_scan_results is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -337,6 +344,7 @@ res = s.images_and_vulnerabilities.get_images_image_id_image_layers(req)
 
 if res.image_layers is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -376,6 +384,7 @@ res = s.images_and_vulnerabilities.get_images_image_id_packages(req)
 
 if res.image_package_details is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -415,6 +424,7 @@ res = s.images_and_vulnerabilities.get_images_image_id_sbom_path(req)
 
 if res.image_sbom_path_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -454,6 +464,7 @@ res = s.images_and_vulnerabilities.get_images_image_id_vulnerabilities(req)
 
 if res.vulnerabilities is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -496,6 +507,7 @@ res = s.images_and_vulnerabilities.post_images(req)
 
 if res.image_def_get is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -540,6 +552,7 @@ res = s.images_and_vulnerabilities.post_images_approve(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -585,6 +598,7 @@ res = s.images_and_vulnerabilities.post_images_image_id_dockerfile_scan_results_
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -630,6 +644,7 @@ res = s.images_and_vulnerabilities.post_images_image_id_vulnerabilities_ignore(r
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

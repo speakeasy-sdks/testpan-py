@@ -76,6 +76,7 @@ res = s.telemetries.get_app_telemetries(req)
 
 if res.app_telemetries is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -115,6 +116,7 @@ res = s.telemetries.get_app_telemetries_app_telemetry_id_(req)
 
 if res.app_telemetry is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -154,6 +156,7 @@ res = s.telemetries.get_app_telemetries_app_telemetry_id_api_risk_info(req)
 
 if res.api_risk_infos is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -193,6 +196,7 @@ res = s.telemetries.get_app_telemetries_app_telemetry_id_image_packages(req)
 
 if res.images_with_licenses is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -232,6 +236,7 @@ res = s.telemetries.get_app_telemetries_app_telemetry_id_injection_info(req)
 
 if res.token_injection_infos is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -307,6 +312,7 @@ res = s.telemetries.get_connection_telemetries(req)
 
 if res.connection_telemetries is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -349,6 +355,7 @@ res = s.telemetries.get_connection_telemetries_connection_telemetry_id_(req)
 
 if res.connection_telemetry is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

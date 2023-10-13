@@ -38,6 +38,7 @@ res = s.trusted_signers.delete_trusted_signers_trusted_signer_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.trusted_signers.get_trusted_signers(req)
 
 if res.trusted_signers is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -114,6 +116,7 @@ res = s.trusted_signers.get_trusted_signers_trusted_signer_id_(req)
 
 if res.trusted_signer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -165,6 +168,7 @@ res = s.trusted_signers.post_trusted_signers(req)
 
 if res.trusted_signer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -219,6 +223,7 @@ res = s.trusted_signers.put_trusted_signers_trusted_signer_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

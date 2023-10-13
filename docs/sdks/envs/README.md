@@ -39,6 +39,7 @@ res = s.envs.delete_environments_env_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.envs.get_environments(req)
 
 if res.environments is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -115,6 +117,7 @@ res = s.envs.get_environments_env_id_(req)
 
 if res.environments is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -154,6 +157,7 @@ res = s.envs.get_environments_env_id_delete_dependencies(req)
 
 if res.delete_dependency_element_environments is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -223,6 +227,7 @@ res = s.envs.post_environments(req)
 
 if res.environment is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -294,6 +299,7 @@ res = s.envs.post_environments_batch(req)
 
 if res.environments is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -331,6 +337,7 @@ res = s.envs.post_environments_delete()
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 
@@ -397,6 +404,7 @@ res = s.envs.put_environments_env_id_(req)
 
 if res.environment is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

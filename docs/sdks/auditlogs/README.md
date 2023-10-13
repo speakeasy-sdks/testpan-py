@@ -42,6 +42,7 @@ res = s.audit_logs.get_audit_logs(req)
 
 if res.audit_logs is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.audit_logs.get_audit_logs_actions()
 
 if res.get_audit_logs_actions_200_application_json_strings is not None:
     # handle response
+    pass
 ```
 
 
@@ -119,6 +121,7 @@ res = s.audit_logs.get_audit_logs_kubernetes(req)
 
 if res.kubernetes_audit_logs is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -155,6 +158,7 @@ res = s.audit_logs.get_audit_logs_kubernetes_actions()
 
 if res.get_audit_logs_kubernetes_actions_200_application_json_strings is not None:
     # handle response
+    pass
 ```
 
 

@@ -52,6 +52,7 @@ res = s.settings.delete_settings_integrations_ca_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,6 +92,7 @@ res = s.settings.delete_settings_integrations_event_forwarding_event_forwarding_
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -127,6 +129,7 @@ res = s.settings.get_settings_agents_update()
 
 if res.agents_update_settings is not None:
     # handle response
+    pass
 ```
 
 
@@ -157,6 +160,7 @@ res = s.settings.get_settings_integrations_ca()
 
 if res.ca_integration_response_with_clusters is not None:
     # handle response
+    pass
 ```
 
 
@@ -187,6 +191,7 @@ res = s.settings.get_settings_integrations_event_forwarding()
 
 if res.events_forwarding_details_list is not None:
     # handle response
+    pass
 ```
 
 
@@ -218,6 +223,7 @@ res = s.settings.post_seccomp_profiles_validate_data(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -254,6 +260,7 @@ res = s.settings.post_settings_agents_update_update_now()
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 
@@ -289,6 +296,7 @@ res = s.settings.post_settings_integrations_ca(req)
 
 if res.ca_integration_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -332,6 +340,7 @@ res = s.settings.post_settings_integrations_event_forwarding(req)
 
 if res.events_forwarding_details is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -371,6 +380,7 @@ res = s.settings.post_settings_integrations_opsgenie_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -410,6 +420,7 @@ res = s.settings.post_settings_integrations_securex_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -449,6 +460,7 @@ res = s.settings.post_settings_integrations_slack_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -489,6 +501,7 @@ res = s.settings.post_settings_integrations_splunk_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -528,6 +541,7 @@ res = s.settings.post_settings_integrations_sumo_logic_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -567,6 +581,7 @@ res = s.settings.post_settings_integrations_teams_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -606,6 +621,7 @@ res = s.settings.post_settings_integrations_webex_test_integration(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -643,6 +659,7 @@ res = s.settings.put_settings_agents_update(req)
 
 if res.agents_update_settings is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -687,6 +704,7 @@ res = s.settings.put_settings_integrations_ca_id_(req)
 
 if res.ca_integration_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -734,6 +752,7 @@ res = s.settings.put_settings_integrations_event_forwarding_event_forwarding_id_
 
 if res.events_forwarding_details is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

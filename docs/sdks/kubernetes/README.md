@@ -52,6 +52,7 @@ res = s.kubernetes.delete_kubernetes_clusters_kubernetes_cluster_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -91,6 +92,7 @@ res = s.kubernetes.delete_pod_definitions_pod_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -130,6 +132,7 @@ res = s.kubernetes.get_get_controller_data_cluster_id_(req)
 
 if res.controller_data_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.kubernetes.get_istio_supported_versions()
 
 if res.get_istio_supported_versions_200_application_json_strings is not None:
     # handle response
+    pass
 ```
 
 
@@ -197,6 +201,7 @@ res = s.kubernetes.get_kubernetes_clusters(req)
 
 if res.kubernetes_cluster_controllers is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -236,6 +241,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_(req)
 
 if res.kubernetes_cluster is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -275,6 +281,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_delete_dependen
 
 if res.kubernetes_cluster_delete_dependencies is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -314,6 +321,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_download_bundle
 
 if res.get_kubernetes_clusters_kubernetes_cluster_id_download_bundle_200_application_json_binary_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -353,6 +361,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_get_helm_comman
 
 if res.helm_commands_installation is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -392,6 +401,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_namespaces(req)
 
 if res.kubernetes_namespace_responses is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -431,6 +441,7 @@ res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_services(req)
 
 if res.kubernetes_services is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -468,6 +479,7 @@ res = s.kubernetes.get_lean_kubernetes_clusters(req)
 
 if res.lean_kubernetes_clusters is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -505,6 +517,7 @@ res = s.kubernetes.get_namespaces(req)
 
 if res.namespaces is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -549,6 +562,7 @@ res = s.kubernetes.get_pod_definitions(req)
 
 if res.pod_definitions is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -605,6 +619,7 @@ res = s.kubernetes.post_kubernetes_clusters(req)
 
 if res.kubernetes_cluster is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -661,6 +676,7 @@ res = s.kubernetes.post_pod_definitions(req)
 
 if res.pod_definition is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -720,6 +736,7 @@ res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_(req)
 
 if res.kubernetes_cluster is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -760,6 +777,7 @@ res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm
 
 if res.kubernetes_cluster is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -819,6 +837,7 @@ res = s.kubernetes.put_pod_definitions_pod_id_(req)
 
 if res.pod_definition is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

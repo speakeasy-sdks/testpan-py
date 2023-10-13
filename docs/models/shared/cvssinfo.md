@@ -5,8 +5,8 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `score`            | *Optional[float]*  | :heavy_check_mark: | N/A                |
-| `source`           | *Optional[str]*    | :heavy_check_mark: | N/A                |
-| `type`             | *Optional[str]*    | :heavy_check_mark: | N/A                |
-| `vector`           | *Optional[str]*    | :heavy_check_mark: | N/A                |
-| `version`          | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `score`            | *float*            | :heavy_check_mark: | N/A                |
+| `source`           | *str*              | :heavy_check_mark: | N/A                |
+| `type`             | *str*              | :heavy_check_mark: | N/A                |
+| `vector`           | *str*              | :heavy_check_mark: | N/A                |
+| `version`          | *str*              | :heavy_check_mark: | N/A                |

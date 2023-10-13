@@ -37,6 +37,7 @@ res = s.mitre.get_mitre_dashboard(req)
 
 if res.mitre_dashboard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.mitre.get_mitre_report_download()
 
 if res.get_mitre_report_download_200_application_json_binary_string is not None:
     # handle response
+    pass
 ```
 
 
@@ -103,6 +105,7 @@ res = s.mitre.get_mitre_report_status()
 
 if res.report_status is not None:
     # handle response
+    pass
 ```
 
 
@@ -139,6 +142,7 @@ res = s.mitre.get_mitre_technique(req)
 
 if res.mitre_technique_info is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -175,6 +179,7 @@ res = s.mitre.post_mitre_report_generate()
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 
@@ -216,6 +221,7 @@ res = s.mitre.post_mitre_technique_fix(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters

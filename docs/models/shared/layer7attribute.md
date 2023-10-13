@@ -7,5 +7,5 @@ Collection of layer 7 attributes
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `key`              | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `key`              | *str*              | :heavy_check_mark: | N/A                |
 | `values`           | list[*str*]        | :heavy_check_mark: | N/A                |

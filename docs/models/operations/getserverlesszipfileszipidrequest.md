@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `zip_id`           | *Optional[str]*    | :heavy_check_mark: | N/A                |
+| `zip_id`           | *str*              | :heavy_check_mark: | N/A                |

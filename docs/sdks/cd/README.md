@@ -43,6 +43,7 @@ res = s.cd.delete_cd_rule_id_connections_rule(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -82,6 +83,7 @@ res = s.cd.delete_cd_rule_id_serverless_rule(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -123,6 +125,7 @@ res = s.cd.get_cd(req)
 
 if res.cd_pipeline_results is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -162,6 +165,7 @@ res = s.cd.get_cd_resource_id_(req)
 
 if res.cd_pipeline_resource_result is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -201,6 +205,7 @@ res = s.cd.get_cd_rule_id_connections_rule(req)
 
 if res.cd_connection_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -240,6 +245,7 @@ res = s.cd.get_cd_rule_id_serverless_rule(req)
 
 if res.cd_serverless_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -284,6 +290,7 @@ res = s.cd.post_cd_connections_rule(req)
 
 if res.cd_connection_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -337,6 +344,7 @@ res = s.cd.post_cd_serverless_rule(req)
 
 if res.cd_serverless_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -384,6 +392,7 @@ res = s.cd.put_cd_rule_id_connections_rule(req)
 
 if res.cd_connection_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -440,6 +449,7 @@ res = s.cd.put_cd_rule_id_serverless_rule(req)
 
 if res.cd_serverless_rule is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

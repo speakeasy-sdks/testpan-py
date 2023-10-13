@@ -20,5 +20,6 @@ res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->
