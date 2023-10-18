@@ -7,12 +7,10 @@ from ..shared import openapispec as shared_openapispec
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityOpenAPISpecsCatalogIDRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

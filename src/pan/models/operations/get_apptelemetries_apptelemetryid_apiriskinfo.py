@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apiriskinfo as shared_apiriskinfo
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,14 +15,13 @@ class GetAppTelemetriesAppTelemetryIDAPIRiskInfoRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAppTelemetriesAppTelemetryIDAPIRiskInfoResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_risk_infos: Optional[list[shared_apiriskinfo.APIRiskInfo]] = dataclasses.field(default=None)
+    api_risk_infos: Optional[List[shared_apiriskinfo.APIRiskInfo]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

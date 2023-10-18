@@ -12,7 +12,6 @@ class ChallengeRequestChallengeName(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ChallengeRequest:
     challenge_name: Optional[ChallengeRequestChallengeName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ChallengeName'), 'exclude': lambda f: f is None }})

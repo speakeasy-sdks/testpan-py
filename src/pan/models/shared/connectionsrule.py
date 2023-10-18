@@ -19,7 +19,6 @@ class ConnectionsRuleStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectionsRule:
     r"""A rule that states what Apps are allowed to communicate with each other."""

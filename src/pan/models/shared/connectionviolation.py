@@ -14,7 +14,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectionViolation:
     r"""If there is a connection violation according to the policy - this object will hold the violation info"""

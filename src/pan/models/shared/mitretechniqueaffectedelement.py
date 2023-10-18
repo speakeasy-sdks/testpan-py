@@ -15,7 +15,6 @@ class MitreTechniqueAffectedElementMitreTechniqueAffectedElementType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MitreTechniqueAffectedElement:
     mitre_technique_affected_element_type: Optional[MitreTechniqueAffectedElementMitreTechniqueAffectedElementType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('MitreTechniqueAffectedElementType'), 'exclude': lambda f: f is None }})

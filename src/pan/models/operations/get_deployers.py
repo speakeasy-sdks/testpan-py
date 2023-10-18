@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import deployer as shared_deployer
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetDeployersSortDir(str, Enum):
     r"""sorting direction"""
@@ -16,7 +16,6 @@ class GetDeployersSortKey(str, Enum):
     r"""sort key"""
     DEPLOYER = 'deployer'
     TYPE = 'type'
-
 
 
 @dataclasses.dataclass
@@ -39,14 +38,13 @@ class GetDeployersRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetDeployersResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    deployers: Optional[list[shared_deployer.Deployer]] = dataclasses.field(default=None)
+    deployers: Optional[List[shared_deployer.Deployer]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

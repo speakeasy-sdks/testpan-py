@@ -8,13 +8,11 @@ from ..shared import apiservicefuzzingtest as shared_apiservicefuzzingtest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityInternalCatalogCatalogIDStartFuzzingRequest:
     api_fuzzing_test_configuration: shared_apifuzzingtestconfiguration.APIFuzzingTestConfiguration = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

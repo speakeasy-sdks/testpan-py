@@ -7,7 +7,6 @@ from ..shared import token as shared_token
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostTokensResponse:
     content_type: str = dataclasses.field()

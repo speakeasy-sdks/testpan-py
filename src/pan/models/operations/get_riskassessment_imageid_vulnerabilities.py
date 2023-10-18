@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import riskassessmentvulnerability as shared_riskassessmentvulnerability
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetRiskAssessmentImageIDVulnerabilitiesSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetRiskAssessmentImageIDVulnerabilitiesSortDir(str, Enum):
 class GetRiskAssessmentImageIDVulnerabilitiesSortKey(str, Enum):
     r"""risk assessment image sort key."""
     SEVERITY = 'SEVERITY'
-
 
 
 @dataclasses.dataclass
@@ -34,7 +33,6 @@ class GetRiskAssessmentImageIDVulnerabilitiesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetRiskAssessmentImageIDVulnerabilitiesResponse:
     content_type: str = dataclasses.field()
@@ -43,7 +41,7 @@ class GetRiskAssessmentImageIDVulnerabilitiesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_vulnerabilities: Optional[list[shared_riskassessmentvulnerability.RiskAssessmentVulnerability]] = dataclasses.field(default=None)
+    risk_assessment_vulnerabilities: Optional[List[shared_riskassessmentvulnerability.RiskAssessmentVulnerability]] = dataclasses.field(default=None)
     r"""Success"""
     
 

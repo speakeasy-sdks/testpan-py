@@ -7,7 +7,6 @@ from ..shared import eventsforwardingdetails as shared_eventsforwardingdetails
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostSettingsIntegrationsEventForwardingResponse:
     content_type: str = dataclasses.field()

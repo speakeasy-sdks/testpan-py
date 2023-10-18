@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import apiresponse as shared_apiresponse
 from ..shared import leankubernetescluster as shared_leankubernetescluster
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,6 @@ class GetLeanKubernetesClustersRequest:
     cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clusterName', 'style': 'form', 'explode': True }})
     r"""the cluster name to filter by"""
     
-
 
 
 
@@ -26,7 +24,7 @@ class GetLeanKubernetesClustersResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    lean_kubernetes_clusters: Optional[list[shared_leankubernetescluster.LeanKubernetesCluster]] = dataclasses.field(default=None)
+    lean_kubernetes_clusters: Optional[List[shared_leankubernetescluster.LeanKubernetesCluster]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

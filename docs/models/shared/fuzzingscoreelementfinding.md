@@ -5,7 +5,7 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `additional_info`  | dict[str, *str*]   | :heavy_minus_sign: | N/A                |
+| `additional_info`  | Dict[str, *str*]   | :heavy_minus_sign: | N/A                |
 | `description`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `name`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `source`           | *Optional[str]*    | :heavy_minus_sign: | N/A                |

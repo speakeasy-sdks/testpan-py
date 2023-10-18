@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import portshiftawssubnet as shared_portshiftawssubnet
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -18,14 +17,13 @@ class GetAwsAwsAccountIDRegionIDSubnetsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAwsAwsAccountIDRegionIDSubnetsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    portshift_aws_subnets: Optional[list[shared_portshiftawssubnet.PortshiftAwsSubnet]] = dataclasses.field(default=None)
+    portshift_aws_subnets: Optional[List[shared_portshiftawssubnet.PortshiftAwsSubnet]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

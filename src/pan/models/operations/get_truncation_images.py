@@ -7,7 +7,6 @@ from ..shared import truncationstatus as shared_truncationstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTruncationImagesResponse:
     content_type: str = dataclasses.field()

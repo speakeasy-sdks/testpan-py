@@ -7,7 +7,6 @@ from pan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Tag:
     r"""Tag"""

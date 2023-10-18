@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import kubernetesauditlog as shared_kubernetesauditlog
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetAuditLogsKubernetesResult(str, Enum):
     ALLOW = 'ALLOW'
@@ -28,7 +28,6 @@ class GetAuditLogsKubernetesSortKey(str, Enum):
     TOTAL = 'total'
 
 
-
 @dataclasses.dataclass
 class GetAuditLogsKubernetesRequest:
     end_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'endTime', 'style': 'form', 'explode': True }})
@@ -39,7 +38,7 @@ class GetAuditLogsKubernetesRequest:
     r"""the cluster name to filter by"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    kubernetes_audit_action: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'kubernetesAuditAction', 'style': 'form', 'explode': False }})
+    kubernetes_audit_action: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'kubernetesAuditAction', 'style': 'form', 'explode': False }})
     r"""Kubernetes audit action"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
@@ -53,7 +52,7 @@ class GetAuditLogsKubernetesRequest:
     r"""Resource kind"""
     resource_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'resourceName', 'style': 'form', 'explode': True }})
     r"""Resource name"""
-    result: Optional[list[GetAuditLogsKubernetesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
+    result: Optional[List[GetAuditLogsKubernetesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""event result filter"""
     sort_dir: Optional[GetAuditLogsKubernetesSortDir] = dataclasses.field(default=GetAuditLogsKubernetesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
@@ -65,14 +64,13 @@ class GetAuditLogsKubernetesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAuditLogsKubernetesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    kubernetes_audit_logs: Optional[list[shared_kubernetesauditlog.KubernetesAuditLog]] = dataclasses.field(default=None)
+    kubernetes_audit_logs: Optional[List[shared_kubernetesauditlog.KubernetesAuditLog]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

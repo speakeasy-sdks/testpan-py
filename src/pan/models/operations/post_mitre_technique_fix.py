@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import mitretechniquefixinfo as shared_mitretechniquefixinfo
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class PostMitreTechniqueFixMitreTechniqueType(str, Enum):
     r"""MITRE technique type"""
@@ -35,16 +35,14 @@ class PostMitreTechniqueFixMitreTechniqueType(str, Enum):
     DATA_DESTRUCTION = 'DATA_DESTRUCTION'
 
 
-
 @dataclasses.dataclass
 class PostMitreTechniqueFixRequest:
     mitre_technique_fix_info: shared_mitretechniquefixinfo.MitreTechniqueFixInfo = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     mitre_technique_type: PostMitreTechniqueFixMitreTechniqueType = dataclasses.field(metadata={'query_param': { 'field_name': 'mitreTechniqueType', 'style': 'form', 'explode': True }})
     r"""MITRE technique type"""
-    clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
+    clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
     
-
 
 
 

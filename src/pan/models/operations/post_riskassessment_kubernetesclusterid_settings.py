@@ -7,14 +7,12 @@ from ..shared import riskassessmentclusterscanconfig as shared_riskassessmentclu
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostRiskAssessmentKubernetesClusterIDSettingsRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
     risk_assessment_cluster_scan_config: shared_riskassessmentclusterscanconfig.RiskAssessmentClusterScanConfig = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

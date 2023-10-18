@@ -6,14 +6,13 @@ from ..shared import cdpipelinefindingrisk as shared_cdpipelinefindingrisk
 from ..shared import cdpipelinefindingtype as shared_cdpipelinefindingtype
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CDDeploymentResource:
-    reasons: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reasons'), 'exclude': lambda f: f is None }})
+    reasons: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reasons'), 'exclude': lambda f: f is None }})
     resource_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resourceName'), 'exclude': lambda f: f is None }})
     risk: Optional[shared_cdpipelinefindingrisk.CDPipelineFindingRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     type: Optional[shared_cdpipelinefindingtype.CDPipelineFindingType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})

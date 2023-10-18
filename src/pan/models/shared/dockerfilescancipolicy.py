@@ -9,7 +9,6 @@ from pan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DockerfileScanCiPolicy:
     enforcement_option: shared_enforcementoption.EnforcementOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enforcementOption') }})

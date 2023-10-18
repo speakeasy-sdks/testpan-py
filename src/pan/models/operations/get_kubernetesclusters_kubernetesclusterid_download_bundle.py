@@ -7,7 +7,6 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest:
     send_telemetries_interval_sec: Optional[int] = dataclasses.field(default=30, metadata={'query_param': { 'field_name': 'sendTelemetriesIntervalSec', 'style': 'form', 'explode': True }})
     r"""The time interval for sending telemetries"""
     
-
 
 
 

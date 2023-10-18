@@ -7,7 +7,6 @@ from ..shared import trustedsigner as shared_trustedsigner
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostTrustedSignersResponse:
     content_type: str = dataclasses.field()

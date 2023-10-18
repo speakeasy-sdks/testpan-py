@@ -4,16 +4,14 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import riskassessmentcluster as shared_riskassessmentcluster
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetRiskAssessmentPollRequest:
-    risk_assessment_poll_key: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'riskAssessmentPollKey', 'style': 'form', 'explode': False }})
+    risk_assessment_poll_key: List[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'riskAssessmentPollKey', 'style': 'form', 'explode': False }})
     r"""The ids of the clusters whose scans to poll"""
     
-
 
 
 
@@ -25,7 +23,7 @@ class GetRiskAssessmentPollResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_clusters: Optional[list[shared_riskassessmentcluster.RiskAssessmentCluster]] = dataclasses.field(default=None)
+    risk_assessment_clusters: Optional[List[shared_riskassessmentcluster.RiskAssessmentCluster]] = dataclasses.field(default=None)
     r"""Success"""
     
 

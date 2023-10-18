@@ -11,7 +11,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TelemetryState:
     r"""Status of a telemetry entry"""

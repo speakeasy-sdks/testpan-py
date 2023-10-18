@@ -5,13 +5,12 @@ import dataclasses
 from ..shared import topriskyserverlessfunction as shared_topriskyserverlessfunction
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TopRiskyServerlessFunctionsWidget:
-    top_risky_serverless_functions: Optional[list[shared_topriskyserverlessfunction.TopRiskyServerlessFunction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyServerlessFunctions'), 'exclude': lambda f: f is None }})
+    top_risky_serverless_functions: Optional[List[shared_topriskyserverlessfunction.TopRiskyServerlessFunction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyServerlessFunctions'), 'exclude': lambda f: f is None }})
     
 

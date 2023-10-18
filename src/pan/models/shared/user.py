@@ -16,7 +16,6 @@ class UserStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class User:
     full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fullName') }})
@@ -38,7 +37,6 @@ class User:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UserInput:
     full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fullName') }})

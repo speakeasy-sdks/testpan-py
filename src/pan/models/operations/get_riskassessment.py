@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import riskassessmentcluster as shared_riskassessmentcluster
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,7 +15,7 @@ class GetRiskAssessmentResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_clusters: Optional[list[shared_riskassessmentcluster.RiskAssessmentCluster]] = dataclasses.field(default=None)
+    risk_assessment_clusters: Optional[List[shared_riskassessmentcluster.RiskAssessmentCluster]] = dataclasses.field(default=None)
     r"""Success"""
     
 

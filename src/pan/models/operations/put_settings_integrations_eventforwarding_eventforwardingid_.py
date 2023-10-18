@@ -8,13 +8,11 @@ from ..shared import splunkeventsforwardingdetails as shared_splunkeventsforward
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutSettingsIntegrationsEventForwardingEventForwardingIDRequest:
     event_forwarding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eventForwardingId', 'style': 'simple', 'explode': False }})
     splunk_events_forwarding_details_input: shared_splunkeventsforwardingdetails.SplunkEventsForwardingDetailsInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

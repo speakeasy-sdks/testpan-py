@@ -7,12 +7,10 @@ from ..shared import serverlesszip as shared_serverlesszip
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetServerlessZipFilesZipIDRequest:
     zip_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'zipId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

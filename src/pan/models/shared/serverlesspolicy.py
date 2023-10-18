@@ -7,15 +7,14 @@ from ..shared import serverlessrule as shared_serverlessrule
 from ..shared import unidentifiedserverlessrule as shared_unidentifiedserverlessrule
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessPolicy:
     default_rule: shared_serverlessdefaultrule.ServerlessDefaultRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule') }})
     unidentified_serverless_rule: shared_unidentifiedserverlessrule.UnidentifiedServerlessRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedServerlessRule') }})
-    user_rules: Optional[list[shared_serverlessrule.ServerlessRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRules'), 'exclude': lambda f: f is None }})
+    user_rules: Optional[List[shared_serverlessrule.ServerlessRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRules'), 'exclude': lambda f: f is None }})
     
 

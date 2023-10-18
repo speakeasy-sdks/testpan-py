@@ -7,7 +7,6 @@ from ..shared import serverlesspolicy as shared_serverlesspolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetServerlessPolicyResponse:
     content_type: str = dataclasses.field()

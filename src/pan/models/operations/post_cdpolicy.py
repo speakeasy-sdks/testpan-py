@@ -7,7 +7,6 @@ from ..shared import cdpolicy as shared_cdpolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostCdPolicyResponse:
     content_type: str = dataclasses.field()

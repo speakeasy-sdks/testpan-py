@@ -6,14 +6,13 @@ from ..shared import idrange as shared_idrange
 from ..shared import runasuserstrategy as shared_runasuserstrategy
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RunAsUserStrategyOptions:
-    ranges: Optional[list[shared_idrange.IDRange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ranges'), 'exclude': lambda f: f is None }})
+    ranges: Optional[List[shared_idrange.IDRange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ranges'), 'exclude': lambda f: f is None }})
     rule: Optional[shared_runasuserstrategy.RunAsUserStrategy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
     
 

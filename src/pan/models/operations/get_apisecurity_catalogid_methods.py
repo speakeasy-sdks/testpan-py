@@ -4,17 +4,15 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apiservicemethod as shared_apiservicemethod
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetAPISecurityCatalogIDMethodsRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
-    tags: list[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': False }})
+    tags: List[str] = dataclasses.field(metadata={'query_param': { 'field_name': 'tags', 'style': 'form', 'explode': False }})
     r"""spec tags names"""
     
-
 
 
 
@@ -24,7 +22,7 @@ class GetAPISecurityCatalogIDMethodsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_service_methods: Optional[list[shared_apiservicemethod.APIServiceMethod]] = dataclasses.field(default=None)
+    api_service_methods: Optional[List[shared_apiservicemethod.APIServiceMethod]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

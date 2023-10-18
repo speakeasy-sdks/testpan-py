@@ -601,11 +601,11 @@ req = shared.KubernetesCluster(
     istio_ingress_annotations=[
         shared.KubernetesAnnotation(
             key='<key>',
-            value='withdrawal',
+            value='magnetic',
         ),
     ],
     istio_installation_parameters=shared.IstioInstallationParameters(),
-    name='bypassing mmm',
+    name='online',
     proxy_configuration=shared.ProxyConfiguration(),
     scan_configuration=shared.ScanConfiguration(
         scan_types=[
@@ -666,10 +666,10 @@ req = shared.PodDefinitionInput(
     labels=[
         shared.Label(
             key='<key>',
-            value='Murfreesboro Recycled Smart',
+            value='ajar',
         ),
     ],
-    name='ew Analyst',
+    name='Folk',
 )
 
 res = s.kubernetes.post_pod_definitions(req)
@@ -716,20 +716,20 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         istio_ingress_annotations=[
             shared.KubernetesAnnotation(
                 key='<key>',
-                value='savior normalization absentmindedly',
+                value='upload',
             ),
         ],
         istio_installation_parameters=shared.IstioInstallationParameters(),
-        name='Land relationships Lead',
+        name='sapiente',
         proxy_configuration=shared.ProxyConfiguration(),
         scan_configuration=shared.ScanConfiguration(
             scan_types=[
-                shared.ScanType.VULNERABILITIES,
+                shared.ScanType.DOCKER_CIS_BENCHMARK,
             ],
         ),
         sidecars_resources=shared.SidecarsResource(),
     ),
-    kubernetes_cluster_id='96a5f2d9-d7f9-4c73-b148-40835ef5c171',
+    kubernetes_cluster_id='e0fd9579-58a0-4796-a5f2-d9d7f9c73b14',
 )
 
 res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_(req)
@@ -825,12 +825,12 @@ req = operations.PutPodDefinitionsPodIDRequest(
         labels=[
             shared.Label(
                 key='<key>',
-                value='Reactive wrongly Cyclocross',
+                value='Ford',
             ),
         ],
-        name='Pizza payment Rubber',
+        name='female',
     ),
-    pod_id='0e36a1df-3f32-44e7-945f-9299dbfd5b7f',
+    pod_id='0efc46b3-d799-4349-9390-e36a1df3f324',
 )
 
 res = s.kubernetes.put_pod_definitions_pod_id_(req)

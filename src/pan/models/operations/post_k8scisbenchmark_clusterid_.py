@@ -7,12 +7,10 @@ from ..shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclu
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostK8sCISBenchmarkClusterIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

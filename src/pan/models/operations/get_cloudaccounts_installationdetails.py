@@ -7,7 +7,6 @@ from ..shared import serverlessinstallationdetails as shared_serverlessinstallat
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCloudAccountsInstallationDetailsResponse:
     content_type: str = dataclasses.field()

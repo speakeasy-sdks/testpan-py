@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import environment as shared_environment
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,14 +14,13 @@ class GetEnvironmentsEnvIDRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetEnvironmentsEnvIDResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    environments: Optional[list[shared_environment.Environment]] = dataclasses.field(default=None)
+    environments: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

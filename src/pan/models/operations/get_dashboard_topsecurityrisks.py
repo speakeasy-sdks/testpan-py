@@ -4,18 +4,16 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import topsecurityriskswidget as shared_topsecurityriskswidget
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetDashboardTopSecurityRisksRequest:
-    clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
+    clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
     size: Optional[int] = dataclasses.field(default=5, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
     r"""Amount of top risky workloads to return"""
     
-
 
 
 

@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetK8sCISBenchmarkClusterIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

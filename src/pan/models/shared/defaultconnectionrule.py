@@ -15,7 +15,6 @@ class DefaultConnectionRuleType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DefaultConnectionRule:
     action: Optional[shared_connectionruleaction.ConnectionRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})

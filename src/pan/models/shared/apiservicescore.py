@@ -12,7 +12,6 @@ from pan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIServiceScore:
     api: shared_apiservicescoregrade.APIServiceScoreGrade = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api') }})

@@ -17,7 +17,6 @@ class WorkloadRuleTypeWorkloadRuleType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class WorkloadRuleType:
     r"""identify the workload type. Only one of the below should be not null, and  used."""

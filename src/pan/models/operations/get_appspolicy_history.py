@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apppolicyhistory as shared_apppolicyhistory
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class GetAppsPolicyHistoryResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    app_policy_histories: Optional[list[shared_apppolicyhistory.AppPolicyHistory]] = dataclasses.field(default=None)
+    app_policy_histories: Optional[List[shared_apppolicyhistory.AppPolicyHistory]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

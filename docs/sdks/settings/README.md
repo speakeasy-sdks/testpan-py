@@ -287,9 +287,9 @@ s = pan.Pan(
 )
 
 req = shared.CaIntegrationRequestInput(
-    certificate='prickly',
-    issuer_name='Loan whereas green',
-    name='Loan wield cyan',
+    certificate='Utah',
+    issuer_name='Internal',
+    name='Loan',
 )
 
 res = s.settings.post_settings_integrations_ca(req)
@@ -333,7 +333,7 @@ req = shared.EventsForwardingDetailsInput(
     events_to_forward=[
         shared.EventsToForward.ATTACK_PATH,
     ],
-    name='Soft dull alliance',
+    name='Gallium',
 )
 
 res = s.settings.post_settings_integrations_event_forwarding(req)
@@ -373,7 +373,7 @@ s = pan.Pan(
 )
 
 req = shared.TestOpsgenieConnectionRequest(
-    token='pish invoice',
+    token='invoice',
 )
 
 res = s.settings.post_settings_integrations_opsgenie_test_integration(req)
@@ -493,8 +493,8 @@ s = pan.Pan(
 )
 
 req = shared.TestSplunkConnectionRequest(
-    token='male grow',
-    url='https://short-term-accordion.biz',
+    token='Realigned',
+    url='https://forked-investigation.org',
 )
 
 res = s.settings.post_settings_integrations_splunk_test_integration(req)
@@ -693,11 +693,11 @@ s = pan.Pan(
 
 req = operations.PutSettingsIntegrationsCaIDRequest(
     ca_integration_request_input=shared.CaIntegrationRequestInput(
-        certificate='Berkshire',
-        issuer_name='Bicycle',
-        name='Central UDP recontextualize',
+        certificate='Ergonomic',
+        issuer_name='Advanced',
+        name='Bicycle',
     ),
-    id='80b658d2-fdca-4eae-9506-a19b8c391af0',
+    id='da77d5f8-0b65-48d2-bdca-eae5506a19b8',
 )
 
 res = s.settings.put_settings_integrations_ca_id_(req)
@@ -742,10 +742,10 @@ req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,
         ],
-        name='Genderqueer deploy',
-        token='whoever',
+        name='Communications',
+        token='Guinea',
     ),
-    event_forwarding_id='b0fd0479-c2dc-41b4-88bc-e49d238c6e86',
+    event_forwarding_id='3efb0fd0-479c-42dc-9b40-8bce49d238c6',
 )
 
 res = s.settings.put_settings_integrations_event_forwarding_event_forwarding_id_(req)

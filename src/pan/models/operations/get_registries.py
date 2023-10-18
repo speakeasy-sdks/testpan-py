@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import registry as shared_registry
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetRegistriesSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetRegistriesSortDir(str, Enum):
 class GetRegistriesSortKey(str, Enum):
     r"""sort key"""
     URL = 'url'
-
 
 
 @dataclasses.dataclass
@@ -28,7 +27,6 @@ class GetRegistriesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetRegistriesResponse:
     content_type: str = dataclasses.field()
@@ -37,7 +35,7 @@ class GetRegistriesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    registries: Optional[list[shared_registry.Registry]] = dataclasses.field(default=None)
+    registries: Optional[List[shared_registry.Registry]] = dataclasses.field(default=None)
     r"""Success"""
     
 

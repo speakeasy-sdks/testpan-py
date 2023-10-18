@@ -4,15 +4,14 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import Dict, List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AdditionalInfo:
-    affected_endpoints: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affected_endpoints'), 'exclude': lambda f: f is None }})
-    affected_spec_paths: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affected_spec_paths'), 'exclude': lambda f: f is None }})
-    entries: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entries'), 'exclude': lambda f: f is None }})
+    affected_endpoints: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affected_endpoints'), 'exclude': lambda f: f is None }})
+    affected_spec_paths: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affected_spec_paths'), 'exclude': lambda f: f is None }})
+    entries: Optional[Dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('entries'), 'exclude': lambda f: f is None }})
     
 

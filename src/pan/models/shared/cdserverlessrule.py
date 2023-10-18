@@ -8,11 +8,10 @@ from ..shared import serverlessrulestatus as shared_serverlessrulestatus
 from ..shared import serverlessruletype as shared_serverlessruletype
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CdServerlessRule:
     r"""A CD rule that states what serverless function are allowed and where."""
@@ -24,6 +23,6 @@ class CdServerlessRule:
     status: shared_serverlessrulestatus.ServerlessRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    scope: Optional[list[shared_serverlessrulescope.ServerlessRuleScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
+    scope: Optional[List[shared_serverlessrulescope.ServerlessRuleScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
     
 

@@ -129,7 +129,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionsRequest(
-    aws_account_id='owlishly evolve West',
+    aws_account_id='tabernacle',
 )
 
 res = s.aws.get_aws_aws_account_id_regions(req)
@@ -169,8 +169,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDSubnetsRequest(
-    aws_account_id='Associate',
-    region_id='Einsteinium',
+    aws_account_id='Bike',
+    region_id='Bugatti',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_subnets(req)
@@ -211,8 +211,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDVpcsRequest(
-    aws_account_id='iterate Facilitator Soft',
-    region_id='Cab',
+    aws_account_id='orange',
+    region_id='unless',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_vpcs(req)
@@ -252,8 +252,8 @@ s = pan.Pan(
 )
 
 req = shared.AWSRolePost(
-    arn='Communications female',
-    name='interfaces deposit Pants',
+    arn='Classical',
+    name='Latin',
 )
 
 res = s.aws.post_aws_roles(req)
@@ -294,9 +294,9 @@ s = pan.Pan(
 
 req = operations.PutAwsRolesRoleIDRequest(
     aws_role_details=shared.AWSRoleDetails(
-        name='Southwest oof',
+        name='bypass',
     ),
-    role_id='92ab1e05-da7a-461a-997d-143757fdde66',
+    role_id='eef92ab1-e05d-4a7a-a1a5-97d143757fdd',
 )
 
 res = s.aws.put_aws_roles_role_id_(req)

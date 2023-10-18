@@ -8,7 +8,6 @@ from pan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APISecurityPolicyGlobalCondition:
     highest_accepted_severity: shared_apisecuritypolicyriskseverity.APISecurityPolicyRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestAcceptedSeverity') }})

@@ -4,16 +4,15 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessRuleScope:
     cloud_account: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudAccount') }})
     r"""cloud account name"""
-    regions: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('regions'), 'exclude': lambda f: f is None }})
+    regions: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('regions'), 'exclude': lambda f: f is None }})
     r"""empty for any"""
     
 

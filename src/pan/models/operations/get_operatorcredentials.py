@@ -8,7 +8,6 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetOperatorCredentialsResponse:
     content_type: str = dataclasses.field()

@@ -17,7 +17,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessFunction:
     r"""Single serverless function"""

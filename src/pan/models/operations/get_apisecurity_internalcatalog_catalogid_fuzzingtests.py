@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apiservicefuzzingtest as shared_apiservicefuzzingtest
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,14 +14,13 @@ class GetAPISecurityInternalCatalogCatalogIDFuzzingTestsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCatalogIDFuzzingTestsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_service_fuzzing_tests: Optional[list[shared_apiservicefuzzingtest.APIServiceFuzzingTest]] = dataclasses.field(default=None)
+    api_service_fuzzing_tests: Optional[List[shared_apiservicefuzzingtest.APIServiceFuzzingTest]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

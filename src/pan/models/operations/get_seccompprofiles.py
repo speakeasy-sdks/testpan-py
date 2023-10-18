@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import seccompprofile as shared_seccompprofile
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,7 +15,7 @@ class GetSeccompProfilesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    seccomp_profiles: Optional[list[shared_seccompprofile.SeccompProfile]] = dataclasses.field(default=None)
+    seccomp_profiles: Optional[List[shared_seccompprofile.SeccompProfile]] = dataclasses.field(default=None)
     r"""Success"""
     
 

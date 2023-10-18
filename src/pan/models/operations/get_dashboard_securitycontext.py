@@ -4,16 +4,14 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import securitycontextwidget as shared_securitycontextwidget
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetDashboardSecurityContextRequest:
-    clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
+    clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
     
-
 
 
 

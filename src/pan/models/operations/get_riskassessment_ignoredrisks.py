@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import ignoredrisk as shared_ignoredrisk
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class GetRiskAssessmentIgnoredRisksResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    ignored_risks: Optional[list[shared_ignoredrisk.IgnoredRisk]] = dataclasses.field(default=None)
+    ignored_risks: Optional[List[shared_ignoredrisk.IgnoredRisk]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

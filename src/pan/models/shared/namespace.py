@@ -6,17 +6,16 @@ from ..shared import label as shared_label
 from ..shared import namespaceprotectionstatus as shared_namespaceprotectionstatus
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Namespace:
     cluster_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterName') }})
     running_pods: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runningPods') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    labels: Optional[list[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     protection_status: Optional[shared_namespaceprotectionstatus.NamespaceProtectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protectionStatus'), 'exclude': lambda f: f is None }})
     system_namespace: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('systemNamespace'), 'exclude': lambda f: f is None }})

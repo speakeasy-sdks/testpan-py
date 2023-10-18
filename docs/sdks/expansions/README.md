@@ -156,14 +156,14 @@ req = shared.ExpansionInput(
     labels=[
         shared.Label(
             key='<key>',
-            value='District Vista Senior',
+            value='restfully',
         ),
     ],
-    name='Forward International quantify',
-    namespace_id='259ba11d-f19d-486c-930f-c31b7b32455e',
+    name='bolívar',
+    namespace_id='0245fda1-faca-4b88-a59b-a11df19d86c5',
     workload_addresses=[
         shared.WorkloadAddress(
-            address='56493 Berge Gateway',
+            address='09821 Konopelski River',
         ),
     ],
 )
@@ -209,17 +209,17 @@ req = operations.PutExpansionsExpansionIDRequest(
         labels=[
             shared.Label(
                 key='<key>',
-                value='solemnly Money logistical',
+                value='Specialist',
             ),
         ],
-        name='Kids Program',
+        name='cyan',
         workload_addresses=[
             shared.WorkloadAddress(
-                address='628 Will Route',
+                address='430 Kris Knoll',
             ),
         ],
     ),
-    expansion_id='64baa7b3-c4b0-49bf-b8d1-70310c446aa3',
+    expansion_id='39a0b94d-cfc6-44ba-a7b3-c4b09bff8d17',
 )
 
 res = s.expansions.put_expansions_expansion_id_(req)

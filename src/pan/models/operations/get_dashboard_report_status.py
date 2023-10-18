@@ -7,7 +7,6 @@ from ..shared import reportstatus as shared_reportstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetDashboardReportStatusResponse:
     content_type: str = dataclasses.field()

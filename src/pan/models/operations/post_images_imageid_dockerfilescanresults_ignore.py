@@ -13,7 +13,6 @@ class PostImagesImageIDDockerfileScanResultsIgnoreActionType(str, Enum):
     REMOVE = 'REMOVE'
 
 
-
 @dataclasses.dataclass
 class PostImagesImageIDDockerfileScanResultsIgnoreRequest:
     action_type: PostImagesImageIDDockerfileScanResultsIgnoreActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
@@ -21,7 +20,6 @@ class PostImagesImageIDDockerfileScanResultsIgnoreRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

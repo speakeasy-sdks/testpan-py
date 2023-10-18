@@ -15,7 +15,6 @@ class PeriodicJobExpressionPeriodicJobType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PeriodicJobExpression:
     periodic_job_type: PeriodicJobExpressionPeriodicJobType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('PeriodicJobType') }})

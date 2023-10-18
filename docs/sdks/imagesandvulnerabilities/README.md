@@ -216,8 +216,8 @@ s = pan.Pan(
 )
 
 req = operations.GetImagesVulnerabilitiesByImageNameAndHashRequest(
-    image_hash='Dale Iowa',
-    image_name='boutique Health Martinique',
+    image_hash='Marketing',
+    image_name='Savings',
 )
 
 res = s.images_and_vulnerabilities.get_images_vulnerabilities_by_image_name_and_hash(req)

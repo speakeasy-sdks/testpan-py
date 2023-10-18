@@ -7,7 +7,6 @@ from ..shared import podsecuritypolicy as shared_podsecuritypolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostPodSecurityPolicyProfilesResponse:
     content_type: str = dataclasses.field()

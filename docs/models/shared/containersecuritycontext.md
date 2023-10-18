@@ -6,8 +6,8 @@
 | Field                        | Type                         | Required                     | Description                  |
 | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
 | `allow_privilege_escalation` | *Optional[bool]*             | :heavy_minus_sign:           | N/A                          |
-| `capabilities_add`           | list[*str*]                  | :heavy_minus_sign:           | N/A                          |
-| `capabilities_drop`          | list[*str*]                  | :heavy_minus_sign:           | N/A                          |
+| `capabilities_add`           | List[*str*]                  | :heavy_minus_sign:           | N/A                          |
+| `capabilities_drop`          | List[*str*]                  | :heavy_minus_sign:           | N/A                          |
 | `name`                       | *Optional[str]*              | :heavy_minus_sign:           | N/A                          |
 | `privileged`                 | *Optional[bool]*             | :heavy_minus_sign:           | N/A                          |
 | `proc_mount`                 | *Optional[str]*              | :heavy_minus_sign:           | N/A                          |

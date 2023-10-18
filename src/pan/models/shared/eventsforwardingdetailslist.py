@@ -5,13 +5,12 @@ import dataclasses
 from ..shared import eventsforwardingdetails as shared_eventsforwardingdetails
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class EventsForwardingDetailsList:
-    details: Optional[list[shared_eventsforwardingdetails.EventsForwardingDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('details'), 'exclude': lambda f: f is None }})
+    details: Optional[List[shared_eventsforwardingdetails.EventsForwardingDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('details'), 'exclude': lambda f: f is None }})
     
 

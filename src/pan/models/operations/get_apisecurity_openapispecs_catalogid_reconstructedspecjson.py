@@ -6,14 +6,12 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     download_as_json: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsJson', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an json file, and pagination will be ignored"""
     
-
 
 
 

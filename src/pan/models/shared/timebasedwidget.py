@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TimeBasedWidget:
     allowed_graphs: Optional[shared_dashboardtimebasedgraphs.DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedGraphs'), 'exclude': lambda f: f is None }})

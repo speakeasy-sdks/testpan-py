@@ -12,7 +12,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Cvss:
     attack_complexity: Optional[shared_cvssrisklevel.CvssRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attackComplexity'), 'exclude': lambda f: f is None }})

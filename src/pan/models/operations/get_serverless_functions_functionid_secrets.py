@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import serverlessfunctionsecretissue as shared_serverlessfunctionsecretissue
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -13,7 +12,6 @@ class GetServerlessFunctionsFunctionIDSecretsRequest:
     function_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
     r"""Function ID"""
     
-
 
 
 
@@ -25,7 +23,7 @@ class GetServerlessFunctionsFunctionIDSecretsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    serverless_function_secret_issues: Optional[list[shared_serverlessfunctionsecretissue.ServerlessFunctionSecretIssue]] = dataclasses.field(default=None)
+    serverless_function_secret_issues: Optional[List[shared_serverlessfunctionsecretissue.ServerlessFunctionSecretIssue]] = dataclasses.field(default=None)
     r"""Success"""
     
 

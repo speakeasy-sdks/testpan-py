@@ -8,7 +8,6 @@ from datetime import datetime
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetPerformanceMetricsRequest:
     end_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'endTime', 'style': 'form', 'explode': True }})
@@ -26,7 +25,6 @@ class GetPerformanceMetricsRequest:
     target_pod_template: str = dataclasses.field(metadata={'query_param': { 'field_name': 'targetPodTemplate', 'style': 'form', 'explode': True }})
     r"""pod template id"""
     
-
 
 
 

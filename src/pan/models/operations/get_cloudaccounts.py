@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import cloudaccount as shared_cloudaccount
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetCloudAccountsSortDir(str, Enum):
     r"""sorting direction"""
@@ -16,7 +16,6 @@ class GetCloudAccountsSortKey(str, Enum):
     r"""sort key"""
     LAST_SCANNED = 'lastScanned'
     NAME = 'name'
-
 
 
 @dataclasses.dataclass
@@ -39,14 +38,13 @@ class GetCloudAccountsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetCloudAccountsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cloud_accounts: Optional[list[shared_cloudaccount.CloudAccount]] = dataclasses.field(default=None)
+    cloud_accounts: Optional[List[shared_cloudaccount.CloudAccount]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import kubernetesapipolicyhistory as shared_kubernetesapipolicyhistory
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class GetKubernetesAPIPolicyHistoryResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    kubernetes_api_policy_histories: Optional[list[shared_kubernetesapipolicyhistory.KubernetesAPIPolicyHistory]] = dataclasses.field(default=None)
+    kubernetes_api_policy_histories: Optional[List[shared_kubernetesapipolicyhistory.KubernetesAPIPolicyHistory]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

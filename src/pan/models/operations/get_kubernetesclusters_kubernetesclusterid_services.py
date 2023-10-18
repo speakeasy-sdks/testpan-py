@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import apiresponse as shared_apiresponse
 from ..shared import kubernetesservice as shared_kubernetesservice
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -19,7 +18,6 @@ class GetKubernetesClustersKubernetesClusterIDServicesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetKubernetesClustersKubernetesClusterIDServicesResponse:
     content_type: str = dataclasses.field()
@@ -28,7 +26,7 @@ class GetKubernetesClustersKubernetesClusterIDServicesResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    kubernetes_services: Optional[list[shared_kubernetesservice.KubernetesService]] = dataclasses.field(default=None)
+    kubernetes_services: Optional[List[shared_kubernetesservice.KubernetesService]] = dataclasses.field(default=None)
     r"""success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

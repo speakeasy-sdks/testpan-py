@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PodTemplateDiff:
     diff_type: Optional[shared_podtemplatedifftype.PodTemplateDiffType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffType'), 'exclude': lambda f: f is None }})

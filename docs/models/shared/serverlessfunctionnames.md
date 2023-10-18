@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `names`            | list[*str*]        | :heavy_minus_sign: | N/A                |
+| `names`            | List[*str*]        | :heavy_minus_sign: | N/A                |

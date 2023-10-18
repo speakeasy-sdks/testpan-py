@@ -13,7 +13,6 @@ class DeployerDeployerType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DeployerInput:
     r"""represent deployer object"""
@@ -25,7 +24,6 @@ class DeployerInput:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Deployer:
     r"""represent deployer object"""

@@ -145,15 +145,15 @@ req = shared.APISecurityPolicyInput(
     category_conditions=shared.APISecurityPolicyCategoryConditions(
         conditions=[
             shared.APISecurityPolicyCategoryCondition(
-                category='before Borders',
-                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
+                category='solid',
+                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.NO_RISK,
             ),
         ],
     ),
     global_condition=shared.APISecurityPolicyGlobalCondition(
-        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
+        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.MEDIUM,
     ),
-    name='male Granite',
+    name='to',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -197,17 +197,17 @@ req = operations.PutAPISecurityPolicyPolicyIDRequest(
         category_conditions=shared.APISecurityPolicyCategoryConditions(
             conditions=[
                 shared.APISecurityPolicyCategoryCondition(
-                    category='Fantastic mole',
-                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
+                    category='deposit',
+                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
                 ),
             ],
         ),
         global_condition=shared.APISecurityPolicyGlobalCondition(
-            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
+            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
         ),
-        name='Rock Integration Brentwood',
+        name='Buckinghamshire',
     ),
-    policy_id='7448558c-2807-4a30-bd0b-43b138ce775c',
+    policy_id='ef90a301-7448-4558-8280-7a30fd0b43b1',
 )
 
 res = s.api_security_policies.put_api_security_policy_policy_id_(req)

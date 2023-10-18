@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Gateways:
     sdk_configuration: SDKConfiguration
@@ -55,7 +55,7 @@ class Gateways:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Gateway]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Gateway]])
                 res.gateways = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -84,7 +84,7 @@ class Gateways:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.GatewayClusterInfo]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.GatewayClusterInfo]])
                 res.gateway_cluster_infos = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

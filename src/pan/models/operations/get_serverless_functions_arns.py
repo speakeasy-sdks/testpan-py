@@ -4,20 +4,18 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import serverlessfunctionarns as shared_serverlessfunctionarns
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetServerlessFunctionsArnsRequest:
     cloud_account_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cloudAccountName', 'style': 'form', 'explode': True }})
     r"""Filter cloud accounts by name"""
-    func_arn: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'funcArn', 'style': 'form', 'explode': False }})
+    func_arn: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'funcArn', 'style': 'form', 'explode': False }})
     r"""Defined function ARN"""
     region: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'region', 'style': 'form', 'explode': True }})
     r"""Filter cloud accounts by region"""
     
-
 
 
 
@@ -29,7 +27,7 @@ class GetServerlessFunctionsArnsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    serverless_function_arns: Optional[list[shared_serverlessfunctionarns.ServerlessFunctionArns]] = dataclasses.field(default=None)
+    serverless_function_arns: Optional[List[shared_serverlessfunctionarns.ServerlessFunctionArns]] = dataclasses.field(default=None)
     r"""Success"""
     
 

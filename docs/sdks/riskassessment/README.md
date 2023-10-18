@@ -645,13 +645,13 @@ req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
             enforcement_option=shared.EnforcementOption.FAIL,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='Bentley Intersex feed',
+        name='too',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
             enforcement_option=shared.EnforcementOption.FAIL,
             permissible_vulnerability_level=shared.VulnerabilitySeverity.HIGH,
         ),
     ),
-    ignored_risk_id='52b6ef16-d35f-4df8-929c-311ad619343e',
+    ignored_risk_id='78a3a52b-6ef1-46d3-9fdf-8529c311ad61',
 )
 
 res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)

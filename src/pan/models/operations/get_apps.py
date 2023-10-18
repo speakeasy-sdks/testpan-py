@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import app as shared_app
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetAppsSortDir(str, Enum):
     r"""sorting direction"""
@@ -16,7 +16,6 @@ class GetAppsSortKey(str, Enum):
     r"""App sort key"""
     NAME = 'name'
     TYPE = 'type'
-
 
 
 @dataclasses.dataclass
@@ -31,10 +30,9 @@ class GetAppsRequest:
     r"""sorting direction"""
     sort_key: Optional[GetAppsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""App sort key"""
-    type: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': False }})
+    type: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': False }})
     r"""Filter Apps by type"""
     
-
 
 
 
@@ -44,7 +42,7 @@ class GetAppsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    apps: Optional[list[shared_app.App]] = dataclasses.field(default=None)
+    apps: Optional[List[shared_app.App]] = dataclasses.field(default=None)
     r"""Created"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

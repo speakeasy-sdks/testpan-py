@@ -7,12 +7,10 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteSettingsIntegrationsCaIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

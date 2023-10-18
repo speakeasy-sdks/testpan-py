@@ -11,7 +11,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class K8sCISBenchmarkClustersSummary:
     agent_active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agentActive'), 'exclude': lambda f: f is None }})

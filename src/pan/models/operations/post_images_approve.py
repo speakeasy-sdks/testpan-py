@@ -7,14 +7,12 @@ from ..shared import uuidlist as shared_uuidlist
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostImagesApproveRequest:
     is_image_approved: bool = dataclasses.field(metadata={'query_param': { 'field_name': 'isImageApproved', 'style': 'form', 'explode': True }})
     r"""Is image approved"""
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

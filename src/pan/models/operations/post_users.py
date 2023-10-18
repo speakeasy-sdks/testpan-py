@@ -8,7 +8,6 @@ from ..shared import user as shared_user
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostUsersResponse:
     content_type: str = dataclasses.field()

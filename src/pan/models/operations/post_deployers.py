@@ -7,7 +7,6 @@ from ..shared import deployer as shared_deployer
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostDeployersResponse:
     content_type: str = dataclasses.field()

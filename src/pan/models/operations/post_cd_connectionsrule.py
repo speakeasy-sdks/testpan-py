@@ -7,7 +7,6 @@ from ..shared import cdconnectionrule as shared_cdconnectionrule
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostCdConnectionsRuleResponse:
     content_type: str = dataclasses.field()

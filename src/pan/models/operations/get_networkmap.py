@@ -7,7 +7,7 @@ from ..shared import backgroundjobresponse as shared_backgroundjobresponse
 from ..shared import networkmap as shared_networkmap
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetNetworkMapAPIRisk(str, Enum):
     r"""minimum api risk level"""
@@ -19,7 +19,6 @@ class GetNetworkMapAPIRisk(str, Enum):
     UNKNOWN = 'UNKNOWN'
 
 
-
 @dataclasses.dataclass
 class GetNetworkMapRequest:
     end_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'endTime', 'style': 'form', 'explode': True }})
@@ -28,11 +27,11 @@ class GetNetworkMapRequest:
     r"""Start date of the query"""
     api_risk: Optional[GetNetworkMapAPIRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiRisk', 'style': 'form', 'explode': True }})
     r"""minimum api risk level"""
-    apps: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apps', 'style': 'form', 'explode': False }})
+    apps: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apps', 'style': 'form', 'explode': False }})
     r"""Array of App names"""
-    environments: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'environments', 'style': 'form', 'explode': False }})
+    environments: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'environments', 'style': 'form', 'explode': False }})
     r"""Array of environments names"""
-    exclude_apps: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeApps', 'style': 'form', 'explode': False }})
+    exclude_apps: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'excludeApps', 'style': 'form', 'explode': False }})
     r"""Array of App/pod names to exclude"""
     group_apps_on_the_same_environment: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'groupAppsOnTheSameEnvironment', 'style': 'form', 'explode': True }})
     r"""When true, the API will aggregate Apps that are on the same environment"""
@@ -40,9 +39,9 @@ class GetNetworkMapRequest:
     r"""When true, the API will ignore connections coming from external IP addresses"""
     is_background_job: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'isBackgroundJob', 'style': 'form', 'explode': True }})
     r"""should run as background job or not"""
-    labels: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'labels', 'style': 'form', 'explode': False }})
+    labels: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'labels', 'style': 'form', 'explode': False }})
     r"""Array of labels. Each label is a string with format key:value"""
-    namespaces: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespaces', 'style': 'form', 'explode': False }})
+    namespaces: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'namespaces', 'style': 'form', 'explode': False }})
     r"""Array of namespaces ids"""
     show_only_apps_with_connections: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyAppsWithConnections', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return Apps with connections"""
@@ -53,7 +52,6 @@ class GetNetworkMapRequest:
     show_only_connections_with_violations: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyConnectionsWithViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return connections that violate the active policy"""
     
-
 
 
 

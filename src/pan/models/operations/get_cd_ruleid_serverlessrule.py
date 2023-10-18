@@ -7,12 +7,10 @@ from ..shared import cdserverlessrule as shared_cdserverlessrule
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCdRuleIDServerlessRuleRequest:
     rule_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ruleId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

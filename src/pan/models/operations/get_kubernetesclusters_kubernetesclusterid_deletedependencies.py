@@ -8,13 +8,11 @@ from ..shared import kubernetesclusterdeletedependencies as shared_kubernetesclu
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetKubernetesClustersKubernetesClusterIDDeleteDependenciesRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
     
-
 
 
 

@@ -7,13 +7,11 @@ from ..shared import bfladurationconfiguration as shared_bfladurationconfigurati
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest:
     bfla_duration_configuration: shared_bfladurationconfiguration.BflaDurationConfiguration = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

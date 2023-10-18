@@ -7,12 +7,10 @@ from ..shared import app as shared_app
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAppsAppIDRequest:
     app_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

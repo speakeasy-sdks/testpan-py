@@ -7,7 +7,6 @@ from ..shared import gateway as shared_gateway
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostGatewaysResponse:
     content_type: str = dataclasses.field()

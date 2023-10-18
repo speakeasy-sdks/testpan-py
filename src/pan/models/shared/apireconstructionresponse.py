@@ -6,15 +6,14 @@ from ..shared import apireconstructionstatus as shared_apireconstructionstatus
 from ..shared import apireconstructiontype as shared_apireconstructiontype
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIReconstructionResponseResponse:
     learning_duration_left: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('learningDurationLeft'), 'exclude': lambda f: f is None }})
-    messages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('messages'), 'exclude': lambda f: f is None }})
+    messages: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('messages'), 'exclude': lambda f: f is None }})
     status: Optional[shared_apireconstructionstatus.APIReconstructionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Status of an ongoing API reconstruction phase."""
     
@@ -22,7 +21,6 @@ class APIReconstructionResponseResponse:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIReconstructionResponse:
     response: Optional[APIReconstructionResponseResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('response'), 'exclude': lambda f: f is None }})

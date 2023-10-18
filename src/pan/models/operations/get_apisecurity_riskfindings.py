@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import riskfindings as shared_riskfindings
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetAPISecurityRiskFindingsAPISecSource(str, Enum):
     r"""source filter. an enum representing the source of the APIs service in scope"""
@@ -30,7 +30,6 @@ class GetAPISecurityRiskFindingsSortKey(str, Enum):
     RISK = 'RISK'
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityRiskFindingsRequest:
     api_sec_source: GetAPISecurityRiskFindingsAPISecSource = dataclasses.field(default=GetAPISecurityRiskFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
@@ -49,14 +48,13 @@ class GetAPISecurityRiskFindingsRequest:
     r"""Name of the risk finding name"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    risks: Optional[list[GetAPISecurityRiskFindingsRisks]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risks', 'style': 'form', 'explode': False }})
+    risks: Optional[List[GetAPISecurityRiskFindingsRisks]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risks', 'style': 'form', 'explode': False }})
     r"""The API risk filter"""
     sort_dir: Optional[GetAPISecurityRiskFindingsSortDir] = dataclasses.field(default=GetAPISecurityRiskFindingsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     source: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
     r"""Source of the risk finding"""
     
-
 
 
 

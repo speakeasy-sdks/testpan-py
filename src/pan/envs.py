@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Envs:
     r"""APIs used to define environments"""
@@ -61,7 +61,7 @@ class Envs:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Environment]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Environment]])
                 res.environments = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -89,7 +89,7 @@ class Envs:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Environment]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Environment]])
                 res.environments = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -168,7 +168,7 @@ class Envs:
         return res
 
     
-    def post_environments_batch(self, request: list[shared.EnvironmentInput]) -> operations.PostEnvironmentsBatchResponse:
+    def post_environments_batch(self, request: List[shared.EnvironmentInput]) -> operations.PostEnvironmentsBatchResponse:
         r"""Add a number of  Secure Application environments
         Add a number of new Secure Application environments. This is similar to the 'Add environment' method, but for multiple environments.
         """
@@ -193,7 +193,7 @@ class Envs:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Environment]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Environment]])
                 res.environments = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

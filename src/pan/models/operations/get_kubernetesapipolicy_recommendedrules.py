@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import recommendedkubernetesapirule as shared_recommendedkubernetesapirule
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,7 +15,7 @@ class GetKubernetesAPIPolicyRecommendedRulesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    recommended_kubernetes_api_rules: Optional[list[shared_recommendedkubernetesapirule.RecommendedKubernetesAPIRule]] = dataclasses.field(default=None)
+    recommended_kubernetes_api_rules: Optional[List[shared_recommendedkubernetesapirule.RecommendedKubernetesAPIRule]] = dataclasses.field(default=None)
     r"""Success"""
     
 

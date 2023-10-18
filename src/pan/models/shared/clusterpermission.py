@@ -5,15 +5,14 @@ import dataclasses
 from ..shared import permissioninfo as shared_permissioninfo
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClusterPermission:
     cluster: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
     cluster_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId'), 'exclude': lambda f: f is None }})
-    permission_info: Optional[list[shared_permissioninfo.PermissionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionInfo'), 'exclude': lambda f: f is None }})
+    permission_info: Optional[List[shared_permissioninfo.PermissionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionInfo'), 'exclude': lambda f: f is None }})
     
 

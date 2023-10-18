@@ -3,22 +3,20 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetAccountVulnerabilitiesXlsxRequest:
-    image_hash: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_HASH', 'style': 'form', 'explode': False }})
+    image_hash: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_HASH', 'style': 'form', 'explode': False }})
     r"""Filter images by HASH"""
-    image_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_NAME', 'style': 'form', 'explode': False }})
+    image_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_NAME', 'style': 'form', 'explode': False }})
     r"""Filter images by name"""
-    image_tag: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
+    image_tag: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
     r"""Filter images by tags"""
     vulnerability_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vulnerabilityName', 'style': 'form', 'explode': True }})
     r"""Filter images by vulnerability name"""
     
-
 
 
 

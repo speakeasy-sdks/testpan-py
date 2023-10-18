@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteUsersUserIDRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

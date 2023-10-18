@@ -15,7 +15,6 @@ class ServerlessRuleTypeServerlessRuleType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessRuleType:
     r"""identify the serverless functions matching type. Only one of the below should be not null, and  used."""

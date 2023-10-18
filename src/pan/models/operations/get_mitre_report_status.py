@@ -7,7 +7,6 @@ from ..shared import reportstatus as shared_reportstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetMitreReportStatusResponse:
     content_type: str = dataclasses.field()

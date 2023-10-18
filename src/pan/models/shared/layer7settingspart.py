@@ -14,7 +14,6 @@ class Layer7SettingsPartLayer7Protocol(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Layer7SettingsPart:
     layer7_protocol: Optional[Layer7SettingsPartLayer7Protocol] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('layer7Protocol'), 'exclude': lambda f: f is None }})

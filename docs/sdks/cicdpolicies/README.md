@@ -183,10 +183,10 @@ req = shared.CdPolicyInput(
     deployers=[
         'aede075c-3164-444b-a1e6-c4ecee9d9042',
     ],
-    name='Shirt Wooden radian',
+    name='court',
     permission_cd_policy=shared.CdPolicyElement(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
+        permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
     ),
     secret_cd_policy=shared.SecretsCdPolicyElement(
         enforcement_option=shared.EnforcementOption.FAIL,
@@ -194,7 +194,7 @@ req = shared.CdPolicyInput(
     ),
     security_context_cd_policy=shared.CdPolicyElement(
         enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
+        permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
     ),
 )
 
@@ -239,10 +239,10 @@ req = shared.CiPolicyInput(
         enforcement_option=shared.EnforcementOption.FAIL,
         permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
     ),
-    name='monetize navigate beatae',
+    name='hertz',
     vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
         enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
+        permissible_vulnerability_level=shared.VulnerabilitySeverity.MEDIUM,
     ),
 )
 
@@ -291,21 +291,21 @@ req = operations.PutCdPolicyPolicyIDRequest(
         deployers=[
             '45666e4d-fb74-4ef6-9a81-a0d950f62fec',
         ],
-        name='Heights',
+        name='Small',
         permission_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.FAIL,
+            enforcement_option=shared.EnforcementOption.IGNORE,
             permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
         ),
         secret_cd_policy=shared.SecretsCdPolicyElement(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.RISK_IDENTIFIED,
+            enforcement_option=shared.EnforcementOption.FAIL,
+            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
         ),
         security_context_cd_policy=shared.CdPolicyElement(
             enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
+            permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
         ),
     ),
-    policy_id='8fba0d21-9b4a-42fd-a7a8-937033a3f0a9',
+    policy_id='ed8fba0d-219b-44a2-bde7-a8937033a3f0',
 )
 
 res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
@@ -350,13 +350,13 @@ req = operations.PutCiPolicyPolicyIDRequest(
             enforcement_option=shared.EnforcementOption.IGNORE,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='Avon Bicycle primary',
+        name='mole',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
             enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.HIGH,
         ),
     ),
-    policy_id='5cdfe24f-5dcf-4d34-bfd8-0ec58c84ce87',
+    policy_id='5971515c-dfe2-44f5-9cfd-347fd80ec58c',
 )
 
 res = s.ci_cd_policies.put_ci_policy_policy_id_(req)

@@ -7,12 +7,10 @@ from ..shared import cdconnectionrule as shared_cdconnectionrule
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetCdRuleIDConnectionsRuleRequest:
     rule_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ruleId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

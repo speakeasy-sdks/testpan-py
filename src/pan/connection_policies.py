@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class ConnectionPolicies:
     r"""APIs used to  define and manage connection policies"""
@@ -60,7 +60,7 @@ class ConnectionPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ConnectionPolicyHistory]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ConnectionPolicyHistory]])
                 res.connection_policy_histories = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -88,7 +88,7 @@ class ConnectionPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_connections_policy_kafka_actions_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -116,7 +116,7 @@ class ConnectionPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_connections_policy_kafka_kubernetes_cluster_id_brokers_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -144,7 +144,7 @@ class ConnectionPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_connections_policy_kafka_kubernetes_cluster_id_topics_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -201,7 +201,7 @@ class ConnectionPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ConnectionPolicyHistory]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ConnectionPolicyHistory]])
                 res.connection_policy_histories = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

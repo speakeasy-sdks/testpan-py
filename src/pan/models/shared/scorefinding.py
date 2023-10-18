@@ -5,8 +5,7 @@ import dataclasses
 from ..shared import additionalinfo as shared_additionalinfo
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,16 +14,15 @@ class ScoreFindingData:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ScoreFinding:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Finding name"""
     source: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""Finding source or filled in with 'Undisclosed' if source cannot be revealed"""
-    additional_info: Optional[list[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
+    additional_info: Optional[List[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
     r"""Finding instance additional attributes"""
-    data: Optional[list[ScoreFindingData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[List[ScoreFindingData]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     r"""Raw data filled in only for unclassified findings, when allowed"""
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     r"""Finding description if finding has been classified, None otherwise"""

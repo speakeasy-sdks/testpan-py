@@ -7,7 +7,6 @@ from ..shared import timebasedwidget as shared_timebasedwidget
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetDashboardKubernetesAuditLogsResponse:
     content_type: str = dataclasses.field()

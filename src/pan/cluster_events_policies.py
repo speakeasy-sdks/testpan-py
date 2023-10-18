@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class ClusterEventsPolicies:
     r"""APIs used to  define and manage cluster events policies"""
@@ -59,7 +59,7 @@ class ClusterEventsPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesAPIPolicyHistory]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesAPIPolicyHistory]])
                 res.kubernetes_api_policy_histories = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -87,7 +87,7 @@ class ClusterEventsPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesResource]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesResource]])
                 res.kubernetes_resources = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -115,7 +115,7 @@ class ClusterEventsPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesUsersByType]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesUsersByType]])
                 res.kubernetes_users_by_types = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -143,7 +143,7 @@ class ClusterEventsPolicies:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.RecommendedKubernetesAPIRule]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.RecommendedKubernetesAPIRule]])
                 res.recommended_kubernetes_api_rules = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

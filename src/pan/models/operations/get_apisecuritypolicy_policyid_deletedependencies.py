@@ -8,12 +8,10 @@ from ..shared import apisecuritypolicydeletedependencies as shared_apisecuritypo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityPolicyPolicyIDDeleteDependenciesRequest:
     policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'policyId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Serverless:
     sdk_configuration: SDKConfiguration
@@ -55,7 +55,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.CloudAccount]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.CloudAccount]])
                 res.cloud_accounts = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -139,7 +139,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.AwsRegion]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AwsRegion]])
                 res.aws_regions = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -167,7 +167,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_cloud_accounts_regions_azure_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -265,7 +265,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ServerlessFunction]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ServerlessFunction]])
                 res.serverless_functions = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -294,7 +294,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ServerlessFunctionArns]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ServerlessFunctionArns]])
                 res.serverless_function_arns = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -323,7 +323,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ServerlessFunctionNames]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ServerlessFunctionNames]])
                 res.serverless_function_names = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -379,7 +379,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ServerlessFunctionSecretIssue]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ServerlessFunctionSecretIssue]])
                 res.serverless_function_secret_issues = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -408,7 +408,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Vulnerability]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Vulnerability]])
                 res.vulnerabilities = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -437,7 +437,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ServerlessZip]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ServerlessZip]])
                 res.serverless_zips = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -493,7 +493,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ImagePackageDetails]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ImagePackageDetails]])
                 res.image_package_details = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -522,7 +522,7 @@ class Serverless:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Vulnerability]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Vulnerability]])
                 res.vulnerabilities = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

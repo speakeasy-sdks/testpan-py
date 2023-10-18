@@ -5,13 +5,12 @@ import dataclasses
 from ..shared import injectedsidecar as shared_injectedsidecar
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class InjectedSidecarSection:
-    injected_sidecars: Optional[list[shared_injectedsidecar.InjectedSidecar]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('injectedSidecars'), 'exclude': lambda f: f is None }})
+    injected_sidecars: Optional[List[shared_injectedsidecar.InjectedSidecar]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('injectedSidecars'), 'exclude': lambda f: f is None }})
     
 

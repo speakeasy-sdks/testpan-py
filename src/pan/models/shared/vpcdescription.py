@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class VPCDescriptionInput:
     r"""Describes an AWS VPC."""
@@ -23,7 +22,6 @@ class VPCDescriptionInput:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class VPCDescription:
     r"""Describes an AWS VPC."""

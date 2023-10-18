@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteRegistriesRegistryIDRequest:
     registry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registryId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

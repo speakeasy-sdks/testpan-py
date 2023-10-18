@@ -5,4 +5,4 @@
 
 | Field                                                               | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `apis`                                                              | list[[APISecTopRiskyAPI](../../models/shared/apisectopriskyapi.md)] | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `apis`                                                              | List[[APISecTopRiskyAPI](../../models/shared/apisectopriskyapi.md)] | :heavy_minus_sign:                                                  | N/A                                                                 |

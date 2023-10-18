@@ -5,17 +5,16 @@ import dataclasses
 from ..shared import caclusteridandname as shared_caclusteridandname
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CaIntegrationResponseWithClusters:
     certificate: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('certificate') }})
     issuer_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issuerName') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    clusters: Optional[list[shared_caclusteridandname.CAClusterIDAndName]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusters'), 'exclude': lambda f: f is None }})
+    clusters: Optional[List[shared_caclusteridandname.CAClusterIDAndName]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusters'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     issuer_namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('issuerNamespace'), 'exclude': lambda f: f is None }})
     

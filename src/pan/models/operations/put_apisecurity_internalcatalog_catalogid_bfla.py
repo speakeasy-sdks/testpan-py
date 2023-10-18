@@ -7,13 +7,11 @@ from ..shared import apiservicebflainfo as shared_apiservicebflainfo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutAPISecurityInternalCatalogCatalogIDBflaRequest:
     api_service_bfla_info: shared_apiservicebflainfo.APIServiceBflaInfo = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

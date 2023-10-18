@@ -17,7 +17,6 @@ class GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey(str, Enum):
     RISK = 'risk'
 
 
-
 @dataclasses.dataclass
 class GetRiskAssessmentPermissionsClusterIDOwnerIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
@@ -29,7 +28,6 @@ class GetRiskAssessmentPermissionsClusterIDOwnerIDRequest:
     sort_key: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
-
 
 
 

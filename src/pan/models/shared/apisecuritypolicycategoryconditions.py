@@ -5,12 +5,12 @@ import dataclasses
 from ..shared import apisecuritypolicycategorycondition as shared_apisecuritypolicycategorycondition
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
+from typing import List
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APISecurityPolicyCategoryConditions:
-    conditions: list[shared_apisecuritypolicycategorycondition.APISecurityPolicyCategoryCondition] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('conditions') }})
+    conditions: List[shared_apisecuritypolicycategorycondition.APISecurityPolicyCategoryCondition] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('conditions') }})
     
 

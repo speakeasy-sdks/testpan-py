@@ -5,13 +5,13 @@ import dataclasses
 from ..shared import scorefinding as shared_scorefinding
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
+from typing import List
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ScoreFindingGroup:
     count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})
-    findings: list[shared_scorefinding.ScoreFinding] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings') }})
+    findings: List[shared_scorefinding.ScoreFinding] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings') }})
     
 

@@ -8,13 +8,11 @@ from ..shared import caintegrationresponse as shared_caintegrationresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutSettingsIntegrationsCaIDRequest:
     ca_integration_request_input: shared_caintegrationrequest.CaIntegrationRequestInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

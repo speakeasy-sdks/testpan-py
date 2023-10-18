@@ -11,7 +11,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class FuzzingMethod:
     findings: Optional[shared_fuzzingscorefindings.FuzzingScoreFindings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})

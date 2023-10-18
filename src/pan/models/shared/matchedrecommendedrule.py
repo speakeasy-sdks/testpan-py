@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MatchedRecommendedRule:
     r"""recommended rule that might reduce potential risk"""

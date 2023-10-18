@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import environment as shared_environment
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetEnvironmentsSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetEnvironmentsSortDir(str, Enum):
 class GetEnvironmentsSortKey(str, Enum):
     r"""Environment sort key"""
     NAME = 'name'
-
 
 
 @dataclasses.dataclass
@@ -34,14 +33,13 @@ class GetEnvironmentsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetEnvironmentsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    environments: Optional[list[shared_environment.Environment]] = dataclasses.field(default=None)
+    environments: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

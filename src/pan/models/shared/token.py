@@ -7,7 +7,7 @@ from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 class TokenAttributeType(str, Enum):
     REQUEST_HEADER = 'REQUEST_HEADER'
@@ -15,12 +15,11 @@ class TokenAttributeType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Token:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     vault_secret_path: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vaultSecretPath') }})
-    apis: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apis'), 'exclude': lambda f: f is None }})
+    apis: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apis'), 'exclude': lambda f: f is None }})
     attribute_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attributeName'), 'exclude': lambda f: f is None }})
     attribute_type: Optional[TokenAttributeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attributeType'), 'exclude': lambda f: f is None }})
     expiration_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})

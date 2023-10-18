@@ -15,12 +15,10 @@ class GetAdvisorQueueAdvisorTypeAdvisorType(str, Enum):
     API_RULES = 'API_RULES'
 
 
-
 @dataclasses.dataclass
 class GetAdvisorQueueAdvisorTypeRequest:
     advisor_type: GetAdvisorQueueAdvisorTypeAdvisorType = dataclasses.field(metadata={'path_param': { 'field_name': 'advisorType', 'style': 'simple', 'explode': False }})
     
-
 
 
 

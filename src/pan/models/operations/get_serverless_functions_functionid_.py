@@ -7,13 +7,11 @@ from ..shared import serverlessfunction as shared_serverlessfunction
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetServerlessFunctionsFunctionIDRequest:
     function_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'functionId', 'style': 'simple', 'explode': False }})
     r"""Function ID"""
     
-
 
 
 

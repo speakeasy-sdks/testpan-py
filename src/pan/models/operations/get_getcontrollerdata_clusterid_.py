@@ -8,13 +8,11 @@ from ..shared import controllerdataresponse as shared_controllerdataresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetGetControllerDataClusterIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     r"""Portshift cluster ID"""
     
-
 
 
 

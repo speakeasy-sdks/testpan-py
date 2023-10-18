@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Telemetries:
     r"""APIs used to query for telemetries"""
@@ -32,7 +32,7 @@ class Telemetries:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.AppTelemetry]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AppTelemetry]])
                 res.app_telemetries = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -88,7 +88,7 @@ class Telemetries:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.APIRiskInfo]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.APIRiskInfo]])
                 res.api_risk_infos = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -116,7 +116,7 @@ class Telemetries:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ImagesWithLicenses]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ImagesWithLicenses]])
                 res.images_with_licenses = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -144,7 +144,7 @@ class Telemetries:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.TokenInjectionInfo]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.TokenInjectionInfo]])
                 res.token_injection_infos = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -173,7 +173,7 @@ class Telemetries:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ConnectionTelemetry]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ConnectionTelemetry]])
                 res.connection_telemetries = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

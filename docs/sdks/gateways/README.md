@@ -186,8 +186,8 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='budgetary',
-    name='Tungsten technologies',
+    cluster_name='Tools',
+    name='Indiana',
     type=shared.GatewayType.TYK_INTERNAL,
 )
 
@@ -229,11 +229,11 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='Executive Minivan sky',
-        name='Northeast Rupee Burundi',
-        type=shared.GatewayType.F5_BIG_IP,
+        cluster_name='magenta',
+        name='Southwest',
+        type=shared.GatewayType.TYK_INTERNAL,
     ),
-    gateway_id='e6c75779-c9c8-4e93-9111-463ea3da225a',
+    gateway_id='c87e1369-f02c-4e6c-b577-9c9c8e935111',
 )
 
 res = s.gateways.put_gateways_gateway_id_(req)

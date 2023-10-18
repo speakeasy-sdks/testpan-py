@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class LeanKubernetesCluster:
     cluster_pod_definition_source: Optional[shared_clusterpoddefinitionsource.ClusterPodDefinitionSource] = dataclasses.field(default=shared_clusterpoddefinitionsource.ClusterPodDefinitionSource.KUBERNETES, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterPodDefinitionSource'), 'exclude': lambda f: f is None }})

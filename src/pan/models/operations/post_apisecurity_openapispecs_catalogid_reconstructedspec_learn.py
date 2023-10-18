@@ -7,13 +7,11 @@ from ..shared import apireconstructionrequest as shared_apireconstructionrequest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     api_reconstruction_request: Optional[shared_apireconstructionrequest.APIReconstructionRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

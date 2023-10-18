@@ -4,13 +4,12 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclusterssummary
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetK8sCISBenchmarkRequest:
-    cluster_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clusterIds', 'style': 'form', 'explode': False }})
+    cluster_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clusterIds', 'style': 'form', 'explode': False }})
     r"""cluster ids to filter"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
@@ -22,14 +21,13 @@ class GetK8sCISBenchmarkRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetK8sCISBenchmarkResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    k8s_cis_benchmark_clusters_summaries: Optional[list[shared_k8scisbenchmarkclusterssummary.K8sCISBenchmarkClustersSummary]] = dataclasses.field(default=None)
+    k8s_cis_benchmark_clusters_summaries: Optional[List[shared_k8scisbenchmarkclusterssummary.K8sCISBenchmarkClustersSummary]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

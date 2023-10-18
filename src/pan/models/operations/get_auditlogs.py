@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import auditlog as shared_auditlog
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetAuditLogsSortDir(str, Enum):
     r"""sorting direction"""
@@ -20,14 +20,13 @@ class GetAuditLogsSortKey(str, Enum):
     OBJECT_TYPE = 'objectType'
 
 
-
 @dataclasses.dataclass
 class GetAuditLogsRequest:
     end_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'endTime', 'style': 'form', 'explode': True }})
     r"""End date of the query"""
     start_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'startTime', 'style': 'form', 'explode': True }})
     r"""Start date of the query"""
-    actions: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'actions', 'style': 'form', 'explode': False }})
+    actions: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'actions', 'style': 'form', 'explode': False }})
     r"""Actions"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
@@ -47,14 +46,13 @@ class GetAuditLogsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAuditLogsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    audit_logs: Optional[list[shared_auditlog.AuditLog]] = dataclasses.field(default=None)
+    audit_logs: Optional[List[shared_auditlog.AuditLog]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

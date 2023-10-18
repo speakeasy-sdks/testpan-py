@@ -15,13 +15,11 @@ class PostAdvisorRunPolicyAdvisorType(str, Enum):
     API_RULES = 'API_RULES'
 
 
-
 @dataclasses.dataclass
 class PostAdvisorRunRequest:
     policy_advisor_type: PostAdvisorRunPolicyAdvisorType = dataclasses.field(metadata={'query_param': { 'field_name': 'policyAdvisorType', 'style': 'form', 'explode': True }})
     r"""policy advisor type"""
     
-
 
 
 

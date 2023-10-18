@@ -8,14 +8,12 @@ from ..shared import kubernetescluster as shared_kubernetescluster
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutKubernetesClustersKubernetesClusterIDRequest:
     kubernetes_cluster: shared_kubernetescluster.KubernetesCluster = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
     
-
 
 
 

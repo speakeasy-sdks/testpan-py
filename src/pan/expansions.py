@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Expansions:
     r"""APIs used to manage expansions on Secure Application"""
@@ -56,7 +56,7 @@ class Expansions:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Expansion]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Expansion]])
                 res.expansions = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

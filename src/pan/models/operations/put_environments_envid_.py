@@ -7,14 +7,12 @@ from ..shared import environment as shared_environment
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutEnvironmentsEnvIDRequest:
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
     environment_input: shared_environment.EnvironmentInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""Environment definition"""
     
-
 
 
 

@@ -15,18 +15,17 @@ from ..shared import vulnerabilitiessummary as shared_vulnerabilitiessummary
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIServiceInternal:
     identifier: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('identifier') }})
     r"""Unique identifier of the subject API as assigned by Crankshaft"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""API name (for external) or destination workload (for internal)"""
-    client_workloads: Optional[list[shared_apiserviceclientworkload.APIServiceClientWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientWorkloads'), 'exclude': lambda f: f is None }})
+    client_workloads: Optional[List[shared_apiserviceclientworkload.APIServiceClientWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientWorkloads'), 'exclude': lambda f: f is None }})
     cluster: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
     compliance: Optional[shared_apiservicecompliance_simple.APIServiceComplianceSimple] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliance'), 'exclude': lambda f: f is None }})
     creation_timestamp: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creation_timestamp'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})

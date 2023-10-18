@@ -7,12 +7,10 @@ from ..shared import trustedsigner as shared_trustedsigner
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTrustedSignersTrustedSignerIDRequest:
     trusted_signer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'trustedSignerId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

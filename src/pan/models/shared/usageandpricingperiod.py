@@ -6,14 +6,13 @@ from ..shared import usageandpricing as shared_usageandpricing
 from ..shared import usageandpricingperiodenum as shared_usageandpricingperiodenum
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UsageAndPricingPeriod:
     time_period: Optional[shared_usageandpricingperiodenum.UsageAndPricingPeriodEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
-    usage_and_pricing: Optional[list[shared_usageandpricing.UsageAndPricing]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usageAndPricing'), 'exclude': lambda f: f is None }})
+    usage_and_pricing: Optional[List[shared_usageandpricing.UsageAndPricing]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usageAndPricing'), 'exclude': lambda f: f is None }})
     
 

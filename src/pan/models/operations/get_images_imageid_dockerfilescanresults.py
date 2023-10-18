@@ -5,13 +5,12 @@ import dataclasses
 import requests as requests_http
 from ..shared import dockerfilescanresult as shared_dockerfilescanresult
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetImagesImageIDDockerfileScanResultsSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
-
 
 
 @dataclasses.dataclass
@@ -29,14 +28,13 @@ class GetImagesImageIDDockerfileScanResultsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetImagesImageIDDockerfileScanResultsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    dockerfile_scan_results: Optional[list[shared_dockerfilescanresult.DockerfileScanResult]] = dataclasses.field(default=None)
+    dockerfile_scan_results: Optional[List[shared_dockerfilescanresult.DockerfileScanResult]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

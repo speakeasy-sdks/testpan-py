@@ -124,7 +124,7 @@ req = shared.App(
     labels=[
         shared.Label(
             key='<key>',
-            value='becquerel',
+            value='Pennsylvania',
         ),
     ],
     name='AccountingApp',
@@ -184,7 +184,7 @@ if res.status_code == 200:
 
 | Parameter                                  | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `request`                                  | [list[str]](../../models//.md)             | :heavy_check_mark:                         | The request object to use for the request. |
+| `request`                                  | [List[str]](../../models//.md)             | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
@@ -222,14 +222,14 @@ req = operations.PutAppsAppIDRequest(
         labels=[
             shared.Label(
                 key='<key>',
-                value='Mercedes Fluorine',
+                value='invoice',
             ),
         ],
         name='AccountingApp',
         process_name='accounting_app',
         type='frontend',
     ),
-    app_id='a3d78ca7-d0e6-48bc-a8a0-d7f811909514',
+    app_id='a0b1a3d7-8ca7-4d0e-a8bc-a8a0d7f81190',
 )
 
 res = s.apps.put_apps_app_id_(req)

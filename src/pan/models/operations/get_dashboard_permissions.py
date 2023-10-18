@@ -4,18 +4,16 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import permissionswidget as shared_permissionswidget
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetDashboardPermissionsRequest:
-    clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
+    clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
     include_system_owners: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
     r"""include systems default owners"""
     
-
 
 
 

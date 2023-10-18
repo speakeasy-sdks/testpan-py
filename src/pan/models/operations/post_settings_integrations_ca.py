@@ -7,7 +7,6 @@ from ..shared import caintegrationresponse as shared_caintegrationresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostSettingsIntegrationsCaResponse:
     content_type: str = dataclasses.field()

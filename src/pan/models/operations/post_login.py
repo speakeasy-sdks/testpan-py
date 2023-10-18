@@ -8,7 +8,6 @@ from ..shared import userlogininfo as shared_userlogininfo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostLoginRequest:
     google_id_token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'googleIdToken', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class PostLoginRequest:
     token: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'token', 'style': 'simple', 'explode': False }})
     r"""cognito id token"""
     
-
 
 
 

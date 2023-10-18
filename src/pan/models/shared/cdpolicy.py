@@ -7,14 +7,13 @@ from ..shared import cdpolicyelement as shared_cdpolicyelement
 from ..shared import secretscdpolicyelement as shared_secretscdpolicyelement
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CdPolicyInput:
-    deployers: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
+    deployers: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     api_security_cd_policy: Optional[shared_apisecuritycdpolicyelement.APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
@@ -26,10 +25,9 @@ class CdPolicyInput:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CdPolicy:
-    deployers: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
+    deployers: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     api_security_cd_policy: Optional[shared_apisecuritycdpolicyelement.APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})

@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectionsRuleRecommendation:
     connection_rule: Optional[shared_recommendationconnectionrule.RecommendationConnectionRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRule'), 'exclude': lambda f: f is None }})

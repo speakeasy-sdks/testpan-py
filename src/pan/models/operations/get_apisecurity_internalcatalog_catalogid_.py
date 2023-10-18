@@ -4,19 +4,17 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apiservicedrilldowninternal as shared_apiservicedrilldowninternal
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCatalogIDRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
-    api_policy_profiles: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiPolicyProfiles', 'style': 'form', 'explode': False }})
+    api_policy_profiles: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiPolicyProfiles', 'style': 'form', 'explode': False }})
     r"""Names of the Api Policy Profiles"""
     download_as_json: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsJson', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an json file, and pagination will be ignored"""
     
-
 
 
 

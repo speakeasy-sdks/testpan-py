@@ -9,7 +9,7 @@ from ..shared import agenttype as shared_agenttype
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 class AgentGatherInformationState(str, Enum):
     NEW = 'NEW'
@@ -20,10 +20,9 @@ class AgentGatherInformationState(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Agent:
-    environments: Optional[list[shared_agentenvironment.AgentEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environments'), 'exclude': lambda f: f is None }})
+    environments: Optional[List[shared_agentenvironment.AgentEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environments'), 'exclude': lambda f: f is None }})
     gather_information_state: Optional[AgentGatherInformationState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gatherInformationState'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""sha2 of the content of the public key pem. The fingerprint format is xx:xx:xx..."""
@@ -33,7 +32,7 @@ class Agent:
     kubernetes_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesVersion'), 'exclude': lambda f: f is None }})
     nodes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nodes'), 'exclude': lambda f: f is None }})
     shared_secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sharedSecret'), 'exclude': lambda f: f is None }})
-    status_codes: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statusCodes'), 'exclude': lambda f: f is None }})
+    status_codes: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statusCodes'), 'exclude': lambda f: f is None }})
     type: Optional[shared_agenttype.AgentType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     r"""The type of agent. Possible values are instance agent or k8s agent."""
     vcpus: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vcpus'), 'exclude': lambda f: f is None }})

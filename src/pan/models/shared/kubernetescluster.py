@@ -16,7 +16,7 @@ from ..shared import sidecarsresource as shared_sidecarsresource
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 class KubernetesClusterOrchestrationType(str, Enum):
     GKE = 'GKE'
@@ -29,7 +29,6 @@ class KubernetesClusterOrchestrationType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class KubernetesCluster:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -73,7 +72,7 @@ class KubernetesCluster:
     r"""indicates whether this cluster should support multi-cluster communication"""
     is_persistent: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isPersistent'), 'exclude': lambda f: f is None }})
     r"""indicates whether the agent should run in persistent mode"""
-    istio_ingress_annotations: Optional[list[shared_kubernetesannotation.KubernetesAnnotation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioIngressAnnotations'), 'exclude': lambda f: f is None }})
+    istio_ingress_annotations: Optional[List[shared_kubernetesannotation.KubernetesAnnotation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioIngressAnnotations'), 'exclude': lambda f: f is None }})
     r"""annotations for load balancers"""
     istio_installation_parameters: Optional[shared_istioinstallationparameters.IstioInstallationParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('istioInstallationParameters'), 'exclude': lambda f: f is None }})
     r"""istio related information"""

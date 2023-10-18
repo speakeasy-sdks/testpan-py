@@ -7,7 +7,6 @@ from ..shared import licensingdashboard as shared_licensingdashboard
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetLicensingDashboardResponse:
     content_type: str = dataclasses.field()

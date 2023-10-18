@@ -8,7 +8,6 @@ from ..shared import kubernetescluster as shared_kubernetescluster
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostKubernetesClustersResponse:
     content_type: str = dataclasses.field()

@@ -16,7 +16,6 @@ class APIRiskInfoServiceRisk(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIRiskInfo:
     service_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serviceId'), 'exclude': lambda f: f is None }})

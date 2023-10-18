@@ -192,8 +192,8 @@ req = shared.Token(
     apis=[
         '06eb110c-ef48-45c9-b334-9ef284ebe70b',
     ],
-    name='offensive flexibility Gate',
-    vault_secret_path='Customer',
+    name='which',
+    vault_secret_path='Jazz',
 )
 
 res = s.tokens.post_tokens(req)
@@ -238,10 +238,10 @@ req = operations.PutTokensTokenIDRequest(
         apis=[
             '92f997c4-3e7b-4827-80b5-81f98e4dc9a1',
         ],
-        name='ah card Mercedes',
-        vault_secret_path='purple',
+        name='Wagon',
+        vault_secret_path='sexy',
     ),
-    token_id='346d3d22-b8df-4113-b31e-59e4bbc71d1a',
+    token_id='4da05c23-46d3-4d22-b8df-113331e59e4b',
 )
 
 res = s.tokens.put_tokens_token_id_(req)

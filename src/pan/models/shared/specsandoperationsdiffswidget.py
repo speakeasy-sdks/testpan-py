@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class SpecsAndOperationsDiffsWidget:
     operations_diffs: Optional[shared_operationsdiffsdonutpiechart.OperationsDiffsDonutPieChart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operationsDiffs'), 'exclude': lambda f: f is None }})

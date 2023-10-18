@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import imagedefget as shared_imagedefget
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetImagesSortDir(str, Enum):
     r"""sorting direction"""
@@ -19,18 +19,17 @@ class GetImagesSortKey(str, Enum):
     RISK = 'RISK'
 
 
-
 @dataclasses.dataclass
 class GetImagesRequest:
     sort_key: GetImagesSortKey = dataclasses.field(default=GetImagesSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""image sort key. enum description in image sort key definition"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    image_hash: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_HASH', 'style': 'form', 'explode': False }})
+    image_hash: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_HASH', 'style': 'form', 'explode': False }})
     r"""Filter images by HASH"""
-    image_name: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_NAME', 'style': 'form', 'explode': False }})
+    image_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_NAME', 'style': 'form', 'explode': False }})
     r"""Filter images by name"""
-    image_tag: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
+    image_tag: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
     r"""Filter images by tags"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
@@ -44,14 +43,13 @@ class GetImagesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetImagesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    image_def_gets: Optional[list[shared_imagedefget.ImageDefGet]] = dataclasses.field(default=None)
+    image_def_gets: Optional[List[shared_imagedefget.ImageDefGet]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

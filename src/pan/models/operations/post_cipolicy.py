@@ -7,7 +7,6 @@ from ..shared import cipolicy as shared_cipolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostCiPolicyResponse:
     content_type: str = dataclasses.field()

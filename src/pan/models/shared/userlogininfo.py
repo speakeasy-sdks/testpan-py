@@ -22,7 +22,6 @@ class UserLoginInfoStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UserLoginInfo:
     account_tier: shared_accounttier.AccountTier = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountTier') }})

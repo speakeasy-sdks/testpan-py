@@ -13,13 +13,11 @@ class GetDashboardApisecRiskFindingsAPISecSource(str, Enum):
     EXTERNAL = 'EXTERNAL'
 
 
-
 @dataclasses.dataclass
 class GetDashboardApisecRiskFindingsRequest:
     api_sec_source: GetDashboardApisecRiskFindingsAPISecSource = dataclasses.field(default=GetDashboardApisecRiskFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
     
-
 
 
 

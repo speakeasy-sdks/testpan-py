@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import imageswithlicenses as shared_imageswithlicenses
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,14 +15,13 @@ class GetAppTelemetriesAppTelemetryIDImagePackagesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAppTelemetriesAppTelemetryIDImagePackagesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    images_with_licenses: Optional[list[shared_imageswithlicenses.ImagesWithLicenses]] = dataclasses.field(default=None)
+    images_with_licenses: Optional[List[shared_imageswithlicenses.ImagesWithLicenses]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

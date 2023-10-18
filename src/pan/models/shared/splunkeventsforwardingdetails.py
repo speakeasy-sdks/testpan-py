@@ -6,15 +6,14 @@ from ..shared import eventsforwardingdetailstypeenum as shared_eventsforwardingd
 from ..shared import eventstoforward as shared_eventstoforward
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class SplunkEventsForwardingDetailsInput:
     events_forwarding_details_type: shared_eventsforwardingdetailstypeenum.EventsForwardingDetailsTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsForwardingDetailsType') }})
-    events_to_forward: list[shared_eventstoforward.EventsToForward] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsToForward') }})
+    events_to_forward: List[shared_eventstoforward.EventsToForward] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsToForward') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
     is_cloud: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isCloud'), 'exclude': lambda f: f is None }})

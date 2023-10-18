@@ -7,13 +7,11 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteKubernetesClustersKubernetesClusterIDRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
     
-
 
 
 

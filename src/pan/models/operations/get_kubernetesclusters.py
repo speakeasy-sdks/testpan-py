@@ -6,13 +6,12 @@ import requests as requests_http
 from ..shared import apiresponse as shared_apiresponse
 from ..shared import kubernetesclustercontroller as shared_kubernetesclustercontroller
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetKubernetesClustersSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
-
 
 
 @dataclasses.dataclass
@@ -41,7 +40,6 @@ class GetKubernetesClustersRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetKubernetesClustersResponse:
     content_type: str = dataclasses.field()
@@ -50,7 +48,7 @@ class GetKubernetesClustersResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    kubernetes_cluster_controllers: Optional[list[shared_kubernetesclustercontroller.KubernetesClusterController]] = dataclasses.field(default=None)
+    kubernetes_cluster_controllers: Optional[List[shared_kubernetesclustercontroller.KubernetesClusterController]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

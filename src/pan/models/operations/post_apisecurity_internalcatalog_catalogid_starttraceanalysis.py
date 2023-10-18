@@ -7,13 +7,11 @@ from ..shared import traceanalysisconfiguration as shared_traceanalysisconfigura
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     trace_analysis_configuration: shared_traceanalysisconfiguration.TraceAnalysisConfiguration = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

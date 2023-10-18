@@ -5,15 +5,14 @@ import dataclasses
 from ..shared import imagelayer as shared_imagelayer
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ImageLayers:
     r"""image layers"""
-    safe_layers: Optional[list[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('safeLayers'), 'exclude': lambda f: f is None }})
-    vulnerable_layers: Optional[list[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerableLayers'), 'exclude': lambda f: f is None }})
+    safe_layers: Optional[List[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('safeLayers'), 'exclude': lambda f: f is None }})
+    vulnerable_layers: Optional[List[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerableLayers'), 'exclude': lambda f: f is None }})
     
 

@@ -13,7 +13,6 @@ class RegistryCredentialsRegistryCredentialsType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RegistryCredentials:
     registry_credentials_type: RegistryCredentialsRegistryCredentialsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registryCredentialsType') }})

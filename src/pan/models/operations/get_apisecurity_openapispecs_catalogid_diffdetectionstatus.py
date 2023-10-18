@@ -7,12 +7,10 @@ from ..shared import diffdetectionstatus as shared_diffdetectionstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

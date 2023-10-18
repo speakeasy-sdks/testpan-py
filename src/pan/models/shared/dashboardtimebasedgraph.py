@@ -6,14 +6,13 @@ from ..shared import dashboardtimebasedgraphinfo as shared_dashboardtimebasedgra
 from ..shared import graphnumberpoint as shared_graphnumberpoint
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DashboardTimeBasedGraph:
-    graph: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('graph'), 'exclude': lambda f: f is None }})
+    graph: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('graph'), 'exclude': lambda f: f is None }})
     r"""the graph points"""
     info: Optional[shared_dashboardtimebasedgraphinfo.DashboardTimeBasedGraphInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info'), 'exclude': lambda f: f is None }})
     

@@ -150,9 +150,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='FTM',
+        duration='Garden',
     ),
-    catalog_id='464b0ff0-e6fe-414c-a291-62fc27770a3f',
+    catalog_id='e94464b0-ff0e-46fe-94ca-29162fc27770',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -193,9 +193,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='parse',
+        duration='South',
     ),
-    catalog_id='bc82f2c9-ea85-4a32-ab52-d888f26e15ab',
+    catalog_id='fbc82f2c-9ea8-45a3-a6b5-2d888f26e15a',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -280,29 +280,29 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
         status=shared.APIServiceBflaInfoStatus.NO_SPEC,
         tags=[
             shared.APIServiceBflaTagInfo(
-                name='Identity yearly',
+                name='International',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
-                                name='Manganese',
+                                name='Human',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='244.203.175.173',
-                                        name='Crew green Northeast',
-                                        principle_type='Bentley Granite withdrawal',
+                                        ip='252.50.185.52',
+                                        name='sherbet',
+                                        principle_type='Technician',
                                     ),
                                 ],
                             ),
                         ],
-                        method=shared.HTTPMethod.CONNECT,
-                        path='/usr/libexec',
+                        method=shared.HTTPMethod.TRACE,
+                        path='/usr/sbin',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='20110831-cf06-40a3-94c8-d6e973832cca',
+    catalog_id='442012ad-1459-4f87-a9c2-0110831cf060',
 )
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)

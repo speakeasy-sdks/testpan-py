@@ -5,17 +5,16 @@ import dataclasses
 from ..shared import graphnumberpoint as shared_graphnumberpoint
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APISecRiskFindingsTrendWidget:
-    critical: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('critical'), 'exclude': lambda f: f is None }})
-    high: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('high'), 'exclude': lambda f: f is None }})
-    low: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('low'), 'exclude': lambda f: f is None }})
-    medium: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('medium'), 'exclude': lambda f: f is None }})
-    no_known_risk: Optional[list[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('noKnownRisk'), 'exclude': lambda f: f is None }})
+    critical: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('critical'), 'exclude': lambda f: f is None }})
+    high: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('high'), 'exclude': lambda f: f is None }})
+    low: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('low'), 'exclude': lambda f: f is None }})
+    medium: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('medium'), 'exclude': lambda f: f is None }})
+    no_known_risk: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('noKnownRisk'), 'exclude': lambda f: f is None }})
     
 

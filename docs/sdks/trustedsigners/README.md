@@ -152,10 +152,10 @@ req = shared.TrustedSignerInput(
     keys=[
         shared.TrustedSignerKey(
             key='<key>',
-            name='Northeast Iowa',
+            name='Configurable',
         ),
     ],
-    name='killer United Agender',
+    name='Music',
     trusted_signer_cloud_accounts=[
         shared.TrustedSignerCloudAccountInput(),
     ],
@@ -205,10 +205,10 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
         keys=[
             shared.TrustedSignerKey(
                 key='<key>',
-                name='Chrysler Centers',
+                name='bus',
             ),
         ],
-        name='so static never',
+        name='Bronze',
         trusted_signer_cloud_accounts=[
             shared.TrustedSignerCloudAccountInput(),
         ],
@@ -216,7 +216,7 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
             shared.TrustedSignerClusterInput(),
         ],
     ),
-    trusted_signer_id='2390f3eb-b00b-4b0b-a50b-1429abb4df87',
+    trusted_signer_id='3c1dde95-75de-4823-90f3-ebb00bb0b650',
 )
 
 res = s.trusted_signers.put_trusted_signers_trusted_signer_id_(req)

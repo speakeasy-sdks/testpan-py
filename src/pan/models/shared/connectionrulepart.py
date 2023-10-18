@@ -29,7 +29,6 @@ class ConnectionRulePartConnectionRulePartType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectionRulePart:
     connection_rule_part_type: ConnectionRulePartConnectionRulePartType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRulePartType') }})

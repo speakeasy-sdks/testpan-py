@@ -200,9 +200,9 @@ req = shared.PodSecurityPolicy(
     host_ports=[
         shared.HostPortRange(),
     ],
-    name='Gloves',
+    name='aggregate',
     required_drop_capabilities=[
-        'explicit',
+        'portals',
     ],
     run_as_group=shared.RunAsGroupStrategyOptions(
         ranges=[
@@ -220,7 +220,7 @@ req = shared.PodSecurityPolicy(
         ],
     ),
     volumes=[
-        shared.PSPVolumeTypes.HOST_PATH,
+        shared.PSPVolumeTypes.FLEX_VOLUME,
     ],
 )
 
@@ -286,9 +286,9 @@ req = [
         host_ports=[
             shared.HostPortRange(),
         ],
-        name='mint',
+        name='Saudi',
         required_drop_capabilities=[
-            'Gasoline',
+            'Clarita',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -322,7 +322,7 @@ if res.pod_security_policies is not None:
 
 | Parameter                                           | Type                                                | Required                                            | Description                                         |
 | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| `request`                                           | [list[shared.PodSecurityPolicy]](../../models//.md) | :heavy_check_mark:                                  | The request object to use for the request.          |
+| `request`                                           | [List[shared.PodSecurityPolicy]](../../models//.md) | :heavy_check_mark:                                  | The request object to use for the request.          |
 
 
 ### Response
@@ -414,9 +414,9 @@ req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
         host_ports=[
             shared.HostPortRange(),
         ],
-        name='Coupe THX',
+        name='Central',
         required_drop_capabilities=[
-            'Dynamic',
+            'THX',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -434,10 +434,10 @@ req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
             ],
         ),
         volumes=[
-            shared.PSPVolumeTypes.FLOCKER,
+            shared.PSPVolumeTypes.PERSISTENT_VOLUME_CLAIM,
         ],
     ),
-    profile_id='04edb379-d9af-4bb9-b687-b2cfe0a637e7',
+    profile_id='3254604e-db37-49d9-afbb-9b687b2cfe0a',
 )
 
 res = s.psp_profiles.put_pod_security_policy_profiles_profile_id_(req)

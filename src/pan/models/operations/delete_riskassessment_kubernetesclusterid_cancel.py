@@ -6,13 +6,11 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteRiskAssessmentKubernetesClusterIDCancelRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
     
-
 
 
 

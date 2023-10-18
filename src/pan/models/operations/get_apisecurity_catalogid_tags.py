@@ -7,12 +7,10 @@ from ..shared import apiservicetags as shared_apiservicetags
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityCatalogIDTagsRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

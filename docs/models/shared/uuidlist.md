@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `uuid_list`        | list[*str*]        | :heavy_minus_sign: | N/A                |
+| `uuid_list`        | List[*str*]        | :heavy_minus_sign: | N/A                |

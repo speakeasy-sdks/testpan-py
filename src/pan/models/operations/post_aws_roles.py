@@ -7,7 +7,6 @@ from ..shared import awsrole as shared_awsrole
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAwsRolesResponse:
     content_type: str = dataclasses.field()

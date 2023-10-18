@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import cdpipelineresult as shared_cdpipelineresult
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetCdSortDir(str, Enum):
     r"""sorting direction"""
@@ -17,7 +17,6 @@ class GetCdSortKey(str, Enum):
     r"""sort key"""
     TIME = 'time'
     STATUS = 'status'
-
 
 
 @dataclasses.dataclass
@@ -40,14 +39,13 @@ class GetCdRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetCdResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cd_pipeline_results: Optional[list[shared_cdpipelineresult.CDPipelineResult]] = dataclasses.field(default=None)
+    cd_pipeline_results: Optional[List[shared_cdpipelineresult.CDPipelineResult]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

@@ -7,12 +7,10 @@ from ..shared import accesstoken as shared_accesstoken
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUsersUserIDAccessTokensRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

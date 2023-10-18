@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Apps:
     r"""APIs used to define apps"""
@@ -32,7 +32,7 @@ class Apps:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.App]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.App]])
                 res.apps = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -103,7 +103,7 @@ class Apps:
         return res
 
     
-    def post_apps_delete(self, request: list[str]) -> operations.PostAppsDeleteResponse:
+    def post_apps_delete(self, request: List[str]) -> operations.PostAppsDeleteResponse:
         r"""Delete several Apps
         Delete several apps.
         """

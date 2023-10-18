@@ -7,13 +7,11 @@ from ..shared import apppolicy as shared_apppolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAppsPolicyRequest:
     policy_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'policyFilter', 'style': 'form', 'explode': True }})
     r"""the filter to filter by. the string must be a json representation of PolicyFilter object"""
     
-
 
 
 

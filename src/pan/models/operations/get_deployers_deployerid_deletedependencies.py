@@ -8,12 +8,10 @@ from ..shared import deployerdeletedependencies as shared_deployerdeletedependen
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetDeployersDeployerIDDeleteDependenciesRequest:
     deployer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'deployerId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

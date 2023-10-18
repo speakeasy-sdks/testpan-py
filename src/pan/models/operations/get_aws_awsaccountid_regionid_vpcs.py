@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import vpcresponse as shared_vpcresponse
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -18,7 +17,6 @@ class GetAwsAwsAccountIDRegionIDVpcsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAwsAwsAccountIDRegionIDVpcsResponse:
     content_type: str = dataclasses.field()
@@ -27,7 +25,7 @@ class GetAwsAwsAccountIDRegionIDVpcsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    vpc_responses: Optional[list[shared_vpcresponse.VpcResponse]] = dataclasses.field(default=None)
+    vpc_responses: Optional[List[shared_vpcresponse.VpcResponse]] = dataclasses.field(default=None)
     r"""Success"""
     
 

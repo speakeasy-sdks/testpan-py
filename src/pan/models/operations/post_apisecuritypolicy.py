@@ -7,7 +7,6 @@ from ..shared import apisecuritypolicy as shared_apisecuritypolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityPolicyResponse:
     content_type: str = dataclasses.field()

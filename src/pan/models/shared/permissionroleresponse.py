@@ -5,17 +5,16 @@ import dataclasses
 from ..shared import permissionroleresources as shared_permissionroleresources
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PermissionRoleResponse:
     cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     owner_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownerName'), 'exclude': lambda f: f is None }})
-    resources: Optional[list[shared_permissionroleresources.PermissionRoleResources]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resources'), 'exclude': lambda f: f is None }})
+    resources: Optional[List[shared_permissionroleresources.PermissionRoleResources]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resources'), 'exclude': lambda f: f is None }})
     role_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('roleName'), 'exclude': lambda f: f is None }})
     
 

@@ -15,7 +15,6 @@ class DiffDetectionStatusStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DiffDetectionStatus:
     r"""diff detection status. in case of in progress, will reveal the detection end time"""

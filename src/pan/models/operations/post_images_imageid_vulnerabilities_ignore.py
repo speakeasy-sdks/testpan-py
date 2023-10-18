@@ -20,7 +20,6 @@ class PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime(str, Enum):
     WEEK = 'WEEK'
 
 
-
 @dataclasses.dataclass
 class PostImagesImageIDVulnerabilitiesIgnoreRequest:
     action_type: PostImagesImageIDVulnerabilitiesIgnoreActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
@@ -30,7 +29,6 @@ class PostImagesImageIDVulnerabilitiesIgnoreRequest:
     snooze_time: Optional[PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'snoozeTime', 'style': 'form', 'explode': True }})
     r"""The time to snooze the vulnerability"""
     
-
 
 
 

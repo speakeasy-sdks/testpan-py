@@ -7,7 +7,6 @@ from ..shared import usagestatus as shared_usagestatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAccountUsageStatusResponse:
     content_type: str = dataclasses.field()

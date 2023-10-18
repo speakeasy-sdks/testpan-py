@@ -7,13 +7,11 @@ from ..shared import apptelemetry as shared_apptelemetry
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAppTelemetriesAppTelemetryIDRequest:
     app_telemetry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appTelemetryId', 'style': 'simple', 'explode': False }})
     r"""App telemetry ID"""
     
-
 
 
 

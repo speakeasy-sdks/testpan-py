@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import tokeninjectioninfo as shared_tokeninjectioninfo
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -13,7 +12,6 @@ class GetAppTelemetriesAppTelemetryIDInjectionInfoRequest:
     app_telemetry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'appTelemetryId', 'style': 'simple', 'explode': False }})
     r"""App telemetry ID"""
     
-
 
 
 
@@ -25,7 +23,7 @@ class GetAppTelemetriesAppTelemetryIDInjectionInfoResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    token_injection_infos: Optional[list[shared_tokeninjectioninfo.TokenInjectionInfo]] = dataclasses.field(default=None)
+    token_injection_infos: Optional[List[shared_tokeninjectioninfo.TokenInjectionInfo]] = dataclasses.field(default=None)
     r"""Success"""
     
 

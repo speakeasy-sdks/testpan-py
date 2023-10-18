@@ -5,13 +5,12 @@ import dataclasses
 from ..shared import topriskyworkload as shared_topriskyworkload
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TopRiskyWorkloadsWidget:
-    top_risky_workloads: Optional[list[shared_topriskyworkload.TopRiskyWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyWorkloads'), 'exclude': lambda f: f is None }})
+    top_risky_workloads: Optional[List[shared_topriskyworkload.TopRiskyWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyWorkloads'), 'exclude': lambda f: f is None }})
     
 

@@ -13,7 +13,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppRule:
     r"""A rule that states what Apps are allowed to run on what environments."""

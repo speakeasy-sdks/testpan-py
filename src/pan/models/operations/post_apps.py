@@ -7,7 +7,6 @@ from ..shared import app as shared_app
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAppsResponse:
     content_type: str = dataclasses.field()

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Kubernetes:
     r"""APIs used to manage Kubernetes clusters on Secure Application"""
@@ -119,7 +119,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_istio_supported_versions_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -148,7 +148,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesClusterController]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesClusterController]])
                 res.kubernetes_cluster_controllers = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -321,7 +321,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesNamespace]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesNamespace]])
                 res.kubernetes_namespace_responses = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -356,7 +356,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.KubernetesService]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.KubernetesService]])
                 res.kubernetes_services = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -391,7 +391,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.LeanKubernetesCluster]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.LeanKubernetesCluster]])
                 res.lean_kubernetes_clusters = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -426,7 +426,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Namespace]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Namespace]])
                 res.namespaces = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -461,7 +461,7 @@ class Kubernetes:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.PodDefinition]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PodDefinition]])
                 res.pod_definitions = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

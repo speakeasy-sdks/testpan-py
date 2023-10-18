@@ -7,7 +7,6 @@ from ..shared import seccompprofile as shared_seccompprofile
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostSeccompProfilesResponse:
     content_type: str = dataclasses.field()

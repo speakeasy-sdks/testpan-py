@@ -5,9 +5,9 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `critical`         | list[*int*]        | :heavy_minus_sign: | N/A                |
-| `high`             | list[*int*]        | :heavy_minus_sign: | N/A                |
-| `low`              | list[*int*]        | :heavy_minus_sign: | N/A                |
-| `medium`           | list[*int*]        | :heavy_minus_sign: | N/A                |
-| `timestamp`        | list[*str*]        | :heavy_minus_sign: | N/A                |
-| `unclassified`     | list[*int*]        | :heavy_minus_sign: | N/A                |
+| `critical`         | List[*int*]        | :heavy_minus_sign: | N/A                |
+| `high`             | List[*int*]        | :heavy_minus_sign: | N/A                |
+| `low`              | List[*int*]        | :heavy_minus_sign: | N/A                |
+| `medium`           | List[*int*]        | :heavy_minus_sign: | N/A                |
+| `timestamp`        | List[*str*]        | :heavy_minus_sign: | N/A                |
+| `unclassified`     | List[*int*]        | :heavy_minus_sign: | N/A                |

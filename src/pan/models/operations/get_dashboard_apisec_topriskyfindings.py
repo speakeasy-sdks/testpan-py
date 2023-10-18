@@ -13,7 +13,6 @@ class GetDashboardApisecTopRiskyFindingsAPISecSource(str, Enum):
     EXTERNAL = 'EXTERNAL'
 
 
-
 @dataclasses.dataclass
 class GetDashboardApisecTopRiskyFindingsRequest:
     api_sec_source: GetDashboardApisecTopRiskyFindingsAPISecSource = dataclasses.field(default=GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
@@ -21,7 +20,6 @@ class GetDashboardApisecTopRiskyFindingsRequest:
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     
-
 
 
 

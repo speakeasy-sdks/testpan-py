@@ -6,15 +6,15 @@ from ..shared import k8scisbenchmarkupdatenode as shared_k8scisbenchmarkupdateno
 from ..shared import k8scisbenchmarkupdatenodestatus as shared_k8scisbenchmarkupdatenodestatus
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
+from typing import List
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class K8sCISBenchmarkUpdateNodes:
     cluster_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId') }})
     index: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index') }})
-    nodes: list[shared_k8scisbenchmarkupdatenode.K8sCISBenchmarkUpdateNode] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nodes') }})
+    nodes: List[shared_k8scisbenchmarkupdatenode.K8sCISBenchmarkUpdateNode] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nodes') }})
     status: shared_k8scisbenchmarkupdatenodestatus.K8sCISBenchmarkUpdateNodeStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

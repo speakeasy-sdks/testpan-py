@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import expansion as shared_expansion
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetExpansionsSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetExpansionsSortDir(str, Enum):
 class GetExpansionsSortKey(str, Enum):
     r"""sort key"""
     NAME = 'name'
-
 
 
 @dataclasses.dataclass
@@ -46,14 +45,13 @@ class GetExpansionsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetExpansionsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    expansions: Optional[list[shared_expansion.Expansion]] = dataclasses.field(default=None)
+    expansions: Optional[List[shared_expansion.Expansion]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

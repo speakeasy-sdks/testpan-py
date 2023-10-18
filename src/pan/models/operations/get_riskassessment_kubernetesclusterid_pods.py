@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import riskassessmentpod as shared_riskassessmentpod
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetRiskAssessmentKubernetesClusterIDPodsSortDir(str, Enum):
     r"""sorting direction"""
@@ -16,7 +16,6 @@ class GetRiskAssessmentKubernetesClusterIDPodsSortKey(str, Enum):
     r"""risk assessment pod sort key."""
     NAME = 'NAME'
     RISK = 'RISK'
-
 
 
 @dataclasses.dataclass
@@ -39,7 +38,6 @@ class GetRiskAssessmentKubernetesClusterIDPodsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetRiskAssessmentKubernetesClusterIDPodsResponse:
     content_type: str = dataclasses.field()
@@ -48,7 +46,7 @@ class GetRiskAssessmentKubernetesClusterIDPodsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_pods: Optional[list[shared_riskassessmentpod.RiskAssessmentPod]] = dataclasses.field(default=None)
+    risk_assessment_pods: Optional[List[shared_riskassessmentpod.RiskAssessmentPod]] = dataclasses.field(default=None)
     r"""Success"""
     
 

@@ -9,14 +9,12 @@ from ..shared import user as shared_user
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostUsersTrialRequest:
     g_recaptcha_response: str = dataclasses.field(metadata={'header': { 'field_name': 'g-recaptcha-response', 'style': 'simple', 'explode': False }})
     r"""google recaptcha response"""
     trial_user: shared_trialuser.TrialUser = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

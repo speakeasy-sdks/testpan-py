@@ -7,12 +7,10 @@ from ..shared import apireconstructionresponse as shared_apireconstructionrespon
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

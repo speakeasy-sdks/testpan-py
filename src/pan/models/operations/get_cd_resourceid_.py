@@ -17,7 +17,6 @@ class GetCdResourceIDSortKey(str, Enum):
     RISK = 'risk'
 
 
-
 @dataclasses.dataclass
 class GetCdResourceIDRequest:
     resource_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'resourceId', 'style': 'simple', 'explode': False }})
@@ -26,7 +25,6 @@ class GetCdResourceIDRequest:
     sort_key: Optional[GetCdResourceIDSortKey] = dataclasses.field(default=GetCdResourceIDSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
-
 
 
 

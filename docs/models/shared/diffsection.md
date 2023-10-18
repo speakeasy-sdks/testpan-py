@@ -5,4 +5,4 @@
 
 | Field                                                           | Type                                                            | Required                                                        | Description                                                     |
 | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `diffs`                                                         | list[[PodTemplateDiff](../../models/shared/podtemplatediff.md)] | :heavy_minus_sign:                                              | N/A                                                             |
+| `diffs`                                                         | List[[PodTemplateDiff](../../models/shared/podtemplatediff.md)] | :heavy_minus_sign:                                              | N/A                                                             |

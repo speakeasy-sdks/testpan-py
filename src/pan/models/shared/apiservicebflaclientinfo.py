@@ -7,11 +7,10 @@ from ..shared import apiservicebflaprincipleinfo as shared_apiservicebflaprincip
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIServiceBflaClientInfo:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -21,6 +20,6 @@ class APIServiceBflaClientInfo:
     last_observed: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastObserved'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     last_status_code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastStatusCode'), 'exclude': lambda f: f is None }})
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
-    principles: Optional[list[shared_apiservicebflaprincipleinfo.APIServiceBflaPrincipleInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('principles'), 'exclude': lambda f: f is None }})
+    principles: Optional[List[shared_apiservicebflaprincipleinfo.APIServiceBflaPrincipleInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('principles'), 'exclude': lambda f: f is None }})
     
 

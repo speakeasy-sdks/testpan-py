@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClusterEventRuleRecommendation:
     cluster_event_rule: Optional[shared_kubernetesapirule.KubernetesAPIRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterEventRule'), 'exclude': lambda f: f is None }})

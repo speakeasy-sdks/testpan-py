@@ -7,12 +7,10 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteSettingsIntegrationsEventForwardingEventForwardingIDRequest:
     event_forwarding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eventForwardingId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

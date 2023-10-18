@@ -5,21 +5,20 @@ import dataclasses
 from ..shared import mitretechnique as shared_mitretechnique
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MitreTable:
-    credentials_access: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credentialsAccess'), 'exclude': lambda f: f is None }})
-    defense_evasion: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defenseEvasion'), 'exclude': lambda f: f is None }})
-    discovery: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discovery'), 'exclude': lambda f: f is None }})
-    execution: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('execution'), 'exclude': lambda f: f is None }})
-    impact: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('impact'), 'exclude': lambda f: f is None }})
-    initial_access: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initialAccess'), 'exclude': lambda f: f is None }})
-    lateral_movement: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateralMovement'), 'exclude': lambda f: f is None }})
-    persistence: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('persistence'), 'exclude': lambda f: f is None }})
-    privilege_escalation: Optional[list[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('privilegeEscalation'), 'exclude': lambda f: f is None }})
+    credentials_access: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('credentialsAccess'), 'exclude': lambda f: f is None }})
+    defense_evasion: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defenseEvasion'), 'exclude': lambda f: f is None }})
+    discovery: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('discovery'), 'exclude': lambda f: f is None }})
+    execution: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('execution'), 'exclude': lambda f: f is None }})
+    impact: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('impact'), 'exclude': lambda f: f is None }})
+    initial_access: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initialAccess'), 'exclude': lambda f: f is None }})
+    lateral_movement: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lateralMovement'), 'exclude': lambda f: f is None }})
+    persistence: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('persistence'), 'exclude': lambda f: f is None }})
+    privilege_escalation: Optional[List[shared_mitretechnique.MitreTechnique]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('privilegeEscalation'), 'exclude': lambda f: f is None }})
     
 

@@ -7,7 +7,6 @@ from ..shared import userlogininfo as shared_userlogininfo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostMeResponse:
     content_type: str = dataclasses.field()

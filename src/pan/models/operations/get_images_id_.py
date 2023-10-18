@@ -7,12 +7,10 @@ from ..shared import imagedefget as shared_imagedefget
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetImagesIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

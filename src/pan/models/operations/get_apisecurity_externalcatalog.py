@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import apiservicelistexternal as shared_apiservicelistexternal
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetAPISecurityExternalCatalogSortDir(str, Enum):
     r"""sorting direction"""
@@ -19,10 +19,9 @@ class GetAPISecurityExternalCatalogSortKey(str, Enum):
     RISK = 'risk'
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityExternalCatalogRequest:
-    api_policy_profiles: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiPolicyProfiles', 'style': 'form', 'explode': False }})
+    api_policy_profiles: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiPolicyProfiles', 'style': 'form', 'explode': False }})
     r"""Names of the Api Policy Profiles"""
     drill_down_score: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'drillDownScore', 'style': 'form', 'explode': True }})
     r"""Return associated score"""
@@ -43,7 +42,6 @@ class GetAPISecurityExternalCatalogRequest:
     updated_after: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updatedAfter', 'style': 'form', 'explode': True }})
     r"""Only Apis updated since this date"""
     
-
 
 
 

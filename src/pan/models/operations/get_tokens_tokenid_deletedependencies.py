@@ -8,12 +8,10 @@ from ..shared import tokendeletedependencies as shared_tokendeletedependencies
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTokensTokenIDDeleteDependenciesRequest:
     token_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'tokenId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

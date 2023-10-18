@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import serverlesszip as shared_serverlesszip
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetServerlessZipFilesSortDir(str, Enum):
     r"""sorting direction"""
@@ -16,7 +16,6 @@ class GetServerlessZipFilesSortKey(str, Enum):
     r"""sort key"""
     TIME = 'TIME'
     VULNERABILITIES = 'VULNERABILITIES'
-
 
 
 @dataclasses.dataclass
@@ -35,7 +34,6 @@ class GetServerlessZipFilesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetServerlessZipFilesResponse:
     content_type: str = dataclasses.field()
@@ -44,7 +42,7 @@ class GetServerlessZipFilesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    serverless_zips: Optional[list[shared_serverlesszip.ServerlessZip]] = dataclasses.field(default=None)
+    serverless_zips: Optional[List[shared_serverlesszip.ServerlessZip]] = dataclasses.field(default=None)
     r"""Success"""
     
 

@@ -8,13 +8,11 @@ from ..shared import user as shared_user
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutUsersUserIDRequest:
     edit_user_input: shared_edituser.EditUserInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'userId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

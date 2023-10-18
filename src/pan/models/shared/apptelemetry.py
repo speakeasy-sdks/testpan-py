@@ -20,11 +20,10 @@ from ..shared import workloadrisklevel as shared_workloadrisklevel
 from ..shared import workloadtype as shared_workloadtype
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetryCluster:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
@@ -34,7 +33,6 @@ class AppTelemetryCluster:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetryEnvironment:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
@@ -43,7 +41,6 @@ class AppTelemetryEnvironment:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetryInstance:
     agent_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agentId'), 'exclude': lambda f: f is None }})
@@ -56,18 +53,16 @@ class AppTelemetryInstance:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetryNamespace:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    labels: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     
 
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetryNetwork:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
@@ -77,7 +72,6 @@ class AppTelemetryNetwork:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppTelemetry:
     r"""Single telemetry entry"""
@@ -101,7 +95,7 @@ class AppTelemetry:
     pod_identification: Optional[shared_podidentification.PodIdentification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podIdentification'), 'exclude': lambda f: f is None }})
     pod_runtime_info: Optional[shared_podruntimeinfo.PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the pod (if is a pod)"""
-    pods_licenses: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podsLicenses'), 'exclude': lambda f: f is None }})
+    pods_licenses: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podsLicenses'), 'exclude': lambda f: f is None }})
     r"""Licenses in use by the docker images. this field will be populated only in the drill down api"""
     pod_spec_info: Optional[shared_podspecinfo.PodSpecInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSpecInfo'), 'exclude': lambda f: f is None }})
     r"""pod spec attributes which are potentially risky"""
@@ -111,9 +105,9 @@ class AppTelemetry:
     r"""Status of a telemetry entry"""
     telemetry_uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telemetryUid'), 'exclude': lambda f: f is None }})
     r"""the kubernetes uid"""
-    telemetry_uids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telemetryUids'), 'exclude': lambda f: f is None }})
+    telemetry_uids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telemetryUids'), 'exclude': lambda f: f is None }})
     token_injection_status: Optional[shared_tokeninjectionstatus.TokenInjectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenInjectionStatus'), 'exclude': lambda f: f is None }})
-    unprotected_reasons: Optional[list[shared_unprotectedpodreason.UnprotectedPodReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unprotectedReasons'), 'exclude': lambda f: f is None }})
+    unprotected_reasons: Optional[List[shared_unprotectedpodreason.UnprotectedPodReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unprotectedReasons'), 'exclude': lambda f: f is None }})
     violation: Optional[shared_violationinfo.ViolationInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})
     r"""If the the App is running on an environment on which it is not allowed to run, this object contains the rule it violated."""
     workload_type: Optional[shared_workloadtype.WorkloadType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadType'), 'exclude': lambda f: f is None }})

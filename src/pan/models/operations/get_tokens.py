@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import token as shared_token
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetTokensSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetTokensSortDir(str, Enum):
 class GetTokensSortKey(str, Enum):
     r"""the token sort key"""
     EXPIRATION_DATE = 'expirationDate'
-
 
 
 @dataclasses.dataclass
@@ -36,7 +35,6 @@ class GetTokensRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetTokensResponse:
     content_type: str = dataclasses.field()
@@ -45,7 +43,7 @@ class GetTokensResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    tokens: Optional[list[shared_token.Token]] = dataclasses.field(default=None)
+    tokens: Optional[List[shared_token.Token]] = dataclasses.field(default=None)
     r"""Success"""
     
 

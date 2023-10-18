@@ -324,20 +324,20 @@ s = pan.Pan(
 
 req = shared.CdServerlessRule(
     action=shared.ServerlessRuleAction.DETECT,
-    name='orchestration Account navigate',
+    name='Assurance',
     rule=shared.ServerlessRuleType(
         serverless_function_validation=shared.ServerlessFunctionValidation(),
-        serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
+        serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
     ),
     scope=[
         shared.ServerlessRuleScope(
-            cloud_account='that',
+            cloud_account='navigate',
             regions=[
-                'tenetur',
+                'bypassing',
             ],
         ),
     ],
-    status=shared.ServerlessRuleStatus.ENABLED,
+    status=shared.ServerlessRuleStatus.DELETED,
 )
 
 res = s.cd.post_cd_serverless_rule(req)
@@ -427,22 +427,22 @@ s = pan.Pan(
 req = operations.PutCdRuleIDServerlessRuleRequest(
     cd_serverless_rule=shared.CdServerlessRule(
         action=shared.ServerlessRuleAction.DETECT,
-        name='dedicated Developer Sports',
+        name='yahoo',
         rule=shared.ServerlessRuleType(
             serverless_function_validation=shared.ServerlessFunctionValidation(),
-            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
+            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ANY_SERVERLESS_RULE_TYPE,
         ),
         scope=[
             shared.ServerlessRuleScope(
-                cloud_account='Cisgender tesla incentivize',
+                cloud_account='Developer',
                 regions=[
-                    'ivory',
+                    'Sports',
                 ],
             ),
         ],
-        status=shared.ServerlessRuleStatus.ENABLED,
+        status=shared.ServerlessRuleStatus.DISABLED,
     ),
-    rule_id='f6ceb379-119c-449c-aa96-4c43ac563e54',
+    rule_id='f913b954-cc1f-46ce-b379-119c49c2a964',
 )
 
 res = s.cd.put_cd_rule_id_serverless_rule(req)

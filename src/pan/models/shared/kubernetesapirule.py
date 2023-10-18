@@ -14,7 +14,6 @@ class KubernetesAPIRuleKubernetesAPIRuleType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class KubernetesAPIRule:
     kubernetes_api_rule_type: KubernetesAPIRuleKubernetesAPIRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesApiRuleType') }})

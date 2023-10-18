@@ -7,13 +7,11 @@ from ..shared import gateway as shared_gateway
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutGatewaysGatewayIDRequest:
     gateway: shared_gateway.Gateway = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     gateway_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gatewayId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import cdserverlessrule as shared_cdserverlessrule
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostCdServerlessRuleResponse:
     content_type: str = dataclasses.field()

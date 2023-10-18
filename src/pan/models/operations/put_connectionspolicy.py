@@ -7,7 +7,6 @@ from ..shared import connectionspolicy as shared_connectionspolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutConnectionsPolicyResponse:
     content_type: str = dataclasses.field()

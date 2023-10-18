@@ -7,13 +7,11 @@ from ..shared import policyfiltersearchresponse as shared_policyfiltersearchresp
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAppsPolicySearchOptionsRequest:
     name_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'nameFilter', 'style': 'form', 'explode': True }})
     r"""the pod/env name to filter by."""
     
-
 
 
 

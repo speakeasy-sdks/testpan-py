@@ -7,13 +7,11 @@ from ..shared import cdpolicy as shared_cdpolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutCdPolicyPolicyIDRequest:
     cd_policy_input: shared_cdpolicy.CdPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'policyId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

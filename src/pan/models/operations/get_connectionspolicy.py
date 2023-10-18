@@ -7,13 +7,11 @@ from ..shared import connectionspolicy as shared_connectionspolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetConnectionsPolicyRequest:
     policy_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'policyFilter', 'style': 'form', 'explode': True }})
     r"""the filter to filter by."""
     
-
 
 
 

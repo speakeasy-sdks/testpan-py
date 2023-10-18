@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import clusterdetails as shared_clusterdetails
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class GetDashboardClustersResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    clusters_details: Optional[list[shared_clusterdetails.ClusterDetails]] = dataclasses.field(default=None)
+    clusters_details: Optional[List[shared_clusterdetails.ClusterDetails]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

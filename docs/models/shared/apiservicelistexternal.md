@@ -5,4 +5,4 @@
 
 | Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `items`                                                               | list[[APIServiceExternal](../../models/shared/apiserviceexternal.md)] | :heavy_check_mark:                                                    | N/A                                                                   |
+| `items`                                                               | List[[APIServiceExternal](../../models/shared/apiserviceexternal.md)] | :heavy_check_mark:                                                    | N/A                                                                   |

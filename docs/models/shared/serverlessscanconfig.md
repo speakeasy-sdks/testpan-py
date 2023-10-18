@@ -7,4 +7,4 @@ Single serverless functions scan config
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `cloud_accounts`   | list[*str*]        | :heavy_check_mark: | N/A                |
+| `cloud_accounts`   | List[*str*]        | :heavy_check_mark: | N/A                |

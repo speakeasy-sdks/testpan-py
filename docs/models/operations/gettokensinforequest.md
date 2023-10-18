@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `tokens_ids`       | list[*str*]        | :heavy_check_mark: | N/A                |
+| `tokens_ids`       | List[*str*]        | :heavy_check_mark: | N/A                |

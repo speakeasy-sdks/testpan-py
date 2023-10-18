@@ -7,7 +7,6 @@ from datetime import datetime
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCountRequest:
     include_service_with_no_spec: Optional[bool] = dataclasses.field(default=True, metadata={'query_param': { 'field_name': 'includeServiceWithNoSpec', 'style': 'form', 'explode': True }})
@@ -19,7 +18,6 @@ class GetAPISecurityInternalCatalogCountRequest:
     updated_after: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updatedAfter', 'style': 'form', 'explode': True }})
     r"""Only Apis updated since this date"""
     
-
 
 
 

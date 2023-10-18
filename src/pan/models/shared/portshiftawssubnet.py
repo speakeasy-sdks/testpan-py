@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PortshiftAwsSubnet:
     r"""the interface that represents the node's entity type. Possible types are: PortshiftAwsInstance, PortshiftAwsSecurityGroupViolationInfo, PortshiftAwsSubnet"""

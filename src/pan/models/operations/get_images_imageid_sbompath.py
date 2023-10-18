@@ -7,12 +7,10 @@ from ..shared import imagesbompathresponse as shared_imagesbompathresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetImagesImageIDSbomPathRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

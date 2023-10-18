@@ -7,13 +7,11 @@ from ..shared import podsecuritypolicy as shared_podsecuritypolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutPodSecurityPolicyProfilesProfileIDRequest:
     pod_security_policy: shared_podsecuritypolicy.PodSecurityPolicy = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     profile_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

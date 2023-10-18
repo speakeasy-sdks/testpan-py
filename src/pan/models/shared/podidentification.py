@@ -13,7 +13,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PodIdentification:
     cd_section: Optional[shared_cdsection.CdSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cdSection'), 'exclude': lambda f: f is None }})

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations
-from typing import Optional
+from typing import List, Optional
 
 class Vulnerabilities:
     sdk_configuration: SDKConfiguration
@@ -31,7 +31,7 @@ class Vulnerabilities:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_vulnerabilities_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

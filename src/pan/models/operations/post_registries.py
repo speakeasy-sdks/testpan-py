@@ -7,7 +7,6 @@ from ..shared import registry as shared_registry
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostRegistriesResponse:
     content_type: str = dataclasses.field()

@@ -8,13 +8,11 @@ from ..shared import expansionput as shared_expansionput
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutExpansionsExpansionIDRequest:
     expansion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'expansionId', 'style': 'simple', 'explode': False }})
     expansion_put: shared_expansionput.ExpansionPut = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

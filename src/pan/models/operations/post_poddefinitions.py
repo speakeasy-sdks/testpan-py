@@ -7,7 +7,6 @@ from ..shared import poddefinition as shared_poddefinition
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostPodDefinitionsResponse:
     content_type: str = dataclasses.field()

@@ -11,7 +11,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TopSecurityRisksWidget:
     top_risky_apis_widget: Optional[shared_topriskyapiswidget.TopRiskyApisWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyApisWidget'), 'exclude': lambda f: f is None }})

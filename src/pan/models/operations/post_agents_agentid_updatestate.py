@@ -8,14 +8,12 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAgentsAgentIDUpdateStateRequest:
     agent_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'agentId', 'style': 'simple', 'explode': False }})
     r"""Secure Application agent ID"""
     agent_status_update: shared_agentstatusupdate.AgentStatusUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

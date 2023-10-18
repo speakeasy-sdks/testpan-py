@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import policyfiltersearchresponsepod as shared_policyfiltersearchresponsepod
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PolicyFilterSearchResponse:
-    envs: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('envs'), 'exclude': lambda f: f is None }})
-    pods: Optional[list[shared_policyfiltersearchresponsepod.PolicyFilterSearchResponsePod]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pods'), 'exclude': lambda f: f is None }})
+    envs: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('envs'), 'exclude': lambda f: f is None }})
+    pods: Optional[List[shared_policyfiltersearchresponsepod.PolicyFilterSearchResponsePod]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pods'), 'exclude': lambda f: f is None }})
     
 

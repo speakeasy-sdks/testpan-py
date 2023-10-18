@@ -6,27 +6,25 @@ from ..shared import oasversion as shared_oasversion
 from ..shared import reviewpathitem as shared_reviewpathitem
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIReconstructedSpecInput:
     oas_version: shared_oasversion.OASVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('OASVersion') }})
     r"""OpenAPI specification version"""
-    review_path_items: list[shared_reviewpathitem.ReviewPathItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewPathItems') }})
+    review_path_items: List[shared_reviewpathitem.ReviewPathItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewPathItems') }})
     
 
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIReconstructedSpec:
     oas_version: shared_oasversion.OASVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('OASVersion') }})
     r"""OpenAPI specification version"""
-    review_path_items: list[shared_reviewpathitem.ReviewPathItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewPathItems') }})
+    review_path_items: List[shared_reviewpathitem.ReviewPathItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewPathItems') }})
     review_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewId'), 'exclude': lambda f: f is None }})
     
 

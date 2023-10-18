@@ -7,7 +7,6 @@ from ..shared import ignoredrisk as shared_ignoredrisk
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostRiskAssessmentIgnoredRisksResponse:
     content_type: str = dataclasses.field()

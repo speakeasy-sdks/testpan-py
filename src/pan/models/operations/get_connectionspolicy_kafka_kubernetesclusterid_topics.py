@@ -3,8 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,14 +14,13 @@ class GetConnectionsPolicyKafkaKubernetesClusterIDTopicsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetConnectionsPolicyKafkaKubernetesClusterIDTopicsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_connections_policy_kafka_kubernetes_cluster_id_topics_200_application_json_strings: Optional[list[str]] = dataclasses.field(default=None)
+    get_connections_policy_kafka_kubernetes_cluster_id_topics_200_application_json_strings: Optional[List[str]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

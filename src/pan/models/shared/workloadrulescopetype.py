@@ -8,7 +8,6 @@ from pan import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class WorkloadRuleScopeType:
     r"""identify the scope type. Only one of the below should be not null, and  used."""

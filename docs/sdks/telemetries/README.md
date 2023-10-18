@@ -51,24 +51,24 @@ req = operations.GetAppTelemetriesRequest(
         'Concrete',
     ],
     host=[
-        'Rupee',
+        'killer',
     ],
     images_id=[
-        '356669e3-0a7d-4fca-9c8c-97d1dbbd6441',
+        'af356669-e30a-47df-8a5c-8c97d1dbbd64',
     ],
     result=[
-        operations.GetAppTelemetriesResult.DETECT,
+        operations.GetAppTelemetriesResult.ALLOW,
     ],
-    sort_key=operations.GetAppTelemetriesSortKey.RISK,
-    start_time=dateutil.parser.isoparse('2021-01-15T02:52:59.625Z'),
+    sort_key=operations.GetAppTelemetriesSortKey.APP_NAME,
+    start_time=dateutil.parser.isoparse('2022-02-10T16:05:06.025Z'),
     status=[
-        'Avon',
+        'auxiliary',
     ],
     vulnerability_levels_filter=[
-        'audition female',
+        'Avon',
     ],
     workload_risks=[
-        operations.GetAppTelemetriesWorkloadRisks.MEDIUM,
+        operations.GetAppTelemetriesWorkloadRisks.HIGH,
     ],
 )
 

@@ -6,16 +6,15 @@ from ..shared import label as shared_label
 from ..shared import workloadaddress as shared_workloadaddress
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ExpansionPut:
     r"""represent expansion object used in put method"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    workload_addresses: list[shared_workloadaddress.WorkloadAddress] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadAddresses') }})
-    labels: Optional[list[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    workload_addresses: List[shared_workloadaddress.WorkloadAddress] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadAddresses') }})
+    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

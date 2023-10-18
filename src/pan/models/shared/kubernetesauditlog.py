@@ -9,11 +9,10 @@ from ..shared import kubernetesauditlogusertype as shared_kubernetesauditloguser
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class KubernetesAuditLog:
     r"""Single kubernetes audit log"""
@@ -30,7 +29,7 @@ class KubernetesAuditLog:
     resource_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resourceName'), 'exclude': lambda f: f is None }})
     total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total'), 'exclude': lambda f: f is None }})
     user: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user'), 'exclude': lambda f: f is None }})
-    user_groups: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userGroups'), 'exclude': lambda f: f is None }})
+    user_groups: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userGroups'), 'exclude': lambda f: f is None }})
     user_namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userNamespace'), 'exclude': lambda f: f is None }})
     user_type: Optional[shared_kubernetesauditlogusertype.KubernetesAuditLogUserType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userType'), 'exclude': lambda f: f is None }})
     violation: Optional[shared_kubernetesapiviolation.KubernetesAPIViolation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})

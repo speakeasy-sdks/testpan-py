@@ -7,7 +7,6 @@ from ..shared import kubernetesapipolicy as shared_kubernetesapipolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetKubernetesAPIPolicyResponse:
     content_type: str = dataclasses.field()

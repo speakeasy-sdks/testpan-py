@@ -7,13 +7,11 @@ from ..shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAgentsAgentIDUpdateRequest:
     agent_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'agentId', 'style': 'simple', 'explode': False }})
     r"""Secure Application agent ID"""
     
-
 
 
 

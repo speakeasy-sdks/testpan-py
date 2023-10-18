@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class VulnerabilitiesSummary:
     r"""Vulnerabilities summary by severity"""

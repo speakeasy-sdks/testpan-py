@@ -6,14 +6,13 @@ from ..shared import connectionsrulerecommendation as shared_connectionsrulereco
 from ..shared import recommendationtimeperiod as shared_recommendationtimeperiod
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectionsRuleRecommendationPeriod:
-    connections_rule_recommendations: Optional[list[shared_connectionsrulerecommendation.ConnectionsRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionsRuleRecommendations'), 'exclude': lambda f: f is None }})
+    connections_rule_recommendations: Optional[List[shared_connectionsrulerecommendation.ConnectionsRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionsRuleRecommendations'), 'exclude': lambda f: f is None }})
     time_period: Optional[shared_recommendationtimeperiod.RecommendationTimePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
     total_connections: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalConnections'), 'exclude': lambda f: f is None }})
     

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Aws:
     r"""APIs used to change  credentials or return details about the  user's AWS environment"""
@@ -33,7 +33,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.AWSAccount]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AWSAccount]])
                 res.aws_accounts = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -61,7 +61,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.AWSRole]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AWSRole]])
                 res.aws_roles = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -89,7 +89,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Tag]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Tag]])
                 res.tags = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -119,7 +119,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_aws_aws_account_id_regions_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -147,7 +147,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.PortshiftAwsSubnet]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PortshiftAwsSubnet]])
                 res.portshift_aws_subnets = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -177,7 +177,7 @@ class Aws:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.VpcResponse]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.VpcResponse]])
                 res.vpc_responses = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

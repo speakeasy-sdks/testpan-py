@@ -8,12 +8,10 @@ from ..shared import deletedependencyelementenvironments as shared_deletedepende
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetEnvironmentsEnvIDDeleteDependenciesRequest:
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -7,13 +7,11 @@ from ..shared import registry as shared_registry
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostRegistriesTestConnectionRegistryIDRequest:
     registry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registryId', 'style': 'simple', 'explode': False }})
     registry_input: shared_registry.RegistryInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

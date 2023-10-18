@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class Advisor:
     r"""APIs used to get policy recommendations"""
@@ -31,7 +31,7 @@ class Advisor:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ClusterEventRuleRecommendationPeriod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClusterEventRuleRecommendationPeriod]])
                 res.cluster_event_rule_recommendation_periods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -59,7 +59,7 @@ class Advisor:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ConnectionsRuleRecommendationPeriod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ConnectionsRuleRecommendationPeriod]])
                 res.connections_rule_recommendation_periods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -87,7 +87,7 @@ class Advisor:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.EnvironmentRecommendationPeriod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.EnvironmentRecommendationPeriod]])
                 res.environment_recommendation_periods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -115,7 +115,7 @@ class Advisor:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.EnvironmentRulesRecommendationPeriod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.EnvironmentRulesRecommendationPeriod]])
                 res.environment_rules_recommendation_periods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -143,7 +143,7 @@ class Advisor:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.PodSecurityPolicyRecommendationPeriod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PodSecurityPolicyRecommendationPeriod]])
                 res.pod_security_policy_recommendation_periods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

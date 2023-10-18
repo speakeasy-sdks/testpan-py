@@ -13,7 +13,6 @@ class PostRiskAssessmentPermissionsOwnerIDApproveActionType(str, Enum):
     REMOVE = 'REMOVE'
 
 
-
 @dataclasses.dataclass
 class PostRiskAssessmentPermissionsOwnerIDApproveRequest:
     action_type: PostRiskAssessmentPermissionsOwnerIDApproveActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
@@ -21,7 +20,6 @@ class PostRiskAssessmentPermissionsOwnerIDApproveRequest:
     owner_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownerId', 'style': 'simple', 'explode': False }})
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

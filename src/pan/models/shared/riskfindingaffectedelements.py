@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import riskfindingaffectedelementobject as shared_riskfindingaffectedelementobject
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RiskFindingAffectedElements:
-    external_elements: Optional[list[shared_riskfindingaffectedelementobject.RiskFindingAffectedElementObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalElements'), 'exclude': lambda f: f is None }})
-    internal_elements: Optional[list[shared_riskfindingaffectedelementobject.RiskFindingAffectedElementObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalElements'), 'exclude': lambda f: f is None }})
+    external_elements: Optional[List[shared_riskfindingaffectedelementobject.RiskFindingAffectedElementObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('externalElements'), 'exclude': lambda f: f is None }})
+    internal_elements: Optional[List[shared_riskfindingaffectedelementobject.RiskFindingAffectedElementObject]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalElements'), 'exclude': lambda f: f is None }})
     
 

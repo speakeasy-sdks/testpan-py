@@ -12,7 +12,6 @@ class AppRuleTypeRuleType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppRuleType:
     r"""identify the app rule type. Only one of the below should be not null, and  used."""

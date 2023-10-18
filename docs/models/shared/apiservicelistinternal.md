@@ -5,4 +5,4 @@
 
 | Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `items`                                                               | list[[APIServiceInternal](../../models/shared/apiserviceinternal.md)] | :heavy_check_mark:                                                    | N/A                                                                   |
+| `items`                                                               | List[[APIServiceInternal](../../models/shared/apiserviceinternal.md)] | :heavy_check_mark:                                                    | N/A                                                                   |

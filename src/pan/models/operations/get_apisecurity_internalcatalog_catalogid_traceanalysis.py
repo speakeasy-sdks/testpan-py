@@ -7,7 +7,6 @@ from ..shared import traceanalysisdetails as shared_traceanalysisdetails
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest:
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     
-
 
 
 

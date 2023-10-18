@@ -196,27 +196,27 @@ req = shared.EnvironmentInput(
             tags=[
                 shared.Tag(
                     key='<key>',
-                    value='South',
+                    value='Electronic',
                 ),
             ],
             vpc=shared.VPCDescriptionInput(
-                aws_account_id='Seaborgium',
-                region_id='Northeast',
-                vpc_id='invoice Honduras',
+                aws_account_id='sticky',
+                region_id='Seaborgium',
+                vpc_id='Bosnia',
             ),
         ),
     ],
     kubernetes_environments=[
         shared.KubernetesEnvironmentInput(
-            kubernetes_cluster='5a8916a0-e622-4811-bd3c-8c7fc23dd96f',
+            kubernetes_cluster='77d065a8-916a-40e6-a281-1bd3c8c7fc23',
             namespace_labels=[
                 shared.Label(
                     key='<key>',
-                    value='Southwest group',
+                    value='substantial',
                 ),
             ],
             namespaces=[
-                'sievert',
+                'Genderqueer',
             ],
         ),
     ],
@@ -267,27 +267,27 @@ req = [
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='Maine ampere',
+                        value='Cisgender',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='support round',
-                    region_id='East',
-                    vpc_id='Coast Facilitator bypassing',
+                    aws_account_id='ampere',
+                    region_id='Dinar',
+                    vpc_id='round',
                 ),
             ),
         ],
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                kubernetes_cluster='198d741c-5bdf-45a6-87e9-5a1cd6d26b83',
+                kubernetes_cluster='312c0aeb-d811-498d-b41c-5bdf5a607e95',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='West Customer',
+                        value='Associate',
                     ),
                 ],
                 namespaces=[
-                    'except',
+                    'Touring',
                 ],
             ),
         ],
@@ -306,7 +306,7 @@ if res.environments is not None:
 
 | Parameter                                          | Type                                               | Required                                           | Description                                        |
 | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| `request`                                          | [list[shared.EnvironmentInput]](../../models//.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
+| `request`                                          | [List[shared.EnvironmentInput]](../../models//.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
 
 
 ### Response
@@ -371,33 +371,33 @@ req = operations.PutEnvironmentsEnvIDRequest(
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='1080p into',
+                        value='Networked',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='tromp Upgradable',
-                    region_id='paradigms eligendi',
-                    vpc_id='Steel revolutionize Checking',
+                    aws_account_id='Tricycle',
+                    region_id='pixel',
+                    vpc_id='tromp',
                 ),
             ),
         ],
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                kubernetes_cluster='3566df6f-010d-4e05-b98d-e3a9acad0419',
+                kubernetes_cluster='5e6509cb-415d-4600-b566-df6f010de053',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='portals Lakes West',
+                        value='Soul',
                     ),
                 ],
                 namespaces=[
-                    'zero',
+                    'Tesla',
                 ],
             ),
         ],
         name='Prod',
     ),
-    env_id='efb650de-9801-4dae-8e96-7d9d0297331b',
+    env_id='3a9acad0-419b-46d5-9592-04790c5f1efb',
 )
 
 res = s.envs.put_environments_env_id_(req)

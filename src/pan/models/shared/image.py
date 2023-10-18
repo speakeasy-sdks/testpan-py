@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Image:
     dockerfile_scan_severity: Optional[shared_dockerfilescanseverity.DockerfileScanSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dockerfileScanSeverity'), 'exclude': lambda f: f is None }})

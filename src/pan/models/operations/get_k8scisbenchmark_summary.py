@@ -7,7 +7,6 @@ from ..shared import k8scisbenchmarkaccountsummary as shared_k8scisbenchmarkacco
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetK8sCISBenchmarkSummaryResponse:
     content_type: str = dataclasses.field()

@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import serverlessrolepolicy as shared_serverlessrolepolicy
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessRoleDetails:
-    policies: Optional[list[shared_serverlessrolepolicy.ServerlessRolePolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policies'), 'exclude': lambda f: f is None }})
+    policies: Optional[List[shared_serverlessrolepolicy.ServerlessRolePolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policies'), 'exclude': lambda f: f is None }})
     role_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('roleArn'), 'exclude': lambda f: f is None }})
     role_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('roleName'), 'exclude': lambda f: f is None }})
     

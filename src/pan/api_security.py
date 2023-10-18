@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class APISecurity:
     r"""APIs used to manage Api Security"""
@@ -391,7 +391,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.APIServiceFuzzingTest]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.APIServiceFuzzingTest]])
                 res.api_service_fuzzing_tests = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -672,7 +672,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_api_security_risk_findings_categories_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -700,7 +700,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[str]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[str]])
                 res.get_api_security_risk_findings_sources_200_application_json_strings = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -791,7 +791,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.APIServiceMethod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.APIServiceMethod]])
                 res.api_service_methods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -993,7 +993,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.Gateway]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.Gateway]])
                 res.gateways = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -1022,7 +1022,7 @@ class APISecurity:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.GatewayClusterInfo]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.GatewayClusterInfo]])
                 res.gateway_cluster_infos = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

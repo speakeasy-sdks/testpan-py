@@ -7,12 +7,10 @@ from ..shared import apiservicefuzzingprogress as shared_apiservicefuzzingprogre
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCatalogIDFuzzingStatusRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

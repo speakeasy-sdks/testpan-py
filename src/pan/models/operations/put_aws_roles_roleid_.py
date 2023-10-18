@@ -8,13 +8,11 @@ from ..shared import awsroledetails as shared_awsroledetails
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutAwsRolesRoleIDRequest:
     aws_role_details: shared_awsroledetails.AWSRoleDetails = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     role_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'roleId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

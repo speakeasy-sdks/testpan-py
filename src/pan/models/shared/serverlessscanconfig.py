@@ -4,13 +4,13 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
+from typing import List
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ServerlessScanConfig:
     r"""Single serverless functions scan config"""
-    cloud_accounts: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudAccounts') }})
+    cloud_accounts: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudAccounts') }})
     
 

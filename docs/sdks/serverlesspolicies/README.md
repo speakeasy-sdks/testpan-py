@@ -62,20 +62,20 @@ req = shared.ServerlessPolicy(
     user_rules=[
         shared.ServerlessRule(
             action=shared.ServerlessRuleAction.ALLOW,
-            name='Northwest granular',
+            name='infrastructures',
             rule=shared.ServerlessRuleType(
                 serverless_function_validation=shared.ServerlessFunctionValidation(),
                 serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ANY_SERVERLESS_RULE_TYPE,
             ),
             scope=[
                 shared.ServerlessRuleScope(
-                    cloud_account='Tuna brand Legacy',
+                    cloud_account='granular',
                     regions=[
-                        'Iraq',
+                        'Keys',
                     ],
                 ),
             ],
-            status=shared.ServerlessRuleStatus.ENABLED,
+            status=shared.ServerlessRuleStatus.DISABLED,
         ),
     ],
 )

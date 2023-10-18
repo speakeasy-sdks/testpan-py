@@ -6,14 +6,13 @@ from ..shared import kubernetesauditlogusertype as shared_kubernetesauditloguser
 from ..shared import kubernetesuserdetails as shared_kubernetesuserdetails
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class KubernetesUsersByType:
-    users: Optional[list[shared_kubernetesuserdetails.KubernetesUserDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users'), 'exclude': lambda f: f is None }})
+    users: Optional[List[shared_kubernetesuserdetails.KubernetesUserDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users'), 'exclude': lambda f: f is None }})
     user_type: Optional[shared_kubernetesauditlogusertype.KubernetesAuditLogUserType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userType'), 'exclude': lambda f: f is None }})
     
 

@@ -8,12 +8,10 @@ from ..shared import apiservicedeletedependencies as shared_apiservicedeletedepe
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityCatalogIDDeleteDependenciesRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

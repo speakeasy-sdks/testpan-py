@@ -7,13 +7,11 @@ from ..shared import actionduration as shared_actionduration
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest:
     action_duration: shared_actionduration.ActionDuration = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

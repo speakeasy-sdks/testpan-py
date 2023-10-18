@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import clusterpermission as shared_clusterpermission
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetRiskAssessmentPermissionsPermissionRisk(str, Enum):
     r"""the risk to filter by"""
@@ -24,10 +24,9 @@ class GetRiskAssessmentPermissionsSortKey(str, Enum):
     PERMISSION_RISK = 'permissionRisk'
 
 
-
 @dataclasses.dataclass
 class GetRiskAssessmentPermissionsRequest:
-    clusters_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
+    clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""
     include_system_owners: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
     r"""include systems default owners"""
@@ -41,14 +40,13 @@ class GetRiskAssessmentPermissionsRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetRiskAssessmentPermissionsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cluster_permissions: Optional[list[shared_clusterpermission.ClusterPermission]] = dataclasses.field(default=None)
+    cluster_permissions: Optional[List[shared_clusterpermission.ClusterPermission]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

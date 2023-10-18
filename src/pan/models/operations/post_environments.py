@@ -7,7 +7,6 @@ from ..shared import environment as shared_environment
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostEnvironmentsResponse:
     content_type: str = dataclasses.field()

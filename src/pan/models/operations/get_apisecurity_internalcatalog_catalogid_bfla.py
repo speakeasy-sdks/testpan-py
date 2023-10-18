@@ -7,12 +7,10 @@ from ..shared import apiservicebflainfo as shared_apiservicebflainfo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityInternalCatalogCatalogIDBflaRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

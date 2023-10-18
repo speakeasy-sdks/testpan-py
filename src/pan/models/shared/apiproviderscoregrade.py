@@ -12,20 +12,19 @@ from ..shared import risktrendenum as shared_risktrendenum
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
-from typing import Optional
+from typing import Dict, List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APIProviderScoreGrade:
-    categories: dict[str, shared_categoryscoregradenofindings.CategoryScoreGradeNoFindings] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    categories: Dict[str, shared_categoryscoregradenofindings.CategoryScoreGradeNoFindings] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
     curated: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('curated') }})
     provider: shared_apiprovider_base.APIProviderBase = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     risk: shared_apisecurityriskseverity.APISecurityRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
     r"""An `enum`eration."""
     scorer_version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scorer_version') }})
-    additional_info: Optional[list[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
+    additional_info: Optional[List[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
     avg_vulnerability_duration: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_vulnerability_duration'), 'exclude': lambda f: f is None }})
     confidence: Optional[shared_riskconfidenceenum.RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""

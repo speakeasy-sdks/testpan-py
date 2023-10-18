@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class VulnerabilitiesWidget:
     serverless_vulnerabilities_widget: Optional[shared_serverlessvulnerabilitieswidget.ServerlessVulnerabilitiesWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ServerlessVulnerabilitiesWidget'), 'exclude': lambda f: f is None }})

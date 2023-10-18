@@ -8,11 +8,10 @@ from ..shared import riskconfidenceenum as shared_riskconfidenceenum
 from ..shared import risktrendenum as shared_risktrendenum
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CategoryScoreGradeNoFindings:
     critical: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('critical') }})
@@ -24,7 +23,7 @@ class CategoryScoreGradeNoFindings:
     r"""An `enum`eration."""
     scorer_version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scorer_version') }})
     unclassified: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unclassified') }})
-    additional_info: Optional[list[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
+    additional_info: Optional[List[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
     confidence: Optional[shared_riskconfidenceenum.RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     trend: Optional[shared_risktrendenum.RiskTrendEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trend'), 'exclude': lambda f: f is None }})

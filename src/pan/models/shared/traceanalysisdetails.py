@@ -8,15 +8,14 @@ from ..shared import traceanalysisstatus as shared_traceanalysisstatus
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TraceAnalysisDetails:
     end_time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endTime'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    findings: Optional[list[shared_traceanalysisfinding.TraceAnalysisFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
+    findings: Optional[List[shared_traceanalysisfinding.TraceAnalysisFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
     status: Optional[shared_traceanalysisstatus.TraceAnalysisStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     
 

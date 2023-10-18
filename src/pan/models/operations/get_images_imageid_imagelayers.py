@@ -13,7 +13,6 @@ class GetImagesImageIDImageLayersSortDir(str, Enum):
     DESC = 'DESC'
 
 
-
 @dataclasses.dataclass
 class GetImagesImageIDImageLayersRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
@@ -22,7 +21,6 @@ class GetImagesImageIDImageLayersRequest:
     sort_dir: Optional[GetImagesImageIDImageLayersSortDir] = dataclasses.field(default=GetImagesImageIDImageLayersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
-
 
 
 

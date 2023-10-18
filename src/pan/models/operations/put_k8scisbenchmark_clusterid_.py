@@ -7,13 +7,11 @@ from ..shared import k8scisbenchmarkupdatenodes as shared_k8scisbenchmarkupdaten
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutK8sCISBenchmarkClusterIDRequest:
     cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     k8s_cis_benchmark_update_nodes: shared_k8scisbenchmarkupdatenodes.K8sCISBenchmarkUpdateNodes = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import trustedsigner as shared_trustedsigner
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetTrustedSignersSortDir(str, Enum):
     r"""sorting direction"""
@@ -15,7 +15,6 @@ class GetTrustedSignersSortDir(str, Enum):
 class GetTrustedSignersSortKey(str, Enum):
     r"""sort key"""
     NAME = 'name'
-
 
 
 @dataclasses.dataclass
@@ -28,7 +27,6 @@ class GetTrustedSignersRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetTrustedSignersResponse:
     content_type: str = dataclasses.field()
@@ -37,7 +35,7 @@ class GetTrustedSignersResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    trusted_signers: Optional[list[shared_trustedsigner.TrustedSigner]] = dataclasses.field(default=None)
+    trusted_signers: Optional[List[shared_trustedsigner.TrustedSigner]] = dataclasses.field(default=None)
     r"""Success"""
     
 

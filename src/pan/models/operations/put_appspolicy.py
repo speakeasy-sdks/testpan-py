@@ -7,7 +7,6 @@ from ..shared import apppolicy as shared_apppolicy
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutAppsPolicyResponse:
     content_type: str = dataclasses.field()

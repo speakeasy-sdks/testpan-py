@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import apiresponse as shared_apiresponse
 from ..shared import namespace as shared_namespace
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetNamespacesProtectionStatus(str, Enum):
     r"""When true, the API will return only protected pods"""
@@ -27,7 +27,6 @@ class GetNamespacesSortKey(str, Enum):
     CLUSTER_NAME = 'clusterName'
     RUNNING_PODS = 'runningPods'
     PROTECTION_STATUS = 'protectionStatus'
-
 
 
 @dataclasses.dataclass
@@ -52,7 +51,6 @@ class GetNamespacesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetNamespacesResponse:
     content_type: str = dataclasses.field()
@@ -61,7 +59,7 @@ class GetNamespacesResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    namespaces: Optional[list[shared_namespace.Namespace]] = dataclasses.field(default=None)
+    namespaces: Optional[List[shared_namespace.Namespace]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

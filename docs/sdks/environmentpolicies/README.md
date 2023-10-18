@@ -145,14 +145,14 @@ req = shared.AppPolicy(
             app=shared.WorkloadRuleType(
                 workload_rule_type=shared.WorkloadRuleTypeWorkloadRuleType.POD_ANY_WORKLOAD_RULE_TYPE,
             ),
-            name='Bolivia Peso Gasoline',
+            name='Adventure',
             rule_type_properties=shared.AppRuleType(
                 rule_type=shared.AppRuleTypeRuleType.INJECTION_RULE_TYPE,
             ),
             scope=shared.WorkloadRuleScopeType(
-                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ENVIRONMENT_NAME_RULE_TYPE,
+                workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ANY_RULE_TYPE,
             ),
-            status=shared.AppRuleStatus.ENABLED,
+            status=shared.AppRuleStatus.DELETED,
         ),
     ],
 )

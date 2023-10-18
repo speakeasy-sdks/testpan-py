@@ -5,13 +5,12 @@ import dataclasses
 import requests as requests_http
 from ..shared import vulnerability as shared_vulnerability
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetServerlessZipFilesZipIDVulnerabilitiesSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
-
 
 
 @dataclasses.dataclass
@@ -27,7 +26,6 @@ class GetServerlessZipFilesZipIDVulnerabilitiesRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetServerlessZipFilesZipIDVulnerabilitiesResponse:
     content_type: str = dataclasses.field()
@@ -36,7 +34,7 @@ class GetServerlessZipFilesZipIDVulnerabilitiesResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    vulnerabilities: Optional[list[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
+    vulnerabilities: Optional[List[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
     r"""OK"""
     
 

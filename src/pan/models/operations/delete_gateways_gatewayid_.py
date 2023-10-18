@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteGatewaysGatewayIDRequest:
     gateway_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'gatewayId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

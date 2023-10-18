@@ -8,7 +8,6 @@ from datetime import datetime
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetConnectionTelemetriesConnectionTelemetryIDRequest:
     connection_telemetry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connectionTelemetryId', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class GetConnectionTelemetriesConnectionTelemetryIDRequest:
     start_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'startTime', 'style': 'form', 'explode': True }})
     r"""Start date of the query"""
     
-
 
 
 

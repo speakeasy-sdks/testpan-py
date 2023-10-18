@@ -7,7 +7,7 @@ app info and process info for connection and App telemetries
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `args`             | list[*str*]        | :heavy_minus_sign: | N/A                |
+| `args`             | List[*str*]        | :heavy_minus_sign: | N/A                |
 | `deleted`          | *Optional[bool]*   | :heavy_minus_sign: | N/A                |
 | `executable`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `executable_path`  | *Optional[str]*    | :heavy_minus_sign: | N/A                |

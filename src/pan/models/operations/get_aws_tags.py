@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import tag as shared_tag
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,7 +15,7 @@ class GetAwsTagsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    tags: Optional[list[shared_tag.Tag]] = dataclasses.field(default=None)
+    tags: Optional[List[shared_tag.Tag]] = dataclasses.field(default=None)
     r"""Success"""
     
 

@@ -15,7 +15,6 @@ class OpenAPISpecScoreBaseOapIVersion(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OpenAPISpecScoreBase:
     general: Optional[shared_openapispecscoreelementslist.OpenAPISpecScoreElementsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('general'), 'exclude': lambda f: f is None }})

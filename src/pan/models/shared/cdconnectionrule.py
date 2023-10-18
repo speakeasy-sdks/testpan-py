@@ -16,7 +16,6 @@ class CdConnectionRuleStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CdConnectionRule:
     r"""A rule that states what apps are allowed to communicate with each other."""

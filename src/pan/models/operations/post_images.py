@@ -7,7 +7,6 @@ from ..shared import imagedefget as shared_imagedefget
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostImagesResponse:
     content_type: str = dataclasses.field()

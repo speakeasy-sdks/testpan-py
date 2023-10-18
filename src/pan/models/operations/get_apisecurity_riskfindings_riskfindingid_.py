@@ -7,12 +7,10 @@ from ..shared import riskfinding as shared_riskfinding
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAPISecurityRiskFindingsRiskFindingIDRequest:
     risk_finding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'riskFindingId', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import expansion as shared_expansion
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostExpansionsResponse:
     content_type: str = dataclasses.field()

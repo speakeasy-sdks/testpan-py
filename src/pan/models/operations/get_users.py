@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import userdisplay as shared_userdisplay
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetUsersRoles(str, Enum):
     LIGHTSPIN_ADMIN = 'LIGHTSPIN_ADMIN'
@@ -18,17 +18,15 @@ class GetUsersRoles(str, Enum):
     ACCOUNT_AUDITOR = 'ACCOUNT_AUDITOR'
 
 
-
 @dataclasses.dataclass
 class GetUsersRequest:
     email: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
     r"""the email to filter by"""
-    roles: Optional[list[GetUsersRoles]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'roles', 'style': 'form', 'explode': True }})
+    roles: Optional[List[GetUsersRoles]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'roles', 'style': 'form', 'explode': True }})
     r"""the roles to filter by"""
     username: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'username', 'style': 'form', 'explode': True }})
     r"""the user name to filter by"""
     
-
 
 
 
@@ -40,7 +38,7 @@ class GetUsersResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    user_displays: Optional[list[shared_userdisplay.UserDisplay]] = dataclasses.field(default=None)
+    user_displays: Optional[List[shared_userdisplay.UserDisplay]] = dataclasses.field(default=None)
     r"""Success"""
     
 

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class PspProfiles:
     r"""APIs used to manage pod security standards profiles on Secure Application"""
@@ -79,7 +79,7 @@ class PspProfiles:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.PodSecurityPolicy]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PodSecurityPolicy]])
                 res.pod_security_policies = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -107,7 +107,7 @@ class PspProfiles:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.SeccompProfile]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.SeccompProfile]])
                 res.seccomp_profiles = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -150,7 +150,7 @@ class PspProfiles:
         return res
 
     
-    def post_pod_security_policy_profiles_batch(self, request: list[shared.PodSecurityPolicy]) -> operations.PostPodSecurityPolicyProfilesBatchResponse:
+    def post_pod_security_policy_profiles_batch(self, request: List[shared.PodSecurityPolicy]) -> operations.PostPodSecurityPolicyProfilesBatchResponse:
         r"""Add a number of Pod Security Standards
         Add a number of new Pod Security Standards Profiles.
         """
@@ -175,7 +175,7 @@ class PspProfiles:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.PodSecurityPolicy]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PodSecurityPolicy]])
                 res.pod_security_policies = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import singlebar as shared_singlebar
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PermissionsWidget:
-    bars: Optional[list[shared_singlebar.SingleBar]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bars'), 'exclude': lambda f: f is None }})
+    bars: Optional[List[shared_singlebar.SingleBar]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('bars'), 'exclude': lambda f: f is None }})
     total_owners: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalOwners'), 'exclude': lambda f: f is None }})
     total_permissions: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalPermissions'), 'exclude': lambda f: f is None }})
     

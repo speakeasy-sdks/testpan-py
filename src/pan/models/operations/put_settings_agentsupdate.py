@@ -7,7 +7,6 @@ from ..shared import agentsupdatesettings as shared_agentsupdatesettings
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PutSettingsAgentsUpdateResponse:
     content_type: str = dataclasses.field()

@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from pan import utils
 from pan.models import errors, operations, shared
-from typing import Optional
+from typing import List, Optional
 
 class RiskAssessment:
     r"""APIs used to manage risk assessment on Kubernetes clusters"""
@@ -79,7 +79,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.RiskAssessmentCluster]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.RiskAssessmentCluster]])
                 res.risk_assessment_clusters = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -107,7 +107,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.IgnoredRisk]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.IgnoredRisk]])
                 res.ignored_risks = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -136,7 +136,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.ClusterPermission]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClusterPermission]])
                 res.cluster_permissions = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -251,7 +251,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.RiskAssessmentCluster]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.RiskAssessmentCluster]])
                 res.risk_assessment_clusters = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -280,7 +280,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.RiskAssessmentVulnerability]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.RiskAssessmentVulnerability]])
                 res.risk_assessment_vulnerabilities = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -309,7 +309,7 @@ class RiskAssessment:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.RiskAssessmentPod]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.RiskAssessmentPod]])
                 res.risk_assessment_pods = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
