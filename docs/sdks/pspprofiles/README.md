@@ -178,19 +178,19 @@ s = pan.Pan(
 
 req = shared.PodSecurityPolicy(
     allowed_capabilities=[
-        'bypass',
+        'string',
     ],
     allowed_host_paths=[
         shared.AllowedHostPath(),
     ],
     allowed_proc_mount_types=[
-        shared.AllowedProcMountType.DEFAULT,
+        shared.AllowedProcMountType.UNMASKED,
     ],
     allowed_unsafe_sysctls=[
-        'turquoise',
+        'string',
     ],
     forbidden_sysctls=[
-        'moderator',
+        'string',
     ],
     fs_group=shared.RunAsGroupStrategyOptions(
         ranges=[
@@ -200,9 +200,9 @@ req = shared.PodSecurityPolicy(
     host_ports=[
         shared.HostPortRange(),
     ],
-    name='aggregate',
+    name='string',
     required_drop_capabilities=[
-        'portals',
+        'string',
     ],
     run_as_group=shared.RunAsGroupStrategyOptions(
         ranges=[
@@ -220,7 +220,7 @@ req = shared.PodSecurityPolicy(
         ],
     ),
     volumes=[
-        shared.PSPVolumeTypes.FLEX_VOLUME,
+        shared.PSPVolumeTypes.AZURE_FILE,
     ],
 )
 
@@ -264,19 +264,19 @@ s = pan.Pan(
 req = [
     shared.PodSecurityPolicy(
         allowed_capabilities=[
-            'Copernicium',
+            'string',
         ],
         allowed_host_paths=[
             shared.AllowedHostPath(),
         ],
         allowed_proc_mount_types=[
-            shared.AllowedProcMountType.UNMASKED,
+            shared.AllowedProcMountType.DEFAULT,
         ],
         allowed_unsafe_sysctls=[
-            'Northeast',
+            'string',
         ],
         forbidden_sysctls=[
-            'Directives',
+            'string',
         ],
         fs_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -286,9 +286,9 @@ req = [
         host_ports=[
             shared.HostPortRange(),
         ],
-        name='Saudi',
+        name='string',
         required_drop_capabilities=[
-            'Clarita',
+            'string',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -306,7 +306,7 @@ req = [
             ],
         ),
         volumes=[
-            shared.PSPVolumeTypes.AZURE_DISK,
+            shared.PSPVolumeTypes.FLEX_VOLUME,
         ],
     ),
 ]
@@ -349,7 +349,7 @@ s = pan.Pan(
 
 req = shared.SeccompProfileInput(
     pod_security_policies=[
-        'Cab',
+        'string',
     ],
 )
 
@@ -392,19 +392,19 @@ s = pan.Pan(
 req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
     pod_security_policy=shared.PodSecurityPolicy(
         allowed_capabilities=[
-            'North',
+            'string',
         ],
         allowed_host_paths=[
             shared.AllowedHostPath(),
         ],
         allowed_proc_mount_types=[
-            shared.AllowedProcMountType.UNMASKED,
+            shared.AllowedProcMountType.DEFAULT,
         ],
         allowed_unsafe_sysctls=[
-            'since',
+            'string',
         ],
         forbidden_sysctls=[
-            'DNS',
+            'string',
         ],
         fs_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -414,9 +414,9 @@ req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
         host_ports=[
             shared.HostPortRange(),
         ],
-        name='Central',
+        name='string',
         required_drop_capabilities=[
-            'THX',
+            'string',
         ],
         run_as_group=shared.RunAsGroupStrategyOptions(
             ranges=[
@@ -434,10 +434,10 @@ req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
             ],
         ),
         volumes=[
-            shared.PSPVolumeTypes.PERSISTENT_VOLUME_CLAIM,
+            shared.PSPVolumeTypes.AWS_ELASTIC_BLOCK_STORE,
         ],
     ),
-    profile_id='3254604e-db37-49d9-afbb-9b687b2cfe0a',
+    profile_id='ce973a74-d37d-4a32-9460-4edb379d9afb',
 )
 
 res = s.psp_profiles.put_pod_security_policy_profiles_profile_id_(req)
@@ -479,10 +479,10 @@ s = pan.Pan(
 req = operations.PutSeccompProfilesProfileIDRequest(
     seccomp_profile_input=shared.SeccompProfileInput(
         pod_security_policies=[
-            'payment',
+            'string',
         ],
     ),
-    profile_id='689ccbcc-101f-4ed2-936c-76ef44408a69',
+    profile_id='7a689ccb-cc10-41fe-9293-6c76ef44408a',
 )
 
 res = s.psp_profiles.put_seccomp_profiles_profile_id_(req)

@@ -129,7 +129,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionsRequest(
-    aws_account_id='tabernacle',
+    aws_account_id='string',
 )
 
 res = s.aws.get_aws_aws_account_id_regions(req)
@@ -169,8 +169,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDSubnetsRequest(
-    aws_account_id='Bike',
-    region_id='Bugatti',
+    aws_account_id='string',
+    region_id='string',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_subnets(req)
@@ -211,8 +211,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAwsAwsAccountIDRegionIDVpcsRequest(
-    aws_account_id='orange',
-    region_id='unless',
+    aws_account_id='string',
+    region_id='string',
 )
 
 res = s.aws.get_aws_aws_account_id_region_id_vpcs(req)
@@ -252,8 +252,8 @@ s = pan.Pan(
 )
 
 req = shared.AWSRolePost(
-    arn='Classical',
-    name='Latin',
+    arn='string',
+    name='string',
 )
 
 res = s.aws.post_aws_roles(req)
@@ -294,9 +294,9 @@ s = pan.Pan(
 
 req = operations.PutAwsRolesRoleIDRequest(
     aws_role_details=shared.AWSRoleDetails(
-        name='bypass',
+        name='string',
     ),
-    role_id='eef92ab1-e05d-4a7a-a1a5-97d143757fdd',
+    role_id='81eef92a-b1e0-45da-ba61-a597d143757f',
 )
 
 res = s.aws.put_aws_roles_role_id_(req)

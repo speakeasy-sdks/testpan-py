@@ -25,8 +25,8 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityAPICatalogIDHitCountGraphRequest(
     catalog_id='6b535753-b47a-42be-a003-f45375c0bae8',
-    spec_path='Dynamic',
-    spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.DELETE,
+    spec_path='string',
+    spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.CONNECT,
 )
 
 res = s.performance.get_api_security_api_catalog_id_hit_count_graph(req)
@@ -68,12 +68,12 @@ s = pan.Pan(
 
 req = operations.GetPerformanceMetricsRequest(
     end_time=dateutil.parser.isoparse('2023-06-20T17:24:08.589Z'),
-    protocol='technologies',
-    source_namespace='5fb8ead1-8597-41d1-9261-059b89d3b7dc',
-    source_pod_template='d1b894b8-a5ad-48e1-9106-ddd9453d845e',
-    start_time=dateutil.parser.isoparse('2022-09-17T00:22:13.332Z'),
-    target_namespace='2fa04569-a77d-4da6-8168-cf6d7999aa93',
-    target_pod_template='b9be3017-6ba0-46c5-981c-ebc600c70dc9',
+    protocol='string',
+    source_namespace='565fb8ea-d185-4971-9112-61059b89d3b7',
+    source_pod_template='dcd1b894-b8a5-4ad8-a111-06ddd9453d84',
+    start_time=dateutil.parser.isoparse('2022-01-22T20:26:53.423Z'),
+    target_namespace='e92fa045-69a7-47dd-a601-68cf6d7999aa',
+    target_pod_template='93b9be30-176b-4a06-8558-1cebc600c70d',
 )
 
 res = s.performance.get_performance_metrics(req)

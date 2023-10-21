@@ -30,13 +30,13 @@ s = pan.Pan(
 
 req = operations.GetAgentsRequest(
     environment_name=[
-        'Account',
+        'string',
     ],
     host_name=[
-        'Shoes',
+        'string',
     ],
     risk=[
-        operations.GetAgentsRisk.UNDEFINED,
+        operations.GetAgentsRisk.MEDIUM,
     ],
     status=[
         operations.GetAgentsStatus.ACTIVE,

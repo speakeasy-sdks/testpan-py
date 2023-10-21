@@ -72,22 +72,22 @@ s = pan.Pan(
 
 req = operations.GetNetworkMapRequest(
     apps=[
-        'Analyst',
+        'string',
     ],
-    end_time=dateutil.parser.isoparse('2023-01-02T05:19:39.286Z'),
+    end_time=dateutil.parser.isoparse('2023-01-07T14:07:43.013Z'),
     environments=[
-        'West',
+        'string',
     ],
     exclude_apps=[
-        'thoughtfully',
+        'string',
     ],
     labels=[
-        'JBOD',
+        'string',
     ],
     namespaces=[
-        '0727e0bc-8a72-47a6-8f78-080c58f4e027',
+        'fe7ca0fe-d770-4727-a0bc-8a727a6cf780',
     ],
-    start_time=dateutil.parser.isoparse('2022-02-13T05:21:23.691Z'),
+    start_time=dateutil.parser.isoparse('2022-08-24T13:40:09.607Z'),
 )
 
 res = s.runtime_map.get_network_map(req)

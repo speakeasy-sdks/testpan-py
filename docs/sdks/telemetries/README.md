@@ -35,40 +35,40 @@ s = pan.Pan(
 
 req = operations.GetAppTelemetriesRequest(
     app_name=[
-        'Crew',
+        'string',
     ],
     app_type=[
-        'splendid',
+        'string',
     ],
-    end_time=dateutil.parser.isoparse('2021-09-05T15:33:12.217Z'),
+    end_time=dateutil.parser.isoparse('2023-07-22T16:11:08.877Z'),
     environment_name=[
-        'Syrian',
+        'string',
     ],
     executable=[
-        'strategy',
+        'string',
     ],
     highest_dockerfile_scan_result=[
-        'Concrete',
+        'string',
     ],
     host=[
-        'killer',
+        'string',
     ],
     images_id=[
-        'af356669-e30a-47df-8a5c-8c97d1dbbd64',
+        '50dc36c5-6d44-446a-b356-669e30a7dfca',
     ],
     result=[
-        operations.GetAppTelemetriesResult.ALLOW,
+        operations.GetAppTelemetriesResult.DETECT,
     ],
-    sort_key=operations.GetAppTelemetriesSortKey.APP_NAME,
-    start_time=dateutil.parser.isoparse('2022-02-10T16:05:06.025Z'),
+    sort_key=operations.GetAppTelemetriesSortKey.FINISH_TIME,
+    start_time=dateutil.parser.isoparse('2022-08-17T10:31:03.718Z'),
     status=[
-        'auxiliary',
+        'string',
     ],
     vulnerability_levels_filter=[
-        'Avon',
+        'string',
     ],
     workload_risks=[
-        operations.GetAppTelemetriesWorkloadRisks.HIGH,
+        operations.GetAppTelemetriesWorkloadRisks.CRITICAL,
     ],
 )
 
@@ -276,35 +276,35 @@ req = operations.GetConnectionTelemetriesRequest(
     ],
     sort_key=operations.GetConnectionTelemetriesSortKey.SOURCE_APP_TYPE,
     source_app_name=[
-        'because',
+        'string',
     ],
     source_environment_name=[
-        'Cotton',
+        'string',
     ],
     source_executable=[
-        'Hybrid',
+        'string',
     ],
     source_host_name=[
-        'wireless',
+        'string',
     ],
     source_risk=[
-        operations.GetConnectionTelemetriesSourceRisk.HIGH,
+        operations.GetConnectionTelemetriesSourceRisk.LOW,
     ],
-    start_time=dateutil.parser.isoparse('2023-12-19T20:37:58.933Z'),
+    start_time=dateutil.parser.isoparse('2021-04-04T11:53:10.030Z'),
     target_app_name=[
-        'Moscovium',
+        'string',
     ],
     target_environment_name=[
-        'Regional',
+        'string',
     ],
     target_executable=[
-        'coddle',
+        'string',
     ],
     target_host_name=[
-        'Hampshire',
+        'string',
     ],
     target_risk=[
-        operations.GetConnectionTelemetriesTargetRisk.MEDIUM,
+        operations.GetConnectionTelemetriesTargetRisk.HIGH,
     ],
 )
 

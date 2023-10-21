@@ -186,9 +186,9 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='Tools',
-    name='Indiana',
-    type=shared.GatewayType.TYK_INTERNAL,
+    cluster_name='string',
+    name='string',
+    type=shared.GatewayType.APIGEE_X,
 )
 
 res = s.gateways.post_gateways(req)
@@ -229,11 +229,11 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='magenta',
-        name='Southwest',
-        type=shared.GatewayType.TYK_INTERNAL,
+        cluster_name='string',
+        name='string',
+        type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='c87e1369-f02c-4e6c-b577-9c9c8e935111',
+    gateway_id='b1d9c87e-1369-4f02-8e6c-75779c9c8e93',
 )
 
 res = s.gateways.put_gateways_gateway_id_(req)

@@ -551,10 +551,10 @@ s = pan.Pan(
 
 req = operations.GetPodDefinitionsRequest(
     deployment_type=[
-        'Bahamian',
+        'string',
     ],
     template_source=[
-        'Savings',
+        'string',
     ],
 )
 
@@ -601,15 +601,15 @@ req = shared.KubernetesCluster(
     istio_ingress_annotations=[
         shared.KubernetesAnnotation(
             key='<key>',
-            value='magnetic',
+            value='string',
         ),
     ],
     istio_installation_parameters=shared.IstioInstallationParameters(),
-    name='online',
+    name='string',
     proxy_configuration=shared.ProxyConfiguration(),
     scan_configuration=shared.ScanConfiguration(
         scan_types=[
-            shared.ScanType.DOCKER_CIS_BENCHMARK,
+            shared.ScanType.VULNERABILITIES,
         ],
     ),
     sidecars_resources=shared.SidecarsResource(),
@@ -666,10 +666,10 @@ req = shared.PodDefinitionInput(
     labels=[
         shared.Label(
             key='<key>',
-            value='ajar',
+            value='string',
         ),
     ],
-    name='Folk',
+    name='string',
 )
 
 res = s.kubernetes.post_pod_definitions(req)
@@ -716,11 +716,11 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         istio_ingress_annotations=[
             shared.KubernetesAnnotation(
                 key='<key>',
-                value='upload',
+                value='string',
             ),
         ],
         istio_installation_parameters=shared.IstioInstallationParameters(),
-        name='sapiente',
+        name='string',
         proxy_configuration=shared.ProxyConfiguration(),
         scan_configuration=shared.ScanConfiguration(
             scan_types=[
@@ -729,7 +729,7 @@ req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
         ),
         sidecars_resources=shared.SidecarsResource(),
     ),
-    kubernetes_cluster_id='e0fd9579-58a0-4796-a5f2-d9d7f9c73b14',
+    kubernetes_cluster_id='fc49f9e0-fd95-4795-8a07-96a5f2d9d7f9',
 )
 
 res = s.kubernetes.put_kubernetes_clusters_kubernetes_cluster_id_(req)
@@ -825,12 +825,12 @@ req = operations.PutPodDefinitionsPodIDRequest(
         labels=[
             shared.Label(
                 key='<key>',
-                value='Ford',
+                value='string',
             ),
         ],
-        name='female',
+        name='string',
     ),
-    pod_id='0efc46b3-d799-4349-9390-e36a1df3f324',
+    pod_id='d5b40efc-46b3-4d79-9349-9390e36a1df3',
 )
 
 res = s.kubernetes.put_pod_definitions_pod_id_(req)

@@ -150,9 +150,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='Garden',
+        duration='string',
     ),
-    catalog_id='e94464b0-ff0e-46fe-94ca-29162fc27770',
+    catalog_id='35e94464-b0ff-40e6-be14-ca29162fc277',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -193,9 +193,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='South',
+        duration='string',
     ),
-    catalog_id='fbc82f2c-9ea8-45a3-a6b5-2d888f26e15a',
+    catalog_id='08fbc82f-2c9e-4a85-a326-b52d888f26e1',
 )
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -280,29 +280,29 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
         status=shared.APIServiceBflaInfoStatus.NO_SPEC,
         tags=[
             shared.APIServiceBflaTagInfo(
-                name='International',
+                name='string',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
-                                name='Human',
+                                name='string',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='252.50.185.52',
-                                        name='sherbet',
-                                        principle_type='Technician',
+                                        ip='169.172.185.96',
+                                        name='string',
+                                        principle_type='string',
                                     ),
                                 ],
                             ),
                         ],
-                        method=shared.HTTPMethod.TRACE,
-                        path='/usr/sbin',
+                        method=shared.HTTPMethod.PUT,
+                        path='/tmp',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='442012ad-1459-4f87-a9c2-0110831cf060',
+    catalog_id='ef3b3fca-add4-4420-92ad-1459f8769c20',
 )
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)

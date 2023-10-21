@@ -145,15 +145,15 @@ req = shared.APISecurityPolicyInput(
     category_conditions=shared.APISecurityPolicyCategoryConditions(
         conditions=[
             shared.APISecurityPolicyCategoryCondition(
-                category='solid',
-                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.NO_RISK,
+                category='string',
+                highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.MEDIUM,
             ),
         ],
     ),
     global_condition=shared.APISecurityPolicyGlobalCondition(
-        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.MEDIUM,
+        highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
     ),
-    name='to',
+    name='string',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -197,17 +197,17 @@ req = operations.PutAPISecurityPolicyPolicyIDRequest(
         category_conditions=shared.APISecurityPolicyCategoryConditions(
             conditions=[
                 shared.APISecurityPolicyCategoryCondition(
-                    category='deposit',
-                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
+                    category='string',
+                    highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.MEDIUM,
                 ),
             ],
         ),
         global_condition=shared.APISecurityPolicyGlobalCondition(
-            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.HIGH,
+            highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
         ),
-        name='Buckinghamshire',
+        name='string',
     ),
-    policy_id='ef90a301-7448-4558-8280-7a30fd0b43b1',
+    policy_id='5c1bef90-a301-4744-8558-c2807a30fd0b',
 )
 
 res = s.api_security_policies.put_api_security_policy_policy_id_(req)

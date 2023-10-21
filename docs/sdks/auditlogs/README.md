@@ -32,10 +32,10 @@ s = pan.Pan(
 
 req = operations.GetAuditLogsRequest(
     actions=[
-        'male',
+        'string',
     ],
-    end_time=dateutil.parser.isoparse('2022-01-24T02:40:28.078Z'),
-    start_time=dateutil.parser.isoparse('2022-09-08T07:41:20.287Z'),
+    end_time=dateutil.parser.isoparse('2022-10-20T03:40:31.022Z'),
+    start_time=dateutil.parser.isoparse('2023-03-19T00:25:31.296Z'),
 )
 
 res = s.audit_logs.get_audit_logs(req)
@@ -109,12 +109,12 @@ s = pan.Pan(
 req = operations.GetAuditLogsKubernetesRequest(
     end_time=dateutil.parser.isoparse('2023-03-24T20:20:48.235Z'),
     kubernetes_audit_action=[
-        'Coupe',
+        'string',
     ],
     result=[
-        operations.GetAuditLogsKubernetesResult.ALLOW,
+        operations.GetAuditLogsKubernetesResult.RISKY,
     ],
-    start_time=dateutil.parser.isoparse('2023-06-24T03:55:36.271Z'),
+    start_time=dateutil.parser.isoparse('2021-10-10T01:17:52.269Z'),
 )
 
 res = s.audit_logs.get_audit_logs_kubernetes(req)

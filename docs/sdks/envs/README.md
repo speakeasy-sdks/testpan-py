@@ -196,27 +196,27 @@ req = shared.EnvironmentInput(
             tags=[
                 shared.Tag(
                     key='<key>',
-                    value='Electronic',
+                    value='string',
                 ),
             ],
             vpc=shared.VPCDescriptionInput(
-                aws_account_id='sticky',
-                region_id='Seaborgium',
-                vpc_id='Bosnia',
+                aws_account_id='string',
+                region_id='string',
+                vpc_id='string',
             ),
         ),
     ],
     kubernetes_environments=[
         shared.KubernetesEnvironmentInput(
-            kubernetes_cluster='77d065a8-916a-40e6-a281-1bd3c8c7fc23',
+            kubernetes_cluster='3143be01-277d-4065-a891-6a0e622811bd',
             namespace_labels=[
                 shared.Label(
                     key='<key>',
-                    value='substantial',
+                    value='string',
                 ),
             ],
             namespaces=[
-                'Genderqueer',
+                'string',
             ],
         ),
     ],
@@ -267,27 +267,27 @@ req = [
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='Cisgender',
+                        value='string',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='ampere',
-                    region_id='Dinar',
-                    vpc_id='round',
+                    aws_account_id='string',
+                    region_id='string',
+                    vpc_id='string',
                 ),
             ),
         ],
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                kubernetes_cluster='312c0aeb-d811-498d-b41c-5bdf5a607e95',
+                kubernetes_cluster='925b166e-fc31-42c0-aebd-81198d741c5b',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='Associate',
+                        value='string',
                     ),
                 ],
                 namespaces=[
-                    'Touring',
+                    'string',
                 ],
             ),
         ],
@@ -371,33 +371,33 @@ req = operations.PutEnvironmentsEnvIDRequest(
                 tags=[
                     shared.Tag(
                         key='<key>',
-                        value='Networked',
+                        value='string',
                     ),
                 ],
                 vpc=shared.VPCDescriptionInput(
-                    aws_account_id='Tricycle',
-                    region_id='pixel',
-                    vpc_id='tromp',
+                    aws_account_id='string',
+                    region_id='string',
+                    vpc_id='string',
                 ),
             ),
         ],
         kubernetes_environments=[
             shared.KubernetesEnvironmentInput(
-                kubernetes_cluster='5e6509cb-415d-4600-b566-df6f010de053',
+                kubernetes_cluster='57cf89fe-5e65-409c-b415-d6003566df6f',
                 namespace_labels=[
                     shared.Label(
                         key='<key>',
-                        value='Soul',
+                        value='string',
                     ),
                 ],
                 namespaces=[
-                    'Tesla',
+                    'string',
                 ],
             ),
         ],
         name='Prod',
     ),
-    env_id='3a9acad0-419b-46d5-9592-04790c5f1efb',
+    env_id='010de053-98de-43a9-acad-0419b6d55592',
 )
 
 res = s.envs.put_environments_env_id_(req)

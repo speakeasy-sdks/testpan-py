@@ -287,9 +287,9 @@ s = pan.Pan(
 )
 
 req = shared.CaIntegrationRequestInput(
-    certificate='Utah',
-    issuer_name='Internal',
-    name='Loan',
+    certificate='string',
+    issuer_name='string',
+    name='string',
 )
 
 res = s.settings.post_settings_integrations_ca(req)
@@ -333,7 +333,7 @@ req = shared.EventsForwardingDetailsInput(
     events_to_forward=[
         shared.EventsToForward.ATTACK_PATH,
     ],
-    name='Gallium',
+    name='string',
 )
 
 res = s.settings.post_settings_integrations_event_forwarding(req)
@@ -373,7 +373,7 @@ s = pan.Pan(
 )
 
 req = shared.TestOpsgenieConnectionRequest(
-    token='invoice',
+    token='string',
 )
 
 res = s.settings.post_settings_integrations_opsgenie_test_integration(req)
@@ -493,8 +493,8 @@ s = pan.Pan(
 )
 
 req = shared.TestSplunkConnectionRequest(
-    token='Realigned',
-    url='https://forked-investigation.org',
+    token='string',
+    url='http://same-shopper.biz',
 )
 
 res = s.settings.post_settings_integrations_splunk_test_integration(req)
@@ -693,11 +693,11 @@ s = pan.Pan(
 
 req = operations.PutSettingsIntegrationsCaIDRequest(
     ca_integration_request_input=shared.CaIntegrationRequestInput(
-        certificate='Ergonomic',
-        issuer_name='Advanced',
-        name='Bicycle',
+        certificate='string',
+        issuer_name='string',
+        name='string',
     ),
-    id='da77d5f8-0b65-48d2-bdca-eae5506a19b8',
+    id='3150c8bd-a77d-45f8-8b65-8d2fdcaeae55',
 )
 
 res = s.settings.put_settings_integrations_ca_id_(req)
@@ -742,10 +742,10 @@ req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,
         ],
-        name='Communications',
-        token='Guinea',
+        name='string',
+        token='string',
     ),
-    event_forwarding_id='3efb0fd0-479c-42dc-9b40-8bce49d238c6',
+    event_forwarding_id='a96473ef-b0fd-4047-9c2d-c1b408bce49d',
 )
 
 res = s.settings.put_settings_integrations_event_forwarding_event_forwarding_id_(req)

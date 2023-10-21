@@ -152,10 +152,10 @@ req = shared.TrustedSignerInput(
     keys=[
         shared.TrustedSignerKey(
             key='<key>',
-            name='Configurable',
+            name='string',
         ),
     ],
-    name='Music',
+    name='string',
     trusted_signer_cloud_accounts=[
         shared.TrustedSignerCloudAccountInput(),
     ],
@@ -205,10 +205,10 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
         keys=[
             shared.TrustedSignerKey(
                 key='<key>',
-                name='bus',
+                name='string',
             ),
         ],
-        name='Bronze',
+        name='string',
         trusted_signer_cloud_accounts=[
             shared.TrustedSignerCloudAccountInput(),
         ],
@@ -216,7 +216,7 @@ req = operations.PutTrustedSignersTrustedSignerIDRequest(
             shared.TrustedSignerClusterInput(),
         ],
     ),
-    trusted_signer_id='3c1dde95-75de-4823-90f3-ebb00bb0b650',
+    trusted_signer_id='8d323c1d-de95-475d-a823-90f3ebb00bb0',
 )
 
 res = s.trusted_signers.put_trusted_signers_trusted_signer_id_(req)

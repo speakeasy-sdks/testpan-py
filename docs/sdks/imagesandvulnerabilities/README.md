@@ -82,13 +82,13 @@ s = pan.Pan(
 
 req = operations.GetAccountVulnerabilitiesXlsxRequest(
     image_hash=[
-        'Frozen',
+        'string',
     ],
     image_name=[
-        'olive',
+        'string',
     ],
     image_tag=[
-        'IB',
+        'string',
     ],
 )
 
@@ -130,15 +130,15 @@ s = pan.Pan(
 
 req = operations.GetImagesRequest(
     image_hash=[
-        'Health',
+        'string',
     ],
     image_name=[
-        'male',
+        'string',
     ],
     image_tag=[
-        'Ytterbium',
+        'string',
     ],
-    sort_key=operations.GetImagesSortKey.RISK,
+    sort_key=operations.GetImagesSortKey.IMAGE_NAME,
 )
 
 res = s.images_and_vulnerabilities.get_images(req)
@@ -216,8 +216,8 @@ s = pan.Pan(
 )
 
 req = operations.GetImagesVulnerabilitiesByImageNameAndHashRequest(
-    image_hash='Marketing',
-    image_name='Savings',
+    image_hash='string',
+    image_name='string',
 )
 
 res = s.images_and_vulnerabilities.get_images_vulnerabilities_by_image_name_and_hash(req)
@@ -499,7 +499,7 @@ s = pan.Pan(
 
 req = shared.ImageDefInput(
     image_tags=[
-        'Configuration',
+        'string',
     ],
 )
 

@@ -183,9 +183,9 @@ req = shared.CdPolicyInput(
     deployers=[
         'aede075c-3164-444b-a1e6-c4ecee9d9042',
     ],
-    name='court',
+    name='string',
     permission_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.FAIL,
+        enforcement_option=shared.EnforcementOption.IGNORE,
         permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
     ),
     secret_cd_policy=shared.SecretsCdPolicyElement(
@@ -193,8 +193,8 @@ req = shared.CdPolicyInput(
         permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
     ),
     security_context_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.HIGH,
+        enforcement_option=shared.EnforcementOption.FAIL,
+        permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
     ),
 )
 
@@ -239,10 +239,10 @@ req = shared.CiPolicyInput(
         enforcement_option=shared.EnforcementOption.FAIL,
         permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
     ),
-    name='hertz',
+    name='string',
     vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-        enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.VulnerabilitySeverity.MEDIUM,
+        enforcement_option=shared.EnforcementOption.IGNORE,
+        permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
     ),
 )
 
@@ -291,21 +291,21 @@ req = operations.PutCdPolicyPolicyIDRequest(
         deployers=[
             '45666e4d-fb74-4ef6-9a81-a0d950f62fec',
         ],
-        name='Small',
+        name='string',
         permission_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
+            enforcement_option=shared.EnforcementOption.FAIL,
+            permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
         ),
         secret_cd_policy=shared.SecretsCdPolicyElement(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.RISK_IDENTIFIED,
         ),
         security_context_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.IGNORE,
+            enforcement_option=shared.EnforcementOption.FAIL,
             permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
         ),
     ),
-    policy_id='ed8fba0d-219b-44a2-bde7-a8937033a3f0',
+    policy_id='8aed8fba-0d21-49b4-a2fd-e7a8937033a3',
 )
 
 res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
@@ -350,13 +350,13 @@ req = operations.PutCiPolicyPolicyIDRequest(
             enforcement_option=shared.EnforcementOption.IGNORE,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='mole',
+        name='string',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.HIGH,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
         ),
     ),
-    policy_id='5971515c-dfe2-44f5-9cfd-347fd80ec58c',
+    policy_id='0c597151-5cdf-4e24-b5dc-fd347fd80ec5',
 )
 
 res = s.ci_cd_policies.put_ci_policy_policy_id_(req)

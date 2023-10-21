@@ -594,13 +594,13 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
         max_parallelism=752536,
         minimum_severity=shared.VulnerabilitySeverity.LOW,
         namespaces=[
-            'synthesizing',
+            'string',
         ],
         periodic_job_expression=shared.PeriodicJobExpression(
-            periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.NON_PERIODIC_JOB_EXPRESSION,
+            periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),
     ),
-    kubernetes_cluster_id='a0c9884d-ef8c-417b-9484-5665df2f730e',
+    kubernetes_cluster_id='c1a0c988-4def-48c1-bbd4-845665df2f73',
 )
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_settings(req)
@@ -645,13 +645,13 @@ req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
             enforcement_option=shared.EnforcementOption.FAIL,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
         ),
-        name='too',
+        name='string',
         vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.HIGH,
+            enforcement_option=shared.EnforcementOption.IGNORE,
+            permissible_vulnerability_level=shared.VulnerabilitySeverity.CRITICAL,
         ),
     ),
-    ignored_risk_id='78a3a52b-6ef1-46d3-9fdf-8529c311ad61',
+    ignored_risk_id='1978a3a5-2b6e-4f16-935f-df8529c311ad',
 )
 
 res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)

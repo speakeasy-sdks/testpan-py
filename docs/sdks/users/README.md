@@ -481,7 +481,7 @@ req = operations.PostUsersTrialRequest(
         last_name='Mitchell',
         privacy_policy_and_terms_and_conditions_agreement=False,
     ),
-    g_recaptcha_response='invoice',
+    g_recaptcha_response='string',
 )
 
 res = s.users.post_users_trial(req)

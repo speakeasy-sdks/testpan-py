@@ -330,16 +330,16 @@ req = operations.GetServerlessFunctionsRequest(
         '2d213824-3222-42f0-b89a-c2b1bfba58c4',
     ],
     func_name=[
-        'Electronics',
+        'string',
     ],
     policy_risk=[
-        operations.GetServerlessFunctionsPolicyRisk.HIGH,
+        operations.GetServerlessFunctionsPolicyRisk.LOW,
     ],
     result=[
-        operations.GetServerlessFunctionsResult.DETECT,
+        operations.GetServerlessFunctionsResult.ALLOW,
     ],
     risk=[
-        operations.GetServerlessFunctionsRisk.CRITICAL,
+        operations.GetServerlessFunctionsRisk.HIGH,
     ],
     secrets_risk=[
         operations.GetServerlessFunctionsSecretsRisk.RISK_IDENTIFIED,
@@ -384,7 +384,7 @@ s = pan.Pan(
 
 req = operations.GetServerlessFunctionsArnsRequest(
     func_arn=[
-        'Northeast',
+        'string',
     ],
 )
 
@@ -426,7 +426,7 @@ s = pan.Pan(
 
 req = operations.GetServerlessFunctionsNamesRequest(
     func_name=[
-        'Hermaphrodite',
+        'string',
     ],
 )
 
@@ -792,12 +792,12 @@ req = operations.PutCloudAccountsCloudAccountIDRequest(
             periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),
         regions=[
-            'Cheese',
+            'string',
         ],
         security_threats=shared.CloudAccountSecurityThreats(),
         vulnerabilities_summary=shared.VulnerabilitiesSummary(),
     ),
-    cloud_account_id='18ca7fb1-5534-4488-9cc7-697a579ecdc3',
+    cloud_account_id='3c18ca7f-b155-4344-88dc-c7697a579ecd',
 )
 
 res = s.serverless.put_cloud_accounts_cloud_account_id_(req)

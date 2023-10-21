@@ -283,7 +283,7 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityExternalCatalogRequest(
     api_policy_profiles=[
-        'Bronze',
+        'string',
     ],
 )
 
@@ -364,9 +364,9 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityExternalCatalogCatalogIDRequest(
     api_policy_profiles=[
-        'Sports',
+        'string',
     ],
-    catalog_id='833a138a-8e36-4df0-9dd8-6e879c685823',
+    catalog_id='2d833a13-8a8e-436d-b01d-d86e879c6858',
 )
 
 res = s.api_security.get_api_security_external_catalog_catalog_id_(req)
@@ -408,7 +408,7 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogRequest(
     api_policy_profiles=[
-        'systemic',
+        'string',
     ],
 )
 
@@ -489,9 +489,9 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityInternalCatalogCatalogIDRequest(
     api_policy_profiles=[
-        'Future',
+        'string',
     ],
-    catalog_id='b30b167e-21dd-44fc-9f71-8b9d3086136a',
+    catalog_id='a4b30b16-7e21-4dd4-bc5f-718b9d308613',
 )
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_(req)
@@ -1159,7 +1159,7 @@ s = pan.Pan(
 req = operations.GetAPISecurityCatalogIDMethodsRequest(
     catalog_id='bc418193-54db-45b9-831c-a3b7fcd92288',
     tags=[
-        'purple',
+        'string',
     ],
 )
 
@@ -1558,7 +1558,7 @@ s = pan.Pan(
 )
 
 req = shared.APISecurityAPI(
-    name='generate',
+    name='string',
 )
 
 res = s.api_security.post_api_security_api(req)
@@ -1599,9 +1599,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='Garden',
+        duration='string',
     ),
-    catalog_id='e94464b0-ff0e-46fe-94ca-29162fc27770',
+    catalog_id='35e94464-b0ff-40e6-be14-ca29162fc277',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
@@ -1642,9 +1642,9 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='South',
+        duration='string',
     ),
-    catalog_id='fbc82f2c-9ea8-45a3-a6b5-2d888f26e15a',
+    catalog_id='08fbc82f-2c9e-4a85-a326-b52d888f26e1',
 )
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
@@ -2153,9 +2153,9 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='Tools',
-    name='Indiana',
-    type=shared.GatewayType.TYK_INTERNAL,
+    cluster_name='string',
+    name='string',
+    type=shared.GatewayType.APIGEE_X,
 )
 
 res = s.api_security.post_gateways(req)
@@ -2200,29 +2200,29 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
         status=shared.APIServiceBflaInfoStatus.NO_SPEC,
         tags=[
             shared.APIServiceBflaTagInfo(
-                name='International',
+                name='string',
                 paths=[
                     shared.APIServiceBflaPathInfo(
                         clients=[
                             shared.APIServiceBflaClientInfo(
-                                name='Human',
+                                name='string',
                                 principles=[
                                     shared.APIServiceBflaPrincipleInfo(
-                                        ip='252.50.185.52',
-                                        name='sherbet',
-                                        principle_type='Technician',
+                                        ip='169.172.185.96',
+                                        name='string',
+                                        principle_type='string',
                                     ),
                                 ],
                             ),
                         ],
-                        method=shared.HTTPMethod.TRACE,
-                        path='/usr/sbin',
+                        method=shared.HTTPMethod.PUT,
+                        path='/tmp',
                     ),
                 ],
             ),
         ],
     ),
-    catalog_id='442012ad-1459-4f87-a9c2-0110831cf060',
+    catalog_id='ef3b3fca-add4-4420-92ad-1459f8769c20',
 )
 
 res = s.api_security.put_api_security_internal_catalog_catalog_id_bfla(req)
@@ -2262,8 +2262,8 @@ s = pan.Pan(
 )
 
 req = operations.PutAPISecurityOpenAPISpecsCatalogIDRequest(
-    request_body='Bespoke',
-    catalog_id='b6c1e7d2-09d8-4cf8-9669-07b8b2d3e446',
+    request_body='string',
+    catalog_id='39b6c1e7-d209-4d8c-b8d6-6907b8b2d3e4',
 )
 
 res = s.api_security.put_api_security_open_api_specs_catalog_id_(req)
@@ -2304,11 +2304,11 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='magenta',
-        name='Southwest',
-        type=shared.GatewayType.TYK_INTERNAL,
+        cluster_name='string',
+        name='string',
+        type=shared.GatewayType.F5_BIG_IP,
     ),
-    gateway_id='c87e1369-f02c-4e6c-b577-9c9c8e935111',
+    gateway_id='b1d9c87e-1369-4f02-8e6c-75779c9c8e93',
 )
 
 res = s.api_security.put_gateways_gateway_id_(req)

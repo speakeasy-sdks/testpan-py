@@ -32,7 +32,7 @@ s = pan.Pan(
 
 req = operations.GetAppsRequest(
     type=[
-        'Bermuda',
+        'string',
     ],
 )
 
@@ -124,7 +124,7 @@ req = shared.App(
     labels=[
         shared.Label(
             key='<key>',
-            value='Pennsylvania',
+            value='string',
         ),
     ],
     name='AccountingApp',
@@ -222,14 +222,14 @@ req = operations.PutAppsAppIDRequest(
         labels=[
             shared.Label(
                 key='<key>',
-                value='invoice',
+                value='string',
             ),
         ],
         name='AccountingApp',
         process_name='accounting_app',
         type='frontend',
     ),
-    app_id='a0b1a3d7-8ca7-4d0e-a8bc-a8a0d7f81190',
+    app_id='7da0b1a3-d78c-4a7d-8e68-bca8a0d7f811',
 )
 
 res = s.apps.put_apps_app_id_(req)

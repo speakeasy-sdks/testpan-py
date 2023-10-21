@@ -324,20 +324,20 @@ s = pan.Pan(
 
 req = shared.CdServerlessRule(
     action=shared.ServerlessRuleAction.DETECT,
-    name='Assurance',
+    name='string',
     rule=shared.ServerlessRuleType(
         serverless_function_validation=shared.ServerlessFunctionValidation(),
         serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
     ),
     scope=[
         shared.ServerlessRuleScope(
-            cloud_account='navigate',
+            cloud_account='string',
             regions=[
-                'bypassing',
+                'string',
             ],
         ),
     ],
-    status=shared.ServerlessRuleStatus.DELETED,
+    status=shared.ServerlessRuleStatus.DISABLED,
 )
 
 res = s.cd.post_cd_serverless_rule(req)
@@ -427,22 +427,22 @@ s = pan.Pan(
 req = operations.PutCdRuleIDServerlessRuleRequest(
     cd_serverless_rule=shared.CdServerlessRule(
         action=shared.ServerlessRuleAction.DETECT,
-        name='yahoo',
+        name='string',
         rule=shared.ServerlessRuleType(
             serverless_function_validation=shared.ServerlessFunctionValidation(),
-            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ANY_SERVERLESS_RULE_TYPE,
+            serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
         ),
         scope=[
             shared.ServerlessRuleScope(
-                cloud_account='Developer',
+                cloud_account='string',
                 regions=[
-                    'Sports',
+                    'string',
                 ],
             ),
         ],
         status=shared.ServerlessRuleStatus.DISABLED,
     ),
-    rule_id='f913b954-cc1f-46ce-b379-119c49c2a964',
+    rule_id='4bb3d5f9-13b9-454c-81f6-ceb379119c49',
 )
 
 res = s.cd.put_cd_rule_id_serverless_rule(req)

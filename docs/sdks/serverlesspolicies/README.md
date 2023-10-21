@@ -62,20 +62,20 @@ req = shared.ServerlessPolicy(
     user_rules=[
         shared.ServerlessRule(
             action=shared.ServerlessRuleAction.ALLOW,
-            name='infrastructures',
+            name='string',
             rule=shared.ServerlessRuleType(
                 serverless_function_validation=shared.ServerlessFunctionValidation(),
-                serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ANY_SERVERLESS_RULE_TYPE,
+                serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
             ),
             scope=[
                 shared.ServerlessRuleScope(
-                    cloud_account='granular',
+                    cloud_account='string',
                     regions=[
-                        'Keys',
+                        'string',
                     ],
                 ),
             ],
-            status=shared.ServerlessRuleStatus.DISABLED,
+            status=shared.ServerlessRuleStatus.ENABLED,
         ),
     ],
 )

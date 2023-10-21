@@ -32,7 +32,7 @@ s = pan.Pan(
 
 req = operations.GetK8sCISBenchmarkRequest(
     cluster_ids=[
-        'magnitude',
+        'string',
     ],
 )
 
@@ -186,13 +186,13 @@ s = pan.Pan(
 req = operations.PutK8sCISBenchmarkClusterIDRequest(
     k8s_cis_benchmark_update_nodes=shared.K8sCISBenchmarkUpdateNodes(
         cluster_id='49b403e0-ddc8-4f07-8f6d-7b4806fe4a7b',
-        index='Hybrid',
+        index='string',
         nodes=[
             shared.K8sCISBenchmarkUpdateNode(),
         ],
-        status=shared.K8sCISBenchmarkUpdateNodeStatus.FAIL,
+        status=shared.K8sCISBenchmarkUpdateNodeStatus.PASS,
     ),
-    cluster_id='c739e905-f14c-49f8-b55f-4602b586f168',
+    cluster_id='e3c739e9-05f1-44c9-b8f5-5f4602b586f1',
 )
 
 res = s.k8s_cis_benchmark.put_k8s_cis_benchmark_cluster_id_(req)

@@ -294,9 +294,9 @@ req = shared.ConnectionsPolicy(
                 connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.KAFKA_CONNECTION_RULE_PART,
             ),
             layer7_settings=shared.Layer7SettingsPart(),
-            name='Officer',
+            name='string',
             source=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.ENVIRONMENT_ANY_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.ANY_CONNECTION_RULE_PART,
             ),
         ),
     ],
