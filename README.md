@@ -510,6 +510,137 @@ return value of `Next` is `None`, then there are no more pages to be fetched.
 Here's an example of one such pagination call:
 <!-- End Pagination -->
 
+
+
+<!-- Start Error Handling -->
+# Error Handling
+
+Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+
+## Example
+
+```python
+import pan
+from pan.models import operations, shared
+
+s = pan.Pan(
+    security=shared.Security(
+        password="",
+        username="",
+    ),
+)
+
+req = operations.PostAgentsAgentIDUpdateRequest(
+    agent_id='0a0835d7-8d36-4444-8529-411e73a9b7a8',
+)
+
+res = None
+try:
+    res = s.agent_management.post_agents_agent_id_update(req)
+
+except (ApiResponse) as e:
+    print(e) # handle exception
+
+
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+<!-- End Error Handling -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `/api` | None |
+
+For example:
+
+
+```python
+import pan
+from pan.models import operations, shared
+
+s = pan.Pan(
+    security=shared.Security(
+        password="",
+        username="",
+    ),
+    server_idx=0
+)
+
+req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
+    policy_id='04ae1a0e-dcb7-4d2b-b7a6-f7ca105f8c92',
+)
+
+res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+
+
+```python
+import pan
+from pan.models import operations, shared
+
+s = pan.Pan(
+    security=shared.Security(
+        password="",
+        username="",
+    ),
+    server_url="/api"
+)
+
+req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
+    policy_id='04ae1a0e-dcb7-4d2b-b7a6-f7ca105f8c92',
+)
+
+res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+<!-- End Server Selection -->
+
+
+
+<!-- Start Custom HTTP Client -->
+# Custom HTTP Client
+
+The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
+
+
+For example, you could specify a header for every request that your sdk makes as follows:
+
+```python
+import pan
+import requests
+
+http_client = requests.Session()
+http_client.headers.update({'x-custom-header': 'someValue'})
+s = pan.Pan(client: http_client)
+```
+
+
+<!-- End Custom HTTP Client -->
+
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
 # Development
