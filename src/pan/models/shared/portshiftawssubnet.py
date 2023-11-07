@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import violationsmapnodetype as shared_violationsmapnodetype
+from .violationsmapnodetype import ViolationsMapNodeType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class PortshiftAwsSubnet:
     r"""the interface that represents the node's entity type. Possible types are: PortshiftAwsInstance, PortshiftAwsSecurityGroupViolationInfo, PortshiftAwsSubnet"""
-    violations_map_node_type: shared_violationsmapnodetype.ViolationsMapNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violationsMapNodeType') }})
+    violations_map_node_type: ViolationsMapNodeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violationsMapNodeType') }})
     cidr_block: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cidrBlock'), 'exclude': lambda f: f is None }})
     state: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
     subnet_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subnetId'), 'exclude': lambda f: f is None }})

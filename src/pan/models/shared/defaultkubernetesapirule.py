@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import kubernetesapiruleaction as shared_kubernetesapiruleaction
+from .kubernetesapiruleaction import KubernetesAPIRuleAction
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,6 +11,6 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DefaultKubernetesAPIRule:
-    action: Optional[shared_kubernetesapiruleaction.KubernetesAPIRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[KubernetesAPIRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     
 

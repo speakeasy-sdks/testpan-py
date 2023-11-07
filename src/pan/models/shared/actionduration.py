@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 
-class ActionDurationTimeUnit(str, Enum):
+class TimeUnit(str, Enum):
     MINUTES = 'MINUTES'
     HOURS = 'HOURS'
     DAYS = 'DAYS'
@@ -16,6 +16,6 @@ class ActionDurationTimeUnit(str, Enum):
 @dataclasses.dataclass
 class ActionDuration:
     duration: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('duration') }})
-    time_unit: ActionDurationTimeUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
+    time_unit: TimeUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUnit') }})
     
 

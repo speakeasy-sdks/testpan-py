@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
-from ..shared import fuzzingtesttag as shared_fuzzingtesttag
+from .apisecurityriskseverity import APISecurityRiskSeverity
+from .fuzzingtesttag import FuzzingTestTag
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,8 +12,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FuzzingTestTags:
-    elements: Optional[List[shared_fuzzingtesttag.FuzzingTestTag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('elements'), 'exclude': lambda f: f is None }})
-    severity: Optional[shared_apisecurityriskseverity.APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('severity'), 'exclude': lambda f: f is None }})
+    elements: Optional[List[FuzzingTestTag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('elements'), 'exclude': lambda f: f is None }})
+    severity: Optional[APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('severity'), 'exclude': lambda f: f is None }})
     r"""An `enum`eration."""
     
 

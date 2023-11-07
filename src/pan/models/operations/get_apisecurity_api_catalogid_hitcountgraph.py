@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicespecpathhitcountgraphpoint as shared_apiservicespecpathhitcountgraphpoint
+from ...models.shared import apiservicespecpathhitcountgraphpoint as shared_apiservicespecpathhitcountgraphpoint
 from enum import Enum
 from typing import List, Optional
 
-class GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod(str, Enum):
+class SpecPathMethod(str, Enum):
     r"""spec path method"""
     GET = 'GET'
     POST = 'POST'
@@ -25,7 +25,7 @@ class GetAPISecurityAPICatalogIDHitCountGraphRequest:
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     spec_path: str = dataclasses.field(metadata={'query_param': { 'field_name': 'specPath', 'style': 'form', 'explode': True }})
     r"""spec path"""
-    spec_path_method: GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod = dataclasses.field(metadata={'query_param': { 'field_name': 'specPathMethod', 'style': 'form', 'explode': True }})
+    spec_path_method: SpecPathMethod = dataclasses.field(metadata={'query_param': { 'field_name': 'specPathMethod', 'style': 'form', 'explode': True }})
     r"""spec path method"""
     hours_interval: Optional[int] = dataclasses.field(default=24, metadata={'query_param': { 'field_name': 'hoursInterval', 'style': 'form', 'explode': True }})
     r"""hours interval"""

@@ -1,5 +1,5 @@
 # PspProfiles
-(*psp_profiles*)
+(*.psp_profiles*)
 
 ## Overview
 
@@ -117,7 +117,7 @@ s = pan.Pan(
 
 res = s.psp_profiles.get_pod_security_policy_profiles()
 
-if res.pod_security_policies is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -148,7 +148,7 @@ s = pan.Pan(
 
 res = s.psp_profiles.get_seccomp_profiles()
 
-if res.seccomp_profiles is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -313,7 +313,7 @@ req = [
 
 res = s.psp_profiles.post_pod_security_policy_profiles_batch(req)
 
-if res.pod_security_policies is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -477,7 +477,7 @@ s = pan.Pan(
 )
 
 req = operations.PutSeccompProfilesProfileIDRequest(
-    seccomp_profile_input=shared.SeccompProfileInput(
+    seccomp_profile=shared.SeccompProfileInput(
         pod_security_policies=[
             'string',
         ],

@@ -57,7 +57,7 @@ class TrustedSigners:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.TrustedSigner]])
-                res.trusted_signers = out
+                res.classes = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -133,7 +133,7 @@ class TrustedSigners:
         
         url = utils.generate_url(operations.PutTrustedSignersTrustedSignerIDRequest, base_url, '/trustedSigners/{trustedSignerId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "trusted_signer_input", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "trusted_signer", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

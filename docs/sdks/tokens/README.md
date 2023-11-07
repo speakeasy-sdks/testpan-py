@@ -1,5 +1,5 @@
 # Tokens
-(*tokens*)
+(*.tokens*)
 
 ### Available Operations
 
@@ -71,7 +71,7 @@ req = operations.GetTokensRequest()
 
 res = s.tokens.get_tokens(req)
 
-if res.tokens is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -113,7 +113,7 @@ req = operations.GetTokensInfoRequest(
 
 res = s.tokens.get_tokens_info(req)
 
-if res.api_token_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -177,8 +177,8 @@ Add new token
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import shared
 
 s = pan.Pan(
@@ -222,8 +222,8 @@ Edit token
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(

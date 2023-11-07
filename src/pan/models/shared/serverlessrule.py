@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlessruleaction as shared_serverlessruleaction
-from ..shared import serverlessruleorigin as shared_serverlessruleorigin
-from ..shared import serverlessrulescope as shared_serverlessrulescope
-from ..shared import serverlessrulestatus as shared_serverlessrulestatus
-from ..shared import serverlessruletype as shared_serverlessruletype
+from .serverlessruleaction import ServerlessRuleAction
+from .serverlessruleorigin import ServerlessRuleOrigin
+from .serverlessrulescope import ServerlessRuleScope
+from .serverlessrulestatus import ServerlessRuleStatus
+from .serverlessruletype import ServerlessRuleType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -16,15 +16,15 @@ from typing import List, Optional
 @dataclasses.dataclass
 class ServerlessRule:
     r"""A rule that states what serverless function are allowed and where."""
-    action: shared_serverlessruleaction.ServerlessRuleAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action') }})
+    action: ServerlessRuleAction = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action') }})
     r"""serverless rule action"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    rule: shared_serverlessruletype.ServerlessRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})
+    rule: ServerlessRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})
     r"""identify the serverless functions matching type. Only one of the below should be not null, and  used."""
-    status: shared_serverlessrulestatus.ServerlessRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: ServerlessRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_serverlessruleorigin.ServerlessRuleOrigin] = dataclasses.field(default=shared_serverlessruleorigin.ServerlessRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
-    scope: Optional[List[shared_serverlessrulescope.ServerlessRuleScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[ServerlessRuleOrigin] = dataclasses.field(default=ServerlessRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    scope: Optional[List[ServerlessRuleScope]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
     
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import label as shared_label
+from .label import Label
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -14,7 +14,7 @@ class KubernetesEnvironmentInput:
     kubernetes_cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesCluster') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     kubernetes_cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesClusterName'), 'exclude': lambda f: f is None }})
-    namespace_labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceLabels'), 'exclude': lambda f: f is None }})
+    namespace_labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceLabels'), 'exclude': lambda f: f is None }})
     namespaces: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaces'), 'exclude': lambda f: f is None }})
     
 
@@ -26,7 +26,7 @@ class KubernetesEnvironment:
     kubernetes_cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesCluster') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     kubernetes_cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesClusterName'), 'exclude': lambda f: f is None }})
-    namespace_labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceLabels'), 'exclude': lambda f: f is None }})
+    namespace_labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceLabels'), 'exclude': lambda f: f is None }})
     namespaces: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaces'), 'exclude': lambda f: f is None }})
     preserve_original_source_ip: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('preserveOriginalSourceIp'), 'exclude': lambda f: f is None }})
     

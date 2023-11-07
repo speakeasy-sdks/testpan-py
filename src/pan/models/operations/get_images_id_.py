@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import imagedefget as shared_imagedefget
+from ...models.shared import imagedefget as shared_imagedefget
 from typing import Optional
 
 

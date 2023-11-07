@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import deletedependencydeployerelement as shared_deletedependencydeployerelement
+from .deletedependencydeployerelement import DeleteDependencyDeployerElement
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,6 +11,6 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DeleteDependencyElementUser:
-    deployers: Optional[shared_deletedependencydeployerelement.DeleteDependencyDeployerElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers'), 'exclude': lambda f: f is None }})
+    deployers: Optional[DeleteDependencyDeployerElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers'), 'exclude': lambda f: f is None }})
     
 

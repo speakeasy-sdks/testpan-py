@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apprule as shared_apprule
+from .apprule import AppRule
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EnvironmentRuleRecommendation:
-    environemnt_rule: Optional[shared_apprule.AppRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environemntRule'), 'exclude': lambda f: f is None }})
+    environemnt_rule: Optional[AppRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environemntRule'), 'exclude': lambda f: f is None }})
     r"""A rule that states what Apps are allowed to run on what environments."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     number_of_affected_workloads: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfAffectedWorkloads'), 'exclude': lambda f: f is None }})

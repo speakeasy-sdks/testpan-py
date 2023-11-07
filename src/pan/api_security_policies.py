@@ -56,7 +56,7 @@ class APISecurityPolicies:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.APISecurityPolicy]])
-                res.api_security_policies = out
+                res.classes = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -138,7 +138,7 @@ class APISecurityPolicies:
         
         url = utils.generate_url(operations.PutAPISecurityPolicyPolicyIDRequest, base_url, '/apiSecurityPolicy/{policyId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "api_security_policy_input", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "api_security_policy", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

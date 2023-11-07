@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cdserverlessrule as shared_cdserverlessrule
+from ...models.shared import cdserverlessrule as shared_cdserverlessrule
 from typing import Optional
 
 

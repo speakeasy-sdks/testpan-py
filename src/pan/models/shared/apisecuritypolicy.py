@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecuritypolicycategoryconditions as shared_apisecuritypolicycategoryconditions
-from ..shared import apisecuritypolicyglobalcondition as shared_apisecuritypolicyglobalcondition
+from .apisecuritypolicycategoryconditions import APISecurityPolicyCategoryConditions
+from .apisecuritypolicyglobalcondition import APISecurityPolicyGlobalCondition
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,9 +13,9 @@ from typing import Optional
 @dataclasses.dataclass
 class APISecurityPolicyInput:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    category_conditions: Optional[shared_apisecuritypolicycategoryconditions.APISecurityPolicyCategoryConditions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categoryConditions'), 'exclude': lambda f: f is None }})
+    category_conditions: Optional[APISecurityPolicyCategoryConditions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categoryConditions'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    global_condition: Optional[shared_apisecuritypolicyglobalcondition.APISecurityPolicyGlobalCondition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('globalCondition'), 'exclude': lambda f: f is None }})
+    global_condition: Optional[APISecurityPolicyGlobalCondition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('globalCondition'), 'exclude': lambda f: f is None }})
     
 
 
@@ -24,9 +24,9 @@ class APISecurityPolicyInput:
 @dataclasses.dataclass
 class APISecurityPolicy:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    category_conditions: Optional[shared_apisecuritypolicycategoryconditions.APISecurityPolicyCategoryConditions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categoryConditions'), 'exclude': lambda f: f is None }})
+    category_conditions: Optional[APISecurityPolicyCategoryConditions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categoryConditions'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    global_condition: Optional[shared_apisecuritypolicyglobalcondition.APISecurityPolicyGlobalCondition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('globalCondition'), 'exclude': lambda f: f is None }})
+    global_condition: Optional[APISecurityPolicyGlobalCondition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('globalCondition'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     
 

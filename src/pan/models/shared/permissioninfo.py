@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import permissionrisk as shared_permissionrisk
+from .permissionrisk import PermissionRisk
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,6 +12,6 @@ from typing import Optional
 @dataclasses.dataclass
 class PermissionInfo:
     count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count'), 'exclude': lambda f: f is None }})
-    risk: Optional[shared_permissionrisk.PermissionRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
+    risk: Optional[PermissionRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     
 

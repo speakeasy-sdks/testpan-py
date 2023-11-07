@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import topsecurityriskswidget as shared_topsecurityriskswidget
+from ...models.shared import topsecurityriskswidget as shared_topsecurityriskswidget
 from typing import List, Optional
 
 

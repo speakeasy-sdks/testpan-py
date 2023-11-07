@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import uuidlist as shared_uuidlist
+from ...models.shared import uuidlist as shared_uuidlist
 from enum import Enum
 from typing import Optional
 
-class PostImagesImageIDDockerfileScanResultsIgnoreActionType(str, Enum):
+class ActionType(str, Enum):
     r"""The ignore action type (ADD/REMOVE)"""
     ADD = 'ADD'
     REMOVE = 'REMOVE'
@@ -15,7 +15,7 @@ class PostImagesImageIDDockerfileScanResultsIgnoreActionType(str, Enum):
 
 @dataclasses.dataclass
 class PostImagesImageIDDockerfileScanResultsIgnoreRequest:
-    action_type: PostImagesImageIDDockerfileScanResultsIgnoreActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
+    action_type: ActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
     r"""The ignore action type (ADD/REMOVE)"""
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})

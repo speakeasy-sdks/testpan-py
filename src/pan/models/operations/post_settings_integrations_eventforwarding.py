@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eventsforwardingdetails as shared_eventsforwardingdetails
+from ...models.shared import eventsforwardingdetails as shared_eventsforwardingdetails
 from typing import Optional
 
 

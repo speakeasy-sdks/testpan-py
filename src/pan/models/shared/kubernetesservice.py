@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import kubernetesnamespace as shared_kubernetesnamespace
+from .kubernetesnamespace import KubernetesNamespace
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,7 +13,7 @@ from typing import Optional
 class KubernetesService:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    namespace: Optional[shared_kubernetesnamespace.KubernetesNamespace] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
+    namespace: Optional[KubernetesNamespace] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
     r"""Single telemetry entry"""
     
 

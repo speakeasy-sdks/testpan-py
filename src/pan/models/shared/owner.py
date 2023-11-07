@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import permissioninfo as shared_permissioninfo
-from ..shared import permissionownertype as shared_permissionownertype
-from ..shared import systemdefaultownertype as shared_systemdefaultownertype
+from .permissioninfo import PermissionInfo
+from .permissionownertype import PermissionOwnerType
+from .systemdefaultownertype import SystemDefaultOwnerType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -16,8 +16,8 @@ class Owner:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
     owner: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('owner'), 'exclude': lambda f: f is None }})
-    owner_type: Optional[shared_permissionownertype.PermissionOwnerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownerType'), 'exclude': lambda f: f is None }})
-    permission_info: Optional[List[shared_permissioninfo.PermissionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionInfo'), 'exclude': lambda f: f is None }})
-    system_default_owner_type: Optional[shared_systemdefaultownertype.SystemDefaultOwnerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('systemDefaultOwnerType'), 'exclude': lambda f: f is None }})
+    owner_type: Optional[PermissionOwnerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownerType'), 'exclude': lambda f: f is None }})
+    permission_info: Optional[List[PermissionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionInfo'), 'exclude': lambda f: f is None }})
+    system_default_owner_type: Optional[SystemDefaultOwnerType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('systemDefaultOwnerType'), 'exclude': lambda f: f is None }})
     
 

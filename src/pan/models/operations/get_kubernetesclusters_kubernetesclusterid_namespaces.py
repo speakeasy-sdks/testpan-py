@@ -3,17 +3,17 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiresponse as shared_apiresponse
-from ..shared import kubernetesnamespace as shared_kubernetesnamespace
+from ...models.shared import apiresponse as shared_apiresponse
+from ...models.shared import kubernetesnamespace as shared_kubernetesnamespace
 from enum import Enum
 from typing import List, Optional
 
-class GetKubernetesClustersKubernetesClusterIDNamespacesSortDir(str, Enum):
+class GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetKubernetesClustersKubernetesClusterIDNamespacesSortKey(str, Enum):
+class GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortKey(str, Enum):
     r"""sort key"""
     NAME = 'name'
     STATUS = 'status'
@@ -25,9 +25,9 @@ class GetKubernetesClustersKubernetesClusterIDNamespacesRequest:
     r"""Secure Application Kubernetes cluster ID"""
     include_scannable: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeScannable', 'style': 'form', 'explode': True }})
     r"""If true - return all scannable namespaces"""
-    sort_dir: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortDir] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortDir] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesSortKey] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortKey] = dataclasses.field(default=GetKubernetesClustersKubernetesClusterIDNamespacesQueryParamSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 
@@ -41,7 +41,7 @@ class GetKubernetesClustersKubernetesClusterIDNamespacesResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    kubernetes_namespace_responses: Optional[List[shared_kubernetesnamespace.KubernetesNamespace]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_kubernetesnamespace.KubernetesNamespace]] = dataclasses.field(default=None)
     r"""success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

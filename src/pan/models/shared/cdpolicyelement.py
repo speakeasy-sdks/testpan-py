@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cdpipelinefindingrisk as shared_cdpipelinefindingrisk
-from ..shared import enforcementoption as shared_enforcementoption
+from .cdpipelinefindingrisk import CDPipelineFindingRisk
+from .enforcementoption import EnforcementOption
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 
@@ -11,7 +11,7 @@ from pan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CdPolicyElement:
-    enforcement_option: shared_enforcementoption.EnforcementOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enforcementOption') }})
-    permissible_vulnerability_level: shared_cdpipelinefindingrisk.CDPipelineFindingRisk = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissibleVulnerabilityLevel') }})
+    enforcement_option: EnforcementOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enforcementOption') }})
+    permissible_vulnerability_level: CDPipelineFindingRisk = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissibleVulnerabilityLevel') }})
     
 

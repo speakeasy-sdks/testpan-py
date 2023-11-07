@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import workloadrulescopetypeenum as shared_workloadrulescopetypeenum
+from .workloadrulescopetypeenum import WorkloadRuleScopeTypeEnum
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 
@@ -11,6 +11,6 @@ from pan import utils
 @dataclasses.dataclass
 class WorkloadRuleScopeType:
     r"""identify the scope type. Only one of the below should be not null, and  used."""
-    workload_rule_scope_type: shared_workloadrulescopetypeenum.WorkloadRuleScopeTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadRuleScopeType') }})
+    workload_rule_scope_type: WorkloadRuleScopeTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadRuleScopeType') }})
     
 

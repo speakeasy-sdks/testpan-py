@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import environment as shared_environment
+from ...models.shared import environment as shared_environment
 from typing import Optional
 
 

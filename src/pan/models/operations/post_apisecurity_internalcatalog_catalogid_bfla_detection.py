@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import bfladurationconfiguration as shared_bfladurationconfiguration
+from ...models.shared import bfladurationconfiguration as shared_bfladurationconfiguration
 from typing import Optional
 
 
@@ -21,9 +21,9 @@ class PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    post_api_security_internal_catalog_catalog_id_bfla_detection_201_application_json_uuid_string: Optional[str] = dataclasses.field(default=None)
-    r"""Created"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    res: Optional[str] = dataclasses.field(default=None)
+    r"""Created"""
     
 

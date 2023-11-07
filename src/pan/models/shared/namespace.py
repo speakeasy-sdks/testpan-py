@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import label as shared_label
-from ..shared import namespaceprotectionstatus as shared_namespaceprotectionstatus
+from .label import Label
+from .namespaceprotectionstatus import NamespaceProtectionStatus
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -15,9 +15,9 @@ class Namespace:
     cluster_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterName') }})
     running_pods: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runningPods') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    protection_status: Optional[shared_namespaceprotectionstatus.NamespaceProtectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protectionStatus'), 'exclude': lambda f: f is None }})
+    protection_status: Optional[NamespaceProtectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protectionStatus'), 'exclude': lambda f: f is None }})
     system_namespace: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('systemNamespace'), 'exclude': lambda f: f is None }})
     uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('uid'), 'exclude': lambda f: f is None }})
     

@@ -1,5 +1,5 @@
 # ImagesAndVulnerabilities
-(*images_and_vulnerabilities*)
+(*.images_and_vulnerabilities*)
 
 ## Overview
 
@@ -138,12 +138,12 @@ req = operations.GetImagesRequest(
     image_tag=[
         'string',
     ],
-    sort_key=operations.GetImagesSortKey.IMAGE_NAME,
+    sort_key=operations.GetImagesQueryParamSortKey.IMAGE_NAME,
 )
 
 res = s.images_and_vulnerabilities.get_images(req)
 
-if res.image_def_gets is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -181,7 +181,7 @@ req = operations.GetImagesImagesHashRequest()
 
 res = s.images_and_vulnerabilities.get_images_images_hash(req)
 
-if res.get_images_images_hash_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -222,7 +222,7 @@ req = operations.GetImagesVulnerabilitiesByImageNameAndHashRequest(
 
 res = s.images_and_vulnerabilities.get_images_vulnerabilities_by_image_name_and_hash(req)
 
-if res.vulnerabilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -302,7 +302,7 @@ req = operations.GetImagesImageIDDockerfileScanResultsRequest(
 
 res = s.images_and_vulnerabilities.get_images_image_id_dockerfile_scan_results(req)
 
-if res.dockerfile_scan_results is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -382,7 +382,7 @@ req = operations.GetImagesImageIDPackagesRequest(
 
 res = s.images_and_vulnerabilities.get_images_image_id_packages(req)
 
-if res.image_package_details is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -462,7 +462,7 @@ req = operations.GetImagesImageIDVulnerabilitiesRequest(
 
 res = s.images_and_vulnerabilities.get_images_image_id_vulnerabilities(req)
 
-if res.vulnerabilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -486,8 +486,8 @@ Define a New image hash
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import shared
 
 s = pan.Pan(
@@ -497,7 +497,7 @@ s = pan.Pan(
     ),
 )
 
-req = shared.ImageDefInput(
+req = shared.ImageDef(
     image_tags=[
         'string',
     ],
@@ -512,9 +512,9 @@ if res.image_def_get is not None:
 
 ### Parameters
 
-| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [shared.ImageDefInput](../../models/shared/imagedefinput.md) | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| Parameter                                          | Type                                               | Required                                           | Description                                        |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `request`                                          | [shared.ImageDef](../../models/shared/imagedef.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
 
 
 ### Response
@@ -590,7 +590,7 @@ req = operations.PostImagesImageIDDockerfileScanResultsIgnoreRequest(
             '7d411c9e-43ee-4529-bae8-7474b2c192fe',
         ],
     ),
-    action_type=operations.PostImagesImageIDDockerfileScanResultsIgnoreActionType.ADD,
+    action_type=operations.ActionType.ADD,
     image_id='fcccfe79-79d3-4058-b255-f4d4f301de39',
 )
 
@@ -636,7 +636,7 @@ req = operations.PostImagesImageIDVulnerabilitiesIgnoreRequest(
             '0f457328-8079-4ea1-b64e-d7631fc85bb9',
         ],
     ),
-    action_type=operations.PostImagesImageIDVulnerabilitiesIgnoreActionType.REMOVE,
+    action_type=operations.QueryParamActionType.REMOVE,
     image_id='95b06784-3712-40b3-827e-08cfaaddc5ee',
 )
 

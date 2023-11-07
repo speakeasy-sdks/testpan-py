@@ -1,5 +1,5 @@
 # Mitre
-(*mitre*)
+(*.mitre*)
 
 ### Available Operations
 
@@ -72,7 +72,7 @@ s = pan.Pan(
 
 res = s.mitre.get_mitre_report_download()
 
-if res.get_mitre_report_download_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```
@@ -135,7 +135,7 @@ req = operations.GetMitreTechniqueRequest(
     clusters_ids=[
         '15c243dc-adda-4d62-b64a-acf9b6fc450a',
     ],
-    mitre_technique_type=operations.GetMitreTechniqueMitreTechniqueType.DEPLOY_CONTAINER,
+    mitre_technique_type=operations.MitreTechniqueType.DEPLOY_CONTAINER,
 )
 
 res = s.mitre.get_mitre_technique(req)
@@ -214,7 +214,7 @@ req = operations.PostMitreTechniqueFixRequest(
     clusters_ids=[
         '684b4b2c-63c2-4f7d-9896-83947da0e326',
     ],
-    mitre_technique_type=operations.PostMitreTechniqueFixMitreTechniqueType.CLEAR_K8_S_EVENTS,
+    mitre_technique_type=operations.QueryParamMitreTechniqueType.CLEAR_K8_S_EVENTS,
 )
 
 res = s.mitre.post_mitre_technique_fix(req)

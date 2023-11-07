@@ -3,10 +3,10 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import container as shared_container
-from ..shared import label as shared_label
-from ..shared import poddefinitionsource as shared_poddefinitionsource
-from ..shared import podtemplatekind as shared_podtemplatekind
+from .container import Container
+from .label import Label
+from .poddefinitionsource import PodDefinitionSource
+from .podtemplatekind import PodTemplateKind
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -17,13 +17,13 @@ from typing import List, Optional
 @dataclasses.dataclass
 class PodDefinitionInput:
     cluster_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId') }})
-    containers: List[shared_container.Container] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers') }})
+    containers: List[Container] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""in pod template, this is the normalized name (for example, get it from pod -> replicaset -> deployment)."""
-    init_containers: Optional[List[shared_container.Container]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initContainers'), 'exclude': lambda f: f is None }})
-    kind: Optional[shared_podtemplatekind.PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    pod_definition_source: Optional[shared_poddefinitionsource.PodDefinitionSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podDefinitionSource'), 'exclude': lambda f: f is None }})
+    init_containers: Optional[List[Container]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initContainers'), 'exclude': lambda f: f is None }})
+    kind: Optional[PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    pod_definition_source: Optional[PodDefinitionSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podDefinitionSource'), 'exclude': lambda f: f is None }})
     r"""The source type of the pod definition"""
     
 
@@ -33,16 +33,16 @@ class PodDefinitionInput:
 @dataclasses.dataclass
 class PodDefinition:
     cluster_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId') }})
-    containers: List[shared_container.Container] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers') }})
+    containers: List[Container] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""in pod template, this is the normalized name (for example, get it from pod -> replicaset -> deployment)."""
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('createdAt'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""unique Id"""
-    init_containers: Optional[List[shared_container.Container]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initContainers'), 'exclude': lambda f: f is None }})
-    kind: Optional[shared_podtemplatekind.PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
-    pod_definition_source: Optional[shared_poddefinitionsource.PodDefinitionSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podDefinitionSource'), 'exclude': lambda f: f is None }})
+    init_containers: Optional[List[Container]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('initContainers'), 'exclude': lambda f: f is None }})
+    kind: Optional[PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    pod_definition_source: Optional[PodDefinitionSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podDefinitionSource'), 'exclude': lambda f: f is None }})
     r"""The source type of the pod definition"""
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import openapispec as shared_openapispec
+from ...models.shared import openapispec as shared_openapispec
 from typing import Optional
 
 

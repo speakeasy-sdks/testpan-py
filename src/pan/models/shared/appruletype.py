@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 
-class AppRuleTypeRuleType(str, Enum):
+class RuleType(str, Enum):
     INJECTION_RULE_TYPE = 'InjectionRuleType'
     VIOLATION_RULE_TYPE = 'ViolationRuleType'
 
@@ -15,6 +15,6 @@ class AppRuleTypeRuleType(str, Enum):
 @dataclasses.dataclass
 class AppRuleType:
     r"""identify the app rule type. Only one of the below should be not null, and  used."""
-    rule_type: AppRuleTypeRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleType') }})
+    rule_type: RuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleType') }})
     
 

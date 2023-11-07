@@ -1,5 +1,5 @@
 # APISecurityPolicies
-(*api_security_policies*)
+(*.api_security_policies*)
 
 ## Overview
 
@@ -73,7 +73,7 @@ s = pan.Pan(
 
 res = s.api_security_policies.get_api_security_policy()
 
-if res.api_security_policies is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -193,7 +193,7 @@ s = pan.Pan(
 )
 
 req = operations.PutAPISecurityPolicyPolicyIDRequest(
-    api_security_policy_input=shared.APISecurityPolicyInput(
+    api_security_policy=shared.APISecurityPolicyInput(
         category_conditions=shared.APISecurityPolicyCategoryConditions(
             conditions=[
                 shared.APISecurityPolicyCategoryCondition(

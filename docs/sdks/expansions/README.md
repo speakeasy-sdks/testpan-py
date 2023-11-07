@@ -1,5 +1,5 @@
 # Expansions
-(*expansions*)
+(*.expansions*)
 
 ## Overview
 
@@ -71,12 +71,12 @@ s = pan.Pan(
 )
 
 req = operations.GetExpansionsRequest(
-    sort_key=operations.GetExpansionsSortKey.NAME,
+    sort_key=operations.GetExpansionsQueryParamSortKey.NAME,
 )
 
 res = s.expansions.get_expansions(req)
 
-if res.expansions is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -116,7 +116,7 @@ req = operations.GetExpansionsExpansionIDInstallExpansionTarGzRequest(
 
 res = s.expansions.get_expansions_expansion_id_install_expansion_tar_gz(req)
 
-if res.get_expansions_expansion_id_install_expansion_tar_gz_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```
@@ -140,8 +140,8 @@ Create a new expansion
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import shared
 
 s = pan.Pan(

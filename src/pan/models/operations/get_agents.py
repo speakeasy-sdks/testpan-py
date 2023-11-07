@@ -3,22 +3,22 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import agents as shared_agents
+from ...models.shared import agents as shared_agents
 from enum import Enum
 from typing import List, Optional
 
-class GetAgentsRisk(str, Enum):
+class Risk(str, Enum):
     HIGH = 'HIGH'
     MEDIUM = 'MEDIUM'
     LOW = 'LOW'
     UNDEFINED = 'UNDEFINED'
 
-class GetAgentsSortDir(str, Enum):
+class GetAgentsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetAgentsSortKey(str, Enum):
+class GetAgentsQueryParamSortKey(str, Enum):
     r"""sort key"""
     HOST_NAME = 'hostName'
     ENVIRONMENT_NAME = 'environmentName'
@@ -26,7 +26,7 @@ class GetAgentsSortKey(str, Enum):
     STATUS = 'status'
     LAST_ACTIVE = 'lastActive'
 
-class GetAgentsStatus(str, Enum):
+class Status(str, Enum):
     ACTIVE = 'ACTIVE'
     INACTIVE = 'INACTIVE'
     STOPPED = 'STOPPED'
@@ -41,13 +41,13 @@ class GetAgentsRequest:
     r"""Empty string means no filtering. \\"UNDEFINED\\" means telemetries with no App type"""
     host_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'hostName', 'style': 'form', 'explode': False }})
     r"""The name of the host"""
-    risk: Optional[List[GetAgentsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risk', 'style': 'form', 'explode': False }})
+    risk: Optional[List[Risk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risk', 'style': 'form', 'explode': False }})
     r"""The risk of the environment for attack"""
-    sort_dir: Optional[GetAgentsSortDir] = dataclasses.field(default=GetAgentsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAgentsQueryParamSortDir] = dataclasses.field(default=GetAgentsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAgentsSortKey] = dataclasses.field(default=GetAgentsSortKey.HOST_NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAgentsQueryParamSortKey] = dataclasses.field(default=GetAgentsQueryParamSortKey.HOST_NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
-    status: Optional[List[GetAgentsStatus]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': False }})
+    status: Optional[List[Status]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'status', 'style': 'form', 'explode': False }})
     r"""Agent status"""
     
 

@@ -30,7 +30,7 @@ class Bfla:
         
         if http_res.status_code == 204:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_api_security_internal_catalog_catalog_id_bfla_detection_204_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -57,7 +57,7 @@ class Bfla:
         
         if http_res.status_code == 204:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_api_security_internal_catalog_catalog_id_bfla_learning_204_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -117,7 +117,7 @@ class Bfla:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                res.post_api_security_internal_catalog_catalog_id_bfla_detection_201_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -149,7 +149,7 @@ class Bfla:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                res.post_api_security_internal_catalog_catalog_id_bfla_learning_201_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -176,7 +176,7 @@ class Bfla:
         
         if http_res.status_code == 201:
             if utils.match_content_type(content_type, 'application/json'):
-                res.post_api_security_internal_catalog_catalog_id_bfla_reset_201_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -208,7 +208,7 @@ class Bfla:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.put_api_security_internal_catalog_catalog_id_bfla_200_application_json_uuid_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 401 or http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

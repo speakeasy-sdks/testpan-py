@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import workloadrisklevel as shared_workloadrisklevel
-from ..shared import workloadriskreasontype as shared_workloadriskreasontype
+from .workloadrisklevel import WorkloadRiskLevel
+from .workloadriskreasontype import WorkloadRiskReasonType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,8 +13,8 @@ from typing import Optional
 @dataclasses.dataclass
 class WorkloadRiskReason:
     is_ignored: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIgnored'), 'exclude': lambda f: f is None }})
-    level: Optional[shared_workloadrisklevel.WorkloadRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('level'), 'exclude': lambda f: f is None }})
+    level: Optional[WorkloadRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('level'), 'exclude': lambda f: f is None }})
     text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text'), 'exclude': lambda f: f is None }})
-    type: Optional[shared_workloadriskreasontype.WorkloadRiskReasonType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    type: Optional[WorkloadRiskReasonType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

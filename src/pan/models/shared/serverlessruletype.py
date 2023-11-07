@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlessfunctionvalidation as shared_serverlessfunctionvalidation
+from .serverlessfunctionvalidation import ServerlessFunctionValidation
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
@@ -19,6 +19,6 @@ class ServerlessRuleTypeServerlessRuleType(str, Enum):
 class ServerlessRuleType:
     r"""identify the serverless functions matching type. Only one of the below should be not null, and  used."""
     serverless_rule_type: ServerlessRuleTypeServerlessRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serverlessRuleType') }})
-    serverless_function_validation: Optional[shared_serverlessfunctionvalidation.ServerlessFunctionValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serverlessFunctionValidation'), 'exclude': lambda f: f is None }})
+    serverless_function_validation: Optional[ServerlessFunctionValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serverlessFunctionValidation'), 'exclude': lambda f: f is None }})
     
 

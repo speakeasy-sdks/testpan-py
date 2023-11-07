@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import kubernetesapipolicy as shared_kubernetesapipolicy
+from ...models.shared import kubernetesapipolicy as shared_kubernetesapipolicy
 from typing import Optional
 
 

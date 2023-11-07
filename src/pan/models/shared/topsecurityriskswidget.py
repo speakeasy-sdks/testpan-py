@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import topriskyapiswidget as shared_topriskyapiswidget
-from ..shared import topriskyserverlessfunctionswidget as shared_topriskyserverlessfunctionswidget
-from ..shared import topriskyworkloadswidget as shared_topriskyworkloadswidget
+from .topriskyapiswidget import TopRiskyApisWidget
+from .topriskyserverlessfunctionswidget import TopRiskyServerlessFunctionsWidget
+from .topriskyworkloadswidget import TopRiskyWorkloadsWidget
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,8 +13,8 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TopSecurityRisksWidget:
-    top_risky_apis_widget: Optional[shared_topriskyapiswidget.TopRiskyApisWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyApisWidget'), 'exclude': lambda f: f is None }})
-    top_risky_serverless_functions_widget: Optional[shared_topriskyserverlessfunctionswidget.TopRiskyServerlessFunctionsWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyServerlessFunctionsWidget'), 'exclude': lambda f: f is None }})
-    top_risky_workloads_widget: Optional[shared_topriskyworkloadswidget.TopRiskyWorkloadsWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyWorkloadsWidget'), 'exclude': lambda f: f is None }})
+    top_risky_apis_widget: Optional[TopRiskyApisWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyApisWidget'), 'exclude': lambda f: f is None }})
+    top_risky_serverless_functions_widget: Optional[TopRiskyServerlessFunctionsWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyServerlessFunctionsWidget'), 'exclude': lambda f: f is None }})
+    top_risky_workloads_widget: Optional[TopRiskyWorkloadsWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyWorkloadsWidget'), 'exclude': lambda f: f is None }})
     
 

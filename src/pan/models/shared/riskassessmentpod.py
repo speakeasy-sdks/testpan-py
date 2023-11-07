@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import dockerfilescanresultssummary as shared_dockerfilescanresultssummary
-from ..shared import label as shared_label
-from ..shared import riskassessmentimage as shared_riskassessmentimage
-from ..shared import vulnerabilitiessummary as shared_vulnerabilitiessummary
+from .dockerfilescanresultssummary import DockerfileScanResultsSummary
+from .label import Label
+from .riskassessmentimage import RiskAssessmentImage
+from .vulnerabilitiessummary import VulnerabilitiesSummary
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -15,15 +15,15 @@ from typing import List, Optional
 @dataclasses.dataclass
 class RiskAssessmentPod:
     r"""Single pod risk assessment"""
-    dockerfile_scan_results_summary: Optional[shared_dockerfilescanresultssummary.DockerfileScanResultsSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dockerfileScanResultsSummary'), 'exclude': lambda f: f is None }})
+    dockerfile_scan_results_summary: Optional[DockerfileScanResultsSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dockerfileScanResultsSummary'), 'exclude': lambda f: f is None }})
     r"""dockerfile scan results summary by severity"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""kubernetes pod uid"""
-    images: Optional[List[shared_riskassessmentimage.RiskAssessmentImage]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('images'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    images: Optional[List[RiskAssessmentImage]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('images'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
-    vulnerabilities_summary: Optional[shared_vulnerabilitiessummary.VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
+    vulnerabilities_summary: Optional[VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
     r"""Vulnerabilities summary by severity"""
     
 

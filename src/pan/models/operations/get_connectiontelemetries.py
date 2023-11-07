@@ -3,28 +3,28 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import connectiontelemetry as shared_connectiontelemetry
+from ...models.shared import connectiontelemetry as shared_connectiontelemetry
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetConnectionTelemetriesLogicalOperator(str, Enum):
+class LogicalOperator(str, Enum):
     r"""Logical operator between the source group and the target group filters"""
     AND = 'and'
     OR = 'or'
 
-class GetConnectionTelemetriesResult(str, Enum):
+class GetConnectionTelemetriesQueryParamResult(str, Enum):
     DETECT = 'DETECT'
     BLOCK = 'BLOCK'
     ALLOW = 'ALLOW'
     ENCRYPT = 'ENCRYPT'
 
-class GetConnectionTelemetriesSortDir(str, Enum):
+class GetConnectionTelemetriesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetConnectionTelemetriesSortKey(str, Enum):
+class GetConnectionTelemetriesQueryParamSortKey(str, Enum):
     r"""sort key"""
     SOURCE_APP_NAME = 'sourceAppName'
     SOURCE_APP_TYPE = 'sourceAppType'
@@ -42,12 +42,12 @@ class GetConnectionTelemetriesSortKey(str, Enum):
     LAST_SEEN = 'lastSeen'
     TOTAL = 'total'
 
-class GetConnectionTelemetriesSourceRisk(str, Enum):
+class SourceRisk(str, Enum):
     HIGH = 'HIGH'
     MEDIUM = 'MEDIUM'
     LOW = 'LOW'
 
-class GetConnectionTelemetriesTargetRisk(str, Enum):
+class TargetRisk(str, Enum):
     HIGH = 'HIGH'
     MEDIUM = 'MEDIUM'
     LOW = 'LOW'
@@ -57,23 +57,23 @@ class GetConnectionTelemetriesTargetRisk(str, Enum):
 class GetConnectionTelemetriesRequest:
     end_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'endTime', 'style': 'form', 'explode': True }})
     r"""End date of the query"""
-    sort_key: GetConnectionTelemetriesSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetConnectionTelemetriesQueryParamSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     start_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'startTime', 'style': 'form', 'explode': True }})
     r"""Start date of the query"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
-    logical_operator: Optional[GetConnectionTelemetriesLogicalOperator] = dataclasses.field(default=GetConnectionTelemetriesLogicalOperator.AND, metadata={'query_param': { 'field_name': 'logicalOperator', 'style': 'form', 'explode': True }})
+    logical_operator: Optional[LogicalOperator] = dataclasses.field(default=LogicalOperator.AND, metadata={'query_param': { 'field_name': 'logicalOperator', 'style': 'form', 'explode': True }})
     r"""Logical operator between the source group and the target group filters"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    result: Optional[List[GetConnectionTelemetriesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
+    result: Optional[List[GetConnectionTelemetriesQueryParamResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""connection result filter"""
     show_only_violations: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'showOnlyViolations', 'style': 'form', 'explode': True }})
     r"""When true, the API will only return entries that violate the active policy"""
-    sort_dir: Optional[GetConnectionTelemetriesSortDir] = dataclasses.field(default=GetConnectionTelemetriesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetConnectionTelemetriesQueryParamSortDir] = dataclasses.field(default=GetConnectionTelemetriesQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     source_app_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceAppName', 'style': 'form', 'explode': False }})
     source_environment_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceEnvironmentName', 'style': 'form', 'explode': False }})
@@ -81,14 +81,14 @@ class GetConnectionTelemetriesRequest:
     source_host_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceHostName', 'style': 'form', 'explode': False }})
     source_namespaces_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceNamespacesFilter', 'style': 'form', 'explode': True }})
     r"""namespace filter for source in connection telemetries, a base 64 representation of a NamespacesFilter definition object"""
-    source_risk: Optional[List[GetConnectionTelemetriesSourceRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceRisk', 'style': 'form', 'explode': False }})
+    source_risk: Optional[List[SourceRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sourceRisk', 'style': 'form', 'explode': False }})
     target_app_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetAppName', 'style': 'form', 'explode': False }})
     target_environment_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetEnvironmentName', 'style': 'form', 'explode': False }})
     target_executable: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetExecutable', 'style': 'form', 'explode': False }})
     target_host_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetHostName', 'style': 'form', 'explode': False }})
     target_namespaces_filter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetNamespacesFilter', 'style': 'form', 'explode': True }})
     r"""namespace filter for target in connection telemetries. a base 64 representation of a NamespacesFilter definition object"""
-    target_risk: Optional[List[GetConnectionTelemetriesTargetRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetRisk', 'style': 'form', 'explode': False }})
+    target_risk: Optional[List[TargetRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'targetRisk', 'style': 'form', 'explode': False }})
     
 
 
@@ -99,7 +99,7 @@ class GetConnectionTelemetriesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    connection_telemetries: Optional[List[shared_connectiontelemetry.ConnectionTelemetry]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_connectiontelemetry.ConnectionTelemetry]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

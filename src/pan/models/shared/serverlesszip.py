@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import vulnerabilitiessummary as shared_vulnerabilitiessummary
-from ..shared import zipsourcetype as shared_zipsourcetype
+from .vulnerabilitiessummary import VulnerabilitiesSummary
+from .zipsourcetype import ZipSourceType
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -20,9 +20,9 @@ class ServerlessZip:
     r"""zip name that was given by the user to the cli"""
     sha256: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sha256'), 'exclude': lambda f: f is None }})
     r"""the zip file's sha256 identifier"""
-    source_type: Optional[shared_zipsourcetype.ZipSourceType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceType'), 'exclude': lambda f: f is None }})
+    source_type: Optional[ZipSourceType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceType'), 'exclude': lambda f: f is None }})
     time_updated: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeUpdated'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    vulnerabilities_summary: Optional[shared_vulnerabilitiessummary.VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
+    vulnerabilities_summary: Optional[VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
     r"""Vulnerabilities summary by severity"""
     
 

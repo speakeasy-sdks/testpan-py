@@ -1,5 +1,5 @@
 # Apps
-(*apps*)
+(*.apps*)
 
 ## Overview
 
@@ -38,7 +38,7 @@ req = operations.GetAppsRequest(
 
 res = s.apps.get_apps(req)
 
-if res.apps is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

@@ -1,5 +1,5 @@
 # Performance
-(*performance*)
+(*.performance*)
 
 ### Available Operations
 
@@ -26,7 +26,7 @@ s = pan.Pan(
 req = operations.GetAPISecurityAPICatalogIDHitCountGraphRequest(
     catalog_id='6b535753-b47a-42be-a003-f45375c0bae8',
     spec_path='string',
-    spec_path_method=operations.GetAPISecurityAPICatalogIDHitCountGraphSpecPathMethod.CONNECT,
+    spec_path_method=operations.SpecPathMethod.CONNECT,
 )
 
 res = s.performance.get_api_security_api_catalog_id_hit_count_graph(req)
@@ -55,8 +55,8 @@ Get performance metrics for a connection between workloads
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(

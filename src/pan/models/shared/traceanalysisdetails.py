@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import traceanalysisfinding as shared_traceanalysisfinding
-from ..shared import traceanalysisstatus as shared_traceanalysisstatus
+from .traceanalysisfinding import TraceAnalysisFinding
+from .traceanalysisstatus import TraceAnalysisStatus
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -15,7 +15,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class TraceAnalysisDetails:
     end_time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endTime'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    findings: Optional[List[shared_traceanalysisfinding.TraceAnalysisFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_traceanalysisstatus.TraceAnalysisStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    findings: Optional[List[TraceAnalysisFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
+    status: Optional[TraceAnalysisStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     
 

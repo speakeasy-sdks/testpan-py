@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import riskassessmentscanfailuresource as shared_riskassessmentscanfailuresource
-from ..shared import riskassessmentscanfailuretype as shared_riskassessmentscanfailuretype
+from .riskassessmentscanfailuresource import RiskAssessmentScanFailureSource
+from .riskassessmentscanfailuretype import RiskAssessmentScanFailureType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,7 +13,7 @@ from typing import Optional
 @dataclasses.dataclass
 class RiskAssessmentScanFailure:
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    source: Optional[shared_riskassessmentscanfailuresource.RiskAssessmentScanFailureSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
-    type: Optional[shared_riskassessmentscanfailuretype.RiskAssessmentScanFailureType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    source: Optional[RiskAssessmentScanFailureSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
+    type: Optional[RiskAssessmentScanFailureType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import riskassessmentscanfailure as shared_riskassessmentscanfailure
+from .riskassessmentscanfailure import RiskAssessmentScanFailure
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class RiskAssessmentScanFailures:
-    failures: Optional[List[shared_riskassessmentscanfailure.RiskAssessmentScanFailure]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failures'), 'exclude': lambda f: f is None }})
+    failures: Optional[List[RiskAssessmentScanFailure]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failures'), 'exclude': lambda f: f is None }})
     
 

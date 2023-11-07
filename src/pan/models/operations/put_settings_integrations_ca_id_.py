@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import caintegrationrequest as shared_caintegrationrequest
-from ..shared import caintegrationresponse as shared_caintegrationresponse
+from ...models.shared import caintegrationrequest as shared_caintegrationrequest
+from ...models.shared import caintegrationresponse as shared_caintegrationresponse
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutSettingsIntegrationsCaIDRequest:
-    ca_integration_request_input: shared_caintegrationrequest.CaIntegrationRequestInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    ca_integration_request: shared_caintegrationrequest.CaIntegrationRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     
 

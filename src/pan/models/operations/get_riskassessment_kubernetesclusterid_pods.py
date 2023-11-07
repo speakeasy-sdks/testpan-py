@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import riskassessmentpod as shared_riskassessmentpod
+from ...models.shared import riskassessmentpod as shared_riskassessmentpod
 from enum import Enum
 from typing import List, Optional
 
-class GetRiskAssessmentKubernetesClusterIDPodsSortDir(str, Enum):
+class GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentKubernetesClusterIDPodsSortKey(str, Enum):
+class GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey(str, Enum):
     r"""risk assessment pod sort key."""
     NAME = 'NAME'
     RISK = 'RISK'
@@ -22,7 +22,7 @@ class GetRiskAssessmentKubernetesClusterIDPodsSortKey(str, Enum):
 class GetRiskAssessmentKubernetesClusterIDPodsRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    sort_key: GetRiskAssessmentKubernetesClusterIDPodsSortKey = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""risk assessment pod sort key."""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
@@ -32,7 +32,7 @@ class GetRiskAssessmentKubernetesClusterIDPodsRequest:
     r"""namespace names filter. a base 64 representation of a list of namespace names definition object"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetRiskAssessmentKubernetesClusterIDPodsSortDir] = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -44,9 +44,9 @@ class GetRiskAssessmentKubernetesClusterIDPodsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_riskassessmentpod.RiskAssessmentPod]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_pods: Optional[List[shared_riskassessmentpod.RiskAssessmentPod]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

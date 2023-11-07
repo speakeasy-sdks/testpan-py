@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import gateway as shared_gateway
+from ...models.shared import gateway as shared_gateway
 from typing import Optional
 
 

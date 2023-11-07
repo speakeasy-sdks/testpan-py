@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import pricingunittype as shared_pricingunittype
+from .pricingunittype import PricingUnitType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -15,6 +15,6 @@ class PricingDetails:
     budget: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('budget'), 'exclude': lambda f: f is None }})
     estimated_num_of_unit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('estimatedNumOfUnit'), 'exclude': lambda f: f is None }})
     price: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('price'), 'exclude': lambda f: f is None }})
-    type_of_unit: Optional[shared_pricingunittype.PricingUnitType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('typeOfUnit'), 'exclude': lambda f: f is None }})
+    type_of_unit: Optional[PricingUnitType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('typeOfUnit'), 'exclude': lambda f: f is None }})
     
 

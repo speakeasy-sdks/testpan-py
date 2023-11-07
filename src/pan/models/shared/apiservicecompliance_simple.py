@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apiserviceprofilecompliance_simple as shared_apiserviceprofilecompliance_simple
+from .apiserviceprofilecompliance_simple import APIServiceProfileComplianceSimple
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List
@@ -12,6 +12,6 @@ from typing import List
 @dataclasses.dataclass
 class APIServiceComplianceSimple:
     compliant: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliant') }})
-    profilescompliance: List[shared_apiserviceprofilecompliance_simple.APIServiceProfileComplianceSimple] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profilescompliance') }})
+    profilescompliance: List[APIServiceProfileComplianceSimple] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('profilescompliance') }})
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import connectiontelemetry as shared_connectiontelemetry
+from ...models.shared import connectiontelemetry as shared_connectiontelemetry
 from datetime import datetime
 from typing import Optional
 

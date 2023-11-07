@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
-from ..shared import httpmethod as shared_httpmethod
-from ..shared import specscorediffslists as shared_specscorediffslists
-from ..shared import specscorefindings as shared_specscorefindings
-from ..shared import vulnerabilitiessummary as shared_vulnerabilitiessummary
+from .apisecurityriskseverity import APISecurityRiskSeverity
+from .httpmethod import HTTPMethod
+from .specscorediffslists import SpecScoreDiffsLists
+from .specscorefindings import SpecScoreFindings
+from .vulnerabilitiessummary import VulnerabilitiesSummary
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -16,14 +16,14 @@ from typing import Optional
 @dataclasses.dataclass
 class SpecMethod:
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    diffs: Optional[shared_specscorediffslists.SpecScoreDiffsLists] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
-    findings: Optional[shared_specscorefindings.SpecScoreFindings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
-    method: Optional[shared_httpmethod.HTTPMethod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method'), 'exclude': lambda f: f is None }})
+    diffs: Optional[SpecScoreDiffsLists] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
+    findings: Optional[SpecScoreFindings] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
+    method: Optional[HTTPMethod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method'), 'exclude': lambda f: f is None }})
     path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('path'), 'exclude': lambda f: f is None }})
-    severity: Optional[shared_apisecurityriskseverity.APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('severity'), 'exclude': lambda f: f is None }})
+    severity: Optional[APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('severity'), 'exclude': lambda f: f is None }})
     r"""An `enum`eration."""
     tag: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tag'), 'exclude': lambda f: f is None }})
-    vulnerabilities_summary: Optional[shared_vulnerabilitiessummary.VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
+    vulnerabilities_summary: Optional[VulnerabilitiesSummary] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerabilitiesSummary'), 'exclude': lambda f: f is None }})
     r"""Vulnerabilities summary by severity"""
     
 

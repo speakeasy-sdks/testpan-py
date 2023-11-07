@@ -1,5 +1,5 @@
 # Bfla
-(*bfla*)
+(*.bfla*)
 
 ### Available Operations
 
@@ -34,7 +34,7 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.delete_api_security_internal_catalog_catalog_id_bfla_detection_204_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -74,7 +74,7 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.delete_api_security_internal_catalog_catalog_id_bfla_learning_204_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -157,7 +157,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_detection_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -200,7 +200,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_learning_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -240,7 +240,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_reset_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -264,8 +264,8 @@ update BFLA info for this catalogId
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -307,7 +307,7 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)
 
-if res.put_api_security_internal_catalog_catalog_id_bfla_200_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

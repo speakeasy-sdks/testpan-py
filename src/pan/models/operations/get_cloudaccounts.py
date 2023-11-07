@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cloudaccount as shared_cloudaccount
+from ...models.shared import cloudaccount as shared_cloudaccount
 from enum import Enum
 from typing import List, Optional
 
-class GetCloudAccountsSortDir(str, Enum):
+class GetCloudAccountsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetCloudAccountsSortKey(str, Enum):
+class GetCloudAccountsQueryParamSortKey(str, Enum):
     r"""sort key"""
     LAST_SCANNED = 'lastScanned'
     NAME = 'name'
@@ -20,7 +20,7 @@ class GetCloudAccountsSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetCloudAccountsRequest:
-    sort_key: GetCloudAccountsSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetCloudAccountsQueryParamSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     cloud_account_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cloudAccountName', 'style': 'form', 'explode': True }})
     r"""Filter cloud accounts by name"""
@@ -32,7 +32,7 @@ class GetCloudAccountsRequest:
     r"""Return entries from this offset (pagination)"""
     region: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'region', 'style': 'form', 'explode': True }})
     r"""Filter cloud accounts by region"""
-    sort_dir: Optional[GetCloudAccountsSortDir] = dataclasses.field(default=GetCloudAccountsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetCloudAccountsQueryParamSortDir] = dataclasses.field(default=GetCloudAccountsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -44,7 +44,7 @@ class GetCloudAccountsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cloud_accounts: Optional[List[shared_cloudaccount.CloudAccount]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_cloudaccount.CloudAccount]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

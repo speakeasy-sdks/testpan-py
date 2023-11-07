@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlessvulnerabilitieswidget as shared_serverlessvulnerabilitieswidget
-from ..shared import workloadvulnerabilitieswidget as shared_workloadvulnerabilitieswidget
+from .serverlessvulnerabilitieswidget import ServerlessVulnerabilitiesWidget
+from .workloadvulnerabilitieswidget import WorkloadVulnerabilitiesWidget
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class VulnerabilitiesWidget:
-    serverless_vulnerabilities_widget: Optional[shared_serverlessvulnerabilitieswidget.ServerlessVulnerabilitiesWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ServerlessVulnerabilitiesWidget'), 'exclude': lambda f: f is None }})
-    workload_vulnerabilities_widget: Optional[shared_workloadvulnerabilitieswidget.WorkloadVulnerabilitiesWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('WorkloadVulnerabilitiesWidget'), 'exclude': lambda f: f is None }})
+    serverless_vulnerabilities_widget: Optional[ServerlessVulnerabilitiesWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ServerlessVulnerabilitiesWidget'), 'exclude': lambda f: f is None }})
+    workload_vulnerabilities_widget: Optional[WorkloadVulnerabilitiesWidget] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('WorkloadVulnerabilitiesWidget'), 'exclude': lambda f: f is None }})
     
 

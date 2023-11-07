@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apiservicebflapathinfo as shared_apiservicebflapathinfo
+from .apiservicebflapathinfo import APIServiceBflaPathInfo
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,7 +12,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class APIServiceBflaTagInfo:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    paths: List[shared_apiservicebflapathinfo.APIServiceBflaPathInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paths') }})
+    paths: List[APIServiceBflaPathInfo] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paths') }})
     is_legitimate: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isLegitimate'), 'exclude': lambda f: f is None }})
     
 

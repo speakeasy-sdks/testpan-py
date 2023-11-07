@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apisecuritypolicy as shared_apisecuritypolicy
+from ...models.shared import apisecuritypolicy as shared_apisecuritypolicy
 from typing import Optional
 
 

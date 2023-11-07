@@ -2,22 +2,22 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import appprocessinfo as shared_appprocessinfo
-from ..shared import appruntimeinfo as shared_appruntimeinfo
-from ..shared import dockerfilescanseverity as shared_dockerfilescanseverity
-from ..shared import expansiontelemetryinfo as shared_expansiontelemetryinfo
-from ..shared import podidentification as shared_podidentification
-from ..shared import podruntimeinfo as shared_podruntimeinfo
-from ..shared import podspecinfo as shared_podspecinfo
-from ..shared import podtelemetryinfo as shared_podtelemetryinfo
-from ..shared import telemetrystate as shared_telemetrystate
-from ..shared import tokeninjectionstatus as shared_tokeninjectionstatus
-from ..shared import unprotectedpodreason as shared_unprotectedpodreason
-from ..shared import violationinfo as shared_violationinfo
-from ..shared import vulnerabilityseverity as shared_vulnerabilityseverity
-from ..shared import workloadrisk as shared_workloadrisk
-from ..shared import workloadrisklevel as shared_workloadrisklevel
-from ..shared import workloadtype as shared_workloadtype
+from .appprocessinfo import AppProcessInfo
+from .appruntimeinfo import AppRuntimeInfo
+from .dockerfilescanseverity import DockerfileScanSeverity
+from .expansiontelemetryinfo import ExpansionTelemetryInfo
+from .podidentification import PodIdentification
+from .podruntimeinfo import PodRuntimeInfo
+from .podspecinfo import PodSpecInfo
+from .podtelemetryinfo import PodTelemetryInfo
+from .telemetrystate import TelemetryState
+from .tokeninjectionstatus import TokenInjectionStatus
+from .unprotectedpodreason import UnprotectedPodReason
+from .violationinfo import ViolationInfo
+from .vulnerabilityseverity import VulnerabilitySeverity
+from .workloadrisk import WorkloadRisk
+from .workloadrisklevel import WorkloadRiskLevel
+from .workloadtype import WorkloadType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -25,7 +25,7 @@ from typing import List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AppTelemetryCluster:
+class Cluster:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     
@@ -64,7 +64,7 @@ class AppTelemetryNamespace:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AppTelemetryNetwork:
+class Network:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     
@@ -75,41 +75,41 @@ class AppTelemetryNetwork:
 @dataclasses.dataclass
 class AppTelemetry:
     r"""Single telemetry entry"""
-    app: Optional[shared_appprocessinfo.AppProcessInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
+    app: Optional[AppProcessInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
     r"""app info and process info for connection and App telemetries"""
-    app_runtime_info: Optional[shared_appruntimeinfo.AppRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRuntimeInfo'), 'exclude': lambda f: f is None }})
+    app_runtime_info: Optional[AppRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the App (if it is an App)"""
-    cluster: Optional[AppTelemetryCluster] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
+    cluster: Optional[Cluster] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
     environment: Optional[AppTelemetryEnvironment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environment'), 'exclude': lambda f: f is None }})
-    expansion: Optional[shared_expansiontelemetryinfo.ExpansionTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
-    highest_dockerfile_scan_result: Optional[shared_dockerfilescanseverity.DockerfileScanSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestDockerfileScanResult'), 'exclude': lambda f: f is None }})
-    highest_security_context_risk: Optional[shared_workloadrisklevel.WorkloadRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestSecurityContextRisk'), 'exclude': lambda f: f is None }})
-    highest_vulnerability: Optional[shared_vulnerabilityseverity.VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestVulnerability'), 'exclude': lambda f: f is None }})
+    expansion: Optional[ExpansionTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
+    highest_dockerfile_scan_result: Optional[DockerfileScanSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestDockerfileScanResult'), 'exclude': lambda f: f is None }})
+    highest_security_context_risk: Optional[WorkloadRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestSecurityContextRisk'), 'exclude': lambda f: f is None }})
+    highest_vulnerability: Optional[VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestVulnerability'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     instance: Optional[AppTelemetryInstance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instance'), 'exclude': lambda f: f is None }})
     is_pod_protected: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isPodProtected'), 'exclude': lambda f: f is None }})
     is_public_facing: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isPublicFacing'), 'exclude': lambda f: f is None }})
     namespace: Optional[AppTelemetryNamespace] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
-    network: Optional[AppTelemetryNetwork] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('network'), 'exclude': lambda f: f is None }})
-    pod: Optional[shared_podtelemetryinfo.PodTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
-    pod_identification: Optional[shared_podidentification.PodIdentification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podIdentification'), 'exclude': lambda f: f is None }})
-    pod_runtime_info: Optional[shared_podruntimeinfo.PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
+    network: Optional[Network] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('network'), 'exclude': lambda f: f is None }})
+    pod: Optional[PodTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
+    pod_identification: Optional[PodIdentification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podIdentification'), 'exclude': lambda f: f is None }})
+    pod_runtime_info: Optional[PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the pod (if is a pod)"""
     pods_licenses: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podsLicenses'), 'exclude': lambda f: f is None }})
     r"""Licenses in use by the docker images. this field will be populated only in the drill down api"""
-    pod_spec_info: Optional[shared_podspecinfo.PodSpecInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSpecInfo'), 'exclude': lambda f: f is None }})
+    pod_spec_info: Optional[PodSpecInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSpecInfo'), 'exclude': lambda f: f is None }})
     r"""pod spec attributes which are potentially risky"""
-    risk: Optional[shared_workloadrisk.WorkloadRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
+    risk: Optional[WorkloadRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     securecn_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securecnId'), 'exclude': lambda f: f is None }})
-    state: Optional[shared_telemetrystate.TelemetryState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
+    state: Optional[TelemetryState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
     r"""Status of a telemetry entry"""
     telemetry_uid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telemetryUid'), 'exclude': lambda f: f is None }})
     r"""the kubernetes uid"""
     telemetry_uids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telemetryUids'), 'exclude': lambda f: f is None }})
-    token_injection_status: Optional[shared_tokeninjectionstatus.TokenInjectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenInjectionStatus'), 'exclude': lambda f: f is None }})
-    unprotected_reasons: Optional[List[shared_unprotectedpodreason.UnprotectedPodReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unprotectedReasons'), 'exclude': lambda f: f is None }})
-    violation: Optional[shared_violationinfo.ViolationInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})
+    token_injection_status: Optional[TokenInjectionStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tokenInjectionStatus'), 'exclude': lambda f: f is None }})
+    unprotected_reasons: Optional[List[UnprotectedPodReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unprotectedReasons'), 'exclude': lambda f: f is None }})
+    violation: Optional[ViolationInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})
     r"""If the the App is running on an environment on which it is not allowed to run, this object contains the rule it violated."""
-    workload_type: Optional[shared_workloadtype.WorkloadType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadType'), 'exclude': lambda f: f is None }})
+    workload_type: Optional[WorkloadType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadType'), 'exclude': lambda f: f is None }})
     
 

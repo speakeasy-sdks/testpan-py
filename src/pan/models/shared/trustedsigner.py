@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import trustedsignercloudaccount as shared_trustedsignercloudaccount
-from ..shared import trustedsignercluster as shared_trustedsignercluster
-from ..shared import trustedsignerkey as shared_trustedsignerkey
+from .trustedsignercloudaccount import TrustedSignerCloudAccount, TrustedSignerCloudAccountInput
+from .trustedsignercluster import TrustedSignerCluster, TrustedSignerClusterInput
+from .trustedsignerkey import TrustedSignerKey
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -15,9 +15,9 @@ from typing import List, Optional
 class TrustedSignerInput:
     r"""Trusted signers profile"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    keys: Optional[List[shared_trustedsignerkey.TrustedSignerKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
-    trusted_signer_cloud_accounts: Optional[List[shared_trustedsignercloudaccount.TrustedSignerCloudAccountInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerCloudAccounts'), 'exclude': lambda f: f is None }})
-    trusted_signer_clusters: Optional[List[shared_trustedsignercluster.TrustedSignerClusterInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerClusters'), 'exclude': lambda f: f is None }})
+    keys: Optional[List[TrustedSignerKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
+    trusted_signer_cloud_accounts: Optional[List[TrustedSignerCloudAccountInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerCloudAccounts'), 'exclude': lambda f: f is None }})
+    trusted_signer_clusters: Optional[List[TrustedSignerClusterInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerClusters'), 'exclude': lambda f: f is None }})
     
 
 
@@ -28,8 +28,8 @@ class TrustedSigner:
     r"""Trusted signers profile"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    keys: Optional[List[shared_trustedsignerkey.TrustedSignerKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
-    trusted_signer_cloud_accounts: Optional[List[shared_trustedsignercloudaccount.TrustedSignerCloudAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerCloudAccounts'), 'exclude': lambda f: f is None }})
-    trusted_signer_clusters: Optional[List[shared_trustedsignercluster.TrustedSignerCluster]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerClusters'), 'exclude': lambda f: f is None }})
+    keys: Optional[List[TrustedSignerKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
+    trusted_signer_cloud_accounts: Optional[List[TrustedSignerCloudAccount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerCloudAccounts'), 'exclude': lambda f: f is None }})
+    trusted_signer_clusters: Optional[List[TrustedSignerCluster]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerClusters'), 'exclude': lambda f: f is None }})
     
 

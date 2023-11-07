@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import label as shared_label
-from ..shared import networkcontainer as shared_networkcontainer
-from ..shared import podtemplatekind as shared_podtemplatekind
-from ..shared import vulnerabilityseverity as shared_vulnerabilityseverity
+from .label import Label
+from .networkcontainer import NetworkContainer
+from .podtemplatekind import PodTemplateKind
+from .vulnerabilityseverity import VulnerabilitySeverity
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -16,13 +16,13 @@ from typing import List, Optional
 class NetworkPod:
     cluster: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
     cluster_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId'), 'exclude': lambda f: f is None }})
-    containers: Optional[List[shared_networkcontainer.NetworkContainer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers'), 'exclude': lambda f: f is None }})
-    highest_vulnerability_severity_level: Optional[shared_vulnerabilityseverity.VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestVulnerabilitySeverityLevel'), 'exclude': lambda f: f is None }})
+    containers: Optional[List[NetworkContainer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('containers'), 'exclude': lambda f: f is None }})
+    highest_vulnerability_severity_level: Optional[VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestVulnerabilitySeverityLevel'), 'exclude': lambda f: f is None }})
     hosts: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hosts'), 'exclude': lambda f: f is None }})
     id: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_identified: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isIdentified'), 'exclude': lambda f: f is None }})
-    kind: Optional[shared_podtemplatekind.PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    kind: Optional[PodTemplateKind] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kind'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""in pod template, this is the normalized name (for example, get it from pod -> replicaset -> deployment)."""
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})

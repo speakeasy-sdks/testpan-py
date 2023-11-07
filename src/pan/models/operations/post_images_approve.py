@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import uuidlist as shared_uuidlist
+from ...models.shared import uuidlist as shared_uuidlist
 from typing import Optional
 
 

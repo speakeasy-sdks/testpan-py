@@ -1,5 +1,5 @@
 # Telemetries
-(*telemetries*)
+(*.telemetries*)
 
 ## Overview
 
@@ -22,8 +22,8 @@ Get App telemetries
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -57,9 +57,9 @@ req = operations.GetAppTelemetriesRequest(
         '50dc36c5-6d44-446a-b356-669e30a7dfca',
     ],
     result=[
-        operations.GetAppTelemetriesResult.DETECT,
+        operations.GetAppTelemetriesQueryParamResult.DETECT,
     ],
-    sort_key=operations.GetAppTelemetriesSortKey.FINISH_TIME,
+    sort_key=operations.GetAppTelemetriesQueryParamSortKey.FINISH_TIME,
     start_time=dateutil.parser.isoparse('2022-08-17T10:31:03.718Z'),
     status=[
         'string',
@@ -68,13 +68,13 @@ req = operations.GetAppTelemetriesRequest(
         'string',
     ],
     workload_risks=[
-        operations.GetAppTelemetriesWorkloadRisks.CRITICAL,
+        operations.WorkloadRisks.CRITICAL,
     ],
 )
 
 res = s.telemetries.get_app_telemetries(req)
 
-if res.app_telemetries is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -154,7 +154,7 @@ req = operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoRequest(
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_api_risk_info(req)
 
-if res.api_risk_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -194,7 +194,7 @@ req = operations.GetAppTelemetriesAppTelemetryIDImagePackagesRequest(
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_image_packages(req)
 
-if res.images_with_licenses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -234,7 +234,7 @@ req = operations.GetAppTelemetriesAppTelemetryIDInjectionInfoRequest(
 
 res = s.telemetries.get_app_telemetries_app_telemetry_id_injection_info(req)
 
-if res.token_injection_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -258,8 +258,8 @@ Get connection telemetries
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -272,9 +272,9 @@ s = pan.Pan(
 req = operations.GetConnectionTelemetriesRequest(
     end_time=dateutil.parser.isoparse('2023-12-02T06:47:12.551Z'),
     result=[
-        operations.GetConnectionTelemetriesResult.ALLOW,
+        operations.GetConnectionTelemetriesQueryParamResult.ALLOW,
     ],
-    sort_key=operations.GetConnectionTelemetriesSortKey.SOURCE_APP_TYPE,
+    sort_key=operations.GetConnectionTelemetriesQueryParamSortKey.SOURCE_APP_TYPE,
     source_app_name=[
         'string',
     ],
@@ -288,7 +288,7 @@ req = operations.GetConnectionTelemetriesRequest(
         'string',
     ],
     source_risk=[
-        operations.GetConnectionTelemetriesSourceRisk.LOW,
+        operations.SourceRisk.LOW,
     ],
     start_time=dateutil.parser.isoparse('2021-04-04T11:53:10.030Z'),
     target_app_name=[
@@ -304,13 +304,13 @@ req = operations.GetConnectionTelemetriesRequest(
         'string',
     ],
     target_risk=[
-        operations.GetConnectionTelemetriesTargetRisk.HIGH,
+        operations.TargetRisk.HIGH,
     ],
 )
 
 res = s.telemetries.get_connection_telemetries(req)
 
-if res.connection_telemetries is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -334,8 +334,8 @@ get details for a single connection telemetry
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(

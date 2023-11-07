@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apisecriskfindingstrendwidget as shared_apisecriskfindingstrendwidget
+from ...models.shared import apisecriskfindingstrendwidget as shared_apisecriskfindingstrendwidget
 from enum import Enum
 from typing import Optional
 
-class GetDashboardApisecRiskFindingsTrendAPISecSource(str, Enum):
+class GetDashboardApisecRiskFindingsTrendQueryParamAPISecSource(str, Enum):
     r"""source filter. an enum representing the source of the APIs service in scope"""
     INTERNAL = 'INTERNAL'
     EXTERNAL = 'EXTERNAL'
@@ -15,7 +15,7 @@ class GetDashboardApisecRiskFindingsTrendAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecRiskFindingsTrendRequest:
-    api_sec_source: GetDashboardApisecRiskFindingsTrendAPISecSource = dataclasses.field(default=GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetDashboardApisecRiskFindingsTrendQueryParamAPISecSource = dataclasses.field(default=GetDashboardApisecRiskFindingsTrendQueryParamAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
     num_of_days: Optional[int] = dataclasses.field(default=30, metadata={'query_param': { 'field_name': 'numOfDays', 'style': 'form', 'explode': True }})
     r"""the desired number of days in graph"""

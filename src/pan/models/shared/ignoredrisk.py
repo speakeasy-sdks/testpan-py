@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import workloadriskreasontype as shared_workloadriskreasontype
+from .workloadriskreasontype import WorkloadRiskReasonType
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 from typing import List, Optional
 
-class IgnoredRiskIgnoredRiskType(str, Enum):
+class IgnoredRiskType(str, Enum):
     CLUSTER_IGNORED_RISK = 'ClusterIgnoredRisk'
     ANY_CLUSTER_IGNORED_RISK = 'AnyClusterIgnoredRisk'
     ANY_ENVIRONMENT_IGNORED_RISK = 'AnyEnvironmentIgnoredRisk'
@@ -20,8 +20,8 @@ class IgnoredRiskIgnoredRiskType(str, Enum):
 @dataclasses.dataclass
 class IgnoredRisk:
     r"""represent ignore risk object"""
-    ignored_risk_type: IgnoredRiskIgnoredRiskType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ignoredRiskType') }})
-    workload_risks_type: List[shared_workloadriskreasontype.WorkloadRiskReasonType] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadRisksType') }})
+    ignored_risk_type: IgnoredRiskType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ignoredRiskType') }})
+    workload_risks_type: List[WorkloadRiskReasonType] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadRisksType') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     
 

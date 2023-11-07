@@ -3,29 +3,29 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ownerresponse as shared_ownerresponse
+from ...models.shared import ownerresponse as shared_ownerresponse
 from enum import Enum
 from typing import Optional
 
-class GetRiskAssessmentPermissionsClusterIDOwnerType(str, Enum):
+class OwnerType(str, Enum):
     r"""owner type"""
     SERVICEACCOUNT = 'SERVICEACCOUNT'
     USER = 'USER'
     GROUP = 'GROUP'
 
-class GetRiskAssessmentPermissionsClusterIDPermissionRisk(str, Enum):
+class PermissionRisk(str, Enum):
     r"""the risk to filter by"""
     NO_RISK = 'NO_RISK'
     MEDIUM = 'MEDIUM'
     HIGH = 'HIGH'
     APPROVED = 'APPROVED'
 
-class GetRiskAssessmentPermissionsClusterIDSortDir(str, Enum):
+class GetRiskAssessmentPermissionsClusterIDQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentPermissionsClusterIDSortKey(str, Enum):
+class GetRiskAssessmentPermissionsClusterIDQueryParamSortKey(str, Enum):
     r"""sort key"""
     OWNER = 'owner'
     OWNER_TYPE = 'ownerType'
@@ -46,13 +46,13 @@ class GetRiskAssessmentPermissionsClusterIDRequest:
     r"""Return entries from this offset (pagination)"""
     owner: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'owner', 'style': 'form', 'explode': True }})
     r"""owner name"""
-    owner_type: Optional[GetRiskAssessmentPermissionsClusterIDOwnerType] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ownerType', 'style': 'form', 'explode': True }})
+    owner_type: Optional[OwnerType] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ownerType', 'style': 'form', 'explode': True }})
     r"""owner type"""
-    permission_risk: Optional[GetRiskAssessmentPermissionsClusterIDPermissionRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'permissionRisk', 'style': 'form', 'explode': True }})
+    permission_risk: Optional[PermissionRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'permissionRisk', 'style': 'form', 'explode': True }})
     r"""the risk to filter by"""
-    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRiskAssessmentPermissionsClusterIDSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDSortKey.OWNER, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetRiskAssessmentPermissionsClusterIDQueryParamSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDQueryParamSortKey.OWNER, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

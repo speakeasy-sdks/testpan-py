@@ -3,13 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import environmentrulebasic as shared_environmentrulebasic
-from ..shared import label as shared_label
-from ..shared import networkapisecurityservice as shared_networkapisecurityservice
-from ..shared import networkexpansion as shared_networkexpansion
-from ..shared import networkpod as shared_networkpod
-from ..shared import riskseverity as shared_riskseverity
-from ..shared import telemetryavailabilitystate as shared_telemetryavailabilitystate
+from .environmentrulebasic import EnvironmentRuleBasic
+from .label import Label
+from .networkapisecurityservice import NetworkAPISecurityService
+from .networkexpansion import NetworkExpansion
+from .networkpod import NetworkPod
+from .riskseverity import RiskSeverity
+from .telemetryavailabilitystate import TelemetryAvailabilityState
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -19,29 +19,29 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class NetworkApp:
-    api_security: Optional[shared_networkapisecurityservice.NetworkAPISecurityService] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurity'), 'exclude': lambda f: f is None }})
+    api_security: Optional[NetworkAPISecurityService] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurity'), 'exclude': lambda f: f is None }})
     app_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appId'), 'exclude': lambda f: f is None }})
-    app_risk: Optional[shared_riskseverity.RiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRisk'), 'exclude': lambda f: f is None }})
+    app_risk: Optional[RiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRisk'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     args: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('args'), 'exclude': lambda f: f is None }})
     cwd: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cwd'), 'exclude': lambda f: f is None }})
     environment_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environmentId'), 'exclude': lambda f: f is None }})
     executable_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('executablePath'), 'exclude': lambda f: f is None }})
-    expansion: Optional[shared_networkexpansion.NetworkExpansion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
+    expansion: Optional[NetworkExpansion] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
     hosts_id: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostsId'), 'exclude': lambda f: f is None }})
     hosts_ip: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostsIp'), 'exclude': lambda f: f is None }})
     hosts_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostsName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     last_seen: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastSeen'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     last_violation: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastViolation'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    pod: Optional[shared_networkpod.NetworkPod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
+    pod: Optional[NetworkPod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
     port: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('port'), 'exclude': lambda f: f is None }})
     process_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('processName'), 'exclude': lambda f: f is None }})
-    rule: Optional[shared_environmentrulebasic.EnvironmentRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
+    rule: Optional[EnvironmentRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
     start_time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startTime'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    state: Optional[shared_telemetryavailabilitystate.TelemetryAvailabilityState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
+    state: Optional[TelemetryAvailabilityState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

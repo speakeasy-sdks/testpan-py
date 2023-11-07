@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cddeploymentinfo as shared_cddeploymentinfo
-from ..shared import cddeploymentresource as shared_cddeploymentresource
+from .cddeploymentinfo import CDDeploymentInfo
+from .cddeploymentresource import CDDeploymentResource
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -13,7 +13,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class CdPipelineResourceResult:
     r"""CD resource results"""
-    deployment_info: Optional[shared_cddeploymentinfo.CDDeploymentInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentInfo'), 'exclude': lambda f: f is None }})
-    resources: Optional[List[shared_cddeploymentresource.CDDeploymentResource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resources'), 'exclude': lambda f: f is None }})
+    deployment_info: Optional[CDDeploymentInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentInfo'), 'exclude': lambda f: f is None }})
+    resources: Optional[List[CDDeploymentResource]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resources'), 'exclude': lambda f: f is None }})
     
 

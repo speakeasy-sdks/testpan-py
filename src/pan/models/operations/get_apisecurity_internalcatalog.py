@@ -3,17 +3,17 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicelistinternal as shared_apiservicelistinternal
+from ...models.shared import apiservicelistinternal as shared_apiservicelistinternal
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetAPISecurityInternalCatalogSortDir(str, Enum):
+class GetAPISecurityInternalCatalogQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetAPISecurityInternalCatalogSortKey(str, Enum):
+class GetAPISecurityInternalCatalogQueryParamSortKey(str, Enum):
     r"""the Api Catalog sort key"""
     NAME = 'name'
     RISK = 'risk'
@@ -37,9 +37,9 @@ class GetAPISecurityInternalCatalogRequest:
     r"""When true, the pagination params will be ignored"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetAPISecurityInternalCatalogSortDir] = dataclasses.field(default=GetAPISecurityInternalCatalogSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAPISecurityInternalCatalogQueryParamSortDir] = dataclasses.field(default=GetAPISecurityInternalCatalogQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAPISecurityInternalCatalogSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAPISecurityInternalCatalogQueryParamSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""the Api Catalog sort key"""
     updated_after: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updatedAfter', 'style': 'form', 'explode': True }})
     r"""Only Apis updated since this date"""

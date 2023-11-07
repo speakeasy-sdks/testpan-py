@@ -11,7 +11,7 @@ from typing import List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ImageDefInput:
+class ImageDef:
     r"""Authorized image hash"""
     image_hash: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('imageHash'), 'exclude': lambda f: f is None }})
     r"""Valid hash for the image. * will authorize image name without validating hash"""

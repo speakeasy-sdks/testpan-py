@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import seccompprofile as shared_seccompprofile
+from ...models.shared import seccompprofile as shared_seccompprofile
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutSeccompProfilesProfileIDRequest:
     profile_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'profileId', 'style': 'simple', 'explode': False }})
-    seccomp_profile_input: shared_seccompprofile.SeccompProfileInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    seccomp_profile: shared_seccompprofile.SeccompProfileInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 

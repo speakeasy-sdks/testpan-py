@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecurityrisk as shared_apisecurityrisk
+from .apisecurityrisk import APISecurityRisk
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,7 +13,7 @@ from typing import Optional
 class APISecTopRiskyFinding:
     category: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('category') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    risk: shared_apisecurityrisk.APISecurityRisk = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
+    risk: APISecurityRisk = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     
 

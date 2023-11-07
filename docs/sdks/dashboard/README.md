@@ -1,5 +1,5 @@
 # Dashboard
-(*dashboard*)
+(*.dashboard*)
 
 ## Overview
 
@@ -47,7 +47,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.INTERNAL,
+    api_sec_source=operations.QueryParamAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_risk_findings(req)
@@ -87,7 +87,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
+    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_risk_findings_trend(req)
@@ -127,7 +127,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecSpecsAndOperationsDiffsRequest(
-    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.EXTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_specs_and_operations_diffs(req)
@@ -167,7 +167,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.EXTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_apis(req)
@@ -207,7 +207,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_findings(req)
@@ -457,7 +457,7 @@ s = pan.Pan(
 
 res = s.dashboard.get_dashboard_report_download()
 
-if res.get_dashboard_report_download_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```

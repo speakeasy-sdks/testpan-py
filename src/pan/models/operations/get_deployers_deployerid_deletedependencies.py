@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiresponse as shared_apiresponse
-from ..shared import deployerdeletedependencies as shared_deployerdeletedependencies
+from ...models.shared import apiresponse as shared_apiresponse
+from ...models.shared import deployerdeletedependencies as shared_deployerdeletedependencies
 from typing import Optional
 
 

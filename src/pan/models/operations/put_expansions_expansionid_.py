@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import expansion as shared_expansion
-from ..shared import expansionput as shared_expansionput
+from ...models.shared import expansion as shared_expansion
+from ...models.shared import expansionput as shared_expansionput
 from typing import Optional
 
 

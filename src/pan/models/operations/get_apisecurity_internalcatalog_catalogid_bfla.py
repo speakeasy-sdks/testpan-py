@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicebflainfo as shared_apiservicebflainfo
+from ...models.shared import apiservicebflainfo as shared_apiservicebflainfo
 from typing import Optional
 
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import fuzzingscorefindingslist as shared_fuzzingscorefindingslist
+from .fuzzingscorefindingslist import FuzzingScoreFindingsList
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,10 +11,10 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FuzzingScoreFindings:
-    critical: Optional[shared_fuzzingscorefindingslist.FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('critical'), 'exclude': lambda f: f is None }})
-    high: Optional[shared_fuzzingscorefindingslist.FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('high'), 'exclude': lambda f: f is None }})
-    low: Optional[shared_fuzzingscorefindingslist.FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('low'), 'exclude': lambda f: f is None }})
-    medium: Optional[shared_fuzzingscorefindingslist.FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('medium'), 'exclude': lambda f: f is None }})
-    unclassified: Optional[shared_fuzzingscorefindingslist.FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unclassified'), 'exclude': lambda f: f is None }})
+    critical: Optional[FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('critical'), 'exclude': lambda f: f is None }})
+    high: Optional[FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('high'), 'exclude': lambda f: f is None }})
+    low: Optional[FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('low'), 'exclude': lambda f: f is None }})
+    medium: Optional[FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('medium'), 'exclude': lambda f: f is None }})
+    unclassified: Optional[FuzzingScoreFindingsList] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unclassified'), 'exclude': lambda f: f is None }})
     
 

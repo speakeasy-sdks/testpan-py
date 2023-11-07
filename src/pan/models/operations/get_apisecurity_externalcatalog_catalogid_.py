@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicedrilldownexternal as shared_apiservicedrilldownexternal
+from ...models.shared import apiservicedrilldownexternal as shared_apiservicedrilldownexternal
 from typing import List, Optional
 
 

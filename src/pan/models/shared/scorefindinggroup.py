@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import scorefinding as shared_scorefinding
+from .scorefinding import ScoreFinding
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List
@@ -12,6 +12,6 @@ from typing import List
 @dataclasses.dataclass
 class ScoreFindingGroup:
     count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count') }})
-    findings: List[shared_scorefinding.ScoreFinding] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings') }})
+    findings: List[ScoreFinding] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings') }})
     
 

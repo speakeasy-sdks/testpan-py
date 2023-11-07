@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 
-class ConnectionRulePartConnectionRulePartType(str, Enum):
+class ConnectionRulePartType(str, Enum):
     APP_NAME_CONNECTION_RULE_PART = 'AppNameConnectionRulePart'
     APP_TYPE_CONNECTION_RULE_PART = 'AppTypeConnectionRulePart'
     APP_LABEL_CONNECTION_RULE_PART = 'AppLabelConnectionRulePart'
@@ -31,6 +31,6 @@ class ConnectionRulePartConnectionRulePartType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ConnectionRulePart:
-    connection_rule_part_type: ConnectionRulePartConnectionRulePartType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRulePartType') }})
+    connection_rule_part_type: ConnectionRulePartType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRulePartType') }})
     
 

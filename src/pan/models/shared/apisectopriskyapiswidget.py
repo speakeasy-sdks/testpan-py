@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisectopriskyapi as shared_apisectopriskyapi
+from .apisectopriskyapi import APISecTopRiskyAPI
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APISecTopRiskyApisWidget:
-    apis: Optional[List[shared_apisectopriskyapi.APISecTopRiskyAPI]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apis'), 'exclude': lambda f: f is None }})
+    apis: Optional[List[APISecTopRiskyAPI]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apis'), 'exclude': lambda f: f is None }})
     
 

@@ -6,7 +6,7 @@ import requests as requests_http
 from enum import Enum
 from typing import Optional
 
-class PostAdvisorRunPolicyAdvisorType(str, Enum):
+class PolicyAdvisorType(str, Enum):
     r"""policy advisor type"""
     ENVIRONMENT = 'ENVIRONMENT'
     POD_SECURITY_STANDARD = 'POD_SECURITY_STANDARD'
@@ -17,7 +17,7 @@ class PostAdvisorRunPolicyAdvisorType(str, Enum):
 
 @dataclasses.dataclass
 class PostAdvisorRunRequest:
-    policy_advisor_type: PostAdvisorRunPolicyAdvisorType = dataclasses.field(metadata={'query_param': { 'field_name': 'policyAdvisorType', 'style': 'form', 'explode': True }})
+    policy_advisor_type: PolicyAdvisorType = dataclasses.field(metadata={'query_param': { 'field_name': 'policyAdvisorType', 'style': 'form', 'explode': True }})
     r"""policy advisor type"""
     
 

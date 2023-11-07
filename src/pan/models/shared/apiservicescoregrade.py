@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import additionalinfo as shared_additionalinfo
-from ..shared import apiendpointscoregrade as shared_apiendpointscoregrade
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
-from ..shared import apiservice_base as shared_apiservice_base
-from ..shared import categoryscoregrade as shared_categoryscoregrade
-from ..shared import countershistory as shared_countershistory
-from ..shared import riskconfidenceenum as shared_riskconfidenceenum
-from ..shared import risktrendenum as shared_risktrendenum
+from .additionalinfo import AdditionalInfo
+from .apiendpointscoregrade import APIEndpointScoreGrade
+from .apisecurityriskseverity import APISecurityRiskSeverity
+from .apiservice_base import APIServiceBase
+from .categoryscoregrade import CategoryScoreGrade
+from .countershistory import CountersHistory
+from .riskconfidenceenum import RiskConfidenceEnum
+from .risktrendenum import RiskTrendEnum
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -20,20 +20,20 @@ from typing import Dict, List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIServiceScoreGrade:
-    api: shared_apiservice_base.APIServiceBase = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api') }})
-    categories: Dict[str, shared_categoryscoregrade.CategoryScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
-    endpoints: List[shared_apiendpointscoregrade.APIEndpointScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoints') }})
-    risk: shared_apisecurityriskseverity.APISecurityRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
+    api: APIServiceBase = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api') }})
+    categories: Dict[str, CategoryScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    endpoints: List[APIEndpointScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoints') }})
+    risk: APISecurityRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
     r"""An `enum`eration."""
     scorer_version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scorer_version') }})
-    additional_info: Optional[List[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
+    additional_info: Optional[List[AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
     avg_vulnerability_duration: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_vulnerability_duration'), 'exclude': lambda f: f is None }})
-    confidence: Optional[shared_riskconfidenceenum.RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
+    confidence: Optional[RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
-    counters_history: Optional[shared_countershistory.CountersHistory] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counters_history'), 'exclude': lambda f: f is None }})
+    counters_history: Optional[CountersHistory] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counters_history'), 'exclude': lambda f: f is None }})
     last_finding_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_finding_date'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     last_vulnerability_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_vulnerability_date'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    trend: Optional[shared_risktrendenum.RiskTrendEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trend'), 'exclude': lambda f: f is None }})
+    trend: Optional[RiskTrendEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trend'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     
 

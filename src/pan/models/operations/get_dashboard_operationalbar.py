@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import operationalbar as shared_operationalbar
+from ...models.shared import operationalbar as shared_operationalbar
 from typing import List, Optional
 
 

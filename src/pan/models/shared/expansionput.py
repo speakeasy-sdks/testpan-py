@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import label as shared_label
-from ..shared import workloadaddress as shared_workloadaddress
+from .label import Label
+from .workloadaddress import WorkloadAddress
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -14,7 +14,7 @@ from typing import List, Optional
 class ExpansionPut:
     r"""represent expansion object used in put method"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    workload_addresses: List[shared_workloadaddress.WorkloadAddress] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadAddresses') }})
-    labels: Optional[List[shared_label.Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
+    workload_addresses: List[WorkloadAddress] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadAddresses') }})
+    labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     
 

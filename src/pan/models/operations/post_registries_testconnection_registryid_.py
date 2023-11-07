@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import registry as shared_registry
+from ...models.shared import registry as shared_registry
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PostRegistriesTestConnectionRegistryIDRequest:
+    registry: shared_registry.RegistryInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     registry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registryId', 'style': 'simple', 'explode': False }})
-    registry_input: shared_registry.RegistryInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 

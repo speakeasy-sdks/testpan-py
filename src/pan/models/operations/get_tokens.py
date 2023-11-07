@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import token as shared_token
+from ...models.shared import token as shared_token
 from enum import Enum
 from typing import List, Optional
 
-class GetTokensSortDir(str, Enum):
+class GetTokensQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetTokensSortKey(str, Enum):
+class GetTokensQueryParamSortKey(str, Enum):
     r"""the token sort key"""
     EXPIRATION_DATE = 'expirationDate'
 
@@ -25,9 +25,9 @@ class GetTokensRequest:
     r"""When true, the pagination params will be ignored"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetTokensSortDir] = dataclasses.field(default=GetTokensSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetTokensQueryParamSortDir] = dataclasses.field(default=GetTokensQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetTokensSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetTokensQueryParamSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""the token sort key"""
     token_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'tokenName', 'style': 'form', 'explode': True }})
     r"""Defined token name"""
@@ -41,9 +41,9 @@ class GetTokensResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_token.Token]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    tokens: Optional[List[shared_token.Token]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

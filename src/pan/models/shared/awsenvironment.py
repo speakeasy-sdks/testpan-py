@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import tag as shared_tag
-from ..shared import vpcdescription as shared_vpcdescription
+from .tag import Tag
+from .vpcdescription import VPCDescription, VPCDescriptionInput
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,10 +12,10 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AwsEnvironmentInput:
-    vpc: shared_vpcdescription.VPCDescriptionInput = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vpc') }})
+    vpc: VPCDescriptionInput = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vpc') }})
     r"""Like VPC but also includes the name"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    tags: Optional[List[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
+    tags: Optional[List[Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     
 
 
@@ -23,9 +23,9 @@ class AwsEnvironmentInput:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AwsEnvironment:
-    vpc: shared_vpcdescription.VPCDescription = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vpc') }})
+    vpc: VPCDescription = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vpc') }})
     r"""Like VPC but also includes the name"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    tags: Optional[List[shared_tag.Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
+    tags: Optional[List[Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
     
 

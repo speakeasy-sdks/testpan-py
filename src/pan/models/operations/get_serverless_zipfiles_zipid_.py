@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serverlesszip as shared_serverlesszip
+from ...models.shared import serverlesszip as shared_serverlesszip
 from typing import Optional
 
 

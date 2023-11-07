@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import app as shared_app
+from ...models.shared import app as shared_app
 from enum import Enum
 from typing import List, Optional
 
-class GetAppsSortDir(str, Enum):
+class GetAppsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetAppsSortKey(str, Enum):
+class GetAppsQueryParamSortKey(str, Enum):
     r"""App sort key"""
     NAME = 'name'
     TYPE = 'type'
@@ -26,9 +26,9 @@ class GetAppsRequest:
     r"""Filter Apps by name"""
     no_pagination: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'noPagination', 'style': 'form', 'explode': True }})
     r"""When true, the pagination params will be ignored"""
-    sort_dir: Optional[GetAppsSortDir] = dataclasses.field(default=GetAppsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAppsQueryParamSortDir] = dataclasses.field(default=GetAppsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAppsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAppsQueryParamSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""App sort key"""
     type: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': False }})
     r"""Filter Apps by type"""
@@ -42,7 +42,7 @@ class GetAppsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    apps: Optional[List[shared_app.App]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_app.App]] = dataclasses.field(default=None)
     r"""Created"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

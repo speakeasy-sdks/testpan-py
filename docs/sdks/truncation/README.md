@@ -1,5 +1,5 @@
 # Truncation
-(*truncation*)
+(*.truncation*)
 
 ## Overview
 

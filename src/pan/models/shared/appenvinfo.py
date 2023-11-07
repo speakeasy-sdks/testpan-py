@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import appprocessinfo as shared_appprocessinfo
-from ..shared import appruntimeinfo as shared_appruntimeinfo
-from ..shared import expansiontelemetryinfo as shared_expansiontelemetryinfo
-from ..shared import podruntimeinfo as shared_podruntimeinfo
-from ..shared import podtelemetryinfo as shared_podtelemetryinfo
-from ..shared import workloadtype as shared_workloadtype
+from .appprocessinfo import AppProcessInfo
+from .appruntimeinfo import AppRuntimeInfo
+from .expansiontelemetryinfo import ExpansionTelemetryInfo
+from .podruntimeinfo import PodRuntimeInfo
+from .podtelemetryinfo import PodTelemetryInfo
+from .workloadtype import WorkloadType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -23,7 +23,7 @@ class AppEnvInfoEnvironment:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AppEnvInfoInstance:
+class Instance:
     agent_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agentId'), 'exclude': lambda f: f is None }})
     cloud_account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudAccountId'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
@@ -40,18 +40,18 @@ class AppEnvInfoInstance:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AppEnvInfo:
-    app: Optional[shared_appprocessinfo.AppProcessInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
+    app: Optional[AppProcessInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
     r"""app info and process info for connection and App telemetries"""
-    app_runtime_info: Optional[shared_appruntimeinfo.AppRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRuntimeInfo'), 'exclude': lambda f: f is None }})
+    app_runtime_info: Optional[AppRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('appRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the App (if it is an App)"""
     environment: Optional[AppEnvInfoEnvironment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environment'), 'exclude': lambda f: f is None }})
-    expansion: Optional[shared_expansiontelemetryinfo.ExpansionTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
+    expansion: Optional[ExpansionTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expansion'), 'exclude': lambda f: f is None }})
     fqdn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fqdn'), 'exclude': lambda f: f is None }})
-    instance: Optional[AppEnvInfoInstance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instance'), 'exclude': lambda f: f is None }})
+    instance: Optional[Instance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('instance'), 'exclude': lambda f: f is None }})
     ip: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ip'), 'exclude': lambda f: f is None }})
-    pod: Optional[shared_podtelemetryinfo.PodTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
-    pod_runtime_info: Optional[shared_podruntimeinfo.PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
+    pod: Optional[PodTelemetryInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pod'), 'exclude': lambda f: f is None }})
+    pod_runtime_info: Optional[PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the pod (if is a pod)"""
-    workload_type: Optional[shared_workloadtype.WorkloadType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadType'), 'exclude': lambda f: f is None }})
+    workload_type: Optional[WorkloadType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workloadType'), 'exclude': lambda f: f is None }})
     
 

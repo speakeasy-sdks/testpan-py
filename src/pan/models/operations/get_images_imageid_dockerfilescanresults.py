@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import dockerfilescanresult as shared_dockerfilescanresult
+from ...models.shared import dockerfilescanresult as shared_dockerfilescanresult
 from enum import Enum
 from typing import List, Optional
 
-class GetImagesImageIDDockerfileScanResultsSortDir(str, Enum):
+class GetImagesImageIDDockerfileScanResultsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -22,7 +22,7 @@ class GetImagesImageIDDockerfileScanResultsRequest:
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetImagesImageIDDockerfileScanResultsSortDir] = dataclasses.field(default=GetImagesImageIDDockerfileScanResultsSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesImageIDDockerfileScanResultsQueryParamSortDir] = dataclasses.field(default=GetImagesImageIDDockerfileScanResultsQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -34,7 +34,7 @@ class GetImagesImageIDDockerfileScanResultsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    dockerfile_scan_results: Optional[List[shared_dockerfilescanresult.DockerfileScanResult]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_dockerfilescanresult.DockerfileScanResult]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

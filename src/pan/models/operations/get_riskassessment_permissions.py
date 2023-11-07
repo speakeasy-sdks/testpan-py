@@ -3,23 +3,23 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clusterpermission as shared_clusterpermission
+from ...models.shared import clusterpermission as shared_clusterpermission
 from enum import Enum
 from typing import List, Optional
 
-class GetRiskAssessmentPermissionsPermissionRisk(str, Enum):
+class QueryParamPermissionRisk(str, Enum):
     r"""the risk to filter by"""
     NO_RISK = 'NO_RISK'
     MEDIUM = 'MEDIUM'
     HIGH = 'HIGH'
     APPROVED = 'APPROVED'
 
-class GetRiskAssessmentPermissionsSortDir(str, Enum):
+class GetRiskAssessmentPermissionsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentPermissionsSortKey(str, Enum):
+class GetRiskAssessmentPermissionsQueryParamSortKey(str, Enum):
     r"""sort key"""
     PERMISSION_RISK = 'permissionRisk'
 
@@ -30,11 +30,11 @@ class GetRiskAssessmentPermissionsRequest:
     r"""the clusters ids to filter by"""
     include_system_owners: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'includeSystemOwners', 'style': 'form', 'explode': True }})
     r"""include systems default owners"""
-    permission_risk: Optional[GetRiskAssessmentPermissionsPermissionRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'permissionRisk', 'style': 'form', 'explode': True }})
+    permission_risk: Optional[QueryParamPermissionRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'permissionRisk', 'style': 'form', 'explode': True }})
     r"""the risk to filter by"""
-    sort_dir: Optional[GetRiskAssessmentPermissionsSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentPermissionsQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRiskAssessmentPermissionsSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsSortKey.PERMISSION_RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetRiskAssessmentPermissionsQueryParamSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsQueryParamSortKey.PERMISSION_RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 
@@ -46,7 +46,7 @@ class GetRiskAssessmentPermissionsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cluster_permissions: Optional[List[shared_clusterpermission.ClusterPermission]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_clusterpermission.ClusterPermission]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

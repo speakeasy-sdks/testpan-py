@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apiserviceinternal as shared_apiserviceinternal
+from .apiserviceinternal import APIServiceInternal
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List
@@ -11,6 +11,6 @@ from typing import List
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIServiceListInternal:
-    items: List[shared_apiserviceinternal.APIServiceInternal] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items') }})
+    items: List[APIServiceInternal] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('items') }})
     
 

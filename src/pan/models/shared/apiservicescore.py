@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import apiproviderscoregrade as shared_apiproviderscoregrade
-from ..shared import apiservicescoregrade as shared_apiservicescoregrade
-from ..shared import scoreexitstatusenum as shared_scoreexitstatusenum
+from .apiproviderscoregrade import APIProviderScoreGrade
+from .apiservicescoregrade import APIServiceScoreGrade
+from .scoreexitstatusenum import ScoreExitStatusEnum
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -14,10 +14,10 @@ from pan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIServiceScore:
-    api: shared_apiservicescoregrade.APIServiceScoreGrade = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api') }})
+    api: APIServiceScoreGrade = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api') }})
     identifier: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('identifier') }})
-    provider: shared_apiproviderscoregrade.APIProviderScoreGrade = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
-    status: shared_scoreexitstatusenum.ScoreExitStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    provider: APIProviderScoreGrade = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
+    status: ScoreExitStatusEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""An enumeration."""
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     

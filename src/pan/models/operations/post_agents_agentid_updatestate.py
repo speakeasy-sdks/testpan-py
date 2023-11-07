@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import agentstatusupdate as shared_agentstatusupdate
-from ..shared import apiresponse as shared_apiresponse
+from ...models.shared import agentstatusupdate as shared_agentstatusupdate
+from ...models.shared import apiresponse as shared_apiresponse
 from typing import Optional
 
 

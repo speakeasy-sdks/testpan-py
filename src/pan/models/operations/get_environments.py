@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import environment as shared_environment
+from ...models.shared import environment as shared_environment
 from enum import Enum
 from typing import List, Optional
 
-class GetEnvironmentsSortDir(str, Enum):
+class GetEnvironmentsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetEnvironmentsSortKey(str, Enum):
+class GetEnvironmentsQueryParamSortKey(str, Enum):
     r"""Environment sort key"""
     NAME = 'name'
 
@@ -25,9 +25,9 @@ class GetEnvironmentsRequest:
     r"""include systems environments"""
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""Filter environments by name"""
-    sort_dir: Optional[GetEnvironmentsSortDir] = dataclasses.field(default=GetEnvironmentsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetEnvironmentsQueryParamSortDir] = dataclasses.field(default=GetEnvironmentsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetEnvironmentsSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetEnvironmentsQueryParamSortKey] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""Environment sort key"""
     
 
@@ -39,7 +39,7 @@ class GetEnvironmentsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    environments: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

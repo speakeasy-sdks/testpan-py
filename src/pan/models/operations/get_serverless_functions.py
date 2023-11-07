@@ -3,32 +3,32 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serverlessfunction as shared_serverlessfunction
+from ...models.shared import serverlessfunction as shared_serverlessfunction
 from enum import Enum
 from typing import List, Optional
 
-class GetServerlessFunctionsPolicyRisk(str, Enum):
+class PolicyRisk(str, Enum):
     LOW = 'LOW'
     MEDIUM = 'MEDIUM'
     HIGH = 'HIGH'
     CRITICAL = 'CRITICAL'
 
-class GetServerlessFunctionsResult(str, Enum):
+class QueryParamResult(str, Enum):
     ALLOW = 'ALLOW'
     DETECT = 'DETECT'
     BLOCK = 'BLOCK'
 
-class GetServerlessFunctionsRisk(str, Enum):
+class QueryParamRisk(str, Enum):
     LOW = 'LOW'
     MEDIUM = 'MEDIUM'
     HIGH = 'HIGH'
     CRITICAL = 'CRITICAL'
 
-class GetServerlessFunctionsSecretsRisk(str, Enum):
+class SecretsRisk(str, Enum):
     NO_KNOWN_RISK = 'NO_KNOWN_RISK'
     RISK_IDENTIFIED = 'RISK_IDENTIFIED'
 
-class GetServerlessFunctionsSortDir(str, Enum):
+class GetServerlessFunctionsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -47,17 +47,17 @@ class GetServerlessFunctionsRequest:
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    policy_risk: Optional[List[GetServerlessFunctionsPolicyRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'policyRisk', 'style': 'form', 'explode': False }})
+    policy_risk: Optional[List[PolicyRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'policyRisk', 'style': 'form', 'explode': False }})
     r"""The risk of the serverless functioriskFindingsn policy"""
     region: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'region', 'style': 'form', 'explode': True }})
     r"""Filter cloud accounts by region"""
-    result: Optional[List[GetServerlessFunctionsResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
+    result: Optional[List[QueryParamResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""serverless function result filter"""
-    risk: Optional[List[GetServerlessFunctionsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risk', 'style': 'form', 'explode': False }})
+    risk: Optional[List[QueryParamRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'risk', 'style': 'form', 'explode': False }})
     r"""The risk of the serverless function"""
-    secrets_risk: Optional[List[GetServerlessFunctionsSecretsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'secretsRisk', 'style': 'form', 'explode': False }})
+    secrets_risk: Optional[List[SecretsRisk]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'secretsRisk', 'style': 'form', 'explode': False }})
     r"""The risk of the serverless function secrets"""
-    sort_dir: Optional[GetServerlessFunctionsSortDir] = dataclasses.field(default=GetServerlessFunctionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetServerlessFunctionsQueryParamSortDir] = dataclasses.field(default=GetServerlessFunctionsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -69,9 +69,9 @@ class GetServerlessFunctionsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_serverlessfunction.ServerlessFunction]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    serverless_functions: Optional[List[shared_serverlessfunction.ServerlessFunction]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import truncationstatus as shared_truncationstatus
+from ...models.shared import truncationstatus as shared_truncationstatus
 from typing import Optional
 
 

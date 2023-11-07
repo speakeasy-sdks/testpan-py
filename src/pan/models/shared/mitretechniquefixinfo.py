@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import mitretechniqueaffectedelement as shared_mitretechniqueaffectedelement
+from .mitretechniqueaffectedelement import MitreTechniqueAffectedElement
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MitreTechniqueFixInfo:
-    affected_elements: Optional[List[shared_mitretechniqueaffectedelement.MitreTechniqueAffectedElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affectedElements'), 'exclude': lambda f: f is None }})
+    affected_elements: Optional[List[MitreTechniqueAffectedElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('affectedElements'), 'exclude': lambda f: f is None }})
     
 

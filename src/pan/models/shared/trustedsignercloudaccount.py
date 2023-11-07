@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import trustedsignerclusterstatus as shared_trustedsignerclusterstatus
-from ..shared import trustedsignerclustervalidation as shared_trustedsignerclustervalidation
+from .trustedsignerclusterstatus import TrustedSignerClusterStatus
+from .trustedsignerclustervalidation import TrustedSignerClusterValidation
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,8 +13,8 @@ from typing import Optional
 @dataclasses.dataclass
 class TrustedSignerCloudAccountInput:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_trustedsignerclusterstatus.TrustedSignerClusterStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    validation: Optional[shared_trustedsignerclustervalidation.TrustedSignerClusterValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validation'), 'exclude': lambda f: f is None }})
+    status: Optional[TrustedSignerClusterStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    validation: Optional[TrustedSignerClusterValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validation'), 'exclude': lambda f: f is None }})
     
 
 
@@ -24,7 +24,7 @@ class TrustedSignerCloudAccountInput:
 class TrustedSignerCloudAccount:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_trustedsignerclusterstatus.TrustedSignerClusterStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    validation: Optional[shared_trustedsignerclustervalidation.TrustedSignerClusterValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validation'), 'exclude': lambda f: f is None }})
+    status: Optional[TrustedSignerClusterStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    validation: Optional[TrustedSignerClusterValidation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('validation'), 'exclude': lambda f: f is None }})
     
 

@@ -19,9 +19,9 @@ class PostAPISecurityInternalCatalogCatalogIDBflaResetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    post_api_security_internal_catalog_catalog_id_bfla_reset_201_application_json_uuid_string: Optional[str] = dataclasses.field(default=None)
-    r"""Created"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    res: Optional[str] = dataclasses.field(default=None)
+    r"""Created"""
     
 

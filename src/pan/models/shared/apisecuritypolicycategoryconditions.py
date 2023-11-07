@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecuritypolicycategorycondition as shared_apisecuritypolicycategorycondition
+from .apisecuritypolicycategorycondition import APISecurityPolicyCategoryCondition
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List
@@ -11,6 +11,6 @@ from typing import List
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APISecurityPolicyCategoryConditions:
-    conditions: List[shared_apisecuritypolicycategorycondition.APISecurityPolicyCategoryCondition] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('conditions') }})
+    conditions: List[APISecurityPolicyCategoryCondition] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('conditions') }})
     
 

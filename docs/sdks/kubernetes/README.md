@@ -1,5 +1,5 @@
 # Kubernetes
-(*kubernetes*)
+(*.kubernetes*)
 
 ## Overview
 
@@ -167,7 +167,7 @@ s = pan.Pan(
 
 res = s.kubernetes.get_istio_supported_versions()
 
-if res.get_istio_supported_versions_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -199,7 +199,7 @@ req = operations.GetKubernetesClustersRequest()
 
 res = s.kubernetes.get_kubernetes_clusters(req)
 
-if res.kubernetes_cluster_controllers is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -319,7 +319,7 @@ req = operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest(
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_download_bundle(req)
 
-if res.get_kubernetes_clusters_kubernetes_cluster_id_download_bundle_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```
@@ -399,7 +399,7 @@ req = operations.GetKubernetesClustersKubernetesClusterIDNamespacesRequest(
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_namespaces(req)
 
-if res.kubernetes_namespace_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -439,7 +439,7 @@ req = operations.GetKubernetesClustersKubernetesClusterIDServicesRequest(
 
 res = s.kubernetes.get_kubernetes_clusters_kubernetes_cluster_id_services(req)
 
-if res.kubernetes_services is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -477,7 +477,7 @@ req = operations.GetLeanKubernetesClustersRequest()
 
 res = s.kubernetes.get_lean_kubernetes_clusters(req)
 
-if res.lean_kubernetes_clusters is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -515,7 +515,7 @@ req = operations.GetNamespacesRequest()
 
 res = s.kubernetes.get_namespaces(req)
 
-if res.namespaces is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -560,7 +560,7 @@ req = operations.GetPodDefinitionsRequest(
 
 res = s.kubernetes.get_pod_definitions(req)
 
-if res.pod_definitions is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -810,7 +810,7 @@ s = pan.Pan(
 )
 
 req = operations.PutPodDefinitionsPodIDRequest(
-    pod_definition_input=shared.PodDefinitionInput(
+    pod_definition=shared.PodDefinitionInput(
         cluster_id='8813d860-716a-4bd1-be6a-f36d0732a688',
         containers=[
             shared.Container(

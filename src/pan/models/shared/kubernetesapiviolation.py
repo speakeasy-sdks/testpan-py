@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import kubernetesapiruleaction as shared_kubernetesapiruleaction
-from ..shared import kubernetesapiviolationuserrule as shared_kubernetesapiviolationuserrule
-from ..shared import matchedrecommendedrule as shared_matchedrecommendedrule
+from .kubernetesapiruleaction import KubernetesAPIRuleAction
+from .kubernetesapiviolationuserrule import KubernetesAPIViolationUserRule
+from .matchedrecommendedrule import MatchedRecommendedRule
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -13,10 +13,10 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class KubernetesAPIViolation:
-    action: Optional[shared_kubernetesapiruleaction.KubernetesAPIRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[KubernetesAPIRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     is_default_rule: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isDefaultRule'), 'exclude': lambda f: f is None }})
-    matched_recommended_rule: Optional[shared_matchedrecommendedrule.MatchedRecommendedRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('matchedRecommendedRule'), 'exclude': lambda f: f is None }})
+    matched_recommended_rule: Optional[MatchedRecommendedRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('matchedRecommendedRule'), 'exclude': lambda f: f is None }})
     r"""recommended rule that might reduce potential risk"""
-    user_rule: Optional[shared_kubernetesapiviolationuserrule.KubernetesAPIViolationUserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRule'), 'exclude': lambda f: f is None }})
+    user_rule: Optional[KubernetesAPIViolationUserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRule'), 'exclude': lambda f: f is None }})
     
 

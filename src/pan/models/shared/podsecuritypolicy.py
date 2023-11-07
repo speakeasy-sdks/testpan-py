@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import allowedhostpath as shared_allowedhostpath
-from ..shared import allowedprocmounttype as shared_allowedprocmounttype
-from ..shared import hostportrange as shared_hostportrange
-from ..shared import pspvolumetypes as shared_pspvolumetypes
-from ..shared import runasgroupstrategyoptions as shared_runasgroupstrategyoptions
-from ..shared import runasuserstrategyoptions as shared_runasuserstrategyoptions
+from .allowedhostpath import AllowedHostPath
+from .allowedprocmounttype import AllowedProcMountType
+from .hostportrange import HostPortRange
+from .pspvolumetypes import PSPVolumeTypes
+from .runasgroupstrategyoptions import RunAsGroupStrategyOptions
+from .runasuserstrategyoptions import RunAsUserStrategyOptions
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -16,13 +16,13 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PodSecurityPolicy:
-    fs_group: shared_runasgroupstrategyoptions.RunAsGroupStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fsGroup') }})
+    fs_group: RunAsGroupStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fsGroup') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    run_as_user: shared_runasuserstrategyoptions.RunAsUserStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runAsUser') }})
-    supplemental_groups: shared_runasgroupstrategyoptions.RunAsGroupStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supplementalGroups') }})
+    run_as_user: RunAsUserStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runAsUser') }})
+    supplemental_groups: RunAsGroupStrategyOptions = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('supplementalGroups') }})
     allowed_capabilities: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedCapabilities'), 'exclude': lambda f: f is None }})
-    allowed_host_paths: Optional[List[shared_allowedhostpath.AllowedHostPath]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedHostPaths'), 'exclude': lambda f: f is None }})
-    allowed_proc_mount_types: Optional[List[shared_allowedprocmounttype.AllowedProcMountType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedProcMountTypes'), 'exclude': lambda f: f is None }})
+    allowed_host_paths: Optional[List[AllowedHostPath]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedHostPaths'), 'exclude': lambda f: f is None }})
+    allowed_proc_mount_types: Optional[List[AllowedProcMountType]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedProcMountTypes'), 'exclude': lambda f: f is None }})
     allowed_unsafe_sysctls: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedUnsafeSysctls'), 'exclude': lambda f: f is None }})
     allow_privilege_escalation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowPrivilegeEscalation'), 'exclude': lambda f: f is None }})
     default_allow_privilege_escalation: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultAllowPrivilegeEscalation'), 'exclude': lambda f: f is None }})
@@ -31,14 +31,14 @@ class PodSecurityPolicy:
     host_ipc: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostIPC'), 'exclude': lambda f: f is None }})
     host_network: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostNetwork'), 'exclude': lambda f: f is None }})
     host_pid: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostPID'), 'exclude': lambda f: f is None }})
-    host_ports: Optional[List[shared_hostportrange.HostPortRange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostPorts'), 'exclude': lambda f: f is None }})
+    host_ports: Optional[List[HostPortRange]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hostPorts'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_securecn_default_profile: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSecurecnDefaultProfile'), 'exclude': lambda f: f is None }})
     privileged: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('privileged'), 'exclude': lambda f: f is None }})
     read_only_root_file_system: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('readOnlyRootFileSystem'), 'exclude': lambda f: f is None }})
     required_drop_capabilities: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requiredDropCapabilities'), 'exclude': lambda f: f is None }})
-    run_as_group: Optional[shared_runasgroupstrategyoptions.RunAsGroupStrategyOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runAsGroup'), 'exclude': lambda f: f is None }})
+    run_as_group: Optional[RunAsGroupStrategyOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runAsGroup'), 'exclude': lambda f: f is None }})
     seccomp_profile: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('seccompProfile'), 'exclude': lambda f: f is None }})
-    volumes: Optional[List[shared_pspvolumetypes.PSPVolumeTypes]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('volumes'), 'exclude': lambda f: f is None }})
+    volumes: Optional[List[PSPVolumeTypes]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('volumes'), 'exclude': lambda f: f is None }})
     
 

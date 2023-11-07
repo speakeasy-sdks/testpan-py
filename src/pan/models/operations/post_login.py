@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import challengerequest as shared_challengerequest
-from ..shared import userlogininfo as shared_userlogininfo
+from ...models.shared import challengerequest as shared_challengerequest
+from ...models.shared import userlogininfo as shared_userlogininfo
 from typing import Optional
 
 

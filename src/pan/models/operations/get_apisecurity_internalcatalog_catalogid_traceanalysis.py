@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import traceanalysisdetails as shared_traceanalysisdetails
+from ...models.shared import traceanalysisdetails as shared_traceanalysisdetails
 from typing import Optional
 
 

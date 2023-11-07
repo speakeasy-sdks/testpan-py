@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import usageandpricingperiod as shared_usageandpricingperiod
+from .usageandpricingperiod import UsageAndPricingPeriod
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class UsageAndPricingSection:
-    periods: Optional[List[shared_usageandpricingperiod.UsageAndPricingPeriod]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('periods'), 'exclude': lambda f: f is None }})
+    periods: Optional[List[UsageAndPricingPeriod]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('periods'), 'exclude': lambda f: f is None }})
     
 

@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import environmentrulerecommendation as shared_environmentrulerecommendation
-from ..shared import recommendationtimeperiod as shared_recommendationtimeperiod
+from .environmentrulerecommendation import EnvironmentRuleRecommendation
+from .recommendationtimeperiod import RecommendationTimePeriod
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,8 +12,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EnvironmentRulesRecommendationPeriod:
-    environment_rules_recommendations: Optional[List[shared_environmentrulerecommendation.EnvironmentRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environmentRulesRecommendations'), 'exclude': lambda f: f is None }})
-    time_period: Optional[shared_recommendationtimeperiod.RecommendationTimePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
+    environment_rules_recommendations: Optional[List[EnvironmentRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environmentRulesRecommendations'), 'exclude': lambda f: f is None }})
+    time_period: Optional[RecommendationTimePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
     total_workloads: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalWorkloads'), 'exclude': lambda f: f is None }})
     
 

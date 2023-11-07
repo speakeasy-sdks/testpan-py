@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import riskassessmentvulnerability as shared_riskassessmentvulnerability
+from ...models.shared import riskassessmentvulnerability as shared_riskassessmentvulnerability
 from enum import Enum
 from typing import List, Optional
 
-class GetRiskAssessmentImageIDVulnerabilitiesSortDir(str, Enum):
+class GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentImageIDVulnerabilitiesSortKey(str, Enum):
+class GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey(str, Enum):
     r"""risk assessment image sort key."""
     SEVERITY = 'SEVERITY'
 
@@ -21,13 +21,13 @@ class GetRiskAssessmentImageIDVulnerabilitiesSortKey(str, Enum):
 class GetRiskAssessmentImageIDVulnerabilitiesRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     r"""The id of the risk assessment image"""
-    sort_key: GetRiskAssessmentImageIDVulnerabilitiesSortKey = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey.SEVERITY, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""risk assessment image sort key."""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetRiskAssessmentImageIDVulnerabilitiesSortDir] = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -39,9 +39,9 @@ class GetRiskAssessmentImageIDVulnerabilitiesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_riskassessmentvulnerability.RiskAssessmentVulnerability]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    risk_assessment_vulnerabilities: Optional[List[shared_riskassessmentvulnerability.RiskAssessmentVulnerability]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

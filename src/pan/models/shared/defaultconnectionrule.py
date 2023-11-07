@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import connectionruleaction as shared_connectionruleaction
+from .connectionruleaction import ConnectionRuleAction
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 from typing import Optional
 
-class DefaultConnectionRuleType(str, Enum):
+class Type(str, Enum):
     ALLOW_ALL = 'ALLOW_ALL'
     ENVIRONMENT_ONLY = 'ENVIRONMENT_ONLY'
     DENY_ALL = 'DENY_ALL'
@@ -17,8 +17,8 @@ class DefaultConnectionRuleType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DefaultConnectionRule:
-    action: Optional[shared_connectionruleaction.ConnectionRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[ConnectionRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     r"""ENCRYPT is not allowed in default rule"""
-    type: Optional[DefaultConnectionRuleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    type: Optional[Type] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

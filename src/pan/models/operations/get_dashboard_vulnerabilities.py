@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import vulnerabilitieswidget as shared_vulnerabilitieswidget
+from ...models.shared import vulnerabilitieswidget as shared_vulnerabilitieswidget
 from typing import List, Optional
 
 

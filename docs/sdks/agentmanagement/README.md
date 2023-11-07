@@ -1,5 +1,5 @@
 # AgentManagement
-(*agent_management*)
+(*.agent_management*)
 
 ## Overview
 
@@ -36,10 +36,10 @@ req = operations.GetAgentsRequest(
         'string',
     ],
     risk=[
-        operations.GetAgentsRisk.MEDIUM,
+        operations.Risk.MEDIUM,
     ],
     status=[
-        operations.GetAgentsStatus.ACTIVE,
+        operations.Status.ACTIVE,
     ],
 )
 

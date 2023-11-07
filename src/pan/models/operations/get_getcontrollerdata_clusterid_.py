@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiresponse as shared_apiresponse
-from ..shared import controllerdataresponse as shared_controllerdataresponse
+from ...models.shared import apiresponse as shared_apiresponse
+from ...models.shared import controllerdataresponse as shared_controllerdataresponse
 from typing import Optional
 
 

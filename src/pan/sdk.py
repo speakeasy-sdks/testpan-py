@@ -46,12 +46,10 @@ from typing import Dict
 
 class Pan:
     r"""https://panoptica.readme.io/reference - Product Documentation"""
-    api_security_policies: APISecurityPolicies
-    r"""APIs used to  define and manage api security policies"""
-    cd: Cd
-    r"""APIs used to query for CD pipelines results"""
-    ci_cd_policies: CICDPolicies
-    r"""APIs used to  define and manage CI/CD policies"""
+    users: Users
+    r"""APIs used for login and password management"""
+    images_and_vulnerabilities: ImagesAndVulnerabilities
+    r"""APIs used to define and manage  image hashes"""
     advisor: Advisor
     r"""APIs used to get policy recommendations"""
     agent_management: AgentManagement
@@ -60,59 +58,61 @@ class Pan:
     r"""APIs to get the Secure Application API specification file"""
     api_security: APISecurity
     r"""APIs used to manage Api Security"""
+    performance: Performance
+    bfla: Bfla
+    api_security_policies: APISecurityPolicies
+    r"""APIs used to  define and manage api security policies"""
+    telemetries: Telemetries
+    r"""APIs used to query for telemetries"""
     apps: Apps
     r"""APIs used to define apps"""
+    environment_policies: EnvironmentPolicies
+    r"""APIs used to  define and manage environment policies"""
     audit_logs: AuditLogs
     r"""APIs used to retrieve  audit logs"""
     aws: Aws
     r"""APIs used to change  credentials or return details about the  user's AWS environment"""
-    bfla: Bfla
-    cli: Cli
-    r"""APIs to get the Secure Application CLI"""
-    cluster_events_policies: ClusterEventsPolicies
-    r"""APIs used to  define and manage cluster events policies"""
+    cd: Cd
+    r"""APIs used to query for CD pipelines results"""
+    ci_cd_policies: CICDPolicies
+    r"""APIs used to  define and manage CI/CD policies"""
+    serverless: Serverless
     connection_policies: ConnectionPolicies
     r"""APIs used to  define and manage connection policies"""
     dashboard: Dashboard
     r"""APIs to get dashboard statistics"""
     deployers: Deployers
     r"""APIs used to manage deployers on Secure Application"""
-    environment_policies: EnvironmentPolicies
-    r"""APIs used to  define and manage environment policies"""
     envs: Envs
     r"""APIs used to define environments"""
     expansions: Expansions
     r"""APIs used to manage expansions on Secure Application"""
     gateways: Gateways
-    images_and_vulnerabilities: ImagesAndVulnerabilities
-    r"""APIs used to define and manage  image hashes"""
-    k8s_cis_benchmark: K8sCisBenchmark
-    r"""APIs to get the kubernetes cis benchmark data"""
     kubernetes: Kubernetes
     r"""APIs used to manage Kubernetes clusters on Secure Application"""
+    k8s_cis_benchmark: K8sCisBenchmark
+    r"""APIs to get the kubernetes cis benchmark data"""
+    cluster_events_policies: ClusterEventsPolicies
+    r"""APIs used to  define and manage cluster events policies"""
     mitre: Mitre
-    performance: Performance
+    runtime_map: RuntimeMap
+    r"""APIs used to  query for network map"""
     psp_profiles: PspProfiles
     r"""APIs used to manage pod security standards profiles on Secure Application"""
     registries: Registries
     r"""APIs used to  define and manage registries"""
     risk_assessment: RiskAssessment
     r"""APIs used to manage risk assessment on Kubernetes clusters"""
-    runtime_map: RuntimeMap
-    r"""APIs used to  query for network map"""
-    serverless: Serverless
-    serverless_policies: ServerlessPolicies
     settings: Settings
     r"""APIs used  to configure system settings"""
-    telemetries: Telemetries
-    r"""APIs used to query for telemetries"""
+    serverless_policies: ServerlessPolicies
     tokens: Tokens
+    cli: Cli
+    r"""APIs to get the Secure Application CLI"""
     truncation: Truncation
     r"""APIs to delete workloads"""
     trusted_signers: TrustedSigners
     r"""APIs used to  define and manage trusted signers"""
-    users: Users
-    r"""APIs used for login and password management"""
     vulnerabilities: Vulnerabilities
 
     sdk_configuration: SDKConfiguration
@@ -156,42 +156,42 @@ class Pan:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.api_security_policies = APISecurityPolicies(self.sdk_configuration)
-        self.cd = Cd(self.sdk_configuration)
-        self.ci_cd_policies = CICDPolicies(self.sdk_configuration)
+        self.users = Users(self.sdk_configuration)
+        self.images_and_vulnerabilities = ImagesAndVulnerabilities(self.sdk_configuration)
         self.advisor = Advisor(self.sdk_configuration)
         self.agent_management = AgentManagement(self.sdk_configuration)
         self.api = API(self.sdk_configuration)
         self.api_security = APISecurity(self.sdk_configuration)
+        self.performance = Performance(self.sdk_configuration)
+        self.bfla = Bfla(self.sdk_configuration)
+        self.api_security_policies = APISecurityPolicies(self.sdk_configuration)
+        self.telemetries = Telemetries(self.sdk_configuration)
         self.apps = Apps(self.sdk_configuration)
+        self.environment_policies = EnvironmentPolicies(self.sdk_configuration)
         self.audit_logs = AuditLogs(self.sdk_configuration)
         self.aws = Aws(self.sdk_configuration)
-        self.bfla = Bfla(self.sdk_configuration)
-        self.cli = Cli(self.sdk_configuration)
-        self.cluster_events_policies = ClusterEventsPolicies(self.sdk_configuration)
+        self.cd = Cd(self.sdk_configuration)
+        self.ci_cd_policies = CICDPolicies(self.sdk_configuration)
+        self.serverless = Serverless(self.sdk_configuration)
         self.connection_policies = ConnectionPolicies(self.sdk_configuration)
         self.dashboard = Dashboard(self.sdk_configuration)
         self.deployers = Deployers(self.sdk_configuration)
-        self.environment_policies = EnvironmentPolicies(self.sdk_configuration)
         self.envs = Envs(self.sdk_configuration)
         self.expansions = Expansions(self.sdk_configuration)
         self.gateways = Gateways(self.sdk_configuration)
-        self.images_and_vulnerabilities = ImagesAndVulnerabilities(self.sdk_configuration)
-        self.k8s_cis_benchmark = K8sCisBenchmark(self.sdk_configuration)
         self.kubernetes = Kubernetes(self.sdk_configuration)
+        self.k8s_cis_benchmark = K8sCisBenchmark(self.sdk_configuration)
+        self.cluster_events_policies = ClusterEventsPolicies(self.sdk_configuration)
         self.mitre = Mitre(self.sdk_configuration)
-        self.performance = Performance(self.sdk_configuration)
+        self.runtime_map = RuntimeMap(self.sdk_configuration)
         self.psp_profiles = PspProfiles(self.sdk_configuration)
         self.registries = Registries(self.sdk_configuration)
         self.risk_assessment = RiskAssessment(self.sdk_configuration)
-        self.runtime_map = RuntimeMap(self.sdk_configuration)
-        self.serverless = Serverless(self.sdk_configuration)
-        self.serverless_policies = ServerlessPolicies(self.sdk_configuration)
         self.settings = Settings(self.sdk_configuration)
-        self.telemetries = Telemetries(self.sdk_configuration)
+        self.serverless_policies = ServerlessPolicies(self.sdk_configuration)
         self.tokens = Tokens(self.sdk_configuration)
+        self.cli = Cli(self.sdk_configuration)
         self.truncation = Truncation(self.sdk_configuration)
         self.trusted_signers = TrustedSigners(self.sdk_configuration)
-        self.users = Users(self.sdk_configuration)
         self.vulnerabilities = Vulnerabilities(self.sdk_configuration)
     

@@ -3,17 +3,17 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cdpipelineresult as shared_cdpipelineresult
+from ...models.shared import cdpipelineresult as shared_cdpipelineresult
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetCdSortDir(str, Enum):
+class QueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetCdSortKey(str, Enum):
+class QueryParamSortKey(str, Enum):
     r"""sort key"""
     TIME = 'time'
     STATUS = 'status'
@@ -31,9 +31,9 @@ class GetCdRequest:
     r"""Return entries from this offset (pagination)"""
     resource_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'resourceName', 'style': 'form', 'explode': True }})
     r"""Resource name"""
-    sort_dir: Optional[GetCdSortDir] = dataclasses.field(default=GetCdSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[QueryParamSortDir] = dataclasses.field(default=QueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetCdSortKey] = dataclasses.field(default=GetCdSortKey.TIME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[QueryParamSortKey] = dataclasses.field(default=QueryParamSortKey.TIME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 
@@ -45,7 +45,7 @@ class GetCdResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    cd_pipeline_results: Optional[List[shared_cdpipelineresult.CDPipelineResult]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_cdpipelineresult.CDPipelineResult]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

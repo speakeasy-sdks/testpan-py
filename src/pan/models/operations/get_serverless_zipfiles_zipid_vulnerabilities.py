@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import vulnerability as shared_vulnerability
+from ...models.shared import vulnerability as shared_vulnerability
 from enum import Enum
 from typing import List, Optional
 
-class GetServerlessZipFilesZipIDVulnerabilitiesSortDir(str, Enum):
+class GetServerlessZipFilesZipIDVulnerabilitiesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -20,7 +20,7 @@ class GetServerlessZipFilesZipIDVulnerabilitiesRequest:
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetServerlessZipFilesZipIDVulnerabilitiesSortDir] = dataclasses.field(default=GetServerlessZipFilesZipIDVulnerabilitiesSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetServerlessZipFilesZipIDVulnerabilitiesQueryParamSortDir] = dataclasses.field(default=GetServerlessZipFilesZipIDVulnerabilitiesQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -32,9 +32,9 @@ class GetServerlessZipFilesZipIDVulnerabilitiesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
+    r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    vulnerabilities: Optional[List[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
-    r"""OK"""
     
 

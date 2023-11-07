@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import dashboardtimebasedgraphinfo as shared_dashboardtimebasedgraphinfo
-from ..shared import graphnumberpoint as shared_graphnumberpoint
+from .dashboardtimebasedgraphinfo import DashboardTimeBasedGraphInfo
+from .graphnumberpoint import GraphNumberPoint
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,8 +12,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DashboardTimeBasedGraph:
-    graph: Optional[List[shared_graphnumberpoint.GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('graph'), 'exclude': lambda f: f is None }})
+    graph: Optional[List[GraphNumberPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('graph'), 'exclude': lambda f: f is None }})
     r"""the graph points"""
-    info: Optional[shared_dashboardtimebasedgraphinfo.DashboardTimeBasedGraphInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info'), 'exclude': lambda f: f is None }})
+    info: Optional[DashboardTimeBasedGraphInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info'), 'exclude': lambda f: f is None }})
     
 

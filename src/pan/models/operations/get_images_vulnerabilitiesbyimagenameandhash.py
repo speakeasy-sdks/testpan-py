@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import vulnerability as shared_vulnerability
+from ...models.shared import vulnerability as shared_vulnerability
 from enum import Enum
 from typing import List, Optional
 
-class GetImagesVulnerabilitiesByImageNameAndHashSortDir(str, Enum):
+class GetImagesVulnerabilitiesByImageNameAndHashQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -27,7 +27,7 @@ class GetImagesVulnerabilitiesByImageNameAndHashRequest:
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     show_only_vulnerabilities_with_fix: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'showOnlyVulnerabilitiesWithFix', 'style': 'form', 'explode': True }})
-    sort_dir: Optional[GetImagesVulnerabilitiesByImageNameAndHashSortDir] = dataclasses.field(default=GetImagesVulnerabilitiesByImageNameAndHashSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesVulnerabilitiesByImageNameAndHashQueryParamSortDir] = dataclasses.field(default=GetImagesVulnerabilitiesByImageNameAndHashQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -39,9 +39,9 @@ class GetImagesVulnerabilitiesByImageNameAndHashResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
+    r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    vulnerabilities: Optional[List[shared_vulnerability.Vulnerability]] = dataclasses.field(default=None)
-    r"""OK"""
     
 

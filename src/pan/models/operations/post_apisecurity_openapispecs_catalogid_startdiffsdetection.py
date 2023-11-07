@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import actionduration as shared_actionduration
+from ...models.shared import actionduration as shared_actionduration
 from typing import Optional
 
 

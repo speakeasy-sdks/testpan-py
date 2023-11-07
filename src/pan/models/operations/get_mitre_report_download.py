@@ -12,9 +12,9 @@ class GetMitreReportDownloadResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_mitre_report_download_200_application_json_binary_string: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""The Mitre report"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    stream: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""The Mitre report"""
     
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 from enum import Enum
 
 class PermissionRisk(str, Enum):
+    r"""the risk to filter by"""
     NO_RISK = 'NO_RISK'
     MEDIUM = 'MEDIUM'
     HIGH = 'HIGH'

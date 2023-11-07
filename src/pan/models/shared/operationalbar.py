@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import operationalbarsection as shared_operationalbarsection
+from .operationalbarsection import OperationalBarSection
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,8 +11,8 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OperationalBar:
-    expantion_section: Optional[shared_operationalbarsection.OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expantionSection'), 'exclude': lambda f: f is None }})
-    namespace_section: Optional[shared_operationalbarsection.OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceSection'), 'exclude': lambda f: f is None }})
-    pod_section: Optional[shared_operationalbarsection.OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSection'), 'exclude': lambda f: f is None }})
+    expantion_section: Optional[OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expantionSection'), 'exclude': lambda f: f is None }})
+    namespace_section: Optional[OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceSection'), 'exclude': lambda f: f is None }})
+    pod_section: Optional[OperationalBarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSection'), 'exclude': lambda f: f is None }})
     
 

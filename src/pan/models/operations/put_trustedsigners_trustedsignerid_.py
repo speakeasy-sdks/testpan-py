@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import trustedsigner as shared_trustedsigner
+from ...models.shared import trustedsigner as shared_trustedsigner
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutTrustedSignersTrustedSignerIDRequest:
+    trusted_signer: shared_trustedsigner.TrustedSignerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     trusted_signer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'trustedSignerId', 'style': 'simple', 'explode': False }})
-    trusted_signer_input: shared_trustedsigner.TrustedSignerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 

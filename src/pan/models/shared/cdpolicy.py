@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecuritycdpolicyelement as shared_apisecuritycdpolicyelement
-from ..shared import cdpolicyelement as shared_cdpolicyelement
-from ..shared import secretscdpolicyelement as shared_secretscdpolicyelement
+from .apisecuritycdpolicyelement import APISecurityCdPolicyElement
+from .cdpolicyelement import CdPolicyElement
+from .secretscdpolicyelement import SecretsCdPolicyElement
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -15,11 +15,11 @@ from typing import List, Optional
 class CdPolicyInput:
     deployers: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    api_security_cd_policy: Optional[shared_apisecuritycdpolicyelement.APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
+    api_security_cd_policy: Optional[APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-    permission_cd_policy: Optional[shared_cdpolicyelement.CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionCDPolicy'), 'exclude': lambda f: f is None }})
-    secret_cd_policy: Optional[shared_secretscdpolicyelement.SecretsCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretCDPolicy'), 'exclude': lambda f: f is None }})
-    security_context_cd_policy: Optional[shared_cdpolicyelement.CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityContextCDPolicy'), 'exclude': lambda f: f is None }})
+    permission_cd_policy: Optional[CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionCDPolicy'), 'exclude': lambda f: f is None }})
+    secret_cd_policy: Optional[SecretsCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretCDPolicy'), 'exclude': lambda f: f is None }})
+    security_context_cd_policy: Optional[CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityContextCDPolicy'), 'exclude': lambda f: f is None }})
     
 
 
@@ -29,11 +29,11 @@ class CdPolicyInput:
 class CdPolicy:
     deployers: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployers') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    api_security_cd_policy: Optional[shared_apisecuritycdpolicyelement.APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
+    api_security_cd_policy: Optional[APISecurityCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityCdPolicy'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    permission_cd_policy: Optional[shared_cdpolicyelement.CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionCDPolicy'), 'exclude': lambda f: f is None }})
-    secret_cd_policy: Optional[shared_secretscdpolicyelement.SecretsCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretCDPolicy'), 'exclude': lambda f: f is None }})
-    security_context_cd_policy: Optional[shared_cdpolicyelement.CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityContextCDPolicy'), 'exclude': lambda f: f is None }})
+    permission_cd_policy: Optional[CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionCDPolicy'), 'exclude': lambda f: f is None }})
+    secret_cd_policy: Optional[SecretsCdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretCDPolicy'), 'exclude': lambda f: f is None }})
+    security_context_cd_policy: Optional[CdPolicyElement] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityContextCDPolicy'), 'exclude': lambda f: f is None }})
     
 

@@ -120,7 +120,7 @@ class Settings:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.CaIntegrationResponseWithClusters]])
-                res.ca_integration_response_with_clusters = out
+                res.classes = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -210,7 +210,7 @@ class Settings:
         return res
 
     
-    def post_settings_integrations_ca(self, request: shared.CaIntegrationRequestInput) -> operations.PostSettingsIntegrationsCaResponse:
+    def post_settings_integrations_ca(self, request: shared.CaIntegrationRequest) -> operations.PostSettingsIntegrationsCaResponse:
         r"""Set the CA integration details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -518,7 +518,7 @@ class Settings:
         
         url = utils.generate_url(operations.PutSettingsIntegrationsCaIDRequest, base_url, '/settings/integrations/ca/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ca_integration_request_input", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "ca_integration_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -551,7 +551,7 @@ class Settings:
         
         url = utils.generate_url(operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest, base_url, '/settings/integrations/eventForwarding/{eventForwardingId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "splunk_events_forwarding_details_input", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "splunk_events_forwarding_details", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

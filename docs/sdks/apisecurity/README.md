@@ -1,5 +1,5 @@
 # APISecurity
-(*api_security*)
+(*.api_security*)
 
 ## Overview
 
@@ -126,7 +126,7 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.delete_api_security_internal_catalog_catalog_id_bfla_detection_204_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -166,7 +166,7 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.delete_api_security_internal_catalog_catalog_id_bfla_learning_204_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -270,8 +270,8 @@ Get a list of APIs and their compliance
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -313,8 +313,8 @@ Get the number of existing 3rd party APIs in the inventory
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -328,7 +328,7 @@ req = operations.GetAPISecurityExternalCatalogCountRequest()
 
 res = s.api_security.get_api_security_external_catalog_count(req)
 
-if res.get_api_security_external_catalog_count_200_application_json_integer is not None:
+if res.integer is not None:
     # handle response
     pass
 ```
@@ -395,8 +395,8 @@ Get a list of APIs and their compliance
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -438,8 +438,8 @@ Get the number of existing 3rd party APIs in the inventory
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -453,7 +453,7 @@ req = operations.GetAPISecurityInternalCatalogCountRequest()
 
 res = s.api_security.get_api_security_internal_catalog_count(req)
 
-if res.get_api_security_internal_catalog_count_200_application_json_integer is not None:
+if res.integer is not None:
     # handle response
     pass
 ```
@@ -616,7 +616,7 @@ req = operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsRequest(
 
 res = s.api_security.get_api_security_internal_catalog_catalog_id_fuzzing_tests(req)
 
-if res.api_service_fuzzing_tests is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -816,7 +816,7 @@ req = operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONReques
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json(req)
 
-if res.get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -936,7 +936,7 @@ req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_spec_json(req)
 
-if res.get_api_security_open_api_specs_catalog_id_reconstructed_spec_json_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -971,11 +971,11 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityRiskFindingsRequest(
-    api_sec_source=operations.GetAPISecurityRiskFindingsAPISecSource.EXTERNAL,
+    api_sec_source=operations.APISecSource.EXTERNAL,
     risks=[
-        operations.GetAPISecurityRiskFindingsRisks.LOW,
+        operations.Risks.LOW,
     ],
-    sort_key=operations.GetAPISecurityRiskFindingsSortKey.RISK,
+    sort_key=operations.GetAPISecurityRiskFindingsQueryParamSortKey.RISK,
 )
 
 res = s.api_security.get_api_security_risk_findings(req)
@@ -1017,7 +1017,7 @@ s = pan.Pan(
 
 res = s.api_security.get_api_security_risk_findings_categories()
 
-if res.get_api_security_risk_findings_categories_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -1048,7 +1048,7 @@ s = pan.Pan(
 
 res = s.api_security.get_api_security_risk_findings_sources()
 
-if res.get_api_security_risk_findings_sources_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -1165,7 +1165,7 @@ req = operations.GetAPISecurityCatalogIDMethodsRequest(
 
 res = s.api_security.get_api_security_catalog_id_methods(req)
 
-if res.api_service_methods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -1240,7 +1240,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsAPISecSource.INTERNAL,
+    api_sec_source=operations.QueryParamAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_risk_findings(req)
@@ -1280,7 +1280,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecRiskFindingsTrendRequest(
-    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendAPISecSource.INTERNAL,
+    api_sec_source=operations.GetDashboardApisecRiskFindingsTrendQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_risk_findings_trend(req)
@@ -1320,7 +1320,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecSpecsAndOperationsDiffsRequest(
-    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.EXTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_specs_and_operations_diffs(req)
@@ -1360,7 +1360,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyApisAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.EXTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_apis(req)
@@ -1400,7 +1400,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyFindingsRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyFindingsQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_findings(req)
@@ -1443,7 +1443,7 @@ req = operations.GetGatewaysRequest()
 
 res = s.api_security.get_gateways(req)
 
-if res.gateways is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -1478,12 +1478,12 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysClustersRequest(
-    gateway_type=operations.GetGatewaysClustersGatewayType.TYK_INTERNAL,
+    gateway_type=operations.GatewayType.TYK_INTERNAL,
 )
 
 res = s.api_security.get_gateways_clusters(req)
 
-if res.gateway_cluster_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -1523,7 +1523,7 @@ req = operations.GetGatewaysGatewayIDDownloadBundleRequest(
 
 res = s.api_security.get_gateways_gateway_id_download_bundle(req)
 
-if res.get_gateways_gateway_id_download_bundle_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```
@@ -1563,7 +1563,7 @@ req = shared.APISecurityAPI(
 
 res = s.api_security.post_api_security_api(req)
 
-if res.post_api_security_api_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -1606,7 +1606,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_detection_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -1649,7 +1649,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_learning_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -1689,7 +1689,7 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
 
-if res.post_api_security_internal_catalog_catalog_id_bfla_reset_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -1766,7 +1766,7 @@ s = pan.Pan(
 req = operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingRequest(
     api_fuzzing_test_configuration=shared.APIFuzzingTestConfiguration(
         auth=shared.AuthorizationScheme(
-            authorization_scheme_type=shared.AuthorizationSchemeAuthorizationSchemeType.AUTHORIZATION_SCHEME_API_TOKEN,
+            authorization_scheme_type=shared.AuthorizationSchemeType.AUTHORIZATION_SCHEME_API_TOKEN,
         ),
         depth=shared.TestInputDepthEnum.DEEP,
     ),
@@ -2015,7 +2015,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveRequest(
-    api_reconstructed_spec_input=shared.APIReconstructedSpecInput(
+    api_reconstructed_spec=shared.APIReconstructedSpecInput(
         oas_version=shared.OASVersion.OA_SV3_0,
         review_path_items=[
             shared.ReviewPathItem(
@@ -2071,7 +2071,7 @@ s = pan.Pan(
 req = operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest(
     action_duration=shared.ActionDuration(
         duration=672614,
-        time_unit=shared.ActionDurationTimeUnit.HOURS,
+        time_unit=shared.TimeUnit.HOURS,
     ),
     catalog_id='84658317-7e1f-4e27-b84c-670056ef2d95',
 )
@@ -2184,8 +2184,8 @@ update BFLA info for this catalogId
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -2227,7 +2227,7 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
 
 res = s.api_security.put_api_security_internal_catalog_catalog_id_bfla(req)
 
-if res.put_api_security_internal_catalog_catalog_id_bfla_200_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

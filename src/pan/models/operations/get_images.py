@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import imagedefget as shared_imagedefget
+from ...models.shared import imagedefget as shared_imagedefget
 from enum import Enum
 from typing import List, Optional
 
-class GetImagesSortDir(str, Enum):
+class GetImagesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetImagesSortKey(str, Enum):
+class GetImagesQueryParamSortKey(str, Enum):
     r"""image sort key. enum description in image sort key definition"""
     IMAGE_NAME = 'IMAGE_NAME'
     TIME = 'TIME'
@@ -21,7 +21,7 @@ class GetImagesSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetImagesRequest:
-    sort_key: GetImagesSortKey = dataclasses.field(default=GetImagesSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetImagesQueryParamSortKey = dataclasses.field(default=GetImagesQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""image sort key. enum description in image sort key definition"""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
@@ -35,7 +35,7 @@ class GetImagesRequest:
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetImagesSortDir] = dataclasses.field(default=GetImagesSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesQueryParamSortDir] = dataclasses.field(default=GetImagesQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     vulnerability_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vulnerabilityName', 'style': 'form', 'explode': True }})
     r"""Filter images by vulnerability name"""
@@ -49,7 +49,7 @@ class GetImagesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    image_def_gets: Optional[List[shared_imagedefget.ImageDefGet]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_imagedefget.ImageDefGet]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

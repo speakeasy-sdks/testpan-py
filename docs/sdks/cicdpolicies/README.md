@@ -1,5 +1,5 @@
 # CICDPolicies
-(*ci_cd_policies*)
+(*.ci_cd_policies*)
 
 ## Overview
 
@@ -116,7 +116,7 @@ s = pan.Pan(
 
 res = s.ci_cd_policies.get_cd_policy()
 
-if res.cd_policies is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -283,7 +283,7 @@ s = pan.Pan(
 )
 
 req = operations.PutCdPolicyPolicyIDRequest(
-    cd_policy_input=shared.CdPolicyInput(
+    cd_policy=shared.CdPolicyInput(
         api_security_cd_policy=shared.APISecurityCdPolicyElement(
             api_security_profile='75218fad-dbdc-48d5-b27f-e1d8ecd9e791',
             enforcement_option=shared.EnforcementOption.FAIL,
@@ -345,7 +345,7 @@ s = pan.Pan(
 )
 
 req = operations.PutCiPolicyPolicyIDRequest(
-    ci_policy_input=shared.CiPolicyInput(
+    ci_policy=shared.CiPolicyInput(
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
             enforcement_option=shared.EnforcementOption.IGNORE,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,

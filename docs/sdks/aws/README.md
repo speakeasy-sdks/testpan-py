@@ -1,5 +1,5 @@
 # Aws
-(*aws*)
+(*.aws*)
 
 ## Overview
 
@@ -37,7 +37,7 @@ s = pan.Pan(
 
 res = s.aws.get_aws_accounts()
 
-if res.aws_accounts is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -68,7 +68,7 @@ s = pan.Pan(
 
 res = s.aws.get_aws_roles()
 
-if res.aws_roles is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -99,7 +99,7 @@ s = pan.Pan(
 
 res = s.aws.get_aws_tags()
 
-if res.tags is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -134,7 +134,7 @@ req = operations.GetAwsAwsAccountIDRegionsRequest(
 
 res = s.aws.get_aws_aws_account_id_regions(req)
 
-if res.get_aws_aws_account_id_regions_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -175,7 +175,7 @@ req = operations.GetAwsAwsAccountIDRegionIDSubnetsRequest(
 
 res = s.aws.get_aws_aws_account_id_region_id_subnets(req)
 
-if res.portshift_aws_subnets is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -217,7 +217,7 @@ req = operations.GetAwsAwsAccountIDRegionIDVpcsRequest(
 
 res = s.aws.get_aws_aws_account_id_region_id_vpcs(req)
 
-if res.vpc_responses is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

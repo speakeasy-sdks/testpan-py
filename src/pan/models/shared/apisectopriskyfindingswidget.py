@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisectopriskyfinding as shared_apisectopriskyfinding
+from .apisectopriskyfinding import APISecTopRiskyFinding
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APISecTopRiskyFindingsWidget:
-    findings: Optional[List[shared_apisectopriskyfinding.APISecTopRiskyFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
+    findings: Optional[List[APISecTopRiskyFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('findings'), 'exclude': lambda f: f is None }})
     
 

@@ -1,5 +1,5 @@
 # Deployers
-(*deployers*)
+(*.deployers*)
 
 ## Overview
 
@@ -72,12 +72,12 @@ s = pan.Pan(
 )
 
 req = operations.GetDeployersRequest(
-    sort_key=operations.GetDeployersSortKey.DEPLOYER,
+    sort_key=operations.GetDeployersQueryParamSortKey.DEPLOYER,
 )
 
 res = s.deployers.get_deployers(req)
 
-if res.deployers is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -117,7 +117,7 @@ req = operations.GetDeployersServiceAccountsRequest(
 
 res = s.deployers.get_deployers_service_accounts(req)
 
-if res.service_account_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -193,7 +193,7 @@ s = pan.Pan(
 
 req = shared.DeployerInput(
     deployer_id='589c2d6b-f948-4feb-95d2-afb538f00cdb',
-    deployer_type=shared.DeployerDeployerType.SECURE_CN_DEPLOYER,
+    deployer_type=shared.DeployerType.SECURE_CN_DEPLOYER,
 )
 
 res = s.deployers.post_deployers(req)
@@ -233,9 +233,9 @@ s = pan.Pan(
 )
 
 req = operations.PutDeployersDeployerIDRequest(
-    deployer_input=shared.DeployerInput(
+    deployer=shared.DeployerInput(
         deployer_id='bfd0fb57-ae2a-4efa-9ee4-175ba71bdf48',
-        deployer_type=shared.DeployerDeployerType.OPERATOR_DEPLOYER,
+        deployer_type=shared.DeployerType.OPERATOR_DEPLOYER,
     ),
     deployer_id='87529aca-1222-401f-98e6-927bec6fe116',
 )

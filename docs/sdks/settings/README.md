@@ -1,5 +1,5 @@
 # Settings
-(*settings*)
+(*.settings*)
 
 ## Overview
 
@@ -158,7 +158,7 @@ s = pan.Pan(
 
 res = s.settings.get_settings_integrations_ca()
 
-if res.ca_integration_response_with_clusters is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -286,7 +286,7 @@ s = pan.Pan(
     ),
 )
 
-req = shared.CaIntegrationRequestInput(
+req = shared.CaIntegrationRequest(
     certificate='string',
     issuer_name='string',
     name='string',
@@ -301,9 +301,9 @@ if res.ca_integration_response is not None:
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [shared.CaIntegrationRequestInput](../../models/shared/caintegrationrequestinput.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [shared.CaIntegrationRequest](../../models/shared/caintegrationrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 
 ### Response
@@ -692,7 +692,7 @@ s = pan.Pan(
 )
 
 req = operations.PutSettingsIntegrationsCaIDRequest(
-    ca_integration_request_input=shared.CaIntegrationRequestInput(
+    ca_integration_request=shared.CaIntegrationRequest(
         certificate='string',
         issuer_name='string',
         name='string',
@@ -737,7 +737,7 @@ s = pan.Pan(
 )
 
 req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
-    splunk_events_forwarding_details_input=shared.SplunkEventsForwardingDetailsInput(
+    splunk_events_forwarding_details=shared.SplunkEventsForwardingDetails(
         events_forwarding_details_type=shared.EventsForwardingDetailsTypeEnum.WEBEX_EVENTS_FORWARDING_DETAILS,
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,

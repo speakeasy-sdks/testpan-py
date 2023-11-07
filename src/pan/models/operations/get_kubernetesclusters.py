@@ -3,12 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiresponse as shared_apiresponse
-from ..shared import kubernetesclustercontroller as shared_kubernetesclustercontroller
+from ...models.shared import apiresponse as shared_apiresponse
+from ...models.shared import kubernetesclustercontroller as shared_kubernetesclustercontroller
 from enum import Enum
 from typing import List, Optional
 
-class GetKubernetesClustersSortDir(str, Enum):
+class GetKubernetesClustersQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -32,7 +32,7 @@ class GetKubernetesClustersRequest:
     r"""Return entries from this offset (pagination)"""
     only_spec_reconstruction_enabled_filter: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'onlySpecReconstructionEnabledFilter', 'style': 'form', 'explode': True }})
     r"""retrive only clusters that configured as spec reconstruction enabled."""
-    sort_dir: Optional[GetKubernetesClustersSortDir] = dataclasses.field(default=GetKubernetesClustersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetKubernetesClustersQueryParamSortDir] = dataclasses.field(default=GetKubernetesClustersQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     sort_key: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
@@ -48,7 +48,7 @@ class GetKubernetesClustersResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    kubernetes_cluster_controllers: Optional[List[shared_kubernetesclustercontroller.KubernetesClusterController]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_kubernetesclustercontroller.KubernetesClusterController]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

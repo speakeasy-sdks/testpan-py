@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import gateway as shared_gateway
+from ...models.shared import gateway as shared_gateway
 from enum import Enum
 from typing import List, Optional
 
-class GetGatewaysSortDir(str, Enum):
+class GetGatewaysQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -23,7 +23,7 @@ class GetGatewaysRequest:
     r"""When true, the pagination params will be ignored"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetGatewaysSortDir] = dataclasses.field(default=GetGatewaysSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetGatewaysQueryParamSortDir] = dataclasses.field(default=GetGatewaysQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -35,7 +35,7 @@ class GetGatewaysResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    gateways: Optional[List[shared_gateway.Gateway]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_gateway.Gateway]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

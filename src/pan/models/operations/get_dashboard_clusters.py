@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clusterdetails as shared_clusterdetails
+from ...models.shared import clusterdetails as shared_clusterdetails
 from typing import List, Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import timebasedwidget as shared_timebasedwidget
+from ...models.shared import timebasedwidget as shared_timebasedwidget
 from typing import Optional
 
 

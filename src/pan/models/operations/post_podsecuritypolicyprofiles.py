@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import podsecuritypolicy as shared_podsecuritypolicy
+from ...models.shared import podsecuritypolicy as shared_podsecuritypolicy
 from typing import Optional
 
 

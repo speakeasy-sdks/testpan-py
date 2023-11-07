@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apireconstructionrequest as shared_apireconstructionrequest
+from ...models.shared import apireconstructionrequest as shared_apireconstructionrequest
 from typing import Optional
 
 

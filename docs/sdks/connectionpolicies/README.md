@@ -1,5 +1,5 @@
 # ConnectionPolicies
-(*connection_policies*)
+(*.connection_policies*)
 
 ## Overview
 
@@ -74,7 +74,7 @@ s = pan.Pan(
 
 res = s.connection_policies.get_connections_policy_history()
 
-if res.connection_policy_histories is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -105,7 +105,7 @@ s = pan.Pan(
 
 res = s.connection_policies.get_connections_policy_kafka_actions()
 
-if res.get_connections_policy_kafka_actions_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -139,7 +139,7 @@ req = operations.GetConnectionsPolicyKafkaKubernetesClusterIDBrokersRequest(
 
 res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_brokers(req)
 
-if res.get_connections_policy_kafka_kubernetes_cluster_id_brokers_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -179,7 +179,7 @@ req = operations.GetConnectionsPolicyKafkaKubernetesClusterIDTopicsRequest(
 
 res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_topics(req)
 
-if res.get_connections_policy_kafka_kubernetes_cluster_id_topics_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -254,7 +254,7 @@ s = pan.Pan(
 
 res = s.connection_policies.get_serverless_policy_history()
 
-if res.connection_policy_histories is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -291,12 +291,12 @@ req = shared.ConnectionsPolicy(
         shared.ConnectionsRule(
             action=shared.ConnectionRuleAction.ENCRYPT_DIRECT,
             destination=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.KAFKA_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartType.KAFKA_CONNECTION_RULE_PART,
             ),
             layer7_settings=shared.Layer7SettingsPart(),
             name='string',
             source=shared.ConnectionRulePart(
-                connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.ANY_CONNECTION_RULE_PART,
+                connection_rule_part_type=shared.ConnectionRulePartType.ANY_CONNECTION_RULE_PART,
             ),
         ),
     ],

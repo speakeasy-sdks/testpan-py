@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlessdataaccessrisk as shared_serverlessdataaccessrisk
-from ..shared import serverlessfunctionrisklevel as shared_serverlessfunctionrisklevel
-from ..shared import serverlesspolicyrisk as shared_serverlesspolicyrisk
-from ..shared import serverlesspubliclyaccessiblerisk as shared_serverlesspubliclyaccessiblerisk
-from ..shared import serverlesssecretsrisk as shared_serverlesssecretsrisk
-from ..shared import vulnerabilityseverity as shared_vulnerabilityseverity
+from .serverlessdataaccessrisk import ServerlessDataAccessRisk
+from .serverlessfunctionrisklevel import ServerlessFunctionRiskLevel
+from .serverlesspolicyrisk import ServerlessPolicyRisk
+from .serverlesspubliclyaccessiblerisk import ServerlessPubliclyAccessibleRisk
+from .serverlesssecretsrisk import ServerlessSecretsRisk
+from .vulnerabilityseverity import VulnerabilitySeverity
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -16,12 +16,12 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ServerlessFunctionValidation:
-    data_access_risk: Optional[shared_serverlessdataaccessrisk.ServerlessDataAccessRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dataAccessRisk'), 'exclude': lambda f: f is None }})
-    function_permission_risk: Optional[shared_serverlesspolicyrisk.ServerlessPolicyRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('functionPermissionRisk'), 'exclude': lambda f: f is None }})
+    data_access_risk: Optional[ServerlessDataAccessRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dataAccessRisk'), 'exclude': lambda f: f is None }})
+    function_permission_risk: Optional[ServerlessPolicyRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('functionPermissionRisk'), 'exclude': lambda f: f is None }})
     is_unused_function: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isUnusedFunction'), 'exclude': lambda f: f is None }})
-    publicly_accessible_risk: Optional[shared_serverlesspubliclyaccessiblerisk.ServerlessPubliclyAccessibleRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('publiclyAccessibleRisk'), 'exclude': lambda f: f is None }})
-    risk: Optional[shared_serverlessfunctionrisklevel.ServerlessFunctionRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
-    secrets_risk: Optional[shared_serverlesssecretsrisk.ServerlessSecretsRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretsRisk'), 'exclude': lambda f: f is None }})
-    vulnerability: Optional[shared_vulnerabilityseverity.VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerability'), 'exclude': lambda f: f is None }})
+    publicly_accessible_risk: Optional[ServerlessPubliclyAccessibleRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('publiclyAccessibleRisk'), 'exclude': lambda f: f is None }})
+    risk: Optional[ServerlessFunctionRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
+    secrets_risk: Optional[ServerlessSecretsRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('secretsRisk'), 'exclude': lambda f: f is None }})
+    vulnerability: Optional[VulnerabilitySeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerability'), 'exclude': lambda f: f is None }})
     
 

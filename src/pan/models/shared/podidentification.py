@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cdsection as shared_cdsection
-from ..shared import cisection as shared_cisection
-from ..shared import diffsection as shared_diffsection
-from ..shared import injectedsidecarsection as shared_injectedsidecarsection
-from ..shared import registrysection as shared_registrysection
+from .cdsection import CdSection
+from .cisection import CiSection
+from .diffsection import DiffSection
+from .injectedsidecarsection import InjectedSidecarSection
+from .registrysection import RegistrySection
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -15,10 +15,10 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PodIdentification:
-    cd_section: Optional[shared_cdsection.CdSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cdSection'), 'exclude': lambda f: f is None }})
-    ci_section: Optional[shared_cisection.CiSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciSection'), 'exclude': lambda f: f is None }})
-    diff_section: Optional[shared_diffsection.DiffSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffSection'), 'exclude': lambda f: f is None }})
-    injected_sidecar_section: Optional[shared_injectedsidecarsection.InjectedSidecarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('injectedSidecarSection'), 'exclude': lambda f: f is None }})
-    registry_section: Optional[shared_registrysection.RegistrySection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registrySection'), 'exclude': lambda f: f is None }})
+    cd_section: Optional[CdSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cdSection'), 'exclude': lambda f: f is None }})
+    ci_section: Optional[CiSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciSection'), 'exclude': lambda f: f is None }})
+    diff_section: Optional[DiffSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffSection'), 'exclude': lambda f: f is None }})
+    injected_sidecar_section: Optional[InjectedSidecarSection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('injectedSidecarSection'), 'exclude': lambda f: f is None }})
+    registry_section: Optional[RegistrySection] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registrySection'), 'exclude': lambda f: f is None }})
     
 

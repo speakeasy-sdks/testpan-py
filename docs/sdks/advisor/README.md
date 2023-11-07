@@ -1,5 +1,5 @@
 # Advisor
-(*advisor*)
+(*.advisor*)
 
 ## Overview
 
@@ -35,7 +35,7 @@ s = pan.Pan(
 
 res = s.advisor.get_advisor_cluster_event_rules()
 
-if res.cluster_event_rule_recommendation_periods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -66,7 +66,7 @@ s = pan.Pan(
 
 res = s.advisor.get_advisor_connection_rules()
 
-if res.connections_rule_recommendation_periods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -97,7 +97,7 @@ s = pan.Pan(
 
 res = s.advisor.get_advisor_environment()
 
-if res.environment_recommendation_periods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -128,7 +128,7 @@ s = pan.Pan(
 
 res = s.advisor.get_advisor_environment_rules()
 
-if res.environment_rules_recommendation_periods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -159,7 +159,7 @@ s = pan.Pan(
 
 res = s.advisor.get_advisor_pod_security_policy()
 
-if res.pod_security_policy_recommendation_periods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -188,7 +188,7 @@ s = pan.Pan(
 )
 
 req = operations.GetAdvisorQueueAdvisorTypeRequest(
-    advisor_type=operations.GetAdvisorQueueAdvisorTypeAdvisorType.DEPLOYMENT_RULES,
+    advisor_type=operations.AdvisorType.DEPLOYMENT_RULES,
 )
 
 res = s.advisor.get_advisor_queue_advisor_type_(req)
@@ -228,7 +228,7 @@ s = pan.Pan(
 )
 
 req = operations.PostAdvisorRunRequest(
-    policy_advisor_type=operations.PostAdvisorRunPolicyAdvisorType.API_RULES,
+    policy_advisor_type=operations.PolicyAdvisorType.API_RULES,
 )
 
 res = s.advisor.post_advisor_run(req)

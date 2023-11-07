@@ -3,23 +3,23 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import expansion as shared_expansion
+from ...models.shared import expansion as shared_expansion
 from enum import Enum
 from typing import List, Optional
 
-class GetExpansionsSortDir(str, Enum):
+class GetExpansionsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetExpansionsSortKey(str, Enum):
+class GetExpansionsQueryParamSortKey(str, Enum):
     r"""sort key"""
     NAME = 'name'
 
 
 @dataclasses.dataclass
 class GetExpansionsRequest:
-    sort_key: GetExpansionsSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: GetExpansionsQueryParamSortKey = dataclasses.field(metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clusterName', 'style': 'form', 'explode': True }})
     r"""Filter expansions by cluster name"""
@@ -39,7 +39,7 @@ class GetExpansionsRequest:
     r"""When true, the pagination params will be ignored"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetExpansionsSortDir] = dataclasses.field(default=GetExpansionsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetExpansionsQueryParamSortDir] = dataclasses.field(default=GetExpansionsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 
@@ -51,7 +51,7 @@ class GetExpansionsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    expansions: Optional[List[shared_expansion.Expansion]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_expansion.Expansion]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

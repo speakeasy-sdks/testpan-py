@@ -3,10 +3,10 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import cdpipelineresultstatus as shared_cdpipelineresultstatus
-from ..shared import cdpipelinesecurityfinding as shared_cdpipelinesecurityfinding
-from ..shared import cdresult as shared_cdresult
-from ..shared import deploymentsource as shared_deploymentsource
+from .cdpipelineresultstatus import CDPipelineResultStatus
+from .cdpipelinesecurityfinding import CDPipelineSecurityFinding
+from .cdresult import CDResult
+from .deploymentsource import DeploymentSource
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -17,13 +17,13 @@ from typing import List, Optional
 @dataclasses.dataclass
 class CDDeploymentInfo:
     deployment_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentName'), 'exclude': lambda f: f is None }})
-    deployment_source: Optional[shared_deploymentsource.DeploymentSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentSource'), 'exclude': lambda f: f is None }})
+    deployment_source: Optional[DeploymentSource] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentSource'), 'exclude': lambda f: f is None }})
     deployment_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentVersion'), 'exclude': lambda f: f is None }})
     policy_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyId'), 'exclude': lambda f: f is None }})
     policy_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyName'), 'exclude': lambda f: f is None }})
-    result: Optional[shared_cdresult.CDResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
-    security_finding: Optional[List[shared_cdpipelinesecurityfinding.CDPipelineSecurityFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityFinding'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_cdpipelineresultstatus.CDPipelineResultStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    result: Optional[CDResult] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})
+    security_finding: Optional[List[CDPipelineSecurityFinding]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securityFinding'), 'exclude': lambda f: f is None }})
+    status: Optional[CDPipelineResultStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('time'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     
 

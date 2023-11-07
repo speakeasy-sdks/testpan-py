@@ -1,5 +1,5 @@
 # EnvironmentPolicies
-(*environment_policies*)
+(*.environment_policies*)
 
 ## Overview
 
@@ -70,7 +70,7 @@ s = pan.Pan(
 
 res = s.environment_policies.get_apps_policy_history()
 
-if res.app_policy_histories is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -147,7 +147,7 @@ req = shared.AppPolicy(
             ),
             name='string',
             rule_type_properties=shared.AppRuleType(
-                rule_type=shared.AppRuleTypeRuleType.VIOLATION_RULE_TYPE,
+                rule_type=shared.RuleType.VIOLATION_RULE_TYPE,
             ),
             scope=shared.WorkloadRuleScopeType(
                 workload_rule_scope_type=shared.WorkloadRuleScopeTypeEnum.ANY_RULE_TYPE,

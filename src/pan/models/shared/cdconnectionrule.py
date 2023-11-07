@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import connectionruleaction as shared_connectionruleaction
-from ..shared import connectionrulepart as shared_connectionrulepart
+from .connectionruleaction import ConnectionRuleAction
+from .connectionrulepart import ConnectionRulePart
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 from typing import Optional
 
-class CdConnectionRuleStatus(str, Enum):
+class Status(str, Enum):
     ENABLED = 'ENABLED'
     DISABLED = 'DISABLED'
     DELETED = 'DELETED'
@@ -19,13 +19,13 @@ class CdConnectionRuleStatus(str, Enum):
 @dataclasses.dataclass
 class CdConnectionRule:
     r"""A rule that states what apps are allowed to communicate with each other."""
-    action: Optional[shared_connectionruleaction.ConnectionRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[ConnectionRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     r"""ENCRYPT is not allowed in default rule"""
-    destination: Optional[shared_connectionrulepart.ConnectionRulePart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination'), 'exclude': lambda f: f is None }})
+    destination: Optional[ConnectionRulePart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destination'), 'exclude': lambda f: f is None }})
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    source: Optional[shared_connectionrulepart.ConnectionRulePart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
-    status: Optional[CdConnectionRuleStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    source: Optional[ConnectionRulePart] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
+    status: Optional[Status] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     
 

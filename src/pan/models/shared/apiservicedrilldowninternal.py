@@ -3,13 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import apisecurityapistatus as shared_apisecurityapistatus
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
-from ..shared import apiserviceclientworkload as shared_apiserviceclientworkload
-from ..shared import apiservicecompliance as shared_apiservicecompliance
-from ..shared import apiservicescore as shared_apiservicescore
-from ..shared import gateway as shared_gateway
-from ..shared import openapispecavailability as shared_openapispecavailability
+from .apisecurityapistatus import APISecurityAPIStatus
+from .apisecurityriskseverity import APISecurityRiskSeverity
+from .apiserviceclientworkload import APIServiceClientWorkload
+from .apiservicecompliance import APIServiceCompliance
+from .apiservicescore import APIServiceScore
+from .gateway import Gateway
+from .openapispecavailability import OpenAPISpecAvailability
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -23,25 +23,25 @@ class APIServiceDrillDownInternal:
     r"""Unique identifier of the subject API as assigned by Crankshaft"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""API name, usually an FQDN as determined by crankshaft, it can be logical or can correspond to one of the endpoints where the API is reachable, i.e. api.webex.com"""
-    client_workloads: Optional[List[shared_apiserviceclientworkload.APIServiceClientWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientWorkloads'), 'exclude': lambda f: f is None }})
+    client_workloads: Optional[List[APIServiceClientWorkload]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clientWorkloads'), 'exclude': lambda f: f is None }})
     cluster: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cluster'), 'exclude': lambda f: f is None }})
     cluster_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId'), 'exclude': lambda f: f is None }})
-    compliance: Optional[shared_apiservicecompliance.APIServiceCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliance'), 'exclude': lambda f: f is None }})
+    compliance: Optional[APIServiceCompliance] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compliance'), 'exclude': lambda f: f is None }})
     creation_timestamp: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creation_timestamp'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     r"""Textual description of the Service"""
-    gateway_info: Optional[shared_gateway.Gateway] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gatewayInfo'), 'exclude': lambda f: f is None }})
+    gateway_info: Optional[Gateway] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gatewayInfo'), 'exclude': lambda f: f is None }})
     is_api_tracing_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isApiTracingEnabled'), 'exclude': lambda f: f is None }})
     is_fuzzable: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isFuzzable'), 'exclude': lambda f: f is None }})
     link_doc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('link_doc'), 'exclude': lambda f: f is None }})
     r"""Location of the documentation. This can be an URL for example"""
     namespace: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})
-    openapi_spec_availablity: Optional[shared_openapispecavailability.OpenAPISpecAvailability] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('openapi_spec_availablity'), 'exclude': lambda f: f is None }})
+    openapi_spec_availablity: Optional[OpenAPISpecAvailability] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('openapi_spec_availablity'), 'exclude': lambda f: f is None }})
     port: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('port'), 'exclude': lambda f: f is None }})
-    risk: Optional[shared_apisecurityriskseverity.APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
+    risk: Optional[APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     r"""An `enum`eration."""
-    score: Optional[shared_apiservicescore.APIServiceScore] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score'), 'exclude': lambda f: f is None }})
-    status: Optional[shared_apisecurityapistatus.APISecurityAPIStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    score: Optional[APIServiceScore] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('score'), 'exclude': lambda f: f is None }})
+    status: Optional[APISecurityAPIStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Api status enumeration."""
     status_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status_description'), 'exclude': lambda f: f is None }})
     

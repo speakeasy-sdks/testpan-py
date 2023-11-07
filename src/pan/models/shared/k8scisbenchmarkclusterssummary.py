@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import k8scisbenchmarkscanstate as shared_k8scisbenchmarkscanstate
+from .k8scisbenchmarkscanstate import K8sCisBenchmarkScanState
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -24,7 +24,7 @@ class K8sCISBenchmarkClustersSummary:
     number_of_nodes: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfNodes'), 'exclude': lambda f: f is None }})
     number_of_scanned_nodes: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfScannedNodes'), 'exclude': lambda f: f is None }})
     orchestration: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orchestration'), 'exclude': lambda f: f is None }})
-    scan_state: Optional[shared_k8scisbenchmarkscanstate.K8sCisBenchmarkScanState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scanState'), 'exclude': lambda f: f is None }})
+    scan_state: Optional[K8sCisBenchmarkScanState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scanState'), 'exclude': lambda f: f is None }})
     scan_time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scanTime'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     
 

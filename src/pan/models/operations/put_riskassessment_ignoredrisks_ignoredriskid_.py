@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cipolicy as shared_cipolicy
-from ..shared import ignoredrisk as shared_ignoredrisk
+from ...models.shared import cipolicy as shared_cipolicy
+from ...models.shared import ignoredrisk as shared_ignoredrisk
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest:
-    ci_policy_input: shared_cipolicy.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    ci_policy: shared_cipolicy.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     ignored_risk_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ignoredRiskId', 'style': 'simple', 'explode': False }})
     
 

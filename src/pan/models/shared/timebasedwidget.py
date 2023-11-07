@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import dashboardtimebasedgraphs as shared_dashboardtimebasedgraphs
-from ..shared import timebasedwidgetinfo as shared_timebasedwidgetinfo
+from .dashboardtimebasedgraphs import DashboardTimeBasedGraphs
+from .timebasedwidgetinfo import TimeBasedWidgetInfo
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,9 +12,9 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TimeBasedWidget:
-    allowed_graphs: Optional[shared_dashboardtimebasedgraphs.DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedGraphs'), 'exclude': lambda f: f is None }})
-    blocked_graphs: Optional[shared_dashboardtimebasedgraphs.DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('blockedGraphs'), 'exclude': lambda f: f is None }})
-    detected_graphs: Optional[shared_dashboardtimebasedgraphs.DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detectedGraphs'), 'exclude': lambda f: f is None }})
-    info: Optional[shared_timebasedwidgetinfo.TimeBasedWidgetInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info'), 'exclude': lambda f: f is None }})
+    allowed_graphs: Optional[DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('allowedGraphs'), 'exclude': lambda f: f is None }})
+    blocked_graphs: Optional[DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('blockedGraphs'), 'exclude': lambda f: f is None }})
+    detected_graphs: Optional[DashboardTimeBasedGraphs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detectedGraphs'), 'exclude': lambda f: f is None }})
+    info: Optional[TimeBasedWidgetInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('info'), 'exclude': lambda f: f is None }})
     
 

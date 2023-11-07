@@ -1,5 +1,5 @@
 # AuditLogs
-(*audit_logs*)
+(*.audit_logs*)
 
 ## Overview
 
@@ -19,8 +19,8 @@ Get audit logs
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -40,7 +40,7 @@ req = operations.GetAuditLogsRequest(
 
 res = s.audit_logs.get_audit_logs(req)
 
-if res.audit_logs is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -77,7 +77,7 @@ s = pan.Pan(
 
 res = s.audit_logs.get_audit_logs_actions()
 
-if res.get_audit_logs_actions_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -95,8 +95,8 @@ Get audit logs
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -112,14 +112,14 @@ req = operations.GetAuditLogsKubernetesRequest(
         'string',
     ],
     result=[
-        operations.GetAuditLogsKubernetesResult.RISKY,
+        operations.Result.RISKY,
     ],
     start_time=dateutil.parser.isoparse('2021-10-10T01:17:52.269Z'),
 )
 
 res = s.audit_logs.get_audit_logs_kubernetes(req)
 
-if res.kubernetes_audit_logs is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -156,7 +156,7 @@ s = pan.Pan(
 
 res = s.audit_logs.get_audit_logs_kubernetes_actions()
 
-if res.get_audit_logs_kubernetes_actions_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```

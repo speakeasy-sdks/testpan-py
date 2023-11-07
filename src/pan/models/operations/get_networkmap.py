@@ -3,13 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import backgroundjobresponse as shared_backgroundjobresponse
-from ..shared import networkmap as shared_networkmap
+from ...models.shared import backgroundjobresponse as shared_backgroundjobresponse
+from ...models.shared import networkmap as shared_networkmap
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetNetworkMapAPIRisk(str, Enum):
+class APIRisk(str, Enum):
     r"""minimum api risk level"""
     LOW = 'LOW'
     MEDIUM = 'MEDIUM'
@@ -25,7 +25,7 @@ class GetNetworkMapRequest:
     r"""End date of the query"""
     start_time: datetime = dataclasses.field(metadata={'query_param': { 'field_name': 'startTime', 'style': 'form', 'explode': True }})
     r"""Start date of the query"""
-    api_risk: Optional[GetNetworkMapAPIRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiRisk', 'style': 'form', 'explode': True }})
+    api_risk: Optional[APIRisk] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apiRisk', 'style': 'form', 'explode': True }})
     r"""minimum api risk level"""
     apps: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'apps', 'style': 'form', 'explode': False }})
     r"""Array of App names"""

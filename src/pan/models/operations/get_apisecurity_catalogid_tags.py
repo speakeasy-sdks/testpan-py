@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicetags as shared_apiservicetags
+from ...models.shared import apiservicetags as shared_apiservicetags
 from typing import Optional
 
 

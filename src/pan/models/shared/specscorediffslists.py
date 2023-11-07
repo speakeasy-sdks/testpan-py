@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import specscorediff as shared_specscorediff
+from .specscorediff import SpecScoreDiff
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,8 +11,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SpecScoreDiffsLists:
-    diffs: Optional[List[shared_specscorediff.SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
-    shadows: Optional[List[shared_specscorediff.SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shadows'), 'exclude': lambda f: f is None }})
-    zombies: Optional[List[shared_specscorediff.SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('zombies'), 'exclude': lambda f: f is None }})
+    diffs: Optional[List[SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
+    shadows: Optional[List[SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shadows'), 'exclude': lambda f: f is None }})
+    zombies: Optional[List[SpecScoreDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('zombies'), 'exclude': lambda f: f is None }})
     
 

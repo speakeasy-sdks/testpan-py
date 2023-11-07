@@ -3,15 +3,15 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import eventsforwardingdetails as shared_eventsforwardingdetails
-from ..shared import splunkeventsforwardingdetails as shared_splunkeventsforwardingdetails
+from ...models.shared import eventsforwardingdetails as shared_eventsforwardingdetails
+from ...models.shared import splunkeventsforwardingdetails as shared_splunkeventsforwardingdetails
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutSettingsIntegrationsEventForwardingEventForwardingIDRequest:
     event_forwarding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eventForwardingId', 'style': 'simple', 'explode': False }})
-    splunk_events_forwarding_details_input: shared_splunkeventsforwardingdetails.SplunkEventsForwardingDetailsInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    splunk_events_forwarding_details: shared_splunkeventsforwardingdetails.SplunkEventsForwardingDetails = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 

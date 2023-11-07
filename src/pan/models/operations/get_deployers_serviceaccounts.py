@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serviceaccountinfo as shared_serviceaccountinfo
+from ...models.shared import serviceaccountinfo as shared_serviceaccountinfo
 from typing import List, Optional
 
 
@@ -22,9 +22,9 @@ class GetDeployersServiceAccountsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_serviceaccountinfo.ServiceAccountInfo]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    service_account_infos: Optional[List[shared_serviceaccountinfo.ServiceAccountInfo]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import apisecurityapistatus as shared_apisecurityapistatus
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
+from .apisecurityapistatus import APISecurityAPIStatus
+from .apisecurityriskseverity import APISecurityRiskSeverity
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -25,9 +25,9 @@ class APIServiceBase:
     r"""Textual description of the Service"""
     provider_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider_id'), 'exclude': lambda f: f is None }})
     r"""API provider id"""
-    risk: Optional[shared_apisecurityriskseverity.APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
+    risk: Optional[APISecurityRiskSeverity] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     r"""An `enum`eration."""
-    status: Optional[shared_apisecurityapistatus.APISecurityAPIStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[APISecurityAPIStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""Api status enumeration."""
     status_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status_description'), 'exclude': lambda f: f is None }})
     

@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlesspolicyrisk as shared_serverlesspolicyrisk
-from ..shared import serverlesspolicyriskreasons as shared_serverlesspolicyriskreasons
+from .serverlesspolicyrisk import ServerlessPolicyRisk
+from .serverlesspolicyriskreasons import ServerlessPolicyRiskReasons
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -14,7 +14,7 @@ from typing import List, Optional
 class ServerlessRolePolicy:
     policy_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyArn'), 'exclude': lambda f: f is None }})
     policy_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyName'), 'exclude': lambda f: f is None }})
-    policy_risk: Optional[shared_serverlesspolicyrisk.ServerlessPolicyRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyRisk'), 'exclude': lambda f: f is None }})
-    risk_reasons: Optional[List[shared_serverlesspolicyriskreasons.ServerlessPolicyRiskReasons]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('riskReasons'), 'exclude': lambda f: f is None }})
+    policy_risk: Optional[ServerlessPolicyRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('policyRisk'), 'exclude': lambda f: f is None }})
+    risk_reasons: Optional[List[ServerlessPolicyRiskReasons]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('riskReasons'), 'exclude': lambda f: f is None }})
     
 

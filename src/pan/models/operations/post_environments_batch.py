@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import environment as shared_environment
+from ...models.shared import environment as shared_environment
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class PostEnvironmentsBatchResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    environments: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_environment.Environment]] = dataclasses.field(default=None)
     r"""Added"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apprule as shared_apprule
-from ..shared import defaultrule as shared_defaultrule
-from ..shared import unidentifiedpodsrule as shared_unidentifiedpodsrule
+from .apprule import AppRule
+from .defaultrule import DefaultRule
+from .unidentifiedpodsrule import UnidentifiedPodsRule
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -13,8 +13,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AppPolicy:
-    default_rule: Optional[shared_defaultrule.DefaultRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule'), 'exclude': lambda f: f is None }})
-    unidentified_pods_rule: Optional[shared_unidentifiedpodsrule.UnidentifiedPodsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedPodsRule'), 'exclude': lambda f: f is None }})
-    user_rules: Optional[List[shared_apprule.AppRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRules'), 'exclude': lambda f: f is None }})
+    default_rule: Optional[DefaultRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule'), 'exclude': lambda f: f is None }})
+    unidentified_pods_rule: Optional[UnidentifiedPodsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedPodsRule'), 'exclude': lambda f: f is None }})
+    user_rules: Optional[List[AppRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRules'), 'exclude': lambda f: f is None }})
     
 

@@ -1,5 +1,5 @@
 # RuntimeMap
-(*runtime_map*)
+(*.runtime_map*)
 
 ## Overview
 
@@ -59,8 +59,8 @@ Get data for network map
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -172,7 +172,7 @@ req = operations.GetNetworkMapResultsRequestIDRequest(
 
 res = s.runtime_map.get_network_map_results_request_id_(req)
 
-if res.network_maps is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

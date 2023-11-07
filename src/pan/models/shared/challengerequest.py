@@ -7,13 +7,13 @@ from enum import Enum
 from pan import utils
 from typing import Optional
 
-class ChallengeRequestChallengeName(str, Enum):
+class ChallengeName(str, Enum):
     GOOGLE_LOGIN = 'GOOGLE_LOGIN'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ChallengeRequest:
-    challenge_name: Optional[ChallengeRequestChallengeName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ChallengeName'), 'exclude': lambda f: f is None }})
+    challenge_name: Optional[ChallengeName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ChallengeName'), 'exclude': lambda f: f is None }})
     
 

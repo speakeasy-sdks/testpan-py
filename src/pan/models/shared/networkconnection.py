@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import connectionrulebasic as shared_connectionrulebasic
-from ..shared import encryptionreason as shared_encryptionreason
+from .connectionrulebasic import ConnectionRuleBasic
+from .encryptionreason import EncryptionReason
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -13,11 +13,11 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class NetworkConnectionViolation:
-    encryption_reason: Optional[shared_encryptionreason.EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
-    encrypt_rule: Optional[shared_connectionrulebasic.ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptRule'), 'exclude': lambda f: f is None }})
+class Violation:
+    encryption_reason: Optional[EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
+    encrypt_rule: Optional[ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptRule'), 'exclude': lambda f: f is None }})
     last_violation: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastViolation'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    rule: Optional[shared_connectionrulebasic.ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
+    rule: Optional[ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
     
 
 
@@ -34,6 +34,6 @@ class NetworkConnection:
     source_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sourceId'), 'exclude': lambda f: f is None }})
     r"""Source App id"""
     start_time: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('startTime'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    violation: Optional[NetworkConnectionViolation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})
+    violation: Optional[Violation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violation'), 'exclude': lambda f: f is None }})
     
 

@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clustereventrulerecommendation as shared_clustereventrulerecommendation
-from ..shared import recommendationtimeperiod as shared_recommendationtimeperiod
+from .clustereventrulerecommendation import ClusterEventRuleRecommendation
+from .recommendationtimeperiod import RecommendationTimePeriod
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,8 +12,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClusterEventRuleRecommendationPeriod:
-    cluster_event_rule_recommendations: Optional[List[shared_clustereventrulerecommendation.ClusterEventRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterEventRuleRecommendations'), 'exclude': lambda f: f is None }})
-    time_period: Optional[shared_recommendationtimeperiod.RecommendationTimePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
+    cluster_event_rule_recommendations: Optional[List[ClusterEventRuleRecommendation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterEventRuleRecommendations'), 'exclude': lambda f: f is None }})
+    time_period: Optional[RecommendationTimePeriod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timePeriod'), 'exclude': lambda f: f is None }})
     total_events: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('totalEvents'), 'exclude': lambda f: f is None }})
     
 

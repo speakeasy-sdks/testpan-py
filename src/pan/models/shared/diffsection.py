@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import podtemplatediff as shared_podtemplatediff
+from .podtemplatediff import PodTemplateDiff
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DiffSection:
-    diffs: Optional[List[shared_podtemplatediff.PodTemplateDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
+    diffs: Optional[List[PodTemplateDiff]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diffs'), 'exclude': lambda f: f is None }})
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import caintegrationresponse as shared_caintegrationresponse
+from ...models.shared import caintegrationresponse as shared_caintegrationresponse
 from typing import Optional
 
 

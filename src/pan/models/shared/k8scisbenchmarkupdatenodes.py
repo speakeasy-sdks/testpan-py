@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import k8scisbenchmarkupdatenode as shared_k8scisbenchmarkupdatenode
-from ..shared import k8scisbenchmarkupdatenodestatus as shared_k8scisbenchmarkupdatenodestatus
+from .k8scisbenchmarkupdatenode import K8sCISBenchmarkUpdateNode
+from .k8scisbenchmarkupdatenodestatus import K8sCISBenchmarkUpdateNodeStatus
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List
@@ -14,7 +14,7 @@ from typing import List
 class K8sCISBenchmarkUpdateNodes:
     cluster_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterId') }})
     index: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index') }})
-    nodes: List[shared_k8scisbenchmarkupdatenode.K8sCISBenchmarkUpdateNode] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nodes') }})
-    status: shared_k8scisbenchmarkupdatenodestatus.K8sCISBenchmarkUpdateNodeStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    nodes: List[K8sCISBenchmarkUpdateNode] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nodes') }})
+    status: K8sCISBenchmarkUpdateNodeStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

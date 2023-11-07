@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import agentsupdatesettings as shared_agentsupdatesettings
+from ...models.shared import agentsupdatesettings as shared_agentsupdatesettings
 from typing import Optional
 
 

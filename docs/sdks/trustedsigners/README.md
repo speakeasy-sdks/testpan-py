@@ -1,5 +1,5 @@
 # TrustedSigners
-(*trusted_signers*)
+(*.trusted_signers*)
 
 ## Overview
 
@@ -74,7 +74,7 @@ req = operations.GetTrustedSignersRequest()
 
 res = s.trusted_signers.get_trusted_signers(req)
 
-if res.trusted_signers is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -201,7 +201,7 @@ s = pan.Pan(
 )
 
 req = operations.PutTrustedSignersTrustedSignerIDRequest(
-    trusted_signer_input=shared.TrustedSignerInput(
+    trusted_signer=shared.TrustedSignerInput(
         keys=[
             shared.TrustedSignerKey(
                 key='<key>',

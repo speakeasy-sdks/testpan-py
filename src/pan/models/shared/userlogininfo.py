@@ -3,13 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import accounttier as shared_accounttier
-from ..shared import apisecurity as shared_apisecurity
-from ..shared import permissionsmode as shared_permissionsmode
-from ..shared import pricingunittype as shared_pricingunittype
-from ..shared import role as shared_role
-from ..shared import serverlesssecurity as shared_serverlesssecurity
-from ..shared import usagestatus as shared_usagestatus
+from .accounttier import AccountTier
+from .apisecurity import APISecurity
+from .permissionsmode import PermissionsMode
+from .pricingunittype import PricingUnitType
+from .role import Role
+from .serverlesssecurity import ServerlessSecurity
+from .usagestatus import UsageStatus
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
@@ -24,13 +24,13 @@ class UserLoginInfoStatus(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class UserLoginInfo:
-    account_tier: shared_accounttier.AccountTier = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountTier') }})
+    account_tier: AccountTier = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountTier') }})
     r"""K8s security product tier"""
-    api_security: shared_apisecurity.APISecurity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurity') }})
+    api_security: APISecurity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurity') }})
     r"""Mode of the API security"""
     full_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fullName') }})
-    pricing_unit_type: shared_pricingunittype.PricingUnitType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pricingUnitType') }})
-    serverless_security: shared_serverlesssecurity.ServerlessSecurity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serverlessSecurity') }})
+    pricing_unit_type: PricingUnitType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pricingUnitType') }})
+    serverless_security: ServerlessSecurity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('serverlessSecurity') }})
     r"""Mode of the Serverless security"""
     status: UserLoginInfoStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('accountId'), 'exclude': lambda f: f is None }})
@@ -41,12 +41,12 @@ class UserLoginInfo:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""ID of the user as created by Secure Application management."""
     last_login: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastLogin'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    permissions_mode: Optional[shared_permissionsmode.PermissionsMode] = dataclasses.field(default=shared_permissionsmode.PermissionsMode.NORMAL, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionsMode'), 'exclude': lambda f: f is None }})
-    role: Optional[shared_role.Role] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
+    permissions_mode: Optional[PermissionsMode] = dataclasses.field(default=PermissionsMode.NORMAL, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissionsMode'), 'exclude': lambda f: f is None }})
+    role: Optional[Role] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
     r"""The role of the user"""
     should_display_eula: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shouldDisplayEula'), 'exclude': lambda f: f is None }})
     should_display_product_tour: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shouldDisplayProductTour'), 'exclude': lambda f: f is None }})
-    usage_status: Optional[shared_usagestatus.UsageStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usageStatus'), 'exclude': lambda f: f is None }})
+    usage_status: Optional[UsageStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usageStatus'), 'exclude': lambda f: f is None }})
     r"""Account resource usage status"""
     
 

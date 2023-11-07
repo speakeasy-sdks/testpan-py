@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import permissionresponse as shared_permissionresponse
+from ...models.shared import permissionresponse as shared_permissionresponse
 from enum import Enum
 from typing import Optional
 
-class GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir(str, Enum):
+class GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey(str, Enum):
+class GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortKey(str, Enum):
     r"""sort key"""
     RISK = 'risk'
 
@@ -23,9 +23,9 @@ class GetRiskAssessmentPermissionsClusterIDOwnerIDRequest:
     owner_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownerId', 'style': 'simple', 'explode': False }})
     is_approved: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'isApproved', 'style': 'form', 'explode': True }})
     r"""Return approved / not approved entries"""
-    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortKey] = dataclasses.field(default=GetRiskAssessmentPermissionsClusterIDOwnerIDQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 

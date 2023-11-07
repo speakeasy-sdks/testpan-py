@@ -9,7 +9,7 @@ from enum import Enum
 from pan import utils
 from typing import List, Optional
 
-class TokenAttributeType(str, Enum):
+class AttributeType(str, Enum):
     REQUEST_HEADER = 'REQUEST_HEADER'
     QUERY_PARAM = 'QUERY_PARAM'
 
@@ -21,7 +21,7 @@ class Token:
     vault_secret_path: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vaultSecretPath') }})
     apis: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apis'), 'exclude': lambda f: f is None }})
     attribute_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attributeName'), 'exclude': lambda f: f is None }})
-    attribute_type: Optional[TokenAttributeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attributeType'), 'exclude': lambda f: f is None }})
+    attribute_type: Optional[AttributeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attributeType'), 'exclude': lambda f: f is None }})
     expiration_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expirationDate'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     http_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('httpPath'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})

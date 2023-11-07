@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import backgroundjobresponse as shared_backgroundjobresponse
+from ...models.shared import backgroundjobresponse as shared_backgroundjobresponse
 from typing import Optional
 
 

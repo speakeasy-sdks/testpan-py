@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serverlessinstallationdetails as shared_serverlessinstallationdetails
+from ...models.shared import serverlessinstallationdetails as shared_serverlessinstallationdetails
 from typing import Optional
 
 

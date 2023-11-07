@@ -2,13 +2,13 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import additionalinfo as shared_additionalinfo
-from ..shared import apiendpoint as shared_apiendpoint
-from ..shared import apisecurityriskseverity as shared_apisecurityriskseverity
-from ..shared import categoryscoregrade as shared_categoryscoregrade
-from ..shared import countershistory as shared_countershistory
-from ..shared import riskconfidenceenum as shared_riskconfidenceenum
-from ..shared import risktrendenum as shared_risktrendenum
+from .additionalinfo import AdditionalInfo
+from .apiendpoint import APIEndpoint
+from .apisecurityriskseverity import APISecurityRiskSeverity
+from .categoryscoregrade import CategoryScoreGrade
+from .countershistory import CountersHistory
+from .riskconfidenceenum import RiskConfidenceEnum
+from .risktrendenum import RiskTrendEnum
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Dict, List, Optional
@@ -17,17 +17,17 @@ from typing import Dict, List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIEndpointScoreGrade:
-    categories: Dict[str, shared_categoryscoregrade.CategoryScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
-    endpoint: shared_apiendpoint.APIEndpoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoint') }})
-    risk: shared_apisecurityriskseverity.APISecurityRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
+    categories: Dict[str, CategoryScoreGrade] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    endpoint: APIEndpoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoint') }})
+    risk: APISecurityRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk') }})
     r"""An `enum`eration."""
     scorer_version: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scorer_version') }})
-    additional_info: Optional[List[shared_additionalinfo.AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
-    confidence: Optional[shared_riskconfidenceenum.RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
+    additional_info: Optional[List[AdditionalInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additional_info'), 'exclude': lambda f: f is None }})
+    confidence: Optional[RiskConfidenceEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('confidence'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
-    counters_history: Optional[shared_countershistory.CountersHistory] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counters_history'), 'exclude': lambda f: f is None }})
+    counters_history: Optional[CountersHistory] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counters_history'), 'exclude': lambda f: f is None }})
     endpoint_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoint_id'), 'exclude': lambda f: f is None }})
-    trend: Optional[shared_risktrendenum.RiskTrendEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trend'), 'exclude': lambda f: f is None }})
+    trend: Optional[RiskTrendEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trend'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     
 

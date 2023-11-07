@@ -2,11 +2,11 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import appruleorigin as shared_appruleorigin
-from ..shared import apprulestatus as shared_apprulestatus
-from ..shared import appruletype as shared_appruletype
-from ..shared import workloadrulescopetype as shared_workloadrulescopetype
-from ..shared import workloadruletype as shared_workloadruletype
+from .appruleorigin import AppRuleOrigin
+from .apprulestatus import AppRuleStatus
+from .appruletype import AppRuleType
+from .workloadrulescopetype import WorkloadRuleScopeType
+from .workloadruletype import WorkloadRuleType
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -17,15 +17,15 @@ from typing import Optional
 class AppRule:
     r"""A rule that states what Apps are allowed to run on what environments."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    rule_type_properties: shared_appruletype.AppRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleTypeProperties') }})
+    rule_type_properties: AppRuleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleTypeProperties') }})
     r"""identify the app rule type. Only one of the below should be not null, and  used."""
-    status: shared_apprulestatus.AppRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    app: Optional[shared_workloadruletype.WorkloadRuleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
+    status: AppRuleStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    app: Optional[WorkloadRuleType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app'), 'exclude': lambda f: f is None }})
     r"""identify the workload type. Only one of the below should be not null, and  used."""
     group_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groupName'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    rule_origin: Optional[shared_appruleorigin.AppRuleOrigin] = dataclasses.field(default=shared_appruleorigin.AppRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
-    scope: Optional[shared_workloadrulescopetype.WorkloadRuleScopeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
+    rule_origin: Optional[AppRuleOrigin] = dataclasses.field(default=AppRuleOrigin.USER, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ruleOrigin'), 'exclude': lambda f: f is None }})
+    scope: Optional[WorkloadRuleScopeType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scope'), 'exclude': lambda f: f is None }})
     r"""identify the scope type. Only one of the below should be not null, and  used."""
     
 

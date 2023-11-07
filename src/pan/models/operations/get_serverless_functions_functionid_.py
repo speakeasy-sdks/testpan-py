@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serverlessfunction as shared_serverlessfunction
+from ...models.shared import serverlessfunction as shared_serverlessfunction
 from typing import Optional
 
 

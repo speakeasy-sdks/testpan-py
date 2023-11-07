@@ -19,9 +19,9 @@ class GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json_200_application_json_string: Optional[str] = dataclasses.field(default=None)
-    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    res: Optional[str] = dataclasses.field(default=None)
+    r"""Success"""
     
 

@@ -1,5 +1,5 @@
 # Cd
-(*cd*)
+(*.cd*)
 
 ## Overview
 
@@ -105,8 +105,8 @@ Get all the CD pipelines results
 ### Example Usage
 
 ```python
-import pan
 import dateutil.parser
+import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
@@ -123,7 +123,7 @@ req = operations.GetCdRequest(
 
 res = s.cd.get_cd(req)
 
-if res.cd_pipeline_results is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -279,10 +279,10 @@ s = pan.Pan(
 
 req = shared.CdConnectionRule(
     destination=shared.ConnectionRulePart(
-        connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.POD_NAME_CONNECTION_RULE_PART,
+        connection_rule_part_type=shared.ConnectionRulePartType.POD_NAME_CONNECTION_RULE_PART,
     ),
     source=shared.ConnectionRulePart(
-        connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.APP_TYPE_CONNECTION_RULE_PART,
+        connection_rule_part_type=shared.ConnectionRulePartType.APP_TYPE_CONNECTION_RULE_PART,
     ),
 )
 
@@ -379,10 +379,10 @@ s = pan.Pan(
 req = operations.PutCdRuleIDConnectionsRuleRequest(
     cd_connection_rule=shared.CdConnectionRule(
         destination=shared.ConnectionRulePart(
-            connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.APP_NAME_CONNECTION_RULE_PART,
+            connection_rule_part_type=shared.ConnectionRulePartType.APP_NAME_CONNECTION_RULE_PART,
         ),
         source=shared.ConnectionRulePart(
-            connection_rule_part_type=shared.ConnectionRulePartConnectionRulePartType.EXPANSION_ANY_CONNECTION_RULE_PART,
+            connection_rule_part_type=shared.ConnectionRulePartType.EXPANSION_ANY_CONNECTION_RULE_PART,
         ),
     ),
     rule_id='3491c83a-5adc-4392-92ee-d6713c48128c',

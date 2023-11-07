@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import permissionswidget as shared_permissionswidget
+from ...models.shared import permissionswidget as shared_permissionswidget
 from typing import List, Optional
 
 

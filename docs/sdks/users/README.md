@@ -1,5 +1,5 @@
 # Users
-(*users*)
+(*.users*)
 
 ## Overview
 
@@ -112,13 +112,13 @@ s = pan.Pan(
 
 req = operations.GetUsersRequest(
     roles=[
-        operations.GetUsersRoles.SERVICE,
+        operations.Roles.SERVICE,
     ],
 )
 
 res = s.users.get_users(req)
 
-if res.user_displays is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -521,7 +521,7 @@ s = pan.Pan(
 )
 
 req = operations.PutUsersUserIDRequest(
-    edit_user_input=shared.EditUserInput(
+    edit_user=shared.EditUser(
         full_name='Elisa O\'Reilly',
         status=shared.EditUserStatus.DISABLED,
     ),

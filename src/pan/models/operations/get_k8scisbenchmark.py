@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclusterssummary
+from ...models.shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclusterssummary
 from typing import List, Optional
 
 
@@ -27,7 +27,7 @@ class GetK8sCISBenchmarkResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    k8s_cis_benchmark_clusters_summaries: Optional[List[shared_k8scisbenchmarkclusterssummary.K8sCISBenchmarkClustersSummary]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_k8scisbenchmarkclusterssummary.K8sCISBenchmarkClustersSummary]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

@@ -1,5 +1,5 @@
 # RiskAssessment
-(*risk_assessment*)
+(*.risk_assessment*)
 
 ## Overview
 
@@ -124,7 +124,7 @@ s = pan.Pan(
 
 res = s.risk_assessment.get_risk_assessment()
 
-if res.risk_assessment_clusters is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -155,7 +155,7 @@ s = pan.Pan(
 
 res = s.risk_assessment.get_risk_assessment_ignored_risks()
 
-if res.ignored_risks is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -191,7 +191,7 @@ req = operations.GetRiskAssessmentPermissionsRequest(
 
 res = s.risk_assessment.get_risk_assessment_permissions(req)
 
-if res.cluster_permissions is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -356,7 +356,7 @@ req = operations.GetRiskAssessmentPollRequest(
 
 res = s.risk_assessment.get_risk_assessment_poll(req)
 
-if res.risk_assessment_clusters is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -392,12 +392,12 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentImageIDVulnerabilitiesRequest(
     image_id='6cbcdb90-f642-47ed-b640-ae8227deac5c',
-    sort_key=operations.GetRiskAssessmentImageIDVulnerabilitiesSortKey.SEVERITY,
+    sort_key=operations.GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey.SEVERITY,
 )
 
 res = s.risk_assessment.get_risk_assessment_image_id_vulnerabilities(req)
 
-if res.risk_assessment_vulnerabilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -433,12 +433,12 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentKubernetesClusterIDPodsRequest(
     kubernetes_cluster_id='764514eb-01d8-4d87-972e-7065c0075222',
-    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsSortKey.NAME,
+    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.NAME,
 )
 
 res = s.risk_assessment.get_risk_assessment_kubernetes_cluster_id_pods(req)
 
-if res.risk_assessment_pods is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -509,7 +509,7 @@ req = operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest(
             'fda4268f-7c78-46d3-87e2-782993d8ba4d',
         ],
     ),
-    action_type=operations.PostRiskAssessmentPermissionsOwnerIDApproveActionType.REMOVE,
+    action_type=operations.PostRiskAssessmentPermissionsOwnerIDApproveQueryParamActionType.REMOVE,
     owner_id='c3b8ad34-72d2-4f81-a59b-f81c3cc9c10e',
 )
 
@@ -555,7 +555,7 @@ req = operations.PostRiskAssessmentKubernetesClusterIDScanRequest(
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_scan(req)
 
-if res.post_risk_assessment_kubernetes_cluster_id_scan_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -597,7 +597,7 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
             'string',
         ],
         periodic_job_expression=shared.PeriodicJobExpression(
-            periodic_job_type=shared.PeriodicJobExpressionPeriodicJobType.BY_HOURS_PERIODIC_JOB_EXPRESSION,
+            periodic_job_type=shared.PeriodicJobType.BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),
     ),
     kubernetes_cluster_id='c1a0c988-4def-48c1-bbd4-845665df2f73',
@@ -605,7 +605,7 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_settings(req)
 
-if res.post_risk_assessment_kubernetes_cluster_id_settings_201_application_json_uuid_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -640,7 +640,7 @@ s = pan.Pan(
 )
 
 req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
-    ci_policy_input=shared.CiPolicyInput(
+    ci_policy=shared.CiPolicyInput(
         dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
             enforcement_option=shared.EnforcementOption.FAIL,
             permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,

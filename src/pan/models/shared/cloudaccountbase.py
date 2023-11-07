@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import cloudprovidertype as shared_cloudprovidertype
+from .cloudprovidertype import CloudProviderType
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
@@ -22,7 +22,7 @@ class CloudAccountBase:
     r"""represent cloud account object"""
     cloud_account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudAccountId'), 'exclude': lambda f: f is None }})
     r"""the identifier id from the cloud account provider. account ID for AWS and subscription ID in Azure"""
-    cloud_provider: Optional[shared_cloudprovidertype.CloudProviderType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudProvider'), 'exclude': lambda f: f is None }})
+    cloud_provider: Optional[CloudProviderType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cloudProvider'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     install_vulnerability_scanner: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installVulnerabilityScanner'), 'exclude': lambda f: f is None }})
     last_scanned: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastScanned'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})

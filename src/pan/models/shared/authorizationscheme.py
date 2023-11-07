@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 
-class AuthorizationSchemeAuthorizationSchemeType(str, Enum):
+class AuthorizationSchemeType(str, Enum):
     AUTHORIZATION_SCHEME_BASIC_AUTH = 'AuthorizationSchemeBasicAuth'
     AUTHORIZATION_SCHEME_API_TOKEN = 'AuthorizationSchemeApiToken'
     AUTHORIZATION_SCHEME_BEARER_TOKEN = 'AuthorizationSchemeBearerToken'
@@ -16,6 +16,6 @@ class AuthorizationSchemeAuthorizationSchemeType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AuthorizationScheme:
-    authorization_scheme_type: AuthorizationSchemeAuthorizationSchemeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorizationSchemeType') }})
+    authorization_scheme_type: AuthorizationSchemeType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorizationSchemeType') }})
     
 

@@ -7,7 +7,7 @@ from enum import Enum
 from pan import utils
 from typing import Optional
 
-class MitreTechniqueAffectedElementMitreTechniqueAffectedElementType(str, Enum):
+class MitreTechniqueAffectedElementType(str, Enum):
     MITRE_TECHNIQUE_AFFECTED_OWNER = 'MitreTechniqueAffectedOwner'
     MITRE_TECHNIQUE_AFFECTED_WORKLOAD = 'MitreTechniqueAffectedWorkload'
     MITRE_TECHNIQUE_AFFECTED_NAMESPACE = 'MitreTechniqueAffectedNamespace'
@@ -17,6 +17,6 @@ class MitreTechniqueAffectedElementMitreTechniqueAffectedElementType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class MitreTechniqueAffectedElement:
-    mitre_technique_affected_element_type: Optional[MitreTechniqueAffectedElementMitreTechniqueAffectedElementType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('MitreTechniqueAffectedElementType'), 'exclude': lambda f: f is None }})
+    mitre_technique_affected_element_type: Optional[MitreTechniqueAffectedElementType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('MitreTechniqueAffectedElementType'), 'exclude': lambda f: f is None }})
     
 

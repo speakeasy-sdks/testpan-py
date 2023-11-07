@@ -1,5 +1,5 @@
 # Envs
-(*envs*)
+(*.envs*)
 
 ## Overview
 
@@ -75,7 +75,7 @@ req = operations.GetEnvironmentsRequest()
 
 res = s.envs.get_environments(req)
 
-if res.environments is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -115,7 +115,7 @@ req = operations.GetEnvironmentsEnvIDRequest(
 
 res = s.envs.get_environments_env_id_(req)
 
-if res.environments is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -297,7 +297,7 @@ req = [
 
 res = s.envs.post_environments_batch(req)
 
-if res.environments is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -365,7 +365,7 @@ s = pan.Pan(
 )
 
 req = operations.PutEnvironmentsEnvIDRequest(
-    environment_input=shared.EnvironmentInput(
+    environment=shared.EnvironmentInput(
         aws_environments=[
             shared.AwsEnvironmentInput(
                 tags=[

@@ -4,6 +4,7 @@ from __future__ import annotations
 from enum import Enum
 
 class MitreTechniqueType(str, Enum):
+    r"""MITRE technique type"""
     COMPROMISED_IMAGES = 'COMPROMISED_IMAGES'
     UNAUTHORISED_REGISTRIES_USAGE = 'UNAUTHORISED_REGISTRIES_USAGE'
     SUSPICIOUS_DEPLOYMENT = 'SUSPICIOUS_DEPLOYMENT'

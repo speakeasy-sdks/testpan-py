@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import uuidlist as shared_uuidlist
+from ...models.shared import uuidlist as shared_uuidlist
 from enum import Enum
 from typing import Optional
 
-class PostRiskAssessmentPermissionsOwnerIDApproveActionType(str, Enum):
+class PostRiskAssessmentPermissionsOwnerIDApproveQueryParamActionType(str, Enum):
     r"""The approve action type (ADD/REMOVE)"""
     ADD = 'ADD'
     REMOVE = 'REMOVE'
@@ -15,7 +15,7 @@ class PostRiskAssessmentPermissionsOwnerIDApproveActionType(str, Enum):
 
 @dataclasses.dataclass
 class PostRiskAssessmentPermissionsOwnerIDApproveRequest:
-    action_type: PostRiskAssessmentPermissionsOwnerIDApproveActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
+    action_type: PostRiskAssessmentPermissionsOwnerIDApproveQueryParamActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
     r"""The approve action type (ADD/REMOVE)"""
     owner_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ownerId', 'style': 'simple', 'explode': False }})
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})

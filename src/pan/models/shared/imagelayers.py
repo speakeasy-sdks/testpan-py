@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import imagelayer as shared_imagelayer
+from .imagelayer import ImageLayer
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,7 +12,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class ImageLayers:
     r"""image layers"""
-    safe_layers: Optional[List[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('safeLayers'), 'exclude': lambda f: f is None }})
-    vulnerable_layers: Optional[List[shared_imagelayer.ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerableLayers'), 'exclude': lambda f: f is None }})
+    safe_layers: Optional[List[ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('safeLayers'), 'exclude': lambda f: f is None }})
+    vulnerable_layers: Optional[List[ImageLayer]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vulnerableLayers'), 'exclude': lambda f: f is None }})
     
 

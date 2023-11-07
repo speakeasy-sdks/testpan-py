@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import environment as shared_environment
+from .environment import Environment
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EnvironmentRecommendation:
-    environemnt: Optional[shared_environment.Environment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environemnt'), 'exclude': lambda f: f is None }})
+    environemnt: Optional[Environment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environemnt'), 'exclude': lambda f: f is None }})
     r"""Secure Application environment definition. #also must be included for at least one of the env details but Swagger does not support parameter dependencies and mutually exclusive parameters."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     number_of_affected_workloads: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfAffectedWorkloads'), 'exclude': lambda f: f is None }})

@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from pan import utils
 
-class RegistryCredentialsRegistryCredentialsType(str, Enum):
+class RegistryCredentialsType(str, Enum):
     AWS_REGISTRY_CREDENTIALS = 'AwsRegistryCredentials'
     STANDARD_REGISTRY_CREDENTIALS = 'StandardRegistryCredentials'
     JFROG_REGISTRY_CREDENTIALS = 'JfrogRegistryCredentials'
@@ -15,6 +15,6 @@ class RegistryCredentialsRegistryCredentialsType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class RegistryCredentials:
-    registry_credentials_type: RegistryCredentialsRegistryCredentialsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registryCredentialsType') }})
+    registry_credentials_type: RegistryCredentialsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registryCredentialsType') }})
     
 

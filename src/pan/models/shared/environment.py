@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import awsenvironment as shared_awsenvironment
-from ..shared import kubernetesenvironment as shared_kubernetesenvironment
+from .awsenvironment import AwsEnvironment, AwsEnvironmentInput
+from .kubernetesenvironment import KubernetesEnvironment, KubernetesEnvironmentInput
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -15,13 +15,13 @@ class EnvironmentInput:
     r"""Secure Application environment definition. #also must be included for at least one of the env details but Swagger does not support parameter dependencies and mutually exclusive parameters."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Environment name. Must be unique."""
-    aws_environments: Optional[List[shared_awsenvironment.AwsEnvironmentInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('awsEnvironments'), 'exclude': lambda f: f is None }})
+    aws_environments: Optional[List[AwsEnvironmentInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('awsEnvironments'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     r"""The environment description."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_system_env: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSystemEnv'), 'exclude': lambda f: f is None }})
     r"""indicates if this environment represents system namespaces that usually will be filtered out from some screens"""
-    kubernetes_environments: Optional[List[shared_kubernetesenvironment.KubernetesEnvironmentInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesEnvironments'), 'exclude': lambda f: f is None }})
+    kubernetes_environments: Optional[List[KubernetesEnvironmentInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesEnvironments'), 'exclude': lambda f: f is None }})
     
 
 
@@ -32,12 +32,12 @@ class Environment:
     r"""Secure Application environment definition. #also must be included for at least one of the env details but Swagger does not support parameter dependencies and mutually exclusive parameters."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Environment name. Must be unique."""
-    aws_environments: Optional[List[shared_awsenvironment.AwsEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('awsEnvironments'), 'exclude': lambda f: f is None }})
+    aws_environments: Optional[List[AwsEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('awsEnvironments'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     r"""The environment description."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     is_system_env: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isSystemEnv'), 'exclude': lambda f: f is None }})
     r"""indicates if this environment represents system namespaces that usually will be filtered out from some screens"""
-    kubernetes_environments: Optional[List[shared_kubernetesenvironment.KubernetesEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesEnvironments'), 'exclude': lambda f: f is None }})
+    kubernetes_environments: Optional[List[KubernetesEnvironment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesEnvironments'), 'exclude': lambda f: f is None }})
     
 

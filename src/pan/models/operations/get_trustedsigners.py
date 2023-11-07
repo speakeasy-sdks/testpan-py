@@ -3,25 +3,25 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import trustedsigner as shared_trustedsigner
+from ...models.shared import trustedsigner as shared_trustedsigner
 from enum import Enum
 from typing import List, Optional
 
-class GetTrustedSignersSortDir(str, Enum):
+class GetTrustedSignersQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetTrustedSignersSortKey(str, Enum):
+class GetTrustedSignersQueryParamSortKey(str, Enum):
     r"""sort key"""
     NAME = 'name'
 
 
 @dataclasses.dataclass
 class GetTrustedSignersRequest:
-    sort_dir: Optional[GetTrustedSignersSortDir] = dataclasses.field(default=GetTrustedSignersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetTrustedSignersQueryParamSortDir] = dataclasses.field(default=GetTrustedSignersQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetTrustedSignersSortKey] = dataclasses.field(default=GetTrustedSignersSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetTrustedSignersQueryParamSortKey] = dataclasses.field(default=GetTrustedSignersQueryParamSortKey.NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 
@@ -33,9 +33,9 @@ class GetTrustedSignersResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_trustedsigner.TrustedSigner]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    trusted_signers: Optional[List[shared_trustedsigner.TrustedSigner]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

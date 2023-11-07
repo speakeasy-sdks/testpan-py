@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiservicefuzzingprogress as shared_apiservicefuzzingprogress
+from ...models.shared import apiservicefuzzingprogress as shared_apiservicefuzzingprogress
 from typing import Optional
 
 

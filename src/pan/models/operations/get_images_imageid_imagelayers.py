@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import imagelayers as shared_imagelayers
+from ...models.shared import imagelayers as shared_imagelayers
 from enum import Enum
 from typing import Optional
 
-class GetImagesImageIDImageLayersSortDir(str, Enum):
+class GetImagesImageIDImageLayersQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
@@ -18,7 +18,7 @@ class GetImagesImageIDImageLayersRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     is_ignored: Optional[bool] = dataclasses.field(default=False, metadata={'query_param': { 'field_name': 'isIgnored', 'style': 'form', 'explode': True }})
     r"""Return ignored / not ignored entries"""
-    sort_dir: Optional[GetImagesImageIDImageLayersSortDir] = dataclasses.field(default=GetImagesImageIDImageLayersSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetImagesImageIDImageLayersQueryParamSortDir] = dataclasses.field(default=GetImagesImageIDImageLayersQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
     
 

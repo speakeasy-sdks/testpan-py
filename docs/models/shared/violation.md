@@ -1,0 +1,11 @@
+# Violation
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `encrypt_rule`                                                                     | [Optional[shared.ConnectionRuleBasic]](../../models/shared/connectionrulebasic.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `encryption_reason`                                                                | [Optional[shared.EncryptionReason]](../../models/shared/encryptionreason.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `last_violation`                                                                   | [date](https://docs.python.org/3/library/datetime.html#date-objects)               | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `rule`                                                                             | [Optional[shared.ConnectionRuleBasic]](../../models/shared/connectionrulebasic.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |

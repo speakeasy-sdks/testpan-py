@@ -7,7 +7,7 @@ from enum import Enum
 from pan import utils
 from typing import Optional
 
-class TrialUserHowDidYouHearAboutUs(str, Enum):
+class HowDidYouHearAboutUs(str, Enum):
     COLLEAGUES_RECOMMENDATION = 'COLLEAGUES_RECOMMENDATION'
     KUBECON_CONFERENCE = 'KUBECON_CONFERENCE'
     PAST_CLIENT = 'PAST_CLIENT'
@@ -24,7 +24,7 @@ class TrialUser:
     last_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastName') }})
     privacy_policy_and_terms_and_conditions_agreement: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('privacyPolicyAndTermsAndConditionsAgreement') }})
     company: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company'), 'exclude': lambda f: f is None }})
-    how_did_you_hear_about_us: Optional[TrialUserHowDidYouHearAboutUs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('howDidYouHearAboutUs'), 'exclude': lambda f: f is None }})
+    how_did_you_hear_about_us: Optional[HowDidYouHearAboutUs] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('howDidYouHearAboutUs'), 'exclude': lambda f: f is None }})
     job_title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('jobTitle'), 'exclude': lambda f: f is None }})
     
 

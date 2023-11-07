@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ignoredrisk as shared_ignoredrisk
+from ...models.shared import ignoredrisk as shared_ignoredrisk
 from typing import Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import serverlessfunctionsecretissue as shared_serverlessfunctionsecretissue
+from ...models.shared import serverlessfunctionsecretissue as shared_serverlessfunctionsecretissue
 from typing import List, Optional
 
 
@@ -21,9 +21,9 @@ class GetServerlessFunctionsFunctionIDSecretsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_serverlessfunctionsecretissue.ServerlessFunctionSecretIssue]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    serverless_function_secret_issues: Optional[List[shared_serverlessfunctionsecretissue.ServerlessFunctionSecretIssue]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

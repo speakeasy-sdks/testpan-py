@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apieventpathandmethods as shared_apieventpathandmethods
+from .apieventpathandmethods import APIEventPathAndMethods
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,7 +11,7 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ReviewPathItem:
-    api_events_paths: Optional[List[shared_apieventpathandmethods.APIEventPathAndMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiEventsPaths'), 'exclude': lambda f: f is None }})
+    api_events_paths: Optional[List[APIEventPathAndMethods]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiEventsPaths'), 'exclude': lambda f: f is None }})
     r"""Group of api event paths (original) that suggestedPath is representing"""
     suggested_path: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestedPath'), 'exclude': lambda f: f is None }})
     r"""Represents the parameterized path suggested by the engine"""

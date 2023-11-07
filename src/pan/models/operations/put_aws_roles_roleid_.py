@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import awsrole as shared_awsrole
-from ..shared import awsroledetails as shared_awsroledetails
+from ...models.shared import awsrole as shared_awsrole
+from ...models.shared import awsroledetails as shared_awsroledetails
 from typing import Optional
 
 

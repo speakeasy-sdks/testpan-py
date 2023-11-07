@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apisecriskfindingswidget as shared_apisecriskfindingswidget
+from ...models.shared import apisecriskfindingswidget as shared_apisecriskfindingswidget
 from enum import Enum
 from typing import Optional
 
-class GetDashboardApisecRiskFindingsAPISecSource(str, Enum):
+class QueryParamAPISecSource(str, Enum):
     r"""source filter. an enum representing the source of the APIs service in scope"""
     INTERNAL = 'INTERNAL'
     EXTERNAL = 'EXTERNAL'
@@ -15,7 +15,7 @@ class GetDashboardApisecRiskFindingsAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecRiskFindingsRequest:
-    api_sec_source: GetDashboardApisecRiskFindingsAPISecSource = dataclasses.field(default=GetDashboardApisecRiskFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: QueryParamAPISecSource = dataclasses.field(default=QueryParamAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
     
 

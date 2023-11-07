@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import securitycontextwidget as shared_securitycontextwidget
+from ...models.shared import securitycontextwidget as shared_securitycontextwidget
 from typing import List, Optional
 
 

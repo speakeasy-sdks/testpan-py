@@ -1,5 +1,5 @@
 # K8sCisBenchmark
-(*k8s_cis_benchmark*)
+(*.k8s_cis_benchmark*)
 
 ## Overview
 
@@ -38,7 +38,7 @@ req = operations.GetK8sCISBenchmarkRequest(
 
 res = s.k8s_cis_benchmark.get_k8s_cis_benchmark(req)
 
-if res.k8s_cis_benchmark_clusters_summaries is not None:
+if res.classes is not None:
     # handle response
     pass
 ```

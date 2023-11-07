@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import poddefinition as shared_poddefinition
+from ...models.shared import poddefinition as shared_poddefinition
 from typing import List, Optional
 
 
@@ -31,7 +31,7 @@ class GetPodDefinitionsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    pod_definitions: Optional[List[shared_poddefinition.PodDefinition]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_poddefinition.PodDefinition]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

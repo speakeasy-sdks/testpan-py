@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import topriskyapi as shared_topriskyapi
+from .topriskyapi import TopRiskyAPI
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TopRiskyApisWidget:
-    top_risky_apis: Optional[List[shared_topriskyapi.TopRiskyAPI]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyApis'), 'exclude': lambda f: f is None }})
+    top_risky_apis: Optional[List[TopRiskyAPI]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('topRiskyApis'), 'exclude': lambda f: f is None }})
     
 

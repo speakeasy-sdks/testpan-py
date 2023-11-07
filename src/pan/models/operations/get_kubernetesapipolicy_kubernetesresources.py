@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import kubernetesresource as shared_kubernetesresource
+from ...models.shared import kubernetesresource as shared_kubernetesresource
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class GetKubernetesAPIPolicyKubernetesResourcesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    kubernetes_resources: Optional[List[shared_kubernetesresource.KubernetesResource]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_kubernetesresource.KubernetesResource]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

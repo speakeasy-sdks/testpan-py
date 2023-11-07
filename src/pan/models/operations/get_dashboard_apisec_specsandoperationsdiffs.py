@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import specsandoperationsdiffswidget as shared_specsandoperationsdiffswidget
+from ...models.shared import specsandoperationsdiffswidget as shared_specsandoperationsdiffswidget
 from enum import Enum
 from typing import Optional
 
-class GetDashboardApisecSpecsAndOperationsDiffsAPISecSource(str, Enum):
+class GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource(str, Enum):
     r"""source filter. an enum representing the source of the APIs service in scope"""
     INTERNAL = 'INTERNAL'
     EXTERNAL = 'EXTERNAL'
@@ -15,7 +15,7 @@ class GetDashboardApisecSpecsAndOperationsDiffsAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecSpecsAndOperationsDiffsRequest:
-    api_sec_source: GetDashboardApisecSpecsAndOperationsDiffsAPISecSource = dataclasses.field(default=GetDashboardApisecSpecsAndOperationsDiffsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource = dataclasses.field(default=GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
     
 

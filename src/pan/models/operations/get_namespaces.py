@@ -3,12 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apiresponse as shared_apiresponse
-from ..shared import namespace as shared_namespace
+from ...models.shared import apiresponse as shared_apiresponse
+from ...models.shared import namespace as shared_namespace
 from enum import Enum
 from typing import List, Optional
 
-class GetNamespacesProtectionStatus(str, Enum):
+class ProtectionStatus(str, Enum):
     r"""When true, the API will return only protected pods"""
     FULL = 'FULL'
     DEPLOYMENT_ONLY = 'DEPLOYMENT_ONLY'
@@ -16,12 +16,12 @@ class GetNamespacesProtectionStatus(str, Enum):
     DISABLED = 'DISABLED'
     ALL = 'ALL'
 
-class GetNamespacesSortDir(str, Enum):
+class GetNamespacesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetNamespacesSortKey(str, Enum):
+class GetNamespacesQueryParamSortKey(str, Enum):
     r"""the namespaces sort key"""
     NAMESPACE_NAME = 'namespaceName'
     CLUSTER_NAME = 'clusterName'
@@ -41,11 +41,11 @@ class GetNamespacesRequest:
     r"""the namespace name to filter by"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    protection_status: Optional[GetNamespacesProtectionStatus] = dataclasses.field(default=GetNamespacesProtectionStatus.ALL, metadata={'query_param': { 'field_name': 'protectionStatus', 'style': 'form', 'explode': True }})
+    protection_status: Optional[ProtectionStatus] = dataclasses.field(default=ProtectionStatus.ALL, metadata={'query_param': { 'field_name': 'protectionStatus', 'style': 'form', 'explode': True }})
     r"""When true, the API will return only protected pods"""
-    sort_dir: Optional[GetNamespacesSortDir] = dataclasses.field(default=GetNamespacesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetNamespacesQueryParamSortDir] = dataclasses.field(default=GetNamespacesQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetNamespacesSortKey] = dataclasses.field(default=GetNamespacesSortKey.NAMESPACE_NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetNamespacesQueryParamSortKey] = dataclasses.field(default=GetNamespacesQueryParamSortKey.NAMESPACE_NAME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""the namespaces sort key"""
     
 
@@ -59,7 +59,7 @@ class GetNamespacesResponse:
     r"""HTTP response status code for this operation"""
     api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
-    namespaces: Optional[List[shared_namespace.Namespace]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_namespace.Namespace]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

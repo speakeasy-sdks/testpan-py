@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import serverlessfunctionreasontype as shared_serverlessfunctionreasontype
-from ..shared import serverlessfunctionrisklevel as shared_serverlessfunctionrisklevel
+from .serverlessfunctionreasontype import ServerlessFunctionReasonType
+from .serverlessfunctionrisklevel import ServerlessFunctionRiskLevel
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,8 +12,8 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ServerlessFunctionReason:
-    level: Optional[shared_serverlessfunctionrisklevel.ServerlessFunctionRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('level'), 'exclude': lambda f: f is None }})
+    level: Optional[ServerlessFunctionRiskLevel] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('level'), 'exclude': lambda f: f is None }})
     text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('text'), 'exclude': lambda f: f is None }})
-    type: Optional[shared_serverlessfunctionreasontype.ServerlessFunctionReasonType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    type: Optional[ServerlessFunctionReasonType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

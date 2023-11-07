@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import deletedependencyelement as shared_deletedependencyelement
-from ..shared import deletedependencyenvironmentruleelement as shared_deletedependencyenvironmentruleelement
+from .deletedependencyelement import DeleteDependencyElement
+from .deletedependencyenvironmentruleelement import DeleteDependencyEnvironmentRuleElement
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
@@ -12,9 +12,9 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DeleteDependencyElementEnvironments:
-    cluster_event_rules: Optional[List[shared_deletedependencyenvironmentruleelement.DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterEventRules'), 'exclude': lambda f: f is None }})
-    connection_rules: Optional[List[shared_deletedependencyenvironmentruleelement.DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRules'), 'exclude': lambda f: f is None }})
-    deployment_rules: Optional[List[shared_deletedependencyenvironmentruleelement.DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentRules'), 'exclude': lambda f: f is None }})
-    environments: Optional[List[shared_deletedependencyelement.DeleteDependencyElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environments'), 'exclude': lambda f: f is None }})
+    cluster_event_rules: Optional[List[DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('clusterEventRules'), 'exclude': lambda f: f is None }})
+    connection_rules: Optional[List[DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRules'), 'exclude': lambda f: f is None }})
+    deployment_rules: Optional[List[DeleteDependencyEnvironmentRuleElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deploymentRules'), 'exclude': lambda f: f is None }})
+    environments: Optional[List[DeleteDependencyElement]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environments'), 'exclude': lambda f: f is None }})
     
 

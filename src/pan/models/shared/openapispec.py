@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import openapispecpreview as shared_openapispecpreview
-from ..shared import openapispecscorebase as shared_openapispecscorebase
+from .openapispecpreview import OpenAPISpecPreview
+from .openapispecscorebase import OpenAPISpecScoreBase
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OpenAPISpec:
-    preview: Optional[shared_openapispecpreview.OpenAPISpecPreview] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('preview'), 'exclude': lambda f: f is None }})
-    score_elements: Optional[shared_openapispecscorebase.OpenAPISpecScoreBase] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scoreElements'), 'exclude': lambda f: f is None }})
+    preview: Optional[OpenAPISpecPreview] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('preview'), 'exclude': lambda f: f is None }})
+    score_elements: Optional[OpenAPISpecScoreBase] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scoreElements'), 'exclude': lambda f: f is None }})
     
 

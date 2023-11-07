@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apptelemetry as shared_apptelemetry
+from ...models.shared import apptelemetry as shared_apptelemetry
 from typing import Optional
 
 

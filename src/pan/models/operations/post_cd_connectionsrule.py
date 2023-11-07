@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cdconnectionrule as shared_cdconnectionrule
+from ...models.shared import cdconnectionrule as shared_cdconnectionrule
 from typing import Optional
 
 

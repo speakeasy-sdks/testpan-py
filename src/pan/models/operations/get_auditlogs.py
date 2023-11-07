@@ -3,17 +3,17 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import auditlog as shared_auditlog
+from ...models.shared import auditlog as shared_auditlog
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetAuditLogsSortDir(str, Enum):
+class GetAuditLogsQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetAuditLogsSortKey(str, Enum):
+class GetAuditLogsQueryParamSortKey(str, Enum):
     r"""sort key"""
     TIME = 'time'
     ACTION = 'action'
@@ -36,9 +36,9 @@ class GetAuditLogsRequest:
     r"""Object Type"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
-    sort_dir: Optional[GetAuditLogsSortDir] = dataclasses.field(default=GetAuditLogsSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAuditLogsQueryParamSortDir] = dataclasses.field(default=GetAuditLogsQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAuditLogsSortKey] = dataclasses.field(default=GetAuditLogsSortKey.TIME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAuditLogsQueryParamSortKey] = dataclasses.field(default=GetAuditLogsQueryParamSortKey.TIME, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user', 'style': 'form', 'explode': True }})
     r"""User name"""
@@ -52,7 +52,7 @@ class GetAuditLogsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    audit_logs: Optional[List[shared_auditlog.AuditLog]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_auditlog.AuditLog]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

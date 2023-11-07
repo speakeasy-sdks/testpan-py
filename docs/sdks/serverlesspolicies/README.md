@@ -1,5 +1,5 @@
 # ServerlessPolicies
-(*serverless_policies*)
+(*.serverless_policies*)
 
 ### Available Operations
 

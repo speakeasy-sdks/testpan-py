@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import enforcementoption as shared_enforcementoption
+from .enforcementoption import EnforcementOption
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 
@@ -12,6 +12,6 @@ from pan import utils
 class APISecurityCdPolicyElement:
     api_security_profile: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('apiSecurityProfile') }})
     r"""The allowed api security profile for the pipeline"""
-    enforcement_option: shared_enforcementoption.EnforcementOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enforcementOption') }})
+    enforcement_option: EnforcementOption = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('enforcementOption') }})
     
 

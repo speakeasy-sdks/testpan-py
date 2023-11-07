@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import mitretechniquefixinfo as shared_mitretechniquefixinfo
+from ...models.shared import mitretechniquefixinfo as shared_mitretechniquefixinfo
 from enum import Enum
 from typing import List, Optional
 
-class PostMitreTechniqueFixMitreTechniqueType(str, Enum):
+class QueryParamMitreTechniqueType(str, Enum):
     r"""MITRE technique type"""
     COMPROMISED_IMAGES = 'COMPROMISED_IMAGES'
     UNAUTHORISED_REGISTRIES_USAGE = 'UNAUTHORISED_REGISTRIES_USAGE'
@@ -38,7 +38,7 @@ class PostMitreTechniqueFixMitreTechniqueType(str, Enum):
 @dataclasses.dataclass
 class PostMitreTechniqueFixRequest:
     mitre_technique_fix_info: shared_mitretechniquefixinfo.MitreTechniqueFixInfo = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    mitre_technique_type: PostMitreTechniqueFixMitreTechniqueType = dataclasses.field(metadata={'query_param': { 'field_name': 'mitreTechniqueType', 'style': 'form', 'explode': True }})
+    mitre_technique_type: QueryParamMitreTechniqueType = dataclasses.field(metadata={'query_param': { 'field_name': 'mitreTechniqueType', 'style': 'form', 'explode': True }})
     r"""MITRE technique type"""
     clusters_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'clustersIds', 'style': 'form', 'explode': True }})
     r"""the clusters ids to filter by"""

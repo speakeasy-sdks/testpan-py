@@ -1,5 +1,5 @@
 # API
-(*api*)
+(*.api*)
 
 ## Overview
 
@@ -29,7 +29,7 @@ s = pan.Pan(
 
 res = s.api.get_api()
 
-if res.get_api_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

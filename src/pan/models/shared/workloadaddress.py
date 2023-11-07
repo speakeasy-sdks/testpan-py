@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import networkprotocol as shared_networkprotocol
+from .networkprotocol import NetworkProtocol
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,6 +12,6 @@ from typing import Optional
 @dataclasses.dataclass
 class WorkloadAddress:
     address: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
-    network_protocol: Optional[shared_networkprotocol.NetworkProtocol] = dataclasses.field(default=shared_networkprotocol.NetworkProtocol.TCP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('networkProtocol'), 'exclude': lambda f: f is None }})
+    network_protocol: Optional[NetworkProtocol] = dataclasses.field(default=NetworkProtocol.TCP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('networkProtocol'), 'exclude': lambda f: f is None }})
     
 

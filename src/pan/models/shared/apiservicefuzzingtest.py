@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apiservicefuzzingprogress as shared_apiservicefuzzingprogress
-from ..shared import fuzzingtesttags as shared_fuzzingtesttags
+from .apiservicefuzzingprogress import APIServiceFuzzingProgress
+from .fuzzingtesttags import FuzzingTestTags
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIServiceFuzzingTest:
-    tags: Optional[shared_fuzzingtesttags.FuzzingTestTags] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
-    test_details: Optional[shared_apiservicefuzzingprogress.APIServiceFuzzingProgress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('testDetails'), 'exclude': lambda f: f is None }})
+    tags: Optional[FuzzingTestTags] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
+    test_details: Optional[APIServiceFuzzingProgress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('testDetails'), 'exclude': lambda f: f is None }})
     
 

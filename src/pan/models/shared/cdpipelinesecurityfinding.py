@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cdpipelinefindingtype as shared_cdpipelinefindingtype
-from ..shared import cdpipelinesecurityfindingvalue as shared_cdpipelinesecurityfindingvalue
+from .cdpipelinefindingtype import CDPipelineFindingType
+from .cdpipelinesecurityfindingvalue import CDPipelineSecurityFindingValue
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CDPipelineSecurityFinding:
-    type: Optional[shared_cdpipelinefindingtype.CDPipelineFindingType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    value: Optional[shared_cdpipelinesecurityfindingvalue.CDPipelineSecurityFindingValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
+    type: Optional[CDPipelineFindingType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    value: Optional[CDPipelineSecurityFindingValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
     
 

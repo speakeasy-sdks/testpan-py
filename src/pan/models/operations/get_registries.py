@@ -3,25 +3,25 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import registry as shared_registry
+from ...models.shared import registry as shared_registry
 from enum import Enum
 from typing import List, Optional
 
-class GetRegistriesSortDir(str, Enum):
+class GetRegistriesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetRegistriesSortKey(str, Enum):
+class GetRegistriesQueryParamSortKey(str, Enum):
     r"""sort key"""
     URL = 'url'
 
 
 @dataclasses.dataclass
 class GetRegistriesRequest:
-    sort_dir: Optional[GetRegistriesSortDir] = dataclasses.field(default=GetRegistriesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetRegistriesQueryParamSortDir] = dataclasses.field(default=GetRegistriesQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetRegistriesSortKey] = dataclasses.field(default=GetRegistriesSortKey.URL, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetRegistriesQueryParamSortKey] = dataclasses.field(default=GetRegistriesQueryParamSortKey.URL, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     
 
@@ -33,9 +33,9 @@ class GetRegistriesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    classes: Optional[List[shared_registry.Registry]] = dataclasses.field(default=None)
+    r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    registries: Optional[List[shared_registry.Registry]] = dataclasses.field(default=None)
-    r"""Success"""
     
 

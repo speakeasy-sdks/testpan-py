@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apisecuritypolicyriskseverity as shared_apisecuritypolicyriskseverity
+from .apisecuritypolicyriskseverity import APISecurityPolicyRiskSeverity
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 
@@ -10,6 +10,6 @@ from pan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APISecurityPolicyGlobalCondition:
-    highest_accepted_severity: shared_apisecuritypolicyriskseverity.APISecurityPolicyRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestAcceptedSeverity') }})
+    highest_accepted_severity: APISecurityPolicyRiskSeverity = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('highestAcceptedSeverity') }})
     
 

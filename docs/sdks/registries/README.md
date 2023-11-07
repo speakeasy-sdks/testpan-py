@@ -1,5 +1,5 @@
 # Registries
-(*registries*)
+(*.registries*)
 
 ## Overview
 
@@ -75,7 +75,7 @@ req = operations.GetRegistriesRequest()
 
 res = s.registries.get_registries(req)
 
-if res.registries is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -114,7 +114,7 @@ req = shared.RegistryInput(
         '95b632a5-fe89-4e35-884b-fdb5be5f9972',
     ],
     credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
     ),
     type=shared.RegistryType.AZURE,
     url='http://svelte-curio.org',
@@ -161,7 +161,7 @@ req = shared.RegistryInput(
         '146c9745-4e65-4c13-96b3-e4e8e106ebca',
     ],
     credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
     ),
     type=shared.RegistryType.OTHER,
     url='http://handy-energy.net',
@@ -204,12 +204,12 @@ s = pan.Pan(
 )
 
 req = operations.PostRegistriesTestConnectionRegistryIDRequest(
-    registry_input=shared.RegistryInput(
+    registry=shared.RegistryInput(
         cluster_ids=[
             '309c9980-a8e5-4df0-8f7a-f1c1e7dae13c',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
         ),
         type=shared.RegistryType.AWS,
         url='http://blond-horror.org',
@@ -254,12 +254,12 @@ s = pan.Pan(
 )
 
 req = operations.PutRegistriesRegistryIDRequest(
-    registry_input=shared.RegistryInput(
+    registry=shared.RegistryInput(
         cluster_ids=[
             'bb846b91-90fe-4927-838c-5cc07f3bb118',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsRegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
         ),
         type=shared.RegistryType.AWS,
         url='https://mixed-affiliate.info',

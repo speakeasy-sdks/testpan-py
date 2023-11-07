@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import recommendationconnectionrule as shared_recommendationconnectionrule
+from .recommendationconnectionrule import RecommendationConnectionRule
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import Optional
@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ConnectionsRuleRecommendation:
-    connection_rule: Optional[shared_recommendationconnectionrule.RecommendationConnectionRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRule'), 'exclude': lambda f: f is None }})
+    connection_rule: Optional[RecommendationConnectionRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connectionRule'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     number_of_affected_connections: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('numberOfAffectedConnections'), 'exclude': lambda f: f is None }})
     

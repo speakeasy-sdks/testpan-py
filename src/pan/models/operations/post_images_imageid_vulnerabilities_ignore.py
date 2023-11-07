@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import uuidlist as shared_uuidlist
+from ...models.shared import uuidlist as shared_uuidlist
 from enum import Enum
 from typing import Optional
 
-class PostImagesImageIDVulnerabilitiesIgnoreActionType(str, Enum):
+class QueryParamActionType(str, Enum):
     r"""The ignore action type (ADD/REMOVE)"""
     ADD = 'ADD'
     REMOVE = 'REMOVE'
 
-class PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime(str, Enum):
+class SnoozeTime(str, Enum):
     r"""The time to snooze the vulnerability"""
     ALWAYS = 'ALWAYS'
     YEAR = 'YEAR'
@@ -22,11 +22,11 @@ class PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime(str, Enum):
 
 @dataclasses.dataclass
 class PostImagesImageIDVulnerabilitiesIgnoreRequest:
-    action_type: PostImagesImageIDVulnerabilitiesIgnoreActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
+    action_type: QueryParamActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
     r"""The ignore action type (ADD/REMOVE)"""
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    snooze_time: Optional[PostImagesImageIDVulnerabilitiesIgnoreSnoozeTime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'snoozeTime', 'style': 'form', 'explode': True }})
+    snooze_time: Optional[SnoozeTime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'snoozeTime', 'style': 'form', 'explode': True }})
     r"""The time to snooze the vulnerability"""
     
 

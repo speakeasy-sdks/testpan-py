@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apifuzzingtestconfiguration as shared_apifuzzingtestconfiguration
-from ..shared import apiservicefuzzingtest as shared_apiservicefuzzingtest
+from ...models.shared import apifuzzingtestconfiguration as shared_apifuzzingtestconfiguration
+from ...models.shared import apiservicefuzzingtest as shared_apiservicefuzzingtest
 from typing import Optional
 
 

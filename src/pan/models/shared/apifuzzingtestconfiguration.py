@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import authorizationscheme as shared_authorizationscheme
-from ..shared import testinputdepthenum as shared_testinputdepthenum
+from .authorizationscheme import AuthorizationScheme
+from .testinputdepthenum import TestInputDepthEnum
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 
@@ -11,8 +11,8 @@ from pan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APIFuzzingTestConfiguration:
-    auth: shared_authorizationscheme.AuthorizationScheme = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth') }})
-    depth: shared_testinputdepthenum.TestInputDepthEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('depth') }})
+    auth: AuthorizationScheme = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth') }})
+    depth: TestInputDepthEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('depth') }})
     r"""An enumeration for input depth parameter."""
     
 

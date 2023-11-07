@@ -1,5 +1,5 @@
 # Serverless
-(*serverless*)
+(*.serverless*)
 
 ### Available Operations
 
@@ -82,12 +82,12 @@ s = pan.Pan(
 )
 
 req = operations.GetCloudAccountsRequest(
-    sort_key=operations.GetCloudAccountsSortKey.LAST_SCANNED,
+    sort_key=operations.GetCloudAccountsQueryParamSortKey.LAST_SCANNED,
 )
 
 res = s.serverless.get_cloud_accounts(req)
 
-if res.cloud_accounts is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -186,7 +186,7 @@ s = pan.Pan(
 
 res = s.serverless.get_cloud_accounts_regions_aws()
 
-if res.aws_regions is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -217,7 +217,7 @@ s = pan.Pan(
 
 res = s.serverless.get_cloud_accounts_regions_azure()
 
-if res.get_cloud_accounts_regions_azure_200_application_json_strings is not None:
+if res.strings is not None:
     # handle response
     pass
 ```
@@ -291,7 +291,7 @@ req = operations.GetCloudAccountsCloudAccountIDDownloadBundleRequest(
 
 res = s.serverless.get_cloud_accounts_cloud_account_id_download_bundle(req)
 
-if res.get_cloud_accounts_cloud_account_id_download_bundle_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```
@@ -333,22 +333,22 @@ req = operations.GetServerlessFunctionsRequest(
         'string',
     ],
     policy_risk=[
-        operations.GetServerlessFunctionsPolicyRisk.LOW,
+        operations.PolicyRisk.LOW,
     ],
     result=[
-        operations.GetServerlessFunctionsResult.ALLOW,
+        operations.QueryParamResult.ALLOW,
     ],
     risk=[
-        operations.GetServerlessFunctionsRisk.HIGH,
+        operations.QueryParamRisk.HIGH,
     ],
     secrets_risk=[
-        operations.GetServerlessFunctionsSecretsRisk.RISK_IDENTIFIED,
+        operations.SecretsRisk.RISK_IDENTIFIED,
     ],
 )
 
 res = s.serverless.get_serverless_functions(req)
 
-if res.serverless_functions is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -390,7 +390,7 @@ req = operations.GetServerlessFunctionsArnsRequest(
 
 res = s.serverless.get_serverless_functions_arns(req)
 
-if res.serverless_function_arns is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -432,7 +432,7 @@ req = operations.GetServerlessFunctionsNamesRequest(
 
 res = s.serverless.get_serverless_functions_names(req)
 
-if res.serverless_function_names is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -512,7 +512,7 @@ req = operations.GetServerlessFunctionsFunctionIDSecretsRequest(
 
 res = s.serverless.get_serverless_functions_function_id_secrets(req)
 
-if res.serverless_function_secret_issues is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -552,7 +552,7 @@ req = operations.GetServerlessFunctionsFunctionIDVulnerabilitiesRequest(
 
 res = s.serverless.get_serverless_functions_function_id_vulnerabilities(req)
 
-if res.vulnerabilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -590,7 +590,7 @@ req = operations.GetServerlessZipFilesRequest()
 
 res = s.serverless.get_serverless_zip_files(req)
 
-if res.serverless_zips is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -670,7 +670,7 @@ req = operations.GetServerlessZipFilesZipIDPackagesRequest(
 
 res = s.serverless.get_serverless_zip_files_zip_id_packages(req)
 
-if res.image_package_details is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -710,7 +710,7 @@ req = operations.GetServerlessZipFilesZipIDVulnerabilitiesRequest(
 
 res = s.serverless.get_serverless_zip_files_zip_id_vulnerabilities(req)
 
-if res.vulnerabilities is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -787,7 +787,7 @@ s = pan.Pan(
 )
 
 req = operations.PutCloudAccountsCloudAccountIDRequest(
-    cloud_account_input=shared.CloudAccountInput(
+    cloud_account=shared.CloudAccountInput(
         periodic_job_expression=shared.ServerlessPeriodicJobExpression(
             periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),

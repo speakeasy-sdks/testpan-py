@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import imagesbompathresponse as shared_imagesbompathresponse
+from ...models.shared import imagesbompathresponse as shared_imagesbompathresponse
 from typing import Optional
 
 

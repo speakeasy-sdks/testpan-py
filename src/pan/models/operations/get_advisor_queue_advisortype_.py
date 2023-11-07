@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import policyadvisorstate as shared_policyadvisorstate
+from ...models.shared import policyadvisorstate as shared_policyadvisorstate
 from enum import Enum
 from typing import Optional
 
-class GetAdvisorQueueAdvisorTypeAdvisorType(str, Enum):
+class AdvisorType(str, Enum):
     ENVIRONMENT = 'ENVIRONMENT'
     POD_SECURITY_STANDARD = 'POD_SECURITY_STANDARD'
     CONNECTION_RULES = 'CONNECTION_RULES'
@@ -17,7 +17,7 @@ class GetAdvisorQueueAdvisorTypeAdvisorType(str, Enum):
 
 @dataclasses.dataclass
 class GetAdvisorQueueAdvisorTypeRequest:
-    advisor_type: GetAdvisorQueueAdvisorTypeAdvisorType = dataclasses.field(metadata={'path_param': { 'field_name': 'advisorType', 'style': 'simple', 'explode': False }})
+    advisor_type: AdvisorType = dataclasses.field(metadata={'path_param': { 'field_name': 'advisorType', 'style': 'simple', 'explode': False }})
     
 
 

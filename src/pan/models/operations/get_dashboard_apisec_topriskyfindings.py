@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apisectopriskyfindingswidget as shared_apisectopriskyfindingswidget
+from ...models.shared import apisectopriskyfindingswidget as shared_apisectopriskyfindingswidget
 from enum import Enum
 from typing import Optional
 
-class GetDashboardApisecTopRiskyFindingsAPISecSource(str, Enum):
+class GetDashboardApisecTopRiskyFindingsQueryParamAPISecSource(str, Enum):
     r"""source filter. an enum representing the source of the APIs service in scope"""
     INTERNAL = 'INTERNAL'
     EXTERNAL = 'EXTERNAL'
@@ -15,7 +15,7 @@ class GetDashboardApisecTopRiskyFindingsAPISecSource(str, Enum):
 
 @dataclasses.dataclass
 class GetDashboardApisecTopRiskyFindingsRequest:
-    api_sec_source: GetDashboardApisecTopRiskyFindingsAPISecSource = dataclasses.field(default=GetDashboardApisecTopRiskyFindingsAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
+    api_sec_source: GetDashboardApisecTopRiskyFindingsQueryParamAPISecSource = dataclasses.field(default=GetDashboardApisecTopRiskyFindingsQueryParamAPISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import trustedsigner as shared_trustedsigner
+from ...models.shared import trustedsigner as shared_trustedsigner
 from typing import Optional
 
 

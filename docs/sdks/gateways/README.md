@@ -1,5 +1,5 @@
 # Gateways
-(*gateways*)
+(*.gateways*)
 
 ### Available Operations
 
@@ -71,7 +71,7 @@ req = operations.GetGatewaysRequest()
 
 res = s.gateways.get_gateways(req)
 
-if res.gateways is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -106,12 +106,12 @@ s = pan.Pan(
 )
 
 req = operations.GetGatewaysClustersRequest(
-    gateway_type=operations.GetGatewaysClustersGatewayType.TYK_INTERNAL,
+    gateway_type=operations.GatewayType.TYK_INTERNAL,
 )
 
 res = s.gateways.get_gateways_clusters(req)
 
-if res.gateway_cluster_infos is not None:
+if res.classes is not None:
     # handle response
     pass
 ```
@@ -151,7 +151,7 @@ req = operations.GetGatewaysGatewayIDDownloadBundleRequest(
 
 res = s.gateways.get_gateways_gateway_id_download_bundle(req)
 
-if res.get_gateways_gateway_id_download_bundle_200_application_json_binary_string is not None:
+if res.stream is not None:
     # handle response
     pass
 ```

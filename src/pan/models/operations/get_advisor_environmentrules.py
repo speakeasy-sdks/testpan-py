@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import environmentrulesrecommendationperiod as shared_environmentrulesrecommendationperiod
+from ...models.shared import environmentrulesrecommendationperiod as shared_environmentrulesrecommendationperiod
 from typing import List, Optional
 
 
@@ -13,7 +13,7 @@ class GetAdvisorEnvironmentRulesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    environment_rules_recommendation_periods: Optional[List[shared_environmentrulesrecommendationperiod.EnvironmentRulesRecommendationPeriod]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_environmentrulesrecommendationperiod.EnvironmentRulesRecommendationPeriod]] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

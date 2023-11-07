@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import seccompprofile as shared_seccompprofile
+from ...models.shared import seccompprofile as shared_seccompprofile
 from typing import Optional
 
 

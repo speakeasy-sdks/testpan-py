@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import licensingdashboard as shared_licensingdashboard
+from ...models.shared import licensingdashboard as shared_licensingdashboard
 from typing import Optional
 
 

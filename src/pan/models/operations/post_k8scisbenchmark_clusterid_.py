@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclusterssummary
+from ...models.shared import k8scisbenchmarkclusterssummary as shared_k8scisbenchmarkclusterssummary
 from typing import Optional
 
 

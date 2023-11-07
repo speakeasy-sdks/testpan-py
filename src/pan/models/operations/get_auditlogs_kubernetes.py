@@ -3,23 +3,23 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import kubernetesauditlog as shared_kubernetesauditlog
+from ...models.shared import kubernetesauditlog as shared_kubernetesauditlog
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class GetAuditLogsKubernetesResult(str, Enum):
+class Result(str, Enum):
     ALLOW = 'ALLOW'
     DETECT = 'DETECT'
     BLOCK = 'BLOCK'
     RISKY = 'RISKY'
 
-class GetAuditLogsKubernetesSortDir(str, Enum):
+class GetAuditLogsKubernetesQueryParamSortDir(str, Enum):
     r"""sorting direction"""
     ASC = 'ASC'
     DESC = 'DESC'
 
-class GetAuditLogsKubernetesSortKey(str, Enum):
+class GetAuditLogsKubernetesQueryParamSortKey(str, Enum):
     r"""sort key"""
     FIRST_SEEN = 'firstSeen'
     LAST_SEEN = 'lastSeen'
@@ -52,11 +52,11 @@ class GetAuditLogsKubernetesRequest:
     r"""Resource kind"""
     resource_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'resourceName', 'style': 'form', 'explode': True }})
     r"""Resource name"""
-    result: Optional[List[GetAuditLogsKubernetesResult]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
+    result: Optional[List[Result]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'result', 'style': 'form', 'explode': False }})
     r"""event result filter"""
-    sort_dir: Optional[GetAuditLogsKubernetesSortDir] = dataclasses.field(default=GetAuditLogsKubernetesSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
+    sort_dir: Optional[GetAuditLogsKubernetesQueryParamSortDir] = dataclasses.field(default=GetAuditLogsKubernetesQueryParamSortDir.ASC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
-    sort_key: Optional[GetAuditLogsKubernetesSortKey] = dataclasses.field(default=GetAuditLogsKubernetesSortKey.LAST_SEEN, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    sort_key: Optional[GetAuditLogsKubernetesQueryParamSortKey] = dataclasses.field(default=GetAuditLogsKubernetesQueryParamSortKey.LAST_SEEN, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
     r"""sort key"""
     user: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user', 'style': 'form', 'explode': True }})
     r"""User name"""
@@ -70,7 +70,7 @@ class GetAuditLogsKubernetesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    kubernetes_audit_logs: Optional[List[shared_kubernetesauditlog.KubernetesAuditLog]] = dataclasses.field(default=None)
+    classes: Optional[List[shared_kubernetesauditlog.KubernetesAuditLog]] = dataclasses.field(default=None)
     r"""Success"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

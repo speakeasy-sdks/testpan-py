@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import performancemetrics as shared_performancemetrics
+from ...models.shared import performancemetrics as shared_performancemetrics
 from datetime import datetime
 from typing import Optional
 

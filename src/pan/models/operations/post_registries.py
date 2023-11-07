@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import registry as shared_registry
+from ...models.shared import registry as shared_registry
 from typing import Optional
 
 

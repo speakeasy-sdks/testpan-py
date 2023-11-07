@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import appruleaction as shared_appruleaction
-from ..shared import defaultrule as shared_defaultrule
-from ..shared import unidentifiedpodsrule as shared_unidentifiedpodsrule
-from ..shared import userrule as shared_userrule
-from ..shared import violationreason as shared_violationreason
+from .appruleaction import AppRuleAction
+from .defaultrule import DefaultRule
+from .unidentifiedpodsrule import UnidentifiedPodsRule
+from .userrule import UserRule
+from .violationreason import ViolationReason
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from pan import utils
@@ -18,16 +18,16 @@ from typing import List, Optional
 @dataclasses.dataclass
 class ViolationInfo:
     r"""If the the App is running on an environment on which it is not allowed to run, this object contains the rule it violated."""
-    action: Optional[shared_appruleaction.AppRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
+    action: Optional[AppRuleAction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
     r"""App rule action"""
     comment: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('comment'), 'exclude': lambda f: f is None }})
-    default_rule: Optional[shared_defaultrule.DefaultRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule'), 'exclude': lambda f: f is None }})
+    default_rule: Optional[DefaultRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule'), 'exclude': lambda f: f is None }})
     last_violation: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastViolation'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    mutate_rule: Optional[shared_userrule.UserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('mutateRule'), 'exclude': lambda f: f is None }})
+    mutate_rule: Optional[UserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('mutateRule'), 'exclude': lambda f: f is None }})
     psp_violation_reasons: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pspViolationReasons'), 'exclude': lambda f: f is None }})
     unidentified_pod_reasons: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedPodReasons'), 'exclude': lambda f: f is None }})
-    unidentified_pods_rule: Optional[shared_unidentifiedpodsrule.UnidentifiedPodsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedPodsRule'), 'exclude': lambda f: f is None }})
-    user_rule: Optional[shared_userrule.UserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRule'), 'exclude': lambda f: f is None }})
-    violation_reasons: Optional[List[shared_violationreason.ViolationReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violationReasons'), 'exclude': lambda f: f is None }})
+    unidentified_pods_rule: Optional[UnidentifiedPodsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unidentifiedPodsRule'), 'exclude': lambda f: f is None }})
+    user_rule: Optional[UserRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRule'), 'exclude': lambda f: f is None }})
+    violation_reasons: Optional[List[ViolationReason]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('violationReasons'), 'exclude': lambda f: f is None }})
     
 

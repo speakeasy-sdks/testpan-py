@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import cipolicy as shared_cipolicy
+from ...models.shared import cipolicy as shared_cipolicy
 from typing import Optional
 
 
