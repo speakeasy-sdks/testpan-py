@@ -13,6 +13,7 @@ class RuntimeMap:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_network_map_queue_request_id_(self, request: operations.DeleteNetworkMapQueueRequestIDRequest) -> operations.DeleteNetworkMapQueueRequestIDResponse:
         r"""Cancel the network map background job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class RuntimeMap:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class RuntimeMap:
         return res
 
     
+    
     def get_network_map(self, request: operations.GetNetworkMapRequest) -> operations.GetNetworkMapResponse:
         r"""Get data for network map"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class RuntimeMap:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -72,6 +80,7 @@ class RuntimeMap:
         return res
 
     
+    
     def get_network_map_queue_request_id_(self, request: operations.GetNetworkMapQueueRequestIDRequest) -> operations.GetNetworkMapQueueRequestIDResponse:
         r"""Get status for network map background job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -81,7 +90,10 @@ class RuntimeMap:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -100,6 +112,7 @@ class RuntimeMap:
         return res
 
     
+    
     def get_network_map_results_request_id_(self, request: operations.GetNetworkMapResultsRequestIDRequest) -> operations.GetNetworkMapResultsRequestIDResponse:
         r"""Get result for network map background job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -109,7 +122,10 @@ class RuntimeMap:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

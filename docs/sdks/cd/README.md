@@ -1,5 +1,5 @@
 # Cd
-(*.cd*)
+(*cd*)
 
 ## Overview
 
@@ -56,7 +56,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCdRuleIDConnectionsRuleResponse](../../models/operations/deletecdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_cd_rule_id_serverless_rule
 
@@ -96,7 +100,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCdRuleIDServerlessRuleResponse](../../models/operations/deletecdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cd
 
@@ -138,7 +146,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCdResponse](../../models/operations/getcdresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cd_resource_id_
 
@@ -178,7 +190,11 @@ if res.cd_pipeline_resource_result is not None:
 ### Response
 
 **[operations.GetCdResourceIDResponse](../../models/operations/getcdresourceidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cd_rule_id_connections_rule
 
@@ -218,7 +234,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.GetCdRuleIDConnectionsRuleResponse](../../models/operations/getcdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cd_rule_id_serverless_rule
 
@@ -258,7 +278,11 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.GetCdRuleIDServerlessRuleResponse](../../models/operations/getcdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_cd_connections_rule
 
@@ -303,7 +327,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.PostCdConnectionsRuleResponse](../../models/operations/postcdconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_cd_serverless_rule
 
@@ -357,7 +385,11 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.PostCdServerlessRuleResponse](../../models/operations/postcdserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_cd_rule_id_connections_rule
 
@@ -405,7 +437,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.PutCdRuleIDConnectionsRuleResponse](../../models/operations/putcdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_cd_rule_id_serverless_rule
 
@@ -462,4 +498,8 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.PutCdRuleIDServerlessRuleResponse](../../models/operations/putcdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

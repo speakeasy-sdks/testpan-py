@@ -13,6 +13,7 @@ class K8sCisBenchmark:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_k8s_cis_benchmark(self, request: operations.GetK8sCISBenchmarkRequest) -> operations.GetK8sCISBenchmarkResponse:
         r"""Get k8s cis benchmark for clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,7 +24,10 @@ class K8sCisBenchmark:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -42,6 +46,7 @@ class K8sCisBenchmark:
         return res
 
     
+    
     def get_k8s_cis_benchmark_summary(self) -> operations.GetK8sCISBenchmarkSummaryResponse:
         r"""Get k8s cis benchmark summary of account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,7 +56,10 @@ class K8sCisBenchmark:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -70,6 +78,7 @@ class K8sCisBenchmark:
         return res
 
     
+    
     def get_k8s_cis_benchmark_cluster_id_(self, request: operations.GetK8sCISBenchmarkClusterIDRequest) -> operations.GetK8sCISBenchmarkClusterIDResponse:
         r"""Get k8s cis benchmark for a specific cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -79,7 +88,10 @@ class K8sCisBenchmark:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -94,6 +106,7 @@ class K8sCisBenchmark:
         return res
 
     
+    
     def post_k8s_cis_benchmark_cluster_id_(self, request: operations.PostK8sCISBenchmarkClusterIDRequest) -> operations.PostK8sCISBenchmarkClusterIDResponse:
         r"""initiate k8s cis benchmark scan for a specific cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -103,7 +116,10 @@ class K8sCisBenchmark:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -122,6 +138,7 @@ class K8sCisBenchmark:
         return res
 
     
+    
     def put_k8s_cis_benchmark_cluster_id_(self, request: operations.PutK8sCISBenchmarkClusterIDRequest) -> operations.PutK8sCISBenchmarkClusterIDResponse:
         r"""edit k8s cis benchmark for a specific cluster with test statuses"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -136,7 +153,10 @@ class K8sCisBenchmark:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

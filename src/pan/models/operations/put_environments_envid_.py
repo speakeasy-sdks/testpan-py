@@ -4,13 +4,14 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import environment as shared_environment
+from ...models.shared import environment_input as shared_environment_input
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutEnvironmentsEnvIDRequest:
     env_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'envId', 'style': 'simple', 'explode': False }})
-    environment: shared_environment.EnvironmentInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    environment: shared_environment_input.EnvironmentInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""Environment definition"""
     
 

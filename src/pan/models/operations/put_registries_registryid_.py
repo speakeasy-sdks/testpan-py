@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclasses.dataclass
 class PutRegistriesRegistryIDRequest:
-    registry: shared_registry.RegistryInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    registry: shared_registry_input.RegistryInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     registry_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'registryId', 'style': 'simple', 'explode': False }})
     
 
