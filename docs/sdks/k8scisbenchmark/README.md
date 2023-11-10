@@ -1,5 +1,5 @@
 # K8sCisBenchmark
-(*.k8s_cis_benchmark*)
+(*k8s_cis_benchmark*)
 
 ## Overview
 
@@ -53,7 +53,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetK8sCISBenchmarkResponse](../../models/operations/getk8scisbenchmarkresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_k8s_cis_benchmark_summary
 
@@ -84,7 +88,11 @@ if res.k8s_cis_benchmark_account_summary is not None:
 ### Response
 
 **[operations.GetK8sCISBenchmarkSummaryResponse](../../models/operations/getk8scisbenchmarksummaryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_k8s_cis_benchmark_cluster_id_
 
@@ -124,7 +132,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.GetK8sCISBenchmarkClusterIDResponse](../../models/operations/getk8scisbenchmarkclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_k8s_cis_benchmark_cluster_id_
 
@@ -164,7 +176,11 @@ if res.k8s_cis_benchmark_clusters_summary is not None:
 ### Response
 
 **[operations.PostK8sCISBenchmarkClusterIDResponse](../../models/operations/postk8scisbenchmarkclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_k8s_cis_benchmark_cluster_id_
 
@@ -212,4 +228,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutK8sCISBenchmarkClusterIDResponse](../../models/operations/putk8scisbenchmarkclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

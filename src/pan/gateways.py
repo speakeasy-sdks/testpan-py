@@ -12,6 +12,7 @@ class Gateways:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_gateways_gateway_id_(self, request: operations.DeleteGatewaysGatewayIDRequest) -> operations.DeleteGatewaysGatewayIDResponse:
         r"""Delete gateway"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,7 +22,10 @@ class Gateways:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -36,6 +40,7 @@ class Gateways:
         return res
 
     
+    
     def get_gateways(self, request: operations.GetGatewaysRequest) -> operations.GetGatewaysResponse:
         r"""Get gateways"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,7 +51,10 @@ class Gateways:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -65,6 +73,7 @@ class Gateways:
         return res
 
     
+    
     def get_gateways_clusters(self, request: operations.GetGatewaysClustersRequest) -> operations.GetGatewaysClustersResponse:
         r"""Get clusters info"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -75,7 +84,10 @@ class Gateways:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -94,6 +106,7 @@ class Gateways:
         return res
 
     
+    
     def get_gateways_gateway_id_download_bundle(self, request: operations.GetGatewaysGatewayIDDownloadBundleRequest) -> operations.GetGatewaysGatewayIDDownloadBundleResponse:
         r"""Get a GW installation script
         In order to install,  extract and run \"./install_bundle.sh\" 
@@ -105,7 +118,10 @@ class Gateways:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -129,6 +145,7 @@ class Gateways:
         return res
 
     
+    
     def post_gateways(self, request: shared.Gateway) -> operations.PostGatewaysResponse:
         r"""Add new gateway"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -143,7 +160,10 @@ class Gateways:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -162,6 +182,7 @@ class Gateways:
         return res
 
     
+    
     def put_gateways_gateway_id_(self, request: operations.PutGatewaysGatewayIDRequest) -> operations.PutGatewaysGatewayIDResponse:
         r"""Edit gateway"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -176,7 +197,10 @@ class Gateways:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
