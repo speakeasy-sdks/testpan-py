@@ -9,7 +9,7 @@ from typing import Optional
 
 @dataclasses.dataclass
 class PutCloudAccountsCloudAccountIDRequest:
-    cloud_account: shared_cloudaccount.CloudAccountInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    cloud_account: shared_cloudaccount_input.CloudAccountInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     cloud_account_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'cloudAccountId', 'style': 'simple', 'explode': False }})
     r"""cloud account ID"""
     

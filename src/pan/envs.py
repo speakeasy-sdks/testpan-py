@@ -13,6 +13,7 @@ class Envs:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_environments_env_id_(self, request: operations.DeleteEnvironmentsEnvIDRequest) -> operations.DeleteEnvironmentsEnvIDResponse:
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +22,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -42,6 +46,7 @@ class Envs:
         return res
 
     
+    
     def get_environments(self, request: operations.GetEnvironmentsRequest) -> operations.GetEnvironmentsResponse:
         r"""List all defined Secure Application environments"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -52,7 +57,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -71,6 +79,7 @@ class Envs:
         return res
 
     
+    
     def get_environments_env_id_(self, request: operations.GetEnvironmentsEnvIDRequest) -> operations.GetEnvironmentsEnvIDResponse:
         r"""get a Secure Application environment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,7 +89,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,6 +111,7 @@ class Envs:
         return res
 
     
+    
     def get_environments_env_id_delete_dependencies(self, request: operations.GetEnvironmentsEnvIDDeleteDependenciesRequest) -> operations.GetEnvironmentsEnvIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified environment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -108,7 +121,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -133,6 +149,7 @@ class Envs:
         return res
 
     
+    
     def post_environments(self, request: shared.EnvironmentInput) -> operations.PostEnvironmentsResponse:
         r"""Add a new environment
         Add a  Secure Application environment. An instance should be contained in a single environment. The environment is defined by a VPC and an optional tag. If a tag is supplied, only instances in the specified VPC with the given tag will belong to the new environment.
@@ -149,7 +166,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -168,6 +188,7 @@ class Envs:
         return res
 
     
+    
     def post_environments_batch(self, request: List[shared.EnvironmentInput]) -> operations.PostEnvironmentsBatchResponse:
         r"""Add a number of  Secure Application environments
         Add a number of new Secure Application environments. This is similar to the 'Add environment' method, but for multiple environments.
@@ -184,7 +205,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -203,6 +227,7 @@ class Envs:
         return res
 
     
+    
     def post_environments_delete(self) -> operations.PostEnvironmentsDeleteResponse:
         r"""Delete multiple Secure Application environments
         Delete multiple Secure Application environments.
@@ -214,7 +239,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -235,6 +263,7 @@ class Envs:
         return res
 
     
+    
     def put_environments_env_id_(self, request: operations.PutEnvironmentsEnvIDRequest) -> operations.PutEnvironmentsEnvIDResponse:
         r"""Edit an existing Secure Application environment
         Edit an existing Secure Application environment.
@@ -251,7 +280,10 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

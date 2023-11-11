@@ -13,6 +13,7 @@ class Registries:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_registries_registry_id_(self, request: operations.DeleteRegistriesRegistryIDRequest) -> operations.DeleteRegistriesRegistryIDResponse:
         r"""Delete a registry"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Registries:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class Registries:
         return res
 
     
+    
     def get_registries(self, request: operations.GetRegistriesRequest) -> operations.GetRegistriesResponse:
         r"""Get a list of defined registries"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class Registries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,6 +74,7 @@ class Registries:
         return res
 
     
+    
     def post_registries(self, request: shared.RegistryInput) -> operations.PostRegistriesResponse:
         r"""Add new registry"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,7 +89,10 @@ class Registries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,6 +111,7 @@ class Registries:
         return res
 
     
+    
     def post_registries_test_connection(self, request: shared.RegistryInput) -> operations.PostRegistriesTestConnectionResponse:
         r"""test registry connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class Registries:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,6 +143,7 @@ class Registries:
 
         return res
 
+    
     
     def post_registries_test_connection_registry_id_(self, request: operations.PostRegistriesTestConnectionRegistryIDRequest) -> operations.PostRegistriesTestConnectionRegistryIDResponse:
         r"""test registry connection"""
@@ -142,7 +159,10 @@ class Registries:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -156,6 +176,7 @@ class Registries:
 
         return res
 
+    
     
     def put_registries_registry_id_(self, request: operations.PutRegistriesRegistryIDRequest) -> operations.PutRegistriesRegistryIDResponse:
         r"""edit existing registry"""
@@ -171,7 +192,10 @@ class Registries:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

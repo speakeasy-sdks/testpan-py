@@ -13,6 +13,7 @@ class Advisor:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_advisor_cluster_event_rules(self) -> operations.GetAdvisorClusterEventRulesResponse:
         r"""Returns a list of suggested cluster event rules"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -41,6 +45,7 @@ class Advisor:
         return res
 
     
+    
     def get_advisor_connection_rules(self) -> operations.GetAdvisorConnectionRulesResponse:
         r"""Returns a list of suggested connection rules"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -50,7 +55,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -69,6 +77,7 @@ class Advisor:
         return res
 
     
+    
     def get_advisor_environment(self) -> operations.GetAdvisorEnvironmentResponse:
         r"""Returns a list of suggested kubernetes environments"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -78,7 +87,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -97,6 +109,7 @@ class Advisor:
         return res
 
     
+    
     def get_advisor_environment_rules(self) -> operations.GetAdvisorEnvironmentRulesResponse:
         r"""Returns a list of suggested environment rules"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -106,7 +119,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -125,6 +141,7 @@ class Advisor:
         return res
 
     
+    
     def get_advisor_pod_security_policy(self) -> operations.GetAdvisorPodSecurityPolicyResponse:
         r"""Returns a list of suggested kubernetes Pod Security Standards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -134,7 +151,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -153,6 +173,7 @@ class Advisor:
         return res
 
     
+    
     def get_advisor_queue_advisor_type_(self, request: operations.GetAdvisorQueueAdvisorTypeRequest) -> operations.GetAdvisorQueueAdvisorTypeResponse:
         r"""Get status for policy advisor background job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -162,7 +183,10 @@ class Advisor:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -181,6 +205,7 @@ class Advisor:
         return res
 
     
+    
     def post_advisor_run(self, request: operations.PostAdvisorRunRequest) -> operations.PostAdvisorRunResponse:
         r"""Runs the policy advisor"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -191,7 +216,10 @@ class Advisor:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

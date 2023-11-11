@@ -13,6 +13,7 @@ class Expansions:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_expansions_expansion_id_(self, request: operations.DeleteExpansionsExpansionIDRequest) -> operations.DeleteExpansionsExpansionIDResponse:
         r"""Delete an expansion"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Expansions:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class Expansions:
         return res
 
     
+    
     def get_expansions(self, request: operations.GetExpansionsRequest) -> operations.GetExpansionsResponse:
         r"""List all the expansions on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class Expansions:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,6 +74,7 @@ class Expansions:
         return res
 
     
+    
     def get_expansions_expansion_id_install_expansion_tar_gz(self, request: operations.GetExpansionsExpansionIDInstallExpansionTarGzRequest) -> operations.GetExpansionsExpansionIDInstallExpansionTarGzResponse:
         r"""Get the expansion installation"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -75,7 +84,10 @@ class Expansions:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,6 +111,7 @@ class Expansions:
         return res
 
     
+    
     def post_expansions(self, request: shared.ExpansionInput) -> operations.PostExpansionsResponse:
         r"""Create a new expansion"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class Expansions:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -132,6 +148,7 @@ class Expansions:
         return res
 
     
+    
     def put_expansions_expansion_id_(self, request: operations.PutExpansionsExpansionIDRequest) -> operations.PutExpansionsExpansionIDResponse:
         r"""Edit expansion definition"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -146,7 +163,10 @@ class Expansions:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
