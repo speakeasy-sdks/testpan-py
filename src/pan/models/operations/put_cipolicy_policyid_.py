@@ -4,12 +4,13 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import cipolicy as shared_cipolicy
+from ...models.shared import cipolicy_input as shared_cipolicy_input
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutCiPolicyPolicyIDRequest:
-    ci_policy: shared_cipolicy.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    ci_policy: shared_cipolicy_input.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'policyId', 'style': 'simple', 'explode': False }})
     
 

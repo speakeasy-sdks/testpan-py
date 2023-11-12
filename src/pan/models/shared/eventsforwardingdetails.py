@@ -19,14 +19,3 @@ class EventsForwardingDetails:
     url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url'), 'exclude': lambda f: f is None }})
     
 
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
-class EventsForwardingDetailsInput:
-    events_forwarding_details_type: EventsForwardingDetailsTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsForwardingDetailsType') }})
-    events_to_forward: List[EventsToForward] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('eventsToForward') }})
-    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('url'), 'exclude': lambda f: f is None }})
-    
-

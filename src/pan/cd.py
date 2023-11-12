@@ -13,6 +13,7 @@ class Cd:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_cd_rule_id_connections_rule(self, request: operations.DeleteCdRuleIDConnectionsRuleRequest) -> operations.DeleteCdRuleIDConnectionsRuleResponse:
         r"""delete a cd connection rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Cd:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class Cd:
         return res
 
     
+    
     def delete_cd_rule_id_serverless_rule(self, request: operations.DeleteCdRuleIDServerlessRuleRequest) -> operations.DeleteCdRuleIDServerlessRuleResponse:
         r"""delete a cd serverless rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,7 +51,10 @@ class Cd:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -61,6 +69,7 @@ class Cd:
         return res
 
     
+    
     def get_cd(self, request: operations.GetCdRequest) -> operations.GetCdResponse:
         r"""Get all the CD pipelines results"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -71,7 +80,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -90,6 +102,7 @@ class Cd:
         return res
 
     
+    
     def get_cd_resource_id_(self, request: operations.GetCdResourceIDRequest) -> operations.GetCdResourceIDResponse:
         r"""Get A single CD pipeline results"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -100,7 +113,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -119,6 +135,7 @@ class Cd:
         return res
 
     
+    
     def get_cd_rule_id_connections_rule(self, request: operations.GetCdRuleIDConnectionsRuleRequest) -> operations.GetCdRuleIDConnectionsRuleResponse:
         r"""get a cd connection rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -128,7 +145,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -147,6 +167,7 @@ class Cd:
         return res
 
     
+    
     def get_cd_rule_id_serverless_rule(self, request: operations.GetCdRuleIDServerlessRuleRequest) -> operations.GetCdRuleIDServerlessRuleResponse:
         r"""get a cd serverless rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -156,7 +177,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -175,6 +199,7 @@ class Cd:
         return res
 
     
+    
     def post_cd_connections_rule(self, request: shared.CdConnectionRule) -> operations.PostCdConnectionsRuleResponse:
         r"""Adds cd connection rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -189,7 +214,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -208,6 +236,7 @@ class Cd:
         return res
 
     
+    
     def post_cd_serverless_rule(self, request: shared.CdServerlessRule) -> operations.PostCdServerlessRuleResponse:
         r"""Adds cd serverless rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -222,7 +251,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -241,6 +273,7 @@ class Cd:
         return res
 
     
+    
     def put_cd_rule_id_connections_rule(self, request: operations.PutCdRuleIDConnectionsRuleRequest) -> operations.PutCdRuleIDConnectionsRuleResponse:
         r"""update a cd connection rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -255,7 +288,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -274,6 +310,7 @@ class Cd:
         return res
 
     
+    
     def put_cd_rule_id_serverless_rule(self, request: operations.PutCdRuleIDServerlessRuleRequest) -> operations.PutCdRuleIDServerlessRuleResponse:
         r"""update a cd serverless rule."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -288,7 +325,10 @@ class Cd:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

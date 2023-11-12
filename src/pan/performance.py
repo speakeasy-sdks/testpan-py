@@ -12,6 +12,7 @@ class Performance:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_api_security_api_catalog_id_hit_count_graph(self, request: operations.GetAPISecurityAPICatalogIDHitCountGraphRequest) -> operations.GetAPISecurityAPICatalogIDHitCountGraphResponse:
         r"""Get hit count for specific spec path"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Performance:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -41,6 +45,7 @@ class Performance:
         return res
 
     
+    
     def get_performance_metrics(self, request: operations.GetPerformanceMetricsRequest) -> operations.GetPerformanceMetricsResponse:
         r"""Get performance metrics for a connection between workloads"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,7 +56,10 @@ class Performance:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

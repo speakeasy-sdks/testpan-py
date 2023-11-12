@@ -13,6 +13,7 @@ class CICDPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_cd_policy_policy_id_(self, request: operations.DeleteCdPolicyPolicyIDRequest) -> operations.DeleteCdPolicyPolicyIDResponse:
         r"""Delete CD policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class CICDPolicies:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class CICDPolicies:
         return res
 
     
+    
     def delete_ci_policy_policy_id_(self, request: operations.DeleteCiPolicyPolicyIDRequest) -> operations.DeleteCiPolicyPolicyIDResponse:
         r"""Delete CI policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,7 +51,10 @@ class CICDPolicies:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -61,6 +69,7 @@ class CICDPolicies:
         return res
 
     
+    
     def get_cd_policy(self) -> operations.GetCdPolicyResponse:
         r"""Get the current CD policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -70,7 +79,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -89,6 +101,7 @@ class CICDPolicies:
         return res
 
     
+    
     def get_ci_policy(self) -> operations.GetCiPolicyResponse:
         r"""Get the current CI policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -98,7 +111,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -117,6 +133,7 @@ class CICDPolicies:
         return res
 
     
+    
     def post_cd_policy(self, request: shared.CdPolicyInput) -> operations.PostCdPolicyResponse:
         r"""Set the current CD policy. At least one CdPolicyElement should be present"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -131,7 +148,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -150,6 +170,7 @@ class CICDPolicies:
         return res
 
     
+    
     def post_ci_policy(self, request: shared.CiPolicyInput) -> operations.PostCiPolicyResponse:
         r"""Set the current CI policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -164,7 +185,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -183,6 +207,7 @@ class CICDPolicies:
         return res
 
     
+    
     def put_cd_policy_policy_id_(self, request: operations.PutCdPolicyPolicyIDRequest) -> operations.PutCdPolicyPolicyIDResponse:
         r"""Edit CD policy. At least one CdPolicyElement should be present"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -197,7 +222,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -216,6 +244,7 @@ class CICDPolicies:
         return res
 
     
+    
     def put_ci_policy_policy_id_(self, request: operations.PutCiPolicyPolicyIDRequest) -> operations.PutCiPolicyPolicyIDResponse:
         r"""Edit CI policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -230,7 +259,10 @@ class CICDPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

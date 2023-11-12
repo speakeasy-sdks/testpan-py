@@ -12,6 +12,7 @@ class Bfla:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_api_security_internal_catalog_catalog_id_bfla_detection(self, request: operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest) -> operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionResponse:
         r"""stop bfla detection phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,7 +22,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,6 +43,7 @@ class Bfla:
         return res
 
     
+    
     def delete_api_security_internal_catalog_catalog_id_bfla_learning(self, request: operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest) -> operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningResponse:
         r"""stop bfla learning phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -48,7 +53,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,6 +74,7 @@ class Bfla:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_bfla(self, request: operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDBflaResponse:
         r"""Get bfla info for given catalogId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -75,7 +84,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -94,6 +106,7 @@ class Bfla:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_detection(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse:
         r"""Start new bfla detection phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -108,7 +121,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -126,6 +142,7 @@ class Bfla:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_learning(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningResponse:
         r"""Start new bfla learning phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -140,7 +157,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,6 +178,7 @@ class Bfla:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_reset(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaResetResponse:
         r"""Reset bfla model"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -167,7 +188,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -185,6 +209,7 @@ class Bfla:
         return res
 
     
+    
     def put_api_security_internal_catalog_catalog_id_bfla(self, request: operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest) -> operations.PutAPISecurityInternalCatalogCatalogIDBflaResponse:
         r"""update BFLA info for this catalogId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -199,7 +224,10 @@ class Bfla:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
