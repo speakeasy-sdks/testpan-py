@@ -13,6 +13,7 @@ class Telemetries:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_app_telemetries(self, request: operations.GetAppTelemetriesRequest) -> operations.GetAppTelemetriesResponse:
         r"""Get App telemetries"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,7 +24,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -42,6 +46,7 @@ class Telemetries:
         return res
 
     
+    
     def get_app_telemetries_app_telemetry_id_(self, request: operations.GetAppTelemetriesAppTelemetryIDRequest) -> operations.GetAppTelemetriesAppTelemetryIDResponse:
         r"""Get App telemetry by ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,7 +56,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -70,6 +78,7 @@ class Telemetries:
         return res
 
     
+    
     def get_app_telemetries_app_telemetry_id_api_risk_info(self, request: operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoRequest) -> operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoResponse:
         r"""Get API risks info of given app telemetry"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -79,7 +88,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -98,6 +110,7 @@ class Telemetries:
         return res
 
     
+    
     def get_app_telemetries_app_telemetry_id_image_packages(self, request: operations.GetAppTelemetriesAppTelemetryIDImagePackagesRequest) -> operations.GetAppTelemetriesAppTelemetryIDImagePackagesResponse:
         r"""list packages with licenses runnin on a pod"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -107,7 +120,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -126,6 +142,7 @@ class Telemetries:
         return res
 
     
+    
     def get_app_telemetries_app_telemetry_id_injection_info(self, request: operations.GetAppTelemetriesAppTelemetryIDInjectionInfoRequest) -> operations.GetAppTelemetriesAppTelemetryIDInjectionInfoResponse:
         r"""Get token injection info of given app telemetry"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -135,7 +152,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -154,6 +174,7 @@ class Telemetries:
         return res
 
     
+    
     def get_connection_telemetries(self, request: operations.GetConnectionTelemetriesRequest) -> operations.GetConnectionTelemetriesResponse:
         r"""Get connection telemetries"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -164,7 +185,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -183,6 +207,7 @@ class Telemetries:
         return res
 
     
+    
     def get_connection_telemetries_connection_telemetry_id_(self, request: operations.GetConnectionTelemetriesConnectionTelemetryIDRequest) -> operations.GetConnectionTelemetriesConnectionTelemetryIDResponse:
         r"""get details for a single connection telemetry"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -193,7 +218,10 @@ class Telemetries:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

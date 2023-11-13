@@ -13,6 +13,7 @@ class Deployers:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_deployers_deployer_id_(self, request: operations.DeleteDeployersDeployerIDRequest) -> operations.DeleteDeployersDeployerIDResponse:
         r"""Delete an deployer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Deployers:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class Deployers:
         return res
 
     
+    
     def get_deployers(self, request: operations.GetDeployersRequest) -> operations.GetDeployersResponse:
         r"""List all the deployers on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class Deployers:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,6 +74,7 @@ class Deployers:
         return res
 
     
+    
     def get_deployers_service_accounts(self, request: operations.GetDeployersServiceAccountsRequest) -> operations.GetDeployersServiceAccountsResponse:
         r"""List all the service account on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -76,7 +85,10 @@ class Deployers:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,6 +107,7 @@ class Deployers:
         return res
 
     
+    
     def get_deployers_deployer_id_delete_dependencies(self, request: operations.GetDeployersDeployerIDDeleteDependenciesRequest) -> operations.GetDeployersDeployerIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified deployer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -104,7 +117,10 @@ class Deployers:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -129,6 +145,7 @@ class Deployers:
         return res
 
     
+    
     def post_deployers(self, request: shared.DeployerInput) -> operations.PostDeployersResponse:
         r"""Create a new deployer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -143,7 +160,10 @@ class Deployers:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -162,6 +182,7 @@ class Deployers:
         return res
 
     
+    
     def put_deployers_deployer_id_(self, request: operations.PutDeployersDeployerIDRequest) -> operations.PutDeployersDeployerIDResponse:
         r"""Edit deployer definition"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -176,7 +197,10 @@ class Deployers:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

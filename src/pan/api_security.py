@@ -13,6 +13,7 @@ class APISecurity:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_api_security_api_catalog_id_(self, request: operations.DeleteAPISecurityAPICatalogIDRequest) -> operations.DeleteAPISecurityAPICatalogIDResponse:
         r"""Delete an API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class APISecurity:
         return res
 
     
+    
     def delete_api_security_internal_catalog_catalog_id_bfla_detection(self, request: operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest) -> operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionResponse:
         r"""stop bfla detection phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,7 +51,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -64,6 +72,7 @@ class APISecurity:
         return res
 
     
+    
     def delete_api_security_internal_catalog_catalog_id_bfla_learning(self, request: operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest) -> operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningResponse:
         r"""stop bfla learning phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -73,7 +82,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -91,6 +103,7 @@ class APISecurity:
         return res
 
     
+    
     def delete_api_security_open_api_specs_catalog_id_(self, request: operations.DeleteAPISecurityOpenAPISpecsCatalogIDRequest) -> operations.DeleteAPISecurityOpenAPISpecsCatalogIDResponse:
         r"""delete open api spec include all of it findings and scores"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -100,7 +113,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -119,6 +135,7 @@ class APISecurity:
         return res
 
     
+    
     def delete_gateways_gateway_id_(self, request: operations.DeleteGatewaysGatewayIDRequest) -> operations.DeleteGatewaysGatewayIDResponse:
         r"""Delete gateway"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -128,7 +145,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -143,6 +163,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_external_catalog(self, request: operations.GetAPISecurityExternalCatalogRequest) -> operations.GetAPISecurityExternalCatalogResponse:
         r"""Get a list of APIs and their compliance"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -153,7 +174,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -172,6 +196,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_external_catalog_count(self, request: operations.GetAPISecurityExternalCatalogCountRequest) -> operations.GetAPISecurityExternalCatalogCountResponse:
         r"""Get the number of existing 3rd party APIs in the inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -182,7 +207,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -201,6 +229,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_external_catalog_catalog_id_(self, request: operations.GetAPISecurityExternalCatalogCatalogIDRequest) -> operations.GetAPISecurityExternalCatalogCatalogIDResponse:
         r"""Get information about a specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -211,7 +240,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -230,6 +262,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog(self, request: operations.GetAPISecurityInternalCatalogRequest) -> operations.GetAPISecurityInternalCatalogResponse:
         r"""Get a list of APIs and their compliance"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -240,7 +273,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -259,6 +295,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_count(self, request: operations.GetAPISecurityInternalCatalogCountRequest) -> operations.GetAPISecurityInternalCatalogCountResponse:
         r"""Get the number of existing 3rd party APIs in the inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -269,7 +306,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -288,6 +328,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_(self, request: operations.GetAPISecurityInternalCatalogCatalogIDRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDResponse:
         r"""Get information about a specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -298,7 +339,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -317,6 +361,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_bfla(self, request: operations.GetAPISecurityInternalCatalogCatalogIDBflaRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDBflaResponse:
         r"""Get bfla info for given catalogId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -326,7 +371,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -345,6 +393,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_fuzzing_status(self, request: operations.GetAPISecurityInternalCatalogCatalogIDFuzzingStatusRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDFuzzingStatusResponse:
         r"""Get status of the last/running fuzzing test"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -354,7 +403,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -373,6 +425,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_fuzzing_tests(self, request: operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsResponse:
         r"""Get list of fuzzing tests"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -382,7 +435,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -401,6 +457,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_internal_catalog_catalog_id_trace_analysis(self, request: operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisRequest) -> operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisResponse:
         r"""Get trace analysis details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -411,7 +468,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -430,6 +490,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDResponse:
         r"""Get provided and reconstructed open api specs for specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -439,7 +500,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -458,6 +522,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_diff_detection_status(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusResponse:
         r"""Get provided and reconstructed open api specs for specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -467,7 +532,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -486,6 +554,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_get_open_api_spec_score_status(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDGetOpenAPISpecScoreStatusRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDGetOpenAPISpecScoreStatusResponse:
         r"""Get open api spec score status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -495,7 +564,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -514,6 +586,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONResponse:
         r"""Get provided spec content as json"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -523,7 +596,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -541,6 +617,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_reconstructed_spec_review(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewResponse:
         r"""Get the suggestions of a spec reconstruction (or previously cached info)"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -550,7 +627,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -569,6 +649,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_reconstructed_spec_status(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusResponse:
         r"""Get the status of a spec reconstruction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -578,7 +659,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -597,6 +681,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_open_api_specs_catalog_id_reconstructed_spec_json(self, request: operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest) -> operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONResponse:
         r"""Get reconstructed open api spec as json for specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -607,7 +692,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -625,6 +713,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_risk_findings(self, request: operations.GetAPISecurityRiskFindingsRequest) -> operations.GetAPISecurityRiskFindingsResponse:
         r"""Get a list of risk findings"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -635,7 +724,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -654,6 +746,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_risk_findings_categories(self) -> operations.GetAPISecurityRiskFindingsCategoriesResponse:
         r"""Get a list of risk findings categories"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -663,7 +756,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -682,6 +778,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_risk_findings_sources(self) -> operations.GetAPISecurityRiskFindingsSourcesResponse:
         r"""Get a list of risk findings sources"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -691,7 +788,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -710,6 +810,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_risk_findings_risk_finding_id_(self, request: operations.GetAPISecurityRiskFindingsRiskFindingIDRequest) -> operations.GetAPISecurityRiskFindingsRiskFindingIDResponse:
         r"""Get a specific risk findings"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -719,7 +820,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -738,6 +842,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_catalog_id_delete_dependencies(self, request: operations.GetAPISecurityCatalogIDDeleteDependenciesRequest) -> operations.GetAPISecurityCatalogIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified api security service"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -747,7 +852,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -772,6 +880,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_catalog_id_methods(self, request: operations.GetAPISecurityCatalogIDMethodsRequest) -> operations.GetAPISecurityCatalogIDMethodsResponse:
         r"""Get a list of an API spec methods for a specific API and its spec's tags"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -782,7 +891,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -801,6 +913,7 @@ class APISecurity:
         return res
 
     
+    
     def get_api_security_catalog_id_tags(self, request: operations.GetAPISecurityCatalogIDTagsRequest) -> operations.GetAPISecurityCatalogIDTagsResponse:
         r"""Get a list of an API spec tags or a specific API"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -810,7 +923,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -829,6 +945,7 @@ class APISecurity:
         return res
 
     
+    
     def get_dashboard_apisec_risk_findings(self, request: operations.GetDashboardApisecRiskFindingsRequest) -> operations.GetDashboardApisecRiskFindingsResponse:
         r"""Get API sec risk findings widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -839,7 +956,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -858,6 +978,7 @@ class APISecurity:
         return res
 
     
+    
     def get_dashboard_apisec_risk_findings_trend(self, request: operations.GetDashboardApisecRiskFindingsTrendRequest) -> operations.GetDashboardApisecRiskFindingsTrendResponse:
         r"""Get API sec risk findings trend graph widget for the last 30 days"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -868,7 +989,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -887,6 +1011,7 @@ class APISecurity:
         return res
 
     
+    
     def get_dashboard_apisec_specs_and_operations_diffs(self, request: operations.GetDashboardApisecSpecsAndOperationsDiffsRequest) -> operations.GetDashboardApisecSpecsAndOperationsDiffsResponse:
         r"""Get API sec specs and operations diffs widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -897,7 +1022,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -916,6 +1044,7 @@ class APISecurity:
         return res
 
     
+    
     def get_dashboard_apisec_top_risky_apis(self, request: operations.GetDashboardApisecTopRiskyApisRequest) -> operations.GetDashboardApisecTopRiskyApisResponse:
         r"""Get API sec top risky APIs widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -926,7 +1055,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -945,6 +1077,7 @@ class APISecurity:
         return res
 
     
+    
     def get_dashboard_apisec_top_risky_findings(self, request: operations.GetDashboardApisecTopRiskyFindingsRequest) -> operations.GetDashboardApisecTopRiskyFindingsResponse:
         r"""Get API sec top risky findings widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -955,7 +1088,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -974,6 +1110,7 @@ class APISecurity:
         return res
 
     
+    
     def get_gateways(self, request: operations.GetGatewaysRequest) -> operations.GetGatewaysResponse:
         r"""Get gateways"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -984,7 +1121,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1003,6 +1143,7 @@ class APISecurity:
         return res
 
     
+    
     def get_gateways_clusters(self, request: operations.GetGatewaysClustersRequest) -> operations.GetGatewaysClustersResponse:
         r"""Get clusters info"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1013,7 +1154,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1032,6 +1176,7 @@ class APISecurity:
         return res
 
     
+    
     def get_gateways_gateway_id_download_bundle(self, request: operations.GetGatewaysGatewayIDDownloadBundleRequest) -> operations.GetGatewaysGatewayIDDownloadBundleResponse:
         r"""Get a GW installation script
         In order to install,  extract and run \"./install_bundle.sh\" 
@@ -1043,7 +1188,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1067,6 +1215,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_api(self, request: shared.APISecurityAPI) -> operations.PostAPISecurityAPIResponse:
         r"""Register an API for scoring"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1081,7 +1230,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1099,6 +1251,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_detection(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse:
         r"""Start new bfla detection phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1113,7 +1266,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1131,6 +1287,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_learning(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningResponse:
         r"""Start new bfla learning phase"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1145,7 +1302,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1163,6 +1323,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_bfla_reset(self, request: operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDBflaResetResponse:
         r"""Reset bfla model"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1172,7 +1333,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1190,6 +1354,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_reset_trace_analysis(self, request: operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisResponse:
         r"""Reset trace analysis"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1199,7 +1364,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1213,6 +1381,7 @@ class APISecurity:
 
         return res
 
+    
     
     def post_api_security_internal_catalog_catalog_id_start_fuzzing(self, request: operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingResponse:
         r"""Start new fuzzing test"""
@@ -1228,7 +1397,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1247,6 +1419,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_start_trace_analysis(self, request: operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisResponse:
         r"""Start trace analysis"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1261,7 +1434,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1276,6 +1452,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_stop_fuzzing(self, request: operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingResponse:
         r"""Stop fuzzing test"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1285,7 +1462,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1300,6 +1480,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_internal_catalog_catalog_id_stop_trace_analysis(self, request: operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisRequest) -> operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisResponse:
         r"""Stop trace analysis"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1309,7 +1490,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1324,6 +1508,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_open_api_specs_catalog_id_reconstructed_spec_abort(self, request: operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortRequest) -> operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortResponse:
         r"""abort learning and reconstructing an API via API Clarity"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1333,7 +1518,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1348,6 +1536,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_open_api_specs_catalog_id_reconstructed_spec_learn(self, request: operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnRequest) -> operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnResponse:
         r"""Start learning and reconstructing an API via API Clarity"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1360,7 +1549,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1374,6 +1566,7 @@ class APISecurity:
 
         return res
 
+    
     
     def post_api_security_open_api_specs_catalog_id_reconstructed_spec_review_approve(self, request: operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveRequest) -> operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveResponse:
         r"""Approve reconstructed spec suggestions (only 1 approval per catalogId)"""
@@ -1389,7 +1582,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1403,6 +1599,7 @@ class APISecurity:
 
         return res
 
+    
     
     def post_api_security_open_api_specs_catalog_id_start_diffs_detection(self, request: operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest) -> operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionResponse:
         r"""Start spec diffs detection"""
@@ -1418,7 +1615,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1433,6 +1633,7 @@ class APISecurity:
         return res
 
     
+    
     def post_api_security_open_api_specs_catalog_id_stop_diffs_detection(self, request: operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionRequest) -> operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionResponse:
         r"""stop spec diffs detection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1442,7 +1643,10 @@ class APISecurity:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1456,6 +1660,7 @@ class APISecurity:
 
         return res
 
+    
     
     def post_gateways(self, request: shared.Gateway) -> operations.PostGatewaysResponse:
         r"""Add new gateway"""
@@ -1471,7 +1676,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1490,6 +1698,7 @@ class APISecurity:
         return res
 
     
+    
     def put_api_security_internal_catalog_catalog_id_bfla(self, request: operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest) -> operations.PutAPISecurityInternalCatalogCatalogIDBflaResponse:
         r"""update BFLA info for this catalogId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1504,7 +1713,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1522,6 +1734,7 @@ class APISecurity:
         return res
 
     
+    
     def put_api_security_open_api_specs_catalog_id_(self, request: operations.PutAPISecurityOpenAPISpecsCatalogIDRequest) -> operations.PutAPISecurityOpenAPISpecsCatalogIDResponse:
         r"""Add or edit a spec about a specific API for the account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1536,7 +1749,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1555,6 +1771,7 @@ class APISecurity:
         return res
 
     
+    
     def put_gateways_gateway_id_(self, request: operations.PutGatewaysGatewayIDRequest) -> operations.PutGatewaysGatewayIDResponse:
         r"""Edit gateway"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1569,7 +1786,10 @@ class APISecurity:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

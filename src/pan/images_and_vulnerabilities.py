@@ -13,6 +13,7 @@ class ImagesAndVulnerabilities:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_images_id_(self, request: operations.DeleteImagesIDRequest) -> operations.DeleteImagesIDResponse:
         r"""Delete an image hash"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_account_vulnerabilities_xlsx(self, request: operations.GetAccountVulnerabilitiesXlsxRequest) -> operations.GetAccountVulnerabilitiesXlsxResponse:
         r"""Returns a xlsx file of images alongside to their vulnerabilities."""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -62,6 +70,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images(self, request: operations.GetImagesRequest) -> operations.GetImagesResponse:
         r"""Returns a list of images"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -72,7 +81,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -91,6 +103,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_images_hash(self, request: operations.GetImagesImagesHashRequest) -> operations.GetImagesImagesHashResponse:
         r"""search for image hash in the account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -101,7 +114,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -120,6 +136,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_vulnerabilities_by_image_name_and_hash(self, request: operations.GetImagesVulnerabilitiesByImageNameAndHashRequest) -> operations.GetImagesVulnerabilitiesByImageNameAndHashResponse:
         r"""Returns a list of vulnerabilities detected in the image"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -130,7 +147,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,6 +169,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_id_(self, request: operations.GetImagesIDRequest) -> operations.GetImagesIDResponse:
         r"""get an image"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -158,7 +179,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -177,6 +201,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_image_id_dockerfile_scan_results(self, request: operations.GetImagesImageIDDockerfileScanResultsRequest) -> operations.GetImagesImageIDDockerfileScanResultsResponse:
         r"""Returns a list of vulnerabilities detected in the  image"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -187,7 +212,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -206,6 +234,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_image_id_image_layers(self, request: operations.GetImagesImageIDImageLayersRequest) -> operations.GetImagesImageIDImageLayersResponse:
         r"""Returns a list of image layers"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -216,7 +245,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -235,6 +267,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_image_id_packages(self, request: operations.GetImagesImageIDPackagesRequest) -> operations.GetImagesImageIDPackagesResponse:
         r"""Returns a list of packages for a specific image"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -244,7 +277,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -263,6 +299,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_image_id_sbom_path(self, request: operations.GetImagesImageIDSbomPathRequest) -> operations.GetImagesImageIDSbomPathResponse:
         r"""Returns the path to the SBOM in cloud storage"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -272,7 +309,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -291,6 +331,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def get_images_image_id_vulnerabilities(self, request: operations.GetImagesImageIDVulnerabilitiesRequest) -> operations.GetImagesImageIDVulnerabilitiesResponse:
         r"""Returns a list of vulnerabilities detected in the image"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -301,7 +342,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -320,6 +364,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def post_images(self, request: shared.ImageDef) -> operations.PostImagesResponse:
         r"""Define a New image hash"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -334,7 +379,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -353,6 +401,7 @@ class ImagesAndVulnerabilities:
         return res
 
     
+    
     def post_images_approve(self, request: operations.PostImagesApproveRequest) -> operations.PostImagesApproveResponse:
         r"""Approve an image hash"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -368,7 +417,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -382,6 +434,7 @@ class ImagesAndVulnerabilities:
 
         return res
 
+    
     
     def post_images_image_id_dockerfile_scan_results_ignore(self, request: operations.PostImagesImageIDDockerfileScanResultsIgnoreRequest) -> operations.PostImagesImageIDDockerfileScanResultsIgnoreResponse:
         r"""Add / remove a list of  UUIDs of dockerfileScanResults from ignored list"""
@@ -398,7 +451,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -412,6 +468,7 @@ class ImagesAndVulnerabilities:
 
         return res
 
+    
     
     def post_images_image_id_vulnerabilities_ignore(self, request: operations.PostImagesImageIDVulnerabilitiesIgnoreRequest) -> operations.PostImagesImageIDVulnerabilitiesIgnoreResponse:
         r"""Add / remove a list of  UUIDs of vulnerabilities from ignored list"""
@@ -428,7 +485,10 @@ class ImagesAndVulnerabilities:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
