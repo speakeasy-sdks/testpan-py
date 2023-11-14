@@ -4,12 +4,13 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import apisecuritypolicy as shared_apisecuritypolicy
+from ...models.shared import apisecuritypolicy_input as shared_apisecuritypolicy_input
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutAPISecurityPolicyPolicyIDRequest:
-    api_security_policy: shared_apisecuritypolicy.APISecurityPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    api_security_policy: shared_apisecuritypolicy_input.APISecurityPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'policyId', 'style': 'simple', 'explode': False }})
     
 

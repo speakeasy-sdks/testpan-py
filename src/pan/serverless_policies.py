@@ -12,6 +12,7 @@ class ServerlessPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_serverless_policy(self) -> operations.GetServerlessPolicyResponse:
         r"""Get current serverless policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,7 +22,10 @@ class ServerlessPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -40,6 +44,7 @@ class ServerlessPolicies:
         return res
 
     
+    
     def put_serverless_policy(self, request: shared.ServerlessPolicy) -> operations.PutServerlessPolicyResponse:
         r"""Set the current serverless policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -54,7 +59,10 @@ class ServerlessPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
