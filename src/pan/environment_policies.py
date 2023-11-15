@@ -13,6 +13,7 @@ class EnvironmentPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_apps_policy(self, request: operations.GetAppsPolicyRequest) -> operations.GetAppsPolicyResponse:
         r"""Get the current Apps policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,7 +24,10 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -42,6 +46,7 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def get_apps_policy_history(self) -> operations.GetAppsPolicyHistoryResponse:
         r"""Get the history of Apps policies"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,7 +56,10 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -70,6 +78,7 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def get_apps_policy_search_options(self, request: operations.GetAppsPolicySearchOptionsRequest) -> operations.GetAppsPolicySearchOptionsResponse:
         r"""Get the current Apps policy filter option"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,7 +89,10 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,6 +111,7 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def put_apps_policy(self, request: shared.AppPolicy) -> operations.PutAppsPolicyResponse:
         r"""Set the current Apps policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

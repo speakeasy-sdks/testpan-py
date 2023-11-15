@@ -1,5 +1,5 @@
 # PspProfiles
-(*.psp_profiles*)
+(*psp_profiles*)
 
 ## Overview
 
@@ -55,7 +55,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeletePodSecurityPolicyProfilesProfileIDResponse](../../models/operations/deletepodsecuritypolicyprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_seccomp_profiles_profile_id_
 
@@ -95,7 +99,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteSeccompProfilesProfileIDResponse](../../models/operations/deleteseccompprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_pod_security_policy_profiles
 
@@ -126,7 +134,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetPodSecurityPolicyProfilesResponse](../../models/operations/getpodsecuritypolicyprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_seccomp_profiles
 
@@ -157,7 +169,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetSeccompProfilesResponse](../../models/operations/getseccompprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_pod_security_policy_profiles
 
@@ -241,7 +257,11 @@ if res.pod_security_policy is not None:
 ### Response
 
 **[operations.PostPodSecurityPolicyProfilesResponse](../../models/operations/postpodsecuritypolicyprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_pod_security_policy_profiles_batch
 
@@ -320,15 +340,19 @@ if res.classes is not None:
 
 ### Parameters
 
-| Parameter                                           | Type                                                | Required                                            | Description                                         |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| `request`                                           | [List[shared.PodSecurityPolicy]](../../models//.md) | :heavy_check_mark:                                  | The request object to use for the request.          |
+| Parameter                                          | Type                                               | Required                                           | Description                                        |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `request`                                          | [List[shared.PodSecurityPolicy]](../../models/.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
 
 
 ### Response
 
 **[operations.PostPodSecurityPolicyProfilesBatchResponse](../../models/operations/postpodsecuritypolicyprofilesbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_seccomp_profiles
 
@@ -370,7 +394,11 @@ if res.seccomp_profile is not None:
 ### Response
 
 **[operations.PostSeccompProfilesResponse](../../models/operations/postseccompprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_pod_security_policy_profiles_profile_id_
 
@@ -457,7 +485,11 @@ if res.pod_security_policy is not None:
 ### Response
 
 **[operations.PutPodSecurityPolicyProfilesProfileIDResponse](../../models/operations/putpodsecuritypolicyprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_seccomp_profiles_profile_id_
 
@@ -502,4 +534,8 @@ if res.seccomp_profile is not None:
 ### Response
 
 **[operations.PutSeccompProfilesProfileIDResponse](../../models/operations/putseccompprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

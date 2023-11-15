@@ -13,6 +13,7 @@ class TrustedSigners:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_trusted_signers_trusted_signer_id_(self, request: operations.DeleteTrustedSignersTrustedSignerIDRequest) -> operations.DeleteTrustedSignersTrustedSignerIDResponse:
         r"""Delete a trusted signer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class TrustedSigners:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class TrustedSigners:
         return res
 
     
+    
     def get_trusted_signers(self, request: operations.GetTrustedSignersRequest) -> operations.GetTrustedSignersResponse:
         r"""Get a list of defined trusted signers"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -47,7 +52,10 @@ class TrustedSigners:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,6 +74,7 @@ class TrustedSigners:
         return res
 
     
+    
     def get_trusted_signers_trusted_signer_id_(self, request: operations.GetTrustedSignersTrustedSignerIDRequest) -> operations.GetTrustedSignersTrustedSignerIDResponse:
         r"""get existing trusted signer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -75,7 +84,10 @@ class TrustedSigners:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -94,6 +106,7 @@ class TrustedSigners:
         return res
 
     
+    
     def post_trusted_signers(self, request: shared.TrustedSignerInput) -> operations.PostTrustedSignersResponse:
         r"""Add new trusted signer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -108,7 +121,10 @@ class TrustedSigners:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,6 +143,7 @@ class TrustedSigners:
         return res
 
     
+    
     def put_trusted_signers_trusted_signer_id_(self, request: operations.PutTrustedSignersTrustedSignerIDRequest) -> operations.PutTrustedSignersTrustedSignerIDResponse:
         r"""edit existing trusted signer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -141,7 +158,10 @@ class TrustedSigners:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

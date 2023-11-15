@@ -13,6 +13,7 @@ class Users:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_users_user_id_(self, request: operations.DeleteUsersUserIDRequest) -> operations.DeleteUsersUserIDResponse:
         r"""Delete a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Users:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -37,6 +41,7 @@ class Users:
         return res
 
     
+    
     def get_operator_credentials(self) -> operations.GetOperatorCredentialsResponse:
         r"""get the credentials of the Secure Application Operator service user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,7 +51,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -71,6 +79,7 @@ class Users:
         return res
 
     
+    
     def get_users(self, request: operations.GetUsersRequest) -> operations.GetUsersResponse:
         r"""List current users"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -81,7 +90,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -100,6 +112,7 @@ class Users:
         return res
 
     
+    
     def get_users_user_id_access_tokens(self, request: operations.GetUsersUserIDAccessTokensRequest) -> operations.GetUsersUserIDAccessTokensResponse:
         r"""Get the  access tokens for the user
         Get the access tokens for the user, to access Secure Application
@@ -111,7 +124,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -130,6 +146,7 @@ class Users:
         return res
 
     
+    
     def get_users_user_id_delete_dependencies(self, request: operations.GetUsersUserIDDeleteDependenciesRequest) -> operations.GetUsersUserIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -139,7 +156,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -164,6 +184,7 @@ class Users:
         return res
 
     
+    
     def post_account_usage_status(self) -> operations.PostAccountUsageStatusResponse:
         r"""an api to get the account usage status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -173,7 +194,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -192,6 +216,7 @@ class Users:
         return res
 
     
+    
     def post_change_password(self, request: shared.ChangePasswordInfo) -> operations.PostChangePasswordResponse:
         r"""Change the password for the current user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -206,7 +231,10 @@ class Users:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -221,6 +249,7 @@ class Users:
         return res
 
     
+    
     def post_login(self, request: operations.PostLoginRequest) -> operations.PostLoginResponse:
         r"""Login"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -230,7 +259,7 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        client = self.sdk_configuration.client
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -262,6 +291,7 @@ class Users:
         return res
 
     
+    
     def post_logout(self) -> operations.PostLogoutResponse:
         r"""Log out"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -271,7 +301,10 @@ class Users:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -286,6 +319,7 @@ class Users:
         return res
 
     
+    
     def post_me(self) -> operations.PostMeResponse:
         r"""an api to get current logged in user info"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -295,7 +329,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -314,6 +351,7 @@ class Users:
         return res
 
     
+    
     def post_users(self, request: shared.UserInput) -> operations.PostUsersResponse:
         r"""Create a user
         Create a new user. Must be admin user.
@@ -330,7 +368,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -355,6 +396,7 @@ class Users:
         return res
 
     
+    
     def post_users_accept_eula(self) -> operations.PostUsersAcceptEulaResponse:
         r"""Accept the EULA"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -364,7 +406,10 @@ class Users:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -378,6 +423,7 @@ class Users:
 
         return res
 
+    
     
     def post_users_trial(self, request: operations.PostUsersTrialRequest) -> operations.PostUsersTrialResponse:
         r"""Create a trail user"""
@@ -393,7 +439,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -418,6 +467,7 @@ class Users:
         return res
 
     
+    
     def put_users_user_id_(self, request: operations.PutUsersUserIDRequest) -> operations.PutUsersUserIDResponse:
         r"""Change user details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -432,7 +482,10 @@ class Users:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

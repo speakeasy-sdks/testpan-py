@@ -4,12 +4,13 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import poddefinition as shared_poddefinition
+from ...models.shared import poddefinition_input as shared_poddefinition_input
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutPodDefinitionsPodIDRequest:
-    pod_definition: shared_poddefinition.PodDefinitionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    pod_definition: shared_poddefinition_input.PodDefinitionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     pod_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'podId', 'style': 'simple', 'explode': False }})
     
 
