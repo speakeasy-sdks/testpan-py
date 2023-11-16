@@ -11,6 +11,7 @@ from .agentinstance import *
 from .agents import *
 from .agentstatusupdate import *
 from .agentsupdatesettings import *
+from .agentsupdatesettings_input import *
 from .agenttype import *
 from .allowedhostpath import *
 from .allowedprocmounttype import *
@@ -21,6 +22,7 @@ from .apifuzzingtestconfiguration import *
 from .apiprovider_base import *
 from .apiproviderscoregrade import *
 from .apireconstructedspec import *
+from .apireconstructedspec_input import *
 from .apireconstructionrequest import *
 from .apireconstructionresponse import *
 from .apireconstructionstatus import *
@@ -38,6 +40,7 @@ from .apisecurityapi import *
 from .apisecurityapistatus import *
 from .apisecuritycdpolicyelement import *
 from .apisecuritypolicy import *
+from .apisecuritypolicy_input import *
 from .apisecuritypolicycategorycondition import *
 from .apisecuritypolicycategoryconditions import *
 from .apisecuritypolicydeletedependencies import *
@@ -89,6 +92,7 @@ from .auditlog import *
 from .authorizationscheme import *
 from .awsaccount import *
 from .awsenvironment import *
+from .awsenvironment_input import *
 from .awsregion import *
 from .awsrole import *
 from .awsroledetails import *
@@ -114,6 +118,7 @@ from .cdpipelinesecretsfindingrisk import *
 from .cdpipelinesecurityfinding import *
 from .cdpipelinesecurityfindingvalue import *
 from .cdpolicy import *
+from .cdpolicy_input import *
 from .cdpolicyelement import *
 from .cdresult import *
 from .cdsection import *
@@ -121,6 +126,7 @@ from .cdserverlessrule import *
 from .challengerequest import *
 from .changepasswordinfo import *
 from .cipolicy import *
+from .cipolicy_input import *
 from .cisection import *
 from .cloudaccount import *
 from .cloudaccountbase import *
@@ -178,16 +184,19 @@ from .edituser import *
 from .encryptionreason import *
 from .enforcementoption import *
 from .environment import *
+from .environment_input import *
 from .environmentrecommendation import *
 from .environmentrecommendationperiod import *
 from .environmentrulebasic import *
 from .environmentrulerecommendation import *
 from .environmentrulesrecommendationperiod import *
 from .eventsforwardingdetails import *
+from .eventsforwardingdetails_input import *
 from .eventsforwardingdetailslist import *
 from .eventsforwardingdetailstypeenum import *
 from .eventstoforward import *
 from .expansion import *
+from .expansion_input import *
 from .expansionput import *
 from .expansiontelemetryinfo import *
 from .fuzzingmethod import *
@@ -242,6 +251,7 @@ from .kubernetescluster import *
 from .kubernetesclustercontroller import *
 from .kubernetesclusterdeletedependencies import *
 from .kubernetesenvironment import *
+from .kubernetesenvironment_input import *
 from .kubernetesnamespace import *
 from .kubernetesresource import *
 from .kubernetesservice import *
@@ -305,6 +315,7 @@ from .permissionroleresponse import *
 from .permissionsmode import *
 from .permissionswidget import *
 from .poddefinition import *
+from .poddefinition_input import *
 from .poddefinitionsource import *
 from .podidentification import *
 from .podruntimeinfo import *
@@ -363,6 +374,7 @@ from .scoreexitstatusenum import *
 from .scorefinding import *
 from .scorefindinggroup import *
 from .seccompprofile import *
+from .seccompprofile_input import *
 from .seccompprofiledata import *
 from .secretscdpolicyelement import *
 from .security import *
@@ -447,8 +459,11 @@ from .traceanalysisstatus import *
 from .trialuser import *
 from .truncationstatus import *
 from .trustedsigner import *
+from .trustedsigner_input import *
 from .trustedsignercloudaccount import *
+from .trustedsignercloudaccount_input import *
 from .trustedsignercluster import *
+from .trustedsignercluster_input import *
 from .trustedsignerclusterstatus import *
 from .trustedsignerclustervalidation import *
 from .trustedsignerkey import *
@@ -473,6 +488,7 @@ from .violationinfo import *
 from .violationreason import *
 from .violationsmapnodetype import *
 from .vpcdescription import *
+from .vpcdescription_input import *
 from .vpcresponse import *
 from .vulnerabilitiessummary import *
 from .vulnerabilitieswidget import *

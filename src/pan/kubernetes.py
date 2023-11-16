@@ -13,6 +13,7 @@ class Kubernetes:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_kubernetes_clusters_kubernetes_cluster_id_(self, request: operations.DeleteKubernetesClustersKubernetesClusterIDRequest) -> operations.DeleteKubernetesClustersKubernetesClusterIDResponse:
         r"""Delete a Kubernetes cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteKubernetesClustersKubernetesClusterIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -43,6 +47,7 @@ class Kubernetes:
         return res
 
     
+    
     def delete_pod_definitions_pod_id_(self, request: operations.DeletePodDefinitionsPodIDRequest) -> operations.DeletePodDefinitionsPodIDResponse:
         r"""Delete a pod definition"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -52,11 +57,14 @@ class Kubernetes:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeletePodDefinitionsPodIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -67,6 +75,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_get_controller_data_cluster_id_(self, request: operations.GetGetControllerDataClusterIDRequest) -> operations.GetGetControllerDataClusterIDResponse:
         r"""get controller data using clusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -76,11 +85,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetGetControllerDataClusterIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -101,6 +113,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_istio_supported_versions(self) -> operations.GetIstioSupportedVersionsResponse:
         r"""Get a list of istio releases that are supported by Secure Application agent. sorted from latest to oldest"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -110,11 +123,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetIstioSupportedVersionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -129,6 +145,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters(self, request: operations.GetKubernetesClustersRequest) -> operations.GetKubernetesClustersResponse:
         r"""get a list of current Kubernetes clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -139,11 +156,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -164,6 +184,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_(self, request: operations.GetKubernetesClustersKubernetesClusterIDRequest) -> operations.GetKubernetesClustersKubernetesClusterIDResponse:
         r"""get the Kubernetes cluster with the given id"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -173,11 +194,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -198,6 +222,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_delete_dependencies(self, request: operations.GetKubernetesClustersKubernetesClusterIDDeleteDependenciesRequest) -> operations.GetKubernetesClustersKubernetesClusterIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified Kubernetes cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -207,11 +232,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDDeleteDependenciesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -232,6 +260,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_download_bundle(self, request: operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleRequest) -> operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleResponse:
         r"""Get Secure Application installation script
         In order to install,  extract and run \"./install_bundle.sh\" 
@@ -244,11 +273,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -268,6 +300,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_get_helm_commands(self, request: operations.GetKubernetesClustersKubernetesClusterIDGetHelmCommandsRequest) -> operations.GetKubernetesClustersKubernetesClusterIDGetHelmCommandsResponse:
         r"""Get Panoptica Aug release Helm command"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -277,11 +310,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDGetHelmCommandsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -302,6 +338,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_namespaces(self, request: operations.GetKubernetesClustersKubernetesClusterIDNamespacesRequest) -> operations.GetKubernetesClustersKubernetesClusterIDNamespacesResponse:
         r"""List namespaces on a specific Kubernetes cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -312,11 +349,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDNamespacesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -337,6 +377,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_kubernetes_clusters_kubernetes_cluster_id_services(self, request: operations.GetKubernetesClustersKubernetesClusterIDServicesRequest) -> operations.GetKubernetesClustersKubernetesClusterIDServicesResponse:
         r"""List services on a specific Kubernetes cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -347,11 +388,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesClustersKubernetesClusterIDServicesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -372,6 +416,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_lean_kubernetes_clusters(self, request: operations.GetLeanKubernetesClustersRequest) -> operations.GetLeanKubernetesClustersResponse:
         r"""get a list of current Kubernetes clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -382,11 +427,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetLeanKubernetesClustersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -407,6 +455,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_namespaces(self, request: operations.GetNamespacesRequest) -> operations.GetNamespacesResponse:
         r"""Get a list of current Kubernetes namespaces"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -417,11 +466,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetNamespacesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -442,6 +494,7 @@ class Kubernetes:
         return res
 
     
+    
     def get_pod_definitions(self, request: operations.GetPodDefinitionsRequest) -> operations.GetPodDefinitionsResponse:
         r"""Get all pod definitions on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -452,11 +505,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetPodDefinitionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -470,6 +526,7 @@ class Kubernetes:
 
         return res
 
+    
     
     def post_kubernetes_clusters(self, request: shared.KubernetesCluster) -> operations.PostKubernetesClustersResponse:
         r"""Add a new Kubernetes cluster to Secure Application"""
@@ -485,11 +542,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostKubernetesClustersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -510,6 +570,7 @@ class Kubernetes:
         return res
 
     
+    
     def post_pod_definitions(self, request: shared.PodDefinitionInput) -> operations.PostPodDefinitionsResponse:
         r"""Create a new pod definition"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -524,11 +585,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostPodDefinitionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -542,6 +606,7 @@ class Kubernetes:
 
         return res
 
+    
     
     def put_kubernetes_clusters_kubernetes_cluster_id_(self, request: operations.PutKubernetesClustersKubernetesClusterIDRequest) -> operations.PutKubernetesClustersKubernetesClusterIDResponse:
         r"""Update the Kubernetes cluster"""
@@ -557,11 +622,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutKubernetesClustersKubernetesClusterIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -582,6 +650,7 @@ class Kubernetes:
         return res
 
     
+    
     def put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm(self, request: operations.PutKubernetesClustersKubernetesClusterIDManagedByHelmRequest) -> operations.PutKubernetesClustersKubernetesClusterIDManagedByHelmResponse:
         r"""Update the Kubernetes cluster which managed by HELM"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -596,11 +665,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutKubernetesClustersKubernetesClusterIDManagedByHelmResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -621,6 +693,7 @@ class Kubernetes:
         return res
 
     
+    
     def put_pod_definitions_pod_id_(self, request: operations.PutPodDefinitionsPodIDRequest) -> operations.PutPodDefinitionsPodIDResponse:
         r"""Change pod definition"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -635,11 +708,14 @@ class Kubernetes:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutPodDefinitionsPodIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
