@@ -5,7 +5,6 @@ import dataclasses
 import requests as requests_http
 from ...models.shared import uuidlist as shared_uuidlist
 from enum import Enum
-from typing import Optional
 
 class PostRiskAssessmentPermissionsOwnerIDApproveQueryParamActionType(str, Enum):
     r"""The approve action type (ADD/REMOVE)"""
@@ -27,9 +26,9 @@ class PostRiskAssessmentPermissionsOwnerIDApproveRequest:
 class PostRiskAssessmentPermissionsOwnerIDApproveResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

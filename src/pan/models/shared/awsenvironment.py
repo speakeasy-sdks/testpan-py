@@ -3,21 +3,10 @@
 from __future__ import annotations
 import dataclasses
 from .tag import Tag
-from .vpcdescription import VPCDescription, VPCDescriptionInput
+from .vpcdescription import VPCDescription
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
-class AwsEnvironmentInput:
-    vpc: VPCDescriptionInput = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vpc') }})
-    r"""Like VPC but also includes the name"""
-    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    tags: Optional[List[Tag]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
-    
-
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

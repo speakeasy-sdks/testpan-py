@@ -13,6 +13,7 @@ class ClusterEventsPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_kubernetes_api_policy(self) -> operations.GetKubernetesAPIPolicyResponse:
         r"""Get current Kubernetes API policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesAPIPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -41,6 +45,7 @@ class ClusterEventsPolicies:
         return res
 
     
+    
     def get_kubernetes_api_policy_history(self) -> operations.GetKubernetesAPIPolicyHistoryResponse:
         r"""Get the history of the Kubernetes API policies"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -50,11 +55,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesAPIPolicyHistoryResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -69,6 +77,7 @@ class ClusterEventsPolicies:
         return res
 
     
+    
     def get_kubernetes_api_policy_kubernetes_resources(self) -> operations.GetKubernetesAPIPolicyKubernetesResourcesResponse:
         r"""Get the Kubernetes resource list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -78,11 +87,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesAPIPolicyKubernetesResourcesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -97,6 +109,7 @@ class ClusterEventsPolicies:
         return res
 
     
+    
     def get_kubernetes_api_policy_kubernetes_users(self) -> operations.GetKubernetesAPIPolicyKubernetesUsersResponse:
         r"""Get the Kubernetes user list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -106,11 +119,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesAPIPolicyKubernetesUsersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -125,6 +141,7 @@ class ClusterEventsPolicies:
         return res
 
     
+    
     def get_kubernetes_api_policy_recommended_rules(self) -> operations.GetKubernetesAPIPolicyRecommendedRulesResponse:
         r"""Get the recommended Kubernetes API rules"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -134,11 +151,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetKubernetesAPIPolicyRecommendedRulesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -152,6 +172,7 @@ class ClusterEventsPolicies:
 
         return res
 
+    
     
     def put_kubernetes_api_policy(self, request: shared.KubernetesAPIPolicy) -> operations.PutKubernetesAPIPolicyResponse:
         r"""set the current Kubernetes API policy"""
@@ -167,11 +188,14 @@ class ClusterEventsPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutKubernetesAPIPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
