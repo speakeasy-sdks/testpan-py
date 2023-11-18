@@ -13,6 +13,7 @@ class Envs:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_environments_env_id_(self, request: operations.DeleteEnvironmentsEnvIDRequest) -> operations.DeleteEnvironmentsEnvIDResponse:
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,11 +22,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteEnvironmentsEnvIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -34,13 +38,14 @@ class Envs:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get_environments(self, request: operations.GetEnvironmentsRequest) -> operations.GetEnvironmentsResponse:
         r"""List all defined Secure Application environments"""
@@ -52,11 +57,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetEnvironmentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -71,6 +79,7 @@ class Envs:
         return res
 
     
+    
     def get_environments_env_id_(self, request: operations.GetEnvironmentsEnvIDRequest) -> operations.GetEnvironmentsEnvIDResponse:
         r"""get a Secure Application environment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,11 +89,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetEnvironmentsEnvIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -99,6 +111,7 @@ class Envs:
         return res
 
     
+    
     def get_environments_env_id_delete_dependencies(self, request: operations.GetEnvironmentsEnvIDDeleteDependenciesRequest) -> operations.GetEnvironmentsEnvIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified environment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -108,11 +121,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetEnvironmentsEnvIDDeleteDependenciesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -125,13 +141,14 @@ class Envs:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def post_environments(self, request: shared.EnvironmentInput) -> operations.PostEnvironmentsResponse:
         r"""Add a new environment
@@ -149,11 +166,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostEnvironmentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -167,6 +187,7 @@ class Envs:
 
         return res
 
+    
     
     def post_environments_batch(self, request: List[shared.EnvironmentInput]) -> operations.PostEnvironmentsBatchResponse:
         r"""Add a number of  Secure Application environments
@@ -184,11 +205,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostEnvironmentsBatchResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -203,6 +227,7 @@ class Envs:
         return res
 
     
+    
     def post_environments_delete(self) -> operations.PostEnvironmentsDeleteResponse:
         r"""Delete multiple Secure Application environments
         Delete multiple Secure Application environments.
@@ -214,11 +239,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostEnvironmentsDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -227,13 +255,14 @@ class Envs:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def put_environments_env_id_(self, request: operations.PutEnvironmentsEnvIDRequest) -> operations.PutEnvironmentsEnvIDResponse:
         r"""Edit an existing Secure Application environment
@@ -251,11 +280,14 @@ class Envs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutEnvironmentsEnvIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:

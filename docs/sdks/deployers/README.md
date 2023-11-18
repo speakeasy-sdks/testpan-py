@@ -1,5 +1,5 @@
 # Deployers
-(*.deployers*)
+(*deployers*)
 
 ## Overview
 
@@ -52,7 +52,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteDeployersDeployerIDResponse](../../models/operations/deletedeployersdeployeridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers
 
@@ -92,7 +96,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetDeployersResponse](../../models/operations/getdeployersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers_service_accounts
 
@@ -132,7 +140,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetDeployersServiceAccountsResponse](../../models/operations/getdeployersserviceaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers_deployer_id_delete_dependencies
 
@@ -172,7 +184,11 @@ if res.deployer_delete_dependencies is not None:
 ### Response
 
 **[operations.GetDeployersDeployerIDDeleteDependenciesResponse](../../models/operations/getdeployersdeployeriddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_deployers
 
@@ -213,7 +229,11 @@ if res.deployer is not None:
 ### Response
 
 **[operations.PostDeployersResponse](../../models/operations/postdeployersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_deployers_deployer_id_
 
@@ -257,4 +277,8 @@ if res.deployer is not None:
 ### Response
 
 **[operations.PutDeployersDeployerIDResponse](../../models/operations/putdeployersdeployeridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
