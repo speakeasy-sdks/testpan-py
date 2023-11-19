@@ -1,5 +1,5 @@
 # Vulnerabilities
-(*.vulnerabilities*)
+(*vulnerabilities*)
 
 ### Available Operations
 
@@ -41,4 +41,8 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetVulnerabilitiesResponse](../../models/operations/getvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
