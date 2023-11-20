@@ -1,5 +1,5 @@
 # EnvironmentPolicies
-(*.environment_policies*)
+(*environment_policies*)
 
 ## Overview
 
@@ -48,7 +48,11 @@ if res.app_policy is not None:
 ### Response
 
 **[operations.GetAppsPolicyResponse](../../models/operations/getappspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_apps_policy_history
 
@@ -79,7 +83,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppsPolicyHistoryResponse](../../models/operations/getappspolicyhistoryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_apps_policy_search_options
 
@@ -117,7 +125,11 @@ if res.policy_filter_search_response is not None:
 ### Response
 
 **[operations.GetAppsPolicySearchOptionsResponse](../../models/operations/getappspolicysearchoptionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_apps_policy
 
@@ -174,4 +186,8 @@ if res.app_policy is not None:
 ### Response
 
 **[operations.PutAppsPolicyResponse](../../models/operations/putappspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

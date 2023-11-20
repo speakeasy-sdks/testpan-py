@@ -1,5 +1,5 @@
 # Telemetries
-(*.telemetries*)
+(*telemetries*)
 
 ## Overview
 
@@ -89,7 +89,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesResponse](../../models/operations/getapptelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_app_telemetries_app_telemetry_id_
 
@@ -129,7 +133,11 @@ if res.app_telemetry is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDResponse](../../models/operations/getapptelemetriesapptelemetryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_app_telemetries_app_telemetry_id_api_risk_info
 
@@ -169,7 +177,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoResponse](../../models/operations/getapptelemetriesapptelemetryidapiriskinforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_app_telemetries_app_telemetry_id_image_packages
 
@@ -209,7 +221,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDImagePackagesResponse](../../models/operations/getapptelemetriesapptelemetryidimagepackagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_app_telemetries_app_telemetry_id_injection_info
 
@@ -249,7 +265,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDInjectionInfoResponse](../../models/operations/getapptelemetriesapptelemetryidinjectioninforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connection_telemetries
 
@@ -325,7 +345,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetConnectionTelemetriesResponse](../../models/operations/getconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connection_telemetries_connection_telemetry_id_
 
@@ -368,4 +392,8 @@ if res.connection_telemetry is not None:
 ### Response
 
 **[operations.GetConnectionTelemetriesConnectionTelemetryIDResponse](../../models/operations/getconnectiontelemetriesconnectiontelemetryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -3,8 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import apiresponse as shared_apiresponse
+from ...models.errors import apiresponse as errors_apiresponse
 from ...models.shared import apiservicedeletedependencies as shared_apiservicedeletedependencies
+from pan import utils
 from typing import Optional
 
 
@@ -19,13 +20,13 @@ class GetAPISecurityCatalogIDDeleteDependenciesRequest:
 class GetAPISecurityCatalogIDDeleteDependenciesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_response: Optional[shared_apiresponse.APIResponse] = dataclasses.field(default=None)
+    api_response: Optional[errors_apiresponse.APIResponse] = dataclasses.field(default=None)
     r"""unknown error"""
     api_service_delete_dependencies: Optional[shared_apiservicedeletedependencies.APIServiceDeleteDependencies] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
