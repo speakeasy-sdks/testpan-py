@@ -1,5 +1,5 @@
 # Mitre
-(*.mitre*)
+(*mitre*)
 
 ### Available Operations
 
@@ -50,7 +50,11 @@ if res.mitre_dashboard is not None:
 ### Response
 
 **[operations.GetMitreDashboardResponse](../../models/operations/getmitredashboardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_mitre_report_download
 
@@ -81,7 +85,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetMitreReportDownloadResponse](../../models/operations/getmitrereportdownloadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_mitre_report_status
 
@@ -112,7 +120,11 @@ if res.report_status is not None:
 ### Response
 
 **[operations.GetMitreReportStatusResponse](../../models/operations/getmitrereportstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_mitre_technique
 
@@ -155,7 +167,11 @@ if res.mitre_technique_info is not None:
 ### Response
 
 **[operations.GetMitreTechniqueResponse](../../models/operations/getmitretechniqueresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_mitre_report_generate
 
@@ -186,7 +202,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostMitreReportGenerateResponse](../../models/operations/postmitrereportgenerateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_mitre_technique_fix
 
@@ -234,4 +254,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostMitreTechniqueFixResponse](../../models/operations/postmitretechniquefixresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

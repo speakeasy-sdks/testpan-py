@@ -1,5 +1,5 @@
 # Truncation
-(*.truncation*)
+(*truncation*)
 
 ## Overview
 
@@ -41,7 +41,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.GetTruncationImagesResponse](../../models/operations/gettruncationimagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_truncation_workloads
 
@@ -72,7 +76,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.GetTruncationWorkloadsResponse](../../models/operations/gettruncationworkloadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_truncation_images
 
@@ -113,7 +121,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.PostTruncationImagesResponse](../../models/operations/posttruncationimagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_truncation_workloads
 
@@ -154,4 +166,8 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.PostTruncationWorkloadsResponse](../../models/operations/posttruncationworkloadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

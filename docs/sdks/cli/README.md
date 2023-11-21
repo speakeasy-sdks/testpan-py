@@ -1,5 +1,5 @@
 # Cli
-(*.cli*)
+(*cli*)
 
 ## Overview
 
@@ -38,4 +38,8 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetToolsCliSecurecnDeploymentCliResponse](../../models/operations/gettoolsclisecurecndeploymentcliresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
