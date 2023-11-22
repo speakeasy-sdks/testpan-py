@@ -1,5 +1,5 @@
 # ClusterEventsPolicies
-(*.cluster_events_policies*)
+(*cluster_events_policies*)
 
 ## Overview
 
@@ -43,7 +43,11 @@ if res.kubernetes_api_policy is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyResponse](../../models/operations/getkubernetesapipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_history
 
@@ -74,7 +78,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyHistoryResponse](../../models/operations/getkubernetesapipolicyhistoryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_kubernetes_resources
 
@@ -105,7 +113,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyKubernetesResourcesResponse](../../models/operations/getkubernetesapipolicykubernetesresourcesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_kubernetes_users
 
@@ -136,7 +148,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyKubernetesUsersResponse](../../models/operations/getkubernetesapipolicykubernetesusersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_recommended_rules
 
@@ -167,7 +183,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyRecommendedRulesResponse](../../models/operations/getkubernetesapipolicyrecommendedrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_kubernetes_api_policy
 
@@ -212,4 +232,8 @@ if res.kubernetes_api_policy is not None:
 ### Response
 
 **[operations.PutKubernetesAPIPolicyResponse](../../models/operations/putkubernetesapipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

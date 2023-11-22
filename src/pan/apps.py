@@ -13,6 +13,7 @@ class Apps:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_apps(self, request: operations.GetAppsRequest) -> operations.GetAppsResponse:
         r"""Returns a list of defined Apps"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,11 +24,14 @@ class Apps:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAppsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -42,6 +46,7 @@ class Apps:
         return res
 
     
+    
     def get_apps_app_id_(self, request: operations.GetAppsAppIDRequest) -> operations.GetAppsAppIDResponse:
         r"""Returns an App by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,11 +56,14 @@ class Apps:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAppsAppIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -69,6 +77,7 @@ class Apps:
 
         return res
 
+    
     
     def post_apps(self, request: shared.App) -> operations.PostAppsResponse:
         r"""Define a New App"""
@@ -84,11 +93,14 @@ class Apps:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostAppsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -102,6 +114,7 @@ class Apps:
 
         return res
 
+    
     
     def post_apps_delete(self, request: List[str]) -> operations.PostAppsDeleteResponse:
         r"""Delete several Apps
@@ -119,11 +132,14 @@ class Apps:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostAppsDeleteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -133,6 +149,7 @@ class Apps:
 
         return res
 
+    
     
     def put_apps_app_id_(self, request: operations.PutAppsAppIDRequest) -> operations.PutAppsAppIDResponse:
         r"""Edit the existing App"""
@@ -148,11 +165,14 @@ class Apps:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutAppsAppIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:

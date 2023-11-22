@@ -1,5 +1,5 @@
 # AuditLogs
-(*.audit_logs*)
+(*audit_logs*)
 
 ## Overview
 
@@ -55,7 +55,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAuditLogsResponse](../../models/operations/getauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_audit_logs_actions
 
@@ -86,7 +90,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAuditLogsActionsResponse](../../models/operations/getauditlogsactionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_audit_logs_kubernetes
 
@@ -134,7 +142,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAuditLogsKubernetesResponse](../../models/operations/getauditlogskubernetesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_audit_logs_kubernetes_actions
 
@@ -165,4 +177,8 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAuditLogsKubernetesActionsResponse](../../models/operations/getauditlogskubernetesactionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
