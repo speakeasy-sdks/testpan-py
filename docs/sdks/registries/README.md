@@ -1,5 +1,5 @@
 # Registries
-(*.registries*)
+(*registries*)
 
 ## Overview
 
@@ -52,7 +52,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRegistriesRegistryIDResponse](../../models/operations/deleteregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_registries
 
@@ -90,7 +94,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRegistriesResponse](../../models/operations/getregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_registries
 
@@ -137,7 +145,11 @@ if res.registry is not None:
 ### Response
 
 **[operations.PostRegistriesResponse](../../models/operations/postregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_registries_test_connection
 
@@ -184,7 +196,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionResponse](../../models/operations/postregistriestestconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_registries_test_connection_registry_id_
 
@@ -234,7 +250,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionRegistryIDResponse](../../models/operations/postregistriestestconnectionregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_registries_registry_id_
 
@@ -284,4 +304,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutRegistriesRegistryIDResponse](../../models/operations/putregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
