@@ -1,5 +1,5 @@
 # Gateways
-(*.gateways*)
+(*gateways*)
 
 ### Available Operations
 
@@ -48,7 +48,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteGatewaysGatewayIDResponse](../../models/operations/deletegatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways
 
@@ -86,7 +90,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysResponse](../../models/operations/getgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_clusters
 
@@ -126,7 +134,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysClustersResponse](../../models/operations/getgatewaysclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_gateway_id_download_bundle
 
@@ -166,7 +178,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetGatewaysGatewayIDDownloadBundleResponse](../../models/operations/getgatewaysgatewayiddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_gateways
 
@@ -208,7 +224,11 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PostGatewaysResponse](../../models/operations/postgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_gateways_gateway_id_
 
@@ -253,4 +273,8 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PutGatewaysGatewayIDResponse](../../models/operations/putgatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
