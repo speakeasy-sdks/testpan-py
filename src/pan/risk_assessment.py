@@ -13,6 +13,7 @@ class RiskAssessment:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_risk_assessment_ignored_risks_ignored_risk_id_(self, request: operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDRequest) -> operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDResponse:
         r"""Delete ignored risk"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class RiskAssessment:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -37,6 +41,7 @@ class RiskAssessment:
         return res
 
     
+    
     def delete_risk_assessment_kubernetes_cluster_id_cancel(self, request: operations.DeleteRiskAssessmentKubernetesClusterIDCancelRequest) -> operations.DeleteRiskAssessmentKubernetesClusterIDCancelResponse:
         r"""Cancel the runtime scan on the given cluster with the given id"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,11 +51,14 @@ class RiskAssessment:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteRiskAssessmentKubernetesClusterIDCancelResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -61,6 +69,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment(self) -> operations.GetRiskAssessmentResponse:
         r"""Get risk assessment data for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -70,11 +79,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -89,6 +101,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_ignored_risks(self) -> operations.GetRiskAssessmentIgnoredRisksResponse:
         r"""Get all the ignored risks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -98,11 +111,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentIgnoredRisksResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -117,6 +133,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_permissions(self, request: operations.GetRiskAssessmentPermissionsRequest) -> operations.GetRiskAssessmentPermissionsResponse:
         r"""Get list of clusters and their permissions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -127,11 +144,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentPermissionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -146,6 +166,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_permissions_cluster_id_(self, request: operations.GetRiskAssessmentPermissionsClusterIDRequest) -> operations.GetRiskAssessmentPermissionsClusterIDResponse:
         r"""Get all of the users permissions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -156,11 +177,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentPermissionsClusterIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -175,6 +199,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_permissions_cluster_id_owner_id_(self, request: operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRequest) -> operations.GetRiskAssessmentPermissionsClusterIDOwnerIDResponse:
         r"""Get the owner permissions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -185,11 +210,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -204,6 +232,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_permissions_cluster_id_owner_id_role_id_(self, request: operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDRequest) -> operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDResponse:
         r"""Get the owner permissions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -213,11 +242,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -232,6 +264,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_poll(self, request: operations.GetRiskAssessmentPollRequest) -> operations.GetRiskAssessmentPollResponse:
         r"""Poll running scans"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -242,11 +275,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentPollResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -261,6 +297,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_image_id_vulnerabilities(self, request: operations.GetRiskAssessmentImageIDVulnerabilitiesRequest) -> operations.GetRiskAssessmentImageIDVulnerabilitiesResponse:
         r"""Get all images of given risk assessment pod"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -271,11 +308,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentImageIDVulnerabilitiesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -290,6 +330,7 @@ class RiskAssessment:
         return res
 
     
+    
     def get_risk_assessment_kubernetes_cluster_id_pods(self, request: operations.GetRiskAssessmentKubernetesClusterIDPodsRequest) -> operations.GetRiskAssessmentKubernetesClusterIDPodsResponse:
         r"""Get all risk assessments of all pods of given cluster"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -300,11 +341,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetRiskAssessmentKubernetesClusterIDPodsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -319,6 +363,7 @@ class RiskAssessment:
         return res
 
     
+    
     def post_risk_assessment_ignored_risks(self) -> operations.PostRiskAssessmentIgnoredRisksResponse:
         r"""Add ignore risk"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -328,11 +373,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostRiskAssessmentIgnoredRisksResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -346,6 +394,7 @@ class RiskAssessment:
 
         return res
 
+    
     
     def post_risk_assessment_permissions_owner_id_approve(self, request: operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest) -> operations.PostRiskAssessmentPermissionsOwnerIDApproveResponse:
         r"""add / remove permissions to /from the approved permissions list"""
@@ -362,11 +411,14 @@ class RiskAssessment:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostRiskAssessmentPermissionsOwnerIDApproveResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -377,6 +429,7 @@ class RiskAssessment:
         return res
 
     
+    
     def post_risk_assessment_kubernetes_cluster_id_scan(self, request: operations.PostRiskAssessmentKubernetesClusterIDScanRequest) -> operations.PostRiskAssessmentKubernetesClusterIDScanResponse:
         r"""Execute a new runtime scan on the given cluster with the given configuration"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -386,11 +439,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostRiskAssessmentKubernetesClusterIDScanResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -403,6 +459,7 @@ class RiskAssessment:
 
         return res
 
+    
     
     def post_risk_assessment_kubernetes_cluster_id_settings(self, request: operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest) -> operations.PostRiskAssessmentKubernetesClusterIDSettingsResponse:
         r"""Save the runtime scan configuration on the given cluster"""
@@ -418,11 +475,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostRiskAssessmentKubernetesClusterIDSettingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -435,6 +495,7 @@ class RiskAssessment:
 
         return res
 
+    
     
     def put_risk_assessment_ignored_risks_ignored_risk_id_(self, request: operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest) -> operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDResponse:
         r"""Edit ignore risk"""
@@ -450,11 +511,14 @@ class RiskAssessment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
