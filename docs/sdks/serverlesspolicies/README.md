@@ -1,5 +1,5 @@
 # ServerlessPolicies
-(*.serverless_policies*)
+(*serverless_policies*)
 
 ### Available Operations
 
@@ -35,7 +35,11 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.GetServerlessPolicyResponse](../../models/operations/getserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_serverless_policy
 
@@ -97,4 +101,8 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.PutServerlessPolicyResponse](../../models/operations/putserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
