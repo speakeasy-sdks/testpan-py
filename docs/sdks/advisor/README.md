@@ -1,5 +1,5 @@
 # Advisor
-(*.advisor*)
+(*advisor*)
 
 ## Overview
 
@@ -44,7 +44,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorClusterEventRulesResponse](../../models/operations/getadvisorclustereventrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_connection_rules
 
@@ -75,7 +79,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorConnectionRulesResponse](../../models/operations/getadvisorconnectionrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_environment
 
@@ -106,7 +114,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorEnvironmentResponse](../../models/operations/getadvisorenvironmentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_environment_rules
 
@@ -137,7 +149,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorEnvironmentRulesResponse](../../models/operations/getadvisorenvironmentrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_pod_security_policy
 
@@ -168,7 +184,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorPodSecurityPolicyResponse](../../models/operations/getadvisorpodsecuritypolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_queue_advisor_type_
 
@@ -208,7 +228,11 @@ if res.policy_advisor_state is not None:
 ### Response
 
 **[operations.GetAdvisorQueueAdvisorTypeResponse](../../models/operations/getadvisorqueueadvisortyperesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_advisor_run
 
@@ -248,4 +272,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAdvisorRunResponse](../../models/operations/postadvisorrunresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

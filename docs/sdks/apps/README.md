@@ -1,5 +1,5 @@
 # Apps
-(*.apps*)
+(*apps*)
 
 ## Overview
 
@@ -53,7 +53,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppsResponse](../../models/operations/getappsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_apps_app_id_
 
@@ -93,7 +97,11 @@ if res.app is not None:
 ### Response
 
 **[operations.GetAppsAppIDResponse](../../models/operations/getappsappidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_apps
 
@@ -149,7 +157,11 @@ if res.app is not None:
 ### Response
 
 **[operations.PostAppsResponse](../../models/operations/postappsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_apps_delete
 
@@ -184,13 +196,17 @@ if res.status_code == 200:
 
 | Parameter                                  | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `request`                                  | [List[str]](../../models//.md)             | :heavy_check_mark:                         | The request object to use for the request. |
+| `request`                                  | [List[str]](../../models/.md)              | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
 
 **[operations.PostAppsDeleteResponse](../../models/operations/postappsdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_apps_app_id_
 
@@ -249,4 +265,8 @@ if res.app is not None:
 ### Response
 
 **[operations.PutAppsAppIDResponse](../../models/operations/putappsappidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # API
-(*.api*)
+(*api*)
 
 ## Overview
 
@@ -38,4 +38,8 @@ if res.res is not None:
 ### Response
 
 **[operations.GetAPIResponse](../../models/operations/getapiresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

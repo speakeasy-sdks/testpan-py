@@ -1,5 +1,5 @@
 # ConnectionPolicies
-(*.connection_policies*)
+(*connection_policies*)
 
 ## Overview
 
@@ -52,7 +52,11 @@ if res.connections_policy is not None:
 ### Response
 
 **[operations.GetConnectionsPolicyResponse](../../models/operations/getconnectionspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connections_policy_history
 
@@ -83,7 +87,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetConnectionsPolicyHistoryResponse](../../models/operations/getconnectionspolicyhistoryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connections_policy_kafka_actions
 
@@ -114,7 +122,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetConnectionsPolicyKafkaActionsResponse](../../models/operations/getconnectionspolicykafkaactionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connections_policy_kafka_kubernetes_cluster_id_brokers
 
@@ -154,7 +166,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetConnectionsPolicyKafkaKubernetesClusterIDBrokersResponse](../../models/operations/getconnectionspolicykafkakubernetesclusteridbrokersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connections_policy_kafka_kubernetes_cluster_id_topics
 
@@ -194,7 +210,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetConnectionsPolicyKafkaKubernetesClusterIDTopicsResponse](../../models/operations/getconnectionspolicykafkakubernetesclusteridtopicsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_connections_policy_search_options
 
@@ -232,7 +252,11 @@ if res.policy_filter_search_response is not None:
 ### Response
 
 **[operations.GetConnectionsPolicySearchOptionsResponse](../../models/operations/getconnectionspolicysearchoptionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_policy_history
 
@@ -263,7 +287,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessPolicyHistoryResponse](../../models/operations/getserverlesspolicyhistoryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_connections_policy
 
@@ -319,4 +347,8 @@ if res.connections_policy is not None:
 ### Response
 
 **[operations.PutConnectionsPolicyResponse](../../models/operations/putconnectionspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
