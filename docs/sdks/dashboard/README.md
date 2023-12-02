@@ -1,5 +1,5 @@
 # Dashboard
-(*.dashboard*)
+(*dashboard*)
 
 ## Overview
 
@@ -67,7 +67,11 @@ if res.api_sec_risk_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsResponse](../../models/operations/getdashboardapisecriskfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_risk_findings_trend
 
@@ -107,7 +111,11 @@ if res.api_sec_risk_findings_trend_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsTrendResponse](../../models/operations/getdashboardapisecriskfindingstrendresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_specs_and_operations_diffs
 
@@ -147,7 +155,11 @@ if res.specs_and_operations_diffs_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecSpecsAndOperationsDiffsResponse](../../models/operations/getdashboardapisecspecsandoperationsdiffsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_apis
 
@@ -187,7 +199,11 @@ if res.api_sec_top_risky_apis_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyApisResponse](../../models/operations/getdashboardapisectopriskyapisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_findings
 
@@ -227,7 +243,11 @@ if res.api_sec_top_risky_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyFindingsResponse](../../models/operations/getdashboardapisectopriskyfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_clusters
 
@@ -258,7 +278,11 @@ if res.clusters_details is not None:
 ### Response
 
 **[operations.GetDashboardClustersResponse](../../models/operations/getdashboardclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_connection_telemetries
 
@@ -289,7 +313,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardConnectionTelemetriesResponse](../../models/operations/getdashboardconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_audit_logs
 
@@ -320,7 +348,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesAuditLogsResponse](../../models/operations/getdashboardkubernetesauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_operational_bar
 
@@ -362,7 +394,11 @@ if res.operational_bar is not None:
 ### Response
 
 **[operations.GetDashboardOperationalBarResponse](../../models/operations/getdashboardoperationalbarresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_permissions
 
@@ -404,7 +440,11 @@ if res.permissions_widget is not None:
 ### Response
 
 **[operations.GetDashboardPermissionsResponse](../../models/operations/getdashboardpermissionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_pod_telemetries
 
@@ -435,7 +475,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardPodTelemetriesResponse](../../models/operations/getdashboardpodtelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_report_download
 
@@ -466,7 +510,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetDashboardReportDownloadResponse](../../models/operations/getdashboardreportdownloadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_report_status
 
@@ -497,7 +545,11 @@ if res.report_status is not None:
 ### Response
 
 **[operations.GetDashboardReportStatusResponse](../../models/operations/getdashboardreportstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_security_context
 
@@ -539,7 +591,11 @@ if res.security_context_widget is not None:
 ### Response
 
 **[operations.GetDashboardSecurityContextResponse](../../models/operations/getdashboardsecuritycontextresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_top_security_risks
 
@@ -581,7 +637,11 @@ if res.top_security_risks_widget is not None:
 ### Response
 
 **[operations.GetDashboardTopSecurityRisksResponse](../../models/operations/getdashboardtopsecurityrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_vulnerabilities
 
@@ -623,7 +683,11 @@ if res.vulnerabilities_widget is not None:
 ### Response
 
 **[operations.GetDashboardVulnerabilitiesResponse](../../models/operations/getdashboardvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_connection_telemetries
 
@@ -663,7 +727,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDConnectionTelemetriesResponse](../../models/operations/getdashboardkubernetesclusteridconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_kubernetes_audit_logs
 
@@ -703,7 +771,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsResponse](../../models/operations/getdashboardkubernetesclusteridkubernetesauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_pod_telemetries
 
@@ -743,7 +815,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDPodTelemetriesResponse](../../models/operations/getdashboardkubernetesclusteridpodtelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_licensing_dashboard
 
@@ -774,7 +850,11 @@ if res.licensing_dashboard is not None:
 ### Response
 
 **[operations.GetLicensingDashboardResponse](../../models/operations/getlicensingdashboardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_dashboard_report_generate
 
@@ -805,4 +885,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostDashboardReportGenerateResponse](../../models/operations/postdashboardreportgenerateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

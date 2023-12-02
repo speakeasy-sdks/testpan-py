@@ -12,6 +12,7 @@ class Serverless:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_cloud_accounts_cloud_account_id_(self, request: operations.DeleteCloudAccountsCloudAccountIDRequest) -> operations.DeleteCloudAccountsCloudAccountIDResponse:
         r"""Delete a cloud account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,11 +22,14 @@ class Serverless:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteCloudAccountsCloudAccountIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -35,6 +39,7 @@ class Serverless:
 
         return res
 
+    
     
     def get_cloud_accounts(self, request: operations.GetCloudAccountsRequest) -> operations.GetCloudAccountsResponse:
         r"""List all the cloud accounts on the system"""
@@ -46,11 +51,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -65,6 +73,7 @@ class Serverless:
         return res
 
     
+    
     def get_cloud_accounts_azure_installation_details(self) -> operations.GetCloudAccountsAzureInstallationDetailsResponse:
         r"""Get the Azure installation details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -74,11 +83,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsAzureInstallationDetailsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -93,6 +105,7 @@ class Serverless:
         return res
 
     
+    
     def get_cloud_accounts_installation_details(self) -> operations.GetCloudAccountsInstallationDetailsResponse:
         r"""Get the installation details"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -102,11 +115,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsInstallationDetailsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -121,6 +137,7 @@ class Serverless:
         return res
 
     
+    
     def get_cloud_accounts_regions_aws(self) -> operations.GetCloudAccountsRegionsAWSResponse:
         r"""List all the possible regions of AWS"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -130,11 +147,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsRegionsAWSResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -149,6 +169,7 @@ class Serverless:
         return res
 
     
+    
     def get_cloud_accounts_regions_azure(self) -> operations.GetCloudAccountsRegionsAzureResponse:
         r"""List all the possible regions of Azure"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -158,11 +179,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsRegionsAzureResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -177,6 +201,7 @@ class Serverless:
         return res
 
     
+    
     def get_cloud_accounts_cloud_account_id_delete_dependencies(self, request: operations.GetCloudAccountsCloudAccountIDDeleteDependenciesRequest) -> operations.GetCloudAccountsCloudAccountIDDeleteDependenciesResponse:
         r"""get dependencies which need to be handled in order to delete specified cloud account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -186,11 +211,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsCloudAccountIDDeleteDependenciesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -203,13 +231,14 @@ class Serverless:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get_cloud_accounts_cloud_account_id_download_bundle(self, request: operations.GetCloudAccountsCloudAccountIDDownloadBundleRequest) -> operations.GetCloudAccountsCloudAccountIDDownloadBundleResponse:
         r"""Get Secure Application installation script
@@ -222,11 +251,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetCloudAccountsCloudAccountIDDownloadBundleResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -238,13 +270,14 @@ class Serverless:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def get_serverless_functions(self, request: operations.GetServerlessFunctionsRequest) -> operations.GetServerlessFunctionsResponse:
         r"""Get serverless functions"""
@@ -256,11 +289,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -275,6 +311,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_functions_arns(self, request: operations.GetServerlessFunctionsArnsRequest) -> operations.GetServerlessFunctionsArnsResponse:
         r"""Get serverless functions names"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -285,11 +322,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsArnsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -304,6 +344,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_functions_names(self, request: operations.GetServerlessFunctionsNamesRequest) -> operations.GetServerlessFunctionsNamesResponse:
         r"""Get serverless functions names"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -314,11 +355,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsNamesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -333,6 +377,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_functions_function_id_(self, request: operations.GetServerlessFunctionsFunctionIDRequest) -> operations.GetServerlessFunctionsFunctionIDResponse:
         r"""Get Serverless Function by ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -342,11 +387,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsFunctionIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -361,6 +409,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_functions_function_id_secrets(self, request: operations.GetServerlessFunctionsFunctionIDSecretsRequest) -> operations.GetServerlessFunctionsFunctionIDSecretsResponse:
         r"""Get Serverless Function secrets issues"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -370,11 +419,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsFunctionIDSecretsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -389,6 +441,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_functions_function_id_vulnerabilities(self, request: operations.GetServerlessFunctionsFunctionIDVulnerabilitiesRequest) -> operations.GetServerlessFunctionsFunctionIDVulnerabilitiesResponse:
         r"""Get Serverless Function Vulnerabilities by ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -399,11 +452,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessFunctionsFunctionIDVulnerabilitiesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -418,6 +474,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_zip_files(self, request: operations.GetServerlessZipFilesRequest) -> operations.GetServerlessZipFilesResponse:
         r"""Get serverless zip files that was scanned by cli"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -428,11 +485,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessZipFilesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -447,6 +507,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_zip_files_zip_id_(self, request: operations.GetServerlessZipFilesZipIDRequest) -> operations.GetServerlessZipFilesZipIDResponse:
         r"""Get specific zip file record"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -456,11 +517,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessZipFilesZipIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -475,6 +539,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_zip_files_zip_id_packages(self, request: operations.GetServerlessZipFilesZipIDPackagesRequest) -> operations.GetServerlessZipFilesZipIDPackagesResponse:
         r"""Returns a list of packages for a specific serverless zip"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -484,11 +549,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessZipFilesZipIDPackagesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -503,6 +571,7 @@ class Serverless:
         return res
 
     
+    
     def get_serverless_zip_files_zip_id_vulnerabilities(self, request: operations.GetServerlessZipFilesZipIDVulnerabilitiesRequest) -> operations.GetServerlessZipFilesZipIDVulnerabilitiesResponse:
         r"""Returns a list of vulnerabilities detected in the serverless zip"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -513,11 +582,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessZipFilesZipIDVulnerabilitiesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -531,6 +603,7 @@ class Serverless:
 
         return res
 
+    
     
     def post_cloud_accounts_scan(self, request: shared.ServerlessScanConfig) -> operations.PostCloudAccountsScanResponse:
         r"""invoke cloud account scan"""
@@ -546,11 +619,14 @@ class Serverless:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostCloudAccountsScanResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -560,6 +636,7 @@ class Serverless:
 
         return res
 
+    
     
     def put_cloud_accounts_cloud_account_id_(self, request: operations.PutCloudAccountsCloudAccountIDRequest) -> operations.PutCloudAccountsCloudAccountIDResponse:
         r"""Edit cloud account definition"""
@@ -575,11 +652,14 @@ class Serverless:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutCloudAccountsCloudAccountIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:

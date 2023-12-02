@@ -13,6 +13,7 @@ class AgentManagement:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_agents(self, request: operations.GetAgentsRequest) -> operations.GetAgentsResponse:
         r"""List all installed agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,11 +24,14 @@ class AgentManagement:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAgentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,6 +46,7 @@ class AgentManagement:
         return res
 
     
+    
     def post_agents_agent_id_update(self, request: operations.PostAgentsAgentIDUpdateRequest) -> operations.PostAgentsAgentIDUpdateResponse:
         r"""Update the agent with the given id to the latest agent version"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,11 +56,14 @@ class AgentManagement:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostAgentsAgentIDUpdateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -71,13 +79,14 @@ class AgentManagement:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
+    
     
     def post_agents_agent_id_update_state(self, request: operations.PostAgentsAgentIDUpdateStateRequest) -> operations.PostAgentsAgentIDUpdateStateResponse:
         r"""Update the status of an agent with the given id"""
@@ -93,11 +102,14 @@ class AgentManagement:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostAgentsAgentIDUpdateStateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -113,7 +125,7 @@ class AgentManagement:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.APIResponse])
+                out = utils.unmarshal_json(http_res.text, Optional[errors.APIResponse])
                 res.api_response = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

@@ -1,5 +1,5 @@
 # Bfla
-(*.bfla*)
+(*bfla*)
 
 ### Available Operations
 
@@ -49,7 +49,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -89,7 +93,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_bfla
 
@@ -129,7 +137,11 @@ if res.api_service_bfla_info is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/getapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_detection
 
@@ -172,7 +184,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -215,7 +231,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_reset
 
@@ -255,7 +275,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaResetResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflaresetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_api_security_internal_catalog_catalog_id_bfla
 
@@ -322,4 +346,8 @@ if res.res is not None:
 ### Response
 
 **[operations.PutAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/putapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -13,6 +13,7 @@ class Truncation:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_truncation_images(self) -> operations.GetTruncationImagesResponse:
         r"""Get workloads truncation time for account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class Truncation:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetTruncationImagesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -41,6 +45,7 @@ class Truncation:
         return res
 
     
+    
     def get_truncation_workloads(self) -> operations.GetTruncationWorkloadsResponse:
         r"""Get workloads truncation time for account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -50,11 +55,14 @@ class Truncation:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetTruncationWorkloadsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -68,6 +76,7 @@ class Truncation:
 
         return res
 
+    
     
     def post_truncation_images(self, request: shared.TruncationStatus) -> operations.PostTruncationImagesResponse:
         r"""Update workloads truncation status for account"""
@@ -83,11 +92,14 @@ class Truncation:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostTruncationImagesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -101,6 +113,7 @@ class Truncation:
 
         return res
 
+    
     
     def post_truncation_workloads(self, request: shared.TruncationStatus) -> operations.PostTruncationWorkloadsResponse:
         r"""Update workloads truncation status for account"""
@@ -116,11 +129,14 @@ class Truncation:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostTruncationWorkloadsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
