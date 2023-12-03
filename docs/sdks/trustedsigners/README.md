@@ -1,5 +1,5 @@
 # TrustedSigners
-(*.trusted_signers*)
+(*trusted_signers*)
 
 ## Overview
 
@@ -51,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteTrustedSignersTrustedSignerIDResponse](../../models/operations/deletetrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_trusted_signers
 
@@ -89,7 +93,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTrustedSignersResponse](../../models/operations/gettrustedsignersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_trusted_signers_trusted_signer_id_
 
@@ -129,7 +137,11 @@ if res.trusted_signer is not None:
 ### Response
 
 **[operations.GetTrustedSignersTrustedSignerIDResponse](../../models/operations/gettrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_trusted_signers
 
@@ -181,7 +193,11 @@ if res.trusted_signer is not None:
 ### Response
 
 **[operations.PostTrustedSignersResponse](../../models/operations/posttrustedsignersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_trusted_signers_trusted_signer_id_
 
@@ -236,4 +252,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutTrustedSignersTrustedSignerIDResponse](../../models/operations/puttrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

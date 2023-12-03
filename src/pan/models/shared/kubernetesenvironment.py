@@ -10,18 +10,6 @@ from typing import List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class KubernetesEnvironmentInput:
-    kubernetes_cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesCluster') }})
-    id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    kubernetes_cluster_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesClusterName'), 'exclude': lambda f: f is None }})
-    namespace_labels: Optional[List[Label]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaceLabels'), 'exclude': lambda f: f is None }})
-    namespaces: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaces'), 'exclude': lambda f: f is None }})
-    
-
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
 class KubernetesEnvironment:
     kubernetes_cluster: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('kubernetesCluster') }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
