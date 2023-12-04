@@ -1,5 +1,5 @@
 # Envs
-(*.envs*)
+(*envs*)
 
 ## Overview
 
@@ -52,7 +52,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteEnvironmentsEnvIDResponse](../../models/operations/deleteenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_environments
 
@@ -90,7 +94,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetEnvironmentsResponse](../../models/operations/getenvironmentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_environments_env_id_
 
@@ -130,7 +138,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetEnvironmentsEnvIDResponse](../../models/operations/getenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_environments_env_id_delete_dependencies
 
@@ -170,7 +182,11 @@ if res.delete_dependency_element_environments is not None:
 ### Response
 
 **[operations.GetEnvironmentsEnvIDDeleteDependenciesResponse](../../models/operations/getenvironmentsenviddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_environments
 
@@ -240,7 +256,11 @@ if res.environment is not None:
 ### Response
 
 **[operations.PostEnvironmentsResponse](../../models/operations/postenvironmentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_environments_batch
 
@@ -304,15 +324,19 @@ if res.classes is not None:
 
 ### Parameters
 
-| Parameter                                          | Type                                               | Required                                           | Description                                        |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| `request`                                          | [List[shared.EnvironmentInput]](../../models//.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
+| Parameter                                         | Type                                              | Required                                          | Description                                       |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| `request`                                         | [List[shared.EnvironmentInput]](../../models/.md) | :heavy_check_mark:                                | The request object to use for the request.        |
 
 
 ### Response
 
 **[operations.PostEnvironmentsBatchResponse](../../models/operations/postenvironmentsbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_environments_delete
 
@@ -344,7 +368,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostEnvironmentsDeleteResponse](../../models/operations/postenvironmentsdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_environments_env_id_
 
@@ -417,4 +445,8 @@ if res.environment is not None:
 ### Response
 
 **[operations.PutEnvironmentsEnvIDResponse](../../models/operations/putenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
