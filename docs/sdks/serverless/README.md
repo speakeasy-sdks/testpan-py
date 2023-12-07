@@ -1,5 +1,5 @@
 # Serverless
-(*.serverless*)
+(*serverless*)
 
 ### Available Operations
 
@@ -62,7 +62,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCloudAccountsCloudAccountIDResponse](../../models/operations/deletecloudaccountscloudaccountidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts
 
@@ -102,7 +106,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCloudAccountsResponse](../../models/operations/getcloudaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_azure_installation_details
 
@@ -133,7 +141,11 @@ if res.serverless_azure_installation_details is not None:
 ### Response
 
 **[operations.GetCloudAccountsAzureInstallationDetailsResponse](../../models/operations/getcloudaccountsazureinstallationdetailsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_installation_details
 
@@ -164,7 +176,11 @@ if res.serverless_installation_details is not None:
 ### Response
 
 **[operations.GetCloudAccountsInstallationDetailsResponse](../../models/operations/getcloudaccountsinstallationdetailsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_regions_aws
 
@@ -195,7 +211,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCloudAccountsRegionsAWSResponse](../../models/operations/getcloudaccountsregionsawsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_regions_azure
 
@@ -226,7 +246,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetCloudAccountsRegionsAzureResponse](../../models/operations/getcloudaccountsregionsazureresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_cloud_account_id_delete_dependencies
 
@@ -266,7 +290,11 @@ if res.cloud_account_delete_dependencies is not None:
 ### Response
 
 **[operations.GetCloudAccountsCloudAccountIDDeleteDependenciesResponse](../../models/operations/getcloudaccountscloudaccountiddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_cloud_accounts_cloud_account_id_download_bundle
 
@@ -306,7 +334,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetCloudAccountsCloudAccountIDDownloadBundleResponse](../../models/operations/getcloudaccountscloudaccountiddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions
 
@@ -363,7 +395,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsResponse](../../models/operations/getserverlessfunctionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions_arns
 
@@ -405,7 +441,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsArnsResponse](../../models/operations/getserverlessfunctionsarnsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions_names
 
@@ -447,7 +487,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsNamesResponse](../../models/operations/getserverlessfunctionsnamesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions_function_id_
 
@@ -487,7 +531,11 @@ if res.serverless_function is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDResponse](../../models/operations/getserverlessfunctionsfunctionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions_function_id_secrets
 
@@ -527,7 +575,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDSecretsResponse](../../models/operations/getserverlessfunctionsfunctionidsecretsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_functions_function_id_vulnerabilities
 
@@ -567,7 +619,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDVulnerabilitiesResponse](../../models/operations/getserverlessfunctionsfunctionidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_zip_files
 
@@ -605,7 +661,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesResponse](../../models/operations/getserverlesszipfilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_zip_files_zip_id_
 
@@ -645,7 +705,11 @@ if res.serverless_zip is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDResponse](../../models/operations/getserverlesszipfileszipidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_zip_files_zip_id_packages
 
@@ -685,7 +749,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDPackagesResponse](../../models/operations/getserverlesszipfileszipidpackagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_serverless_zip_files_zip_id_vulnerabilities
 
@@ -725,7 +793,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDVulnerabilitiesResponse](../../models/operations/getserverlesszipfileszipidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_cloud_accounts_scan
 
@@ -767,7 +839,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostCloudAccountsScanResponse](../../models/operations/postcloudaccountsscanresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_cloud_accounts_cloud_account_id_
 
@@ -817,4 +893,8 @@ if res.cloud_account is not None:
 ### Response
 
 **[operations.PutCloudAccountsCloudAccountIDResponse](../../models/operations/putcloudaccountscloudaccountidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

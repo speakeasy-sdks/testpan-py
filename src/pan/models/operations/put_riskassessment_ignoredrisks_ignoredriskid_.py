@@ -3,14 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import cipolicy as shared_cipolicy
+from ...models.shared import cipolicy_input as shared_cipolicy_input
 from ...models.shared import ignoredrisk as shared_ignoredrisk
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest:
-    ci_policy: shared_cipolicy.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    ci_policy: shared_cipolicy_input.CiPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     ignored_risk_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ignoredRiskId', 'style': 'simple', 'explode': False }})
     
 
@@ -20,11 +20,11 @@ class PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest:
 class PutRiskAssessmentIgnoredRisksIgnoredRiskIDResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     ignored_risk: Optional[shared_ignoredrisk.IgnoredRisk] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
