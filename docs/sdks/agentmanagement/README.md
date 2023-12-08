@@ -1,5 +1,5 @@
 # AgentManagement
-(*.agent_management*)
+(*agent_management*)
 
 ## Overview
 
@@ -60,7 +60,11 @@ if res.agents is not None:
 ### Response
 
 **[operations.GetAgentsResponse](../../models/operations/getagentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_agents_agent_id_update
 
@@ -100,7 +104,12 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAgentsAgentIDUpdateResponse](../../models/operations/postagentsagentidupdateresponse.md)**
+### Errors
 
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| errors.APIResponse | 402                | application/json   |
+| errors.SDKError    | 400-600            | */*                |
 
 ## post_agents_agent_id_update_state
 
@@ -141,4 +150,9 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAgentsAgentIDUpdateStateResponse](../../models/operations/postagentsagentidupdatestateresponse.md)**
+### Errors
 
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| errors.APIResponse | 402                | application/json   |
+| errors.SDKError    | 400-600            | */*                |
