@@ -1,5 +1,5 @@
 # Expansions
-(*.expansions*)
+(*expansions*)
 
 ## Overview
 
@@ -51,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteExpansionsExpansionIDResponse](../../models/operations/deleteexpansionsexpansionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_expansions
 
@@ -91,7 +95,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetExpansionsResponse](../../models/operations/getexpansionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_expansions_expansion_id_install_expansion_tar_gz
 
@@ -131,7 +139,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetExpansionsExpansionIDInstallExpansionTarGzResponse](../../models/operations/getexpansionsexpansionidinstallexpansiontargzresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_expansions
 
@@ -185,7 +197,11 @@ if res.expansion is not None:
 ### Response
 
 **[operations.PostExpansionsResponse](../../models/operations/postexpansionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_expansions_expansion_id_
 
@@ -239,4 +255,8 @@ if res.expansion is not None:
 ### Response
 
 **[operations.PutExpansionsExpansionIDResponse](../../models/operations/putexpansionsexpansionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Kubernetes
-(*.kubernetes*)
+(*kubernetes*)
 
 ## Overview
 
@@ -65,7 +65,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteKubernetesClustersKubernetesClusterIDResponse](../../models/operations/deletekubernetesclusterskubernetesclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_pod_definitions_pod_id_
 
@@ -105,7 +109,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeletePodDefinitionsPodIDResponse](../../models/operations/deletepoddefinitionspodidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_get_controller_data_cluster_id_
 
@@ -145,7 +153,11 @@ if res.controller_data_response is not None:
 ### Response
 
 **[operations.GetGetControllerDataClusterIDResponse](../../models/operations/getgetcontrollerdataclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_istio_supported_versions
 
@@ -176,7 +188,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetIstioSupportedVersionsResponse](../../models/operations/getistiosupportedversionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters
 
@@ -214,7 +230,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesClustersResponse](../../models/operations/getkubernetesclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_
 
@@ -254,7 +274,11 @@ if res.kubernetes_cluster is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDResponse](../../models/operations/getkubernetesclusterskubernetesclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_delete_dependencies
 
@@ -294,7 +318,11 @@ if res.kubernetes_cluster_delete_dependencies is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDDeleteDependenciesResponse](../../models/operations/getkubernetesclusterskubernetesclusteriddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_download_bundle
 
@@ -334,7 +362,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDDownloadBundleResponse](../../models/operations/getkubernetesclusterskubernetesclusteriddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_get_helm_commands
 
@@ -374,7 +406,11 @@ if res.helm_commands_installation is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDGetHelmCommandsResponse](../../models/operations/getkubernetesclusterskubernetesclusteridgethelmcommandsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_namespaces
 
@@ -414,7 +450,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDNamespacesResponse](../../models/operations/getkubernetesclusterskubernetesclusteridnamespacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_clusters_kubernetes_cluster_id_services
 
@@ -454,7 +494,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesClustersKubernetesClusterIDServicesResponse](../../models/operations/getkubernetesclusterskubernetesclusteridservicesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_lean_kubernetes_clusters
 
@@ -492,7 +536,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetLeanKubernetesClustersResponse](../../models/operations/getleankubernetesclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_namespaces
 
@@ -530,7 +578,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetNamespacesResponse](../../models/operations/getnamespacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_pod_definitions
 
@@ -575,7 +627,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetPodDefinitionsResponse](../../models/operations/getpoddefinitionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_kubernetes_clusters
 
@@ -632,7 +688,11 @@ if res.kubernetes_cluster is not None:
 ### Response
 
 **[operations.PostKubernetesClustersResponse](../../models/operations/postkubernetesclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_pod_definitions
 
@@ -689,7 +749,11 @@ if res.pod_definition is not None:
 ### Response
 
 **[operations.PostPodDefinitionsResponse](../../models/operations/postpoddefinitionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_kubernetes_clusters_kubernetes_cluster_id_
 
@@ -749,7 +813,11 @@ if res.kubernetes_cluster is not None:
 ### Response
 
 **[operations.PutKubernetesClustersKubernetesClusterIDResponse](../../models/operations/putkubernetesclusterskubernetesclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_kubernetes_clusters_kubernetes_cluster_id_managed_by_helm
 
@@ -790,7 +858,11 @@ if res.kubernetes_cluster is not None:
 ### Response
 
 **[operations.PutKubernetesClustersKubernetesClusterIDManagedByHelmResponse](../../models/operations/putkubernetesclusterskubernetesclusteridmanagedbyhelmresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_pod_definitions_pod_id_
 
@@ -850,4 +922,8 @@ if res.pod_definition is not None:
 ### Response
 
 **[operations.PutPodDefinitionsPodIDResponse](../../models/operations/putpoddefinitionspodidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
