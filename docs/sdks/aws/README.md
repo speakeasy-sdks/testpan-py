@@ -1,5 +1,5 @@
 # Aws
-(*.aws*)
+(*aws*)
 
 ## Overview
 
@@ -46,7 +46,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAccountsResponse](../../models/operations/getawsaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_aws_roles
 
@@ -77,7 +81,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsRolesResponse](../../models/operations/getawsrolesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_aws_tags
 
@@ -108,7 +116,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsTagsResponse](../../models/operations/getawstagsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_aws_aws_account_id_regions
 
@@ -149,7 +161,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionsResponse](../../models/operations/getawsawsaccountidregionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_aws_aws_account_id_region_id_subnets
 
@@ -190,7 +206,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionIDSubnetsResponse](../../models/operations/getawsawsaccountidregionidsubnetsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_aws_aws_account_id_region_id_vpcs
 
@@ -232,7 +252,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionIDVpcsResponse](../../models/operations/getawsawsaccountidregionidvpcsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_aws_roles
 
@@ -273,7 +297,11 @@ if res.aws_role is not None:
 ### Response
 
 **[operations.PostAwsRolesResponse](../../models/operations/postawsrolesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_aws_roles_role_id_
 
@@ -316,4 +344,8 @@ if res.aws_role is not None:
 ### Response
 
 **[operations.PutAwsRolesRoleIDResponse](../../models/operations/putawsrolesroleidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

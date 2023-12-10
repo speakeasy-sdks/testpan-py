@@ -1,5 +1,5 @@
 # Settings
-(*.settings*)
+(*settings*)
 
 ## Overview
 
@@ -65,7 +65,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteSettingsIntegrationsCaIDResponse](../../models/operations/deletesettingsintegrationscaidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_settings_integrations_event_forwarding_event_forwarding_id_
 
@@ -105,7 +109,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteSettingsIntegrationsEventForwardingEventForwardingIDResponse](../../models/operations/deletesettingsintegrationseventforwardingeventforwardingidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_settings_agents_update
 
@@ -136,7 +144,11 @@ if res.agents_update_settings is not None:
 ### Response
 
 **[operations.GetSettingsAgentsUpdateResponse](../../models/operations/getsettingsagentsupdateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_settings_integrations_ca
 
@@ -167,7 +179,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetSettingsIntegrationsCaResponse](../../models/operations/getsettingsintegrationscaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_settings_integrations_event_forwarding
 
@@ -198,7 +214,11 @@ if res.events_forwarding_details_list is not None:
 ### Response
 
 **[operations.GetSettingsIntegrationsEventForwardingResponse](../../models/operations/getsettingsintegrationseventforwardingresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_seccomp_profiles_validate_data
 
@@ -236,7 +256,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSeccompProfilesValidateDataResponse](../../models/operations/postseccompprofilesvalidatedataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_agents_update_update_now
 
@@ -267,7 +291,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsAgentsUpdateUpdateNowResponse](../../models/operations/postsettingsagentsupdateupdatenowresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_ca
 
@@ -309,7 +337,11 @@ if res.ca_integration_response is not None:
 ### Response
 
 **[operations.PostSettingsIntegrationsCaResponse](../../models/operations/postsettingsintegrationscaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_event_forwarding
 
@@ -353,7 +385,11 @@ if res.events_forwarding_details is not None:
 ### Response
 
 **[operations.PostSettingsIntegrationsEventForwardingResponse](../../models/operations/postsettingsintegrationseventforwardingresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_opsgenie_test_integration
 
@@ -393,7 +429,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsOpsgenieTestIntegrationResponse](../../models/operations/postsettingsintegrationsopsgenietestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_securex_test_integration
 
@@ -433,7 +473,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsSecurexTestIntegrationResponse](../../models/operations/postsettingsintegrationssecurextestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_slack_test_integration
 
@@ -473,7 +517,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsSlackTestIntegrationResponse](../../models/operations/postsettingsintegrationsslacktestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_splunk_test_integration
 
@@ -514,7 +562,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsSplunkTestIntegrationResponse](../../models/operations/postsettingsintegrationssplunktestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_sumo_logic_test_integration
 
@@ -554,7 +606,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsSumoLogicTestIntegrationResponse](../../models/operations/postsettingsintegrationssumologictestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_teams_test_integration
 
@@ -594,7 +650,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsTeamsTestIntegrationResponse](../../models/operations/postsettingsintegrationsteamstestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_settings_integrations_webex_test_integration
 
@@ -634,7 +694,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostSettingsIntegrationsWebexTestIntegrationResponse](../../models/operations/postsettingsintegrationswebextestintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_settings_agents_update
 
@@ -672,7 +736,11 @@ if res.agents_update_settings is not None:
 ### Response
 
 **[operations.PutSettingsAgentsUpdateResponse](../../models/operations/putsettingsagentsupdateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_settings_integrations_ca_id_
 
@@ -717,7 +785,11 @@ if res.ca_integration_response is not None:
 ### Response
 
 **[operations.PutSettingsIntegrationsCaIDResponse](../../models/operations/putsettingsintegrationscaidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_settings_integrations_event_forwarding_event_forwarding_id_
 
@@ -765,4 +837,8 @@ if res.events_forwarding_details is not None:
 ### Response
 
 **[operations.PutSettingsIntegrationsEventForwardingEventForwardingIDResponse](../../models/operations/putsettingsintegrationseventforwardingeventforwardingidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

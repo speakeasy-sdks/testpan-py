@@ -1,5 +1,5 @@
 # Tokens
-(*.tokens*)
+(*tokens*)
 
 ### Available Operations
 
@@ -48,7 +48,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteTokensTokenIDResponse](../../models/operations/deletetokenstokenidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_tokens
 
@@ -86,7 +90,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTokensResponse](../../models/operations/gettokensresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_tokens_info
 
@@ -128,7 +136,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTokensInfoResponse](../../models/operations/gettokensinforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_tokens_token_id_delete_dependencies
 
@@ -168,7 +180,11 @@ if res.token_delete_dependencies is not None:
 ### Response
 
 **[operations.GetTokensTokenIDDeleteDependenciesResponse](../../models/operations/gettokenstokeniddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_tokens
 
@@ -213,7 +229,11 @@ if res.token is not None:
 ### Response
 
 **[operations.PostTokensResponse](../../models/operations/posttokensresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_tokens_token_id_
 
@@ -261,4 +281,8 @@ if res.token is not None:
 ### Response
 
 **[operations.PutTokensTokenIDResponse](../../models/operations/puttokenstokenidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
