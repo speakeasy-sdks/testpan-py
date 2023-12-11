@@ -3,13 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import trustedsigner as shared_trustedsigner
-from typing import Optional
+from ...models.shared import trustedsigner_input as shared_trustedsigner_input
 
 
 @dataclasses.dataclass
 class PutTrustedSignersTrustedSignerIDRequest:
-    trusted_signer: shared_trustedsigner.TrustedSignerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    trusted_signer: shared_trustedsigner_input.TrustedSignerInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     trusted_signer_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'trustedSignerId', 'style': 'simple', 'explode': False }})
     
 
@@ -19,9 +18,9 @@ class PutTrustedSignersTrustedSignerIDRequest:
 class PutTrustedSignersTrustedSignerIDResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

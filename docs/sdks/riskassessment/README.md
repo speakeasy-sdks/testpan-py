@@ -1,5 +1,5 @@
 # RiskAssessment
-(*.risk_assessment*)
+(*risk_assessment*)
 
 ## Overview
 
@@ -62,7 +62,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDResponse](../../models/operations/deleteriskassessmentignoredrisksignoredriskidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_risk_assessment_kubernetes_cluster_id_cancel
 
@@ -102,7 +106,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRiskAssessmentKubernetesClusterIDCancelResponse](../../models/operations/deleteriskassessmentkubernetesclusteridcancelresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment
 
@@ -133,7 +141,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentResponse](../../models/operations/getriskassessmentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_ignored_risks
 
@@ -164,7 +176,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentIgnoredRisksResponse](../../models/operations/getriskassessmentignoredrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_permissions
 
@@ -206,7 +222,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsResponse](../../models/operations/getriskassessmentpermissionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_
 
@@ -246,7 +266,11 @@ if res.owner_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDResponse](../../models/operations/getriskassessmentpermissionsclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_owner_id_
 
@@ -287,7 +311,11 @@ if res.permission_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDOwnerIDResponse](../../models/operations/getriskassessmentpermissionsclusteridowneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_owner_id_role_id_
 
@@ -329,7 +357,11 @@ if res.permission_role_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDResponse](../../models/operations/getriskassessmentpermissionsclusteridowneridroleidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_poll
 
@@ -371,7 +403,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPollResponse](../../models/operations/getriskassessmentpollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_image_id_vulnerabilities
 
@@ -412,7 +448,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentImageIDVulnerabilitiesResponse](../../models/operations/getriskassessmentimageidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_risk_assessment_kubernetes_cluster_id_pods
 
@@ -453,7 +493,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentKubernetesClusterIDPodsResponse](../../models/operations/getriskassessmentkubernetesclusteridpodsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_risk_assessment_ignored_risks
 
@@ -484,7 +528,11 @@ if res.ignored_risk is not None:
 ### Response
 
 **[operations.PostRiskAssessmentIgnoredRisksResponse](../../models/operations/postriskassessmentignoredrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_risk_assessment_permissions_owner_id_approve
 
@@ -530,7 +578,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRiskAssessmentPermissionsOwnerIDApproveResponse](../../models/operations/postriskassessmentpermissionsowneridapproveresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_risk_assessment_kubernetes_cluster_id_scan
 
@@ -570,7 +622,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostRiskAssessmentKubernetesClusterIDScanResponse](../../models/operations/postriskassessmentkubernetesclusteridscanresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_risk_assessment_kubernetes_cluster_id_settings
 
@@ -620,7 +676,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostRiskAssessmentKubernetesClusterIDSettingsResponse](../../models/operations/postriskassessmentkubernetesclusteridsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_risk_assessment_ignored_risks_ignored_risk_id_
 
@@ -671,4 +731,8 @@ if res.ignored_risk is not None:
 ### Response
 
 **[operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDResponse](../../models/operations/putriskassessmentignoredrisksignoredriskidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
