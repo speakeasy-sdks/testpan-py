@@ -1,5 +1,5 @@
 # Truncation
-(*.truncation*)
+(*truncation*)
 
 ## Overview
 
@@ -24,8 +24,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -41,7 +40,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.GetTruncationImagesResponse](../../models/operations/gettruncationimagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_truncation_workloads
 
@@ -55,8 +58,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -72,7 +74,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.GetTruncationWorkloadsResponse](../../models/operations/gettruncationworkloadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_truncation_images
 
@@ -86,8 +92,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -113,7 +118,11 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.PostTruncationImagesResponse](../../models/operations/posttruncationimagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_truncation_workloads
 
@@ -127,8 +136,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -154,4 +162,8 @@ if res.truncation_status is not None:
 ### Response
 
 **[operations.PostTruncationWorkloadsResponse](../../models/operations/posttruncationworkloadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

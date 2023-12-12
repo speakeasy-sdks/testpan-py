@@ -1,5 +1,5 @@
 # Cli
-(*.cli*)
+(*cli*)
 
 ## Overview
 
@@ -21,8 +21,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -38,4 +37,8 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetToolsCliSecurecnDeploymentCliResponse](../../models/operations/gettoolsclisecurecndeploymentcliresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
