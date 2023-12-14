@@ -1,5 +1,5 @@
 # Performance
-(*.performance*)
+(*performance*)
 
 ### Available Operations
 
@@ -18,8 +18,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -46,7 +45,11 @@ if res.api_service_spec_path_hit_count_graph is not None:
 ### Response
 
 **[operations.GetAPISecurityAPICatalogIDHitCountGraphResponse](../../models/operations/getapisecurityapicatalogidhitcountgraphresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_performance_metrics
 
@@ -61,8 +64,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -93,4 +95,8 @@ if res.performance_metrics is not None:
 ### Response
 
 **[operations.GetPerformanceMetricsResponse](../../models/operations/getperformancemetricsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class Mitre:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_mitre_dashboard(self, request: operations.GetMitreDashboardRequest) -> operations.GetMitreDashboardResponse:
         r"""Get data for MITRE dashboard for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class Mitre:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetMitreDashboardResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -41,6 +45,7 @@ class Mitre:
         return res
 
     
+    
     def get_mitre_report_download(self) -> operations.GetMitreReportDownloadResponse:
         r"""Download Mitre security report"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -50,11 +55,14 @@ class Mitre:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetMitreReportDownloadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -68,6 +76,7 @@ class Mitre:
         return res
 
     
+    
     def get_mitre_report_status(self) -> operations.GetMitreReportStatusResponse:
         r"""Get Mitre report status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -77,11 +86,14 @@ class Mitre:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetMitreReportStatusResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -96,6 +108,7 @@ class Mitre:
         return res
 
     
+    
     def get_mitre_technique(self, request: operations.GetMitreTechniqueRequest) -> operations.GetMitreTechniqueResponse:
         r"""Get data for MITRE technique of the given mitreTechniqueType"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -106,11 +119,14 @@ class Mitre:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetMitreTechniqueResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -125,6 +141,7 @@ class Mitre:
         return res
 
     
+    
     def post_mitre_report_generate(self) -> operations.PostMitreReportGenerateResponse:
         r"""Generate Mitre report"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -134,11 +151,14 @@ class Mitre:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostMitreReportGenerateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -149,13 +169,14 @@ class Mitre:
         return res
 
     
+    
     def post_mitre_technique_fix(self, request: operations.PostMitreTechniqueFixRequest) -> operations.PostMitreTechniqueFixResponse:
         r"""Post fix for MITRE technique of the given mitreTechniqueType"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/mitre/technique/fix'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "mitre_technique_fix_info", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PostMitreTechniqueFixRequest, "mitre_technique_fix_info", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -164,11 +185,14 @@ class Mitre:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostMitreTechniqueFixResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:

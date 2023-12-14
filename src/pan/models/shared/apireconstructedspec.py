@@ -11,16 +11,6 @@ from typing import List, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class APIReconstructedSpecInput:
-    oas_version: OASVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('OASVersion') }})
-    r"""OpenAPI specification version"""
-    review_path_items: List[ReviewPathItem] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reviewPathItems') }})
-    
-
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
 class APIReconstructedSpec:
     oas_version: OASVersion = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('OASVersion') }})
     r"""OpenAPI specification version"""
