@@ -1,5 +1,5 @@
 # Gateways
-(*.gateways*)
+(*gateways*)
 
 ### Available Operations
 
@@ -22,8 +22,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -48,7 +47,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteGatewaysGatewayIDResponse](../../models/operations/deletegatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways
 
@@ -62,8 +65,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -86,7 +88,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysResponse](../../models/operations/getgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_clusters
 
@@ -100,8 +106,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -126,7 +131,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysClustersResponse](../../models/operations/getgatewaysclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_gateway_id_download_bundle
 
@@ -140,8 +149,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -166,7 +174,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetGatewaysGatewayIDDownloadBundleResponse](../../models/operations/getgatewaysgatewayiddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_gateways
 
@@ -180,8 +192,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -208,7 +219,11 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PostGatewaysResponse](../../models/operations/postgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_gateways_gateway_id_
 
@@ -222,8 +237,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -253,4 +267,8 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PutGatewaysGatewayIDResponse](../../models/operations/putgatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Dashboard
-(*.dashboard*)
+(*dashboard*)
 
 ## Overview
 
@@ -41,8 +41,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -67,7 +66,11 @@ if res.api_sec_risk_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsResponse](../../models/operations/getdashboardapisecriskfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_risk_findings_trend
 
@@ -81,8 +84,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -107,7 +109,11 @@ if res.api_sec_risk_findings_trend_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsTrendResponse](../../models/operations/getdashboardapisecriskfindingstrendresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_specs_and_operations_diffs
 
@@ -121,8 +127,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -147,7 +152,11 @@ if res.specs_and_operations_diffs_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecSpecsAndOperationsDiffsResponse](../../models/operations/getdashboardapisecspecsandoperationsdiffsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_apis
 
@@ -161,8 +170,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -187,7 +195,11 @@ if res.api_sec_top_risky_apis_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyApisResponse](../../models/operations/getdashboardapisectopriskyapisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_findings
 
@@ -201,8 +213,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -227,7 +238,11 @@ if res.api_sec_top_risky_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyFindingsResponse](../../models/operations/getdashboardapisectopriskyfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_clusters
 
@@ -241,8 +256,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -258,7 +272,11 @@ if res.clusters_details is not None:
 ### Response
 
 **[operations.GetDashboardClustersResponse](../../models/operations/getdashboardclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_connection_telemetries
 
@@ -272,8 +290,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -289,7 +306,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardConnectionTelemetriesResponse](../../models/operations/getdashboardconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_audit_logs
 
@@ -303,8 +324,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -320,7 +340,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesAuditLogsResponse](../../models/operations/getdashboardkubernetesauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_operational_bar
 
@@ -334,8 +358,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -362,7 +385,11 @@ if res.operational_bar is not None:
 ### Response
 
 **[operations.GetDashboardOperationalBarResponse](../../models/operations/getdashboardoperationalbarresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_permissions
 
@@ -376,8 +403,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -404,7 +430,11 @@ if res.permissions_widget is not None:
 ### Response
 
 **[operations.GetDashboardPermissionsResponse](../../models/operations/getdashboardpermissionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_pod_telemetries
 
@@ -418,8 +448,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -435,7 +464,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardPodTelemetriesResponse](../../models/operations/getdashboardpodtelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_report_download
 
@@ -449,8 +482,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -466,7 +498,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetDashboardReportDownloadResponse](../../models/operations/getdashboardreportdownloadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_report_status
 
@@ -480,8 +516,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -497,7 +532,11 @@ if res.report_status is not None:
 ### Response
 
 **[operations.GetDashboardReportStatusResponse](../../models/operations/getdashboardreportstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_security_context
 
@@ -511,8 +550,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -539,7 +577,11 @@ if res.security_context_widget is not None:
 ### Response
 
 **[operations.GetDashboardSecurityContextResponse](../../models/operations/getdashboardsecuritycontextresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_top_security_risks
 
@@ -553,8 +595,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -581,7 +622,11 @@ if res.top_security_risks_widget is not None:
 ### Response
 
 **[operations.GetDashboardTopSecurityRisksResponse](../../models/operations/getdashboardtopsecurityrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_vulnerabilities
 
@@ -595,8 +640,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -623,7 +667,11 @@ if res.vulnerabilities_widget is not None:
 ### Response
 
 **[operations.GetDashboardVulnerabilitiesResponse](../../models/operations/getdashboardvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_connection_telemetries
 
@@ -637,8 +685,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -663,7 +710,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDConnectionTelemetriesResponse](../../models/operations/getdashboardkubernetesclusteridconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_kubernetes_audit_logs
 
@@ -677,8 +728,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -703,7 +753,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsResponse](../../models/operations/getdashboardkubernetesclusteridkubernetesauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_kubernetes_cluster_id_pod_telemetries
 
@@ -717,8 +771,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -743,7 +796,11 @@ if res.time_based_widget is not None:
 ### Response
 
 **[operations.GetDashboardKubernetesClusterIDPodTelemetriesResponse](../../models/operations/getdashboardkubernetesclusteridpodtelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_licensing_dashboard
 
@@ -757,8 +814,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -774,7 +830,11 @@ if res.licensing_dashboard is not None:
 ### Response
 
 **[operations.GetLicensingDashboardResponse](../../models/operations/getlicensingdashboardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_dashboard_report_generate
 
@@ -788,8 +848,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -805,4 +864,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostDashboardReportGenerateResponse](../../models/operations/postdashboardreportgenerateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
