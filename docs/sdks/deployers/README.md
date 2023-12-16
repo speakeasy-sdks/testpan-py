@@ -1,5 +1,5 @@
 # Deployers
-(*.deployers*)
+(*deployers*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -52,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteDeployersDeployerIDResponse](../../models/operations/deletedeployersdeployeridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers
 
@@ -66,8 +69,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -92,7 +94,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetDeployersResponse](../../models/operations/getdeployersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers_service_accounts
 
@@ -106,8 +112,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -132,7 +137,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetDeployersServiceAccountsResponse](../../models/operations/getdeployersserviceaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_deployers_deployer_id_delete_dependencies
 
@@ -146,8 +155,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -172,7 +180,11 @@ if res.deployer_delete_dependencies is not None:
 ### Response
 
 **[operations.GetDeployersDeployerIDDeleteDependenciesResponse](../../models/operations/getdeployersdeployeriddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_deployers
 
@@ -186,8 +198,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -213,7 +224,11 @@ if res.deployer is not None:
 ### Response
 
 **[operations.PostDeployersResponse](../../models/operations/postdeployersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_deployers_deployer_id_
 
@@ -227,8 +242,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -257,4 +271,8 @@ if res.deployer is not None:
 ### Response
 
 **[operations.PutDeployersDeployerIDResponse](../../models/operations/putdeployersdeployeridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

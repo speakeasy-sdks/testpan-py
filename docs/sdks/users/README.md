@@ -1,5 +1,5 @@
 # Users
-(*.users*)
+(*users*)
 
 ## Overview
 
@@ -34,8 +34,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -60,7 +59,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteUsersUserIDResponse](../../models/operations/deleteusersuseridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_operator_credentials
 
@@ -74,8 +77,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -91,7 +93,11 @@ if res.access_token is not None:
 ### Response
 
 **[operations.GetOperatorCredentialsResponse](../../models/operations/getoperatorcredentialsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_users
 
@@ -105,8 +111,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -133,7 +138,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetUsersResponse](../../models/operations/getusersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_users_user_id_access_tokens
 
@@ -147,8 +156,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -173,7 +181,11 @@ if res.access_token is not None:
 ### Response
 
 **[operations.GetUsersUserIDAccessTokensResponse](../../models/operations/getusersuseridaccesstokensresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_users_user_id_delete_dependencies
 
@@ -187,8 +199,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -213,7 +224,11 @@ if res.delete_dependency_element_user is not None:
 ### Response
 
 **[operations.GetUsersUserIDDeleteDependenciesResponse](../../models/operations/getusersuseriddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_account_usage_status
 
@@ -227,8 +242,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -244,7 +258,11 @@ if res.usage_status is not None:
 ### Response
 
 **[operations.PostAccountUsageStatusResponse](../../models/operations/postaccountusagestatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_change_password
 
@@ -258,8 +276,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -282,7 +299,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostChangePasswordResponse](../../models/operations/postchangepasswordresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_login
 
@@ -296,8 +317,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -320,7 +340,12 @@ if res.user_login_info is not None:
 ### Response
 
 **[operations.PostLoginResponse](../../models/operations/postloginresponse.md)**
+### Errors
 
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| errors.APIResponse | 402                | application/json   |
+| errors.SDKError    | 400-600            | */*                |
 
 ## post_logout
 
@@ -334,8 +359,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -351,7 +375,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostLogoutResponse](../../models/operations/postlogoutresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_me
 
@@ -365,8 +393,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -382,7 +409,11 @@ if res.user_login_info is not None:
 ### Response
 
 **[operations.PostMeResponse](../../models/operations/postmeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_users
 
@@ -397,8 +428,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -424,7 +454,11 @@ if res.user is not None:
 ### Response
 
 **[operations.PostUsersResponse](../../models/operations/postusersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_users_accept_eula
 
@@ -438,8 +472,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -455,7 +488,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostUsersAcceptEulaResponse](../../models/operations/postusersaccepteularesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_users_trial
 
@@ -469,8 +506,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -501,7 +537,11 @@ if res.user is not None:
 ### Response
 
 **[operations.PostUsersTrialResponse](../../models/operations/postuserstrialresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_users_user_id_
 
@@ -515,8 +555,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -545,4 +584,8 @@ if res.user is not None:
 ### Response
 
 **[operations.PutUsersUserIDResponse](../../models/operations/putusersuseridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
