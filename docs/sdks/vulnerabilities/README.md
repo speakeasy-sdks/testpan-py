@@ -1,5 +1,5 @@
 # Vulnerabilities
-(*.vulnerabilities*)
+(*vulnerabilities*)
 
 ### Available Operations
 
@@ -17,8 +17,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -41,4 +40,8 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetVulnerabilitiesResponse](../../models/operations/getvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
