@@ -1,5 +1,5 @@
 # Advisor
-(*.advisor*)
+(*advisor*)
 
 ## Overview
 
@@ -27,8 +27,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -44,7 +43,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorClusterEventRulesResponse](../../models/operations/getadvisorclustereventrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_connection_rules
 
@@ -58,8 +61,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -75,7 +77,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorConnectionRulesResponse](../../models/operations/getadvisorconnectionrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_environment
 
@@ -89,8 +95,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -106,7 +111,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorEnvironmentResponse](../../models/operations/getadvisorenvironmentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_environment_rules
 
@@ -120,8 +129,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -137,7 +145,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorEnvironmentRulesResponse](../../models/operations/getadvisorenvironmentrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_pod_security_policy
 
@@ -151,8 +163,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -168,7 +179,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAdvisorPodSecurityPolicyResponse](../../models/operations/getadvisorpodsecuritypolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_advisor_queue_advisor_type_
 
@@ -182,8 +197,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -208,7 +222,11 @@ if res.policy_advisor_state is not None:
 ### Response
 
 **[operations.GetAdvisorQueueAdvisorTypeResponse](../../models/operations/getadvisorqueueadvisortyperesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_advisor_run
 
@@ -222,8 +240,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -248,4 +265,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAdvisorRunResponse](../../models/operations/postadvisorrunresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

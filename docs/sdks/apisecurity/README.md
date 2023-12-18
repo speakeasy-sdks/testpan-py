@@ -1,5 +1,5 @@
 # APISecurity
-(*.api_security*)
+(*api_security*)
 
 ## Overview
 
@@ -75,8 +75,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -101,7 +100,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteAPISecurityAPICatalogIDResponse](../../models/operations/deleteapisecurityapicatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_api_security_internal_catalog_catalog_id_bfla_detection
 
@@ -115,8 +118,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -141,7 +143,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -155,8 +161,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -181,7 +186,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_api_security_open_api_specs_catalog_id_
 
@@ -195,8 +204,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -221,7 +229,11 @@ if res.open_api_spec_score_status is not None:
 ### Response
 
 **[operations.DeleteAPISecurityOpenAPISpecsCatalogIDResponse](../../models/operations/deleteapisecurityopenapispecscatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_gateways_gateway_id_
 
@@ -235,8 +247,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -261,7 +272,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteGatewaysGatewayIDResponse](../../models/operations/deletegatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_external_catalog
 
@@ -276,8 +291,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -304,7 +318,11 @@ if res.api_service_list_external is not None:
 ### Response
 
 **[operations.GetAPISecurityExternalCatalogResponse](../../models/operations/getapisecurityexternalcatalogresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_external_catalog_count
 
@@ -319,8 +337,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -343,7 +360,11 @@ if res.integer is not None:
 ### Response
 
 **[operations.GetAPISecurityExternalCatalogCountResponse](../../models/operations/getapisecurityexternalcatalogcountresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_external_catalog_catalog_id_
 
@@ -357,8 +378,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -386,7 +406,11 @@ if res.api_service_drill_down_external is not None:
 ### Response
 
 **[operations.GetAPISecurityExternalCatalogCatalogIDResponse](../../models/operations/getapisecurityexternalcatalogcatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog
 
@@ -401,8 +425,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -429,7 +452,11 @@ if res.api_service_list_internal is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogResponse](../../models/operations/getapisecurityinternalcatalogresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_count
 
@@ -444,8 +471,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -468,7 +494,11 @@ if res.integer is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCountResponse](../../models/operations/getapisecurityinternalcatalogcountresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_
 
@@ -482,8 +512,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -511,7 +540,11 @@ if res.api_service_drill_down_internal is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDResponse](../../models/operations/getapisecurityinternalcatalogcatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_bfla
 
@@ -525,8 +558,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -551,7 +583,11 @@ if res.api_service_bfla_info is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/getapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_fuzzing_status
 
@@ -565,8 +601,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -591,7 +626,11 @@ if res.api_service_fuzzing_progress is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDFuzzingStatusResponse](../../models/operations/getapisecurityinternalcatalogcatalogidfuzzingstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_fuzzing_tests
 
@@ -605,8 +644,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -631,7 +669,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDFuzzingTestsResponse](../../models/operations/getapisecurityinternalcatalogcatalogidfuzzingtestsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_trace_analysis
 
@@ -645,8 +687,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -671,7 +712,11 @@ if res.trace_analysis_details is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDTraceAnalysisResponse](../../models/operations/getapisecurityinternalcatalogcatalogidtraceanalysisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_
 
@@ -685,8 +730,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -711,7 +755,11 @@ if res.open_api_spec is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDResponse](../../models/operations/getapisecurityopenapispecscatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_diff_detection_status
 
@@ -725,8 +773,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -751,7 +798,11 @@ if res.diff_detection_status is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusResponse](../../models/operations/getapisecurityopenapispecscatalogiddiffdetectionstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_get_open_api_spec_score_status
 
@@ -765,8 +816,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -791,7 +841,11 @@ if res.open_api_spec_score_status is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDGetOpenAPISpecScoreStatusResponse](../../models/operations/getapisecurityopenapispecscatalogidgetopenapispecscorestatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json
 
@@ -805,8 +859,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -831,7 +884,11 @@ if res.res is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONResponse](../../models/operations/getapisecurityopenapispecscatalogidopenapispecswaggerjsonresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_reconstructed_spec_review
 
@@ -845,8 +902,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -871,7 +927,11 @@ if res.api_reconstructed_spec is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewResponse](../../models/operations/getapisecurityopenapispecscatalogidreconstructedspecreviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_reconstructed_spec_status
 
@@ -885,8 +945,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -911,7 +970,11 @@ if res.api_reconstruction_response is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecStatusResponse](../../models/operations/getapisecurityopenapispecscatalogidreconstructedspecstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_open_api_specs_catalog_id_reconstructed_spec_json
 
@@ -925,8 +988,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -951,7 +1013,11 @@ if res.res is not None:
 ### Response
 
 **[operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONResponse](../../models/operations/getapisecurityopenapispecscatalogidreconstructedspecjsonresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_risk_findings
 
@@ -965,8 +1031,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -995,7 +1060,11 @@ if res.risk_findings is not None:
 ### Response
 
 **[operations.GetAPISecurityRiskFindingsResponse](../../models/operations/getapisecurityriskfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_risk_findings_categories
 
@@ -1009,8 +1078,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1026,7 +1094,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAPISecurityRiskFindingsCategoriesResponse](../../models/operations/getapisecurityriskfindingscategoriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_risk_findings_sources
 
@@ -1040,8 +1112,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1057,7 +1128,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAPISecurityRiskFindingsSourcesResponse](../../models/operations/getapisecurityriskfindingssourcesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_risk_findings_risk_finding_id_
 
@@ -1071,8 +1146,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1097,7 +1171,11 @@ if res.risk_finding is not None:
 ### Response
 
 **[operations.GetAPISecurityRiskFindingsRiskFindingIDResponse](../../models/operations/getapisecurityriskfindingsriskfindingidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_catalog_id_delete_dependencies
 
@@ -1111,8 +1189,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1137,7 +1214,11 @@ if res.api_service_delete_dependencies is not None:
 ### Response
 
 **[operations.GetAPISecurityCatalogIDDeleteDependenciesResponse](../../models/operations/getapisecuritycatalogiddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_catalog_id_methods
 
@@ -1151,8 +1232,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1180,7 +1260,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAPISecurityCatalogIDMethodsResponse](../../models/operations/getapisecuritycatalogidmethodsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_api_security_catalog_id_tags
 
@@ -1194,8 +1278,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1220,7 +1303,11 @@ if res.api_service_tags is not None:
 ### Response
 
 **[operations.GetAPISecurityCatalogIDTagsResponse](../../models/operations/getapisecuritycatalogidtagsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_risk_findings
 
@@ -1234,8 +1321,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1260,7 +1346,11 @@ if res.api_sec_risk_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsResponse](../../models/operations/getdashboardapisecriskfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_risk_findings_trend
 
@@ -1274,8 +1364,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1300,7 +1389,11 @@ if res.api_sec_risk_findings_trend_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecRiskFindingsTrendResponse](../../models/operations/getdashboardapisecriskfindingstrendresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_specs_and_operations_diffs
 
@@ -1314,8 +1407,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1340,7 +1432,11 @@ if res.specs_and_operations_diffs_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecSpecsAndOperationsDiffsResponse](../../models/operations/getdashboardapisecspecsandoperationsdiffsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_apis
 
@@ -1354,8 +1450,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1380,7 +1475,11 @@ if res.api_sec_top_risky_apis_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyApisResponse](../../models/operations/getdashboardapisectopriskyapisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_dashboard_apisec_top_risky_findings
 
@@ -1394,8 +1493,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1420,7 +1518,11 @@ if res.api_sec_top_risky_findings_widget is not None:
 ### Response
 
 **[operations.GetDashboardApisecTopRiskyFindingsResponse](../../models/operations/getdashboardapisectopriskyfindingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways
 
@@ -1434,8 +1536,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1458,7 +1559,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysResponse](../../models/operations/getgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_clusters
 
@@ -1472,8 +1577,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1498,7 +1602,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetGatewaysClustersResponse](../../models/operations/getgatewaysclustersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_gateways_gateway_id_download_bundle
 
@@ -1512,8 +1620,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1538,7 +1645,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetGatewaysGatewayIDDownloadBundleResponse](../../models/operations/getgatewaysgatewayiddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_api
 
@@ -1552,8 +1663,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1578,7 +1688,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityAPIResponse](../../models/operations/postapisecurityapiresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_detection
 
@@ -1592,8 +1706,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1621,7 +1734,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -1635,8 +1752,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1664,7 +1780,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_reset
 
@@ -1678,8 +1798,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1704,7 +1823,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaResetResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflaresetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_reset_trace_analysis
 
@@ -1718,8 +1841,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1744,7 +1866,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisResponse](../../models/operations/postapisecurityinternalcatalogcatalogidresettraceanalysisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_start_fuzzing
 
@@ -1758,8 +1884,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1790,7 +1915,11 @@ if res.api_service_fuzzing_test is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDStartFuzzingResponse](../../models/operations/postapisecurityinternalcatalogcatalogidstartfuzzingresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_start_trace_analysis
 
@@ -1804,8 +1933,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1834,7 +1962,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisResponse](../../models/operations/postapisecurityinternalcatalogcatalogidstarttraceanalysisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_stop_fuzzing
 
@@ -1848,8 +1980,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1874,7 +2005,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingResponse](../../models/operations/postapisecurityinternalcatalogcatalogidstopfuzzingresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_stop_trace_analysis
 
@@ -1888,8 +2023,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1914,7 +2048,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisResponse](../../models/operations/postapisecurityinternalcatalogcatalogidstoptraceanalysisresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_open_api_specs_catalog_id_reconstructed_spec_abort
 
@@ -1928,8 +2066,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1954,7 +2091,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortResponse](../../models/operations/postapisecurityopenapispecscatalogidreconstructedspecabortresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_open_api_specs_catalog_id_reconstructed_spec_learn
 
@@ -1968,8 +2109,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -1995,7 +2135,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnResponse](../../models/operations/postapisecurityopenapispecscatalogidreconstructedspeclearnresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_open_api_specs_catalog_id_reconstructed_spec_review_approve
 
@@ -2009,8 +2153,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2049,7 +2192,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveResponse](../../models/operations/postapisecurityopenapispecscatalogidreconstructedspecreviewapproveresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_open_api_specs_catalog_id_start_diffs_detection
 
@@ -2063,8 +2210,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2093,7 +2239,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionResponse](../../models/operations/postapisecurityopenapispecscatalogidstartdiffsdetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_api_security_open_api_specs_catalog_id_stop_diffs_detection
 
@@ -2107,8 +2257,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2133,7 +2282,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionResponse](../../models/operations/postapisecurityopenapispecscatalogidstopdiffsdetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## post_gateways
 
@@ -2147,8 +2300,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2175,7 +2327,11 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PostGatewaysResponse](../../models/operations/postgatewaysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_api_security_internal_catalog_catalog_id_bfla
 
@@ -2190,8 +2346,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2242,7 +2397,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PutAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/putapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_api_security_open_api_specs_catalog_id_
 
@@ -2256,8 +2415,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2283,7 +2441,11 @@ if res.open_api_spec is not None:
 ### Response
 
 **[operations.PutAPISecurityOpenAPISpecsCatalogIDResponse](../../models/operations/putapisecurityopenapispecscatalogidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_gateways_gateway_id_
 
@@ -2297,8 +2459,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -2328,4 +2489,8 @@ if res.gateway is not None:
 ### Response
 
 **[operations.PutGatewaysGatewayIDResponse](../../models/operations/putgatewaysgatewayidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

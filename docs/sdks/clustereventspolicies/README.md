@@ -1,5 +1,5 @@
 # ClusterEventsPolicies
-(*.cluster_events_policies*)
+(*cluster_events_policies*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -43,7 +42,11 @@ if res.kubernetes_api_policy is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyResponse](../../models/operations/getkubernetesapipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_history
 
@@ -57,8 +60,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -74,7 +76,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyHistoryResponse](../../models/operations/getkubernetesapipolicyhistoryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_kubernetes_resources
 
@@ -88,8 +94,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -105,7 +110,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyKubernetesResourcesResponse](../../models/operations/getkubernetesapipolicykubernetesresourcesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_kubernetes_users
 
@@ -119,8 +128,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -136,7 +144,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyKubernetesUsersResponse](../../models/operations/getkubernetesapipolicykubernetesusersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_kubernetes_api_policy_recommended_rules
 
@@ -150,8 +162,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -167,7 +178,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetKubernetesAPIPolicyRecommendedRulesResponse](../../models/operations/getkubernetesapipolicyrecommendedrulesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## put_kubernetes_api_policy
 
@@ -181,8 +196,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -212,4 +226,8 @@ if res.kubernetes_api_policy is not None:
 ### Response
 
 **[operations.PutKubernetesAPIPolicyResponse](../../models/operations/putkubernetesapipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
