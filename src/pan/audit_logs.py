@@ -13,6 +13,7 @@ class AuditLogs:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_audit_logs(self, request: operations.GetAuditLogsRequest) -> operations.GetAuditLogsResponse:
         r"""Get audit logs"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,11 +24,14 @@ class AuditLogs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAuditLogsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,6 +46,7 @@ class AuditLogs:
         return res
 
     
+    
     def get_audit_logs_actions(self) -> operations.GetAuditLogsActionsResponse:
         r"""Get all the audit logs actions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,11 +56,14 @@ class AuditLogs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAuditLogsActionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -70,6 +78,7 @@ class AuditLogs:
         return res
 
     
+    
     def get_audit_logs_kubernetes(self, request: operations.GetAuditLogsKubernetesRequest) -> operations.GetAuditLogsKubernetesResponse:
         r"""Get audit logs"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,11 +89,14 @@ class AuditLogs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAuditLogsKubernetesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -99,6 +111,7 @@ class AuditLogs:
         return res
 
     
+    
     def get_audit_logs_kubernetes_actions(self) -> operations.GetAuditLogsKubernetesActionsResponse:
         r"""Get all the kubernetes audit logs actions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -108,11 +121,14 @@ class AuditLogs:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAuditLogsKubernetesActionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
