@@ -2,24 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from .trustedsignercloudaccount import TrustedSignerCloudAccount, TrustedSignerCloudAccountInput
-from .trustedsignercluster import TrustedSignerCluster, TrustedSignerClusterInput
+from .trustedsignercloudaccount import TrustedSignerCloudAccount
+from .trustedsignercluster import TrustedSignerCluster
 from .trustedsignerkey import TrustedSignerKey
 from dataclasses_json import Undefined, dataclass_json
 from pan import utils
 from typing import List, Optional
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
-class TrustedSignerInput:
-    r"""Trusted signers profile"""
-    name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    keys: Optional[List[TrustedSignerKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
-    trusted_signer_cloud_accounts: Optional[List[TrustedSignerCloudAccountInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerCloudAccounts'), 'exclude': lambda f: f is None }})
-    trusted_signer_clusters: Optional[List[TrustedSignerClusterInput]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trustedSignerClusters'), 'exclude': lambda f: f is None }})
-    
-
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
