@@ -10,7 +10,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AWSRole:
-    r"""A given name for the AWS role that Secure Application can connect to."""
+    r"""Defines a role ARN that Secure Application can connect to."""
     arn: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('arn') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
