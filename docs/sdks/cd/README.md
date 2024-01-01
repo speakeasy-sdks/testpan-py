@@ -1,5 +1,5 @@
 # Cd
-(*.cd*)
+(*cd*)
 
 ## Overview
 
@@ -30,8 +30,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -56,7 +55,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCdRuleIDConnectionsRuleResponse](../../models/operations/deletecdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete_cd_rule_id_serverless_rule
 
@@ -70,8 +73,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -96,7 +98,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCdRuleIDServerlessRuleResponse](../../models/operations/deletecdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cd
 
@@ -111,14 +117,13 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetCdRequest(
-    end_time=dateutil.parser.isoparse('2022-11-13T13:45:57.433Z'),
-    start_time=dateutil.parser.isoparse('2023-12-05T23:39:45.476Z'),
+    end_time=dateutil.parser.isoparse('2023-11-14T04:42:16.390Z'),
+    start_time=dateutil.parser.isoparse('2024-12-05T23:05:32.860Z'),
 )
 
 res = s.cd.get_cd(req)
@@ -138,7 +143,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCdResponse](../../models/operations/getcdresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cd_resource_id_
 
@@ -152,8 +161,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -178,7 +186,11 @@ if res.cd_pipeline_resource_result is not None:
 ### Response
 
 **[operations.GetCdResourceIDResponse](../../models/operations/getcdresourceidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cd_rule_id_connections_rule
 
@@ -192,8 +204,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -218,7 +229,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.GetCdRuleIDConnectionsRuleResponse](../../models/operations/getcdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cd_rule_id_serverless_rule
 
@@ -232,8 +247,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -258,7 +272,11 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.GetCdRuleIDServerlessRuleResponse](../../models/operations/getcdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_cd_connections_rule
 
@@ -272,8 +290,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -303,7 +320,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.PostCdConnectionsRuleResponse](../../models/operations/postcdconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_cd_serverless_rule
 
@@ -317,8 +338,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -357,7 +377,11 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.PostCdServerlessRuleResponse](../../models/operations/postcdserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_cd_rule_id_connections_rule
 
@@ -371,8 +395,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -405,7 +428,11 @@ if res.cd_connection_rule is not None:
 ### Response
 
 **[operations.PutCdRuleIDConnectionsRuleResponse](../../models/operations/putcdruleidconnectionsruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_cd_rule_id_serverless_rule
 
@@ -419,8 +446,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -462,4 +488,8 @@ if res.cd_serverless_rule is not None:
 ### Response
 
 **[operations.PutCdRuleIDServerlessRuleResponse](../../models/operations/putcdruleidserverlessruleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

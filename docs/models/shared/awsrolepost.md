@@ -1,6 +1,6 @@
 # AWSRolePost
 
-A given name for the AWS role that Secure Application can connect to.
+Defines a role ARN that Secure Application can connect to.
 
 
 ## Fields
