@@ -13,6 +13,7 @@ class EnvironmentPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_apps_policy(self, request: operations.GetAppsPolicyRequest) -> operations.GetAppsPolicyResponse:
         r"""Get the current Apps policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,11 +24,14 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAppsPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,6 +46,7 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def get_apps_policy_history(self) -> operations.GetAppsPolicyHistoryResponse:
         r"""Get the history of Apps policies"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -51,11 +56,14 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAppsPolicyHistoryResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -70,6 +78,7 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def get_apps_policy_search_options(self, request: operations.GetAppsPolicySearchOptionsRequest) -> operations.GetAppsPolicySearchOptionsResponse:
         r"""Get the current Apps policy filter option"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -80,11 +89,14 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetAppsPolicySearchOptionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -99,13 +111,14 @@ class EnvironmentPolicies:
         return res
 
     
+    
     def put_apps_policy(self, request: shared.AppPolicy) -> operations.PutAppsPolicyResponse:
         r"""Set the current Apps policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/appsPolicy'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.AppPolicy, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -113,11 +126,14 @@ class EnvironmentPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutAppsPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
