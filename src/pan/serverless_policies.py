@@ -12,6 +12,7 @@ class ServerlessPolicies:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_serverless_policy(self) -> operations.GetServerlessPolicyResponse:
         r"""Get current serverless policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,11 +22,14 @@ class ServerlessPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetServerlessPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -40,13 +44,14 @@ class ServerlessPolicies:
         return res
 
     
+    
     def put_serverless_policy(self, request: shared.ServerlessPolicy) -> operations.PutServerlessPolicyResponse:
         r"""Set the current serverless policy"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/serverlessPolicy'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.ServerlessPolicy, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -54,11 +59,14 @@ class ServerlessPolicies:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutServerlessPolicyResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:

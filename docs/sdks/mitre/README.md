@@ -1,5 +1,5 @@
 # Mitre
-(*.mitre*)
+(*mitre*)
 
 ### Available Operations
 
@@ -22,8 +22,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -50,7 +49,11 @@ if res.mitre_dashboard is not None:
 ### Response
 
 **[operations.GetMitreDashboardResponse](../../models/operations/getmitredashboardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_mitre_report_download
 
@@ -64,8 +67,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -81,7 +83,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetMitreReportDownloadResponse](../../models/operations/getmitrereportdownloadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_mitre_report_status
 
@@ -95,8 +101,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -112,7 +117,11 @@ if res.report_status is not None:
 ### Response
 
 **[operations.GetMitreReportStatusResponse](../../models/operations/getmitrereportstatusresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_mitre_technique
 
@@ -126,8 +135,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -155,7 +163,11 @@ if res.mitre_technique_info is not None:
 ### Response
 
 **[operations.GetMitreTechniqueResponse](../../models/operations/getmitretechniqueresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_mitre_report_generate
 
@@ -169,8 +181,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -186,7 +197,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostMitreReportGenerateResponse](../../models/operations/postmitrereportgenerateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_mitre_technique_fix
 
@@ -200,8 +215,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -234,4 +248,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostMitreTechniqueFixResponse](../../models/operations/postmitretechniquefixresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
