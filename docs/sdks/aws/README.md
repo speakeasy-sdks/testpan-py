@@ -1,5 +1,5 @@
 # Aws
-(*.aws*)
+(*aws*)
 
 ## Overview
 
@@ -29,8 +29,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -46,7 +45,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAccountsResponse](../../models/operations/getawsaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_aws_roles
 
@@ -60,8 +63,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -77,7 +79,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsRolesResponse](../../models/operations/getawsrolesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_aws_tags
 
@@ -91,8 +97,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -108,7 +113,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsTagsResponse](../../models/operations/getawstagsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_aws_aws_account_id_regions
 
@@ -123,8 +132,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -149,7 +157,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionsResponse](../../models/operations/getawsawsaccountidregionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_aws_aws_account_id_region_id_subnets
 
@@ -163,8 +175,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -190,7 +201,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionIDSubnetsResponse](../../models/operations/getawsawsaccountidregionidsubnetsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_aws_aws_account_id_region_id_vpcs
 
@@ -205,8 +220,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -232,7 +246,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAwsAwsAccountIDRegionIDVpcsResponse](../../models/operations/getawsawsaccountidregionidvpcsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_aws_roles
 
@@ -246,8 +264,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -273,7 +290,11 @@ if res.aws_role is not None:
 ### Response
 
 **[operations.PostAwsRolesResponse](../../models/operations/postawsrolesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_aws_roles_role_id_
 
@@ -287,8 +308,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -316,4 +336,8 @@ if res.aws_role is not None:
 ### Response
 
 **[operations.PutAwsRolesRoleIDResponse](../../models/operations/putawsrolesroleidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
