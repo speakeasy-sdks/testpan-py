@@ -1,6 +1,6 @@
 # VPCDescriptionInput
 
-Describes an AWS VPC.
+Like VPC but also includes the name
 
 
 ## Fields
