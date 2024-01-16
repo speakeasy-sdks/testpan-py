@@ -18,11 +18,11 @@ class GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusRequest:
 class GetAPISecurityOpenAPISpecsCatalogIDDiffDetectionStatusResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     diff_detection_status: Optional[shared_diffdetectionstatus.DiffDetectionStatus] = dataclasses.field(default=None)
     r"""diff detection status. in case of in progress, will reveal the detection end time. will return null for external services"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
