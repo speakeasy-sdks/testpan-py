@@ -13,6 +13,7 @@ class Dashboard:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_dashboard_apisec_risk_findings(self, request: operations.GetDashboardApisecRiskFindingsRequest) -> operations.GetDashboardApisecRiskFindingsResponse:
         r"""Get API sec risk findings widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -23,11 +24,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardApisecRiskFindingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -42,6 +46,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_apisec_risk_findings_trend(self, request: operations.GetDashboardApisecRiskFindingsTrendRequest) -> operations.GetDashboardApisecRiskFindingsTrendResponse:
         r"""Get API sec risk findings trend graph widget for the last 30 days"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -52,11 +57,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardApisecRiskFindingsTrendResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -71,6 +79,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_apisec_specs_and_operations_diffs(self, request: operations.GetDashboardApisecSpecsAndOperationsDiffsRequest) -> operations.GetDashboardApisecSpecsAndOperationsDiffsResponse:
         r"""Get API sec specs and operations diffs widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -81,11 +90,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardApisecSpecsAndOperationsDiffsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -100,6 +112,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_apisec_top_risky_apis(self, request: operations.GetDashboardApisecTopRiskyApisRequest) -> operations.GetDashboardApisecTopRiskyApisResponse:
         r"""Get API sec top risky APIs widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -110,11 +123,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardApisecTopRiskyApisResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -129,6 +145,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_apisec_top_risky_findings(self, request: operations.GetDashboardApisecTopRiskyFindingsRequest) -> operations.GetDashboardApisecTopRiskyFindingsResponse:
         r"""Get API sec top risky findings widget"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -139,11 +156,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardApisecTopRiskyFindingsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -158,6 +178,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_clusters(self) -> operations.GetDashboardClustersResponse:
         r"""Get the active clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -167,11 +188,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardClustersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -186,6 +210,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_connection_telemetries(self) -> operations.GetDashboardConnectionTelemetriesResponse:
         r"""Get pod connection dashboard data for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -195,11 +220,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardConnectionTelemetriesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -214,6 +242,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_kubernetes_audit_logs(self) -> operations.GetDashboardKubernetesAuditLogsResponse:
         r"""Get kubernetes audit logs dashboard data for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -223,11 +252,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardKubernetesAuditLogsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -242,6 +274,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_operational_bar(self, request: operations.GetDashboardOperationalBarRequest) -> operations.GetDashboardOperationalBarResponse:
         r"""Get the operation data dashboard for the given kubernetesClusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -252,11 +285,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardOperationalBarResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -271,6 +307,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_permissions(self, request: operations.GetDashboardPermissionsRequest) -> operations.GetDashboardPermissionsResponse:
         r"""Get permissions dashboard data for the given kubernetesClusterIds"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -281,11 +318,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardPermissionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -300,6 +340,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_pod_telemetries(self) -> operations.GetDashboardPodTelemetriesResponse:
         r"""Get pod telemetries dashboard data for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -309,11 +350,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardPodTelemetriesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -328,6 +372,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_report_download(self) -> operations.GetDashboardReportDownloadResponse:
         r"""Download Secure Application security report"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -337,11 +382,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardReportDownloadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -355,6 +403,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_report_status(self) -> operations.GetDashboardReportStatusResponse:
         r"""Get Secure Application report security status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -364,11 +413,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardReportStatusResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -383,6 +435,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_security_context(self, request: operations.GetDashboardSecurityContextRequest) -> operations.GetDashboardSecurityContextResponse:
         r"""Get security context dashboard data for all clusters"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -393,11 +446,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardSecurityContextResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -412,6 +468,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_top_security_risks(self, request: operations.GetDashboardTopSecurityRisksRequest) -> operations.GetDashboardTopSecurityRisksResponse:
         r"""Get the top risky deployments dashboard data for the given kubernetesClusterIds"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -422,11 +479,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardTopSecurityRisksResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -441,6 +501,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_vulnerabilities(self, request: operations.GetDashboardVulnerabilitiesRequest) -> operations.GetDashboardVulnerabilitiesResponse:
         r"""Get vulnerabilities dashboard data for the given kubernetesClusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -451,11 +512,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardVulnerabilitiesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -470,6 +534,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_kubernetes_cluster_id_connection_telemetries(self, request: operations.GetDashboardKubernetesClusterIDConnectionTelemetriesRequest) -> operations.GetDashboardKubernetesClusterIDConnectionTelemetriesResponse:
         r"""Get connection telemetries dashboard data for the given kubernetesClusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -479,11 +544,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardKubernetesClusterIDConnectionTelemetriesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -498,6 +566,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_kubernetes_cluster_id_kubernetes_audit_logs(self, request: operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsRequest) -> operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsResponse:
         r"""Get kubernetes audit logs dashboard data for the given kubernetesClusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -507,11 +576,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardKubernetesClusterIDKubernetesAuditLogsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -526,6 +598,7 @@ class Dashboard:
         return res
 
     
+    
     def get_dashboard_kubernetes_cluster_id_pod_telemetries(self, request: operations.GetDashboardKubernetesClusterIDPodTelemetriesRequest) -> operations.GetDashboardKubernetesClusterIDPodTelemetriesResponse:
         r"""Get pod telemetries dashboard data for the given kubernetesClusterId"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -535,11 +608,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetDashboardKubernetesClusterIDPodTelemetriesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -554,6 +630,7 @@ class Dashboard:
         return res
 
     
+    
     def get_licensing_dashboard(self) -> operations.GetLicensingDashboardResponse:
         r"""Get licensing dashboard data"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -563,11 +640,14 @@ class Dashboard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetLicensingDashboardResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -582,6 +662,7 @@ class Dashboard:
         return res
 
     
+    
     def post_dashboard_report_generate(self) -> operations.PostDashboardReportGenerateResponse:
         r"""Generate Secure Application security report"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -591,11 +672,14 @@ class Dashboard:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostDashboardReportGenerateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
