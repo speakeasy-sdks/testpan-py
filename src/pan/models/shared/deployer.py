@@ -14,22 +14,22 @@ class DeployerType(str, Enum):
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class DeployerInput:
-    r"""represent deployer object"""
-    deployer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerId') }})
-    deployer_type: DeployerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerType') }})
-    deployer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployer'), 'exclude': lambda f: f is None }})
-    
-
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
 class Deployer:
     r"""represent deployer object"""
     deployer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerId') }})
     deployer_type: DeployerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerType') }})
     deployer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployer'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
+    
+
+
+
+@dataclass_json(undefined=Undefined.EXCLUDE)
+@dataclasses.dataclass
+class DeployerInput:
+    r"""represent deployer object"""
+    deployer_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerId') }})
+    deployer_type: DeployerType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployerType') }})
+    deployer: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deployer'), 'exclude': lambda f: f is None }})
     
 
