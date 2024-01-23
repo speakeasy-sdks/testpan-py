@@ -9,15 +9,6 @@ from typing import Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AgentsUpdateSettingsInput:
-    is_manual_update: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isManualUpdate'), 'exclude': lambda f: f is None }})
-    is_update_now_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isUpdateNowEnabled'), 'exclude': lambda f: f is None }})
-    
-
-
-
-@dataclass_json(undefined=Undefined.EXCLUDE)
-@dataclasses.dataclass
 class AgentsUpdateSettings:
     is_manual_update: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isManualUpdate'), 'exclude': lambda f: f is None }})
     is_update_now_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isUpdateNowEnabled'), 'exclude': lambda f: f is None }})
