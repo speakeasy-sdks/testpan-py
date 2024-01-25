@@ -1,5 +1,5 @@
 # Registries
-(*.registries*)
+(*registries*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -52,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRegistriesRegistryIDResponse](../../models/operations/deleteregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_registries
 
@@ -66,8 +69,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -90,7 +92,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRegistriesResponse](../../models/operations/getregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries
 
@@ -104,8 +110,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -137,7 +142,11 @@ if res.registry is not None:
 ### Response
 
 **[operations.PostRegistriesResponse](../../models/operations/postregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection
 
@@ -151,8 +160,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -184,7 +192,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionResponse](../../models/operations/postregistriestestconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection_registry_id_
 
@@ -198,8 +210,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -234,7 +245,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionRegistryIDResponse](../../models/operations/postregistriestestconnectionregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_registries_registry_id_
 
@@ -248,8 +263,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -284,4 +298,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutRegistriesRegistryIDResponse](../../models/operations/putregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

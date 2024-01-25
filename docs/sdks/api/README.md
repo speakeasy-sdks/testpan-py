@@ -1,5 +1,5 @@
 # API
-(*.api*)
+(*api*)
 
 ## Overview
 
@@ -21,8 +21,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -38,4 +37,8 @@ if res.res is not None:
 ### Response
 
 **[operations.GetAPIResponse](../../models/operations/getapiresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
