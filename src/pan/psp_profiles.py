@@ -13,6 +13,7 @@ class PspProfiles:
         self.sdk_configuration = sdk_config
         
     
+    
     def delete_pod_security_policy_profiles_profile_id_(self, request: operations.DeletePodSecurityPolicyProfilesProfileIDRequest) -> operations.DeletePodSecurityPolicyProfilesProfileIDResponse:
         r"""Delete a pod security policy standards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,11 +23,14 @@ class PspProfiles:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeletePodSecurityPolicyProfilesProfileIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -37,6 +41,7 @@ class PspProfiles:
         return res
 
     
+    
     def delete_seccomp_profiles_profile_id_(self, request: operations.DeleteSeccompProfilesProfileIDRequest) -> operations.DeleteSeccompProfilesProfileIDResponse:
         r"""Delete a seccomp profile"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -46,11 +51,14 @@ class PspProfiles:
         headers['Accept'] = '*/*'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.DeleteSeccompProfilesProfileIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 204:
@@ -61,6 +69,7 @@ class PspProfiles:
         return res
 
     
+    
     def get_pod_security_policy_profiles(self) -> operations.GetPodSecurityPolicyProfilesResponse:
         r"""Get all the pod security standards profiles on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -70,11 +79,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetPodSecurityPolicyProfilesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -89,6 +101,7 @@ class PspProfiles:
         return res
 
     
+    
     def get_seccomp_profiles(self) -> operations.GetSeccompProfilesResponse:
         r"""Get all the seccomp profiles on the system"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -98,11 +111,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.GetSeccompProfilesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -117,13 +133,14 @@ class PspProfiles:
         return res
 
     
+    
     def post_pod_security_policy_profiles(self, request: shared.PodSecurityPolicy) -> operations.PostPodSecurityPolicyProfilesResponse:
         r"""Create a new pod security standards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/podSecurityPolicyProfiles'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.PodSecurityPolicy, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -131,11 +148,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostPodSecurityPolicyProfilesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -150,6 +170,7 @@ class PspProfiles:
         return res
 
     
+    
     def post_pod_security_policy_profiles_batch(self, request: List[shared.PodSecurityPolicy]) -> operations.PostPodSecurityPolicyProfilesBatchResponse:
         r"""Add a number of Pod Security Standards
         Add a number of new Pod Security Standards Profiles.
@@ -158,7 +179,7 @@ class PspProfiles:
         
         url = base_url + '/podSecurityPolicyProfiles/batch'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, List[shared.PodSecurityPolicy], "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -166,11 +187,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostPodSecurityPolicyProfilesBatchResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -185,13 +209,14 @@ class PspProfiles:
         return res
 
     
+    
     def post_seccomp_profiles(self, request: shared.SeccompProfileInput) -> operations.PostSeccompProfilesResponse:
         r"""Add seccomp profile"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/seccompProfiles'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.SeccompProfileInput, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -199,11 +224,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PostSeccompProfilesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 201:
@@ -218,13 +246,14 @@ class PspProfiles:
         return res
 
     
+    
     def put_pod_security_policy_profiles_profile_id_(self, request: operations.PutPodSecurityPolicyProfilesProfileIDRequest) -> operations.PutPodSecurityPolicyProfilesProfileIDResponse:
         r"""Change pod security standards profile"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PutPodSecurityPolicyProfilesProfileIDRequest, base_url, '/podSecurityPolicyProfiles/{profileId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "pod_security_policy", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PutPodSecurityPolicyProfilesProfileIDRequest, "pod_security_policy", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -232,11 +261,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutPodSecurityPolicyProfilesProfileIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
@@ -251,13 +283,14 @@ class PspProfiles:
         return res
 
     
+    
     def put_seccomp_profiles_profile_id_(self, request: operations.PutSeccompProfilesProfileIDRequest) -> operations.PutSeccompProfilesProfileIDResponse:
         r"""Change seccomp profile"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PutSeccompProfilesProfileIDRequest, base_url, '/seccompProfiles/{profileId}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "seccomp_profile", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PutSeccompProfilesProfileIDRequest, "seccomp_profile", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -265,11 +298,14 @@ class PspProfiles:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
-
+        
         res = operations.PutSeccompProfilesProfileIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
