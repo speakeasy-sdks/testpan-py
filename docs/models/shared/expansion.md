@@ -1,6 +1,6 @@
 # Expansion
 
-represent expansion object used in put method
+represent expansion object
 
 
 ## Fields
