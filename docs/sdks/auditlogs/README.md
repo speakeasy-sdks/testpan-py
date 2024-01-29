@@ -1,5 +1,5 @@
 # AuditLogs
-(*.audit_logs*)
+(*audit_logs*)
 
 ## Overview
 
@@ -25,8 +25,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -34,8 +33,8 @@ req = operations.GetAuditLogsRequest(
     actions=[
         'string',
     ],
-    end_time=dateutil.parser.isoparse('2022-10-20T03:40:31.022Z'),
-    start_time=dateutil.parser.isoparse('2023-03-19T00:25:31.296Z'),
+    end_time=dateutil.parser.isoparse('2023-10-20T18:04:43.105Z'),
+    start_time=dateutil.parser.isoparse('2024-03-18T18:06:48.311Z'),
 )
 
 res = s.audit_logs.get_audit_logs(req)
@@ -55,7 +54,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAuditLogsResponse](../../models/operations/getauditlogsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_audit_logs_actions
 
@@ -69,8 +72,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -86,7 +88,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAuditLogsActionsResponse](../../models/operations/getauditlogsactionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_audit_logs_kubernetes
 
@@ -101,20 +107,19 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetAuditLogsKubernetesRequest(
-    end_time=dateutil.parser.isoparse('2023-03-24T20:20:48.235Z'),
+    end_time=dateutil.parser.isoparse('2024-03-24T14:09:45.265Z'),
     kubernetes_audit_action=[
         'string',
     ],
     result=[
         operations.Result.RISKY,
     ],
-    start_time=dateutil.parser.isoparse('2021-10-10T01:17:52.269Z'),
+    start_time=dateutil.parser.isoparse('2022-10-10T07:28:47.494Z'),
 )
 
 res = s.audit_logs.get_audit_logs_kubernetes(req)
@@ -134,7 +139,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAuditLogsKubernetesResponse](../../models/operations/getauditlogskubernetesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_audit_logs_kubernetes_actions
 
@@ -148,8 +157,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -165,4 +173,8 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetAuditLogsKubernetesActionsResponse](../../models/operations/getauditlogskubernetesactionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
