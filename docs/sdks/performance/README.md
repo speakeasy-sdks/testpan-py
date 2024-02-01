@@ -1,5 +1,5 @@
 # Performance
-(*.performance*)
+(*performance*)
 
 ### Available Operations
 
@@ -18,8 +18,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -46,7 +45,11 @@ if res.api_service_spec_path_hit_count_graph is not None:
 ### Response
 
 **[operations.GetAPISecurityAPICatalogIDHitCountGraphResponse](../../models/operations/getapisecurityapicatalogidhitcountgraphresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_performance_metrics
 
@@ -61,17 +64,16 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetPerformanceMetricsRequest(
-    end_time=dateutil.parser.isoparse('2023-06-20T17:24:08.589Z'),
+    end_time=dateutil.parser.isoparse('2024-06-20T13:08:39.501Z'),
     protocol='string',
     source_namespace='565fb8ea-d185-4971-9112-61059b89d3b7',
     source_pod_template='dcd1b894-b8a5-4ad8-a111-06ddd9453d84',
-    start_time=dateutil.parser.isoparse('2022-01-22T20:26:53.423Z'),
+    start_time=dateutil.parser.isoparse('2023-01-23T04:55:37.636Z'),
     target_namespace='e92fa045-69a7-47dd-a601-68cf6d7999aa',
     target_pod_template='93b9be30-176b-4a06-8558-1cebc600c70d',
 )
@@ -93,4 +95,8 @@ if res.performance_metrics is not None:
 ### Response
 
 **[operations.GetPerformanceMetricsResponse](../../models/operations/getperformancemetricsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
