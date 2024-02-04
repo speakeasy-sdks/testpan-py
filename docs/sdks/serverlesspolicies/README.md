@@ -1,5 +1,5 @@
 # ServerlessPolicies
-(*.serverless_policies*)
+(*serverless_policies*)
 
 ### Available Operations
 
@@ -18,8 +18,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -35,7 +34,11 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.GetServerlessPolicyResponse](../../models/operations/getserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_serverless_policy
 
@@ -49,8 +52,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -97,4 +99,8 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.PutServerlessPolicyResponse](../../models/operations/putserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
