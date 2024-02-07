@@ -4,12 +4,13 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import apisecuritypolicy as shared_apisecuritypolicy
+from ...models.shared import apisecuritypolicy_input as shared_apisecuritypolicy_input
 from typing import Optional
 
 
 @dataclasses.dataclass
 class PutAPISecurityPolicyPolicyIDRequest:
-    api_security_policy: shared_apisecuritypolicy.APISecurityPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    api_security_policy: shared_apisecuritypolicy_input.APISecurityPolicyInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     policy_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'policyId', 'style': 'simple', 'explode': False }})
     
 
@@ -21,9 +22,9 @@ class PutAPISecurityPolicyPolicyIDResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     api_security_policy: Optional[shared_apisecuritypolicy.APISecurityPolicy] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

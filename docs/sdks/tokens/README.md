@@ -1,5 +1,5 @@
 # Tokens
-(*.tokens*)
+(*tokens*)
 
 ### Available Operations
 
@@ -22,8 +22,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -48,7 +47,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteTokensTokenIDResponse](../../models/operations/deletetokenstokenidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_tokens
 
@@ -62,8 +65,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -86,7 +88,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTokensResponse](../../models/operations/gettokensresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_tokens_info
 
@@ -100,8 +106,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -128,7 +133,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTokensInfoResponse](../../models/operations/gettokensinforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_tokens_token_id_delete_dependencies
 
@@ -142,8 +151,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -168,7 +176,11 @@ if res.token_delete_dependencies is not None:
 ### Response
 
 **[operations.GetTokensTokenIDDeleteDependenciesResponse](../../models/operations/gettokenstokeniddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_tokens
 
@@ -183,17 +195,16 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.Token(
+    name='string',
+    vault_secret_path='string',
     apis=[
         '06eb110c-ef48-45c9-b334-9ef284ebe70b',
     ],
-    name='string',
-    vault_secret_path='string',
 )
 
 res = s.tokens.post_tokens(req)
@@ -213,7 +224,11 @@ if res.token is not None:
 ### Response
 
 **[operations.PostTokensResponse](../../models/operations/posttokensresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_tokens_token_id_
 
@@ -228,18 +243,17 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutTokensTokenIDRequest(
     token=shared.Token(
+        name='string',
+        vault_secret_path='string',
         apis=[
             '92f997c4-3e7b-4827-80b5-81f98e4dc9a1',
         ],
-        name='string',
-        vault_secret_path='string',
     ),
     token_id='de484da0-5c23-446d-bd22-b8df113331e5',
 )
@@ -261,4 +275,8 @@ if res.token is not None:
 ### Response
 
 **[operations.PutTokensTokenIDResponse](../../models/operations/puttokenstokenidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

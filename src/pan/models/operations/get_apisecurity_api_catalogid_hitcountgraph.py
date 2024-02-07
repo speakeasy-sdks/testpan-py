@@ -39,9 +39,9 @@ class GetAPISecurityAPICatalogIDHitCountGraphResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     api_service_spec_path_hit_count_graph: Optional[List[shared_apiservicespecpathhitcountgraphpoint.APIServiceSpecPathHitCountGraphPoint]] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
