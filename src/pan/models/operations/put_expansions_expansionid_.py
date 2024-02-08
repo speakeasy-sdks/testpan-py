@@ -10,8 +10,8 @@ from typing import Optional
 
 @dataclasses.dataclass
 class PutExpansionsExpansionIDRequest:
-    expansion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'expansionId', 'style': 'simple', 'explode': False }})
     expansion_put: shared_expansionput.ExpansionPut = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    expansion_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'expansionId', 'style': 'simple', 'explode': False }})
     
 
 
@@ -22,9 +22,9 @@ class PutExpansionsExpansionIDResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     expansion: Optional[shared_expansion.Expansion] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

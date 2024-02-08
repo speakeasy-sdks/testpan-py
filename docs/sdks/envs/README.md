@@ -1,5 +1,5 @@
 # Envs
-(*.envs*)
+(*envs*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -52,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteEnvironmentsEnvIDResponse](../../models/operations/deleteenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_environments
 
@@ -66,8 +69,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -90,7 +92,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetEnvironmentsResponse](../../models/operations/getenvironmentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_environments_env_id_
 
@@ -104,8 +110,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -130,7 +135,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetEnvironmentsEnvIDResponse](../../models/operations/getenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_environments_env_id_delete_dependencies
 
@@ -144,8 +153,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -170,7 +178,11 @@ if res.delete_dependency_element_environments is not None:
 ### Response
 
 **[operations.GetEnvironmentsEnvIDDeleteDependenciesResponse](../../models/operations/getenvironmentsenviddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_environments
 
@@ -185,25 +197,25 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.EnvironmentInput(
+    name='Prod',
     aws_environments=[
         shared.AwsEnvironmentInput(
+            vpc=shared.VPCDescriptionInput(
+                aws_account_id='string',
+                region_id='string',
+                vpc_id='string',
+            ),
             tags=[
                 shared.Tag(
                     key='<key>',
                     value='string',
                 ),
             ],
-            vpc=shared.VPCDescriptionInput(
-                aws_account_id='string',
-                region_id='string',
-                vpc_id='string',
-            ),
         ),
     ],
     kubernetes_environments=[
@@ -220,7 +232,6 @@ req = shared.EnvironmentInput(
             ],
         ),
     ],
-    name='Prod',
 )
 
 res = s.envs.post_environments(req)
@@ -240,7 +251,11 @@ if res.environment is not None:
 ### Response
 
 **[operations.PostEnvironmentsResponse](../../models/operations/postenvironmentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_environments_batch
 
@@ -255,26 +270,26 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = [
     shared.EnvironmentInput(
+        name='Prod',
         aws_environments=[
             shared.AwsEnvironmentInput(
+                vpc=shared.VPCDescriptionInput(
+                    aws_account_id='string',
+                    region_id='string',
+                    vpc_id='string',
+                ),
                 tags=[
                     shared.Tag(
                         key='<key>',
                         value='string',
                     ),
                 ],
-                vpc=shared.VPCDescriptionInput(
-                    aws_account_id='string',
-                    region_id='string',
-                    vpc_id='string',
-                ),
             ),
         ],
         kubernetes_environments=[
@@ -291,7 +306,6 @@ req = [
                 ],
             ),
         ],
-        name='Prod',
     ),
 ]
 
@@ -304,15 +318,19 @@ if res.classes is not None:
 
 ### Parameters
 
-| Parameter                                          | Type                                               | Required                                           | Description                                        |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| `request`                                          | [List[shared.EnvironmentInput]](../../models//.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
+| Parameter                                         | Type                                              | Required                                          | Description                                       |
+| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
+| `request`                                         | [List[shared.EnvironmentInput]](../../models/.md) | :heavy_check_mark:                                | The request object to use for the request.        |
 
 
 ### Response
 
 **[operations.PostEnvironmentsBatchResponse](../../models/operations/postenvironmentsbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_environments_delete
 
@@ -327,8 +345,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -344,7 +361,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostEnvironmentsDeleteResponse](../../models/operations/postenvironmentsdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_environments_env_id_
 
@@ -359,26 +380,26 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutEnvironmentsEnvIDRequest(
     environment=shared.EnvironmentInput(
+        name='Prod',
         aws_environments=[
             shared.AwsEnvironmentInput(
+                vpc=shared.VPCDescriptionInput(
+                    aws_account_id='string',
+                    region_id='string',
+                    vpc_id='string',
+                ),
                 tags=[
                     shared.Tag(
                         key='<key>',
                         value='string',
                     ),
                 ],
-                vpc=shared.VPCDescriptionInput(
-                    aws_account_id='string',
-                    region_id='string',
-                    vpc_id='string',
-                ),
             ),
         ],
         kubernetes_environments=[
@@ -395,7 +416,6 @@ req = operations.PutEnvironmentsEnvIDRequest(
                 ],
             ),
         ],
-        name='Prod',
     ),
     env_id='010de053-98de-43a9-acad-0419b6d55592',
 )
@@ -417,4 +437,8 @@ if res.environment is not None:
 ### Response
 
 **[operations.PutEnvironmentsEnvIDResponse](../../models/operations/putenvironmentsenvidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
