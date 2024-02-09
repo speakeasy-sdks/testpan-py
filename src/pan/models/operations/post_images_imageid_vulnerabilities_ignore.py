@@ -22,10 +22,10 @@ class SnoozeTime(str, Enum):
 
 @dataclasses.dataclass
 class PostImagesImageIDVulnerabilitiesIgnoreRequest:
+    uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     action_type: QueryParamActionType = dataclasses.field(metadata={'query_param': { 'field_name': 'actionType', 'style': 'form', 'explode': True }})
     r"""The ignore action type (ADD/REMOVE)"""
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
-    uuid_list: shared_uuidlist.UUIDList = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     snooze_time: Optional[SnoozeTime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'snoozeTime', 'style': 'form', 'explode': True }})
     r"""The time to snooze the vulnerability"""
     
@@ -38,7 +38,7 @@ class PostImagesImageIDVulnerabilitiesIgnoreResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -19,9 +19,9 @@ class ConnectionViolation:
     r"""If there is a connection violation according to the policy - this object will hold the violation info"""
     default_rule: Optional[DefaultConnectionRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('defaultRule'), 'exclude': lambda f: f is None }})
     direct_pod_rule: Optional[DirectPodIPConnectionRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('directPodRule'), 'exclude': lambda f: f is None }})
-    encryption_reason: Optional[EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
     encrypt_rule: Optional[ConnectionsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptRule'), 'exclude': lambda f: f is None }})
     r"""A rule that states what Apps are allowed to communicate with each other."""
+    encryption_reason: Optional[EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
     interception_rule: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interceptionRule'), 'exclude': lambda f: f is None }})
     last_violation: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastViolation'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     user_rule: Optional[ConnectionsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('userRule'), 'exclude': lambda f: f is None }})

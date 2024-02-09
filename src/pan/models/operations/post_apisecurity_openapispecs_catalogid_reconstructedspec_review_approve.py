@@ -3,13 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import apireconstructedspec as shared_apireconstructedspec
-from typing import Optional
+from ...models.shared import apireconstructedspec_input as shared_apireconstructedspec_input
 
 
 @dataclasses.dataclass
 class PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveRequest:
-    api_reconstructed_spec: shared_apireconstructedspec.APIReconstructedSpecInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    api_reconstructed_spec: shared_apireconstructedspec_input.APIReconstructedSpecInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     catalog_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'catalogId', 'style': 'simple', 'explode': False }})
     
 
@@ -21,7 +20,7 @@ class PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewApproveResponse
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -1,5 +1,5 @@
 # ServerlessPolicies
-(*.serverless_policies*)
+(*serverless_policies*)
 
 ### Available Operations
 
@@ -18,8 +18,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -35,7 +34,11 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.GetServerlessPolicyResponse](../../models/operations/getserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_serverless_policy
 
@@ -49,8 +52,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -64,9 +66,10 @@ req = shared.ServerlessPolicy(
             action=shared.ServerlessRuleAction.ALLOW,
             name='string',
             rule=shared.ServerlessRuleType(
-                serverless_function_validation=shared.ServerlessFunctionValidation(),
                 serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
+                serverless_function_validation=shared.ServerlessFunctionValidation(),
             ),
+            status=shared.ServerlessRuleStatus.ENABLED,
             scope=[
                 shared.ServerlessRuleScope(
                     cloud_account='string',
@@ -75,7 +78,6 @@ req = shared.ServerlessPolicy(
                     ],
                 ),
             ],
-            status=shared.ServerlessRuleStatus.ENABLED,
         ),
     ],
 )
@@ -97,4 +99,8 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.PutServerlessPolicyResponse](../../models/operations/putserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
