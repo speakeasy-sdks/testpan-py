@@ -1,5 +1,5 @@
 # RuntimeMap
-(*.runtime_map*)
+(*runtime_map*)
 
 ## Overview
 
@@ -24,8 +24,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -50,7 +49,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteNetworkMapQueueRequestIDResponse](../../models/operations/deletenetworkmapqueuerequestidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_network_map
 
@@ -65,16 +68,16 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetNetworkMapRequest(
+    end_time=dateutil.parser.isoparse('2024-01-08T06:16:22.888Z'),
+    start_time=dateutil.parser.isoparse('2024-11-30T21:38:21.961Z'),
     apps=[
         'string',
     ],
-    end_time=dateutil.parser.isoparse('2023-01-07T14:07:43.013Z'),
     environments=[
         'string',
     ],
@@ -85,9 +88,8 @@ req = operations.GetNetworkMapRequest(
         'string',
     ],
     namespaces=[
-        'fe7ca0fe-d770-4727-a0bc-8a727a6cf780',
+        'e7ca0fed-7707-427e-8bc8-a727a6cf7808',
     ],
-    start_time=dateutil.parser.isoparse('2022-08-24T13:40:09.607Z'),
 )
 
 res = s.runtime_map.get_network_map(req)
@@ -107,7 +109,11 @@ if res.network_map is not None:
 ### Response
 
 **[operations.GetNetworkMapResponse](../../models/operations/getnetworkmapresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_network_map_queue_request_id_
 
@@ -121,8 +127,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -147,7 +152,11 @@ if res.background_job_response is not None:
 ### Response
 
 **[operations.GetNetworkMapQueueRequestIDResponse](../../models/operations/getnetworkmapqueuerequestidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_network_map_results_request_id_
 
@@ -161,8 +170,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -187,4 +195,8 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetNetworkMapResultsRequestIDResponse](../../models/operations/getnetworkmapresultsrequestidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

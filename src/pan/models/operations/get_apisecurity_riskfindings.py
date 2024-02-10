@@ -34,8 +34,6 @@ class GetAPISecurityRiskFindingsQueryParamSortKey(str, Enum):
 class GetAPISecurityRiskFindingsRequest:
     api_sec_source: APISecSource = dataclasses.field(default=APISecSource.INTERNAL, metadata={'query_param': { 'field_name': 'apiSecSource', 'style': 'form', 'explode': True }})
     r"""source filter. an enum representing the source of the APIs service in scope"""
-    sort_key: GetAPISecurityRiskFindingsQueryParamSortKey = dataclasses.field(default=GetAPISecurityRiskFindingsQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
-    r"""Risk finding sort key."""
     category: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'category', 'style': 'form', 'explode': True }})
     r"""Category of the risk finding"""
     detected: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'detected', 'style': 'form', 'explode': True }})
@@ -52,6 +50,8 @@ class GetAPISecurityRiskFindingsRequest:
     r"""The API risk filter"""
     sort_dir: Optional[GetAPISecurityRiskFindingsQueryParamSortDir] = dataclasses.field(default=GetAPISecurityRiskFindingsQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
+    sort_key: GetAPISecurityRiskFindingsQueryParamSortKey = dataclasses.field(default=GetAPISecurityRiskFindingsQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    r"""Risk finding sort key."""
     source: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'source', 'style': 'form', 'explode': True }})
     r"""Source of the risk finding"""
     
@@ -64,7 +64,7 @@ class GetAPISecurityRiskFindingsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     risk_findings: Optional[shared_riskfindings.RiskFindings] = dataclasses.field(default=None)
     r"""Success"""
