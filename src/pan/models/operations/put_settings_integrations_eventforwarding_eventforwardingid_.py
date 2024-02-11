@@ -10,8 +10,8 @@ from typing import Optional
 
 @dataclasses.dataclass
 class PutSettingsIntegrationsEventForwardingEventForwardingIDRequest:
-    event_forwarding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eventForwardingId', 'style': 'simple', 'explode': False }})
     splunk_events_forwarding_details: shared_splunkeventsforwardingdetails.SplunkEventsForwardingDetails = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    event_forwarding_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'eventForwardingId', 'style': 'simple', 'explode': False }})
     
 
 
@@ -22,9 +22,9 @@ class PutSettingsIntegrationsEventForwardingEventForwardingIDResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     events_forwarding_details: Optional[shared_eventsforwardingdetails.EventsForwardingDetails] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

@@ -4,13 +4,12 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import k8scisbenchmarkupdatenodes as shared_k8scisbenchmarkupdatenodes
-from typing import Optional
 
 
 @dataclasses.dataclass
 class PutK8sCISBenchmarkClusterIDRequest:
-    cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     k8s_cis_benchmark_update_nodes: shared_k8scisbenchmarkupdatenodes.K8sCISBenchmarkUpdateNodes = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'clusterId', 'style': 'simple', 'explode': False }})
     
 
 
@@ -21,7 +20,7 @@ class PutK8sCISBenchmarkClusterIDResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     
 

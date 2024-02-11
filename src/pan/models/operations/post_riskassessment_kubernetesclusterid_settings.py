@@ -9,9 +9,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class PostRiskAssessmentKubernetesClusterIDSettingsRequest:
+    risk_assessment_cluster_scan_config: shared_riskassessmentclusterscanconfig.RiskAssessmentClusterScanConfig = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    risk_assessment_cluster_scan_config: shared_riskassessmentclusterscanconfig.RiskAssessmentClusterScanConfig = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -22,7 +22,7 @@ class PostRiskAssessmentKubernetesClusterIDSettingsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     res: Optional[str] = dataclasses.field(default=None)
     r"""Scan with the returned scanId was added to execution queue."""

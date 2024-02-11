@@ -21,22 +21,22 @@ class GetImagesQueryParamSortKey(str, Enum):
 
 @dataclasses.dataclass
 class GetImagesRequest:
-    sort_key: GetImagesQueryParamSortKey = dataclasses.field(default=GetImagesQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
-    r"""image sort key. enum description in image sort key definition"""
-    download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
-    r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     image_hash: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_HASH', 'style': 'form', 'explode': False }})
     r"""Filter images by HASH"""
     image_name: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_NAME', 'style': 'form', 'explode': False }})
     r"""Filter images by name"""
     image_tag: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'IMAGE_TAG', 'style': 'form', 'explode': False }})
     r"""Filter images by tags"""
+    download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
+    r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     sort_dir: Optional[GetImagesQueryParamSortDir] = dataclasses.field(default=GetImagesQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
+    sort_key: GetImagesQueryParamSortKey = dataclasses.field(default=GetImagesQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    r"""image sort key. enum description in image sort key definition"""
     vulnerability_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'vulnerabilityName', 'style': 'form', 'explode': True }})
     r"""Filter images by vulnerability name"""
     
@@ -49,9 +49,9 @@ class GetImagesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     classes: Optional[List[shared_imagedefget.ImageDefGet]] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
