@@ -1,5 +1,5 @@
 # Registries
-(*.registries*)
+(*registries*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -52,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRegistriesRegistryIDResponse](../../models/operations/deleteregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_registries
 
@@ -66,8 +69,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -90,7 +92,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRegistriesResponse](../../models/operations/getregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries
 
@@ -104,20 +110,19 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.RegistryInput(
+    type=shared.RegistryType.JFROG,
+    url='http://serene-hotel.biz',
     cluster_ids=[
-        '95b632a5-fe89-4e35-884b-fdb5be5f9972',
+        '2a5fe89e-3548-44bf-9b5b-e5f9972484d3',
     ],
     credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+        registry_credentials_type=shared.RegistryCredentialsType.JFROG_REGISTRY_CREDENTIALS,
     ),
-    type=shared.RegistryType.AZURE,
-    url='http://svelte-curio.org',
 )
 
 res = s.registries.post_registries(req)
@@ -137,7 +142,11 @@ if res.registry is not None:
 ### Response
 
 **[operations.PostRegistriesResponse](../../models/operations/postregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection
 
@@ -151,20 +160,19 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.RegistryInput(
+    type=shared.RegistryType.AWS,
+    url='http://imaginative-servitude.name',
     cluster_ids=[
-        '146c9745-4e65-4c13-96b3-e4e8e106ebca',
+        '7454e65c-1396-4b3e-8e8e-106ebca1e554',
     ],
     credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+        registry_credentials_type=shared.RegistryCredentialsType.JFROG_REGISTRY_CREDENTIALS,
     ),
-    type=shared.RegistryType.OTHER,
-    url='http://handy-energy.net',
 )
 
 res = s.registries.post_registries_test_connection(req)
@@ -184,7 +192,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionResponse](../../models/operations/postregistriestestconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection_registry_id_
 
@@ -198,21 +210,20 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PostRegistriesTestConnectionRegistryIDRequest(
     registry=shared.RegistryInput(
+        type=shared.RegistryType.GCP,
+        url='http://ordinary-shield.name',
         cluster_ids=[
-            '309c9980-a8e5-4df0-8f7a-f1c1e7dae13c',
+            '980a8e5d-f00f-47af-9c1e-7dae13c52516',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsType.JFROG_REGISTRY_CREDENTIALS,
         ),
-        type=shared.RegistryType.AWS,
-        url='http://blond-horror.org',
     ),
     registry_id='99bd4248-5508-4257-836a-3d0e30be4155',
 )
@@ -234,7 +245,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionRegistryIDResponse](../../models/operations/postregistriestestconnectionregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_registries_registry_id_
 
@@ -248,21 +263,20 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutRegistriesRegistryIDRequest(
     registry=shared.RegistryInput(
+        type=shared.RegistryType.JFROG,
+        url='https://narrow-encirclement.info',
         cluster_ids=[
-            'bb846b91-90fe-4927-838c-5cc07f3bb118',
+            'b9190fe9-27c3-48c5-8c07-f3bb11811d80',
         ],
         credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
+            registry_credentials_type=shared.RegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
         ),
-        type=shared.RegistryType.AWS,
-        url='https://mixed-affiliate.info',
     ),
     registry_id='a8f4138b-1ba6-41a9-bb5f-375f1e0e9ee0',
 )
@@ -284,4 +298,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutRegistriesRegistryIDResponse](../../models/operations/putregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

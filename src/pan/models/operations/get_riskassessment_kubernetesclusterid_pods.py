@@ -22,8 +22,6 @@ class GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey(str, Enum):
 class GetRiskAssessmentKubernetesClusterIDPodsRequest:
     kubernetes_cluster_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'kubernetesClusterId', 'style': 'simple', 'explode': False }})
     r"""Secure Application Kubernetes cluster ID"""
-    sort_key: GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
-    r"""risk assessment pod sort key."""
     download_as_xlsx: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'downloadAsXlsx', 'style': 'form', 'explode': True }})
     r"""When true, the API will return an xlsx file, and pagination will be ignored"""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
@@ -34,6 +32,8 @@ class GetRiskAssessmentKubernetesClusterIDPodsRequest:
     r"""Return entries from this offset (pagination)"""
     sort_dir: Optional[GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
+    sort_key: GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.RISK, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    r"""risk assessment pod sort key."""
     
 
 
@@ -44,9 +44,9 @@ class GetRiskAssessmentKubernetesClusterIDPodsResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     classes: Optional[List[shared_riskassessmentpod.RiskAssessmentPod]] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

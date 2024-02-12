@@ -1,5 +1,5 @@
 # APISecurityPolicies
-(*.api_security_policies*)
+(*api_security_policies*)
 
 ## Overview
 
@@ -25,8 +25,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -51,7 +50,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteAPISecurityPolicyPolicyIDResponse](../../models/operations/deleteapisecuritypolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_api_security_policy
 
@@ -65,8 +68,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -82,7 +84,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAPISecurityPolicyResponse](../../models/operations/getapisecuritypolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_api_security_policy_policy_id_delete_dependencies
 
@@ -96,8 +102,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -122,7 +127,11 @@ if res.api_security_policy_delete_dependencies is not None:
 ### Response
 
 **[operations.GetAPISecurityPolicyPolicyIDDeleteDependenciesResponse](../../models/operations/getapisecuritypolicypolicyiddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_api_security_policy
 
@@ -136,12 +145,12 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.APISecurityPolicyInput(
+    name='string',
     category_conditions=shared.APISecurityPolicyCategoryConditions(
         conditions=[
             shared.APISecurityPolicyCategoryCondition(
@@ -153,7 +162,6 @@ req = shared.APISecurityPolicyInput(
     global_condition=shared.APISecurityPolicyGlobalCondition(
         highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.CRITICAL,
     ),
-    name='string',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -173,7 +181,11 @@ if res.api_security_policy is not None:
 ### Response
 
 **[operations.PostAPISecurityPolicyResponse](../../models/operations/postapisecuritypolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_api_security_policy_policy_id_
 
@@ -187,13 +199,13 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutAPISecurityPolicyPolicyIDRequest(
     api_security_policy=shared.APISecurityPolicyInput(
+        name='string',
         category_conditions=shared.APISecurityPolicyCategoryConditions(
             conditions=[
                 shared.APISecurityPolicyCategoryCondition(
@@ -205,7 +217,6 @@ req = operations.PutAPISecurityPolicyPolicyIDRequest(
         global_condition=shared.APISecurityPolicyGlobalCondition(
             highest_accepted_severity=shared.APISecurityPolicyRiskSeverity.LOW,
         ),
-        name='string',
     ),
     policy_id='5c1bef90-a301-4744-8558-c2807a30fd0b',
 )
@@ -227,4 +238,8 @@ if res.api_security_policy is not None:
 ### Response
 
 **[operations.PutAPISecurityPolicyPolicyIDResponse](../../models/operations/putapisecuritypolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

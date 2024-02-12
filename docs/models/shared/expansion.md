@@ -1,14 +1,17 @@
 # Expansion
 
-represent expansion object used in put method
+represent expansion object
 
 
 ## Fields
 
 | Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `account_name`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
 | `cluster_id`                                                           | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
+| `name`                                                                 | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
+| `namespace_id`                                                         | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
+| `workload_addresses`                                                   | List[[shared.WorkloadAddress](../../models/shared/workloadaddress.md)] | :heavy_check_mark:                                                     | N/A                                                                    |
+| `account_name`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
 | `cluster_name`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
 | `controller_enabled`                                                   | *Optional[bool]*                                                       | :heavy_minus_sign:                                                     | N/A                                                                    |
 | `controller_id`                                                        | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
@@ -19,7 +22,4 @@ represent expansion object used in put method
 | `id`                                                                   | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | unique Id                                                              |
 | `instance_id`                                                          | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
 | `labels`                                                               | List[[shared.Label](../../models/shared/label.md)]                     | :heavy_minus_sign:                                                     | N/A                                                                    |
-| `name`                                                                 | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
-| `namespace_id`                                                         | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
 | `should_send_metrics`                                                  | *Optional[bool]*                                                       | :heavy_minus_sign:                                                     | N/A                                                                    |
-| `workload_addresses`                                                   | List[[shared.WorkloadAddress](../../models/shared/workloadaddress.md)] | :heavy_check_mark:                                                     | N/A                                                                    |

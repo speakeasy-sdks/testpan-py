@@ -13,9 +13,9 @@ class GetK8sCISBenchmarkSummaryResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     k8s_cis_benchmark_account_summary: Optional[shared_k8scisbenchmarkaccountsummary.K8sCISBenchmarkAccountSummary] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
