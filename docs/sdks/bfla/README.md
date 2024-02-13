@@ -1,5 +1,5 @@
 # Bfla
-(*.bfla*)
+(*bfla*)
 
 ### Available Operations
 
@@ -23,8 +23,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -49,7 +48,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -63,8 +66,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -89,7 +91,11 @@ if res.res is not None:
 ### Response
 
 **[operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/deleteapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_api_security_internal_catalog_catalog_id_bfla
 
@@ -103,8 +109,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -129,7 +134,11 @@ if res.api_service_bfla_info is not None:
 ### Response
 
 **[operations.GetAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/getapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_detection
 
@@ -143,8 +152,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -172,7 +180,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbfladetectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_learning
 
@@ -186,8 +198,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -215,7 +226,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflalearningresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_api_security_internal_catalog_catalog_id_bfla_reset
 
@@ -229,8 +244,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -255,7 +269,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostAPISecurityInternalCatalogCatalogIDBflaResetResponse](../../models/operations/postapisecurityinternalcatalogcatalogidbflaresetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_api_security_internal_catalog_catalog_id_bfla
 
@@ -264,45 +282,20 @@ update BFLA info for this catalogId
 ### Example Usage
 
 ```python
-import dateutil.parser
 import pan
 from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
     api_service_bfla_info=shared.APIServiceBflaInfo(
         status=shared.APIServiceBflaInfoStatus.NO_SPEC,
-        tags=[
-            shared.APIServiceBflaTagInfo(
-                name='string',
-                paths=[
-                    shared.APIServiceBflaPathInfo(
-                        clients=[
-                            shared.APIServiceBflaClientInfo(
-                                name='string',
-                                principles=[
-                                    shared.APIServiceBflaPrincipleInfo(
-                                        ip='169.172.185.96',
-                                        name='string',
-                                        principle_type='string',
-                                    ),
-                                ],
-                            ),
-                        ],
-                        method=shared.HTTPMethod.PUT,
-                        path='/tmp',
-                    ),
-                ],
-            ),
-        ],
     ),
-    catalog_id='ef3b3fca-add4-4420-92ad-1459f8769c20',
+    catalog_id='aab64aef-3b3f-4caa-9d44-2012ad1459f8',
 )
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)
@@ -322,4 +315,8 @@ if res.res is not None:
 ### Response
 
 **[operations.PutAPISecurityInternalCatalogCatalogIDBflaResponse](../../models/operations/putapisecurityinternalcatalogcatalogidbflaresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

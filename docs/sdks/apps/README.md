@@ -1,5 +1,5 @@
 # Apps
-(*.apps*)
+(*apps*)
 
 ## Overview
 
@@ -25,16 +25,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetAppsRequest(
-    type=[
-        'string',
-    ],
-)
+req = operations.GetAppsRequest()
 
 res = s.apps.get_apps(req)
 
@@ -53,7 +48,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppsResponse](../../models/operations/getappsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_apps_app_id_
 
@@ -67,8 +66,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -93,7 +91,11 @@ if res.app is not None:
 ### Response
 
 **[operations.GetAppsAppIDResponse](../../models/operations/getappsappidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_apps
 
@@ -107,29 +109,22 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.App(
+    executable='java',
+    name='AccountingApp',
+    type='frontend',
     args=[
         '-cp',
         '-jar',
         './*',
     ],
     cwd='/usr/local/bin/corp',
-    executable='java',
     executable_path='/usr/bin',
-    labels=[
-        shared.Label(
-            key='<key>',
-            value='string',
-        ),
-    ],
-    name='AccountingApp',
     process_name='accounting_app',
-    type='frontend',
 )
 
 res = s.apps.post_apps(req)
@@ -149,7 +144,11 @@ if res.app is not None:
 ### Response
 
 **[operations.PostAppsResponse](../../models/operations/postappsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_apps_delete
 
@@ -164,8 +163,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -184,13 +182,17 @@ if res.status_code == 200:
 
 | Parameter                                  | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `request`                                  | [List[str]](../../models//.md)             | :heavy_check_mark:                         | The request object to use for the request. |
+| `request`                                  | [List[str]](../../models/.md)              | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
 
 **[operations.PostAppsDeleteResponse](../../models/operations/postappsdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_apps_app_id_
 
@@ -204,30 +206,23 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutAppsAppIDRequest(
     app=shared.App(
+        executable='java',
+        name='AccountingApp',
+        type='frontend',
         args=[
             '-cp',
             '-jar',
             './*',
         ],
         cwd='/usr/local/bin/corp',
-        executable='java',
         executable_path='/usr/bin',
-        labels=[
-            shared.Label(
-                key='<key>',
-                value='string',
-            ),
-        ],
-        name='AccountingApp',
         process_name='accounting_app',
-        type='frontend',
     ),
     app_id='7da0b1a3-d78c-4a7d-8e68-bca8a0d7f811',
 )
@@ -249,4 +244,8 @@ if res.app is not None:
 ### Response
 
 **[operations.PutAppsAppIDResponse](../../models/operations/putappsappidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -1,5 +1,5 @@
 # Registries
-(*.registries*)
+(*registries*)
 
 ## Overview
 
@@ -26,8 +26,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -52,7 +51,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRegistriesRegistryIDResponse](../../models/operations/deleteregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_registries
 
@@ -66,8 +69,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -90,7 +92,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRegistriesResponse](../../models/operations/getregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries
 
@@ -104,20 +110,13 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.RegistryInput(
-    cluster_ids=[
-        '95b632a5-fe89-4e35-884b-fdb5be5f9972',
-    ],
-    credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
-    ),
-    type=shared.RegistryType.AZURE,
-    url='http://svelte-curio.org',
+    type=shared.RegistryType.JFROG,
+    url='http://serene-hotel.biz',
 )
 
 res = s.registries.post_registries(req)
@@ -137,7 +136,11 @@ if res.registry is not None:
 ### Response
 
 **[operations.PostRegistriesResponse](../../models/operations/postregistriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection
 
@@ -151,20 +154,13 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.RegistryInput(
-    cluster_ids=[
-        '146c9745-4e65-4c13-96b3-e4e8e106ebca',
-    ],
-    credentials=shared.RegistryCredentials(
-        registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
-    ),
-    type=shared.RegistryType.OTHER,
-    url='http://handy-energy.net',
+    type=shared.RegistryType.AWS,
+    url='http://imaginative-servitude.name',
 )
 
 res = s.registries.post_registries_test_connection(req)
@@ -184,7 +180,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionResponse](../../models/operations/postregistriestestconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_registries_test_connection_registry_id_
 
@@ -198,23 +198,16 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PostRegistriesTestConnectionRegistryIDRequest(
     registry=shared.RegistryInput(
-        cluster_ids=[
-            '309c9980-a8e5-4df0-8f7a-f1c1e7dae13c',
-        ],
-        credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsType.STANDARD_REGISTRY_CREDENTIALS,
-        ),
-        type=shared.RegistryType.AWS,
-        url='http://blond-horror.org',
+        type=shared.RegistryType.GCP,
+        url='http://ordinary-shield.name',
     ),
-    registry_id='99bd4248-5508-4257-836a-3d0e30be4155',
+    registry_id='980a8e5d-f00f-47af-9c1e-7dae13c52516',
 )
 
 res = s.registries.post_registries_test_connection_registry_id_(req)
@@ -234,7 +227,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRegistriesTestConnectionRegistryIDResponse](../../models/operations/postregistriestestconnectionregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_registries_registry_id_
 
@@ -248,23 +245,16 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutRegistriesRegistryIDRequest(
     registry=shared.RegistryInput(
-        cluster_ids=[
-            'bb846b91-90fe-4927-838c-5cc07f3bb118',
-        ],
-        credentials=shared.RegistryCredentials(
-            registry_credentials_type=shared.RegistryCredentialsType.AWS_REGISTRY_CREDENTIALS,
-        ),
-        type=shared.RegistryType.AWS,
-        url='https://mixed-affiliate.info',
+        type=shared.RegistryType.JFROG,
+        url='https://narrow-encirclement.info',
     ),
-    registry_id='a8f4138b-1ba6-41a9-bb5f-375f1e0e9ee0',
+    registry_id='b9190fe9-27c3-48c5-8c07-f3bb11811d80',
 )
 
 res = s.registries.put_registries_registry_id_(req)
@@ -284,4 +274,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutRegistriesRegistryIDResponse](../../models/operations/putregistriesregistryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

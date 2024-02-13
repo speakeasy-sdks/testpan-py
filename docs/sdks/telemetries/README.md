@@ -1,5 +1,5 @@
 # Telemetries
-(*.telemetries*)
+(*telemetries*)
 
 ## Overview
 
@@ -28,48 +28,14 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetAppTelemetriesRequest(
-    app_name=[
-        'string',
-    ],
-    app_type=[
-        'string',
-    ],
-    end_time=dateutil.parser.isoparse('2023-07-22T16:11:08.877Z'),
-    environment_name=[
-        'string',
-    ],
-    executable=[
-        'string',
-    ],
-    highest_dockerfile_scan_result=[
-        'string',
-    ],
-    host=[
-        'string',
-    ],
-    images_id=[
-        '50dc36c5-6d44-446a-b356-669e30a7dfca',
-    ],
-    result=[
-        operations.GetAppTelemetriesQueryParamResult.DETECT,
-    ],
-    sort_key=operations.GetAppTelemetriesQueryParamSortKey.FINISH_TIME,
-    start_time=dateutil.parser.isoparse('2022-08-17T10:31:03.718Z'),
-    status=[
-        'string',
-    ],
-    vulnerability_levels_filter=[
-        'string',
-    ],
-    workload_risks=[
-        operations.WorkloadRisks.CRITICAL,
-    ],
+    end_time=dateutil.parser.isoparse('2024-07-22T12:37:40.720Z'),
+    sort_key=operations.GetAppTelemetriesQueryParamSortKey.ENVIRONMENT_NAME,
+    start_time=dateutil.parser.isoparse('2022-02-25T06:07:38.033Z'),
 )
 
 res = s.telemetries.get_app_telemetries(req)
@@ -89,7 +55,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesResponse](../../models/operations/getapptelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_app_telemetries_app_telemetry_id_
 
@@ -103,8 +73,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -129,7 +98,11 @@ if res.app_telemetry is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDResponse](../../models/operations/getapptelemetriesapptelemetryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_app_telemetries_app_telemetry_id_api_risk_info
 
@@ -143,8 +116,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -169,7 +141,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDAPIRiskInfoResponse](../../models/operations/getapptelemetriesapptelemetryidapiriskinforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_app_telemetries_app_telemetry_id_image_packages
 
@@ -183,8 +159,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -209,7 +184,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDImagePackagesResponse](../../models/operations/getapptelemetriesapptelemetryidimagepackagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_app_telemetries_app_telemetry_id_injection_info
 
@@ -223,8 +202,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -249,7 +227,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetAppTelemetriesAppTelemetryIDInjectionInfoResponse](../../models/operations/getapptelemetriesapptelemetryidinjectioninforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_connection_telemetries
 
@@ -264,48 +246,14 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetConnectionTelemetriesRequest(
-    end_time=dateutil.parser.isoparse('2023-12-02T06:47:12.551Z'),
-    result=[
-        operations.GetConnectionTelemetriesQueryParamResult.ALLOW,
-    ],
-    sort_key=operations.GetConnectionTelemetriesQueryParamSortKey.SOURCE_APP_TYPE,
-    source_app_name=[
-        'string',
-    ],
-    source_environment_name=[
-        'string',
-    ],
-    source_executable=[
-        'string',
-    ],
-    source_host_name=[
-        'string',
-    ],
-    source_risk=[
-        operations.SourceRisk.LOW,
-    ],
-    start_time=dateutil.parser.isoparse('2021-04-04T11:53:10.030Z'),
-    target_app_name=[
-        'string',
-    ],
-    target_environment_name=[
-        'string',
-    ],
-    target_executable=[
-        'string',
-    ],
-    target_host_name=[
-        'string',
-    ],
-    target_risk=[
-        operations.TargetRisk.HIGH,
-    ],
+    end_time=dateutil.parser.isoparse('2024-12-02T06:08:07.741Z'),
+    sort_key=operations.GetConnectionTelemetriesQueryParamSortKey.TARGET_RISK,
+    start_time=dateutil.parser.isoparse('2022-04-30T20:32:05.208Z'),
 )
 
 res = s.telemetries.get_connection_telemetries(req)
@@ -325,7 +273,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetConnectionTelemetriesResponse](../../models/operations/getconnectiontelemetriesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_connection_telemetries_connection_telemetry_id_
 
@@ -340,15 +292,14 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.GetConnectionTelemetriesConnectionTelemetryIDRequest(
     connection_telemetry_id='726acf07-d01e-4a6d-9948-64b67b807f65',
-    end_time=dateutil.parser.isoparse('2021-06-17T09:20:57.797Z'),
-    start_time=dateutil.parser.isoparse('2023-04-26T13:53:39.546Z'),
+    end_time=dateutil.parser.isoparse('2022-06-17T13:01:05.521Z'),
+    start_time=dateutil.parser.isoparse('2024-04-26T08:25:39.198Z'),
 )
 
 res = s.telemetries.get_connection_telemetries_connection_telemetry_id_(req)
@@ -368,4 +319,8 @@ if res.connection_telemetry is not None:
 ### Response
 
 **[operations.GetConnectionTelemetriesConnectionTelemetryIDResponse](../../models/operations/getconnectiontelemetriesconnectiontelemetryidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -14,8 +14,8 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Violation:
-    encryption_reason: Optional[EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
     encrypt_rule: Optional[ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptRule'), 'exclude': lambda f: f is None }})
+    encryption_reason: Optional[EncryptionReason] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('encryptionReason'), 'exclude': lambda f: f is None }})
     last_violation: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lastViolation'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     rule: Optional[ConnectionRuleBasic] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
     

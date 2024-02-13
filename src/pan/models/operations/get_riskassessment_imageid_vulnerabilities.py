@@ -21,14 +21,14 @@ class GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey(str, Enum):
 class GetRiskAssessmentImageIDVulnerabilitiesRequest:
     image_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'imageId', 'style': 'simple', 'explode': False }})
     r"""The id of the risk assessment image"""
-    sort_key: GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey.SEVERITY, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
-    r"""risk assessment image sort key."""
     max_results: Optional[float] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'maxResults', 'style': 'form', 'explode': True }})
     r"""The number of entries to return (pagination)"""
     offset: Optional[float] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Return entries from this offset (pagination)"""
     sort_dir: Optional[GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortDir] = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortDir.DESC, metadata={'query_param': { 'field_name': 'sortDir', 'style': 'form', 'explode': True }})
     r"""sorting direction"""
+    sort_key: GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey = dataclasses.field(default=GetRiskAssessmentImageIDVulnerabilitiesQueryParamSortKey.SEVERITY, metadata={'query_param': { 'field_name': 'sortKey', 'style': 'form', 'explode': True }})
+    r"""risk assessment image sort key."""
     
 
 
@@ -39,9 +39,9 @@ class GetRiskAssessmentImageIDVulnerabilitiesResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     classes: Optional[List[shared_riskassessmentvulnerability.RiskAssessmentVulnerability]] = dataclasses.field(default=None)
     r"""Success"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

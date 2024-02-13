@@ -1,5 +1,5 @@
 # AgentManagement
-(*.agent_management*)
+(*agent_management*)
 
 ## Overview
 
@@ -23,25 +23,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetAgentsRequest(
-    environment_name=[
-        'string',
-    ],
-    host_name=[
-        'string',
-    ],
-    risk=[
-        operations.Risk.MEDIUM,
-    ],
-    status=[
-        operations.Status.ACTIVE,
-    ],
-)
+req = operations.GetAgentsRequest()
 
 res = s.agent_management.get_agents(req)
 
@@ -60,7 +46,11 @@ if res.agents is not None:
 ### Response
 
 **[operations.GetAgentsResponse](../../models/operations/getagentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_agents_agent_id_update
 
@@ -74,8 +64,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -100,7 +89,12 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAgentsAgentIDUpdateResponse](../../models/operations/postagentsagentidupdateresponse.md)**
+### Errors
 
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| errors.APIResponse | 402                | application/json   |
+| errors.SDKError    | 4x-5xx             | */*                |
 
 ## post_agents_agent_id_update_state
 
@@ -114,8 +108,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -141,4 +134,9 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostAgentsAgentIDUpdateStateResponse](../../models/operations/postagentsagentidupdatestateresponse.md)**
+### Errors
 
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| errors.APIResponse | 402                | application/json   |
+| errors.SDKError    | 4x-5xx             | */*                |

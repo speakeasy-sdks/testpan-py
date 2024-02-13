@@ -1,5 +1,5 @@
 # RiskAssessment
-(*.risk_assessment*)
+(*risk_assessment*)
 
 ## Overview
 
@@ -36,8 +36,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -62,7 +61,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDResponse](../../models/operations/deleteriskassessmentignoredrisksignoredriskidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete_risk_assessment_kubernetes_cluster_id_cancel
 
@@ -76,8 +79,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -102,7 +104,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteRiskAssessmentKubernetesClusterIDCancelResponse](../../models/operations/deleteriskassessmentkubernetesclusteridcancelresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment
 
@@ -116,8 +122,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -133,7 +138,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentResponse](../../models/operations/getriskassessmentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_ignored_risks
 
@@ -147,8 +156,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -164,7 +172,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentIgnoredRisksResponse](../../models/operations/getriskassessmentignoredrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_permissions
 
@@ -178,16 +190,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetRiskAssessmentPermissionsRequest(
-    clusters_ids=[
-        'a89898f1-37f8-4c09-8113-2e54dc492339',
-    ],
-)
+req = operations.GetRiskAssessmentPermissionsRequest()
 
 res = s.risk_assessment.get_risk_assessment_permissions(req)
 
@@ -206,7 +213,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsResponse](../../models/operations/getriskassessmentpermissionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_
 
@@ -220,8 +231,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -246,7 +256,11 @@ if res.owner_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDResponse](../../models/operations/getriskassessmentpermissionsclusteridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_owner_id_
 
@@ -260,8 +274,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -287,7 +300,11 @@ if res.permission_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDOwnerIDResponse](../../models/operations/getriskassessmentpermissionsclusteridowneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_permissions_cluster_id_owner_id_role_id_
 
@@ -301,8 +318,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -329,7 +345,11 @@ if res.permission_role_response is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPermissionsClusterIDOwnerIDRoleIDResponse](../../models/operations/getriskassessmentpermissionsclusteridowneridroleidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_poll
 
@@ -343,8 +363,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -371,7 +390,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentPollResponse](../../models/operations/getriskassessmentpollresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_image_id_vulnerabilities
 
@@ -385,8 +408,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -412,7 +434,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentImageIDVulnerabilitiesResponse](../../models/operations/getriskassessmentimageidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_risk_assessment_kubernetes_cluster_id_pods
 
@@ -426,8 +452,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -453,7 +478,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetRiskAssessmentKubernetesClusterIDPodsResponse](../../models/operations/getriskassessmentkubernetesclusteridpodsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_risk_assessment_ignored_risks
 
@@ -467,8 +496,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -484,7 +512,11 @@ if res.ignored_risk is not None:
 ### Response
 
 **[operations.PostRiskAssessmentIgnoredRisksResponse](../../models/operations/postriskassessmentignoredrisksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_risk_assessment_permissions_owner_id_approve
 
@@ -498,19 +530,14 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest(
-    uuid_list=shared.UUIDList(
-        uuid_list=[
-            'fda4268f-7c78-46d3-87e2-782993d8ba4d',
-        ],
-    ),
+    uuid_list=shared.UUIDList(),
     action_type=operations.PostRiskAssessmentPermissionsOwnerIDApproveQueryParamActionType.REMOVE,
-    owner_id='c3b8ad34-72d2-4f81-a59b-f81c3cc9c10e',
+    owner_id='da4268f7-c786-4d34-be27-82993d8ba4dd',
 )
 
 res = s.risk_assessment.post_risk_assessment_permissions_owner_id_approve(req)
@@ -530,7 +557,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostRiskAssessmentPermissionsOwnerIDApproveResponse](../../models/operations/postriskassessmentpermissionsowneridapproveresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_risk_assessment_kubernetes_cluster_id_scan
 
@@ -544,8 +575,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -570,7 +600,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostRiskAssessmentKubernetesClusterIDScanResponse](../../models/operations/postriskassessmentkubernetesclusteridscanresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_risk_assessment_kubernetes_cluster_id_settings
 
@@ -584,8 +618,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -593,14 +626,8 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
     risk_assessment_cluster_scan_config=shared.RiskAssessmentClusterScanConfig(
         max_parallelism=752536,
         minimum_severity=shared.VulnerabilitySeverity.LOW,
-        namespaces=[
-            'string',
-        ],
-        periodic_job_expression=shared.PeriodicJobExpression(
-            periodic_job_type=shared.PeriodicJobType.BY_HOURS_PERIODIC_JOB_EXPRESSION,
-        ),
     ),
-    kubernetes_cluster_id='c1a0c988-4def-48c1-bbd4-845665df2f73',
+    kubernetes_cluster_id='8c1a0c98-84de-4f8c-97bd-4845665df2f7',
 )
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_settings(req)
@@ -620,7 +647,11 @@ if res.res is not None:
 ### Response
 
 **[operations.PostRiskAssessmentKubernetesClusterIDSettingsResponse](../../models/operations/postriskassessmentkubernetesclusteridsettingsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_risk_assessment_ignored_risks_ignored_risk_id_
 
@@ -634,24 +665,15 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
     ci_policy=shared.CiPolicyInput(
-        dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
-        ),
         name='string',
-        vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.CRITICAL,
-        ),
     ),
-    ignored_risk_id='1978a3a5-2b6e-4f16-935f-df8529c311ad',
+    ignored_risk_id='44ed1978-a3a5-42b6-af16-d35fdf8529c3',
 )
 
 res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)
@@ -671,4 +693,8 @@ if res.ignored_risk is not None:
 ### Response
 
 **[operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDResponse](../../models/operations/putriskassessmentignoredrisksignoredriskidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

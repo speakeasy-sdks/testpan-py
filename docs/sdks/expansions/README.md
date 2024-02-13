@@ -1,5 +1,5 @@
 # Expansions
-(*.expansions*)
+(*expansions*)
 
 ## Overview
 
@@ -25,8 +25,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -51,7 +50,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteExpansionsExpansionIDResponse](../../models/operations/deleteexpansionsexpansionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_expansions
 
@@ -65,8 +68,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -91,7 +93,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetExpansionsResponse](../../models/operations/getexpansionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_expansions_expansion_id_install_expansion_tar_gz
 
@@ -105,8 +111,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -131,7 +136,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetExpansionsExpansionIDInstallExpansionTarGzResponse](../../models/operations/getexpansionsexpansionidinstallexpansiontargzresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_expansions
 
@@ -140,25 +149,17 @@ Create a new expansion
 ### Example Usage
 
 ```python
-import dateutil.parser
 import pan
 from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.ExpansionInput(
     cluster_id='ef536384-aae2-4f5a-87a4-cef022a42548',
-    labels=[
-        shared.Label(
-            key='<key>',
-            value='string',
-        ),
-    ],
     name='string',
     namespace_id='ea7db024-5fda-41fa-8ab8-8259ba11df19',
     workload_addresses=[
@@ -185,7 +186,11 @@ if res.expansion is not None:
 ### Response
 
 **[operations.PostExpansionsResponse](../../models/operations/postexpansionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_expansions_expansion_id_
 
@@ -199,19 +204,12 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutExpansionsExpansionIDRequest(
     expansion_put=shared.ExpansionPut(
-        labels=[
-            shared.Label(
-                key='<key>',
-                value='string',
-            ),
-        ],
         name='string',
         workload_addresses=[
             shared.WorkloadAddress(
@@ -239,4 +237,8 @@ if res.expansion is not None:
 ### Response
 
 **[operations.PutExpansionsExpansionIDResponse](../../models/operations/putexpansionsexpansionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

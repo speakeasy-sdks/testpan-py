@@ -1,5 +1,5 @@
 # ServerlessPolicies
-(*.serverless_policies*)
+(*serverless_policies*)
 
 ### Available Operations
 
@@ -18,8 +18,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -35,7 +34,11 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.GetServerlessPolicyResponse](../../models/operations/getserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_serverless_policy
 
@@ -49,8 +52,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -59,25 +61,6 @@ req = shared.ServerlessPolicy(
     unidentified_serverless_rule=shared.UnidentifiedServerlessRule(
         action=shared.UnidentifiedServerlessRuleAction.DETECT,
     ),
-    user_rules=[
-        shared.ServerlessRule(
-            action=shared.ServerlessRuleAction.ALLOW,
-            name='string',
-            rule=shared.ServerlessRuleType(
-                serverless_function_validation=shared.ServerlessFunctionValidation(),
-                serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_NAME_SERVERLESS_RULE_TYPE,
-            ),
-            scope=[
-                shared.ServerlessRuleScope(
-                    cloud_account='string',
-                    regions=[
-                        'string',
-                    ],
-                ),
-            ],
-            status=shared.ServerlessRuleStatus.ENABLED,
-        ),
-    ],
 )
 
 res = s.serverless_policies.put_serverless_policy(req)
@@ -97,4 +80,8 @@ if res.serverless_policy is not None:
 ### Response
 
 **[operations.PutServerlessPolicyResponse](../../models/operations/putserverlesspolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

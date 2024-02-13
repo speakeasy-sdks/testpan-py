@@ -1,5 +1,5 @@
 # TrustedSigners
-(*.trusted_signers*)
+(*trusted_signers*)
 
 ## Overview
 
@@ -25,8 +25,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -51,7 +50,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteTrustedSignersTrustedSignerIDResponse](../../models/operations/deletetrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_trusted_signers
 
@@ -65,8 +68,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -89,7 +91,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetTrustedSignersResponse](../../models/operations/gettrustedsignersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_trusted_signers_trusted_signer_id_
 
@@ -103,8 +109,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -129,7 +134,11 @@ if res.trusted_signer is not None:
 ### Response
 
 **[operations.GetTrustedSignersTrustedSignerIDResponse](../../models/operations/gettrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_trusted_signers
 
@@ -143,25 +152,12 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.TrustedSignerInput(
-    keys=[
-        shared.TrustedSignerKey(
-            key='<key>',
-            name='string',
-        ),
-    ],
     name='string',
-    trusted_signer_cloud_accounts=[
-        shared.TrustedSignerCloudAccountInput(),
-    ],
-    trusted_signer_clusters=[
-        shared.TrustedSignerClusterInput(),
-    ],
 )
 
 res = s.trusted_signers.post_trusted_signers(req)
@@ -181,7 +177,11 @@ if res.trusted_signer is not None:
 ### Response
 
 **[operations.PostTrustedSignersResponse](../../models/operations/posttrustedsignersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_trusted_signers_trusted_signer_id_
 
@@ -195,26 +195,13 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutTrustedSignersTrustedSignerIDRequest(
     trusted_signer=shared.TrustedSignerInput(
-        keys=[
-            shared.TrustedSignerKey(
-                key='<key>',
-                name='string',
-            ),
-        ],
         name='string',
-        trusted_signer_cloud_accounts=[
-            shared.TrustedSignerCloudAccountInput(),
-        ],
-        trusted_signer_clusters=[
-            shared.TrustedSignerClusterInput(),
-        ],
     ),
     trusted_signer_id='8d323c1d-de95-475d-a823-90f3ebb00bb0',
 )
@@ -236,4 +223,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PutTrustedSignersTrustedSignerIDResponse](../../models/operations/puttrustedsignerstrustedsigneridresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

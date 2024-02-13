@@ -1,5 +1,5 @@
 # CICDPolicies
-(*.ci_cd_policies*)
+(*ci_cd_policies*)
 
 ## Overview
 
@@ -28,8 +28,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -54,7 +53,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCdPolicyPolicyIDResponse](../../models/operations/deletecdpolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete_ci_policy_policy_id_
 
@@ -68,8 +71,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -94,7 +96,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCiPolicyPolicyIDResponse](../../models/operations/deletecipolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cd_policy
 
@@ -108,8 +114,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -125,7 +130,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCdPolicyResponse](../../models/operations/getcdpolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_ci_policy
 
@@ -139,8 +148,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -156,7 +164,11 @@ if res.ci_policy is not None:
 ### Response
 
 **[operations.GetCiPolicyResponse](../../models/operations/getcipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_cd_policy
 
@@ -170,32 +182,15 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.CdPolicyInput(
-    api_security_cd_policy=shared.APISecurityCdPolicyElement(
-        api_security_profile='e20e4f6e-3e04-4f9f-8904-433d8246a999',
-        enforcement_option=shared.EnforcementOption.FAIL,
-    ),
     deployers=[
-        'aede075c-3164-444b-a1e6-c4ecee9d9042',
+        'e20e4f6e-3e04-4f9f-8904-433d8246a999',
     ],
     name='string',
-    permission_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
-    ),
-    secret_cd_policy=shared.SecretsCdPolicyElement(
-        enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.NO_KNOWN_RISK,
-    ),
-    security_context_cd_policy=shared.CdPolicyElement(
-        enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
-    ),
 )
 
 res = s.ci_cd_policies.post_cd_policy(req)
@@ -215,7 +210,11 @@ if res.cd_policy is not None:
 ### Response
 
 **[operations.PostCdPolicyResponse](../../models/operations/postcdpolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_ci_policy
 
@@ -229,21 +228,12 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.CiPolicyInput(
-    dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-        enforcement_option=shared.EnforcementOption.FAIL,
-        permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.FATAL,
-    ),
     name='string',
-    vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-        enforcement_option=shared.EnforcementOption.IGNORE,
-        permissible_vulnerability_level=shared.VulnerabilitySeverity.LOW,
-    ),
 )
 
 res = s.ci_cd_policies.post_ci_policy(req)
@@ -263,7 +253,11 @@ if res.ci_policy is not None:
 ### Response
 
 **[operations.PostCiPolicyResponse](../../models/operations/postcipolicyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_cd_policy_policy_id_
 
@@ -277,35 +271,18 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutCdPolicyPolicyIDRequest(
     cd_policy=shared.CdPolicyInput(
-        api_security_cd_policy=shared.APISecurityCdPolicyElement(
-            api_security_profile='75218fad-dbdc-48d5-b27f-e1d8ecd9e791',
-            enforcement_option=shared.EnforcementOption.FAIL,
-        ),
         deployers=[
-            '45666e4d-fb74-4ef6-9a81-a0d950f62fec',
+            '75218fad-dbdc-48d5-b27f-e1d8ecd9e791',
         ],
         name='string',
-        permission_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.NO_RISK,
-        ),
-        secret_cd_policy=shared.SecretsCdPolicyElement(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.CDPipelineSecretsFindingRisk.RISK_IDENTIFIED,
-        ),
-        security_context_cd_policy=shared.CdPolicyElement(
-            enforcement_option=shared.EnforcementOption.FAIL,
-            permissible_vulnerability_level=shared.CDPipelineFindingRisk.MEDIUM,
-        ),
     ),
-    policy_id='8aed8fba-0d21-49b4-a2fd-e7a8937033a3',
+    policy_id='545666e4-dfb7-44ef-ada8-1a0d950f62fe',
 )
 
 res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
@@ -325,7 +302,11 @@ if res.cd_policy is not None:
 ### Response
 
 **[operations.PutCdPolicyPolicyIDResponse](../../models/operations/putcdpolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_ci_policy_policy_id_
 
@@ -339,24 +320,15 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutCiPolicyPolicyIDRequest(
     ci_policy=shared.CiPolicyInput(
-        dockerfile_scan_ci_policy=shared.DockerfileScanCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_dockerfile_scan_severity=shared.DockerfileScanSeverity.INFO,
-        ),
         name='string',
-        vulnerability_ci_policy=shared.VulnerabilityCiPolicy(
-            enforcement_option=shared.EnforcementOption.IGNORE,
-            permissible_vulnerability_level=shared.VulnerabilitySeverity.UNKNOWN,
-        ),
     ),
-    policy_id='0c597151-5cdf-4e24-b5dc-fd347fd80ec5',
+    policy_id='a0c10c59-7151-45cd-be24-f5dcfd347fd8',
 )
 
 res = s.ci_cd_policies.put_ci_policy_policy_id_(req)
@@ -376,4 +348,8 @@ if res.ci_policy is not None:
 ### Response
 
 **[operations.PutCiPolicyPolicyIDResponse](../../models/operations/putcipolicypolicyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -1,5 +1,5 @@
 # PspProfiles
-(*.psp_profiles*)
+(*psp_profiles*)
 
 ## Overview
 
@@ -29,8 +29,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -55,7 +54,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeletePodSecurityPolicyProfilesProfileIDResponse](../../models/operations/deletepodsecuritypolicyprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## delete_seccomp_profiles_profile_id_
 
@@ -69,8 +72,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -95,7 +97,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteSeccompProfilesProfileIDResponse](../../models/operations/deleteseccompprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_pod_security_policy_profiles
 
@@ -109,8 +115,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -126,7 +131,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetPodSecurityPolicyProfilesResponse](../../models/operations/getpodsecuritypolicyprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_seccomp_profiles
 
@@ -140,8 +149,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -157,7 +165,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetSeccompProfilesResponse](../../models/operations/getseccompprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_pod_security_policy_profiles
 
@@ -171,57 +183,15 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = shared.PodSecurityPolicy(
-    allowed_capabilities=[
-        'string',
-    ],
-    allowed_host_paths=[
-        shared.AllowedHostPath(),
-    ],
-    allowed_proc_mount_types=[
-        shared.AllowedProcMountType.UNMASKED,
-    ],
-    allowed_unsafe_sysctls=[
-        'string',
-    ],
-    forbidden_sysctls=[
-        'string',
-    ],
-    fs_group=shared.RunAsGroupStrategyOptions(
-        ranges=[
-            shared.IDRange(),
-        ],
-    ),
-    host_ports=[
-        shared.HostPortRange(),
-    ],
+    fs_group=shared.RunAsGroupStrategyOptions(),
     name='string',
-    required_drop_capabilities=[
-        'string',
-    ],
-    run_as_group=shared.RunAsGroupStrategyOptions(
-        ranges=[
-            shared.IDRange(),
-        ],
-    ),
-    run_as_user=shared.RunAsUserStrategyOptions(
-        ranges=[
-            shared.IDRange(),
-        ],
-    ),
-    supplemental_groups=shared.RunAsGroupStrategyOptions(
-        ranges=[
-            shared.IDRange(),
-        ],
-    ),
-    volumes=[
-        shared.PSPVolumeTypes.AZURE_FILE,
-    ],
+    run_as_user=shared.RunAsUserStrategyOptions(),
+    supplemental_groups=shared.RunAsGroupStrategyOptions(),
 )
 
 res = s.psp_profiles.post_pod_security_policy_profiles(req)
@@ -241,7 +211,11 @@ if res.pod_security_policy is not None:
 ### Response
 
 **[operations.PostPodSecurityPolicyProfilesResponse](../../models/operations/postpodsecuritypolicyprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_pod_security_policy_profiles_batch
 
@@ -256,58 +230,16 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = [
     shared.PodSecurityPolicy(
-        allowed_capabilities=[
-            'string',
-        ],
-        allowed_host_paths=[
-            shared.AllowedHostPath(),
-        ],
-        allowed_proc_mount_types=[
-            shared.AllowedProcMountType.DEFAULT,
-        ],
-        allowed_unsafe_sysctls=[
-            'string',
-        ],
-        forbidden_sysctls=[
-            'string',
-        ],
-        fs_group=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        host_ports=[
-            shared.HostPortRange(),
-        ],
+        fs_group=shared.RunAsGroupStrategyOptions(),
         name='string',
-        required_drop_capabilities=[
-            'string',
-        ],
-        run_as_group=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        run_as_user=shared.RunAsUserStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        supplemental_groups=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        volumes=[
-            shared.PSPVolumeTypes.FLEX_VOLUME,
-        ],
+        run_as_user=shared.RunAsUserStrategyOptions(),
+        supplemental_groups=shared.RunAsGroupStrategyOptions(),
     ),
 ]
 
@@ -320,15 +252,19 @@ if res.classes is not None:
 
 ### Parameters
 
-| Parameter                                           | Type                                                | Required                                            | Description                                         |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| `request`                                           | [List[shared.PodSecurityPolicy]](../../models//.md) | :heavy_check_mark:                                  | The request object to use for the request.          |
+| Parameter                                          | Type                                               | Required                                           | Description                                        |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `request`                                          | [List[shared.PodSecurityPolicy]](../../models/.md) | :heavy_check_mark:                                 | The request object to use for the request.         |
 
 
 ### Response
 
 **[operations.PostPodSecurityPolicyProfilesBatchResponse](../../models/operations/postpodsecuritypolicyprofilesbatchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_seccomp_profiles
 
@@ -342,16 +278,11 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = shared.SeccompProfileInput(
-    pod_security_policies=[
-        'string',
-    ],
-)
+req = shared.SeccompProfileInput()
 
 res = s.psp_profiles.post_seccomp_profiles(req)
 
@@ -370,7 +301,11 @@ if res.seccomp_profile is not None:
 ### Response
 
 **[operations.PostSeccompProfilesResponse](../../models/operations/postseccompprofilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_pod_security_policy_profiles_profile_id_
 
@@ -384,60 +319,18 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
     pod_security_policy=shared.PodSecurityPolicy(
-        allowed_capabilities=[
-            'string',
-        ],
-        allowed_host_paths=[
-            shared.AllowedHostPath(),
-        ],
-        allowed_proc_mount_types=[
-            shared.AllowedProcMountType.DEFAULT,
-        ],
-        allowed_unsafe_sysctls=[
-            'string',
-        ],
-        forbidden_sysctls=[
-            'string',
-        ],
-        fs_group=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        host_ports=[
-            shared.HostPortRange(),
-        ],
+        fs_group=shared.RunAsGroupStrategyOptions(),
         name='string',
-        required_drop_capabilities=[
-            'string',
-        ],
-        run_as_group=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        run_as_user=shared.RunAsUserStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        supplemental_groups=shared.RunAsGroupStrategyOptions(
-            ranges=[
-                shared.IDRange(),
-            ],
-        ),
-        volumes=[
-            shared.PSPVolumeTypes.AWS_ELASTIC_BLOCK_STORE,
-        ],
+        run_as_user=shared.RunAsUserStrategyOptions(),
+        supplemental_groups=shared.RunAsGroupStrategyOptions(),
     ),
-    profile_id='ce973a74-d37d-4a32-9460-4edb379d9afb',
+    profile_id='10ce973a-74d3-47da-b254-604edb379d9a',
 )
 
 res = s.psp_profiles.put_pod_security_policy_profiles_profile_id_(req)
@@ -457,7 +350,11 @@ if res.pod_security_policy is not None:
 ### Response
 
 **[operations.PutPodSecurityPolicyProfilesProfileIDResponse](../../models/operations/putpodsecuritypolicyprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_seccomp_profiles_profile_id_
 
@@ -471,17 +368,12 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
 req = operations.PutSeccompProfilesProfileIDRequest(
-    seccomp_profile=shared.SeccompProfileInput(
-        pod_security_policies=[
-            'string',
-        ],
-    ),
+    seccomp_profile=shared.SeccompProfileInput(),
     profile_id='7a689ccb-cc10-41fe-9293-6c76ef44408a',
 )
 
@@ -502,4 +394,8 @@ if res.seccomp_profile is not None:
 ### Response
 
 **[operations.PutSeccompProfilesProfileIDResponse](../../models/operations/putseccompprofilesprofileidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |

@@ -39,10 +39,10 @@ class KubernetesCluster:
     r"""indicates whether apiIntelligenceDAST is enabled"""
     auto_label_enabled: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoLabelEnabled'), 'exclude': lambda f: f is None }})
     r"""indicates whether auto label is enabled"""
-    automated_policy_requires_deployer: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('automatedPolicyRequiresDeployer'), 'exclude': lambda f: f is None }})
-    r"""indicates whether deployer is required for the automated policy"""
     auto_upgrade_controller_version: Optional[bool] = dataclasses.field(default=True, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoUpgradeControllerVersion'), 'exclude': lambda f: f is None }})
     r"""indicates whether upgrade the controller automatically"""
+    automated_policy_requires_deployer: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('automatedPolicyRequiresDeployer'), 'exclude': lambda f: f is None }})
+    r"""indicates whether deployer is required for the automated policy"""
     ci_image_signature_validation: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageSignatureValidation'), 'exclude': lambda f: f is None }})
     r"""Enable pod template images signature validation"""
     ci_image_validation: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ciImageValidation'), 'exclude': lambda f: f is None }})
@@ -57,11 +57,11 @@ class KubernetesCluster:
     helm_commands_installation: Optional[HelmCommandsInstallation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('helmCommandsInstallation'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Id of the cluster."""
-    installation_source: Optional[InstallationSource] = dataclasses.field(default=InstallationSource.SCRIPT, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installationSource'), 'exclude': lambda f: f is None }})
     install_envoy_tracing_support: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installEnvoyTracingSupport'), 'exclude': lambda f: f is None }})
     r"""indicates whether envoy/istio will be used as a trace source"""
     install_tracing_support: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installTracingSupport'), 'exclude': lambda f: f is None }})
     r"""indicates whether to install tracing support, enable for apiSecurity accounts"""
+    installation_source: Optional[InstallationSource] = dataclasses.field(default=InstallationSource.SCRIPT, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('installationSource'), 'exclude': lambda f: f is None }})
     internal_registry_parameters: Optional[InternalRegistryParameters] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('internalRegistryParameters'), 'exclude': lambda f: f is None }})
     r"""internal registry information"""
     is_hold_application_until_proxy_starts: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('isHoldApplicationUntilProxyStarts'), 'exclude': lambda f: f is None }})

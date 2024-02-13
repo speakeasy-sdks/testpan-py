@@ -95,10 +95,10 @@ class AppTelemetry:
     pod_identification: Optional[PodIdentification] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podIdentification'), 'exclude': lambda f: f is None }})
     pod_runtime_info: Optional[PodRuntimeInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podRuntimeInfo'), 'exclude': lambda f: f is None }})
     r"""runtime info of the pod (if is a pod)"""
-    pods_licenses: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podsLicenses'), 'exclude': lambda f: f is None }})
-    r"""Licenses in use by the docker images. this field will be populated only in the drill down api"""
     pod_spec_info: Optional[PodSpecInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podSpecInfo'), 'exclude': lambda f: f is None }})
     r"""pod spec attributes which are potentially risky"""
+    pods_licenses: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('podsLicenses'), 'exclude': lambda f: f is None }})
+    r"""Licenses in use by the docker images. this field will be populated only in the drill down api"""
     risk: Optional[WorkloadRisk] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('risk'), 'exclude': lambda f: f is None }})
     securecn_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('securecnId'), 'exclude': lambda f: f is None }})
     state: Optional[TelemetryState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('state'), 'exclude': lambda f: f is None }})

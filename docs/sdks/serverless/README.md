@@ -1,5 +1,5 @@
 # Serverless
-(*.serverless*)
+(*serverless*)
 
 ### Available Operations
 
@@ -36,8 +36,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -62,7 +61,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCloudAccountsCloudAccountIDResponse](../../models/operations/deletecloudaccountscloudaccountidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts
 
@@ -76,8 +79,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -102,7 +104,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCloudAccountsResponse](../../models/operations/getcloudaccountsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_azure_installation_details
 
@@ -116,8 +122,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -133,7 +138,11 @@ if res.serverless_azure_installation_details is not None:
 ### Response
 
 **[operations.GetCloudAccountsAzureInstallationDetailsResponse](../../models/operations/getcloudaccountsazureinstallationdetailsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_installation_details
 
@@ -147,8 +156,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -164,7 +172,11 @@ if res.serverless_installation_details is not None:
 ### Response
 
 **[operations.GetCloudAccountsInstallationDetailsResponse](../../models/operations/getcloudaccountsinstallationdetailsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_regions_aws
 
@@ -178,8 +190,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -195,7 +206,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetCloudAccountsRegionsAWSResponse](../../models/operations/getcloudaccountsregionsawsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_regions_azure
 
@@ -209,8 +224,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -226,7 +240,11 @@ if res.strings is not None:
 ### Response
 
 **[operations.GetCloudAccountsRegionsAzureResponse](../../models/operations/getcloudaccountsregionsazureresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_cloud_account_id_delete_dependencies
 
@@ -240,8 +258,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -266,7 +283,11 @@ if res.cloud_account_delete_dependencies is not None:
 ### Response
 
 **[operations.GetCloudAccountsCloudAccountIDDeleteDependenciesResponse](../../models/operations/getcloudaccountscloudaccountiddeletedependenciesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_cloud_accounts_cloud_account_id_download_bundle
 
@@ -280,8 +301,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -306,7 +326,11 @@ if res.stream is not None:
 ### Response
 
 **[operations.GetCloudAccountsCloudAccountIDDownloadBundleResponse](../../models/operations/getcloudaccountscloudaccountiddownloadbundleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions
 
@@ -320,31 +344,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetServerlessFunctionsRequest(
-    cloud_accounts_ids_filter=[
-        '2d213824-3222-42f0-b89a-c2b1bfba58c4',
-    ],
-    func_name=[
-        'string',
-    ],
-    policy_risk=[
-        operations.PolicyRisk.LOW,
-    ],
-    result=[
-        operations.QueryParamResult.ALLOW,
-    ],
-    risk=[
-        operations.QueryParamRisk.HIGH,
-    ],
-    secrets_risk=[
-        operations.SecretsRisk.RISK_IDENTIFIED,
-    ],
-)
+req = operations.GetServerlessFunctionsRequest()
 
 res = s.serverless.get_serverless_functions(req)
 
@@ -363,7 +367,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsResponse](../../models/operations/getserverlessfunctionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions_arns
 
@@ -377,16 +385,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetServerlessFunctionsArnsRequest(
-    func_arn=[
-        'string',
-    ],
-)
+req = operations.GetServerlessFunctionsArnsRequest()
 
 res = s.serverless.get_serverless_functions_arns(req)
 
@@ -405,7 +408,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsArnsResponse](../../models/operations/getserverlessfunctionsarnsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions_names
 
@@ -419,16 +426,11 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
-req = operations.GetServerlessFunctionsNamesRequest(
-    func_name=[
-        'string',
-    ],
-)
+req = operations.GetServerlessFunctionsNamesRequest()
 
 res = s.serverless.get_serverless_functions_names(req)
 
@@ -447,7 +449,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsNamesResponse](../../models/operations/getserverlessfunctionsnamesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions_function_id_
 
@@ -461,8 +467,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -487,7 +492,11 @@ if res.serverless_function is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDResponse](../../models/operations/getserverlessfunctionsfunctionidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions_function_id_secrets
 
@@ -501,8 +510,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -527,7 +535,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDSecretsResponse](../../models/operations/getserverlessfunctionsfunctionidsecretsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_functions_function_id_vulnerabilities
 
@@ -541,8 +553,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -567,7 +578,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessFunctionsFunctionIDVulnerabilitiesResponse](../../models/operations/getserverlessfunctionsfunctionidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_zip_files
 
@@ -581,8 +596,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -605,7 +619,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesResponse](../../models/operations/getserverlesszipfilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_zip_files_zip_id_
 
@@ -619,8 +637,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -645,7 +662,11 @@ if res.serverless_zip is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDResponse](../../models/operations/getserverlesszipfileszipidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_zip_files_zip_id_packages
 
@@ -659,8 +680,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -685,7 +705,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDPackagesResponse](../../models/operations/getserverlesszipfileszipidpackagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_serverless_zip_files_zip_id_vulnerabilities
 
@@ -699,8 +723,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -725,7 +748,11 @@ if res.classes is not None:
 ### Response
 
 **[operations.GetServerlessZipFilesZipIDVulnerabilitiesResponse](../../models/operations/getserverlesszipfileszipidvulnerabilitiesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## post_cloud_accounts_scan
 
@@ -739,8 +766,7 @@ from pan.models import shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -767,7 +793,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PostCloudAccountsScanResponse](../../models/operations/postcloudaccountsscanresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## put_cloud_accounts_cloud_account_id_
 
@@ -781,8 +811,7 @@ from pan.models import operations, shared
 
 s = pan.Pan(
     security=shared.Security(
-        password="",
-        username="",
+        password="<YOUR_PASSWORD_HERE>",
     ),
 )
 
@@ -791,11 +820,6 @@ req = operations.PutCloudAccountsCloudAccountIDRequest(
         periodic_job_expression=shared.ServerlessPeriodicJobExpression(
             periodic_job_type=shared.ServerlessPeriodicJobExpressionPeriodicJobType.SERVERLESS_BY_HOURS_PERIODIC_JOB_EXPRESSION,
         ),
-        regions=[
-            'string',
-        ],
-        security_threats=shared.CloudAccountSecurityThreats(),
-        vulnerabilities_summary=shared.VulnerabilitiesSummary(),
     ),
     cloud_account_id='3c18ca7f-b155-4344-88dc-c7697a579ecd',
 )
@@ -817,4 +841,8 @@ if res.cloud_account is not None:
 ### Response
 
 **[operations.PutCloudAccountsCloudAccountIDResponse](../../models/operations/putcloudaccountscloudaccountidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
