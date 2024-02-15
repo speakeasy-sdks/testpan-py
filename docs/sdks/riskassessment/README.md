@@ -671,7 +671,7 @@ s = pan.Pan(
 
 req = operations.PutRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
     ci_policy=shared.CiPolicyInput(
-        name='string',
+        name='<value>',
     ),
     ignored_risk_id='44ed1978-a3a5-42b6-af16-d35fdf8529c3',
 )

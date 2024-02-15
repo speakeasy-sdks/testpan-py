@@ -158,7 +158,7 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='string',
+        duration='<value>',
     ),
     catalog_id='35e94464-b0ff-40e6-be14-ca29162fc277',
 )
@@ -204,7 +204,7 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='string',
+        duration='<value>',
     ),
     catalog_id='08fbc82f-2c9e-4a85-a326-b52d888f26e1',
 )

@@ -189,7 +189,7 @@ s = pan.Pan(
 
 req = shared.PodSecurityPolicy(
     fs_group=shared.RunAsGroupStrategyOptions(),
-    name='string',
+    name='<value>',
     run_as_user=shared.RunAsUserStrategyOptions(),
     supplemental_groups=shared.RunAsGroupStrategyOptions(),
 )
@@ -237,7 +237,7 @@ s = pan.Pan(
 req = [
     shared.PodSecurityPolicy(
         fs_group=shared.RunAsGroupStrategyOptions(),
-        name='string',
+        name='<value>',
         run_as_user=shared.RunAsUserStrategyOptions(),
         supplemental_groups=shared.RunAsGroupStrategyOptions(),
     ),
@@ -326,7 +326,7 @@ s = pan.Pan(
 req = operations.PutPodSecurityPolicyProfilesProfileIDRequest(
     pod_security_policy=shared.PodSecurityPolicy(
         fs_group=shared.RunAsGroupStrategyOptions(),
-        name='string',
+        name='<value>',
         run_as_user=shared.RunAsUserStrategyOptions(),
         supplemental_groups=shared.RunAsGroupStrategyOptions(),
     ),

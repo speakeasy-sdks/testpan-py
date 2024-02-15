@@ -629,7 +629,7 @@ s = pan.Pan(
 )
 
 req = shared.KubernetesCluster(
-    name='string',
+    name='<value>',
 )
 
 res = s.kubernetes.post_kubernetes_clusters(req)
@@ -676,7 +676,7 @@ req = shared.PodDefinitionInput(
     containers=[
         shared.Container(),
     ],
-    name='string',
+    name='<value>',
 )
 
 res = s.kubernetes.post_pod_definitions(req)
@@ -720,7 +720,7 @@ s = pan.Pan(
 
 req = operations.PutKubernetesClustersKubernetesClusterIDRequest(
     kubernetes_cluster=shared.KubernetesCluster(
-        name='string',
+        name='<value>',
     ),
     kubernetes_cluster_id='ffc49f9e-0fd9-4579-98a0-796a5f2d9d7f',
 )
@@ -814,7 +814,7 @@ req = operations.PutPodDefinitionsPodIDRequest(
         containers=[
             shared.Container(),
         ],
-        name='string',
+        name='<value>',
     ),
     pod_id='d5b40efc-46b3-4d79-9349-9390e36a1df3',
 )

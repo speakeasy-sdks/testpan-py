@@ -190,7 +190,7 @@ req = shared.CdPolicyInput(
     deployers=[
         'e20e4f6e-3e04-4f9f-8904-433d8246a999',
     ],
-    name='string',
+    name='<value>',
 )
 
 res = s.ci_cd_policies.post_cd_policy(req)
@@ -233,7 +233,7 @@ s = pan.Pan(
 )
 
 req = shared.CiPolicyInput(
-    name='string',
+    name='<value>',
 )
 
 res = s.ci_cd_policies.post_ci_policy(req)
@@ -280,7 +280,7 @@ req = operations.PutCdPolicyPolicyIDRequest(
         deployers=[
             '75218fad-dbdc-48d5-b27f-e1d8ecd9e791',
         ],
-        name='string',
+        name='<value>',
     ),
     policy_id='545666e4-dfb7-44ef-ada8-1a0d950f62fe',
 )
@@ -326,7 +326,7 @@ s = pan.Pan(
 
 req = operations.PutCiPolicyPolicyIDRequest(
     ci_policy=shared.CiPolicyInput(
-        name='string',
+        name='<value>',
     ),
     policy_id='a0c10c59-7151-45cd-be24-f5dcfd347fd8',
 )

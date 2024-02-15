@@ -193,7 +193,7 @@ s = pan.Pan(
 req = operations.PutK8sCISBenchmarkClusterIDRequest(
     k8s_cis_benchmark_update_nodes=shared.K8sCISBenchmarkUpdateNodes(
         cluster_id='49b403e0-ddc8-4f07-8f6d-7b4806fe4a7b',
-        index='string',
+        index='<value>',
         nodes=[
             shared.K8sCISBenchmarkUpdateNode(),
         ],

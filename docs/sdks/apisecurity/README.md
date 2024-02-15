@@ -1218,7 +1218,7 @@ s = pan.Pan(
 req = operations.GetAPISecurityCatalogIDMethodsRequest(
     catalog_id='bc418193-54db-45b9-831c-a3b7fcd92288',
     tags=[
-        'string',
+        '<value>',
     ],
 )
 
@@ -1647,7 +1647,7 @@ s = pan.Pan(
 )
 
 req = shared.APISecurityAPI(
-    name='string',
+    name='<value>',
 )
 
 res = s.api_security.post_api_security_api(req)
@@ -1691,7 +1691,7 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='string',
+        duration='<value>',
     ),
     catalog_id='35e94464-b0ff-40e6-be14-ca29162fc277',
 )
@@ -1737,7 +1737,7 @@ s = pan.Pan(
 
 req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
     bfla_duration_configuration=shared.BflaDurationConfiguration(
-        duration='string',
+        duration='<value>',
     ),
     catalog_id='08fbc82f-2c9e-4a85-a326-b52d888f26e1',
 )
@@ -2275,8 +2275,8 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='string',
-    name='string',
+    cluster_name='<value>',
+    name='<value>',
     type=shared.GatewayType.APIGEE_X,
 )
 
@@ -2366,7 +2366,7 @@ s = pan.Pan(
 )
 
 req = operations.PutAPISecurityOpenAPISpecsCatalogIDRequest(
-    request_body='string',
+    request_body='<value>',
     catalog_id='39b6c1e7-d209-4d8c-b8d6-6907b8b2d3e4',
 )
 
@@ -2411,8 +2411,8 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='string',
-        name='string',
+        cluster_name='<value>',
+        name='<value>',
         type=shared.GatewayType.F5_BIG_IP,
     ),
     gateway_id='b1d9c87e-1369-4f02-8e6c-75779c9c8e93',

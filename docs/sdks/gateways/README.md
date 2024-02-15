@@ -197,8 +197,8 @@ s = pan.Pan(
 )
 
 req = shared.Gateway(
-    cluster_name='string',
-    name='string',
+    cluster_name='<value>',
+    name='<value>',
     type=shared.GatewayType.APIGEE_X,
 )
 
@@ -243,8 +243,8 @@ s = pan.Pan(
 
 req = operations.PutGatewaysGatewayIDRequest(
     gateway=shared.Gateway(
-        cluster_name='string',
-        name='string',
+        cluster_name='<value>',
+        name='<value>',
         type=shared.GatewayType.F5_BIG_IP,
     ),
     gateway_id='b1d9c87e-1369-4f02-8e6c-75779c9c8e93',

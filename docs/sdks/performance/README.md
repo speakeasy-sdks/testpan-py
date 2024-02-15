@@ -24,7 +24,7 @@ s = pan.Pan(
 
 req = operations.GetAPISecurityAPICatalogIDHitCountGraphRequest(
     catalog_id='6b535753-b47a-42be-a003-f45375c0bae8',
-    spec_path='string',
+    spec_path='<value>',
     spec_path_method=operations.SpecPathMethod.CONNECT,
 )
 
@@ -70,7 +70,7 @@ s = pan.Pan(
 
 req = operations.GetPerformanceMetricsRequest(
     end_time=dateutil.parser.isoparse('2024-06-20T13:08:39.501Z'),
-    protocol='string',
+    protocol='<value>',
     source_namespace='565fb8ea-d185-4971-9112-61059b89d3b7',
     source_pod_template='dcd1b894-b8a5-4ad8-a111-06ddd9453d84',
     start_time=dateutil.parser.isoparse('2023-01-23T04:55:37.636Z'),

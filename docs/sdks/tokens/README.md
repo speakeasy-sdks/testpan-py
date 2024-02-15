@@ -199,8 +199,8 @@ s = pan.Pan(
 )
 
 req = shared.Token(
-    name='string',
-    vault_secret_path='string',
+    name='<value>',
+    vault_secret_path='<value>',
 )
 
 res = s.tokens.post_tokens(req)
@@ -244,8 +244,8 @@ s = pan.Pan(
 
 req = operations.PutTokensTokenIDRequest(
     token=shared.Token(
-        name='string',
-        vault_secret_path='string',
+        name='<value>',
+        vault_secret_path='<value>',
     ),
     token_id='92f997c4-3e7b-4827-80b5-81f98e4dc9a1',
 )

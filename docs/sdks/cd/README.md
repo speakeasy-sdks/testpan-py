@@ -337,7 +337,7 @@ s = pan.Pan(
 
 req = shared.CdServerlessRule(
     action=shared.ServerlessRuleAction.DETECT,
-    name='string',
+    name='<value>',
     rule=shared.ServerlessRuleType(
         serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
     ),
@@ -430,7 +430,7 @@ s = pan.Pan(
 req = operations.PutCdRuleIDServerlessRuleRequest(
     cd_serverless_rule=shared.CdServerlessRule(
         action=shared.ServerlessRuleAction.DETECT,
-        name='string',
+        name='<value>',
         rule=shared.ServerlessRuleType(
             serverless_rule_type=shared.ServerlessRuleTypeServerlessRuleType.FUNCTION_ARN_SERVERLESS_RULE_TYPE,
         ),

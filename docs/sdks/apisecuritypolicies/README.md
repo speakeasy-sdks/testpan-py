@@ -150,7 +150,7 @@ s = pan.Pan(
 )
 
 req = shared.APISecurityPolicyInput(
-    name='string',
+    name='<value>',
 )
 
 res = s.api_security_policies.post_api_security_policy(req)
@@ -194,7 +194,7 @@ s = pan.Pan(
 
 req = operations.PutAPISecurityPolicyPolicyIDRequest(
     api_security_policy=shared.APISecurityPolicyInput(
-        name='string',
+        name='<value>',
     ),
     policy_id='735c1bef-90a3-4017-8485-58c2807a30fd',
 )

@@ -307,9 +307,9 @@ s = pan.Pan(
 )
 
 req = shared.CaIntegrationRequest(
-    certificate='string',
-    issuer_name='string',
-    name='string',
+    certificate='<value>',
+    issuer_name='<value>',
+    name='<value>',
 )
 
 res = s.settings.post_settings_integrations_ca(req)
@@ -356,7 +356,7 @@ req = shared.EventsForwardingDetailsInput(
     events_to_forward=[
         shared.EventsToForward.ATTACK_PATH,
     ],
-    name='string',
+    name='<value>',
 )
 
 res = s.settings.post_settings_integrations_event_forwarding(req)
@@ -399,7 +399,7 @@ s = pan.Pan(
 )
 
 req = shared.TestOpsgenieConnectionRequest(
-    token='string',
+    token='<value>',
 )
 
 res = s.settings.post_settings_integrations_opsgenie_test_integration(req)
@@ -528,7 +528,7 @@ s = pan.Pan(
 )
 
 req = shared.TestSplunkConnectionRequest(
-    token='string',
+    token='<value>',
     url='http://same-shopper.biz',
 )
 
@@ -743,9 +743,9 @@ s = pan.Pan(
 
 req = operations.PutSettingsIntegrationsCaIDRequest(
     ca_integration_request=shared.CaIntegrationRequest(
-        certificate='string',
-        issuer_name='string',
-        name='string',
+        certificate='<value>',
+        issuer_name='<value>',
+        name='<value>',
     ),
     id='3150c8bd-a77d-45f8-8b65-8d2fdcaeae55',
 )
@@ -795,8 +795,8 @@ req = operations.PutSettingsIntegrationsEventForwardingEventForwardingIDRequest(
         events_to_forward=[
             shared.EventsToForward.NOTIFICATION,
         ],
-        name='string',
-        token='string',
+        name='<value>',
+        token='<value>',
     ),
     event_forwarding_id='a96473ef-b0fd-4047-9c2d-c1b408bce49d',
 )

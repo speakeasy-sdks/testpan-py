@@ -513,7 +513,7 @@ req = operations.PostUsersTrialRequest(
         last_name='Mitchell',
         privacy_policy_and_terms_and_conditions_agreement=False,
     ),
-    g_recaptcha_response='string',
+    g_recaptcha_response='<value>',
 )
 
 res = s.users.post_users_trial(req)

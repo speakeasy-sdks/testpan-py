@@ -157,7 +157,7 @@ s = pan.Pan(
 )
 
 req = shared.TrustedSignerInput(
-    name='string',
+    name='<value>',
 )
 
 res = s.trusted_signers.post_trusted_signers(req)
@@ -201,7 +201,7 @@ s = pan.Pan(
 
 req = operations.PutTrustedSignersTrustedSignerIDRequest(
     trusted_signer=shared.TrustedSignerInput(
-        name='string',
+        name='<value>',
     ),
     trusted_signer_id='8d323c1d-de95-475d-a823-90f3ebb00bb0',
 )

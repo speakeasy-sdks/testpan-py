@@ -160,7 +160,7 @@ s = pan.Pan(
 
 req = shared.ExpansionInput(
     cluster_id='ef536384-aae2-4f5a-87a4-cef022a42548',
-    name='string',
+    name='<value>',
     namespace_id='ea7db024-5fda-41fa-8ab8-8259ba11df19',
     workload_addresses=[
         shared.WorkloadAddress(
@@ -210,7 +210,7 @@ s = pan.Pan(
 
 req = operations.PutExpansionsExpansionIDRequest(
     expansion_put=shared.ExpansionPut(
-        name='string',
+        name='<value>',
         workload_addresses=[
             shared.WorkloadAddress(
                 address='218 Jenkins Gateway',
