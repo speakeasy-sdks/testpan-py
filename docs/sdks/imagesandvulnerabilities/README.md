@@ -124,7 +124,7 @@ s = pan.Pan(
 )
 
 req = operations.GetImagesRequest(
-    sort_key=operations.GetImagesQueryParamSortKey.IMAGE_NAME,
+    sort_key=operations.GetImagesQueryParamSortKey.RISK,
 )
 
 res = s.images_and_vulnerabilities.get_images(req)

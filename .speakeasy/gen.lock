@@ -4,18 +4,18 @@ management:
   docChecksum: 8be724345472d3ac63089c40372a9a19
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 0.8.2
-  configChecksum: 202ca447143a888b6c4112a967b401de
+  generationVersion: 2.275.4
+  releaseVersion: 0.9.0
+  configChecksum: a17f860ca5fc9acea445a0b4ce47ac6a
   repoURL: https://github.com/speakeasy-sdks/testpan-py.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/testpan-py.git
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.7
+    core: 4.5.0
     downloadStreams: 0.0.2
-    globalSecurity: 2.83.3
+    globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
     inputOutputModels: 2.83.1
 generatedFiles:
@@ -2136,3 +2136,6 @@ generatedFiles:
   - docs/sdks/vulnerabilities/README.md
   - USAGE.md
   - .gitattributes
+  - src/pan/_hooks/sdkhooks.py
+  - src/pan/_hooks/types.py
+  - src/pan/_hooks/__init__.py

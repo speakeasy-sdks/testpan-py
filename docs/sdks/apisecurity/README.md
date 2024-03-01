@@ -1018,8 +1018,8 @@ s = pan.Pan(
 )
 
 req = operations.GetAPISecurityRiskFindingsRequest(
-    api_sec_source=operations.APISecSource.EXTERNAL,
-    sort_key=operations.GetAPISecurityRiskFindingsQueryParamSortKey.NAME,
+    api_sec_source=operations.APISecSource.INTERNAL,
+    sort_key=operations.GetAPISecurityRiskFindingsQueryParamSortKey.RISK,
 )
 
 res = s.api_security.get_api_security_risk_findings(req)
@@ -1391,7 +1391,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecSpecsAndOperationsDiffsRequest(
-    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_specs_and_operations_diffs(req)
@@ -1434,7 +1434,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.api_security.get_dashboard_apisec_top_risky_apis(req)

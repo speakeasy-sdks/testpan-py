@@ -458,7 +458,7 @@ s = pan.Pan(
 
 req = operations.GetRiskAssessmentKubernetesClusterIDPodsRequest(
     kubernetes_cluster_id='764514eb-01d8-4d87-972e-7065c0075222',
-    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.NAME,
+    sort_key=operations.GetRiskAssessmentKubernetesClusterIDPodsQueryParamSortKey.RISK,
 )
 
 res = s.risk_assessment.get_risk_assessment_kubernetes_cluster_id_pods(req)

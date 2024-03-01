@@ -132,7 +132,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecSpecsAndOperationsDiffsRequest(
-    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecSpecsAndOperationsDiffsQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_specs_and_operations_diffs(req)
@@ -175,7 +175,7 @@ s = pan.Pan(
 )
 
 req = operations.GetDashboardApisecTopRiskyApisRequest(
-    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.EXTERNAL,
+    api_sec_source=operations.GetDashboardApisecTopRiskyApisQueryParamAPISecSource.INTERNAL,
 )
 
 res = s.dashboard.get_dashboard_apisec_top_risky_apis(req)

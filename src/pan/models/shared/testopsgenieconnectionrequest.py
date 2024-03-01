@@ -9,6 +9,8 @@ from pan import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class TestOpsgenieConnectionRequest:
+    __test__ = False
+    
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
     
 
