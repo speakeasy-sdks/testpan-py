@@ -33,6 +33,7 @@ res = s.performance.get_api_security_api_catalog_id_hit_count_graph(req)
 if res.api_service_spec_path_hit_count_graph is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -83,6 +84,7 @@ res = s.performance.get_performance_metrics(req)
 if res.performance_metrics is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

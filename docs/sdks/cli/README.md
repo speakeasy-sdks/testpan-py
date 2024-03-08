@@ -31,6 +31,7 @@ res = s.cli.get_tools_cli_securecn_deployment_cli()
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 

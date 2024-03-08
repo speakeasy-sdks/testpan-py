@@ -39,6 +39,7 @@ res = s.connection_policies.get_connections_policy(req)
 if res.connections_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.connection_policies.get_connections_policy_history()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -113,6 +115,7 @@ res = s.connection_policies.get_connections_policy_kafka_actions()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 
@@ -150,6 +153,7 @@ res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_b
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -193,6 +197,7 @@ res = s.connection_policies.get_connections_policy_kafka_kubernetes_cluster_id_t
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -234,6 +239,7 @@ res = s.connection_policies.get_connections_policy_search_options(req)
 if res.policy_filter_search_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -274,6 +280,7 @@ res = s.connection_policies.get_serverless_policy_history()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -313,6 +320,7 @@ res = s.connection_policies.put_connections_policy(req)
 if res.connections_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

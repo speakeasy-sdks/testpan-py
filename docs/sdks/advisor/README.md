@@ -37,6 +37,7 @@ res = s.advisor.get_advisor_cluster_event_rules()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -71,6 +72,7 @@ res = s.advisor.get_advisor_connection_rules()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -105,6 +107,7 @@ res = s.advisor.get_advisor_environment()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -139,6 +142,7 @@ res = s.advisor.get_advisor_environment_rules()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -173,6 +177,7 @@ res = s.advisor.get_advisor_pod_security_policy()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -210,6 +215,7 @@ res = s.advisor.get_advisor_queue_advisor_type_(req)
 if res.policy_advisor_state is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -250,9 +256,10 @@ req = operations.PostAdvisorRunRequest(
 
 res = s.advisor.post_advisor_run(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

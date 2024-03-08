@@ -44,9 +44,10 @@ req = operations.DeleteUsersUserIDRequest(
 
 res = s.users.delete_users_user_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -87,6 +88,7 @@ res = s.users.get_operator_credentials()
 if res.access_token is not None:
     # handle response
     pass
+
 ```
 
 
@@ -122,6 +124,7 @@ res = s.users.get_users(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -165,6 +168,7 @@ res = s.users.get_users_user_id_access_tokens(req)
 if res.access_token is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -208,6 +212,7 @@ res = s.users.get_users_user_id_delete_dependencies(req)
 if res.delete_dependency_element_user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -248,6 +253,7 @@ res = s.users.post_account_usage_status()
 if res.usage_status is not None:
     # handle response
     pass
+
 ```
 
 
@@ -280,9 +286,10 @@ req = shared.ChangePasswordInfo()
 
 res = s.users.post_change_password(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -324,6 +331,7 @@ res = s.users.post_login(req)
 if res.user_login_info is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -362,9 +370,10 @@ s = pan.Pan(
 
 res = s.users.post_logout()
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 
@@ -399,6 +408,7 @@ res = s.users.post_me()
 if res.user_login_info is not None:
     # handle response
     pass
+
 ```
 
 
@@ -438,6 +448,7 @@ res = s.users.post_users(req)
 if res.user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -475,9 +486,10 @@ s = pan.Pan(
 
 res = s.users.post_users_accept_eula()
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 
@@ -521,6 +533,7 @@ res = s.users.post_users_trial(req)
 if res.user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -568,6 +581,7 @@ res = s.users.put_users_user_id_(req)
 if res.user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

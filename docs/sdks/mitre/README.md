@@ -33,6 +33,7 @@ res = s.mitre.get_mitre_dashboard(req)
 if res.mitre_dashboard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.mitre.get_mitre_report_download()
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 
@@ -107,6 +109,7 @@ res = s.mitre.get_mitre_report_status()
 if res.report_status is not None:
     # handle response
     pass
+
 ```
 
 
@@ -144,6 +147,7 @@ res = s.mitre.get_mitre_technique(req)
 if res.mitre_technique_info is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -181,9 +185,10 @@ s = pan.Pan(
 
 res = s.mitre.post_mitre_report_generate()
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 
@@ -219,9 +224,10 @@ req = operations.PostMitreTechniqueFixRequest(
 
 res = s.mitre.post_mitre_technique_fix(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

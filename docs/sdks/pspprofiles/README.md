@@ -39,9 +39,10 @@ req = operations.DeletePodSecurityPolicyProfilesProfileIDRequest(
 
 res = s.psp_profiles.delete_pod_security_policy_profiles_profile_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -82,9 +83,10 @@ req = operations.DeleteSeccompProfilesProfileIDRequest(
 
 res = s.psp_profiles.delete_seccomp_profiles_profile_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -125,6 +127,7 @@ res = s.psp_profiles.get_pod_security_policy_profiles()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -159,6 +162,7 @@ res = s.psp_profiles.get_seccomp_profiles()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -199,6 +203,7 @@ res = s.psp_profiles.post_pod_security_policy_profiles(req)
 if res.pod_security_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -248,6 +253,7 @@ res = s.psp_profiles.post_pod_security_policy_profiles_batch(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -289,6 +295,7 @@ res = s.psp_profiles.post_seccomp_profiles(req)
 if res.seccomp_profile is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -338,6 +345,7 @@ res = s.psp_profiles.put_pod_security_policy_profiles_profile_id_(req)
 if res.pod_security_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -382,6 +390,7 @@ res = s.psp_profiles.put_seccomp_profiles_profile_id_(req)
 if res.seccomp_profile is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

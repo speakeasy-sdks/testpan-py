@@ -36,6 +36,7 @@ res = s.k8s_cis_benchmark.get_k8s_cis_benchmark(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.k8s_cis_benchmark.get_k8s_cis_benchmark_summary()
 if res.k8s_cis_benchmark_account_summary is not None:
     # handle response
     pass
+
 ```
 
 
@@ -110,9 +112,10 @@ req = operations.GetK8sCISBenchmarkClusterIDRequest(
 
 res = s.k8s_cis_benchmark.get_k8s_cis_benchmark_cluster_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.k8s_cis_benchmark.post_k8s_cis_benchmark_cluster_id_(req)
 if res.k8s_cis_benchmark_clusters_summary is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -204,9 +208,10 @@ req = operations.PutK8sCISBenchmarkClusterIDRequest(
 
 res = s.k8s_cis_benchmark.put_k8s_cis_benchmark_cluster_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

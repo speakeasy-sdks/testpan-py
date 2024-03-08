@@ -28,6 +28,7 @@ res = s.vulnerabilities.get_vulnerabilities(req)
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

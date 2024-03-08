@@ -85,9 +85,10 @@ req = operations.DeleteAPISecurityAPICatalogIDRequest(
 
 res = s.api_security.delete_api_security_api_catalog_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -128,9 +129,10 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -171,9 +173,10 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.api_security.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -217,6 +220,7 @@ res = s.api_security.delete_api_security_open_api_specs_catalog_id_(req)
 if res.open_api_spec_score_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -257,9 +261,10 @@ req = operations.DeleteGatewaysGatewayIDRequest(
 
 res = s.api_security.delete_gateways_gateway_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -301,6 +306,7 @@ res = s.api_security.get_api_security_external_catalog(req)
 if res.api_service_list_external is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -342,6 +348,7 @@ res = s.api_security.get_api_security_external_catalog_count(req)
 if res.integer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -385,6 +392,7 @@ res = s.api_security.get_api_security_external_catalog_catalog_id_(req)
 if res.api_service_drill_down_external is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -426,6 +434,7 @@ res = s.api_security.get_api_security_internal_catalog(req)
 if res.api_service_list_internal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -467,6 +476,7 @@ res = s.api_security.get_api_security_internal_catalog_count(req)
 if res.integer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -510,6 +520,7 @@ res = s.api_security.get_api_security_internal_catalog_catalog_id_(req)
 if res.api_service_drill_down_internal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -553,6 +564,7 @@ res = s.api_security.get_api_security_internal_catalog_catalog_id_bfla(req)
 if res.api_service_bfla_info is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -596,6 +608,7 @@ res = s.api_security.get_api_security_internal_catalog_catalog_id_fuzzing_status
 if res.api_service_fuzzing_progress is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -639,6 +652,7 @@ res = s.api_security.get_api_security_internal_catalog_catalog_id_fuzzing_tests(
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -682,6 +696,7 @@ res = s.api_security.get_api_security_internal_catalog_catalog_id_trace_analysis
 if res.trace_analysis_details is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -725,6 +740,7 @@ res = s.api_security.get_api_security_open_api_specs_catalog_id_(req)
 if res.open_api_spec is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -768,6 +784,7 @@ res = s.api_security.get_api_security_open_api_specs_catalog_id_diff_detection_s
 if res.diff_detection_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -811,6 +828,7 @@ res = s.api_security.get_api_security_open_api_specs_catalog_id_get_open_api_spe
 if res.open_api_spec_score_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -851,9 +869,10 @@ req = operations.GetAPISecurityOpenAPISpecsCatalogIDOpenAPISpecSwaggerJSONReques
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_open_api_spec_swagger_json(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -897,6 +916,7 @@ res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_sp
 if res.api_reconstructed_spec is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -940,6 +960,7 @@ res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_sp
 if res.api_reconstruction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -980,9 +1001,10 @@ req = operations.GetAPISecurityOpenAPISpecsCatalogIDReconstructedSpecJSONRequest
 
 res = s.api_security.get_api_security_open_api_specs_catalog_id_reconstructed_spec_json(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1027,6 +1049,7 @@ res = s.api_security.get_api_security_risk_findings(req)
 if res.risk_findings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1067,6 +1090,7 @@ res = s.api_security.get_api_security_risk_findings_categories()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 
@@ -1101,6 +1125,7 @@ res = s.api_security.get_api_security_risk_findings_sources()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 
@@ -1138,6 +1163,7 @@ res = s.api_security.get_api_security_risk_findings_risk_finding_id_(req)
 if res.risk_finding is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1181,6 +1207,7 @@ res = s.api_security.get_api_security_catalog_id_delete_dependencies(req)
 if res.api_service_delete_dependencies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1227,6 +1254,7 @@ res = s.api_security.get_api_security_catalog_id_methods(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1270,6 +1298,7 @@ res = s.api_security.get_api_security_catalog_id_tags(req)
 if res.api_service_tags is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1313,6 +1342,7 @@ res = s.api_security.get_dashboard_apisec_risk_findings(req)
 if res.api_sec_risk_findings_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1356,6 +1386,7 @@ res = s.api_security.get_dashboard_apisec_risk_findings_trend(req)
 if res.api_sec_risk_findings_trend_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1399,6 +1430,7 @@ res = s.api_security.get_dashboard_apisec_specs_and_operations_diffs(req)
 if res.specs_and_operations_diffs_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1442,6 +1474,7 @@ res = s.api_security.get_dashboard_apisec_top_risky_apis(req)
 if res.api_sec_top_risky_apis_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1485,6 +1518,7 @@ res = s.api_security.get_dashboard_apisec_top_risky_findings(req)
 if res.api_sec_top_risky_findings_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1526,6 +1560,7 @@ res = s.api_security.get_gateways(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1569,6 +1604,7 @@ res = s.api_security.get_gateways_clusters(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1612,6 +1648,7 @@ res = s.api_security.get_gateways_gateway_id_download_bundle(req)
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1652,9 +1689,10 @@ req = shared.APISecurityAPI(
 
 res = s.api_security.post_api_security_api(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1698,9 +1736,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1744,9 +1783,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1787,9 +1827,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1830,9 +1871,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDResetTraceAnalysisReques
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_reset_trace_analysis(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1882,6 +1924,7 @@ res = s.api_security.post_api_security_internal_catalog_catalog_id_start_fuzzing
 if res.api_service_fuzzing_test is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1926,9 +1969,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDStartTraceAnalysisReques
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_start_trace_analysis(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1969,9 +2013,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDStopFuzzingRequest(
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_stop_fuzzing(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2012,9 +2057,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDStopTraceAnalysisRequest
 
 res = s.api_security.post_api_security_internal_catalog_catalog_id_stop_trace_analysis(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2055,9 +2101,10 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecAbortReque
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_abort(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2098,9 +2145,10 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecLearnReque
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_learn(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2147,9 +2195,10 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDReconstructedSpecReviewAppr
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_reconstructed_spec_review_approve(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2194,9 +2243,10 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDStartDiffsDetectionRequest(
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_start_diffs_detection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2237,9 +2287,10 @@ req = operations.PostAPISecurityOpenAPISpecsCatalogIDStopDiffsDetectionRequest(
 
 res = s.api_security.post_api_security_open_api_specs_catalog_id_stop_diffs_detection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2285,6 +2336,7 @@ res = s.api_security.post_gateways(req)
 if res.gateway is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2328,9 +2380,10 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
 
 res = s.api_security.put_api_security_internal_catalog_catalog_id_bfla(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2375,6 +2428,7 @@ res = s.api_security.put_api_security_open_api_specs_catalog_id_(req)
 if res.open_api_spec is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -2423,6 +2477,7 @@ res = s.api_security.put_gateways_gateway_id_(req)
 if res.gateway is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

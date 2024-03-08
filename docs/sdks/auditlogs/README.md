@@ -39,6 +39,7 @@ res = s.audit_logs.get_audit_logs(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.audit_logs.get_audit_logs_actions()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 
@@ -118,6 +120,7 @@ res = s.audit_logs.get_audit_logs_kubernetes(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -158,6 +161,7 @@ res = s.audit_logs.get_audit_logs_kubernetes_actions()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 

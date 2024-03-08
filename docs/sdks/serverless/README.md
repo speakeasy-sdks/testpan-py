@@ -46,9 +46,10 @@ req = operations.DeleteCloudAccountsCloudAccountIDRequest(
 
 res = s.serverless.delete_cloud_accounts_cloud_account_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -92,6 +93,7 @@ res = s.serverless.get_cloud_accounts(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -132,6 +134,7 @@ res = s.serverless.get_cloud_accounts_azure_installation_details()
 if res.serverless_azure_installation_details is not None:
     # handle response
     pass
+
 ```
 
 
@@ -166,6 +169,7 @@ res = s.serverless.get_cloud_accounts_installation_details()
 if res.serverless_installation_details is not None:
     # handle response
     pass
+
 ```
 
 
@@ -200,6 +204,7 @@ res = s.serverless.get_cloud_accounts_regions_aws()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -234,6 +239,7 @@ res = s.serverless.get_cloud_accounts_regions_azure()
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 
@@ -271,6 +277,7 @@ res = s.serverless.get_cloud_accounts_cloud_account_id_delete_dependencies(req)
 if res.cloud_account_delete_dependencies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -314,6 +321,7 @@ res = s.serverless.get_cloud_accounts_cloud_account_id_download_bundle(req)
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -355,6 +363,7 @@ res = s.serverless.get_serverless_functions(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -396,6 +405,7 @@ res = s.serverless.get_serverless_functions_arns(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -437,6 +447,7 @@ res = s.serverless.get_serverless_functions_names(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -480,6 +491,7 @@ res = s.serverless.get_serverless_functions_function_id_(req)
 if res.serverless_function is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -523,6 +535,7 @@ res = s.serverless.get_serverless_functions_function_id_secrets(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -566,6 +579,7 @@ res = s.serverless.get_serverless_functions_function_id_vulnerabilities(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -607,6 +621,7 @@ res = s.serverless.get_serverless_zip_files(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -650,6 +665,7 @@ res = s.serverless.get_serverless_zip_files_zip_id_(req)
 if res.serverless_zip is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -693,6 +709,7 @@ res = s.serverless.get_serverless_zip_files_zip_id_packages(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -736,6 +753,7 @@ res = s.serverless.get_serverless_zip_files_zip_id_vulnerabilities(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -778,9 +796,10 @@ req = shared.ServerlessScanConfig(
 
 res = s.serverless.post_cloud_accounts_scan(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -829,6 +848,7 @@ res = s.serverless.put_cloud_accounts_cloud_account_id_(req)
 if res.cloud_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

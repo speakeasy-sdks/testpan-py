@@ -46,9 +46,10 @@ req = operations.DeleteRiskAssessmentIgnoredRisksIgnoredRiskIDRequest(
 
 res = s.risk_assessment.delete_risk_assessment_ignored_risks_ignored_risk_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -89,9 +90,10 @@ req = operations.DeleteRiskAssessmentKubernetesClusterIDCancelRequest(
 
 res = s.risk_assessment.delete_risk_assessment_kubernetes_cluster_id_cancel(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -132,6 +134,7 @@ res = s.risk_assessment.get_risk_assessment()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -166,6 +169,7 @@ res = s.risk_assessment.get_risk_assessment_ignored_risks()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -201,6 +205,7 @@ res = s.risk_assessment.get_risk_assessment_permissions(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -244,6 +249,7 @@ res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_(req)
 if res.owner_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -288,6 +294,7 @@ res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_(req
 if res.permission_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -333,6 +340,7 @@ res = s.risk_assessment.get_risk_assessment_permissions_cluster_id_owner_id_role
 if res.permission_role_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -378,6 +386,7 @@ res = s.risk_assessment.get_risk_assessment_poll(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -422,6 +431,7 @@ res = s.risk_assessment.get_risk_assessment_image_id_vulnerabilities(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -466,6 +476,7 @@ res = s.risk_assessment.get_risk_assessment_kubernetes_cluster_id_pods(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -506,6 +517,7 @@ res = s.risk_assessment.post_risk_assessment_ignored_risks()
 if res.ignored_risk is not None:
     # handle response
     pass
+
 ```
 
 
@@ -542,9 +554,10 @@ req = operations.PostRiskAssessmentPermissionsOwnerIDApproveRequest(
 
 res = s.risk_assessment.post_risk_assessment_permissions_owner_id_approve(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -585,9 +598,10 @@ req = operations.PostRiskAssessmentKubernetesClusterIDScanRequest(
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_scan(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -632,9 +646,10 @@ req = operations.PostRiskAssessmentKubernetesClusterIDSettingsRequest(
 
 res = s.risk_assessment.post_risk_assessment_kubernetes_cluster_id_settings(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -681,6 +696,7 @@ res = s.risk_assessment.put_risk_assessment_ignored_risks_ignored_risk_id_(req)
 if res.ignored_risk is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

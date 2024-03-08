@@ -35,9 +35,10 @@ req = operations.DeleteAPISecurityPolicyPolicyIDRequest(
 
 res = s.api_security_policies.delete_api_security_policy_policy_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.api_security_policies.get_api_security_policy()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -115,6 +117,7 @@ res = s.api_security_policies.get_api_security_policy_policy_id_delete_dependenc
 if res.api_security_policy_delete_dependencies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -158,6 +161,7 @@ res = s.api_security_policies.post_api_security_policy(req)
 if res.api_security_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -204,6 +208,7 @@ res = s.api_security_policies.put_api_security_policy_policy_id_(req)
 if res.api_security_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

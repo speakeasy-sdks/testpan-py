@@ -28,9 +28,10 @@ s = pan.Pan(
 
 res = s.api.get_api()
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 

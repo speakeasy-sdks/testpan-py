@@ -36,6 +36,7 @@ res = s.cluster_events_policies.get_kubernetes_api_policy()
 if res.kubernetes_api_policy is not None:
     # handle response
     pass
+
 ```
 
 
@@ -70,6 +71,7 @@ res = s.cluster_events_policies.get_kubernetes_api_policy_history()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -104,6 +106,7 @@ res = s.cluster_events_policies.get_kubernetes_api_policy_kubernetes_resources()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -138,6 +141,7 @@ res = s.cluster_events_policies.get_kubernetes_api_policy_kubernetes_users()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -172,6 +176,7 @@ res = s.cluster_events_policies.get_kubernetes_api_policy_recommended_rules()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -207,6 +212,7 @@ res = s.cluster_events_policies.put_kubernetes_api_policy(req)
 if res.kubernetes_api_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

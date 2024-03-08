@@ -35,9 +35,10 @@ req = operations.DeleteUsersUserIDRequest(
 
 res = s.users.delete_users_user_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -536,6 +537,7 @@ except errors.SDKError as e:
 if res.user_login_info is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -571,9 +573,10 @@ req = operations.DeleteUsersUserIDRequest(
 
 res = s.users.delete_users_user_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 
@@ -597,9 +600,10 @@ req = operations.DeleteUsersUserIDRequest(
 
 res = s.users.delete_users_user_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -652,9 +656,10 @@ req = operations.DeleteUsersUserIDRequest(
 
 res = s.users.delete_users_user_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 

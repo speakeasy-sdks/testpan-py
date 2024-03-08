@@ -38,9 +38,10 @@ req = operations.DeleteCdPolicyPolicyIDRequest(
 
 res = s.ci_cd_policies.delete_cd_policy_policy_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -81,9 +82,10 @@ req = operations.DeleteCiPolicyPolicyIDRequest(
 
 res = s.ci_cd_policies.delete_ci_policy_policy_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -124,6 +126,7 @@ res = s.ci_cd_policies.get_cd_policy()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -158,6 +161,7 @@ res = s.ci_cd_policies.get_ci_policy()
 if res.ci_policy is not None:
     # handle response
     pass
+
 ```
 
 
@@ -198,6 +202,7 @@ res = s.ci_cd_policies.post_cd_policy(req)
 if res.cd_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.ci_cd_policies.post_ci_policy(req)
 if res.ci_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -290,6 +296,7 @@ res = s.ci_cd_policies.put_cd_policy_policy_id_(req)
 if res.cd_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -336,6 +343,7 @@ res = s.ci_cd_policies.put_ci_policy_policy_id_(req)
 if res.ci_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

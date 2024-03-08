@@ -32,9 +32,10 @@ req = operations.DeleteGatewaysGatewayIDRequest(
 
 res = s.gateways.delete_gateways_gateway_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.gateways.get_gateways(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -119,6 +121,7 @@ res = s.gateways.get_gateways_clusters(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -162,6 +165,7 @@ res = s.gateways.get_gateways_gateway_id_download_bundle(req)
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,6 +211,7 @@ res = s.gateways.post_gateways(req)
 if res.gateway is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -255,6 +260,7 @@ res = s.gateways.put_gateways_gateway_id_(req)
 if res.gateway is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -33,9 +33,10 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,9 +77,10 @@ req = operations.DeleteAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.bfla.delete_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.bfla.get_api_security_internal_catalog_catalog_id_bfla(req)
 if res.api_service_bfla_info is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -165,9 +168,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaDetectionRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_detection(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -211,9 +215,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaLearningRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_learning(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,9 +259,10 @@ req = operations.PostAPISecurityInternalCatalogCatalogIDBflaResetRequest(
 
 res = s.bfla.post_api_security_internal_catalog_catalog_id_bfla_reset(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -300,9 +306,10 @@ req = operations.PutAPISecurityInternalCatalogCatalogIDBflaRequest(
 
 res = s.bfla.put_api_security_internal_catalog_catalog_id_bfla(req)
 
-if res.res is not None:
+if res.string is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

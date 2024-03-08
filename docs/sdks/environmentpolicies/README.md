@@ -35,6 +35,7 @@ res = s.environment_policies.get_apps_policy(req)
 if res.app_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.environment_policies.get_apps_policy_history()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -110,6 +112,7 @@ res = s.environment_policies.get_apps_policy_search_options(req)
 if res.policy_filter_search_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -151,6 +154,7 @@ res = s.environment_policies.put_apps_policy(req)
 if res.app_policy is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

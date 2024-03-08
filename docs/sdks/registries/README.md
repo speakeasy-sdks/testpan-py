@@ -36,9 +36,10 @@ req = operations.DeleteRegistriesRegistryIDRequest(
 
 res = s.registries.delete_registries_registry_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -80,6 +81,7 @@ res = s.registries.get_registries(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -124,6 +126,7 @@ res = s.registries.post_registries(req)
 if res.registry is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -165,9 +168,10 @@ req = shared.RegistryInput(
 
 res = s.registries.post_registries_test_connection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -212,9 +216,10 @@ req = operations.PostRegistriesTestConnectionRegistryIDRequest(
 
 res = s.registries.post_registries_test_connection_registry_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -259,9 +264,10 @@ req = operations.PutRegistriesRegistryIDRequest(
 
 res = s.registries.put_registries_registry_id_(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

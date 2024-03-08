@@ -34,6 +34,7 @@ res = s.truncation.get_truncation_images()
 if res.truncation_status is not None:
     # handle response
     pass
+
 ```
 
 
@@ -68,6 +69,7 @@ res = s.truncation.get_truncation_workloads()
 if res.truncation_status is not None:
     # handle response
     pass
+
 ```
 
 
@@ -106,6 +108,7 @@ res = s.truncation.post_truncation_images(req)
 if res.truncation_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -150,6 +153,7 @@ res = s.truncation.post_truncation_workloads(req)
 if res.truncation_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

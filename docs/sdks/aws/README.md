@@ -39,6 +39,7 @@ res = s.aws.get_aws_accounts()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -73,6 +74,7 @@ res = s.aws.get_aws_roles()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -107,6 +109,7 @@ res = s.aws.get_aws_tags()
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 
@@ -145,6 +148,7 @@ res = s.aws.get_aws_aws_account_id_regions(req)
 if res.strings is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -189,6 +193,7 @@ res = s.aws.get_aws_aws_account_id_region_id_subnets(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -234,6 +239,7 @@ res = s.aws.get_aws_aws_account_id_region_id_vpcs(req)
 if res.classes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -278,6 +284,7 @@ res = s.aws.post_aws_roles(req)
 if res.aws_role is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -324,6 +331,7 @@ res = s.aws.put_aws_roles_role_id_(req)
 if res.aws_role is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

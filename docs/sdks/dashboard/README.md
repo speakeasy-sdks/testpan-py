@@ -54,6 +54,7 @@ res = s.dashboard.get_dashboard_apisec_risk_findings(req)
 if res.api_sec_risk_findings_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -97,6 +98,7 @@ res = s.dashboard.get_dashboard_apisec_risk_findings_trend(req)
 if res.api_sec_risk_findings_trend_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -140,6 +142,7 @@ res = s.dashboard.get_dashboard_apisec_specs_and_operations_diffs(req)
 if res.specs_and_operations_diffs_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -183,6 +186,7 @@ res = s.dashboard.get_dashboard_apisec_top_risky_apis(req)
 if res.api_sec_top_risky_apis_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -226,6 +230,7 @@ res = s.dashboard.get_dashboard_apisec_top_risky_findings(req)
 if res.api_sec_top_risky_findings_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -266,6 +271,7 @@ res = s.dashboard.get_dashboard_clusters()
 if res.clusters_details is not None:
     # handle response
     pass
+
 ```
 
 
@@ -300,6 +306,7 @@ res = s.dashboard.get_dashboard_connection_telemetries()
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 
@@ -334,6 +341,7 @@ res = s.dashboard.get_dashboard_kubernetes_audit_logs()
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 
@@ -369,6 +377,7 @@ res = s.dashboard.get_dashboard_operational_bar(req)
 if res.operational_bar is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -410,6 +419,7 @@ res = s.dashboard.get_dashboard_permissions(req)
 if res.permissions_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -450,6 +460,7 @@ res = s.dashboard.get_dashboard_pod_telemetries()
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 
@@ -484,6 +495,7 @@ res = s.dashboard.get_dashboard_report_download()
 if res.stream is not None:
     # handle response
     pass
+
 ```
 
 
@@ -518,6 +530,7 @@ res = s.dashboard.get_dashboard_report_status()
 if res.report_status is not None:
     # handle response
     pass
+
 ```
 
 
@@ -553,6 +566,7 @@ res = s.dashboard.get_dashboard_security_context(req)
 if res.security_context_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -594,6 +608,7 @@ res = s.dashboard.get_dashboard_top_security_risks(req)
 if res.top_security_risks_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -635,6 +650,7 @@ res = s.dashboard.get_dashboard_vulnerabilities(req)
 if res.vulnerabilities_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -678,6 +694,7 @@ res = s.dashboard.get_dashboard_kubernetes_cluster_id_connection_telemetries(req
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -721,6 +738,7 @@ res = s.dashboard.get_dashboard_kubernetes_cluster_id_kubernetes_audit_logs(req)
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -764,6 +782,7 @@ res = s.dashboard.get_dashboard_kubernetes_cluster_id_pod_telemetries(req)
 if res.time_based_widget is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -804,6 +823,7 @@ res = s.dashboard.get_licensing_dashboard()
 if res.licensing_dashboard is not None:
     # handle response
     pass
+
 ```
 
 
@@ -835,9 +855,10 @@ s = pan.Pan(
 
 res = s.dashboard.post_dashboard_report_generate()
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 
