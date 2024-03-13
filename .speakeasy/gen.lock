@@ -3,10 +3,10 @@ id: 2f32c738-88ee-4461-9d8e-0ae25023412a
 management:
   docChecksum: 8be724345472d3ac63089c40372a9a19
   docVersion: 1.0.0
-  speakeasyVersion: 1.204.1
-  generationVersion: 2.279.1
-  releaseVersion: 0.10.0
-  configChecksum: ef620b9f46192ed9003d0783262bdb1a
+  speakeasyVersion: 1.207.1
+  generationVersion: 2.280.6
+  releaseVersion: 0.10.1
+  configChecksum: ad4eee2f82f2488c23d2e0fea91b6bd4
   repoURL: https://github.com/speakeasy-sdks/testpan-py.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/testpan-py.git
@@ -16,7 +16,7 @@ features:
     core: 4.5.1
     downloadStreams: 0.0.2
     globalSecurity: 2.83.4
-    globalServerURLs: 2.82.1
+    globalServerURLs: 2.82.2
     inputOutputModels: 2.83.1
     responseFormat: 0.1.0
 generatedFiles:
